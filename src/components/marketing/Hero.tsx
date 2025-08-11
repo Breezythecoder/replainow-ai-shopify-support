@@ -81,10 +81,11 @@ const Hero = () => {
               <img
                 src={content.media.image.src}
                 alt={content.media.image.alt}
-                className="w-full max-w-[560px] mx-auto rounded-xl shadow-brand hover-scale ring-1 ring-primary/10"
-                loading="lazy"
+                className="w-full max-w-[560px] md:max-w-[640px] mx-auto rounded-xl shadow-brand hover-scale ring-1 ring-primary/10 object-contain"
+                loading="eager"
+                fetchPriority="high"
                 decoding="async"
-                sizes="(min-width: 768px) 560px, 100vw"
+                sizes="(min-width: 768px) 640px, 100vw"
               />
               <figcaption className="sr-only">{content.media.image.alt}</figcaption>
             </figure>
