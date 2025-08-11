@@ -76,9 +76,32 @@ const PrivacyPolicy = () => {
             </section>
 
             <section>
+              <h2 className="text-2xl font-semibold mb-2">Role in Data Processing</h2>
+              <p>
+                For purposes of applicable data protection laws, Merchants are the Data Controllers of any personal data of their customers processed via the App. PrimeVision Group LLC acts solely as a Data Processor, processing such data only on the Merchant’s documented instructions, including those provided through the App’s configuration and the permissions granted during installation.
+              </p>
+            </section>
+
+            <section>
               <h2 className="text-2xl font-semibold mb-2">Data Retention</h2>
               <p>
                 We retain data only for as long as necessary to provide the App and fulfill the purposes outlined in this policy. Merchant account and related data are generally deleted within 30 days after app uninstall, unless we are legally required to retain it longer (e.g., for tax or compliance reasons). You can request earlier deletion at any time.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold mb-2">How to Uninstall and Data Deletion</h2>
+              <ol className="list-decimal pl-6 space-y-2">
+                <li>Log in to your Shopify Admin.</li>
+                <li>Go to <strong>Apps</strong>.</li>
+                <li>Find <strong>ReplAInow</strong> and click <strong>Remove</strong>.</li>
+                <li>Confirm the removal when prompted.</li>
+              </ol>
+              <p className="mt-2">
+                After uninstall, we begin deleting stored shop data related to your account. All such data will be deleted within 30 days unless we are legally required to retain certain information (e.g., billing or compliance records). You may request immediate deletion by contacting <a className="underline" href="mailto:privacy@replainow.com">privacy@replainow.com</a>.
+              </p>
+              <p className="mt-2">
+                For more information, see our <a className="underline" href="/uninstall">Uninstall Instructions</a> and the <a className="underline" href="/privacy">Privacy Policy</a> sections above.
               </p>
             </section>
 
@@ -106,6 +129,20 @@ const PrivacyPolicy = () => {
               <h2 className="text-2xl font-semibold mb-2">Shopify API Data Usage</h2>
               <p>
                 The App accesses Shopify APIs using scopes granted during installation. We only request the minimum scopes necessary to provide the App’s functionality (e.g., reading orders or products to generate accurate support responses). We do not sell personal data. We do not use Shopify data for advertising.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold mb-2">Relationship with Shopify</h2>
+              <p>
+                ReplAInow is developed and provided by PrimeVision Group LLC and is not a product of, nor officially associated with, Shopify Inc. We access and use Shopify store data solely in accordance with the permissions granted during installation and in compliance with Shopify’s API Terms and applicable policies.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold mb-2">Changes to This Privacy Policy</h2>
+              <p>
+                We may update this Privacy Policy from time to time. If we make material changes, we will update the “Last updated” date at the top and provide additional notice via email or within the App. Your continued use of the App after any changes indicates your acceptance of the updated policy.
               </p>
             </section>
 
