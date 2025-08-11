@@ -9,6 +9,7 @@ import About from "@/components/marketing/About";
 import Contact from "@/components/marketing/Contact";
 import FinalCTA from "@/components/marketing/FinalCTA";
 import Footer from "@/components/marketing/Footer";
+import StoreDataFlow from "@/components/marketing/StoreDataFlow";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
         <Hero />
         <ProblemSolution />
         <Features />
+        <StoreDataFlow />
         <SocialProof />
         <LiveDemo />
         <Pricing />
