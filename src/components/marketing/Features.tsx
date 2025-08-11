@@ -1,25 +1,35 @@
-import { Bot, Plug, ShieldCheck, Timer } from "lucide-react";
+import { Bot, Plug, ShieldCheck, Zap, TrendingUp, Globe } from "lucide-react";
 
 const features = [
   {
-    icon: Bot,
-    title: "Antwort in <3 Sekunden",
-    desc: "Nie wieder Wartezeiten – steigere deine Antwortquote um 90 %.",
+    icon: Zap,
+    title: "Antwort in <3 Sek.",
+    desc: "GPT-4/5 mit Shopify-Kontext liefert Antworten in unter 3 Sek.; FRT -90%.",
   },
   {
     icon: Plug,
     title: "Direkt in Shopify",
-    desc: "Kein Tool-Wechsel. Alle Produkt-, Bestell- und Kundendaten automatisch in der Antwort.",
+    desc: "Ohne Tab-Wechsel: Produkt-, Bestell- und Kundendaten fließen automatisch ein.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Mehr Umsatz, schneller",
+    desc: "Präzise, schnelle Antworten erhöhen Conversion und Kundenbindung messbar.",
   },
   {
     icon: ShieldCheck,
-    title: "Sicherheit auf Enterprise-Level",
-    desc: "DSGVO-konform, HMAC-sicher, verschlüsselt – geprüft & vertrauenswürdig.",
+    title: "DSGVO- & HMAC-sicher",
+    desc: "Verschlüsselt, DSGVO-konform und HMAC-verifiziert – zuverlässig & vertrauenswürdig.",
   },
   {
-    icon: Timer,
-    title: "Mehr Umsatz durch schnelle Antworten",
-    desc: "Schnelle Antworten = mehr abgeschlossene Käufe & zufriedene Stammkunden.",
+    icon: Bot,
+    title: "Intelligente Automatisierung",
+    desc: "Auto-Kategorisierung, AI-Triage und Regeln erledigen Routinefälle automatisch.",
+  },
+  {
+    icon: Globe,
+    title: "Mehrsprachig, markenkonform",
+    desc: "Antworten in vielen Sprachen im Ton deiner Marke – ideal für globalen Support.",
   },
 ];
 
@@ -28,10 +38,10 @@ const Features = () => {
     <section id="features" aria-labelledby="features-heading" className="py-16 md:py-24">
       <div className="container">
         <h2 id="features-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Kernfeatures, die überzeugen
+          Kernfeatures: KI-Support für Shopify
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          Alles, was du für erstklassigen, automatisierten Support in Shopify brauchst.
+          Sechs konkrete Vorteile – technisch stark und klar messbar.
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {features.map(({ icon: Icon, title, desc }) => (
