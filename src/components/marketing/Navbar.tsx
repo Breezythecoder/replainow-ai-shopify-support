@@ -1,17 +1,12 @@
 import { Button } from "@/components/ui/button";
-import LanguageSwitcher from "@/components/LanguageSwitcher";
-import { useLocation } from "react-router-dom";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow/install";
 
 const Navbar = () => {
-  const location = useLocation();
-  const parts = location.pathname.split("/");
-  const locale = parts[1] === "en" ? "en" : "de";
   return (
     <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-border/60">
       <nav className="container flex items-center justify-between h-16">
-        <a href={`/${locale}`} aria-label="ReplAInow Start" className="flex items-center gap-2 font-semibold">
+        <a href={`/`} aria-label="ReplAInow Start" className="flex items-center gap-2 font-semibold">
           <img src="/lovable-uploads/100738e9-73dd-442e-b79a-8b064b5b00c3.png" alt="ReplAInow Logo mit Icon" className="h-7 w-auto" />
           <span className="sr-only">ReplAInow</span>
         </a>
@@ -22,7 +17,6 @@ const Navbar = () => {
           <a href="#kontakt" className="text-muted-foreground hover:text-foreground transition-colors story-link">Kontakt</a>
         </div>
         <div className="flex items-center gap-2">
-          <LanguageSwitcher />
           <Button asChild variant="hero">
             <a href={OAUTH_URL} aria-label="Jetzt kostenlos testen">Jetzt kostenlos testen</a>
           </Button>
