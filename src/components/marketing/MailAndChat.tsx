@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { Mail, MessageSquare, CheckCircle2, Globe, Clock, Rocket } from "lucide-react";
+import { Mail, MessageSquare, CheckCircle2, Globe, Clock } from "lucide-react";
 
 import chatImg from "@/assets/mock-chat.jpg";
 
@@ -53,7 +53,7 @@ const MailAndChat = () => {
             <ul className="mt-5 space-y-3">
               <Bullet Icon={CheckCircle2}>Sofortige AI‑Antworten auf Kunden‑E‑Mails</Bullet>
               <Bullet Icon={Globe}>Shopify‑Daten automatisch eingebettet (Bestellungen, Produkte, Versand)</Bullet>
-              <Bullet Icon={Rocket}>Mehrsprachig und markenkonformer Ton – automatisch</Bullet>
+              <Bullet Icon={CheckCircle2}>Mehrsprachig und markenkonformer Ton – automatisch</Bullet>
             </ul>
 
             <ul className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -85,7 +85,7 @@ const MailAndChat = () => {
 
             <ul className="mt-5 space-y-3">
               <Bullet Icon={Clock}>AI‑Chat‑Antworten in unter 3 Sekunden</Bullet>
-              <Bullet Icon={Rocket}>Kontext‑aware Vorschläge & Auto‑Send‑Regeln</Bullet>
+              <Bullet Icon={CheckCircle2}>Kontext‑aware Vorschläge & Auto‑Send‑Regeln</Bullet>
               <Bullet Icon={Globe}>Nahtloses Human‑Handoff bei Bedarf</Bullet>
             </ul>
 
