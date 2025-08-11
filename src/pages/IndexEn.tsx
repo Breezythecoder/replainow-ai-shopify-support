@@ -1,23 +1,23 @@
-import Navbar from "@/components/marketing/Navbar";
-import Hero from "@/components/marketing/Hero";
-import HowItWorks from "@/components/marketing/HowItWorks";
-import ProblemSolution from "@/components/marketing/ProblemSolution";
-import Features from "@/components/marketing/Features";
-import SocialProof from "@/components/marketing/SocialProof";
-import LiveDemo from "@/components/marketing/LiveDemo";
-import Pricing from "@/components/marketing/Pricing";
-import About from "@/components/marketing/About";
-import Contact from "@/components/marketing/Contact";
-import FinalCTA from "@/components/marketing/FinalCTA";
-import Footer from "@/components/marketing/Footer";
-import StoreDataFlow from "@/components/marketing/StoreDataFlow";
+import NavbarEn from "@/components/marketing/NavbarEn";
+import HeroEn from "@/components/marketing/HeroEn";
+import HowItWorksEn from "@/components/marketing/HowItWorksEn";
+import ProblemSolutionEn from "@/components/marketing/ProblemSolutionEn";
+import FeaturesEn from "@/components/marketing/FeaturesEn";
+import SocialProofEn from "@/components/marketing/SocialProofEn";
+import LiveDemoEn from "@/components/marketing/LiveDemoEn";
+import PricingEn from "@/components/marketing/PricingEn";
+import AboutEn from "@/components/marketing/AboutEn";
+import ContactEn from "@/components/marketing/ContactEn";
+import FinalCTAEn from "@/components/marketing/FinalCTAEn";
+import FooterEn from "@/components/marketing/FooterEn";
+import StoreDataFlowEn from "@/components/marketing/StoreDataFlowEn";
 import SEO from "@/components/SEO";
-import FAQ from "@/components/marketing/FAQ";
-import StickyInstallBar from "@/components/marketing/StickyInstallBar";
+import FAQEn from "@/components/marketing/FAQEn";
+import StickyInstallBarEn from "@/components/marketing/StickyInstallBarEn";
 import OrganizationJsonLd from "@/components/SEOOrganization";
-import MailAndChat from "@/components/marketing/MailAndChat";
+import MailAndChatEn from "@/components/marketing/MailAndChatEn";
 
-const IndexEn = () => {
+const IndexEnFull = () => {
   return (
     <div>
       <SEO
@@ -26,26 +26,26 @@ const IndexEn = () => {
         image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
-      <Navbar />
+      <NavbarEn />
       <main>
-        <Hero />
-        <HowItWorks />
-        <ProblemSolution />
-        <Features />
-        <MailAndChat />
-        <StoreDataFlow />
-        <SocialProof />
-        <LiveDemo />
-        <Pricing />
-        <FAQ />
-        <FinalCTA />
-        <About />
-        <Contact />
+        <HeroEn />
+        <HowItWorksEn />
+        <ProblemSolutionEn />
+        <FeaturesEn />
+        <MailAndChatEn />
+        <StoreDataFlowEn />
+        <SocialProofEn />
+        <LiveDemoEn />
+        <PricingEn />
+        <FAQEn />
+        <FinalCTAEn />
+        <AboutEn />
+        <ContactEn />
       </main>
-      <Footer />
-      <StickyInstallBar />
+      <FooterEn />
+      <StickyInstallBarEn />
     </div>
   );
 };
 
-export default IndexEn;
+export default IndexEnFull;
