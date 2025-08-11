@@ -122,12 +122,21 @@ const Pricing = () => {
                   )}
                 </ul>
 
-                <div className="mt-auto">
+                <div className="mt-auto space-y-3">
                   <Button asChild variant="hero" className="w-full">
-                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`}>
+                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Kostenlos testen – Plan ${p.name}`}>
                       Kostenlos testen
                     </a>
                   </Button>
+                  <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
+                    <img
+                      src="/images/shopify-logo-black.svg"
+                      alt="Shopify Logo – App Store"
+                      className="h-4 w-auto opacity-80"
+                      loading="lazy"
+                    />
+                    <span>Im Shopify App Store gelistet</span>
+                  </div>
                 </div>
               </article>
             );
