@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-background/70 border-b border-border/60">
       <nav className="container flex items-center justify-between h-16">
-        <a href="#" aria-label="ReplAInow Start" className="flex items-center gap-2 font-semibold">
+        <a href="/" aria-label="ReplAInow Start" className="flex items-center gap-2 font-semibold">
           <img src="/lovable-uploads/100738e9-73dd-442e-b79a-8b064b5b00c3.png" alt="ReplAInow Logo mit Icon" className="h-7 w-auto" />
           <span className="sr-only">ReplAInow</span>
         </a>
