@@ -18,11 +18,11 @@ import heroBackground from "@/assets/hero-ai-bg.jpg";
 
 
 export const heroContent: HeroContent = {
-  headline: "Maximiere deinen Kundensupport – mit KI-Power für Shopify.",
+  headline: "KI-Helpdesk für Shopify. Beantwortet Anfragen in Sekunden.",
   subheadline:
-    "ReplAInow beantwortet Kundenanfragen blitzschnell, präzise und direkt aus deinem Shopify-Admin – 24/7, DSGVO-konform.",
-  primaryCta: { label: "Jetzt installieren", href: "https://apps.shopify.com/replainow/install" },
-  secondaryCta: { label: "Demo ansehen", href: "#live-demo" },
+    "GPT-4/5 mit Echtzeit-Shopify-Daten: höhere Conversion, schnellere Antworten, weniger Tickets.",
+  primaryCta: { label: "Kostenlos testen", href: "https://apps.shopify.com/replainow/install" },
+  secondaryCta: { label: "Live-Demo ansehen", href: "#live-demo" },
   media: {
     background: { src: heroBackground, alt: "Abstrakte AI-Hintergrundgrafik" },
     image: { src: "/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png", alt: "ReplAInow – Laptop- und Mobile-Mockup" },

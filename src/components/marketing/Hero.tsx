@@ -1,6 +1,6 @@
 import { useState, MouseEvent } from "react";
 import { Button } from "@/components/ui/button";
-import { ShieldCheck, Zap, Plug } from "lucide-react";
+import { ShieldCheck, Zap, Plug, Star } from "lucide-react";
 import { heroContent as content } from "@/content/hero";
 
 const Hero = () => {
@@ -45,7 +45,7 @@ const Hero = () => {
               </p>
 
               <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
-                <Button asChild size="lg" variant="default" className="w-full sm:w-auto rounded-full h-12 px-6">
+                <Button asChild size="lg" variant="hero" className="w-full sm:w-auto rounded-full h-12 px-6">
                   <a href={content.primaryCta.href} aria-label={content.primaryCta.label}>
                     {content.primaryCta.label}
                   </a>
@@ -73,6 +73,15 @@ const Hero = () => {
                 <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-3 py-1">
                   <Plug className="size-4" /> Nahtlose Shopify Integr.
                 </span>
+              </div>
+
+              <div className="mt-5 flex flex-wrap items-center justify-center md:justify-start gap-3 text-primary-foreground/90">
+                <span className="inline-flex items-center gap-2 text-sm">
+                  <Star className="size-4 fill-current" aria-hidden="true" />
+                  <span>4.9/5 im Shopify App Store</span>
+                </span>
+                <span className="hidden md:inline text-sm opacity-80">•</span>
+                <span className="text-sm">Vertraut von Shopify-Merchant-Teams</span>
               </div>
             </div>
 
