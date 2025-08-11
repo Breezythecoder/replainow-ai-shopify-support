@@ -80,64 +80,69 @@ const Pricing = () => {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {plans.map((p) => (
-            <article
-              key={p.name}
-              className={`rounded-2xl border p-6 bg-card flex flex-col ${p.popular ? 'border-primary/50 bg-primary/5 shadow-brand' : ''}`}
-            >
-              <header className="mb-4">
-                {'badge' in p && (p as any).badge ? (
-                  <span className="mb-2 inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium bg-primary/15 border border-primary text-primary">
-                    {(p as any).badge}
-                  </span>
-                ) : null}
-                <h3 className="font-semibold text-xl">{p.name}</h3>
-                <div className="mt-2 flex items-baseline gap-2">
-                  <span className="text-3xl font-bold">{p.price}</span>
-                  <span className="text-muted-foreground">{p.period}</span>
+          {plans.map((p) => {
+            const Card = (
+              <article className="group rounded-2xl border bg-card p-6 h-full flex flex-col hover:shadow-brand transition-all duration-200 hover:-translate-y-0.5">
+                <header className="mb-4">
+                  <h3 className="font-semibold text-xl">{p.name}</h3>
+                  <div className="mt-2 flex items-baseline gap-2">
+                    <span className="text-3xl font-bold">{p.price}</span>
+                    <span className="text-muted-foreground">{p.period}</span>
+                  </div>
+                  <p className="mt-1 text-xs text-muted-foreground">{(p as any).trial ?? "14 Tage kostenlos testen"}</p>
+                  {'blurb' in p && (p as any).blurb ? (
+                    <p className="mt-3 text-sm text-muted-foreground">{(p as any).blurb}</p>
+                  ) : null}
+                </header>
+
+                <ul className="space-y-2 text-sm text-muted-foreground mb-6">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1 inline-block size-1.5 rounded-full bg-primary" />
+                    <span className="font-medium">{p.quota}</span>
+                  </li>
+                  {p.features.map((f: any) =>
+                    typeof f === 'string' ? (
+                      <li key={f} className="flex items-start gap-2">
+                        <span className="mt-1 inline-block size-1.5 rounded-full bg-primary" />
+                        <span>{f}</span>
+                      </li>
+                    ) : (
+                      <li key={f.label} className="flex items-start gap-2">
+                        <span className="mt-1 inline-block size-1.5 rounded-full bg-primary" />
+                        <div>
+                          <div>{f.label}</div>
+                          <ul className="mt-1 ml-4 list-disc marker:text-muted-foreground/70">
+                            {f.sub.map((s: string) => (
+                              <li key={s}>{s}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                    )
+                  )}
+                </ul>
+
+                <div className="mt-auto">
+                  <Button asChild variant="hero" className="w-full">
+                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`}>
+                      Kostenlos testen
+                    </a>
+                  </Button>
                 </div>
-                <p className="mt-1 text-xs text-muted-foreground">{(p as any).trial ?? "14 Tage kostenlos testen"}</p>
-                {'blurb' in p && (p as any).blurb ? (
-                  <p className="mt-3 text-sm text-muted-foreground">{(p as any).blurb}</p>
-                ) : null}
-              </header>
+              </article>
+            );
 
-              <ul className="space-y-2 text-sm text-muted-foreground mb-6">
-                <li className="flex items-start gap-2">
-                  <span className="mt-1 inline-block size-1.5 rounded-full bg-primary" />
-                  <span className="font-medium">{p.quota}</span>
-                </li>
-                {p.features.map((f: any) =>
-                  typeof f === "string" ? (
-                    <li key={f} className="flex items-start gap-2">
-                      <span className="mt-1 inline-block size-1.5 rounded-full bg-primary" />
-                      <span>{f}</span>
-                    </li>
-                  ) : (
-                    <li key={f.label} className="flex items-start gap-2">
-                      <span className="mt-1 inline-block size-1.5 rounded-full bg-primary" />
-                      <div>
-                        <div>{f.label}</div>
-                        <ul className="mt-1 ml-4 list-disc marker:text-muted-foreground/70">
-                          {f.sub.map((s: string) => (
-                            <li key={s}>{s}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    </li>
-                  )
-                )}
-              </ul>
-
-              <div className="mt-auto">
-                <Button asChild variant={"hero"} className="w-full">
-                  <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`}>
-                    Kostenlos testen
-                  </a>
-                </Button>
+            return p.popular ? (
+              <div key={p.name} className="relative rounded-2xl p-[1px] bg-gradient-primary shadow-brand-glow hover:shadow-brand-glow transition-shadow">
+                <span className="absolute -top-3 left-4 rounded-full bg-primary text-primary-foreground text-xs px-2.5 py-1 border border-primary/60 shadow-brand">
+                  {(p as any).badge ?? 'Beliebtester Plan'}
+                </span>
+                {Card}
               </div>
-            </article>
-          ))}
+            ) : (
+              <div key={p.name} className="relative">{Card}</div>
+            );
+          })}
         </div>
       </div>
     </section>
