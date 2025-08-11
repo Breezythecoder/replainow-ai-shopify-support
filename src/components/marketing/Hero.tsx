@@ -21,23 +21,25 @@ const Hero = () => {
         onMouseMove={onMove}
         style={{ ['--x' as any]: pos.x, ['--y' as any]: pos.y } as React.CSSProperties}
       >
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-20 speed-lines" />
         <div className="relative container mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-32 md:pb-28">
           <div className="grid md:grid-cols-2 items-center gap-8">
             <div className="text-center md:text-left">
               <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight mb-6 text-primary-foreground">
-                Maximiere deinen Kundensupport – mit KI-Power für Shopify.
+                Beende deinen Support-Stress – mit KI-Power direkt in Shopify.
               </h1>
-              <p className="text-lg md:text-xl text-primary-foreground opacity-90 mb-10">
-                ReplAInow beantwortet Kundenanfragen blitzschnell, präzise und direkt in deinem Shopify-Admin – 24/7, DSGVO-konform, voll integriert.
+              <p className="text-lg md:text-xl text-primary-foreground/90 mb-10">
+                ReplAInow beantwortet Kundenanfragen blitzschnell, präzise und im Ton deiner Marke – 24/7, DSGVO-konform und komplett in deinen Shopify-Admin integriert.
               </p>
               <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
                 <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
                   <a href={OAUTH_URL}>Jetzt kostenlos testen</a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-                  <a href="#demo">Demo ansehen</a>
+                  <a href="#live-demo">Demo ansehen</a>
                 </Button>
               </div>
+              <p className="mt-2 text-sm text-primary-foreground/80">In 2 Minuten startklar. Keine Kreditkarte nötig.</p>
             </div>
             <figure className="hidden md:block">
               <img

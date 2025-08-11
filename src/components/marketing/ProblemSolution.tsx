@@ -1,0 +1,51 @@
+import inbox from "@/assets/mock-inbox.jpg";
+
+const ProblemSolution = () => {
+  return (
+    <section id="problem" aria-labelledby="problem-heading" className="py-16 md:py-24">
+      <div className="container max-w-6xl">
+        <h2 id="problem-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-12">
+          Von Chaos zu Klarheit – in Sekunden.
+        </h2>
+        <div className="grid md:grid-cols-2 gap-8 items-start">
+          <article className="rounded-xl border bg-card p-6 shadow-sm">
+            <header className="mb-3">
+              <h3 className="font-medium text-lg">Before</h3>
+              <p className="text-muted-foreground text-sm">Manuelles Beantworten kostet dich täglich Stunden und Nerven.</p>
+            </header>
+            <figure>
+              <img
+                src="/placeholder.svg"
+                alt="Überfülltes E-Mail-Postfach mit unbeantworteten Anfragen"
+                className="rounded-lg border w-full"
+                loading="lazy"
+              />
+              <figcaption className="sr-only">Vorher: Überfülltes Postfach</figcaption>
+            </figure>
+            <p className="mt-4 text-muted-foreground text-sm">
+              Täglich stapeln sich Support-Mails. Wiederholte Antworten, Copy-Paste und Daten-Suche bremsen dein Wachstum.
+            </p>
+          </article>
+
+          <article className="rounded-xl border bg-card p-6 shadow-brand">
+            <header className="mb-3">
+              <h3 className="font-medium text-lg">After</h3>
+              <p className="text-muted-foreground text-sm">Mit ReplAInow erledigt deine KI den Support – blitzschnell, präzise, skalierbar.</p>
+            </header>
+            <figure>
+              <img
+                src={inbox}
+                alt="Shopify-Admin mit fertiger KI-Antwort von ReplAInow"
+                className="rounded-lg border w-full"
+                loading="lazy"
+              />
+              <figcaption className="sr-only">Nachher: Shopify mit KI-Antwort</figcaption>
+            </figure>
+          </article>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ProblemSolution;

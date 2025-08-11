@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 const OAUTH_URL = "https://apps.shopify.com/replainow/install";
 
 const featuresList = [
-  "Automatisierte Antworten (GPT-4)",
+  "GPT-4 Antworten",
   "Tiefe Shopify-Integration",
-  "DSGVO & Webhook-Sicherheit",
-  "SLA/Support enthalten",
+  "DSGVO & HMAC-Sicherheit",
+  "SLA/Support inklusive",
 ];
 
 const plans = [
@@ -50,10 +50,13 @@ const Pricing = () => {
     <section id="preise" aria-labelledby="pricing-heading" className="py-16 md:py-24">
       <div className="container">
         <h2 id="pricing-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Transparente Preise – skalierbar für jeden Shop
+          Mehr Support-Power für weniger Geld als ein einziger Mitarbeiter.
         </h2>
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-2">
+          Ein Support-Agent kostet im Schnitt 2.000 € pro Monat.
+        </p>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          Wähle den passenden Plan – skaliert mit deinem Wachstum.
+          ReplAInow startet bei 19 $/Monat – und arbeitet 24/7, ohne Pause.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {plans.map((p) => (

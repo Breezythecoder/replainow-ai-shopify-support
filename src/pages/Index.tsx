@@ -1,10 +1,13 @@
 import Navbar from "@/components/marketing/Navbar";
 import Hero from "@/components/marketing/Hero";
+import ProblemSolution from "@/components/marketing/ProblemSolution";
 import Features from "@/components/marketing/Features";
-import Screens from "@/components/marketing/Screens";
+import SocialProof from "@/components/marketing/SocialProof";
+import LiveDemo from "@/components/marketing/LiveDemo";
 import Pricing from "@/components/marketing/Pricing";
 import About from "@/components/marketing/About";
 import Contact from "@/components/marketing/Contact";
+import FinalCTA from "@/components/marketing/FinalCTA";
 import Footer from "@/components/marketing/Footer";
 
 const Index = () => {
@@ -13,9 +16,12 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
+        <ProblemSolution />
         <Features />
-        <Screens />
+        <SocialProof />
+        <LiveDemo />
         <Pricing />
+        <FinalCTA />
         <About />
         <Contact />
       </main>
