@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Mail, MessageSquare, CheckCircle2, Globe, Clock } from "lucide-react";
 
-import chatImg from "@/assets/mock-chat.jpg";
+
 
 const OAUTH_URL = "https://apps.shopify.com/replainow/install";
 
@@ -75,7 +75,7 @@ const MailAndChat = () => {
             <figure className="rounded-lg border bg-muted">
               <AspectRatio ratio={16 / 10}>
                 <img
-                  src={chatImg}
+                  src="/lovable-uploads/ad586425-618c-4760-ad1a-4e949029cd8f.png"
                   alt="ReplAInow Live Chat – AI‑Chat in Echtzeit auf Desktop & Mobile"
                   loading="lazy"
                   className="h-full w-full object-cover rounded-lg"
@@ -84,15 +84,15 @@ const MailAndChat = () => {
             </figure>
 
             <ul className="mt-5 space-y-3">
-              <Bullet Icon={Clock}>AI‑Chat‑Antworten in unter 3 Sekunden</Bullet>
-              <Bullet Icon={CheckCircle2}>Kontext‑aware Vorschläge & Auto‑Send‑Regeln</Bullet>
-              <Bullet Icon={Globe}>Nahtloses Human‑Handoff bei Bedarf</Bullet>
+              <Bullet Icon={Clock}>Vollautomatische Chat‑Betreuung – AI beantwortet Anfragen rund um die Uhr.</Bullet>
+              <Bullet Icon={CheckCircle2}>Shopify‑Daten in Echtzeit – Bestell‑ & Versandinfos, Produktdaten, Policies sofort abrufbar.</Bullet>
+              <Bullet Icon={CheckCircle2}>Backend‑Übersicht aller Chats – Händler sieht alle laufenden Gespräche zentral.</Bullet>
             </ul>
 
             <ul className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Bullet Icon={CheckCircle2}>24/7 sofortige Antworten</Bullet>
-              <Bullet Icon={CheckCircle2}>Höhere Conversion durch schnelleren Support</Bullet>
-              <Bullet Icon={CheckCircle2}>Mehrsprachiger Support</Bullet>
+              <Bullet Icon={CheckCircle2}>AI Auto‑Mode Toggle – Händler kann jederzeit selbst übernehmen oder AI antworten lassen.</Bullet>
+              <Bullet Icon={CheckCircle2}>Kategorisierung & Verwaltung – Chats organisieren, taggen und priorisieren.</Bullet>
+              <Bullet Icon={Globe}>Mehrsprachiger Support – AI antwortet automatisch in der Kundensprache.</Bullet>
             </ul>
           </article>
         </div>
