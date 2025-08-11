@@ -12,7 +12,7 @@ const LiveDemo = () => {
           So einfach funktioniert ReplAInow.
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
-          1. Kunde stellt Frage • 2. KI schlägt Antwort vor • 3. Du prüfst & sendest – fertig
+          Ein Kunde fragt nach dem Lieferstatus – ReplAInow zieht automatisch Bestelldaten aus Shopify, formuliert eine perfekte Antwort im Ton deiner Marke und sendet sie in 3 Sekunden. Ergebnis: Kunde glücklich, du sparst Zeit – und machst parallel mehr Umsatz.
         </p>
 
         <div className="rounded-xl border bg-card p-2 shadow-brand mb-6">

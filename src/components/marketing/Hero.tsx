@@ -26,10 +26,10 @@ const Hero = () => {
           <div className="grid md:grid-cols-2 items-center gap-8">
             <div className="text-center md:text-left">
               <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight mb-6 text-primary-foreground">
-                Beende deinen Support-Stress – mit KI-Power direkt in Shopify.
+                Spare 15 Stunden Support-Zeit pro Woche – für nur 19 $ im Monat.
               </h1>
               <p className="text-lg md:text-xl text-primary-foreground/90 mb-10">
-                ReplAInow beantwortet Kundenanfragen blitzschnell, präzise und im Ton deiner Marke – 24/7, DSGVO-konform und komplett in deinen Shopify-Admin integriert.
+                ReplAInow beantwortet Kundenanfragen in Sekunden, steigert deine Kundenzufriedenheit und integriert sich nahtlos in deinen Shopify-Admin – 24/7, DSGVO-konform.
               </p>
               <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
                 <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
@@ -39,7 +39,7 @@ const Hero = () => {
                   <a href="#live-demo">Demo ansehen</a>
                 </Button>
               </div>
-              <p className="mt-2 text-sm text-primary-foreground/80">In 2 Minuten startklar. Keine Kreditkarte nötig.</p>
+              <p className="mt-2 text-sm text-primary-foreground/80">In 2 Minuten startklar. Ohne Kreditkarte. Ohne Risiko.</p>
             </div>
             <figure className="hidden md:block">
               <img

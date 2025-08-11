@@ -15,6 +15,7 @@ const plans = [
     price: "19 $",
     period: "/Monat",
     quota: "bis zu 300 AI-Antworten/Monat",
+    blurb: "Spare bis zu 60 Support-Stunden pro Monat. Ideal für kleine Shops mit hohem Serviceaufwand.",
     features: featuresList,
     popular: false,
   },
@@ -23,6 +24,7 @@ const plans = [
     price: "49 $",
     period: "/Monat",
     quota: "bis zu 1500 AI-Antworten/Monat",
+    blurb: "Skaliere Support und Umsatz gleichzeitig. Beliebtester Plan für wachsende Brands.",
     features: featuresList,
     popular: true,
     badge: "Beliebtester Plan",
@@ -32,6 +34,7 @@ const plans = [
     price: "99 $",
     period: "/Monat",
     quota: "bis zu 3000 AI-Antworten/Monat",
+    blurb: "Maximaler Durchsatz, erweiterte Reports & Teamzugriff.",
     features: featuresList,
     popular: false,
   },
@@ -40,6 +43,7 @@ const plans = [
     price: "199 $",
     period: "/Monat",
     quota: "unbegrenzte AI-Antworten",
+    blurb: "Individuelle Lösungen & Onboarding für Enterprise-Shops.",
     features: featuresList,
     popular: false,
   },
@@ -79,6 +83,9 @@ const Pricing = () => {
                     <span className="text-3xl font-bold">{p.price}</span>
                     <span className="text-muted-foreground">{p.period}</span>
                   </div>
+                  {('blurb' in p) && (p as any).blurb ? (
+                    <p className="mt-3 text-sm text-muted-foreground">{(p as any).blurb}</p>
+                  ) : null}
                 </header>
                 <ul className="space-y-2 text-sm text-muted-foreground mb-6">
                   {p.features.map((f) => (

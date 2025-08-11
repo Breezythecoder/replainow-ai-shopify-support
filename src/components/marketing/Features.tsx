@@ -3,23 +3,23 @@ import { Bot, Plug, ShieldCheck, Timer } from "lucide-react";
 const features = [
   {
     icon: Bot,
-    title: "Automatische Antworten (GPT-4)",
-    desc: "Beantworte Kundenanfragen in Sekunden – präzise und konsistent.",
+    title: "Antwort in <3 Sekunden",
+    desc: "Nie wieder Wartezeiten – steigere deine Antwortquote um 90 %.",
   },
   {
     icon: Plug,
-    title: "Tiefe Shopify-Integration",
-    desc: "Zugriff auf Produkte, Bestellungen und Kundeninfos direkt in der Antwort.",
+    title: "Direkt in Shopify",
+    desc: "Kein Tool-Wechsel. Alle Produkt-, Bestell- und Kundendaten automatisch in der Antwort.",
   },
   {
     icon: ShieldCheck,
-    title: "Sicherheit & DSGVO",
-    desc: "HMAC-signierte Webhooks, verschlüsselte Datenverarbeitung, DSGVO-konform.",
+    title: "Sicherheit auf Enterprise-Level",
+    desc: "DSGVO-konform, HMAC-sicher, verschlüsselt – geprüft & vertrauenswürdig.",
   },
   {
     icon: Timer,
-    title: "In 2 Minuten startklar",
-    desc: "Schnelle Installation ohne Code – sofort loslegen.",
+    title: "Mehr Umsatz durch schnelle Antworten",
+    desc: "Schnelle Antworten = mehr abgeschlossene Käufe & zufriedene Stammkunden.",
   },
 ];
 
