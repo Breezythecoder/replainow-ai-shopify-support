@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Mail, MessageSquare, CheckCircle2, Globe, Clock, Rocket } from "lucide-react";
-import inboxImg from "@/assets/mock-inbox.jpg";
+
 import chatImg from "@/assets/mock-chat.jpg";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow/install";
@@ -42,7 +42,7 @@ const MailAndChat = () => {
             <figure className="rounded-lg border bg-muted">
               <AspectRatio ratio={16 / 10}>
                 <img
-                  src={inboxImg}
+                  src="/lovable-uploads/30fe7c43-2fec-4711-a733-85a1c76d1942.png"
                   alt="ReplAInow Mail Inbox – AI‑Antwort mit Shopify‑Daten"
                   loading="lazy"
                   className="h-full w-full object-cover rounded-lg"
