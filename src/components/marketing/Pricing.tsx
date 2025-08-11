@@ -1,40 +1,68 @@
 import { Button } from "@/components/ui/button";
 const OAUTH_URL = "https://apps.shopify.com/replainow/install";
-const featuresList = ["GPT-4 Antworten", "Tiefe Shopify-Integration", "DSGVO & HMAC-Sicherheit", "SLA/Support inklusive"];
-const plans = [{
-  name: "Starter",
-  price: "19 $",
-  period: "/Monat",
-  quota: "bis zu 300 AI-Antworten/Monat",
-  blurb: "Spare bis zu 60 Support-Stunden pro Monat. Ideal für kleine Shops mit hohem Serviceaufwand.",
-  features: featuresList,
-  popular: false
-}, {
-  name: "Growth",
-  price: "49 $",
-  period: "/Monat",
-  quota: "bis zu 1500 AI-Antworten/Monat",
-  blurb: "Skaliere Support und Umsatz gleichzeitig. Beliebtester Plan für wachsende Brands.",
-  features: featuresList,
-  popular: true,
-  badge: "Beliebtester Plan"
-}, {
-  name: "Pro",
-  price: "99 $",
-  period: "/Monat",
-  quota: "bis zu 3000 AI-Antworten/Monat",
-  blurb: "Maximaler Durchsatz, erweiterte Reports & Teamzugriff.",
-  features: featuresList,
-  popular: false
-}, {
-  name: "Scale",
-  price: "199 $",
-  period: "/Monat",
-  quota: "unbegrenzte AI-Antworten",
-  blurb: "Individuelle Lösungen & Onboarding für Enterprise-Shops.",
-  features: featuresList,
-  popular: false
-}];
+type Feature = string | { label: string; sub: string[] };
+
+const baseFeatures: string[] = [
+  "1-Klick-Installation",
+  "Unlimitierte Shopdaten (Produkte, Seiten, Richtlinien etc.)",
+  "AI Mail & AI Live Chat",
+  "Personalisierbares Branding",
+];
+
+const plans = [
+  {
+    name: "Starter",
+    price: "$19",
+    period: "/ Monat",
+    quota: "Bis zu 300 AI Antworten / Monat",
+    trial: "14 Tage kostenlos testen",
+    features: [
+      ...baseFeatures,
+      "E-Mail Versand über ReplAInow Adresse",
+    ] as Feature[],
+    popular: false,
+  },
+  {
+    name: "Growth",
+    price: "$49",
+    period: "/ Monat",
+    quota: "Bis zu 1500 AI Antworten / Monat",
+    trial: "14 Tage kostenlos testen",
+    features: [
+      ...baseFeatures,
+      { label: "Proaktive Chat-Automation", sub: ["Begrüssung nach x Sekunden", "Trigger bei z.B. Warenkorb, Checkout.."] },
+      "E-Mail Versand mit deiner Domain",
+    ] as Feature[],
+    popular: true,
+    badge: "Beliebtester Plan",
+  },
+  {
+    name: "Pro",
+    price: "$99",
+    period: "/ Monat",
+    quota: "Bis zu 3000 AI Antworten / Monat",
+    trial: "14 Tage kostenlos testen",
+    features: [
+      ...baseFeatures,
+      { label: "Proaktive Chat-Automation", sub: ["Begrüssung nach x Sekunden", "Trigger bei z.B. Warenkorb, Checkout.."] },
+      "E-Mail Versand mit deiner Domain",
+    ] as Feature[],
+    popular: false,
+  },
+  {
+    name: "Scale",
+    price: "$199",
+    period: "/ Monat",
+    quota: "Unlimitierte AI Antworten",
+    trial: "14 Tage kostenlos testen",
+    features: [
+      ...baseFeatures,
+      { label: "Proaktive Chat-Automation", sub: ["Begrüssung nach x Sekunden", "Trigger bei z.B. Warenkorb, Checkout.."] },
+      "E-Mail Versand mit deiner Domain",
+    ] as Feature[],
+    popular: false,
+  },
+];
 const Pricing = () => {
   return <section id="preise" aria-labelledby="pricing-heading" className="py-16 md:py-24">
       <div className="container">
@@ -58,19 +86,47 @@ const Pricing = () => {
                       {p.badge}
                     </span> : null}
                   <h3 className="font-semibold text-xl">{p.name}</h3>
-                  <div className="mt-2 flex items-baseline gap-2">
+                    <div className="mt-2 flex items-baseline gap-2">
                     <span className="text-3xl font-bold">{p.price}</span>
                     <span className="text-muted-foreground">{p.period}</span>
                   </div>
+                  <p className="mt-1 text-xs text-muted-foreground">{(p as any).trial ?? "14 Tage kostenlos testen"}</p>
                   {'blurb' in p && (p as any).blurb ? <p className="mt-3 text-sm text-muted-foreground">{(p as any).blurb}</p> : null}
                 </header>
                 <ul className="space-y-2 text-sm text-muted-foreground mb-6">
-                  {p.features.map(f => <li key={f} className="flex items-start gap-2">
-                      <span className="mt-1 inline-block size-1.5 rounded-full" style={{
-                backgroundColor: "hsl(var(--brand-primary))"
-              }} />
-                      <span>{f}</span>
-                    </li>)}
+                  <li className="flex items-start gap-2">
+                    <span
+                      className="mt-1 inline-block size-1.5 rounded-full"
+                      style={{ backgroundColor: "hsl(var(--brand-primary))" }}
+                    />
+                    <span className="font-medium">{p.quota}</span>
+                  </li>
+                  {p.features.map((f: any) =>
+                    typeof f === "string" ? (
+                      <li key={f} className="flex items-start gap-2">
+                        <span
+                          className="mt-1 inline-block size-1.5 rounded-full"
+                          style={{ backgroundColor: "hsl(var(--brand-primary))" }}
+                        />
+                        <span>{f}</span>
+                      </li>
+                    ) : (
+                      <li key={f.label} className="flex items-start gap-2">
+                        <span
+                          className="mt-1 inline-block size-1.5 rounded-full"
+                          style={{ backgroundColor: "hsl(var(--brand-primary))" }}
+                        />
+                        <div>
+                          <div>{f.label}</div>
+                          <ul className="mt-1 ml-4 list-disc marker:text-muted-foreground/70">
+                            {f.sub.map((s: string) => (
+                              <li key={s}>{s}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                    )
+                  )}
                 </ul>
                 <div className="mt-auto">
                   <Button asChild variant={'hero'} className="w-full">
