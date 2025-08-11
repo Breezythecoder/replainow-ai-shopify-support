@@ -15,7 +15,7 @@ import SEO from "@/components/SEO";
 import FAQ from "@/components/marketing/FAQ";
 import StickyInstallBar from "@/components/marketing/StickyInstallBar";
 import OrganizationJsonLd from "@/components/SEOOrganization";
-
+import MailAndChat from "@/components/marketing/MailAndChat";
 const Index = () => {
   return (
     <div>
@@ -32,6 +32,7 @@ const Index = () => {
         <HowItWorks />
         <ProblemSolution />
         <Features />
+        <MailAndChat />
         <StoreDataFlow />
         <SocialProof />
         <LiveDemo />
