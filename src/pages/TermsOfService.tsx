@@ -96,6 +96,41 @@ const TermsOfService = () => {
             </section>
 
             <section>
+              <h2 className="text-2xl font-semibold mb-2">Relationship with Shopify</h2>
+              <p>
+                ReplAInow is developed and provided by PrimeVision Group LLC and is not a product of, nor officially associated with, Shopify Inc. We access and use Shopify store data solely in accordance with the permissions granted during installation and in compliance with Shopify’s API Terms and applicable policies.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold mb-2">Role in Data Processing</h2>
+              <p>
+                Merchants are the Data Controllers of any personal data of their customers processed via the App. PrimeVision Group LLC acts solely as a Data Processor, processing such data only on the Merchant’s documented instructions, including those provided through App configuration and the permissions granted during installation.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold mb-2">Changes to These Terms</h2>
+              <p>
+                We may update these Terms from time to time. If we make material changes, we will update the “Last updated” date at the top and provide notice via email or within the App. Your continued use of the App after changes become effective constitutes acceptance of the updated Terms.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold mb-2">Uninstall & Data Deletion</h2>
+              <p>
+                You may uninstall the App at any time from your Shopify Admin by navigating to Apps, selecting ReplAInow, and choosing Remove. Details about data deletion timing and options are provided in our <a className="underline" href="/privacy">Privacy Policy</a> and <a className="underline" href="/uninstall">Uninstall Instructions</a>.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold mb-2">Support & Service Availability</h2>
+              <p>
+                Support is available via email at <a className="underline" href="mailto:support@replainow.com">support@replainow.com</a>. While we strive for high availability, 100% uptime is not guaranteed and occasional maintenance or outages may occur.
+              </p>
+            </section>
+
+            <section>
               <h2 className="text-2xl font-semibold mb-2">11. Contact</h2>
               <p>
                 For questions about these Terms, contact us at <a className="underline" href="mailto:support@replainow.com">support@replainow.com</a>.
