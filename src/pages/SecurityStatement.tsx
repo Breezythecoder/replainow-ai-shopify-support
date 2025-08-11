@@ -26,6 +26,9 @@ const SecurityStatement = () => {
               <p>
                 Protecting merchant and customer data is our top priority. ReplAInow implements rigorous technical and organizational measures to safeguard information processed through our app.
               </p>
+              <p className="mt-2">
+                We follow Shopify’s App Security Requirements and industry best practices to protect data confidentiality, integrity, and availability.
+              </p>
             </section>
 
             <section>
