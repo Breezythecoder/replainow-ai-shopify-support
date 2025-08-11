@@ -17,7 +17,7 @@ const UninstallInstructions = () => {
         <section className="container mx-auto max-w-[800px] px-4 py-12 md:py-16">
           <article className="space-y-6 leading-relaxed">
             <header>
-              <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">Uninstall Instructions – Final Version</h1>
+              <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">Uninstall Instructions</h1>
               <p className="text-sm text-muted-foreground">Last updated: {lastUpdated}</p>
               <p className="text-sm text-muted-foreground">Remove ReplAInow from your Shopify store in a few steps</p>
             </header>
