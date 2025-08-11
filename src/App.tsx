@@ -4,7 +4,6 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import IndexEn from "./pages/IndexEn";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import UninstallInstructions from "./pages/UninstallInstructions";
@@ -29,14 +28,6 @@ const App = () => (
           <Route path="/uninstall" element={<UninstallInstructions />} />
           <Route path="/security" element={<SecurityStatement />} />
           <Route path="/impressum" element={<Impressum />} />
-
-          <Route path="/en" element={<IndexEn />} />
-          <Route path="/en/privacy" element={<PrivacyPolicy />} />
-          <Route path="/en/terms" element={<TermsOfService />} />
-          <Route path="/en/uninstall" element={<UninstallInstructions />} />
-          <Route path="/en/security" element={<SecurityStatement />} />
-          <Route path="/en/imprint" element={<Impressum />} />
-
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
