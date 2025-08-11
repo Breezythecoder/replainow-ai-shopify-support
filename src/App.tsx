@@ -8,6 +8,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import UninstallInstructions from "./pages/UninstallInstructions";
 import SecurityStatement from "./pages/SecurityStatement";
+import Impressum from "./pages/Impressum";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const App = () => (
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/uninstall" element={<UninstallInstructions />} />
           <Route path="/security" element={<SecurityStatement />} />
+          <Route path="/impressum" element={<Impressum />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
