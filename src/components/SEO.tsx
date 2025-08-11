@@ -20,6 +20,12 @@ const SEO = ({ title, description, path, image }: SEOProps) => {
       return el;
     };
 
+    // Determine language from path and set <html lang>
+    const origin = window.location.origin;
+    const pathname = window.location.pathname;
+    const isEn = pathname.startsWith("/en");
+    document.documentElement.lang = isEn ? "en" : "de";
+
     // Title
     document.title = title;
 
@@ -32,15 +38,34 @@ const SEO = ({ title, description, path, image }: SEOProps) => {
     }
     desc.setAttribute("content", description);
 
-    // Canonical
+    // Canonical (language-specific): always current URL without query/hash
+    const canonicalHref = `${origin}${pathname}`;
     let canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement("link");
       canonical.setAttribute("rel", "canonical");
       document.head.appendChild(canonical);
     }
-    const href = path ? `${window.location.origin}${path}` : window.location.href;
-    canonical.setAttribute("href", href);
+    canonical.setAttribute("href", canonicalHref);
+
+    // Hreflang alternates
+    const dePath = isEn ? pathname.replace(/^\/en/, "") || "/" : pathname;
+    const enPath = isEn ? pathname : (pathname === "/" ? "/en" : `/en${pathname}`);
+
+    const ensureAlternate = (lang: string, href: string) => {
+      let link = document.querySelector<HTMLLinkElement>(`link[rel="alternate"][hreflang="${lang}"]`);
+      if (!link) {
+        link = document.createElement("link");
+        link.setAttribute("rel", "alternate");
+        link.setAttribute("hreflang", lang);
+        document.head.appendChild(link);
+      }
+      link.setAttribute("href", href);
+    };
+
+    ensureAlternate("de", `${origin}${dePath}`);
+    ensureAlternate("en", `${origin}${enPath}`);
+    ensureAlternate("x-default", `${origin}`);
 
     // Open Graph
     const ogTitle = ensureMeta('meta[property="og:title"]', "property", "og:title");
@@ -53,11 +78,12 @@ const SEO = ({ title, description, path, image }: SEOProps) => {
     ogType.setAttribute("content", "website");
 
     const ogUrl = ensureMeta('meta[property="og:url"]', "property", "og:url");
-    ogUrl.setAttribute("content", href);
+    ogUrl.setAttribute("content", canonicalHref);
 
-    const defaultOg = `${window.location.origin}/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png`;
+    const defaultOg = `${origin}/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png`;
+    const resolvedImage = image?.startsWith("http") ? image : `${origin}${image || "/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"}` || defaultOg;
     const ogImage = ensureMeta('meta[property="og:image"]', "property", "og:image");
-    ogImage.setAttribute("content", image?.startsWith("http") ? image : `${window.location.origin}${image || "/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"}` || defaultOg);
+    ogImage.setAttribute("content", resolvedImage);
 
     // Twitter
     const twCard = ensureMeta('meta[name="twitter:card"]', "name", "twitter:card");
@@ -70,7 +96,7 @@ const SEO = ({ title, description, path, image }: SEOProps) => {
     twDesc.setAttribute("content", description);
 
     const twImage = ensureMeta('meta[name="twitter:image"]', "name", "twitter:image");
-    twImage.setAttribute("content", image?.startsWith("http") ? image : `${window.location.origin}${image || "/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"}` || defaultOg);
+    twImage.setAttribute("content", resolvedImage);
   }, [title, description, path, image]);
 
   return null;
