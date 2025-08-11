@@ -1,0 +1,21 @@
+{
+  "brand": {
+    "ariaHome": "ReplAInow Start"
+  },
+  "nav": {
+    "features": "Features",
+    "demo": "Demo",
+    "pricing": "Preise",
+    "contact": "Kontakt"
+  },
+  "cta": {
+    "tryFree": "Jetzt kostenlos testen",
+    "seeDemo": "Live-Demo ansehen"
+  },
+  "seo": {
+    "home": {
+      "title": "ReplAInow – Shopify Support automatisieren mit KI",
+      "description": "Beantworte Kundenanfragen in Sekunden: DSGVO‑konform, markenkonform, direkte Shopify‑Daten. 14 Tage gratis testen."
+    }
+  }
+}
