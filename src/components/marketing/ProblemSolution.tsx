@@ -12,7 +12,7 @@ const ProblemSolution = () => {
               <p className="text-muted-foreground text-sm">Jeden Tag 50+ Mails, endlose Copy-Paste-Routinen, stundenlange Datensuche. Du bist Support-Agent statt Unternehmer.</p>
             </header>
             <figure>
-              <img src="/placeholder.svg" alt="Überfülltes E-Mail-Postfach mit unbeantworteten Anfragen" className="rounded-lg border w-full" loading="lazy" />
+              <img src="/lovable-uploads/f17042b5-ecac-4d97-aed0-2b02bad2db5d.png" alt="Screenshot eines E-Mail-Postfachs – ReplAInow" className="rounded-lg border w-full" loading="lazy" decoding="async" />
               <figcaption className="sr-only">Vorher: Überfülltes Postfach</figcaption>
             </figure>
             <p className="mt-4 text-muted-foreground text-sm">
