@@ -2,26 +2,26 @@ import { useState, MouseEvent } from "react";
 import { Button } from "@/components/ui/button";
 import heroBg from "@/assets/hero-ai-bg.jpg";
 import { ShieldCheck, Zap, Plug } from "lucide-react";
-
 const OAUTH_URL = "https://apps.shopify.com/replainow/install";
-
 const Hero = () => {
-  const [pos, setPos] = useState({ x: "50%", y: "50%" });
-
+  const [pos, setPos] = useState({
+    x: "50%",
+    y: "50%"
+  });
   const onMove = (e: MouseEvent<HTMLDivElement>) => {
     const r = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - r.left) / r.width) * 100;
-    const y = ((e.clientY - r.top) / r.height) * 100;
-    setPos({ x: `${x}%`, y: `${y}%` });
+    const x = (e.clientX - r.left) / r.width * 100;
+    const y = (e.clientY - r.top) / r.height * 100;
+    setPos({
+      x: `${x}%`,
+      y: `${y}%`
+    });
   };
-
-  return (
-    <section aria-label="ReplAInow Hero" className="relative overflow-hidden">
-      <div
-        className="relative isolate hero-spotlight bg-gradient-primary"
-        onMouseMove={onMove}
-        style={{ ['--x' as any]: pos.x, ['--y' as any]: pos.y } as React.CSSProperties}
-      >
+  return <section aria-label="ReplAInow Hero" className="relative overflow-hidden">
+      <div className="relative isolate hero-spotlight bg-gradient-primary" onMouseMove={onMove} style={{
+      ['--x' as any]: pos.x,
+      ['--y' as any]: pos.y
+    } as React.CSSProperties}>
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-20 speed-lines" />
         <div className="relative container mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-32 md:pb-28">
           <div className="grid md:grid-cols-2 items-center gap-8">
@@ -48,20 +48,12 @@ const Hero = () => {
               </div>
             </div>
             <figure className="hidden md:block md:order-1">
-              <img
-                src={heroBg}
-                alt="Shopify Inbox Mockup mit KI-Antwort"
-                className="w-full h-auto rounded-xl border shadow-brand-glow"
-                loading="eager"
-                fetchPriority="high"
-              />
+              
               <figcaption className="sr-only">Subtile AI/Chat-Illustration</figcaption>
             </figure>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
