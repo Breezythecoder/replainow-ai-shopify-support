@@ -142,7 +142,7 @@ const StoreDataFlowEn = () => {
 
         <div className="text-center max-w-3xl mx-auto mt-10 md:mt-14">
           <p className="text-muted-foreground">
-            ReplAInow uses this data to deliver on‑brand, precise answers in <3 seconds — fully integrated in Shopify.
+            ReplAInow uses this data to deliver on‑brand, precise answers in &lt;3 seconds — fully integrated in Shopify.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
