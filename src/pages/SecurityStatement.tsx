@@ -24,7 +24,7 @@ const SecurityStatement = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-2">Our Commitment</h2>
               <p>
-                We take the security of your data seriously. ReplAInow implements technical and organizational measures to safeguard information processed through our app.
+                Protecting merchant and customer data is our top priority. ReplAInow implements rigorous technical and organizational measures to safeguard information processed through our app.
               </p>
             </section>
 
@@ -36,6 +36,7 @@ const SecurityStatement = () => {
                 <li>HMAC-signed Shopify webhooks for authenticity and integrity verification</li>
                 <li>Role-based access controls (RBAC) and least-privilege principles</li>
                 <li>Secure key management and secret rotation practices</li>
+                <li>Regular security audits and timely patching of dependencies and infrastructure</li>
               </ul>
             </section>
 
@@ -52,7 +53,7 @@ const SecurityStatement = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-2">Data Location</h2>
               <p>
-                Depending on the service provider, data may be processed in the EU and/or the US. We select providers with strong security practices and rely on appropriate legal mechanisms for international transfers where required.
+                Depending on the service provider, data may be processed in the EU and/or the US. We select providers with strong security practices and rely on appropriate legal mechanisms for international transfers, including Standard Contractual Clauses (SCCs) where required.
               </p>
             </section>
 
@@ -66,7 +67,7 @@ const SecurityStatement = () => {
             <section>
               <h2 className="text-2xl font-semibold mb-2">Contact</h2>
               <p>
-                If you suspect a security issue or have questions, contact us at <a className="underline" href="mailto:security@replainow.com">security@replainow.com</a>.
+                If you suspect a security issue or have questions, contact us at <a className="underline" href="mailto:security@replainow.com">security@replainow.com</a>. We encourage responsible disclosure and will work with you to investigate and remediate issues promptly.
               </p>
             </section>
           </article>
