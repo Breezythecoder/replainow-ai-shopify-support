@@ -1,4 +1,4 @@
-import { Bot, Plug, ShieldCheck, Zap, TrendingUp, Globe } from "lucide-react";
+import { Bot, Plug, ShieldCheck, Zap, TrendingUp, Globe, BarChart3, Users } from "lucide-react";
 
 const features = [
   {
@@ -31,6 +31,16 @@ const features = [
     title: "Mehrsprachig, markenkonform",
     desc: "Antworten in vielen Sprachen im Ton deiner Marke – ideal für globalen Support.",
   },
+  {
+    icon: BarChart3,
+    title: "Analytics & Insights",
+    desc: "Antwortzeiten, CSAT & Conversion im Blick.",
+  },
+  {
+    icon: Users,
+    title: "Team-Kollaboration",
+    desc: "Zuweisen, Notizen, Eskalationen – nahtlos im Team.",
+  },
 ];
 
 const Features = () => {
@@ -41,9 +51,9 @@ const Features = () => {
           Kernfeatures: KI-Support für Shopify
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          Sechs konkrete Vorteile – technisch stark und klar messbar.
+          Acht konkrete Vorteile – technisch stark und klar messbar.
         </p>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
           {features.map(({ icon: Icon, title, desc }) => (
             <article key={title} className="group rounded-xl border bg-card p-6 hover:shadow-brand transition-shadow animate-fade-in">
               <div className="size-11 rounded-lg bg-gradient-primary text-primary-foreground flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
