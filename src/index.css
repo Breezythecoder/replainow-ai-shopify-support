@@ -100,6 +100,47 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+/* Additional design system tokens and utilities */
+@layer base {
+  :root {
+    --brand-primary: 233 100% 71%; /* #6B7CFF */
+    --brand-secondary: 265 100% 74%; /* #B078FF */
+
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-secondary)) 100%);
+
+    --shadow-elevated: 0 8px 24px hsl(var(--brand-primary) / 0.25);
+    --shadow-glow: 0 12px 40px hsl(var(--brand-secondary) / 0.35);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .dark {
+    /* Keep brand colors identical in dark mode for consistency */
+    --brand-primary: 233 100% 71%;
+    --brand-secondary: 265 100% 74%;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-primary { background-image: var(--gradient-primary); }
+  .shadow-brand { box-shadow: var(--shadow-elevated); }
+  .shadow-brand-glow { box-shadow: var(--shadow-glow); }
+  .hover-scale { @apply transition-transform duration-200 hover:scale-105; }
+  .story-link { @apply relative inline-block; }
+  .story-link::after { content: ""; @apply absolute w-full h-0.5 left-0 bottom-0; background: hsl(var(--primary)); transform-origin: bottom right; transform: scaleX(0); transition: transform 300ms ease; }
+  .story-link:hover::after { transform-origin: bottom left; transform: scaleX(1); }
+
+  /* Subtle spotlight following cursor; set CSS vars --x/--y from JS */
+  .hero-spotlight { position: relative; }
+  .hero-spotlight::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    pointer-events: none;
+    background: radial-gradient(600px circle at var(--x, 50%) var(--y, 50%), hsl(var(--brand-secondary) / 0.18), transparent 40%);
+    transition: var(--transition-smooth);
   }
 }
