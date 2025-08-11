@@ -1,30 +1,25 @@
-import { Bot, Plug, ShieldCheck, FileCheck, Timer } from "lucide-react";
+import { Bot, Plug, ShieldCheck, Timer } from "lucide-react";
 
 const features = [
   {
     icon: Bot,
-    title: "Automatische Antworten mit GPT-4",
-    desc: "Beantworte Kundenmails & Chats in Sekunden.",
+    title: "Automatische Antworten (GPT-4)",
+    desc: "Beantworte Kundenanfragen in Sekunden – präzise und konsistent.",
   },
   {
     icon: Plug,
-    title: "Shopify-Integration",
-    desc: "Zugriff auf Produkte, Bestellungen & Kundeninfos – direkt in der Antwort.",
+    title: "Tiefe Shopify-Integration",
+    desc: "Zugriff auf Produkte, Bestellungen und Kundeninfos direkt in der Antwort.",
   },
   {
     icon: ShieldCheck,
-    title: "HMAC-gesicherte Webhooks",
-    desc: "Maximale Sicherheit für deine Shop-Daten.",
-  },
-  {
-    icon: FileCheck,
-    title: "GDPR-konform",
-    desc: "Erfüllt alle DSGVO-Pflichten.",
+    title: "Sicherheit & DSGVO",
+    desc: "HMAC-signierte Webhooks, verschlüsselte Datenverarbeitung, DSGVO-konform.",
   },
   {
     icon: Timer,
-    title: "Einfache Installation",
-    desc: "In 2 Minuten startklar.",
+    title: "In 2 Minuten startklar",
+    desc: "Schnelle Installation ohne Code – sofort loslegen.",
   },
 ];
 
@@ -41,8 +36,8 @@ const Features = () => {
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
           {features.map(({ icon: Icon, title, desc }) => (
             <article key={title} className="group rounded-xl border bg-card p-6 hover:shadow-brand transition-shadow animate-fade-in">
-              <div className="size-11 rounded-lg bg-secondary flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
-                <Icon className="text-foreground" />
+              <div className="size-11 rounded-lg bg-gradient-primary text-primary-foreground flex items-center justify-center mb-4 group-hover:scale-105 transition-transform">
+                <Icon className="text-primary-foreground" />
               </div>
               <h3 className="font-semibold text-lg mb-1">{title}</h3>
               <p className="text-muted-foreground">{desc}</p>

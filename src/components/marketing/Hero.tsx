@@ -17,33 +17,38 @@ const Hero = () => {
   return (
     <section aria-label="ReplAInow Hero" className="relative overflow-hidden">
       <div
-        className="relative isolate hero-spotlight"
+        className="relative isolate hero-spotlight bg-gradient-primary"
         onMouseMove={onMove}
         style={{ ['--x' as any]: pos.x, ['--y' as any]: pos.y } as React.CSSProperties}
       >
-        <img
-          src={heroBg}
-          alt="Abstrakte, subtile AI-Hintergrundgrafik"
-          className="absolute inset-0 w-full h-full object-cover opacity-60"
-          loading="eager"
-          fetchPriority="high"
-        />
         <div className="relative container mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-32 md:pb-28">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight mb-6">
-              ReplAInow – Dein KI-gestützter Kundensupport für Shopify
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-10">
-              Automatisiere Antworten, bearbeite Bestellungen und löse Support-Anfragen blitzschnell – direkt in deinem Shopify-Admin.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
-                <a href={OAUTH_URL}>Jetzt installieren</a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-                <a href="#demo">Demo ansehen</a>
-              </Button>
+          <div className="grid md:grid-cols-2 items-center gap-8">
+            <div className="text-center md:text-left">
+              <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight mb-6 text-primary-foreground">
+                Maximiere deinen Kundensupport – mit KI-Power für Shopify.
+              </h1>
+              <p className="text-lg md:text-xl text-primary-foreground opacity-90 mb-10">
+                ReplAInow beantwortet Kundenanfragen blitzschnell, präzise und direkt in deinem Shopify-Admin – 24/7, DSGVO-konform, voll integriert.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
+                <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
+                  <a href={OAUTH_URL}>Jetzt kostenlos testen</a>
+                </Button>
+                <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
+                  <a href="#demo">Demo ansehen</a>
+                </Button>
+              </div>
             </div>
+            <figure className="hidden md:block">
+              <img
+                src={heroBg}
+                alt="AI/Chat-Illustration"
+                className="w-full h-auto rounded-xl border shadow-brand-glow"
+                loading="eager"
+                fetchPriority="high"
+              />
+              <figcaption className="sr-only">Subtile AI/Chat-Illustration</figcaption>
+            </figure>
           </div>
         </div>
       </div>

@@ -2,27 +2,46 @@ import { Button } from "@/components/ui/button";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow/install";
 
+const featuresList = [
+  "Automatisierte Antworten (GPT-4)",
+  "Tiefe Shopify-Integration",
+  "DSGVO & Webhook-Sicherheit",
+  "SLA/Support enthalten",
+];
+
 const plans = [
   {
     name: "Starter",
-    price: "19 €",
+    price: "19 $",
     period: "/Monat",
-    features: ["500 Anfragen/Monat", "Grundfunktionen", "E-Mail-Support"],
-    highlight: false,
+    quota: "bis zu 300 AI-Antworten/Monat",
+    features: featuresList,
+    popular: false,
+  },
+  {
+    name: "Growth",
+    price: "49 $",
+    period: "/Monat",
+    quota: "bis zu 1500 AI-Antworten/Monat",
+    features: featuresList,
+    popular: true,
+    badge: "Beliebtester Plan",
   },
   {
     name: "Pro",
-    price: "49 €",
+    price: "99 $",
     period: "/Monat",
-    features: ["2000 Anfragen/Monat", "Erweiterte Automatisierung", "Priorisierte Antworten"],
-    highlight: true,
+    quota: "bis zu 3000 AI-Antworten/Monat",
+    features: featuresList,
+    popular: false,
   },
   {
-    name: "Enterprise",
-    price: "Auf Anfrage",
-    period: "",
-    features: ["Unbegrenzte Anfragen", "SLA & Prioritätssupport", "Individuelle Anpassungen"],
-    highlight: false,
+    name: "Scale",
+    price: "199 $",
+    period: "/Monat",
+    quota: "unbegrenzte AI-Antworten",
+    features: featuresList,
+    popular: false,
   },
 ];
 
@@ -34,33 +53,45 @@ const Pricing = () => {
           Transparente Preise – skalierbar für jeden Shop
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          Starte heute und wachse mit deinem Bedarf.
+          Wähle den passenden Plan – skaliert mit deinem Wachstum.
         </p>
-        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-          {plans.map((p) => (
-            <article key={p.name} className={`rounded-2xl border p-6 bg-card flex flex-col ${p.highlight ? 'shadow-brand' : ''}`}>
-              <header className="mb-4">
-                <h3 className="font-semibold text-xl">{p.name}</h3>
-                <div className="mt-2 flex items-baseline gap-2">
-                  <span className="text-3xl font-bold">{p.price}</span>
-                  <span className="text-muted-foreground">{p.period}</span>
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {plans.map((p) => (
+              <article
+                key={p.name}
+                className={`rounded-2xl border p-6 bg-card flex flex-col ${p.popular ? 'shadow-brand' : ''}`}
+                style={p.popular ? { borderColor: 'hsl(var(--brand-popular))', backgroundColor: 'hsl(var(--brand-popular) / 0.06)' } : undefined}
+              >
+                <header className="mb-4">
+                  {('badge' in p) && p.badge ? (
+                    <span
+                      className="mb-2 inline-flex items-center rounded-full px-2.5 py-1 text-xs font-medium"
+                      style={{ backgroundColor: 'hsl(var(--brand-popular) / 0.18)', border: '1px solid hsl(var(--brand-popular))' }}
+                    >
+                      {p.badge}
+                    </span>
+                  ) : null}
+                  <h3 className="font-semibold text-xl">{p.name}</h3>
+                  <div className="mt-2 flex items-baseline gap-2">
+                    <span className="text-3xl font-bold">{p.price}</span>
+                    <span className="text-muted-foreground">{p.period}</span>
+                  </div>
+                </header>
+                <ul className="space-y-2 text-sm text-muted-foreground mb-6">
+                  {p.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2">
+                      <span className="mt-1 inline-block size-1.5 rounded-full" style={{ backgroundColor: "hsl(var(--brand-primary))" }} />
+                      <span>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-auto">
+                  <Button asChild variant={'hero'} className="w-full">
+                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`}>Kostenlos testen</a>
+                  </Button>
                 </div>
-              </header>
-              <ul className="space-y-2 text-sm text-muted-foreground mb-6">
-                {p.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2">
-                    <span className="mt-1 inline-block size-1.5 rounded-full" style={{ backgroundColor: "hsl(var(--brand-primary))" }} />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-auto">
-                <Button asChild variant={p.highlight ? 'hero' : 'outline'} className="w-full">
-                  <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}`}>Jetzt starten</a>
-                </Button>
-              </div>
-            </article>
-          ))}
+              </article>
+            ))}
         </div>
       </div>
     </section>
