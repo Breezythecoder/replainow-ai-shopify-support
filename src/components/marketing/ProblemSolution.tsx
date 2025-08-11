@@ -1,4 +1,4 @@
-import inbox from "@/assets/mock-inbox.jpg";
+
 const ProblemSolution = () => {
   return <section id="problem" aria-labelledby="problem-heading" className="py-16 md:py-24">
       <div className="container max-w-6xl">
@@ -26,7 +26,7 @@ const ProblemSolution = () => {
               <p className="text-muted-foreground text-sm">Deine KI übernimmt – in unter 3 Sekunden steht jede Antwort bereit, mit allen Bestell- und Produktinfos. Du klickst „Senden“. Fertig.</p>
             </header>
             <figure>
-              <img src={inbox} alt="Shopify-Admin mit fertiger KI-Antwort von ReplAInow" className="rounded-lg border w-full" loading="lazy" />
+              <img src="/lovable-uploads/91677a2e-50c4-4aeb-8a6e-f6626412e034.png" alt="ReplAInow Inbox – KI-Antwort im Shopify Admin" className="rounded-lg border w-full" loading="lazy" decoding="async" />
               <figcaption className="sr-only">Nachher: Shopify mit KI-Antwort</figcaption>
             </figure>
           </article>
