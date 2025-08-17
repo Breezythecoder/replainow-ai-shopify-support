@@ -1,5 +1,5 @@
 import SEO from "@/components/SEO";
-import SEOOrganization from "@/components/SEOOrganization";
+import OrganizationJsonLd from "@/components/SEOOrganization";
 import NavbarIt from "@/components/marketing/Navbar.it";
 import HeroIt from "@/components/marketing/Hero.it";
 import HowItWorksIt from "@/components/marketing/HowItWorks.it";
@@ -26,7 +26,7 @@ const IndexIt = () => {
         description="Helpdesk AI intelligente per Shopify. Risponde automaticamente alle richieste dei clienti con dati in tempo reale. Prova gratuita 14 giorni. Installazione in 2 minuti."
         image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
-      <SEOOrganization />
+      <OrganizationJsonLd />
       <NavbarIt />
       <main>
         <HeroIt />
