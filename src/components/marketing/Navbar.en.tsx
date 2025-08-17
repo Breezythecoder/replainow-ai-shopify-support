@@ -15,6 +15,7 @@ const NavbarEn = () => {
           <a href="#live-demo" className="text-muted-foreground hover:text-foreground transition-colors story-link">Demo</a>
           <a href="#preise" className="text-muted-foreground hover:text-foreground transition-colors story-link">Pricing</a>
           <a href="#kontakt" className="text-muted-foreground hover:text-foreground transition-colors story-link">Contact</a>
+          <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">DE</a>
         </div>
         <div className="flex items-center gap-2">
           <Button asChild variant="hero">

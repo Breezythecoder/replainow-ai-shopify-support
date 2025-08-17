@@ -1,18 +1,18 @@
 import NavbarEn from "@/components/marketing/Navbar.en";
 import HeroEn from "@/components/marketing/Hero.en";
-import HowItWorks from "@/components/marketing/HowItWorks";
+import HowItWorksEn from "@/components/marketing/HowItWorks.en";
 import ProblemSolution from "@/components/marketing/ProblemSolution";
-import Features from "@/components/marketing/Features";
+import FeaturesEn from "@/components/marketing/Features.en";
 import SocialProof from "@/components/marketing/SocialProof";
 import LiveDemo from "@/components/marketing/LiveDemo";
-import Pricing from "@/components/marketing/Pricing";
+import PricingEn from "@/components/marketing/Pricing.en";
 import AboutEn from "@/components/marketing/About.en";
 import Contact from "@/components/marketing/Contact";
 import FinalCTAEn from "@/components/marketing/FinalCTA.en";
 import Footer from "@/components/marketing/Footer";
 import StoreDataFlow from "@/components/marketing/StoreDataFlow";
 import SEO from "@/components/SEO";
-import FAQ from "@/components/marketing/FAQ";
+import FAQEn from "@/components/marketing/FAQ.en";
 import StickyInstallBar from "@/components/marketing/StickyInstallBar";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import MailAndChat from "@/components/marketing/MailAndChat";
@@ -29,15 +29,15 @@ const IndexEn = () => {
       <NavbarEn />
       <main>
         <HeroEn />
-        <HowItWorks />
+        <HowItWorksEn />
         <ProblemSolution />
-        <Features />
+        <FeaturesEn />
         <MailAndChat />
         <StoreDataFlow />
         <SocialProof />
         <LiveDemo />
-        <Pricing />
-        <FAQ />
+        <PricingEn />
+        <FAQEn />
         <FinalCTAEn />
         <AboutEn />
         <Contact />
