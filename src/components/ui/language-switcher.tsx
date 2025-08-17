@@ -8,7 +8,11 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-const LanguageSwitcher = () => {
+interface LanguageSwitcherProps {
+  variant?: 'mobile' | 'desktop';
+}
+
+const LanguageSwitcher = ({ variant = 'mobile' }: LanguageSwitcherProps = {}) => {
   const location = useLocation();
   
   const languages = [
@@ -30,6 +34,42 @@ const LanguageSwitcher = () => {
   };
   
   const currentLang = getCurrentLanguage();
+
+  if (variant === 'desktop') {
+    return (
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button
+            size="sm"
+            variant="ghost"
+            className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+          >
+            <Globe className="h-4 w-4" />
+            <span className="font-medium">{currentLang.code}</span>
+            <ChevronDown className="h-3 w-3" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent 
+          align="end" 
+          className="min-w-[140px]"
+        >
+          {languages.map((lang) => (
+            <DropdownMenuItem key={lang.code} asChild>
+              <a 
+                href={lang.path} 
+                className={`flex items-center gap-2 px-3 py-2 text-sm cursor-pointer ${
+                  currentLang.code === lang.code ? 'bg-primary/10 text-primary font-medium' : ''
+                }`}
+              >
+                <span className="text-xs font-medium w-6">{lang.code}</span>
+                <span>{lang.name}</span>
+              </a>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
+    );
+  }
 
   return (
     <div className="fixed bottom-4 left-4 z-50 md:hidden">

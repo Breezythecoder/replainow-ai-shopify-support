@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import LanguageSwitcher from "@/components/ui/language-switcher";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow/install";
 
@@ -15,7 +16,7 @@ const NavbarFr = () => {
           <a href="#live-demo" className="text-muted-foreground hover:text-foreground transition-colors story-link">Démo</a>
           <a href="#preise" className="text-muted-foreground hover:text-foreground transition-colors story-link">Tarifs</a>
           <a href="#kontakt" className="text-muted-foreground hover:text-foreground transition-colors story-link">Contact</a>
-          <a href="/" className="text-muted-foreground hover:text-foreground transition-colors">DE</a>
+          <LanguageSwitcher variant="desktop" />
         </div>
         <div className="flex items-center gap-2">
           <Button asChild variant="hero">
