@@ -16,6 +16,7 @@ const LanguageSwitcher = () => {
     { code: 'EN', path: '/en', name: 'English' },
     { code: 'ES', path: '/es', name: 'Español' },
     { code: 'FR', path: '/fr', name: 'Français' },
+    { code: 'IT', path: '/it', name: 'Italiano' },
     { code: 'PT', path: '/pt', name: 'Português' },
   ];
   
@@ -23,7 +24,8 @@ const LanguageSwitcher = () => {
     if (location.pathname.startsWith('/en')) return languages[1];
     if (location.pathname.startsWith('/es')) return languages[2];
     if (location.pathname.startsWith('/fr')) return languages[3];
-    if (location.pathname.startsWith('/pt')) return languages[4];
+    if (location.pathname.startsWith('/it')) return languages[4];
+    if (location.pathname.startsWith('/pt')) return languages[5];
     return languages[0]; // Default to German
   };
   
