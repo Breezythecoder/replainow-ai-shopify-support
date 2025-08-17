@@ -18,11 +18,12 @@ const LiveDemo = () => {
         <div className="rounded-xl border bg-card p-2 shadow-brand mb-6">
           <AspectRatio ratio={16/9}>
             <iframe
-              src="https://www.youtube.com/embed/x1VLcGBbcgo"
+              src="https://www.youtube-nocookie.com/embed/x1VLcGBbcgo?controls=1&rel=0&modestbranding=1&showinfo=0"
               title="ReplAInow Demo Video"
               className="w-full h-full rounded-lg"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              frameBorder="0"
             />
           </AspectRatio>
         </div>
