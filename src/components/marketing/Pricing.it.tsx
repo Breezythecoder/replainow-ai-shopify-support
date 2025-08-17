@@ -1,146 +1,154 @@
-import { Check, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
 const OAUTH_URL = "https://apps.shopify.com/replainow/install";
+
+type Feature = string | { label: string; sub: string[] };
+
+const baseFeatures: string[] = [
+  "Installazione con 1-clic",
+  "Dati negozio illimitati (prodotti, pagine, politiche ecc.)",
+  "AI Mail & AI Live Chat",
+  "Branding personalizzabile",
+];
+
+const plans = [
+  {
+    name: "Starter",
+    price: "$19",
+    period: "/ mese",
+    quota: "Fino a 300 risposte AI / mese",
+    trial: "14 giorni di prova gratuita",
+    features: [
+      ...baseFeatures,
+      "Invio e-mail tramite indirizzo ReplAInow",
+    ] as Feature[],
+    popular: false,
+  },
+  {
+    name: "Growth",
+    price: "$49",
+    period: "/ mese",
+    quota: "Fino a 1500 risposte AI / mese",
+    trial: "14 giorni di prova gratuita",
+    features: [
+      ...baseFeatures,
+      "Invio e-mail con il tuo dominio",
+    ] as Feature[],
+    popular: true,
+    badge: "Piano più popolare",
+  },
+  {
+    name: "Pro",
+    price: "$99",
+    period: "/ mese",
+    quota: "Fino a 3000 risposte AI / mese",
+    trial: "14 giorni di prova gratuita",
+    features: [
+      ...baseFeatures,
+      "Invio e-mail con il tuo dominio",
+    ] as Feature[],
+    popular: false,
+  },
+  {
+    name: "Scale",
+    price: "$199",
+    period: "/ mese",
+    quota: "Risposte AI illimitate",
+    trial: "14 giorni di prova gratuita",
+    features: [
+      ...baseFeatures,
+      "Invio e-mail con il tuo dominio",
+    ] as Feature[],
+    popular: false,
+  },
+];
 
 const PricingIt = () => {
   return (
-    <section id="prezzi" aria-labelledby="pricing-heading" className="py-16 md:py-24 bg-muted/40">
-      <div className="container max-w-5xl">
+    <section id="prezzi" aria-labelledby="pricing-heading" className="py-16 md:py-24">
+      <div className="container">
         <h2 id="pricing-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Prezzi semplici e trasparenti
+          Più potenza di supporto per meno soldi di un singolo dipendente.
         </h2>
-        <p className="text-center text-muted-foreground mb-12">
-          Inizia con la prova gratuita di 14 giorni. Nessuna carta di credito necessaria.
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-2">
+          Un agente di supporto costa in media 2.000 € al mese.
+        </p>
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+          ReplAInow inizia da 19 $/mese – e lavora 24/7, senza pause.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-8">
-          <article className="rounded-xl border bg-card p-6 shadow-sm">
-            <header className="text-center mb-6">
-              <h3 className="font-semibold text-lg mb-2">Starter</h3>
-              <div className="mb-3">
-                <span className="text-3xl font-bold">€29</span>
-                <span className="text-muted-foreground">/mese</span>
-              </div>
-              <p className="text-sm text-muted-foreground">Perfetto per piccoli negozi</p>
-            </header>
-            <ul className="space-y-3 mb-6">
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Fino a 200 ticket/mese
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Integrazione Shopify completa
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Supporto multilingue
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Supporto email
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <X className="h-4 w-4 text-red-400" />
-                Risposte automatiche
-              </li>
-            </ul>
-            <Button asChild className="w-full" variant="outline">
-              <a href={OAUTH_URL}>Inizia prova gratuita</a>
-            </Button>
-          </article>
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {plans.map((p) => {
+            const Card = (
+              <article className="group rounded-2xl border bg-card p-6 h-full flex flex-col hover:shadow-brand transition-all duration-200 hover:-translate-y-0.5">
+                <header className="mb-4">
+                  <h3 className="font-semibold text-xl">{p.name}</h3>
+                  <div className="mt-2 flex items-baseline gap-2">
+                    <span className="text-3xl font-bold">{p.price}</span>
+                    <span className="text-muted-foreground">{p.period}</span>
+                  </div>
+                  <p className="mt-1 text-xs text-muted-foreground">{(p as any).trial ?? "14 giorni di prova gratuita"}</p>
+                  {'blurb' in p && (p as any).blurb ? (
+                    <p className="mt-3 text-sm text-muted-foreground">{(p as any).blurb}</p>
+                  ) : null}
+                </header>
 
-          <article className="rounded-xl border-2 border-primary bg-card p-6 shadow-brand relative">
-            <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-              <span className="bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-medium">
-                Più popolare
-              </span>
-            </div>
-            <header className="text-center mb-6">
-              <h3 className="font-semibold text-lg mb-2">Professional</h3>
-              <div className="mb-3">
-                <span className="text-3xl font-bold">€79</span>
-                <span className="text-muted-foreground">/mese</span>
-              </div>
-              <p className="text-sm text-muted-foreground">Per negozi in crescita</p>
-            </header>
-            <ul className="space-y-3 mb-6">
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Fino a 1.000 ticket/mese
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Integrazione Shopify completa
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Supporto multilingue
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Risposte automatiche
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Supporto prioritario
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Analytics avanzate
-              </li>
-            </ul>
-            <Button asChild className="w-full" variant="hero">
-              <a href={OAUTH_URL}>Inizia prova gratuita</a>
-            </Button>
-          </article>
+                <ul className="space-y-2 text-sm text-muted-foreground mb-6">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1 inline-block size-1.5 rounded-full bg-primary" />
+                    <span className="font-medium">{p.quota}</span>
+                  </li>
+                  {p.features.map((f: any) =>
+                    typeof f === 'string' ? (
+                      <li key={f} className="flex items-start gap-2">
+                        <span className="mt-1 inline-block size-1.5 rounded-full bg-primary" />
+                        <span>{f}</span>
+                      </li>
+                    ) : (
+                      <li key={f.label} className="flex items-start gap-2">
+                        <span className="mt-1 inline-block size-1.5 rounded-full bg-primary" />
+                        <div>
+                          <div>{f.label}</div>
+                          <ul className="mt-1 ml-4 list-disc marker:text-muted-foreground/70">
+                            {f.sub.map((s: string) => (
+                              <li key={s}>{s}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                    )
+                  )}
+                </ul>
 
-          <article className="rounded-xl border bg-card p-6 shadow-sm">
-            <header className="text-center mb-6">
-              <h3 className="font-semibold text-lg mb-2">Enterprise</h3>
-              <div className="mb-3">
-                <span className="text-3xl font-bold">€199</span>
-                <span className="text-muted-foreground">/mese</span>
-              </div>
-              <p className="text-sm text-muted-foreground">Per grandi volumi</p>
-            </header>
-            <ul className="space-y-3 mb-6">
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Ticket illimitati
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Integrazione Shopify completa
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Supporto multilingue
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Risposte automatiche
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Account manager dedicato
-              </li>
-              <li className="flex items-center gap-2 text-sm">
-                <Check className="h-4 w-4 text-green-500" />
-                Integrazione personalizzata
-              </li>
-            </ul>
-            <Button asChild className="w-full" variant="outline">
-              <a href="#contatto">Contattaci</a>
-            </Button>
-          </article>
-        </div>
+                <div className="mt-auto space-y-3">
+                  <Button asChild variant="hero" className="w-full">
+                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Prova gratuita – Piano ${p.name}`}>
+                      Prova gratuita
+                    </a>
+                  </Button>
+                  <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
+                    <img
+                      src="/images/shopify-logo-black.svg"
+                      alt="Logo Shopify – App Store"
+                      className="h-4 w-auto opacity-80"
+                      loading="lazy"
+                    />
+                    <span>Presente nello Shopify App Store</span>
+                  </div>
+                </div>
+              </article>
+            );
 
-        <div className="text-center mt-8 text-sm text-muted-foreground">
-          <p>✓ 14 giorni di prova gratuita per tutti i piani</p>
-          <p>✓ Annulla in qualsiasi momento</p>
-          <p>✓ Nessuna commissione di configurazione</p>
+            return p.popular ? (
+              <div key={p.name} className="relative rounded-2xl p-[1px] bg-gradient-primary shadow-brand-glow hover:shadow-brand-glow transition-shadow">
+                <span className="absolute -top-3 left-4 rounded-full bg-primary text-primary-foreground text-xs px-2.5 py-1 border border-primary/60 shadow-brand">
+                  {(p as any).badge ?? 'Piano più popolare'}
+                </span>
+                {Card}
+              </div>
+            ) : (
+              <div key={p.name} className="relative">{Card}</div>
+            );
+          })}
         </div>
       </div>
     </section>

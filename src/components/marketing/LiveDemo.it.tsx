@@ -1,67 +1,36 @@
-import { Play, MessageSquare } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Play } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+
+const OAUTH_URL = "https://apps.shopify.com/replainow/install";
 
 const LiveDemoIt = () => {
   return (
     <section id="live-demo" aria-labelledby="live-demo-heading" className="py-16 md:py-24">
-      <div className="container max-w-4xl">
+      <div className="container max-w-5xl">
         <h2 id="live-demo-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Guarda ReplAInow in azione
+          Così semplice funziona ReplAInow.
         </h2>
-        <p className="text-center text-muted-foreground mb-12">
-          Vedi come l'AI genera risposte perfette con i dati Shopify in tempo reale – in meno di 3 secondi.
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
+          Un cliente chiede lo stato della consegna – ReplAInow estrae automaticamente i dati dell'ordine da Shopify, formula una risposta perfetta nel tono del tuo brand e la invia in 3 secondi. Risultato: cliente felice, tu risparmi tempo – e nel frattempo generi più fatturato.
         </p>
-        
-        <div className="grid md:grid-cols-2 gap-8 mb-8">
-          <article className="relative group cursor-pointer">
-            <div className="relative overflow-hidden rounded-xl border bg-card shadow-sm group-hover:shadow-md transition-all">
-              <img 
-                src="/assets/mock-chat.jpg" 
-                alt="Chat demo di ReplAInow in azione" 
-                className="w-full h-48 object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <Play className="h-12 w-12 text-white" />
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold mb-2 flex items-center gap-2">
-                  <MessageSquare className="h-4 w-4" />
-                  Demo chat
-                </h3>
-                <p className="text-sm text-muted-foreground">
-                  Vedi come l'AI risponde a richieste clienti complesse con dati ordine e prodotto in tempo reale.
-                </p>
-              </div>
-            </div>
-          </article>
 
-          <article className="relative group cursor-pointer">
-            <div className="relative overflow-hidden rounded-xl border bg-card shadow-sm group-hover:shadow-md transition-all">
-              <img 
-                src="/assets/mock-inbox.jpg" 
-                alt="Admin Shopify con ReplAInow integrato" 
-                className="w-full h-48 object-cover"
-                loading="lazy"
-                decoding="async"
-              />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                <Play className="h-12 w-12 text-white" />
-              </div>
-              <div className="p-4">
-                <h3 className="font-semibold mb-2">Integrazione Shopify</h3>
-                <p className="text-sm text-muted-foreground">
-                  L'integrazione perfetta nell'admin Shopify – nessuna piattaforma esterna necessaria.
-                </p>
-              </div>
-            </div>
-          </article>
+        <div className="rounded-xl border bg-card p-2 shadow-brand mb-6">
+          <AspectRatio ratio={16/9}>
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/x1VLcGBbcgo?controls=1&rel=0&modestbranding=1&showinfo=0"
+              title="Video Demo ReplAInow"
+              className="w-full h-full rounded-lg"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              frameBorder="0"
+            />
+          </AspectRatio>
         </div>
 
         <div className="text-center">
-          <Button asChild size="lg" variant="outline">
-            <a href="#contatto">Richiedi demo personale</a>
+          <Button asChild size="lg" variant="hero">
+            <a href={OAUTH_URL}>Prova ora tu stesso</a>
           </Button>
         </div>
       </div>
