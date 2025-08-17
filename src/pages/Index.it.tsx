@@ -15,7 +15,7 @@ import SEO from "@/components/SEO";
 import FAQIt from "@/components/marketing/FAQ.it";
 import StickyInstallBarIt from "@/components/marketing/StickyInstallBar.it";
 import OrganizationJsonLd from "@/components/SEOOrganization";
-import MailAndChatIt from "@/components/marketing/MailAndChat.it";
+
 import LanguageSwitcher from "@/components/ui/language-switcher";
 
 const IndexIt = () => {
@@ -33,7 +33,7 @@ const IndexIt = () => {
         <HowItWorksIt />
         <ProblemSolutionIt />
         <FeaturesIt />
-        <MailAndChatIt />
+        
         <StoreDataFlowIt />
         <SocialProofIt />
         <LiveDemoIt />
