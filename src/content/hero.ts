@@ -20,7 +20,7 @@ import heroBackground from "@/assets/hero-ai-bg.jpg";
 export const heroContent: HeroContent = {
   headline: "KI-Helpdesk für Shopify. Beantwortet Anfragen in Sekunden.",
   subheadline:
-    "GPT-4/5 mit Echtzeit-Shopify-Daten: höhere Conversion, schnellere Antworten, weniger Tickets.",
+    "KI mit Echtzeit-Shopify-Daten: höhere Conversion, schnellere Antworten, weniger Tickets.",
   primaryCta: { label: "Kostenlos testen", href: "https://apps.shopify.com/replainow/install" },
   secondaryCta: { label: "Live-Demo ansehen", href: "#live-demo" },
   media: {
