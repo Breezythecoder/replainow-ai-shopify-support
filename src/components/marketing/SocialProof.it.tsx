@@ -1,102 +1,64 @@
-import { Star, Users, Clock, TrendingUp, Shield, Award, Zap } from "lucide-react";
+import { ShieldCheck, Lock, BadgeCheck } from "lucide-react";
+
+const logos = ["Shopify Plus", "D2C Brand", "Top Store", "Global Retail", "Lifestyle Co."];
 
 const SocialProofIt = () => {
   return (
-    <section id="social-proof" aria-labelledby="social-proof-heading" className="py-16 md:py-24 bg-muted/40">
+    <section id="trust" aria-labelledby="trust-heading" className="py-16 md:py-24 bg-muted/40">
       <div className="container max-w-6xl">
-        <h2 id="social-proof-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Già oltre 500 negozi Shopify si fidano di ReplAInow
+        <h2 id="trust-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
+          Utilizzato e amato dai principali negozi Shopify.
         </h2>
-        <p className="text-center text-muted-foreground mb-12">
-          Unisciti ai merchant di successo che risparmiano ore ogni giorno e migliorano il servizio clienti.
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
+          Più fiducia. Meno sforzo. Risposte più veloci.
         </p>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-          <div className="text-center p-6 rounded-lg bg-card border">
-            <Clock className="h-8 w-8 text-primary mx-auto mb-2" />
-            <div className="font-bold text-2xl">89%</div>
-            <div className="text-sm text-muted-foreground">Tempo risparmiato</div>
-          </div>
-          <div className="text-center p-6 rounded-lg bg-card border">
-            <Users className="h-8 w-8 text-primary mx-auto mb-2" />
-            <div className="font-bold text-2xl">94%</div>
-            <div className="text-sm text-muted-foreground">Soddisfazione clienti</div>
-          </div>
-          <div className="text-center p-6 rounded-lg bg-card border">
-            <TrendingUp className="h-8 w-8 text-primary mx-auto mb-2" />
-            <div className="font-bold text-2xl">312%</div>
-            <div className="text-sm text-muted-foreground">ROI medio</div>
-          </div>
-          <div className="text-center p-6 rounded-lg bg-card border">
-            <Star className="h-8 w-8 text-primary mx-auto mb-2" />
-            <div className="font-bold text-2xl">4.9/5</div>
-            <div className="text-sm text-muted-foreground">Valutazione App Store</div>
-          </div>
+        <div className="mb-8 flex flex-wrap items-center justify-center gap-3 text-xs">
+          <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify Plus Partner</span>
+          <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify App Store ★★★★★ 4,9 / 5</span>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <article className="bg-card rounded-lg p-6 border shadow-sm">
-            <div className="flex items-center mb-3">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-current text-yellow-400" />
-                ))}
-              </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center mb-12">
+          {logos.map((name) => (
+            <div key={name} className="rounded-lg border bg-card px-4 py-3 text-center text-sm text-muted-foreground">
+              {name}
             </div>
-            <blockquote className="text-sm text-muted-foreground mb-3">
-              "ReplAInow ha trasformato completamente il nostro supporto clienti. Risparmiamo 4 ore al giorno e i clienti ricevono risposte migliori."
-            </blockquote>
-            <cite className="font-medium text-sm">
-              Marco R., Fashion Store
-            </cite>
-          </article>
+          ))}
+        </div>
 
-          <article className="bg-card rounded-lg p-6 border shadow-sm">
-            <div className="flex items-center mb-3">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-current text-yellow-400" />
-                ))}
-              </div>
-            </div>
-            <blockquote className="text-sm text-muted-foreground mb-3">
-              "L'installazione ha richiesto 2 minuti, già il primo giorno abbiamo risparmiato ore. Semplicemente geniale!"
-            </blockquote>
-            <cite className="font-medium text-sm">
-              Laura M., Elettronica
-            </cite>
+        <div className="grid gap-6 md:grid-cols-3">
+          <article className="rounded-xl border bg-card p-6">
+            <p className="mb-4">„Risparmiamo 15 ore di supporto a settimana – e i nostri clienti adorano i tempi di risposta rapidi."</p>
+            <div className="text-sm text-muted-foreground">Lisa – Fashion Store • 7 cifre</div>
           </article>
-
-          <article className="bg-card rounded-lg p-6 border shadow-sm">
-            <div className="flex items-center mb-3">
-              <div className="flex">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-current text-yellow-400" />
-                ))}
-              </div>
-            </div>
-            <blockquote className="text-sm text-muted-foreground mb-3">
-              "I nostri clienti ricevono risposte precise in tempo record. La soddisfazione dei clienti è aumentata significativamente."
-            </blockquote>
-            <cite className="font-medium text-sm">
-              Giuseppe T., Sport & Outdoor
-            </cite>
+          <article className="rounded-xl border bg-card p-6">
+            <p className="mb-4">„Finalmente posso concentrarmi sulla crescita. Il supporto funziona da solo."</p>
+            <div className="text-sm text-muted-foreground">Daniel – D2C Brand • 6 cifre</div>
+          </article>
+          <article className="rounded-xl border bg-card p-6">
+            <p className="mb-4">„Setup in minuti, benefici immediati. Ora rispettiamo facilmente i nostri SLA."</p>
+            <div className="text-sm text-muted-foreground">Mara – Casa e Living • 8 cifre</div>
           </article>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-8 text-center">
-          <div className="flex items-center gap-2 text-muted-foreground">
-            <Award className="h-5 w-5" />
-            <span className="text-sm">Shopify App Store</span>
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+          <div className="rounded-xl border bg-card p-6">
+            <div className="text-3xl font-semibold">15 Ore</div>
+            <div className="text-sm text-muted-foreground">Tempo di supporto risparmiato a settimana</div>
           </div>
-          <div className="flex items-center gap-2 text-muted-foreground">
-            <Shield className="h-5 w-5" />
-            <span className="text-sm">Conforme GDPR</span>
+          <div className="rounded-xl border bg-card p-6">
+            <div className="text-3xl font-semibold">+37 %</div>
+            <div className="text-sm text-muted-foreground">soddisfazione clienti più alta (30 giorni)</div>
           </div>
-          <div className="flex items-center gap-2 text-muted-foreground">
-            <Zap className="h-5 w-5" />
-            <span className="text-sm">Sicurezza SSL/HMAC</span>
+          <div className="rounded-xl border bg-card p-6">
+            <div className="text-3xl font-semibold">x12 ROI</div>
+            <div className="text-sm text-muted-foreground">nel primo mese</div>
           </div>
+        </div>
+
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
+          <span className="inline-flex items-center gap-2"><BadgeCheck className="size-4" /> Shopify App Store</span>
+          <span className="inline-flex items-center gap-2"><ShieldCheck className="size-4" /> Conforme GDPR</span>
+          <span className="inline-flex items-center gap-2"><Lock className="size-4" /> SSL & HMAC Security</span>
         </div>
       </div>
     </section>

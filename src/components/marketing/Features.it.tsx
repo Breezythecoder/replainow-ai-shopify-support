@@ -1,56 +1,66 @@
-import { Clock, BarChart, Shield, Users, Zap, Globe } from "lucide-react";
+import { Bot, Plug, ShieldCheck, Zap, TrendingUp, Globe, BarChart3, Users } from "lucide-react";
+
+const features = [
+  {
+    icon: Zap,
+    title: "Risposta in <3 Sec.",
+    desc: "GPT-4/5 con contesto Shopify fornisce risposte in meno di 3 sec.; FRT -90%.",
+  },
+  {
+    icon: Plug,
+    title: "Diretto in Shopify",
+    desc: "Senza cambio tab: dati prodotto, ordine e cliente si integrano automaticamente.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Più fatturato, più veloce",
+    desc: "Risposte precise e veloci aumentano conversione e fedeltà cliente in modo misurabile.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "GDPR & HMAC sicuro",
+    desc: "Crittografato, conforme GDPR e verificato HMAC – affidabile e sicuro.",
+  },
+  {
+    icon: Bot,
+    title: "Automazione intelligente",
+    desc: "Auto-categorizzazione, AI-triage e regole gestiscono i casi di routine automaticamente.",
+  },
+  {
+    icon: Globe,
+    title: "Multilingue, conforme al brand",
+    desc: "Risposte in molte lingue nel tono del tuo brand – ideale per supporto globale.",
+  },
+  {
+    icon: BarChart3,
+    title: "Analytics & Insights",
+    desc: "Tempi di risposta, CSAT e conversione sotto controllo.",
+  },
+  {
+    icon: Users,
+    title: "Collaborazione team",
+    desc: "Assegna, note, escalation – perfettamente integrato nel team.",
+  },
+];
 
 const FeaturesIt = () => {
-  const features = [
-    {
-      icon: <Clock className="h-6 w-6" />,
-      title: "Risposte in 3 secondi",
-      description: "L'AI genera risposte complete con tutti i dati rilevanti in pochi secondi."
-    },
-    {
-      icon: <BarChart className="h-6 w-6" />,
-      title: "Accesso ai dati Shopify",
-      description: "Dati ordini, prodotti, clienti e inventario in tempo reale – sempre aggiornati."
-    },
-    {
-      icon: <Shield className="h-6 w-6" />,
-      title: "Sicuro e conforme GDPR",
-      description: "Tutti i dati rimangono nel tuo Shopify. Sicurezza massima, privacy garantita."
-    },
-    {
-      icon: <Users className="h-6 w-6" />,
-      title: "Multilingue",
-      description: "Supporta oltre 25 lingue per clienti internazionali."
-    },
-    {
-      icon: <Zap className="h-6 w-6" />,
-      title: "Installazione in 2 minuti",
-      description: "Plugin ufficiale Shopify – attivato in meno di 2 minuti."
-    },
-    {
-      icon: <Globe className="h-6 w-6" />,
-      title: "Integrazione completa",
-      description: "Funziona nell'admin Shopify – nessuna piattaforma esterna necessaria."
-    }
-  ];
-
   return (
     <section id="features" aria-labelledby="features-heading" className="py-16 md:py-24">
-      <div className="container max-w-6xl">
+      <div className="container">
         <h2 id="features-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Funzionalità potenti per il tuo successo
+          Funzionalità principali: AI-Support per Shopify
         </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          ReplAInow trasforma il tuo supporto clienti con AI intelligente e accesso diretto ai dati Shopify.
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+          Otto vantaggi concreti – tecnicamente forti e chiaramente misurabili.
         </p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <article key={index} className="rounded-xl border bg-card p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 text-primary">
-                {feature.icon}
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+          {features.map(({ icon: Icon, title, desc }) => (
+            <article key={title} className="group rounded-xl border bg-card p-6 hover:shadow-brand transition-shadow animate-fade-in text-center">
+              <div className="size-11 rounded-lg bg-gradient-primary text-primary-foreground flex items-center justify-center mb-4 mx-auto group-hover:scale-105 transition-transform">
+                <Icon className="text-primary-foreground" />
               </div>
-              <h3 className="font-semibold mb-2">{feature.title}</h3>
-              <p className="text-muted-foreground text-sm">{feature.description}</p>
+              <h3 className="font-semibold text-lg mb-1">{title}</h3>
+              <p className="text-muted-foreground">{desc}</p>
             </article>
           ))}
         </div>

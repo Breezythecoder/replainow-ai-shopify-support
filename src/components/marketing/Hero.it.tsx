@@ -1,52 +1,104 @@
+import { useState, MouseEvent } from "react";
 import { Button } from "@/components/ui/button";
-import { heroContentIt } from "@/content/hero.it";
+import { ShieldCheck, Zap, Plug, Star } from "lucide-react";
+import { heroContentIt as content } from "@/content/hero.it";
 
 const HeroIt = () => {
-  const { headline, subheadline, primaryCta, secondaryCta, media } = heroContentIt;
+  const [pos, setPos] = useState({ x: "50%", y: "50%" });
+
+  const onMove = (e: MouseEvent<HTMLDivElement>) => {
+    const r = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - r.left) / r.width) * 100;
+    const y = ((e.clientY - r.top) / r.height) * 100;
+    setPos({ x: `${x}%`, y: `${y}%` });
+  };
 
   return (
-    <section 
-      id="hero" 
-      aria-labelledby="hero-heading"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        backgroundImage: `linear-gradient(135deg, hsl(var(--primary) / 0.95), hsl(var(--primary-dark) / 0.98)), url(${media.background?.src})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}
-    >
-      <div className="container relative z-10 grid lg:grid-cols-2 gap-12 items-center py-20">
-        <div className="text-center lg:text-left">
-          <h1 id="hero-heading" className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-6 leading-tight">
-            {headline}
-          </h1>
-          <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto lg:mx-0">
-            {subheadline}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <Button asChild size="lg" variant="hero">
-              <a href={primaryCta.href} aria-label={primaryCta.label}>
-                {primaryCta.label}
-              </a>
-            </Button>
-            {secondaryCta && (
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
-                <a href={secondaryCta.href} aria-label={secondaryCta.label}>
-                  {secondaryCta.label}
-                </a>
-              </Button>
-            )}
-          </div>
-        </div>
-        <div className="relative">
-          <img 
-            src={media.image.src} 
-            alt={media.image.alt} 
-            className="w-full h-auto rounded-lg shadow-brand-glow"
+    <section aria-label="ReplAInow Hero" className="relative overflow-hidden">
+      <div
+        className="relative isolate hero-spotlight bg-gradient-primary"
+        onMouseMove={onMove}
+        style={{ ["--x" as any]: pos.x, ["--y" as any]: pos.y } as React.CSSProperties}
+      >
+        {/* Optionaler Hintergrund (austauschbar) */}
+        {content.media.background?.src && (
+          <img
+            src={content.media.background.src}
+            alt={content.media.background.alt}
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-20"
             loading="eager"
             decoding="async"
           />
+        )}
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-20 speed-lines" />
+
+        <div className="relative container mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-32 md:pb-28">
+          <div className="grid md:grid-cols-2 items-center gap-10">
+            {/* Textspalte */}
+            <div className="text-center md:text-left order-2 md:order-1">
+              <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight mb-6 text-primary-foreground">
+                {content.headline}
+              </h1>
+              <p className="text-lg md:text-xl text-primary-foreground/90 mb-10">
+                {content.subheadline}
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center md:items-start justify-center md:justify-start gap-4">
+                <Button asChild size="lg" variant="hero" className="w-full sm:w-auto rounded-full h-12 px-6">
+                  <a href={content.primaryCta.href} aria-label={content.primaryCta.label}>
+                    {content.primaryCta.label}
+                  </a>
+                </Button>
+                {content.secondaryCta?.href && (
+                  <Button asChild size="lg" variant="outline" className="w-full sm:w-auto rounded-full h-12 px-6">
+                    <a href={content.secondaryCta.href} aria-label={content.secondaryCta.label}>
+                      {content.secondaryCta.label}
+                    </a>
+                  </Button>
+                )}
+              </div>
+
+              <p className="mt-2 text-sm text-primary-foreground/80">
+                Pronto in 2 minuti. Senza carta di credito. Senza rischi.
+              </p>
+
+              <div className="mt-5 flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-primary-foreground/90">
+                <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-3 py-1">
+                  <ShieldCheck className="size-4" /> Conforme GDPR
+                </span>
+                <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-3 py-1">
+                  <Zap className="size-4" /> Risposta in secondi
+                </span>
+                <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-3 py-1">
+                  <Plug className="size-4" /> Integrazione Shopify
+                </span>
+              </div>
+
+              <div className="mt-5 flex flex-wrap items-center justify-center md:justify-start gap-3 text-primary-foreground/90">
+                <span className="inline-flex items-center gap-2 text-sm">
+                  <Star className="size-4 fill-current" aria-hidden="true" />
+                  <span>4.9/5 sullo Shopify App Store</span>
+                </span>
+                <span className="hidden md:inline text-sm opacity-80">•</span>
+                <span className="text-sm">Scelto dai team merchant Shopify</span>
+              </div>
+            </div>
+
+            {/* Medien-/Screenshotspalte */}
+            <figure className="order-1 md:order-2">
+              <img
+                src={content.media.image.src}
+                alt={content.media.image.alt}
+                className="w-full max-w-[560px] md:max-w-[640px] mx-auto rounded-xl shadow-brand hover-scale ring-1 ring-primary/10 object-contain"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                sizes="(min-width: 768px) 640px, 100vw"
+              />
+              <figcaption className="sr-only">{content.media.image.alt}</figcaption>
+            </figure>
+          </div>
         </div>
       </div>
     </section>
