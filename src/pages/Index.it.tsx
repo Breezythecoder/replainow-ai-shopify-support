@@ -20,36 +20,33 @@ import LanguageSwitcher from "@/components/ui/language-switcher";
 
 const IndexIt = () => {
   return (
-    <>
+    <div>
       <SEO 
         title="ReplAInow - Helpdesk AI per Shopify | Risposte automatiche in secondi"
         description="Helpdesk AI intelligente per Shopify. Risponde automaticamente alle richieste dei clienti con dati in tempo reale. Prova gratuita 14 giorni. Installazione in 2 minuti."
         image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <SEOOrganization />
-      
-      <div className="min-h-screen bg-background">
-        <NavbarIt />
-        <main>
-          <HeroIt />
-          <HowItWorksIt />
-          <FeaturesIt />
-          <ProblemSolutionIt />
-          <SocialProofIt />
-          <LiveDemoIt />
-          <PricingIt />
-          <StoreDataFlowIt />
-          <MailAndChatIt />
-          <FAQIt />
-          <AboutIt />
-          <FinalCTAIt />
-          <ContactIt />
-        </main>
-        <FooterIt />
-        <StickyInstallBarIt />
-        <LanguageSwitcher />
-      </div>
-    </>
+      <NavbarIt />
+      <main>
+        <HeroIt />
+        <HowItWorksIt />
+        <ProblemSolutionIt />
+        <FeaturesIt />
+        <MailAndChatIt />
+        <StoreDataFlowIt />
+        <SocialProofIt />
+        <LiveDemoIt />
+        <PricingIt />
+        <FAQIt />
+        <FinalCTAIt />
+        <AboutIt />
+        <ContactIt />
+      </main>
+      <FooterIt />
+      <StickyInstallBarIt />
+      <LanguageSwitcher />
+    </div>
   );
 };
 
