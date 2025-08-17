@@ -1,28 +1,67 @@
 import { useLocation } from "react-router-dom";
-import { Globe } from "lucide-react";
+import { Globe, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const LanguageSwitcher = () => {
   const location = useLocation();
-  const isEnglish = location.pathname.startsWith('/en');
   
-  const targetPath = isEnglish ? '/' : '/en';
-  const targetLang = isEnglish ? 'DE' : 'EN';
-  const currentLang = isEnglish ? 'EN' : 'DE';
+  const languages = [
+    { code: 'DE', path: '/', name: 'Deutsch' },
+    { code: 'EN', path: '/en', name: 'English' },
+    { code: 'ES', path: '/es', name: 'Español' },
+    { code: 'FR', path: '/fr', name: 'Français' },
+    { code: 'PT', path: '/pt', name: 'Português' },
+  ];
+  
+  const getCurrentLanguage = () => {
+    if (location.pathname.startsWith('/en')) return languages[1];
+    if (location.pathname.startsWith('/es')) return languages[2];
+    if (location.pathname.startsWith('/fr')) return languages[3];
+    if (location.pathname.startsWith('/pt')) return languages[4];
+    return languages[0]; // Default to German
+  };
+  
+  const currentLang = getCurrentLanguage();
 
   return (
     <div className="fixed bottom-4 left-4 z-50 md:hidden">
-      <Button
-        asChild
-        size="sm"
-        variant="outline"
-        className="rounded-full bg-card/95 backdrop-blur border shadow-lg hover:shadow-xl transition-all duration-200 flex items-center gap-2 px-3 py-2"
-      >
-        <a href={targetPath} aria-label={`Switch to ${targetLang}`}>
-          <Globe className="h-4 w-4" />
-          <span className="text-xs font-medium">{targetLang}</span>
-        </a>
-      </Button>
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button
+            size="sm"
+            variant="outline"
+            className="rounded-full bg-card/95 backdrop-blur border shadow-lg hover:shadow-xl transition-all duration-200 flex items-center gap-2 px-3 py-2"
+          >
+            <Globe className="h-4 w-4" />
+            <span className="text-xs font-medium">{currentLang.code}</span>
+            <ChevronDown className="h-3 w-3" />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent 
+          align="start" 
+          className="bg-card/95 backdrop-blur border shadow-lg min-w-[120px]"
+        >
+          {languages.map((lang) => (
+            <DropdownMenuItem key={lang.code} asChild>
+              <a 
+                href={lang.path} 
+                className={`flex items-center gap-2 px-3 py-2 text-sm cursor-pointer ${
+                  currentLang.code === lang.code ? 'bg-primary/10 text-primary font-medium' : ''
+                }`}
+              >
+                <span className="text-xs font-medium w-6">{lang.code}</span>
+                <span>{lang.name}</span>
+              </a>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 };
