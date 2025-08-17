@@ -16,6 +16,7 @@ import FAQ from "@/components/marketing/FAQ";
 import StickyInstallBar from "@/components/marketing/StickyInstallBar";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import MailAndChat from "@/components/marketing/MailAndChat";
+import LanguageSwitcher from "@/components/ui/language-switcher";
 const Index = () => {
   return (
     <div>
@@ -43,6 +44,7 @@ const Index = () => {
       </main>
       <Footer />
       <StickyInstallBar />
+      <LanguageSwitcher />
     </div>
   );
 };
