@@ -1,21 +1,21 @@
 import NavbarEn from "@/components/marketing/Navbar.en";
 import HeroEn from "@/components/marketing/Hero.en";
 import HowItWorksEn from "@/components/marketing/HowItWorks.en";
-import ProblemSolution from "@/components/marketing/ProblemSolution";
+import ProblemSolutionEn from "@/components/marketing/ProblemSolution.en";
 import FeaturesEn from "@/components/marketing/Features.en";
-import SocialProof from "@/components/marketing/SocialProof";
-import LiveDemo from "@/components/marketing/LiveDemo";
+import SocialProofEn from "@/components/marketing/SocialProof.en";
+import LiveDemoEn from "@/components/marketing/LiveDemo.en";
 import PricingEn from "@/components/marketing/Pricing.en";
 import AboutEn from "@/components/marketing/About.en";
-import Contact from "@/components/marketing/Contact";
+import ContactEn from "@/components/marketing/Contact.en";
 import FinalCTAEn from "@/components/marketing/FinalCTA.en";
-import Footer from "@/components/marketing/Footer";
-import StoreDataFlow from "@/components/marketing/StoreDataFlow";
+import FooterEn from "@/components/marketing/Footer.en";
+import StoreDataFlowEn from "@/components/marketing/StoreDataFlow.en";
 import SEO from "@/components/SEO";
 import FAQEn from "@/components/marketing/FAQ.en";
-import StickyInstallBar from "@/components/marketing/StickyInstallBar";
+import StickyInstallBarEn from "@/components/marketing/StickyInstallBar.en";
 import OrganizationJsonLd from "@/components/SEOOrganization";
-import MailAndChat from "@/components/marketing/MailAndChat";
+import MailAndChatEn from "@/components/marketing/MailAndChat.en";
 
 const IndexEn = () => {
   return (
@@ -30,20 +30,20 @@ const IndexEn = () => {
       <main>
         <HeroEn />
         <HowItWorksEn />
-        <ProblemSolution />
+        <ProblemSolutionEn />
         <FeaturesEn />
-        <MailAndChat />
-        <StoreDataFlow />
-        <SocialProof />
-        <LiveDemo />
+        <MailAndChatEn />
+        <StoreDataFlowEn />
+        <SocialProofEn />
+        <LiveDemoEn />
         <PricingEn />
         <FAQEn />
         <FinalCTAEn />
         <AboutEn />
-        <Contact />
+        <ContactEn />
       </main>
-      <Footer />
-      <StickyInstallBar />
+      <FooterEn />
+      <StickyInstallBarEn />
     </div>
   );
 };
