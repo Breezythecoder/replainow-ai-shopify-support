@@ -31,7 +31,6 @@ const plans = [
     trial: "14 Tage kostenlos testen",
     features: [
       ...baseFeatures,
-      { label: "Proaktive Chat-Automation", sub: ["Begrüssung nach x Sekunden", "Trigger bei z.B. Warenkorb, Checkout.."] },
       "E-Mail Versand mit deiner Domain",
     ] as Feature[],
     popular: true,
@@ -45,7 +44,6 @@ const plans = [
     trial: "14 Tage kostenlos testen",
     features: [
       ...baseFeatures,
-      { label: "Proaktive Chat-Automation", sub: ["Begrüssung nach x Sekunden", "Trigger bei z.B. Warenkorb, Checkout.."] },
       "E-Mail Versand mit deiner Domain",
     ] as Feature[],
     popular: false,
@@ -58,7 +56,6 @@ const plans = [
     trial: "14 Tage kostenlos testen",
     features: [
       ...baseFeatures,
-      { label: "Proaktive Chat-Automation", sub: ["Begrüssung nach x Sekunden", "Trigger bei z.B. Warenkorb, Checkout.."] },
       "E-Mail Versand mit deiner Domain",
     ] as Feature[],
     popular: false,
