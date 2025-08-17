@@ -1,21 +1,21 @@
 import NavbarEs from "@/components/marketing/Navbar.es";
 import HeroEs from "@/components/marketing/Hero.es";
 import HowItWorksEs from "@/components/marketing/HowItWorks.es";
-import ProblemSolution from "@/components/marketing/ProblemSolution";
+import ProblemSolutionEs from "@/components/marketing/ProblemSolution.es";
 import FeaturesEs from "@/components/marketing/Features.es";
-import SocialProof from "@/components/marketing/SocialProof";
-import LiveDemo from "@/components/marketing/LiveDemo";
-import Pricing from "@/components/marketing/Pricing";
+import SocialProofEs from "@/components/marketing/SocialProof.es";
+import LiveDemoEs from "@/components/marketing/LiveDemo.es";
+import PricingEs from "@/components/marketing/Pricing.es";
 import AboutEs from "@/components/marketing/About.es";
-import Contact from "@/components/marketing/Contact";
+import ContactEs from "@/components/marketing/Contact.es";
 import FinalCTAEs from "@/components/marketing/FinalCTA.es";
-import Footer from "@/components/marketing/Footer";
-import StoreDataFlow from "@/components/marketing/StoreDataFlow";
+import FooterEs from "@/components/marketing/Footer.es";
+import StoreDataFlowEs from "@/components/marketing/StoreDataFlow.es";
 import SEO from "@/components/SEO";
-import FAQ from "@/components/marketing/FAQ";
-import StickyInstallBar from "@/components/marketing/StickyInstallBar";
+import FAQEs from "@/components/marketing/FAQ.es";
+import StickyInstallBarEs from "@/components/marketing/StickyInstallBar.es";
 import OrganizationJsonLd from "@/components/SEOOrganization";
-import MailAndChat from "@/components/marketing/MailAndChat";
+import MailAndChatEs from "@/components/marketing/MailAndChat.es";
 import LanguageSwitcher from "@/components/ui/language-switcher";
 
 const IndexEs = () => {
@@ -31,20 +31,20 @@ const IndexEs = () => {
       <main>
         <HeroEs />
         <HowItWorksEs />
-        <ProblemSolution />
+        <ProblemSolutionEs />
         <FeaturesEs />
-        <MailAndChat />
-        <StoreDataFlow />
-        <SocialProof />
-        <LiveDemo />
-        <Pricing />
-        <FAQ />
+        <MailAndChatEs />
+        <StoreDataFlowEs />
+        <SocialProofEs />
+        <LiveDemoEs />
+        <PricingEs />
+        <FAQEs />
         <FinalCTAEs />
         <AboutEs />
-        <Contact />
+        <ContactEs />
       </main>
-      <Footer />
-      <StickyInstallBar />
+      <FooterEs />
+      <StickyInstallBarEs />
       <LanguageSwitcher />
     </div>
   );
