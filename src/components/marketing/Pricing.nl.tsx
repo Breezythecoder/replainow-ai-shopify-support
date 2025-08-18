@@ -1,204 +1,157 @@
 import { Button } from "@/components/ui/button";
-import { Check } from "lucide-react";
-
 const OAUTH_URL = "https://apps.shopify.com/replainow/install";
 
-type Feature = string | {
-  label: string;
-  items: string[];
-};
+type Feature = string | { label: string; sub: string[] };
 
-const baseFeatures: Feature[] = [
-  "AI-klantenservice 24/7",
-  "Real-time Shopify-data toegang",
-  "GDPR-conforme dataverwerking",
-  "Merkconforme communicatie",
-  "Multi-taal ondersteuning",
-  "Email & chat integratie"
+const baseFeatures: string[] = [
+  "1-Klik-installatie",
+  "Onbeperkte shopgegevens (producten, pagina's, richtlijnen etc.)",
+  "AI Mail & AI Live Chat",
+  "Personaliseerbare branding",
 ];
 
 const plans = [
   {
     name: "Starter",
-    price: "€29",
-    description: "Perfect voor startende webshops",
+    price: "$19",
+    period: "/ maand",
+    quota: "Tot 300 AI antwoorden / maand",
+    trial: "14 dagen gratis testen",
     features: [
       ...baseFeatures,
-      "Tot 500 gesprekken/maand",
-      "Basis AI-training",
-      "Email ondersteuning",
-      "Shopify integratie"
-    ],
+      "E-mail verzending via ReplAInow adres",
+    ] as Feature[],
     popular: false,
-    trialText: "14 dagen gratis proberen"
   },
   {
     name: "Growth",
-    price: "€79",
-    description: "Ideaal voor groeiende bedrijven",
+    price: "$49",
+    period: "/ maand",
+    quota: "Tot 1500 AI antwoorden / maand",
+    trial: "14 dagen gratis testen",
     features: [
       ...baseFeatures,
-      "Tot 2.000 gesprekken/maand",
-      "Geavanceerde AI-training",
-      "Prioriteit ondersteuning",
-      {
-        label: "Uitgebreide integraties:",
-        items: [
-          "WhatsApp Business",
-          "Facebook Messenger",
-          "Instagram DM",
-          "Live Chat systemen"
-        ]
-      },
-      "Custom AI-persona",
-      "Detailleerde analytics"
-    ],
+      "E-mail verzending met jouw domein",
+    ] as Feature[],
     popular: true,
-    trialText: "14 dagen gratis proberen"
+    badge: "Populairste plan",
   },
   {
-    name: "Professional",
-    price: "€149",
-    description: "Voor grote volumes en teams",
+    name: "Pro",
+    price: "$99",
+    period: "/ maand",
+    quota: "Tot 3000 AI antwoorden / maand",
+    trial: "14 dagen gratis testen",
     features: [
       ...baseFeatures,
-      "Tot 5.000 gesprekken/maand",
-      "Premium AI-training",
-      "Dedicated account manager",
-      {
-        label: "Alle integraties plus:",
-        items: [
-          "Slack integratie",
-          "Microsoft Teams",
-          "Custom API toegang",
-          "Webhook configuratie"
-        ]
-      },
-      "Multi-team toegang",
-      "Advanced reporting",
-      "Custom workflows"
-    ],
+      "E-mail verzending met jouw domein",
+    ] as Feature[],
     popular: false,
-    trialText: "14 dagen gratis proberen"
   },
   {
-    name: "Enterprise",
-    price: "Op maat",
-    description: "Volledig aangepaste oplossing",
+    name: "Scale",
+    price: "$199",
+    period: "/ maand",
+    quota: "Onbeperkte AI antwoorden",
+    trial: "14 dagen gratis testen",
     features: [
       ...baseFeatures,
-      "Onbeperkte gesprekken",
-      "Custom AI-ontwikkeling",
-      "24/7 premium ondersteuning",
-      {
-        label: "Enterprise features:",
-        items: [
-          "On-premise deployment",
-          "Custom integraties",
-          "Dedicated servers",
-          "SLA garanties"
-        ]
-      },
-      "White-label mogelijkheden",
-      "Custom training sessies",
-      "Persoonlijke implementatie"
-    ],
+      "E-mail verzending met jouw domein",
+    ] as Feature[],
     popular: false,
-    trialText: "Offerte aanvragen"
-  }
+  },
 ];
-
-const renderFeature = (feature: Feature, index: number) => {
-  if (typeof feature === 'string') {
-    return (
-      <li key={index} className="flex items-start gap-3">
-        <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-        <span className="text-sm">{feature}</span>
-      </li>
-    );
-  } else {
-    return (
-      <li key={index} className="space-y-2">
-        <div className="flex items-start gap-3">
-          <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-          <span className="text-sm font-medium">{feature.label}</span>
-        </div>
-        <ul className="ml-8 space-y-1">
-          {feature.items.map((item, itemIndex) => (
-            <li key={itemIndex} className="text-sm text-muted-foreground">• {item}</li>
-          ))}
-        </ul>
-      </li>
-    );
-  }
-};
 
 const PricingNl = () => {
   return (
     <section id="preise" aria-labelledby="pricing-heading" className="py-16 md:py-24">
       <div className="container">
-        <div className="text-center mb-16">
-          <h2 id="pricing-heading" className="font-display text-3xl md:text-4xl font-semibold mb-4">
-            Transparante prijzen
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Kies het plan dat past bij jouw bedrijf. Alle plannen bevatten een 14-daagse gratis proefperiode.
-          </p>
-        </div>
+        <h2 id="pricing-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
+          Meer support-kracht voor minder geld dan één medewerker.
+        </h2>
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-2">
+          Een support-agent kost gemiddeld €2.000 per maand.
+        </p>
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+          ReplAInow begint bij $19/maand – en werkt 24/7, zonder pauze.
+        </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {plans.map((plan, index) => (
-            <div 
-              key={index} 
-              className={`relative p-6 rounded-2xl border transition-all duration-300 ${
-                plan.popular 
-                  ? 'border-primary bg-primary/5 scale-105 shadow-lg' 
-                  : 'border-border bg-card hover:border-primary/50'
-              }`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full">
-                    Meest populair
-                  </span>
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          {plans.map((p) => {
+            const Card = (
+              <article className="group rounded-2xl border bg-card p-6 h-full flex flex-col hover:shadow-brand transition-all duration-200 hover:-translate-y-0.5">
+                <header className="mb-4">
+                  <h3 className="font-semibold text-xl">{p.name}</h3>
+                  <div className="mt-2 flex items-baseline gap-2">
+                    <span className="text-3xl font-bold">{p.price}</span>
+                    <span className="text-muted-foreground">{p.period}</span>
+                  </div>
+                  <p className="mt-1 text-xs text-muted-foreground">{(p as any).trial ?? "14 dagen gratis testen"}</p>
+                  {'blurb' in p && (p as any).blurb ? (
+                    <p className="mt-3 text-sm text-muted-foreground">{(p as any).blurb}</p>
+                  ) : null}
+                </header>
+
+                <ul className="space-y-2 text-sm text-muted-foreground mb-6">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1 inline-block size-1.5 rounded-full bg-primary" />
+                    <span className="font-medium">{p.quota}</span>
+                  </li>
+                  {p.features.map((f: any) =>
+                    typeof f === 'string' ? (
+                      <li key={f} className="flex items-start gap-2">
+                        <span className="mt-1 inline-block size-1.5 rounded-full bg-primary" />
+                        <span>{f}</span>
+                      </li>
+                    ) : (
+                      <li key={f.label} className="flex items-start gap-2">
+                        <span className="mt-1 inline-block size-1.5 rounded-full bg-primary" />
+                        <div>
+                          <div>{f.label}</div>
+                          <ul className="mt-1 ml-4 list-disc marker:text-muted-foreground/70">
+                            {f.sub.map((s: string) => (
+                              <li key={s}>{s}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      </li>
+                    )
+                  )}
+                </ul>
+
+                <div className="mt-auto space-y-3">
+                  <Button asChild variant="hero" className="w-full">
+                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Gratis testen – Plan ${p.name}`}>
+                      Gratis testen
+                    </a>
+                  </Button>
+                  <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
+                    <img
+                      src="/images/shopify-logo-black.svg"
+                      alt="Shopify Logo – App Store"
+                      className="h-4 w-auto opacity-80"
+                      loading="lazy"
+                    />
+                    <span>Vermeld in Shopify App Store</span>
+                  </div>
                 </div>
-              )}
-              
-              <div className="text-center mb-6">
-                <h3 className="text-xl font-semibold mb-2">{plan.name}</h3>
-                <div className="mb-2">
-                  <span className="text-3xl font-bold">{plan.price}</span>
-                  {plan.price !== "Op maat" && <span className="text-muted-foreground">/maand</span>}
-                </div>
-                <p className="text-sm text-muted-foreground">{plan.description}</p>
+              </article>
+            );
+
+            return p.popular ? (
+              <div key={p.name} className="relative rounded-2xl p-[1px] bg-gradient-primary shadow-brand-glow hover:shadow-brand-glow transition-shadow">
+                <span className="absolute -top-3 left-4 rounded-full bg-primary text-primary-foreground text-xs px-2.5 py-1 border border-primary/60 shadow-brand">
+                  {(p as any).badge ?? 'Populairste plan'}
+                </span>
+                {Card}
               </div>
-
-              <ul className="space-y-3 mb-8">
-                {plan.features.map((feature, featureIndex) => renderFeature(feature, featureIndex))}
-              </ul>
-
-              <Button 
-                asChild 
-                className={`w-full ${plan.popular ? 'bg-primary hover:bg-primary/90' : ''}`}
-                variant={plan.popular ? 'default' : 'outline'}
-              >
-                <a href={OAUTH_URL}>{plan.trialText}</a>
-              </Button>
-            </div>
-          ))}
-        </div>
-
-        <div className="text-center mt-12">
-          <p className="text-muted-foreground mb-4">
-            Alle prijzen zijn exclusief BTW. Opzeggen kan altijd zonder kosten.
-          </p>
-          <p className="text-sm text-muted-foreground">
-            Vragen? <a href="#kontakt" className="text-primary hover:underline">Neem contact met ons op</a>
-          </p>
+            ) : (
+              <div key={p.name} className="relative">{Card}</div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 };
-
 export default PricingNl;

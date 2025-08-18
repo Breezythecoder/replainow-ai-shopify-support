@@ -1,60 +1,67 @@
-import { Shield, Zap, Users, BarChart3, MessageSquare, Settings } from "lucide-react";
+import { Bot, Plug, ShieldCheck, Zap, TrendingUp, Globe, BarChart3, Users } from "lucide-react";
 
 const features = [
   {
     icon: Zap,
-    title: "Instant AI-antwoorden",
-    description: "Beantwoord klantenvragen in seconden met AI die je Shopify-data begrijpt."
+    title: "Antwoord in <3 sec.",
+    desc: "GPT-4/5 met Shopify-context levert antwoorden in onder 3 sec.; FRT -90%.",
   },
   {
-    icon: Shield,
-    title: "GDPR & privacy-conform",
-    description: "100% GDPR-compliant met servers in Europa. Je klantgegevens blijven veilig."
+    icon: Plug,
+    title: "Direct in Shopify",
+    desc: "Zonder tab-wissel: Product-, bestel- en klantgegevens vloeien automatisch mee.",
   },
   {
-    icon: Users,
-    title: "Merkconform communiceren",
-    description: "AI past zich aan jouw merktoon en communicatiestijl aan."
+    icon: TrendingUp,
+    title: "Meer omzet, sneller",
+    desc: "Precieze, snelle antwoorden verhogen conversie en klantbinding meetbaar.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "GDPR- & HMAC-veilig",
+    desc: "Versleuteld, GDPR-conform en HMAC-geverifieerd – betrouwbaar & vertrouwd.",
+  },
+  {
+    icon: Bot,
+    title: "Intelligente automatisering",
+    desc: "Auto-categorisering, AI-triage en regels handelen routinezaken automatisch af.",
+  },
+  {
+    icon: Globe,
+    title: "Meertalig, merkconform",
+    desc: "Antwoorden in vele talen in de toon van je merk – ideaal voor wereldwijde support.",
   },
   {
     icon: BarChart3,
-    title: "Real-time Shopify-data",
-    description: "Directe toegang tot bestellingen, producten, voorraad en klantgegevens."
+    title: "Analytics & Insights",
+    desc: "Responstijden, CSAT & conversie in het oog.",
   },
   {
-    icon: MessageSquare,
-    title: "Multi-channel ondersteuning",
-    description: "Werkt met alle belangrijke kanalen: E-mail, chat, social media."
+    icon: Users,
+    title: "Team-samenwerking",
+    desc: "Toewijzen, notities, escalaties – naadloos in het team.",
   },
-  {
-    icon: Settings,
-    title: "Eenvoudige installatie",
-    description: "Klaar in 5 minuten. Geen technische kennis vereist."
-  }
 ];
 
 const FeaturesNl = () => {
   return (
     <section id="features" aria-labelledby="features-heading" className="py-16 md:py-24">
       <div className="container">
-        <div className="text-center mb-16">
-          <h2 id="features-heading" className="font-display text-3xl md:text-4xl font-semibold mb-4">
-            Waarom ReplAInow kiezen?
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            De enige AI-oplossing die je Shopify-data begrijpt en GDPR-conform werkt
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <div key={index} className="group p-6 rounded-xl border bg-card hover:bg-accent/5 transition-all duration-300">
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                <feature.icon className="w-6 h-6 text-primary" />
+        <h2 id="features-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
+          Kernfeatures: AI-Support voor Shopify
+        </h2>
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
+          Acht concrete voordelen – technisch sterk en duidelijk meetbaar.
+        </p>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+          {features.map(({ icon: Icon, title, desc }) => (
+            <article key={title} className="group rounded-xl border bg-card p-6 hover:shadow-brand transition-shadow animate-fade-in text-center">
+              <div className="size-11 rounded-lg bg-gradient-primary text-primary-foreground flex items-center justify-center mb-4 mx-auto group-hover:scale-105 transition-transform">
+                <Icon className="text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
-            </div>
+              <h3 className="font-semibold text-lg mb-1">{title}</h3>
+              <p className="text-muted-foreground">{desc}</p>
+            </article>
           ))}
         </div>
       </div>

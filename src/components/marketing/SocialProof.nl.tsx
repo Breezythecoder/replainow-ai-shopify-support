@@ -1,92 +1,64 @@
-import { Star, Quote } from "lucide-react";
+import { ShieldCheck, Lock, BadgeCheck } from "lucide-react";
 
-const testimonials = [
-  {
-    name: "Sarah van Berg",
-    role: "E-commerce Manager",
-    company: "ModeFashion",
-    content: "ReplAInow heeft onze klantenservice volledig getransformeerd. We besparen 15 uur per week en onze klanten zijn veel tevredener.",
-    rating: 5,
-    image: "/lovable-uploads/590584d1-2d39-4235-b3ff-b1afba7efa35.png"
-  },
-  {
-    name: "Mark Janssen",
-    role: "Eigenaar",
-    company: "TechGadgets NL",
-    content: "De AI begrijpt onze producten beter dan sommige medewerkers. Ongelooflijk hoe nauwkeurig de antwoorden zijn.",
-    rating: 5,
-    image: "/lovable-uploads/ad586425-618c-4760-ad1a-4e949029cd8f.png"
-  },
-  {
-    name: "Lisa de Vries",
-    role: "Customer Success",
-    company: "BioBaby",
-    content: "24/7 klantenservice zonder extra personeel? Met ReplAInow is het mogelijk. Onze conversion is met 23% gestegen.",
-    rating: 5,
-    image: "/lovable-uploads/91677a2e-50c4-4aeb-8a6e-f6626412e034.png"
-  }
-];
-
-const stats = [
-  { number: "90%", label: "Kostenbesparing" },
-  { number: "< 3s", label: "Responstijd" },
-  { number: "24/7", label: "Beschikbaarheid" },
-  { number: "15+", label: "Talen ondersteund" }
-];
+const logos = ["Shopify Plus", "D2C Merk", "Top Store", "Global Retail", "Lifestyle Co."];
 
 const SocialProofNl = () => {
   return (
-    <section aria-labelledby="social-proof-heading" className="py-16 md:py-24 bg-muted/40">
-      <div className="container">
-        <div className="text-center mb-16">
-          <h2 id="social-proof-heading" className="font-display text-3xl md:text-4xl font-semibold mb-4">
-            Meer dan 500+ tevreden Shopify-merchants
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Ontdek waarom bedrijven overstappen naar geautomatiseerde klantenservice
-          </p>
+    <section id="trust" aria-labelledby="trust-heading" className="py-16 md:py-24 bg-muted/40">
+      <div className="container max-w-6xl">
+        <h2 id="trust-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
+          Gebruikt en geliefd door toonaangevende Shopify-stores.
+        </h2>
+        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
+          Meer vertrouwen. Minder moeite. Snellere antwoorden.
+        </p>
+        <div className="mb-8 flex flex-wrap items-center justify-center gap-3 text-xs">
+          <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify Plus Partner</span>
+          <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify App Store ★★★★★ 4,9 / 5</span>
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{stat.number}</div>
-              <div className="text-sm text-muted-foreground">{stat.label}</div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center mb-12">
+          {logos.map((name) => (
+            <div key={name} className="rounded-lg border bg-card px-4 py-3 text-center text-sm text-muted-foreground">
+              {name}
             </div>
           ))}
         </div>
 
-        {/* Testimonials */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
-            <div key={index} className="bg-card rounded-xl p-6 border shadow-sm hover:shadow-md transition-shadow">
-              <div className="flex items-center mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                ))}
-              </div>
-              
-              <blockquote className="mb-6">
-                <Quote className="w-8 h-8 text-muted-foreground/30 mb-3" />
-                <p className="text-muted-foreground italic leading-relaxed">"{testimonial.content}"</p>
-              </blockquote>
-              
-              <div className="flex items-center gap-3">
-                <img 
-                  src={testimonial.image} 
-                  alt={`${testimonial.name} profielfoto`}
-                  className="w-12 h-12 rounded-full object-cover"
-                />
-                <div>
-                  <div className="font-semibold text-sm">{testimonial.name}</div>
-                  <div className="text-xs text-muted-foreground">
-                    {testimonial.role} bij {testimonial.company}
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+        <div className="grid gap-6 md:grid-cols-3">
+          <article className="rounded-xl border bg-card p-6">
+            <p className="mb-4">„We besparen 15 uur support per week – en onze klanten zijn dol op de snelle responstijd."</p>
+            <div className="text-sm text-muted-foreground">Lisa – Fashion-Store • 7-cijferig</div>
+          </article>
+          <article className="rounded-xl border bg-card p-6">
+            <p className="mb-4">„Eindelijk kan ik me focussen op groei. Support loopt vanzelf."</p>
+            <div className="text-sm text-muted-foreground">Daniel – D2C-Merk • 6-cijferig</div>
+          </article>
+          <article className="rounded-xl border bg-card p-6">
+            <p className="mb-4">„Setup in minuten, direct resultaat. Onze SLA's halen we nu spelenderwijs."</p>
+            <div className="text-sm text-muted-foreground">Mara – Home & Living • 8-cijferig</div>
+          </article>
+        </div>
+
+        <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
+          <div className="rounded-xl border bg-card p-6">
+            <div className="text-3xl font-semibold">15 uur</div>
+            <div className="text-sm text-muted-foreground">Support-tijd per week bespaard</div>
+          </div>
+          <div className="rounded-xl border bg-card p-6">
+            <div className="text-3xl font-semibold">+37 %</div>
+            <div className="text-sm text-muted-foreground">hogere klanttevredenheid (30 dagen)</div>
+          </div>
+          <div className="rounded-xl border bg-card p-6">
+            <div className="text-3xl font-semibold">x12 ROI</div>
+            <div className="text-sm text-muted-foreground">in de eerste maand</div>
+          </div>
+        </div>
+
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
+          <span className="inline-flex items-center gap-2"><BadgeCheck className="size-4" /> Shopify App Store</span>
+          <span className="inline-flex items-center gap-2"><ShieldCheck className="size-4" /> GDPR-conform</span>
+          <span className="inline-flex items-center gap-2"><Lock className="size-4" /> SSL & HMAC Security</span>
         </div>
       </div>
     </section>
