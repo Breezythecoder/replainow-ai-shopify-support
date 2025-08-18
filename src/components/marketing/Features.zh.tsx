@@ -1,58 +1,67 @@
-import { Shield, Zap, Brain, Globe, BarChart3, MessageSquare } from "lucide-react";
+import { Bot, Plug, ShieldCheck, Zap, TrendingUp, Globe, BarChart3, Users } from "lucide-react";
+
+const features = [
+  {
+    icon: Zap,
+    title: "3秒内回复",
+    desc: "GPT-4/5结合Shopify数据，3秒内提供回复；首次响应时间减少90%。",
+  },
+  {
+    icon: Plug,
+    title: "直接集成Shopify",
+    desc: "无需切换标签：产品、订单和客户数据自动整合。",
+  },
+  {
+    icon: TrendingUp,
+    title: "更多销售，更快速",
+    desc: "精准快速的回复可衡量地增加转化率和客户粘性。",
+  },
+  {
+    icon: ShieldCheck,
+    title: "GDPR & HMAC安全",
+    desc: "加密、GDPR合规和HMAC验证 - 可靠且值得信赖。",
+  },
+  {
+    icon: Bot,
+    title: "智能自动化",
+    desc: "自动分类、AI分流和规则自动处理常规案例。",
+  },
+  {
+    icon: Globe,
+    title: "多语言，符合品牌",
+    desc: "用您的品牌语调回复多种语言 - 适合全球支持。",
+  },
+  {
+    icon: BarChart3,
+    title: "分析和洞察",
+    desc: "实时监控回复时间、客户满意度和转化率。",
+  },
+  {
+    icon: Users,
+    title: "团队协作",
+    desc: "分配、注释、升级 - 团队无缝协作。",
+  },
+];
 
 const FeaturesZh = () => {
-  const features = [
-    {
-      icon: Zap,
-      title: "闪电般快速回复",
-      description: "3秒内自动回复客户询问，比人工客服快50倍，客户满意度大幅提升。"
-    },
-    {
-      icon: Brain,
-      title: "智能学习您的品牌",
-      description: "AI分析您的沟通风格和品牌语调，确保每个回复都符合您的品牌形象。"
-    },
-    {
-      icon: Shield,
-      title: "GDPR合规保障",
-      description: "严格遵守GDPR数据保护法规，确保客户数据安全，让您无后顾之忧。"
-    },
-    {
-      icon: Globe,
-      title: "多语言支持",
-      description: "支持多种语言的客户服务，自动检测客户语言并用相应语言回复。"
-    },
-    {
-      icon: BarChart3,
-      title: "实时数据整合",
-      description: "直接连接Shopify数据，实时获取订单状态、库存信息和客户历史记录。"
-    },
-    {
-      icon: MessageSquare,
-      title: "多渠道集成",
-      description: "支持邮件、聊天、社交媒体等多个客服渠道，统一管理所有客户沟通。"
-    }
-  ];
-
   return (
     <section id="features" aria-labelledby="features-heading" className="py-16 md:py-24">
       <div className="container">
         <h2 id="features-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          强大功能，全面提升客服效率
+          核心功能：Shopify AI客服
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          从自动回复到数据分析，ReplAInow为您提供完整的AI客服解决方案。
+          八大具体优势 - 技术强大且可清晰衡量。
         </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {features.map((feature, index) => (
-            <div key={index} className="p-6 rounded-xl border bg-card hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
-                <feature.icon className="w-6 h-6 text-primary" />
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+          {features.map(({ icon: Icon, title, desc }) => (
+            <article key={title} className="group rounded-xl border bg-card p-6 hover:shadow-brand transition-shadow animate-fade-in text-center">
+              <div className="size-11 rounded-lg bg-gradient-primary text-primary-foreground flex items-center justify-center mb-4 mx-auto group-hover:scale-105 transition-transform">
+                <Icon className="text-primary-foreground" />
               </div>
-              <h3 className="font-semibold text-lg mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
-            </div>
+              <h3 className="font-semibold text-lg mb-1">{title}</h3>
+              <p className="text-muted-foreground">{desc}</p>
+            </article>
           ))}
         </div>
       </div>

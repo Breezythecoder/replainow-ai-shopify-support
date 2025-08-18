@@ -27,5 +27,4 @@ const NavbarZh = () => {
     </header>
   );
 };
-
 export default NavbarZh;

@@ -1,49 +1,72 @@
-import { Bot, Database, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Plug, Database, Bot, Settings2 } from "lucide-react";
+
+const OAUTH_URL = "https://apps.shopify.com/replainow/install";
+
+const Step = ({
+  Icon,
+  title,
+  desc,
+}: {
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  desc: string;
+}) => (
+  <div className="rounded-xl border bg-card p-5 shadow-sm h-full">
+    <div className="flex items-start gap-3">
+      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary text-primary-foreground shadow-brand">
+        <Icon className="h-5 w-5" aria-hidden="true" />
+      </span>
+      <div>
+        <h3 className="font-medium leading-tight">{title}</h3>
+        <p className="text-sm text-muted-foreground mt-1 leading-snug">{desc}</p>
+      </div>
+    </div>
+  </div>
+);
 
 const HowItWorksZh = () => {
-  const steps = [
-    {
-      icon: Database,
-      title: "连接您的Shopify商店",
-      description: "一键安装，AI立即访问您的产品数据、订单信息和客户历史记录。"
-    },
-    {
-      icon: Bot,
-      title: "AI学习您的品牌",
-      description: "智能分析您的沟通风格，确保每个回复都符合您的品牌语调。"
-    },
-    {
-      icon: MessageCircle,
-      title: "自动回复客户",
-      description: "客户询问产品、订单或配送？AI在3秒内提供完美答案。"
-    }
-  ];
-
   return (
-    <section id="how-it-works" aria-labelledby="how-it-works-heading" className="py-16 md:py-24">
+    <section id="how-it-works" aria-labelledby="how-heading" className="py-16 md:py-24">
       <div className="container">
-        <h2 id="how-it-works-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          3步骤即可开始
-        </h2>
-        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          设置简单快捷 — 安装后即可立即开始节省时间并提高客户满意度。
-        </p>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {steps.map((step, index) => (
-            <div key={index} className="text-center">
-              <div className="relative mb-6">
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="w-8 h-8 text-primary" />
-                </div>
-                <div className="absolute -top-2 -right-2 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-sm font-semibold">
-                  {index + 1}
-                </div>
-              </div>
-              <h3 className="font-semibold text-lg mb-3">{step.title}</h3>
-              <p className="text-muted-foreground">{step.description}</p>
-            </div>
-          ))}
+        <header className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
+          <h2 id="how-heading" className="font-display text-3xl md:text-4xl font-semibold mb-4">
+            几分钟内即可开始
+          </h2>
+          <p className="text-muted-foreground">
+            安装、连接、发送回复 - 并通过规则自动化。
+          </p>
+        </header>
+
+        <div className="relative max-w-6xl mx-auto">
+          {/* Decorative connecting line (desktop) */}
+          <svg className="hidden md:block absolute left-1/2 -translate-x-1/2 -top-6" width="720" height="40" viewBox="0 0 720 40" fill="none">
+            <defs>
+              <linearGradient id="how-g" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.4" />
+                <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
+              </linearGradient>
+            </defs>
+            <path d="M0 20 C 120 20, 240 20, 360 20 C 480 20, 600 20, 720 20" stroke="url(#how-g)" strokeWidth="2" />
+          </svg>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <Step Icon={Plug} title="安装" desc="在Shopify应用商店一键安装。" />
+            <Step Icon={Database} title="连接" desc="实时访问Shopify数据。" />
+            <Step Icon={Bot} title="回复" desc="直接在管理面板中获得AI建议。" />
+            <Step Icon={Settings2} title="自动化" desc="可选的规则和自动发送。" />
+          </div>
+        </div>
+
+        <div className="text-center max-w-3xl mx-auto mt-10 md:mt-14">
+          <div className="mt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
+              <a href={OAUTH_URL}>免费试用</a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
+              <a href="#live-demo">观看演示</a>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
