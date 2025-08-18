@@ -20,7 +20,7 @@ const HeroZh = () => {
         onMouseMove={onMove}
         style={{ ["--x" as any]: pos.x, ["--y" as any]: pos.y } as React.CSSProperties}
       >
-        {/* Optionaler Hintergrund (austauschbar) */}
+        {/* 可选背景图片 (可替换) */}
         {content.media.background?.src && (
           <img
             src={content.media.background.src}
@@ -35,7 +35,7 @@ const HeroZh = () => {
 
         <div className="relative container mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-32 md:pb-28">
           <div className="grid md:grid-cols-2 items-center gap-10">
-            {/* Textspalte */}
+            {/* 文本栏 */}
             <div className="text-center md:text-left order-2 md:order-1">
               <h1 className="font-display text-4xl md:text-6xl font-bold tracking-tight mb-6 text-primary-foreground">
                 {content.headline}
@@ -60,7 +60,7 @@ const HeroZh = () => {
               </div>
 
               <p className="mt-2 text-sm text-primary-foreground/80">
-                2分钟即可开始。无需信用卡。无风险。
+                2分钟即可开始。无需信用卡。零风险。
               </p>
 
               <div className="mt-5 flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-primary-foreground/90">
@@ -78,14 +78,14 @@ const HeroZh = () => {
               <div className="mt-5 flex flex-wrap items-center justify-center md:justify-start gap-3 text-primary-foreground/90">
                 <span className="inline-flex items-center gap-2 text-sm">
                   <Star className="size-4 fill-current" aria-hidden="true" />
-                  <span>Shopify应用商店4.9/5评分</span>
+                  <span>Shopify应用商店4.9/5星</span>
                 </span>
                 <span className="hidden md:inline text-sm opacity-80">•</span>
-                <span className="text-sm">受Shopify商户团队信赖</span>
+                <span className="text-sm">受到Shopify商户团队信赖</span>
               </div>
             </div>
 
-            {/* Medien-/Screenshotspalte */}
+            {/* 媒体/截图栏 */}
             <figure className="order-1 md:order-2">
               <img
                 src={content.media.image.src}
