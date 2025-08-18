@@ -1,67 +1,185 @@
-import { ArrowRight, Database, MessageCircle, Bot } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { ShoppingCart, Package, User, FileText, Truck, Languages, Bot } from "lucide-react";
+
+const OAUTH_URL = "https://apps.shopify.com/replainow/install";
+
+const Card = ({
+  Icon,
+  title,
+  desc,
+  className = "",
+}: {
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  title: string;
+  desc: string;
+  className?: string;
+}) => (
+  <div
+    className={`rounded-xl border bg-card p-4 shadow-sm animate-fade-in ${className}`}
+  >
+    <div className="flex items-start gap-3">
+      <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-primary text-primary-foreground shadow-brand">
+        <Icon className="h-5 w-5" aria-hidden="true" />
+      </span>
+      <div>
+        <h3 className="font-medium leading-tight">{title}</h3>
+        <p className="text-sm text-muted-foreground mt-1 leading-snug">
+          {desc}
+        </p>
+      </div>
+    </div>
+  </div>
+);
 
 const StoreDataFlowZh = () => {
   return (
-    <section aria-labelledby="data-flow-heading" className="py-16 md:py-24">
-      <div className="container max-w-5xl">
-        <h2 id="data-flow-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          直接连接您的Shopify数据
-        </h2>
-        <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-16">
-          无需手动输入产品信息或订单详情。ReplAInow直接从您的Shopify商店获取实时数据，确保回复准确无误。
-        </p>
+    <section
+      id="data-context"
+      aria-labelledby="data-context-heading"
+      className="relative py-16 md:py-24 bg-muted/40 overflow-hidden"
+    >
+      {/* subtle background glow */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-0 opacity-60"
+      >
+        <div className="absolute -top-24 left-1/2 -translate-x-1/2 h-64 w-[40rem] rounded-full blur-3xl bg-gradient-primary" />
+      </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Shopify Store */}
-          <div className="flex-1 text-center">
-            <div className="w-20 h-20 bg-gradient-to-br from-primary to-primary/70 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-              <Database className="w-10 h-10 text-primary-foreground" />
+      <div className="container relative">
+        <header className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
+          <h2
+            id="data-context-heading"
+            className="font-display text-3xl md:text-4xl font-semibold mb-4"
+          >
+            您的AI了解您的Shopify商店 — 了如指掌
+          </h2>
+          <p className="text-muted-foreground">
+            ReplAInow直接连接您的Shopify商店，实时获取所有相关数据，立即准确回答客户询问。
+          </p>
+        </header>
+
+        {/* Visual layout */}
+        <div className="relative max-w-6xl mx-auto">
+          {/* Desktop/Tablet: radial layout with connections */}
+          <div className="relative hidden md:block">
+            {/* Center mockup */}
+            <div className="relative mx-auto w-full max-w-[720px] h-80 rounded-2xl border bg-card shadow-brand-glow overflow-hidden">
+              {/* Browser top bar */}
+              <div className="flex items-center gap-2 h-10 px-4 border-b bg-muted/50">
+                <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/40" />
+                <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/40" />
+                <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/40" />
+                <span className="ml-4 text-xs text-muted-foreground">Shopify 管理后台</span>
+              </div>
+              {/* Mock content */}
+              <div className="p-6 grid grid-cols-3 gap-4">
+                <div className="col-span-2 rounded-lg border bg-background p-4">
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="h-4 w-28 rounded bg-muted/60" />
+                    <span className="inline-flex items-center gap-2 text-xs text-muted-foreground">
+                      <Bot className="h-4 w-4" /> AI已激活
+                    </span>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="h-3 w-3/4 rounded bg-muted/50" />
+                    <div className="h-3 w-2/3 rounded bg-muted/40" />
+                    <div className="h-3 w-1/2 rounded bg-muted/30" />
+                  </div>
+                </div>
+                <div className="rounded-lg border bg-background p-4">
+                  <div className="h-3 w-1/2 rounded bg-muted/50 mb-3" />
+                  <div className="space-y-2">
+                    <div className="h-2.5 w-full rounded bg-muted/40" />
+                    <div className="h-2.5 w-5/6 rounded bg-muted/30" />
+                    <div className="h-2.5 w-3/4 rounded bg-muted/20" />
+                  </div>
+                </div>
+              </div>
+
+              {/* connection canvas (decorative lines) */}
+              <svg className="pointer-events-none absolute inset-0" viewBox="0 0 720 320" fill="none">
+                {/* Lines from approximate card anchors to mockup center */}
+                <defs>
+                  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.5" />
+                    <stop offset="100%" stopColor="hsl(var(--primary))" stopOpacity="0.1" />
+                  </linearGradient>
+                </defs>
+                <path d="M60 40 C 140 80, 220 60, 280 100" stroke="url(#g)" strokeWidth="2" />
+                <path d="M660 40 C 540 80, 500 60, 420 100" stroke="url(#g)" strokeWidth="2" />
+                <path d="M40 180 C 160 160, 200 180, 280 160" stroke="url(#g)" strokeWidth="2" />
+                <path d="M680 180 C 560 160, 520 180, 440 160" stroke="url(#g)" strokeWidth="2" />
+                <path d="M120 300 C 200 260, 240 240, 300 220" stroke="url(#g)" strokeWidth="2" />
+                <path d="M600 300 C 520 260, 480 240, 420 220" stroke="url(#g)" strokeWidth="2" />
+              </svg>
             </div>
-            <h3 className="font-semibold text-lg mb-2">您的Shopify商店</h3>
-            <p className="text-sm text-muted-foreground">产品目录、订单历史、客户数据、库存状态</p>
-          </div>
 
-          <ArrowRight className="w-8 h-8 text-primary hidden md:block" />
-          <div className="md:hidden w-full flex justify-center">
-            <ArrowRight className="w-8 h-8 text-primary rotate-90" />
-          </div>
-
-          {/* AI Processing */}
-          <div className="flex-1 text-center">
-            <div className="w-20 h-20 bg-gradient-to-br from-secondary to-secondary/70 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-              <Bot className="w-10 h-10 text-secondary-foreground" />
+            {/* Surrounding cards */}
+            <div className="absolute inset-0">
+              <div className="absolute -top-4 left-0 w-64">
+                <Card
+                  Icon={ShoppingCart}
+                  title="订单数据"
+                  desc="订单ID、状态、商品、追踪信息"
+                />
+              </div>
+              <div className="absolute -top-4 right-0 w-64">
+                <Card Icon={Package} title="产品数据" desc="标题、SKU、价格、库存" />
+              </div>
+              <div className="absolute top-1/3 -left-2 w-64">
+                <Card Icon={User} title="客户数据" desc="姓名、邮箱、购买历史" />
+              </div>
+              <div className="absolute top-1/3 -right-2 w-64">
+                <Card Icon={FileText} title="商店内容" desc="页面、常见问题、配送规则" />
+              </div>
+              <div className="absolute bottom-0 left-4 w-64">
+                <Card Icon={Truck} title="追踪配送" desc="实时链接、配送时间" />
+              </div>
+              <div className="absolute bottom-0 right-4 w-64">
+                <Card Icon={Languages} title="多语言" desc="首选语言设置" />
+              </div>
             </div>
-            <h3 className="font-semibold text-lg mb-2">ReplAInow AI</h3>
-            <p className="text-sm text-muted-foreground">智能分析、品牌语调学习、个性化回复生成</p>
           </div>
 
-          <ArrowRight className="w-8 h-8 text-primary hidden md:block" />
-          <div className="md:hidden w-full flex justify-center">
-            <ArrowRight className="w-8 h-8 text-primary rotate-90" />
-          </div>
-
-          {/* Customer Response */}
-          <div className="flex-1 text-center">
-            <div className="w-20 h-20 bg-gradient-to-br from-accent to-accent/70 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-              <MessageCircle className="w-10 h-10 text-accent-foreground" />
+          {/* Mobile: stacked grid */}
+          <div className="md:hidden">
+            <div className="rounded-2xl border bg-card shadow-sm p-5 mb-6">
+              <div className="flex items-center justify-between mb-3">
+                <div className="h-4 w-24 rounded bg-muted/60" />
+                <span className="inline-flex items-center gap-2 text-xs text-muted-foreground">
+                  <Bot className="h-4 w-4" /> AI已激活
+                </span>
+              </div>
+              <div className="space-y-2">
+                <div className="h-3 w-3/4 rounded bg-muted/50" />
+                <div className="h-3 w-2/3 rounded bg-muted/40" />
+                <div className="h-3 w-1/2 rounded bg-muted/30" />
+              </div>
             </div>
-            <h3 className="font-semibold text-lg mb-2">客户回复</h3>
-            <p className="text-sm text-muted-foreground">即时、准确、符合品牌风格的个性化回复</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <Card Icon={ShoppingCart} title="订单数据" desc="订单ID、状态、商品、追踪信息" />
+              <Card Icon={Package} title="产品数据" desc="标题、SKU、价格、库存" />
+              <Card Icon={User} title="客户数据" desc="姓名、邮箱、购买历史" />
+              <Card Icon={FileText} title="商店内容" desc="页面、常见问题、配送规则" />
+              <Card Icon={Truck} title="追踪配送" desc="实时链接、配送时间" />
+              <Card Icon={Languages} title="多语言" desc="首选语言设置" />
+            </div>
           </div>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="text-center p-6 rounded-lg bg-card border">
-            <h4 className="font-semibold mb-2">实时数据同步</h4>
-            <p className="text-sm text-muted-foreground">AI始终掌握最新的产品和订单信息</p>
-          </div>
-          <div className="text-center p-6 rounded-lg bg-card border">
-            <h4 className="font-semibold mb-2">零配置设置</h4>
-            <p className="text-sm text-muted-foreground">一键安装，无需复杂的配置过程</p>
-          </div>
-          <div className="text-center p-6 rounded-lg bg-card border">
-            <h4 className="font-semibold mb-2">安全可靠</h4>
-            <p className="text-sm text-muted-foreground">GDPR合规，数据传输加密保护</p>
+        {/* Caption + CTA */}
+        <div className="text-center max-w-3xl mx-auto mt-10 md:mt-14">
+          <p className="text-muted-foreground">
+            ReplAInow利用这些数据，在&lt;3秒内提供符合品牌的精准回复 — 完全集成到Shopify中。
+          </p>
+          <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+            <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
+              <a href={OAUTH_URL}>立即免费试用</a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
+              <a href="#live-demo">观看实时演示</a>
+            </Button>
           </div>
         </div>
       </div>
