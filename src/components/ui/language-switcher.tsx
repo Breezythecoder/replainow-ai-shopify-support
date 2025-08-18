@@ -23,6 +23,7 @@ const LanguageSwitcher = ({ variant = 'mobile' }: LanguageSwitcherProps = {}) =>
     { code: 'IT', path: '/it', name: 'Italiano' },
     { code: 'PT', path: '/pt', name: 'Português' },
     { code: 'NL', path: '/nl', name: 'Nederlands' },
+    { code: 'ZH', path: '/zh', name: '中文' },
   ];
   
   const getCurrentLanguage = () => {
@@ -32,6 +33,7 @@ const LanguageSwitcher = ({ variant = 'mobile' }: LanguageSwitcherProps = {}) =>
     if (location.pathname.startsWith('/it')) return languages[4];
     if (location.pathname.startsWith('/pt')) return languages[5];
     if (location.pathname.startsWith('/nl')) return languages[6];
+    if (location.pathname.startsWith('/zh')) return languages[7];
     return languages[0]; // Default to German
   };
   

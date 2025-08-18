@@ -10,6 +10,7 @@ import IndexFr from "./pages/Index.fr";
 import IndexPt from "./pages/Index.pt";
 import IndexIt from "./pages/Index.it";
 import IndexNl from "./pages/Index.nl";
+import IndexZh from "./pages/Index.zh";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import UninstallInstructions from "./pages/UninstallInstructions";
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/pt" element={<IndexPt />} />
           <Route path="/it" element={<IndexIt />} />
           <Route path="/nl" element={<IndexNl />} />
+          <Route path="/zh" element={<IndexZh />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/uninstall" element={<UninstallInstructions />} />
