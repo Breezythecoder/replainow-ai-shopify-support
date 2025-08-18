@@ -1,33 +1,59 @@
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
-import { useState } from "react";
+import { useToast } from "@/components/ui/use-toast";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow/install";
 
 const StickyInstallBarZh = () => {
-  const [isVisible, setIsVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
+  const { toast } = useToast();
 
-  if (!isVisible) return null;
+  useEffect(() => {
+    const onScroll = () => {
+      if (dismissed) return;
+      const y = window.scrollY;
+      setVisible(y > 500);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [dismissed]);
+
+  if (!visible || dismissed) return null;
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-primary text-primary-foreground p-4 shadow-lg border-t">
-      <div className="container flex items-center justify-between gap-4">
-        <div className="flex-1 min-w-0">
-          <p className="text-sm font-medium truncate">
-            准备好提升客服效率了吗？14天免费试用，立即开始！
+    <div className="fixed inset-x-0 bottom-4 z-50 px-4">
+      <div className="container">
+        <div className="relative mx-auto flex flex-col sm:flex-row items-center gap-3 rounded-xl border bg-card/95 backdrop-blur px-4 py-3 shadow-brand">
+          <p className="text-sm sm:text-base text-muted-foreground flex-1 text-center sm:text-left">
+            2分钟即可开始 - 14天免费试用。
           </p>
-        </div>
-        <div className="flex items-center gap-3">
-          <Button asChild size="sm" variant="secondary">
-            <a href={OAUTH_URL}>免费试用</a>
-          </Button>
-          <button
-            onClick={() => setIsVisible(false)}
-            className="text-primary-foreground/80 hover:text-primary-foreground"
-            aria-label="关闭"
-          >
-            <X size={20} />
-          </button>
+          <div className="flex items-center gap-2">
+            <Button
+              asChild
+              size="lg"
+              variant="hero"
+              onClick={() => {
+                toast({ title: "正在跳转到Shopify应用商店…" });
+                console.log("analytics:event", {
+                  category: "cta",
+                  action: "click",
+                  label: "sticky_install_bar",
+                });
+              }}
+            >
+              <a href={OAUTH_URL} aria-label="立即安装">立即安装</a>
+            </Button>
+            <button
+              aria-label="关闭工具栏"
+              className="p-2 rounded-md hover:bg-muted text-muted-foreground"
+              onClick={() => setDismissed(true)}
+            >
+              <X className="size-5" />
+            </button>
+          </div>
         </div>
       </div>
     </div>
