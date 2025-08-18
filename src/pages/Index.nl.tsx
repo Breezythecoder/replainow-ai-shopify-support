@@ -15,6 +15,7 @@ import SEO from "@/components/SEO";
 import FAQ from "@/components/marketing/FAQ.nl";
 import StickyInstallBar from "@/components/marketing/StickyInstallBar.nl";
 import OrganizationJsonLd from "@/components/SEOOrganization";
+import MailAndChat from "@/components/marketing/MailAndChat.nl";
 import LanguageSwitcher from "@/components/ui/language-switcher";
 
 const IndexNl = () => {
@@ -32,6 +33,7 @@ const IndexNl = () => {
         <HowItWorks />
         <ProblemSolution />
         <Features />
+        <MailAndChat />
         <StoreDataFlow />
         <SocialProof />
         <LiveDemo />
