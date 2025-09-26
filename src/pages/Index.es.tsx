@@ -1,18 +1,18 @@
 import ModernNavbar from "@/components/marketing/ModernNavbar";
-import ModernHero from "@/components/marketing/ModernHero";
-import ModernHowItWorks from "@/components/marketing/ModernHowItWorks";
-import ModernProblemSolution from "@/components/marketing/ModernProblemSolution";
-import ModernFeatures from "@/components/marketing/ModernFeatures";
-import ModernSocialProof from "@/components/marketing/ModernSocialProof";
-import ModernLiveDemo from "@/components/marketing/ModernLiveDemo";
-import ModernPricing from "@/components/marketing/ModernPricing";
+import HeroEs from "@/components/marketing/Hero.es";
+import HowItWorksEs from "@/components/marketing/HowItWorks.es";
+import ProblemSolutionEs from "@/components/marketing/ProblemSolution.es";
+import FeaturesEs from "@/components/marketing/Features.es";
+import SocialProofEs from "@/components/marketing/SocialProof.es";
+import LiveDemoEs from "@/components/marketing/LiveDemo.es";
+import PricingEs from "@/components/marketing/Pricing.es";
 import ModernComparison from "@/components/marketing/ModernComparison";
-import About from "@/components/marketing/About.es";
-import Contact from "@/components/marketing/Contact.es";
-import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
-import Footer from "@/components/marketing/Footer.es";
+import AboutEs from "@/components/marketing/About.es";
+import ContactEs from "@/components/marketing/Contact.es";
+import FinalCTAEs from "@/components/marketing/FinalCTA.es";
+import FooterEs from "@/components/marketing/Footer.es";
 import SEO from "@/components/SEO";
-import FAQ from "@/components/marketing/FAQ.es";
+import FAQEs from "@/components/marketing/FAQ.es";
 import ModernStickyInstallBar from "@/components/marketing/ModernStickyInstallBar";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import LanguageSwitcher from "@/components/ui/language-switcher";
@@ -60,19 +60,19 @@ const IndexEs = () => {
       <OrganizationJsonLd />
       <ModernNavbar />
       <main id="main-content" role="main" aria-label="Contenido principal">
-        <ModernHero />
-        <ModernProblemSolution />
-        <ModernFeatures />
-        <ModernHowItWorks />
-        <ModernLiveDemo />
-        <ModernSocialProof />
+        <HeroEs />
+        <ProblemSolutionEs />
+        <FeaturesEs />
+        <HowItWorksEs />
+        <LiveDemoEs />
+        <SocialProofEs />
         <ModernComparison />
-        <ModernPricing />
-        <AIOptimizedFAQ />
-        <ModernFinalCTA />
-        <Contact />
+        <PricingEs />
+        <FAQEs />
+        <FinalCTAEs />
+        <ContactEs />
       </main>
-      <Footer />
+      <FooterEs />
       <ModernStickyInstallBar />
       <LanguageSwitcher />
     </div>

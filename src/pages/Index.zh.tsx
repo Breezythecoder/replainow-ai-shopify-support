@@ -1,18 +1,18 @@
 import ModernNavbar from "@/components/marketing/ModernNavbar";
-import ModernHero from "@/components/marketing/ModernHero";
-import ModernHowItWorks from "@/components/marketing/ModernHowItWorks";
-import ModernProblemSolution from "@/components/marketing/ModernProblemSolution";
-import ModernFeatures from "@/components/marketing/ModernFeatures";
-import ModernSocialProof from "@/components/marketing/ModernSocialProof";
-import ModernLiveDemo from "@/components/marketing/ModernLiveDemo";
-import ModernPricing from "@/components/marketing/ModernPricing";
+import HeroZh from "@/components/marketing/Hero.zh";
+import HowItWorksZh from "@/components/marketing/HowItWorks.zh";
+import ProblemSolutionZh from "@/components/marketing/ProblemSolution.zh";
+import FeaturesZh from "@/components/marketing/Features.zh";
+import SocialProofZh from "@/components/marketing/SocialProof.zh";
+import LiveDemoZh from "@/components/marketing/LiveDemo.zh";
+import PricingZh from "@/components/marketing/Pricing.zh";
 import ModernComparison from "@/components/marketing/ModernComparison";
-import About from "@/components/marketing/About.zh";
-import Contact from "@/components/marketing/Contact.zh";
-import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
-import Footer from "@/components/marketing/Footer.zh";
+import AboutZh from "@/components/marketing/About.zh";
+import ContactZh from "@/components/marketing/Contact.zh";
+import FinalCTAZh from "@/components/marketing/FinalCTA.zh";
+import FooterZh from "@/components/marketing/Footer.zh";
 import SEO from "@/components/SEO";
-import FAQ from "@/components/marketing/FAQ.zh";
+import FAQZh from "@/components/marketing/FAQ.zh";
 import ModernStickyInstallBar from "@/components/marketing/ModernStickyInstallBar";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import LanguageSwitcher from "@/components/ui/language-switcher";
@@ -60,19 +60,19 @@ const IndexZh = () => {
       <OrganizationJsonLd />
       <ModernNavbar />
       <main id="main-content" role="main" aria-label="主要内容">
-        <ModernHero />
-        <ModernProblemSolution />
-        <ModernFeatures />
-        <ModernHowItWorks />
-        <ModernLiveDemo />
-        <ModernSocialProof />
+        <HeroZh />
+        <ProblemSolutionZh />
+        <FeaturesZh />
+        <HowItWorksZh />
+        <LiveDemoZh />
+        <SocialProofZh />
         <ModernComparison />
-        <ModernPricing />
-        <AIOptimizedFAQ />
-        <ModernFinalCTA />
-        <Contact />
+        <PricingZh />
+        <FAQZh />
+        <FinalCTAZh />
+        <ContactZh />
       </main>
-      <Footer />
+      <FooterZh />
       <ModernStickyInstallBar />
       <LanguageSwitcher />
     </div>
