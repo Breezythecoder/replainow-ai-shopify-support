@@ -15,8 +15,10 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 hover:scale-105 active:scale-95",
         ghost: "hover:bg-accent hover:text-accent-foreground hover:scale-105 active:scale-95",
         link: "text-brand-primary underline-offset-4 hover:underline hover:text-brand-secondary transition-colors",
-        hero: "bg-gradient-primary text-primary-foreground shadow-brand hover:shadow-brand-glow hover:scale-105 active:scale-95 font-semibold",
-        premium: "bg-gradient-hero text-primary-foreground shadow-brand-xl hover:shadow-brand-mega hover:scale-105 active:scale-95 font-semibold border border-brand-primary/20",
+        hero: "bg-gradient-primary text-white shadow-glass hover:shadow-hero hover:scale-105 active:scale-95 font-bold",
+        premium: "bg-gradient-hero text-white shadow-glass-lg hover:shadow-brand-mega hover:scale-105 active:scale-95 font-bold border border-white/20",
+        glass: "glass-card hover:bg-white/90 hover:shadow-float hover:scale-105 active:scale-95 font-semibold",
+        cta: "bg-gradient-primary text-white font-bold shadow-neon hover:shadow-brand-mega hover:scale-110 active:scale-95 transform transition-all duration-300",
         success: "bg-brand-success text-white hover:bg-brand-success/90 hover:scale-105 active:scale-95",
         warning: "bg-brand-warning text-white hover:bg-brand-warning/90 hover:scale-105 active:scale-95"
       },

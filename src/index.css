@@ -8,20 +8,20 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 250 100% 99%; /* Ultra-light blue background */
+    --foreground: 215 25% 18%; /* Slate-800 */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 25% 18%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 25% 18%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 233 84% 65%; /* Indigo-500 */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 210 40% 98%;
+    --secondary-foreground: 215 25% 18%;
 
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
@@ -107,28 +107,30 @@ All colors MUST be HSL.
 /* Enhanced Professional Design System */
 @layer base {
   :root {
-    /* Brand Color Palette - Professional & Accessible */
-    --brand-primary: 233 85% 65%; /* Enhanced accessibility */
-    --brand-secondary: 265 85% 70%; /* Enhanced accessibility */  
-    --brand-accent: 200 95% 60%; /* Complementary blue */
-    --brand-success: 142 76% 36%; /* Professional green */
-    --brand-warning: 45 93% 47%; /* Professional yellow */
-    --brand-popular: 48 96% 55%; /* Popular plan highlight */
+    /* Modern AI-Themed Brand Colors - 2025 Cutting Edge */
+    --brand-primary: 233 84% 65%; /* Indigo-500 - AI Intelligence Blue */
+    --brand-secondary: 252 83% 73%; /* Violet-500 - Premium Purple */  
+    --brand-accent: 197 71% 43%; /* Cyan-500 - Tech Accent */
+    --brand-success: 159 64% 42%; /* Emerald-500 - Growth Green */
+    --brand-warning: 45 93% 47%; /* Amber-500 - Attention Orange */
+    --brand-popular: 159 64% 42%; /* Emerald highlight for popular plans */
 
-    /* Advanced Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-secondary)) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-secondary)) 50%, hsl(var(--brand-accent)) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--background)) 0%, hsl(var(--muted) / 0.3) 100%);
+    /* Ultra-Modern Gradients - Glass Morphism Era */
+    --gradient-primary: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
+    --gradient-hero: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #06B6D4 100%);
+    --gradient-mesh: linear-gradient(145deg, rgba(99,102,241,0.1) 0%, rgba(139,92,246,0.05) 50%, rgba(6,182,212,0.1) 100%);
+    --gradient-glass: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    --gradient-subtle: linear-gradient(180deg, #FAFBFF 0%, rgba(99,102,241,0.02) 100%);
 
-    /* Professional Shadows */
-    --shadow-sm: 0 1px 2px hsl(var(--brand-primary) / 0.05);
-    --shadow-md: 0 4px 6px hsl(var(--brand-primary) / 0.1);
-    --shadow-lg: 0 10px 15px hsl(var(--brand-primary) / 0.1);
-    --shadow-xl: 0 20px 25px hsl(var(--brand-primary) / 0.15);
-    --shadow-elevated: 0 8px 24px hsl(var(--brand-primary) / 0.25);
-    --shadow-glow: 0 12px 40px hsl(var(--brand-secondary) / 0.35);
-    --shadow-brand: 0 10px 30px hsl(var(--brand-primary) / 0.3);
-    --shadow-brand-glow: 0 20px 50px hsl(var(--brand-secondary) / 0.4);
+    /* Glass Morphism & 2025 Shadows */
+    --shadow-glass: 0 8px 32px rgba(99,102,241,0.1);
+    --shadow-glass-lg: 0 20px 60px rgba(99,102,241,0.15);
+    --shadow-float: 0 16px 48px rgba(139,92,246,0.2);
+    --shadow-hero: 0 32px 80px rgba(99,102,241,0.3);
+    --shadow-neon: 0 0 40px rgba(99,102,241,0.4);
+    --shadow-brand: 0 10px 30px rgba(99,102,241,0.3);
+    --shadow-brand-glow: 0 20px 50px rgba(139,92,246,0.4);
+    --shadow-brand-mega: 0 40px 100px rgba(99,102,241,0.5);
 
     /* Animation & Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -180,22 +182,35 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  /* Enhanced Background & Gradient System */
-  .bg-gradient-primary { background-image: var(--gradient-primary); }
-  .bg-gradient-hero { background-image: var(--gradient-hero); }
-  .bg-gradient-subtle { background-image: var(--gradient-subtle); }
+  /* Ultra-Modern Background & Gradient System */
+  .bg-gradient-primary { background: var(--gradient-primary); }
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .bg-gradient-mesh { background: var(--gradient-mesh); }
+  .bg-gradient-glass { background: var(--gradient-glass); }
+  .bg-gradient-subtle { background: var(--gradient-subtle); }
+  .bg-ultra-light { background: #FAFBFF; }
 
-  /* Professional Shadow System */
-  .shadow-brand-sm { box-shadow: var(--shadow-sm); }
-  .shadow-brand { box-shadow: var(--shadow-elevated); }
-  .shadow-brand-glow { box-shadow: var(--shadow-glow); }
-  .shadow-brand-xl { box-shadow: var(--shadow-brand); }
-  .shadow-brand-mega { box-shadow: var(--shadow-brand-glow); }
+  /* Glass Morphism & 2025 Shadow System */
+  .shadow-glass { box-shadow: var(--shadow-glass); }
+  .shadow-glass-lg { box-shadow: var(--shadow-glass-lg); }
+  .shadow-float { box-shadow: var(--shadow-float); }
+  .shadow-hero { box-shadow: var(--shadow-hero); }
+  .shadow-neon { box-shadow: var(--shadow-neon); }
+  .shadow-brand { box-shadow: var(--shadow-brand); }
+  .shadow-brand-glow { box-shadow: var(--shadow-brand-glow); }
+  .shadow-brand-mega { box-shadow: var(--shadow-brand-mega); }
 
-  /* Enhanced Animation & Interaction */
-  .hover-scale { @apply transition-transform duration-200 hover:scale-105 active:scale-95; }
-  .hover-lift { @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-glow; }
-  .hover-glow { @apply transition-all duration-300 hover:shadow-brand-glow; }
+  /* Glass Morphism Utilities */
+  .glass { @apply backdrop-blur-md bg-white/10 border border-white/20; }
+  .glass-card { @apply backdrop-blur-md bg-white/80 border border-white/30 shadow-glass; }
+  .glass-strong { @apply backdrop-blur-lg bg-white/20 border border-white/40; }
+
+  /* 2025 Animation & Interaction System */
+  .hover-scale { @apply transition-all duration-300 hover:scale-105 active:scale-95 will-change-transform; }
+  .hover-lift { @apply transition-all duration-500 hover:-translate-y-2 hover:shadow-float; }
+  .hover-glow { @apply transition-all duration-300 hover:shadow-neon; }
+  .hover-float { @apply transition-all duration-700 hover:-translate-y-1 hover:shadow-glass-lg; }
+  .interactive-card { @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-float hover:scale-[1.02]; }
 
   /* Professional Link Animations */
   .story-link { @apply relative inline-block; }
@@ -229,14 +244,30 @@ All colors MUST be HSL.
     z-index: 1;
   }
 
-  /* Professional Text Utilities */
+  /* Modern Text Utilities */
   .text-balance { text-wrap: balance; }
   .text-gradient-primary { 
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 800;
   }
+  .text-gradient-hero { 
+    background: var(--gradient-hero);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+  }
+
+  /* Modern Typography Scale */
+  .text-6xl { font-size: 3.5rem; line-height: 1.1; }
+  .text-5xl { font-size: 3rem; line-height: 1.1; }
+  .font-black { font-weight: 900; }
+  .font-display { font-family: 'Inter', 'SF Pro Display', system-ui; }
+  .tracking-tight { letter-spacing: -0.02em; }
+  .tracking-tighter { letter-spacing: -0.04em; }
 
   /* Accessibility Utilities */
   .focus-ring { 

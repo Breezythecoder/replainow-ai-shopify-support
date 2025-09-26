@@ -1,19 +1,20 @@
-import Navbar from "@/components/marketing/Navbar";
-import Hero from "@/components/marketing/Hero";
-import HowItWorks from "@/components/marketing/HowItWorks";
-import ProblemSolution from "@/components/marketing/ProblemSolution";
-import Features from "@/components/marketing/Features";
-import SocialProof from "@/components/marketing/SocialProof";
-import LiveDemo from "@/components/marketing/LiveDemo";
-import Pricing from "@/components/marketing/Pricing";
+import ModernNavbar from "@/components/marketing/ModernNavbar";
+import ModernHero from "@/components/marketing/ModernHero";
+import ModernHowItWorks from "@/components/marketing/ModernHowItWorks";
+import ModernProblemSolution from "@/components/marketing/ModernProblemSolution";
+import ModernFeatures from "@/components/marketing/ModernFeatures";
+import ModernSocialProof from "@/components/marketing/ModernSocialProof";
+import ModernLiveDemo from "@/components/marketing/ModernLiveDemo";
+import ModernPricing from "@/components/marketing/ModernPricing";
+import ModernComparison from "@/components/marketing/ModernComparison";
 import About from "@/components/marketing/About";
 import Contact from "@/components/marketing/Contact";
-import FinalCTA from "@/components/marketing/FinalCTA";
+import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
 import Footer from "@/components/marketing/Footer";
 import StoreDataFlow from "@/components/marketing/StoreDataFlow";
 import SEO from "@/components/SEO";
 import FAQ from "@/components/marketing/FAQ";
-import StickyInstallBar from "@/components/marketing/StickyInstallBar";
+import ModernStickyInstallBar from "@/components/marketing/ModernStickyInstallBar";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import MailAndChat from "@/components/marketing/MailAndChat";
 import LanguageSwitcher from "@/components/ui/language-switcher";
@@ -26,24 +27,21 @@ const Index = () => {
         image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
-      <Navbar />
+      <ModernNavbar />
       <main id="main-content" role="main" aria-label="Hauptinhalt">
-        <Hero />
-        <HowItWorks />
-        <ProblemSolution />
-        <Features />
-        <MailAndChat />
-        <StoreDataFlow />
-        <SocialProof />
-        <LiveDemo />
-        <Pricing />
-        <FAQ />
-        <FinalCTA />
-        <About />
+        <ModernHero />
+        <ModernProblemSolution />
+        <ModernFeatures />
+        <ModernHowItWorks />
+        <ModernLiveDemo />
+        <ModernSocialProof />
+        <ModernComparison />
+        <ModernPricing />
+        <ModernFinalCTA />
         <Contact />
       </main>
       <Footer />
-      <StickyInstallBar />
+      <ModernStickyInstallBar />
       <LanguageSwitcher />
     </div>
   );
