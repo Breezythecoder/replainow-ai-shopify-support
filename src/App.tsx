@@ -22,6 +22,8 @@ import Impressum from "./pages/Impressum";
 import NotFound from "./pages/NotFound";
 
 
+import ContrastAuditor from "@/components/dev/ContrastAuditor";
+
 const queryClient = new QueryClient();
 
 const AppContent = () => {
@@ -53,6 +55,7 @@ const AppContent = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      {import.meta.env.MODE === 'development' && <ContrastAuditor />}
     </>
   );
 };
