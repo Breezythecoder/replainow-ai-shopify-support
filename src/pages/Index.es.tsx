@@ -65,7 +65,7 @@ const IndexEs = () => {
       />
       <OrganizationJsonLd />
       <ModernNavbarEs />
-      <main id="main-content" role="main" aria-label="Contenido principal">
+      <main id="main-content" role="main" aria-label="Contenido principal" className="pb-20 md:pb-0">
         <HeroEs />
         <ProblemSolutionEs />
         <FeaturesEs />

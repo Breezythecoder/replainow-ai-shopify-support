@@ -65,7 +65,7 @@ const IndexZh = () => {
       />
       <OrganizationJsonLd />
       <ModernNavbarZh />
-      <main id="main-content" role="main" aria-label="主要内容">
+      <main id="main-content" role="main" aria-label="主要内容" className="pb-20 md:pb-0">
         <HeroZh />
         <ProblemSolutionZh />
         <FeaturesZh />

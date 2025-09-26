@@ -4,9 +4,9 @@ const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
 const ModernStickyInstallBar = () => {
   return (
-    <div className="fixed bottom-0 left-0 right-0 glass-strong border-t border-white/30 p-4 z-50 md:hidden backdrop-blur-lg">
+    <div className="fixed bottom-0 left-0 right-0 glass-strong border-t border-white/30 p-3 z-40 md:hidden backdrop-blur-lg">
       <div className="flex items-center justify-between">
-        <div>
+        <div className="flex-1 pr-4">
           <div className="font-black text-sm text-slate-800">ReplAInow AI Helpdesk</div>
           <div className="text-xs text-slate-600 font-medium">€19/Monat • 14 Tage kostenlos • 4.9★</div>
         </div>
@@ -14,7 +14,7 @@ const ModernStickyInstallBar = () => {
           asChild 
           variant="cta" 
           size="sm" 
-          className="px-6 py-3 font-bold shadow-neon"
+          className="px-4 py-2 font-bold shadow-neon whitespace-nowrap"
         >
           <a href={OAUTH_URL}>
             Installieren

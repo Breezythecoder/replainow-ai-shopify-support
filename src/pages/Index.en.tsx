@@ -65,7 +65,7 @@ const IndexEn = () => {
       />
       <OrganizationJsonLd />
       <ModernNavbarEn />
-      <main id="main-content" role="main" aria-label="Main content">
+      <main id="main-content" role="main" aria-label="Main content" className="pb-20 md:pb-0">
         <HeroEn />
         <ProblemSolutionEn />
         <FeaturesEn />

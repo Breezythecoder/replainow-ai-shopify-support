@@ -35,9 +35,9 @@ const ModernFinalCTA = () => {
           </Button>
           <Button 
             asChild 
-            variant="outline" 
+            variant="glass" 
             size="xl" 
-            className="text-lg px-12 py-6 border-2 border-white/30 text-white hover:bg-white/10 font-semibold"
+            className="text-lg px-12 py-6 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 hover:scale-105 font-bold shadow-brand"
           >
             <a href="#live-demo" className="flex items-center gap-3">
               📞 Demo buchen

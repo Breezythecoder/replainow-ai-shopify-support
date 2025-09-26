@@ -76,13 +76,13 @@ const LanguageSwitcher = ({ variant = 'mobile' }: LanguageSwitcherProps = {}) =>
   }
 
   return (
-    <div className="fixed bottom-4 left-4 z-50 md:hidden">
+    <div className="fixed bottom-20 left-4 z-50 md:hidden">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button
             size="sm"
             variant="outline"
-            className="rounded-full bg-card/95 backdrop-blur border shadow-lg hover:shadow-xl transition-all duration-200 flex items-center gap-2 px-3 py-2"
+            className="rounded-full bg-card/95 backdrop-blur border shadow-brand hover:shadow-brand-glow transition-all duration-200 flex items-center gap-2 px-3 py-2"
           >
             <Globe className="h-4 w-4" />
             <span className="text-xs font-medium">{currentLang.code}</span>
@@ -91,14 +91,14 @@ const LanguageSwitcher = ({ variant = 'mobile' }: LanguageSwitcherProps = {}) =>
         </DropdownMenuTrigger>
         <DropdownMenuContent 
           align="start" 
-          className="bg-card/95 backdrop-blur border shadow-lg min-w-[120px]"
+          className="bg-card/95 backdrop-blur border shadow-brand min-w-[140px] mb-2"
         >
           {languages.map((lang) => (
             <DropdownMenuItem key={lang.code} asChild>
               <a 
                 href={lang.path} 
-                className={`flex items-center gap-2 px-3 py-2 text-sm cursor-pointer ${
-                  currentLang.code === lang.code ? 'bg-primary/10 text-primary font-medium' : ''
+                className={`flex items-center gap-2 px-3 py-2 text-sm cursor-pointer transition-colors ${
+                  currentLang.code === lang.code ? 'bg-primary/10 text-primary font-medium' : 'hover:bg-muted'
                 }`}
               >
                 <span className="text-xs font-medium w-6">{lang.code}</span>

@@ -65,7 +65,7 @@ const IndexIt = () => {
       />
       <OrganizationJsonLd />
       <ModernNavbarIt />
-      <main id="main-content" role="main" aria-label="Contenuto principale">
+      <main id="main-content" role="main" aria-label="Contenuto principale" className="pb-20 md:pb-0">
         <HeroIt />
         <ProblemSolutionIt />
         <FeaturesIt />

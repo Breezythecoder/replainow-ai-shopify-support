@@ -67,7 +67,7 @@ const Index = () => {
       />
       <OrganizationJsonLd />
       <ModernNavbar />
-      <main id="main-content" role="main" aria-label="Hauptinhalt">
+      <main id="main-content" role="main" aria-label="Hauptinhalt" className="pb-20 md:pb-0">
         <ModernHero />
         <ModernProblemSolution />
         <ModernFeatures />
