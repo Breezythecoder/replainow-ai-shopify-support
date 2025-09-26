@@ -1,4 +1,4 @@
-import ModernNavbar from "@/components/marketing/ModernNavbar";
+import ModernNavbarIt from "@/components/marketing/ModernNavbar.it";
 import HeroIt from "@/components/marketing/Hero.it";
 import HowItWorksIt from "@/components/marketing/HowItWorks.it";
 import ProblemSolutionIt from "@/components/marketing/ProblemSolution.it";
@@ -6,7 +6,7 @@ import FeaturesIt from "@/components/marketing/Features.it";
 import SocialProofIt from "@/components/marketing/SocialProof.it";
 import LiveDemoIt from "@/components/marketing/LiveDemo.it";
 import PricingIt from "@/components/marketing/Pricing.it";
-import ModernComparison from "@/components/marketing/ModernComparison";
+import ModernComparisonIt from "@/components/marketing/ModernComparison.it";
 import AboutIt from "@/components/marketing/About.it";
 import ContactIt from "@/components/marketing/Contact.it";
 import FinalCTAIt from "@/components/marketing/FinalCTA.it";

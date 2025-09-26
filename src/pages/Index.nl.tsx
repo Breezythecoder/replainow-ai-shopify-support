@@ -1,4 +1,4 @@
-import ModernNavbar from "@/components/marketing/ModernNavbar";
+import ModernNavbarNl from "@/components/marketing/ModernNavbar.nl";
 import HeroNl from "@/components/marketing/Hero.nl";
 import HowItWorksNl from "@/components/marketing/HowItWorks.nl";
 import ProblemSolutionNl from "@/components/marketing/ProblemSolution.nl";
@@ -6,7 +6,7 @@ import FeaturesNl from "@/components/marketing/Features.nl";
 import SocialProofNl from "@/components/marketing/SocialProof.nl";
 import LiveDemoNl from "@/components/marketing/LiveDemo.nl";
 import PricingNl from "@/components/marketing/Pricing.nl";
-import ModernComparison from "@/components/marketing/ModernComparison";
+import ModernComparisonNl from "@/components/marketing/ModernComparison.nl";
 import AboutNl from "@/components/marketing/About.nl";
 import ContactNl from "@/components/marketing/Contact.nl";
 import FinalCTANl from "@/components/marketing/FinalCTA.nl";

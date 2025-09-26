@@ -1,4 +1,4 @@
-import ModernNavbar from "@/components/marketing/ModernNavbar";
+import ModernNavbarPt from "@/components/marketing/ModernNavbar.pt";
 import HeroPt from "@/components/marketing/Hero.pt";
 import HowItWorksPt from "@/components/marketing/HowItWorks.pt";
 import ProblemSolutionPt from "@/components/marketing/ProblemSolution.pt";
@@ -6,7 +6,7 @@ import FeaturesPt from "@/components/marketing/Features.pt";
 import SocialProofPt from "@/components/marketing/SocialProof.pt";
 import LiveDemoPt from "@/components/marketing/LiveDemo.pt";
 import PricingPt from "@/components/marketing/Pricing.pt";
-import ModernComparison from "@/components/marketing/ModernComparison";
+import ModernComparisonPt from "@/components/marketing/ModernComparison.pt";
 import AboutPt from "@/components/marketing/About.pt";
 import ContactPt from "@/components/marketing/Contact.pt";
 import FinalCTAPt from "@/components/marketing/FinalCTA.pt";
