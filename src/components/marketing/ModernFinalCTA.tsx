@@ -64,17 +64,17 @@ const ModernFinalCTA = () => {
         </div>
 
         {/* Urgency Counter */}
-        <div className="mt-12 glass-card p-6 rounded-2xl max-w-2xl mx-auto">
-          <p className="text-yellow-300 font-bold text-lg mb-2">
+        <div className="mt-12 bg-white/95 backdrop-blur-md p-8 rounded-3xl max-w-3xl mx-auto border border-white/30 shadow-brand-mega">
+          <p className="text-indigo-600 font-black text-2xl mb-3">
             🔥 Limitiertes Onboarding-Angebot
           </p>
-          <p className="text-white/90">
-            Nur die ersten <strong className="text-yellow-300">100 Stores</strong> diesen Monat bekommen kostenloses Setup + 1 Monat gratis
+          <p className="text-slate-700 text-lg leading-relaxed mb-6">
+            Nur die ersten <strong className="text-indigo-600">100 Stores</strong> diesen Monat bekommen kostenloses Setup + 1 Monat gratis
           </p>
-          <div className="mt-4 bg-white/20 rounded-full h-2">
-            <div className="bg-yellow-300 h-2 rounded-full" style={{ width: '73%' }}></div>
+          <div className="bg-slate-200 rounded-full h-3 mb-3">
+            <div className="bg-gradient-to-r from-indigo-500 to-purple-500 h-3 rounded-full transition-all duration-1000" style={{ width: '73%' }}></div>
           </div>
-          <p className="text-xs text-white/70 mt-2">73 von 100 Plätzen bereits vergeben</p>
+          <p className="text-slate-600 font-semibold">73 von 100 Plätzen bereits vergeben</p>
         </div>
       </div>
     </section>
