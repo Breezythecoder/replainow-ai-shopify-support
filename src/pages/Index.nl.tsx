@@ -15,7 +15,7 @@ import FAQNl from "@/components/marketing/FAQ.nl";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import LanguageSwitcher from "@/components/ui/language-switcher";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
-import AIOptimizedFAQ from "@/components/seo/AIOptimizedFAQ";
+import AIOptimizedFAQNl from "@/components/seo/AIOptimizedFAQ.nl";
 import { softwareApplicationSchema, organizationSchema } from "@/components/seo/StructuredData";
 import MultilingualSEO from "@/components/seo/MultilingualSEO";
 
@@ -74,7 +74,7 @@ const IndexNl = () => {
         <ModernSocialProofNl />
         <ModernComparisonNl />
         <ModernPricingNl />
-        <AIOptimizedFAQ />
+        <AIOptimizedFAQNl />
         <ModernFinalCTANl />
         <ContactNl />
       </main>

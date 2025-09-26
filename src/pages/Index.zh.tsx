@@ -15,7 +15,7 @@ import FAQZh from "@/components/marketing/FAQ.zh";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import LanguageSwitcher from "@/components/ui/language-switcher";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
-import AIOptimizedFAQ from "@/components/seo/AIOptimizedFAQ";
+import AIOptimizedFAQZh from "@/components/seo/AIOptimizedFAQ.zh";
 import { softwareApplicationSchema, organizationSchema } from "@/components/seo/StructuredData";
 import MultilingualSEO from "@/components/seo/MultilingualSEO";
 
@@ -74,7 +74,7 @@ const IndexZh = () => {
         <ModernSocialProofZh />
         <ModernComparisonZh />
         <ModernPricingZh />
-        <AIOptimizedFAQ />
+        <AIOptimizedFAQZh />
         <ModernFinalCTAZh />
         <ContactZh />
       </main>

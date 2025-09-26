@@ -14,7 +14,7 @@ import SEO from "@/components/SEO";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import LanguageSwitcher from "@/components/ui/language-switcher";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
-import AIOptimizedFAQ from "@/components/seo/AIOptimizedFAQ";
+import AIOptimizedFAQFr from "@/components/seo/AIOptimizedFAQ.fr";
 import { softwareApplicationSchema, organizationSchema } from "@/components/seo/StructuredData";
 import MultilingualSEO from "@/components/seo/MultilingualSEO";
 
@@ -73,7 +73,7 @@ const IndexFr = () => {
         <ModernSocialProofFr />
         <ModernComparisonFr />
         <ModernPricingFr />
-        <AIOptimizedFAQ />
+        <AIOptimizedFAQFr />
         <ModernFinalCTAFr />
         <ContactFr />
       </main>
