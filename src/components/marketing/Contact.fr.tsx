@@ -35,7 +35,7 @@ const ContactFr = () => {
       });
 
       if (response.ok) {
-        toast({ title: "Merci !", description: "Nous vous recontacterons bientôt." });
+        toast({ title: "Merci!", description: "Nous vous contacterons bientôt." });
         (e.currentTarget as HTMLFormElement).reset();
       } else {
         throw new Error('Failed to send message');
@@ -43,7 +43,7 @@ const ContactFr = () => {
     } catch (error) {
       toast({ 
         title: "Erreur", 
-        description: "Impossible d'envoyer le message. Veuillez réessayer ou nous écrire directement à support@replainow.com",
+        description: "Impossible d'envoyer le message. Réessayez ou écrivez directement à support@replainow.com",
         variant: "destructive"
       });
     } finally {
@@ -52,13 +52,13 @@ const ContactFr = () => {
   };
 
   return (
-    <section id="kontakt" aria-labelledby="contact-heading" className="py-16 md:py-24">
+    <section id="contact" aria-labelledby="contact-heading" className="py-16 md:py-24">
       <div className="container max-w-4xl">
         <h2 id="contact-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
           Contact
         </h2>
         <p className="text-center text-muted-foreground mb-8">
-          Email : <a href="mailto:support@replainow.com" className="story-link">support@replainow.com</a>
+          E-mail: <a href="mailto:support@replainow.com" className="story-link">support@replainow.com</a>
         </p>
         <form onSubmit={onSubmit} className="grid gap-4">
           <div className="grid md:grid-cols-2 gap-4">
@@ -67,17 +67,17 @@ const ContactFr = () => {
               <Input id="name" name="name" placeholder="Jean Dupont" required />
             </div>
             <div className="grid gap-2">
-              <label className="text-sm" htmlFor="email">Email</label>
+              <label className="text-sm" htmlFor="email">E-mail</label>
               <Input id="email" name="email" type="email" placeholder="vous@boutique.fr" required />
             </div>
           </div>
           <div className="grid gap-2">
             <label className="text-sm" htmlFor="message">Message</label>
-            <Textarea id="message" name="message" placeholder="Comment pouvons-nous vous aider ?" rows={5} required />
+            <Textarea id="message" name="message" placeholder="Comment pouvons-nous vous aider?" rows={5} required />
           </div>
           <div className="flex justify-end">
             <Button type="submit" variant="hero" disabled={isSubmitting}>
-              {isSubmitting ? "Envoi..." : "Envoyer le message"}
+              {isSubmitting ? "Envoi en cours..." : "Envoyer le message"}
             </Button>
           </div>
         </form>

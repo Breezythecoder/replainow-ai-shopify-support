@@ -6,10 +6,10 @@ import ModernHowItWorksFr from "@/components/marketing/ModernHowItWorks.fr";
 import ModernLiveDemoFr from "@/components/marketing/ModernLiveDemo.fr";
 import ModernSocialProofFr from "@/components/marketing/ModernSocialProof.fr";
 import ModernPricingFr from "@/components/marketing/ModernPricing.fr";
-import ModernComparison from "@/components/marketing/ModernComparison";
-import Contact from "@/components/marketing/Contact";
+import ModernComparisonFr from "@/components/marketing/ModernComparison.fr";
 import ModernFinalCTAFr from "@/components/marketing/ModernFinalCTA.fr";
-import Footer from "@/components/marketing/Footer";
+import ContactFr from "@/components/marketing/Contact.fr";
+import FooterFr from "@/components/marketing/Footer.fr";
 import SEO from "@/components/SEO";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import LanguageSwitcher from "@/components/ui/language-switcher";
@@ -71,13 +71,13 @@ const IndexFr = () => {
         <ModernHowItWorksFr />
         <ModernLiveDemoFr />
         <ModernSocialProofFr />
-        <ModernComparison />
+        <ModernComparisonFr />
         <ModernPricingFr />
         <AIOptimizedFAQ />
         <ModernFinalCTAFr />
-        <Contact />
+        <ContactFr />
       </main>
-      <Footer />
+      <FooterFr />
       <LanguageSwitcher />
     </>
   );

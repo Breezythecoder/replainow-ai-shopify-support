@@ -6,6 +6,7 @@ import ModernHowItWorksZh from "@/components/marketing/ModernHowItWorks.zh";
 import ModernLiveDemoZh from "@/components/marketing/ModernLiveDemo.zh";
 import ModernSocialProofZh from "@/components/marketing/ModernSocialProof.zh";
 import ModernPricingZh from "@/components/marketing/ModernPricing.zh";
+import ModernComparisonZh from "@/components/marketing/ModernComparison.zh";
 import ModernFinalCTAZh from "@/components/marketing/ModernFinalCTA.zh";
 import ContactZh from "@/components/marketing/Contact.zh";
 import FooterZh from "@/components/marketing/Footer.zh";
@@ -71,6 +72,7 @@ const IndexZh = () => {
         <ModernHowItWorksZh />
         <ModernLiveDemoZh />
         <ModernSocialProofZh />
+        <ModernComparisonZh />
         <ModernPricingZh />
         <AIOptimizedFAQ />
         <ModernFinalCTAZh />

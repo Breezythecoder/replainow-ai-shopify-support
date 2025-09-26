@@ -6,6 +6,7 @@ import ModernHowItWorksIt from "@/components/marketing/ModernHowItWorks.it";
 import ModernLiveDemoIt from "@/components/marketing/ModernLiveDemo.it";
 import ModernSocialProofIt from "@/components/marketing/ModernSocialProof.it";
 import ModernPricingIt from "@/components/marketing/ModernPricing.it";
+import ModernComparisonIt from "@/components/marketing/ModernComparison.it";
 import ModernFinalCTAIt from "@/components/marketing/ModernFinalCTA.it";
 import ContactIt from "@/components/marketing/Contact.it";
 import FooterIt from "@/components/marketing/Footer.it";
@@ -71,6 +72,7 @@ const IndexIt = () => {
         <ModernHowItWorksIt />
         <ModernLiveDemoIt />
         <ModernSocialProofIt />
+        <ModernComparisonIt />
         <ModernPricingIt />
         <AIOptimizedFAQ />
         <ModernFinalCTAIt />

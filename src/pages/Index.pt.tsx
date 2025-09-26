@@ -6,6 +6,7 @@ import ModernHowItWorksPt from "@/components/marketing/ModernHowItWorks.pt";
 import ModernLiveDemoPt from "@/components/marketing/ModernLiveDemo.pt";
 import ModernSocialProofPt from "@/components/marketing/ModernSocialProof.pt";
 import ModernPricingPt from "@/components/marketing/ModernPricing.pt";
+import ModernComparisonPt from "@/components/marketing/ModernComparison.pt";
 import ModernFinalCTAPt from "@/components/marketing/ModernFinalCTA.pt";
 import ContactPt from "@/components/marketing/Contact.pt";
 import FooterPt from "@/components/marketing/Footer.pt";
@@ -71,6 +72,7 @@ const IndexPt = () => {
         <ModernHowItWorksPt />
         <ModernLiveDemoPt />
         <ModernSocialProofPt />
+        <ModernComparisonPt />
         <ModernPricingPt />
         <AIOptimizedFAQ />
         <ModernFinalCTAPt />

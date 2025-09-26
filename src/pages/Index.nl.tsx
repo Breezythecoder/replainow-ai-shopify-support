@@ -6,6 +6,7 @@ import ModernHowItWorksNl from "@/components/marketing/ModernHowItWorks.nl";
 import ModernLiveDemoNl from "@/components/marketing/ModernLiveDemo.nl";
 import ModernSocialProofNl from "@/components/marketing/ModernSocialProof.nl";
 import ModernPricingNl from "@/components/marketing/ModernPricing.nl";
+import ModernComparisonNl from "@/components/marketing/ModernComparison.nl";
 import ModernFinalCTANl from "@/components/marketing/ModernFinalCTA.nl";
 import ContactNl from "@/components/marketing/Contact.nl";
 import FooterNl from "@/components/marketing/Footer.nl";
@@ -71,6 +72,7 @@ const IndexNl = () => {
         <ModernHowItWorksNl />
         <ModernLiveDemoNl />
         <ModernSocialProofNl />
+        <ModernComparisonNl />
         <ModernPricingNl />
         <AIOptimizedFAQ />
         <ModernFinalCTANl />
