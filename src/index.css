@@ -115,35 +115,51 @@ All colors MUST be HSL.
 /* Enhanced Professional Design System */
 @layer base {
   :root {
-    /* WCAG AA Compliant Brand Colors - Improved Contrast */
-    --brand-primary: 233 84% 55%; /* Darker for better contrast (was 65%) */
-    --brand-secondary: 252 83% 63%; /* Darker for better contrast (was 73%) */  
-    --brand-accent: 197 71% 35%; /* Darker for better contrast (was 43%) */
-    --brand-success: 159 64% 35%; /* Darker for better contrast (was 42%) */
-    --brand-warning: 45 93% 40%; /* Darker for better contrast (was 47%) */
-    --brand-popular: 159 64% 35%;
+    /* Modern Brand Colors - Vibrant & Conversion-Focused */
+    --brand-primary: 233 100% 60%; /* Strong blue for trust & tech */
+    --brand-secondary: 280 100% 65%; /* Vibrant purple for AI/innovation */  
+    --brand-accent: 195 100% 50%; /* Cyan for highlights & CTAs */
+    --brand-success: 142 76% 36%; /* Green for success states */
+    --brand-warning: 38 92% 50%; /* Orange for warnings */
+    --brand-popular: 280 100% 65%; /* Purple for popular items */
+    
+    /* Additional Brand Colors */
+    --brand-gradient-start: 233 100% 60%;
+    --brand-gradient-mid: 280 100% 65%;
+    --brand-gradient-end: 195 100% 50%;
+    --brand-neutral-light: 220 25% 97%;
+    --brand-neutral-dark: 220 25% 15%;
 
-    /* Mobile-Optimized Gradients - Reduced complexity for performance */
-    --gradient-primary: linear-gradient(135deg, hsl(233, 84%, 55%) 0%, hsl(252, 83%, 63%) 100%);
-    --gradient-hero: linear-gradient(135deg, hsl(233, 84%, 55%) 0%, hsl(252, 83%, 63%) 50%, hsl(197, 71%, 35%) 100%);
-    --gradient-mesh: linear-gradient(145deg, hsla(233, 84%, 55%, 0.08) 0%, hsla(252, 83%, 63%, 0.04) 50%, hsla(197, 71%, 35%, 0.08) 100%);
-    --gradient-glass: linear-gradient(145deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.08) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(250, 100%, 99%) 0%, hsla(233, 84%, 55%, 0.015) 100%);
+    /* Premium Gradients - Modern & Eye-catching */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-secondary)) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-secondary)) 50%, hsl(var(--brand-accent)) 100%);
+    --gradient-mesh: linear-gradient(145deg, hsla(var(--brand-primary), 0.08) 0%, hsla(var(--brand-secondary), 0.06) 50%, hsla(var(--brand-accent), 0.08) 100%);
+    --gradient-glass: linear-gradient(145deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.10) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--brand-neutral-light)) 0%, hsla(var(--brand-primary), 0.02) 100%);
+    --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.9) 0%, rgba(255,255,255,0.6) 100%);
+    --gradient-button: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-secondary)) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(var(--brand-accent)) 0%, hsl(var(--brand-primary)) 100%);
 
-    /* Mobile-Optimized Shadows - Reduced for performance */
-    --shadow-glass: 0 4px 16px hsla(233, 84%, 55%, 0.08);
-    --shadow-glass-lg: 0 8px 32px hsla(233, 84%, 55%, 0.12);
-    --shadow-float: 0 8px 24px hsla(252, 83%, 63%, 0.15);
-    --shadow-hero: 0 16px 40px hsla(233, 84%, 55%, 0.2);
-    --shadow-neon: 0 0 20px hsla(233, 84%, 55%, 0.3);
-    --shadow-brand: 0 6px 20px hsla(233, 84%, 55%, 0.2);
-    --shadow-brand-glow: 0 8px 24px hsla(252, 83%, 63%, 0.25);
-    --shadow-brand-mega: 0 20px 50px hsla(233, 84%, 55%, 0.3);
+    /* Premium Shadows - Modern depth & visual impact */
+    --shadow-glass: 0 8px 32px hsla(var(--brand-primary), 0.12);
+    --shadow-glass-lg: 0 16px 64px hsla(var(--brand-primary), 0.15);
+    --shadow-float: 0 12px 40px hsla(var(--brand-secondary), 0.20);
+    --shadow-hero: 0 24px 60px hsla(var(--brand-primary), 0.25);
+    --shadow-neon: 0 0 40px hsla(var(--brand-accent), 0.4);
+    --shadow-brand: 0 8px 32px hsla(var(--brand-primary), 0.25);
+    --shadow-brand-glow: 0 16px 48px hsla(var(--brand-secondary), 0.3);
+    --shadow-brand-mega: 0 32px 80px hsla(var(--brand-primary), 0.35);
+    --shadow-card: 0 4px 20px hsla(var(--brand-neutral-dark), 0.08);
+    --shadow-card-hover: 0 12px 40px hsla(var(--brand-primary), 0.15);
+    --shadow-button: 0 4px 16px hsla(var(--brand-primary), 0.3);
+    --shadow-button-hover: 0 8px 24px hsla(var(--brand-primary), 0.4);
 
-    /* Fast Mobile Transitions */
-    --transition-smooth: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-    --transition-fast: all 0.1s ease-out;
+    /* Premium Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    --transition-fast: all 0.2s ease-out;
+    --transition-premium: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-elastic: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
     /* Mobile Typography Scale - Improved readability */
     --font-size-xs: 0.8125rem;  /* 13px - larger for mobile */
@@ -197,15 +213,21 @@ All colors MUST be HSL.
 }
 
 @layer utilities {
-  /* Mobile-Optimized Background System */
+  /* Premium Background System */
   .bg-gradient-primary { background: var(--gradient-primary) !important; }
   .bg-gradient-hero { background: var(--gradient-hero) !important; }
   .bg-gradient-mesh { background: var(--gradient-mesh) !important; }
   .bg-gradient-glass { background: var(--gradient-glass) !important; }
   .bg-gradient-subtle { background: var(--gradient-subtle) !important; }
-  .bg-ultra-light { background-color: hsl(250, 100%, 99%) !important; }
+  .bg-gradient-card { background: var(--gradient-card) !important; }
+  .bg-gradient-button { background: var(--gradient-button) !important; }
+  .bg-gradient-accent { background: var(--gradient-accent) !important; }
+  .bg-ultra-light { background-color: hsl(var(--brand-neutral-light)) !important; }
+  .bg-brand-primary { background-color: hsl(var(--brand-primary)) !important; }
+  .bg-brand-secondary { background-color: hsl(var(--brand-secondary)) !important; }
+  .bg-brand-accent { background-color: hsl(var(--brand-accent)) !important; }
 
-  /* Mobile-Optimized Shadow System */
+  /* Premium Shadow System */
   .shadow-glass { box-shadow: var(--shadow-glass) !important; }
   .shadow-glass-lg { box-shadow: var(--shadow-glass-lg) !important; }
   .shadow-float { box-shadow: var(--shadow-float) !important; }
@@ -214,26 +236,35 @@ All colors MUST be HSL.
   .shadow-brand { box-shadow: var(--shadow-brand) !important; }
   .shadow-brand-glow { box-shadow: var(--shadow-brand-glow) !important; }
   .shadow-brand-mega { box-shadow: var(--shadow-brand-mega) !important; }
+  .shadow-card { box-shadow: var(--shadow-card) !important; }
+  .shadow-card-hover { box-shadow: var(--shadow-card-hover) !important; }
+  .shadow-button { box-shadow: var(--shadow-button) !important; }
+  .shadow-button-hover { box-shadow: var(--shadow-button-hover) !important; }
 
-  /* Mobile-Optimized Glass Effects */
-  .glass { @apply backdrop-blur-sm bg-white/25 border border-white/40 !important; }
-  .glass-card { @apply backdrop-blur-sm bg-white/95 border border-white/50 !important; box-shadow: var(--shadow-glass) !important; }
-  .glass-strong { @apply backdrop-blur-md bg-white/40 border border-white/60 !important; }
+  /* Premium Glass Effects */
+  .glass { @apply backdrop-blur-sm bg-white/30 border border-white/50 !important; }
+  .glass-card { @apply backdrop-blur-md bg-white/90 border border-white/60 !important; box-shadow: var(--shadow-card) !important; }
+  .glass-strong { @apply backdrop-blur-lg bg-white/50 border border-white/70 !important; }
+  .glass-premium { @apply backdrop-blur-xl bg-gradient-card border border-white/80 !important; box-shadow: var(--shadow-glass-lg) !important; }
 
-  /* Mobile-First Animation System */
-  .hover-scale { @apply transition-transform duration-200 active:scale-95; }
+  /* Premium Animation System */
+  .hover-scale { @apply transition-all duration-300 active:scale-95; }
   .hover-lift { @apply transition-all duration-300; }
-  .hover-glow { @apply transition-shadow duration-200; }
+  .hover-glow { @apply transition-all duration-300; }
   .hover-float { @apply transition-all duration-300; }
-  .interactive-card { @apply transition-all duration-200; }
+  .interactive-card { @apply transition-all duration-300; }
+  .premium-button { @apply transition-all duration-300 transform; }
+  .premium-card { @apply transition-all duration-300 transform; }
 
-  /* Desktop-only hover effects */
+  /* Premium hover effects */
   @media (hover: hover) and (pointer: fine) {
     .hover-scale { @apply hover:scale-105; }
-    .hover-lift { @apply hover:-translate-y-1 hover:shadow-float; }
+    .hover-lift { @apply hover:-translate-y-2 hover:shadow-float; }
     .hover-glow { @apply hover:shadow-neon; }
-    .hover-float { @apply hover:-translate-y-1 hover:shadow-glass-lg; }
-    .interactive-card { @apply hover:-translate-y-1 hover:shadow-float hover:scale-[1.01]; }
+    .hover-float { @apply hover:-translate-y-2 hover:shadow-glass-lg; }
+    .interactive-card { @apply hover:-translate-y-2 hover:shadow-card-hover hover:scale-[1.02]; }
+    .premium-button { @apply hover:scale-105 hover:shadow-button-hover hover:-translate-y-0.5; }
+    .premium-card { @apply hover:-translate-y-3 hover:shadow-float hover:scale-[1.02]; }
   }
 
   /* Mobile Touch-Friendly Links */
@@ -276,15 +307,17 @@ All colors MUST be HSL.
     color: hsl(233, 84%, 40%);
   }
 
-  /* Mobile Typography Improvements */
+  /* Premium Typography System */
   .text-6xl { font-size: clamp(2.5rem, 8vw, 4rem); line-height: 1.1; }
   .text-5xl { font-size: clamp(2rem, 6vw, 3.125rem); line-height: 1.1; }
   .text-4xl { font-size: clamp(1.75rem, 5vw, 2.5rem); line-height: 1.15; }
   .text-3xl { font-size: clamp(1.5rem, 4vw, 2rem); line-height: 1.2; }
   .font-black { font-weight: 900; }
-  .font-display { font-family: 'Inter', 'SF Pro Display', system-ui; }
+  .font-display { font-family: 'Inter', 'SF Pro Display', system-ui; font-variation-settings: 'opsz' 32; }
+  .font-heading { font-family: 'Inter', 'SF Pro Display', system-ui; font-weight: 800; letter-spacing: -0.02em; }
   .tracking-tight { letter-spacing: -0.015em; }
   .tracking-tighter { letter-spacing: -0.025em; }
+  .tracking-headline { letter-spacing: -0.03em; }
 
   /* Mobile-First Accessibility */
   .focus-ring { 
@@ -353,10 +386,13 @@ All colors MUST be HSL.
     animation: move-lines 20s linear infinite;
   }
 
-  /* Additional Animation Classes */
+  /* Premium Animation Classes */
   .animate-float { animation: float 6s ease-in-out infinite; }
   .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
   .animate-slide-in-up { animation: slide-in-up 0.6s ease-out both; }
+  .transition-smooth { transition: var(--transition-smooth); }
+  .transition-premium { transition: var(--transition-premium); }
+  .transition-elastic { transition: var(--transition-elastic); }
 
   /* Stagger Animation Delays */
   .delay-100 { animation-delay: 100ms; }
@@ -364,4 +400,22 @@ All colors MUST be HSL.
   .delay-300 { animation-delay: 300ms; }
   .delay-400 { animation-delay: 400ms; }
   .delay-500 { animation-delay: 500ms; }
+  
+  /* Scroll Reveal Animation */
+  .animate-reveal { 
+    opacity: 0; 
+    transform: translateY(30px); 
+    animation: slide-in-up 0.8s ease-out forwards; 
+  }
+  
+  /* Premium Brand Colors */
+  .text-brand-primary { color: hsl(var(--brand-primary)); }
+  .text-brand-secondary { color: hsl(var(--brand-secondary)); }
+  .text-brand-accent { color: hsl(var(--brand-accent)); }
+  .text-brand-success { color: hsl(var(--brand-success)); }
+  .text-brand-warning { color: hsl(var(--brand-warning)); }
+  
+  /* Typography Enhancement */
+  .font-heading { font-family: 'Inter', 'SF Pro Display', system-ui; font-weight: 800; letter-spacing: -0.02em; }
+  .tracking-headline { letter-spacing: -0.03em; }
 }

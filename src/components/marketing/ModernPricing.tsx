@@ -88,7 +88,7 @@ const ModernPricing = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 sm:mb-16">
           {plans.map((plan, i) => {
             const Card = (
-              <div className="glass-card rounded-3xl p-6 sm:p-8 h-full flex flex-col interactive-card border border-white/40 shadow-brand hover-lift">
+              <div className={`glass-premium rounded-3xl p-6 sm:p-8 h-full flex flex-col premium-card border ${plan.highlight ? 'border-brand-primary/60 shadow-brand-glow bg-gradient-card' : 'border-white/60 shadow-card'} relative overflow-hidden`}>
                 <div className="text-center mb-6 sm:mb-8">
                   <h3 className="text-xl sm:text-2xl font-bold mb-2 text-slate-800">{plan.name}</h3>
                   <p className="text-xs sm:text-sm text-slate-500 mb-3 sm:mb-4">{plan.description}</p>
