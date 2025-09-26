@@ -103,19 +103,21 @@ const ModernHero = () => {
           
           {/* Right Column */}
           <div className="relative mt-8 lg:mt-0">
-            <div className="relative transform hover:scale-105 transition-transform duration-700">
+            <div className="relative transform hover:scale-105 transition-transform duration-700 mx-auto max-w-md sm:max-w-lg lg:max-w-none">
               <img 
                 src="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png" 
                 alt="ReplAInow AI Dashboard 3D Mockup" 
-                className="w-full max-w-lg mx-auto lg:max-w-none drop-shadow-2xl hover-float" 
+                className="w-full drop-shadow-2xl hover-float" 
               />
               {/* Floating Success Badge */}
-              <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 glass-card px-3 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-black text-brand-success shadow-brand-glow animate-pulse">
-                ✅ +37% Zufriedenheit
+              <div className="absolute top-2 right-2 sm:top-4 sm:right-4 lg:-top-4 lg:-right-4 glass-card px-2 py-1 sm:px-3 sm:py-2 lg:px-6 lg:py-3 rounded-full text-xs sm:text-sm font-black text-brand-success shadow-brand-glow animate-pulse max-w-[120px] sm:max-w-none">
+                <span className="block sm:hidden">✅ +37%</span>
+                <span className="hidden sm:block">✅ +37% Zufriedenheit</span>
               </div>
               {/* Floating Cost Savings */}
-              <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 glass-card px-3 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-black text-brand-warning shadow-brand-glow animate-float">
-                💰 €1.900/Monat gespart
+              <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 lg:-bottom-4 lg:-left-4 glass-card px-2 py-1 sm:px-3 sm:py-2 lg:px-6 lg:py-3 rounded-full text-xs sm:text-sm font-black text-brand-warning shadow-brand-glow animate-float max-w-[140px] sm:max-w-none">
+                <span className="block sm:hidden">💰 €1.9k gespart</span>
+                <span className="hidden sm:block">💰 €1.900/Monat gespart</span>
               </div>
             </div>
           </div>
