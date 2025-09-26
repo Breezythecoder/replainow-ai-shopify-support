@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
-const OAUTH_URL = "https://apps.shopify.com/replainow/install";
+const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
 const LiveDemoEs = () => {
   return (

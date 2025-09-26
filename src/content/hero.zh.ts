@@ -21,7 +21,7 @@ export const heroContent: HeroContent = {
   headline: "Shopify AI客服。几秒内回答询问。",
   subheadline:
     "结合实时Shopify数据的AI：更高转化率，更快回复，更少工单。",
-  primaryCta: { label: "免费试用", href: "https://apps.shopify.com/replainow/install" },
+  primaryCta: { label: "免费试用", href: "https://apps.shopify.com/replainow-ai-support" },
   secondaryCta: { label: "观看演示", href: "#live-demo" },
   media: {
     background: { src: heroBackground, alt: "抽象AI背景图" },

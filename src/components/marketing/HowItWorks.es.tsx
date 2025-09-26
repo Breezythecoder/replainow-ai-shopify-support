@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Plug, Database, Bot, Settings2 } from "lucide-react";
 
-const OAUTH_URL = "https://apps.shopify.com/replainow/install";
+const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
 const Step = ({
   Icon,

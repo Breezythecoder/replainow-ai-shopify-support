@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 
-const OAUTH_URL = "https://apps.shopify.com/replainow/install";
+const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
 const FinalCTAEs = () => {
   return (

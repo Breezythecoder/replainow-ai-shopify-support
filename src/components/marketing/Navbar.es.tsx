@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import LanguageSwitcher from "@/components/ui/language-switcher";
 
-const OAUTH_URL = "https://apps.shopify.com/replainow/install";
+const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
 const NavbarEs = () => {
   return (

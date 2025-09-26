@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import { useState } from "react";
 
-const OAUTH_URL = "https://apps.shopify.com/replainow/install";
+const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
 const StickyInstallBarIt = () => {
   const [isVisible, setIsVisible] = useState(true);

@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Mail, MessageSquare, CheckCircle2, Globe, Clock } from "lucide-react";
 
-const OAUTH_URL = "https://apps.shopify.com/replainow/install";
+const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
 const Bullet = ({ Icon, children }: { Icon: any; children: React.ReactNode }) => (
   <li className="flex items-start gap-3">

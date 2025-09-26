@@ -17,7 +17,7 @@ export const heroContent: HeroContent = {
   headline: "Support IA pour Shopify. Répond aux demandes en secondes.",
   subheadline:
     "IA avec données Shopify en temps réel : plus de conversion, réponses plus rapides, moins de tickets.",
-  primaryCta: { label: "Essayer gratuitement", href: "https://apps.shopify.com/replainow/install" },
+  primaryCta: { label: "Essayer gratuitement", href: "https://apps.shopify.com/replainow-ai-support" },
   secondaryCta: { label: "Voir la démo", href: "#live-demo" },
   media: {
     background: { src: heroBackground, alt: "Graphique de fond IA abstrait" },
