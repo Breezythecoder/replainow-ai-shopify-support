@@ -115,7 +115,7 @@ const ModernHero = () => {
               </div>
               {/* Floating Cost Savings */}
               <div className="absolute -bottom-4 -left-4 glass-card px-6 py-3 rounded-full text-sm font-black text-brand-warning shadow-brand-glow animate-float">
-                💰 €96/Monat gespart
+                💰 €1.900/Monat gespart
               </div>
             </div>
           </div>
