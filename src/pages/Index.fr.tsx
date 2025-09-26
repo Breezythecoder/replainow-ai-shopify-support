@@ -18,6 +18,7 @@ import LanguageSwitcher from "@/components/ui/language-switcher";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
 import AIOptimizedFAQ from "@/components/seo/AIOptimizedFAQ";
 import { softwareApplicationSchema, organizationSchema } from "@/components/seo/StructuredData";
+import MultilingualSEO from "@/components/seo/MultilingualSEO";
 
 const IndexFr = () => {
   const structuredData = [
@@ -26,7 +27,8 @@ const IndexFr = () => {
   ];
 
   return (
-    <div>
+    <>
+      <MultilingualSEO language="fr" />
       <AdvancedSEO
         title="ReplAInow – Service Client IA pour Shopify | Automatisez avec l'IA"
         description="Automatisez votre support client Shopify avec GPT-4 IA. ✅ 3sec temps réponse ✅ 32+ langues ✅ Conforme RGPD ✅ 75% moins cher que Gorgias et Zendesk. Essai 14 jours gratuit!"
@@ -79,7 +81,7 @@ const IndexFr = () => {
       </main>
       <FooterFr />
       <LanguageSwitcher />
-    </div>
+    </>
   );
 };
 

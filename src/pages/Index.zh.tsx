@@ -18,6 +18,7 @@ import LanguageSwitcher from "@/components/ui/language-switcher";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
 import AIOptimizedFAQ from "@/components/seo/AIOptimizedFAQ";
 import { softwareApplicationSchema, organizationSchema } from "@/components/seo/StructuredData";
+import MultilingualSEO from "@/components/seo/MultilingualSEO";
 
 const IndexZh = () => {
   const structuredData = [
@@ -26,7 +27,8 @@ const IndexZh = () => {
   ];
 
   return (
-    <div>
+    <>
+      <MultilingualSEO language="zh" />
       <AdvancedSEO
         title="ReplAInow – Shopify AI客服系统 | 用AI自动化客户支持"
         description="用GPT-4 AI自动化您的Shopify客户支持。✅ 3秒响应时间 ✅ 32+种语言 ✅ 符合GDPR ✅ 比Gorgias和Zendesk便宜75%。免费试用14天！"
@@ -79,7 +81,7 @@ const IndexZh = () => {
       </main>
       <FooterZh />
       <LanguageSwitcher />
-    </div>
+    </>
   );
 };
 
