@@ -183,27 +183,27 @@ All colors MUST be HSL.
 
 @layer utilities {
   /* Ultra-Modern Background & Gradient System */
-  .bg-gradient-primary { background: var(--gradient-primary); }
-  .bg-gradient-hero { background: var(--gradient-hero); }
-  .bg-gradient-mesh { background: var(--gradient-mesh); }
-  .bg-gradient-glass { background: var(--gradient-glass); }
-  .bg-gradient-subtle { background: var(--gradient-subtle); }
-  .bg-ultra-light { background-color: hsl(250, 100%, 99%); }
+  .bg-gradient-primary { background: var(--gradient-primary) !important; }
+  .bg-gradient-hero { background: var(--gradient-hero) !important; }
+  .bg-gradient-mesh { background: var(--gradient-mesh) !important; }
+  .bg-gradient-glass { background: var(--gradient-glass) !important; }
+  .bg-gradient-subtle { background: var(--gradient-subtle) !important; }
+  .bg-ultra-light { background-color: hsl(250, 100%, 99%) !important; }
 
   /* Glass Morphism & 2025 Shadow System */
-  .shadow-glass { box-shadow: var(--shadow-glass); }
-  .shadow-glass-lg { box-shadow: var(--shadow-glass-lg); }
-  .shadow-float { box-shadow: var(--shadow-float); }
-  .shadow-hero { box-shadow: var(--shadow-hero); }
-  .shadow-neon { box-shadow: var(--shadow-neon); }
-  .shadow-brand { box-shadow: var(--shadow-brand); }
-  .shadow-brand-glow { box-shadow: var(--shadow-brand-glow); }
-  .shadow-brand-mega { box-shadow: var(--shadow-brand-mega); }
+  .shadow-glass { box-shadow: var(--shadow-glass) !important; }
+  .shadow-glass-lg { box-shadow: var(--shadow-glass-lg) !important; }
+  .shadow-float { box-shadow: var(--shadow-float) !important; }
+  .shadow-hero { box-shadow: var(--shadow-hero) !important; }
+  .shadow-neon { box-shadow: var(--shadow-neon) !important; }
+  .shadow-brand { box-shadow: var(--shadow-brand) !important; }
+  .shadow-brand-glow { box-shadow: var(--shadow-brand-glow) !important; }
+  .shadow-brand-mega { box-shadow: var(--shadow-brand-mega) !important; }
 
   /* Glass Morphism Utilities */
-  .glass { @apply backdrop-blur-md bg-white/20 border border-white/30; }
-  .glass-card { @apply backdrop-blur-md bg-white/90 border border-white/40 shadow-glass; }
-  .glass-strong { @apply backdrop-blur-lg bg-white/30 border border-white/50; }
+  .glass { @apply backdrop-blur-md bg-white/20 border border-white/30 !important; }
+  .glass-card { @apply backdrop-blur-md bg-white/90 border border-white/40 !important; box-shadow: var(--shadow-glass) !important; }
+  .glass-strong { @apply backdrop-blur-lg bg-white/30 border border-white/50 !important; }
 
   /* 2025 Animation & Interaction System */
   .hover-scale { @apply transition-all duration-300 hover:scale-105 active:scale-95 will-change-transform; }

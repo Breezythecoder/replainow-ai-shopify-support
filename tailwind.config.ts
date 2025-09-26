@@ -71,6 +71,28 @@ export default {
 					popular: 'hsl(var(--brand-popular))'
 				}
 			},
+			backgroundImage: {
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-mesh': 'var(--gradient-mesh)',
+				'gradient-glass': 'var(--gradient-glass)',
+				'gradient-subtle': 'var(--gradient-subtle)'
+			},
+			boxShadow: {
+				'glass': 'var(--shadow-glass)',
+				'glass-lg': 'var(--shadow-glass-lg)',
+				'float': 'var(--shadow-float)',
+				'hero': 'var(--shadow-hero)',
+				'neon': 'var(--shadow-neon)',
+				'brand': 'var(--shadow-brand)',
+				'brand-glow': 'var(--shadow-brand-glow)',
+				'brand-mega': 'var(--shadow-brand-mega)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'bounce': 'var(--transition-bounce)',
+				'fast': 'var(--transition-fast)'
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',

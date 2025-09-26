@@ -45,7 +45,7 @@ const ModernProblemSolution = () => {
           
           {/* After Card - Solution */}
           <div className="bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-200 rounded-3xl p-8 relative shadow-hero interactive-card">
-            <div className="absolute -top-3 left-6 bg-gradient-primary text-white px-4 py-2 rounded-full text-sm font-bold">
+            <div className="absolute -top-3 left-6 bg-gradient-to-r from-indigo-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
               🚀 MIT REPLAINOW
             </div>
             <img 
