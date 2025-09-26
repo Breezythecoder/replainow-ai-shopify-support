@@ -119,7 +119,7 @@ const ModernPricing = () => {
                   </Button>
                   <div className="flex items-center justify-center gap-2 text-xs text-slate-500">
                     <img
-                      src="/public/images/shopify-logo-black.svg"
+                      src="/images/shopify-logo-black.svg"
                       alt="Shopify Logo"
                       className="h-4 w-auto opacity-80"
                       loading="lazy"

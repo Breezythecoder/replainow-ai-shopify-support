@@ -29,7 +29,7 @@ const ModernSocialProof = () => {
         {/* Trust Badges Row */}
         <div className="flex flex-wrap justify-center items-center gap-8 mb-16 opacity-70">
           <img 
-            src="/public/images/shopify-logo-black.svg" 
+            src="/images/shopify-logo-black.svg" 
             alt="Shopify Plus Partner" 
             className="h-8 grayscale hover:grayscale-0 transition-all" 
           />

@@ -8,8 +8,8 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 250 100% 99%; /* Ultra-light blue background */
-    --foreground: 215 25% 18%; /* Slate-800 */
+    --background: 250 100% 99%; /* Ultra-light blue background - corrected */
+    --foreground: 215 25% 15%; /* Darker text for better contrast */
 
     --card: 0 0% 100%;
     --card-foreground: 215 25% 18%;
@@ -116,21 +116,21 @@ All colors MUST be HSL.
     --brand-popular: 159 64% 42%; /* Emerald highlight for popular plans */
 
     /* Ultra-Modern Gradients - Glass Morphism Era */
-    --gradient-primary: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
-    --gradient-hero: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #06B6D4 100%);
-    --gradient-mesh: linear-gradient(145deg, rgba(99,102,241,0.1) 0%, rgba(139,92,246,0.05) 50%, rgba(6,182,212,0.1) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(233, 84%, 65%) 0%, hsl(252, 83%, 73%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(233, 84%, 65%) 0%, hsl(252, 83%, 73%) 50%, hsl(197, 71%, 43%) 100%);
+    --gradient-mesh: linear-gradient(145deg, hsla(233, 84%, 65%, 0.1) 0%, hsla(252, 83%, 73%, 0.05) 50%, hsla(197, 71%, 43%, 0.1) 100%);
     --gradient-glass: linear-gradient(145deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
-    --gradient-subtle: linear-gradient(180deg, #FAFBFF 0%, rgba(99,102,241,0.02) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(250, 100%, 99%) 0%, hsla(233, 84%, 65%, 0.02) 100%);
 
     /* Glass Morphism & 2025 Shadows */
-    --shadow-glass: 0 8px 32px rgba(99,102,241,0.1);
-    --shadow-glass-lg: 0 20px 60px rgba(99,102,241,0.15);
-    --shadow-float: 0 16px 48px rgba(139,92,246,0.2);
-    --shadow-hero: 0 32px 80px rgba(99,102,241,0.3);
-    --shadow-neon: 0 0 40px rgba(99,102,241,0.4);
-    --shadow-brand: 0 10px 30px rgba(99,102,241,0.3);
-    --shadow-brand-glow: 0 20px 50px rgba(139,92,246,0.4);
-    --shadow-brand-mega: 0 40px 100px rgba(99,102,241,0.5);
+    --shadow-glass: 0 8px 32px hsla(233, 84%, 65%, 0.1);
+    --shadow-glass-lg: 0 20px 60px hsla(233, 84%, 65%, 0.15);
+    --shadow-float: 0 16px 48px hsla(252, 83%, 73%, 0.2);
+    --shadow-hero: 0 32px 80px hsla(233, 84%, 65%, 0.3);
+    --shadow-neon: 0 0 40px hsla(233, 84%, 65%, 0.4);
+    --shadow-brand: 0 10px 30px hsla(233, 84%, 65%, 0.3);
+    --shadow-brand-glow: 0 20px 50px hsla(252, 83%, 73%, 0.4);
+    --shadow-brand-mega: 0 40px 100px hsla(233, 84%, 65%, 0.5);
 
     /* Animation & Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -188,7 +188,7 @@ All colors MUST be HSL.
   .bg-gradient-mesh { background: var(--gradient-mesh); }
   .bg-gradient-glass { background: var(--gradient-glass); }
   .bg-gradient-subtle { background: var(--gradient-subtle); }
-  .bg-ultra-light { background: #FAFBFF; }
+  .bg-ultra-light { background-color: hsl(250, 100%, 99%); }
 
   /* Glass Morphism & 2025 Shadow System */
   .shadow-glass { box-shadow: var(--shadow-glass); }
@@ -201,9 +201,9 @@ All colors MUST be HSL.
   .shadow-brand-mega { box-shadow: var(--shadow-brand-mega); }
 
   /* Glass Morphism Utilities */
-  .glass { @apply backdrop-blur-md bg-white/10 border border-white/20; }
-  .glass-card { @apply backdrop-blur-md bg-white/80 border border-white/30 shadow-glass; }
-  .glass-strong { @apply backdrop-blur-lg bg-white/20 border border-white/40; }
+  .glass { @apply backdrop-blur-md bg-white/20 border border-white/30; }
+  .glass-card { @apply backdrop-blur-md bg-white/90 border border-white/40 shadow-glass; }
+  .glass-strong { @apply backdrop-blur-lg bg-white/30 border border-white/50; }
 
   /* 2025 Animation & Interaction System */
   .hover-scale { @apply transition-all duration-300 hover:scale-105 active:scale-95 will-change-transform; }
@@ -247,14 +247,14 @@ All colors MUST be HSL.
   /* Modern Text Utilities */
   .text-balance { text-wrap: balance; }
   .text-gradient-primary { 
-    background: var(--gradient-primary);
+    background: linear-gradient(135deg, hsl(233, 84%, 55%) 0%, hsl(252, 83%, 63%) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 800;
   }
   .text-gradient-hero { 
-    background: var(--gradient-hero);
+    background: linear-gradient(135deg, hsl(233, 84%, 50%) 0%, hsl(252, 83%, 58%) 50%, hsl(197, 71%, 38%) 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
