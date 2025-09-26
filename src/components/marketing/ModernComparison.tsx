@@ -28,36 +28,36 @@ const ModernComparison = () => {
         </div>
         
         <div className="max-w-7xl mx-auto">
-          <div className="overflow-x-auto">
+          <div className="overflow-x-hidden">
             <div className="glass-card rounded-3xl p-1 shadow-hero">
-              <table className="w-full min-w-[800px]">
+              <table className="w-full table-fixed md:table-auto">
                 <thead>
                   <tr className="border-b border-white/20">
-                    <th className="text-left py-6 px-6 font-bold text-lg text-slate-800">Feature</th>
-                    <th className="text-center py-6 px-4 bg-gradient-primary text-white rounded-t-2xl relative overflow-hidden">
-                      <div className="font-black text-lg">ReplAInow</div>
-                      <div className="text-sm opacity-90">Powered by GPT-4.1</div>
-                      <div className="absolute top-2 right-2 text-xl">👑</div>
+                    <th className="text-left py-3 px-3 sm:py-4 sm:px-4 md:py-6 md:px-6 font-bold text-slate-800 text-xs sm:text-sm md:text-base">Feature</th>
+                    <th className="text-center py-3 px-3 sm:py-4 sm:px-4 md:py-6 bg-gradient-primary text-white rounded-t-2xl relative overflow-hidden text-xs sm:text-sm md:text-base">
+                      <div className="font-black text-sm sm:text-base md:text-lg">ReplAInow</div>
+                      <div className="text-[10px] sm:text-xs opacity-90">Powered by GPT-4.1</div>
+                      <div className="absolute top-1 right-1 sm:top-2 sm:right-2 text-sm sm:text-base md:text-xl">👑</div>
                     </th>
-                    <th className="text-center py-6 px-4 text-slate-600 font-semibold bg-slate-50/50">Gorgias</th>
-                    <th className="text-center py-6 px-4 text-slate-600 font-semibold bg-slate-50/30">Intercom</th>
-                    <th className="text-center py-6 px-4 text-slate-600 font-semibold bg-slate-50/20">Zendesk</th>
+                    <th className="text-center py-3 px-3 sm:py-4 sm:px-4 md:py-6 text-slate-600 font-semibold bg-slate-50/50 text-xs sm:text-sm md:text-base">Gorgias</th>
+                    <th className="text-center py-3 px-3 sm:py-4 sm:px-4 md:py-6 text-slate-600 font-semibold bg-slate-50/30 text-xs sm:text-sm md:text-base">Intercom</th>
+                    <th className="text-center py-3 px-3 sm:py-4 sm:px-4 md:py-6 text-slate-600 font-semibold bg-slate-50/20 text-xs sm:text-sm md:text-base">Zendesk</th>
                   </tr>
                 </thead>
                 <tbody>
                   {comparisonData.map((row, i) => (
                     <tr key={i} className="border-b border-white/10 hover:bg-white/5 transition-all duration-300 group">
-                      <td className="py-5 px-6 font-bold text-slate-800 bg-white/50">{row[0]}</td>
-                      <td className="py-5 px-4 text-center bg-gradient-to-r from-brand-primary/10 via-brand-secondary/10 to-brand-primary/10 font-bold text-brand-primary relative">
-                        <div className="flex items-center justify-center gap-2">
-                          <span className="text-lg">⚡</span>
+                      <td className="py-3 px-3 sm:py-4 sm:px-4 md:py-5 md:px-6 font-bold text-slate-800 bg-white/50 text-xs sm:text-sm whitespace-normal break-words">{row[0]}</td>
+                      <td className="py-3 px-3 sm:py-4 sm:px-4 md:py-5 text-center bg-gradient-to-r from-brand-primary/10 via-brand-secondary/10 to-brand-primary/10 font-bold text-brand-primary relative text-xs sm:text-sm whitespace-normal break-words">
+                        <div className="flex items-center justify-center gap-1 sm:gap-2">
+                          <span className="text-sm sm:text-base">⚡</span>
                           <span>{row[1]}</span>
                         </div>
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                       </td>
-                      <td className="py-5 px-4 text-center text-slate-600 font-medium bg-slate-50/30 hover:bg-red-50/50 transition-colors">{row[2]}</td>
-                      <td className="py-5 px-4 text-center text-slate-600 font-medium bg-slate-50/20 hover:bg-red-50/30 transition-colors">{row[3]}</td>
-                      <td className="py-5 px-4 text-center text-slate-600 font-medium bg-slate-50/10 hover:bg-red-50/20 transition-colors">{row[4]}</td>
+                      <td className="py-3 px-3 sm:py-4 sm:px-4 md:py-5 text-center text-slate-600 font-medium bg-slate-50/30 hover:bg-red-50/50 transition-colors text-xs sm:text-sm whitespace-normal break-words">{row[2]}</td>
+                      <td className="py-3 px-3 sm:py-4 sm:px-4 md:py-5 text-center text-slate-600 font-medium bg-slate-50/20 hover:bg-red-50/30 transition-colors text-xs sm:text-sm whitespace-normal break-words">{row[3]}</td>
+                      <td className="py-3 px-3 sm:py-4 sm:px-4 md:py-5 text-center text-slate-600 font-medium bg-slate-50/10 hover:bg-red-50/20 transition-colors text-xs sm:text-sm whitespace-normal break-words">{row[4]}</td>
                     </tr>
                   ))}
                 </tbody>
