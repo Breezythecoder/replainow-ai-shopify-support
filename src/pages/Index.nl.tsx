@@ -1,11 +1,14 @@
 import ModernNavbarNl from "@/components/marketing/ModernNavbar.nl";
 import ModernHeroNl from "@/components/marketing/ModernHero.nl";
-import ModernFeatures from "@/components/marketing/ModernFeatures";
-import ModernComparison from "@/components/marketing/ModernComparison";
-import ModernPricing from "@/components/marketing/ModernPricing";
-import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
-import Contact from "@/components/marketing/Contact";
-import Footer from "@/components/marketing/Footer";
+import ModernProblemSolutionNl from "@/components/marketing/ModernProblemSolution.nl";
+import ModernFeaturesNl from "@/components/marketing/ModernFeatures.nl";
+import ModernHowItWorksNl from "@/components/marketing/ModernHowItWorks.nl";
+import ModernLiveDemoNl from "@/components/marketing/ModernLiveDemo.nl";
+import ModernSocialProofNl from "@/components/marketing/ModernSocialProof.nl";
+import ModernPricingNl from "@/components/marketing/ModernPricing.nl";
+import ModernFinalCTANl from "@/components/marketing/ModernFinalCTA.nl";
+import ContactNl from "@/components/marketing/Contact.nl";
+import FooterNl from "@/components/marketing/Footer.nl";
 import SEO from "@/components/SEO";
 import FAQNl from "@/components/marketing/FAQ.nl";
 import OrganizationJsonLd from "@/components/SEOOrganization";
@@ -63,14 +66,17 @@ const IndexNl = () => {
       <ModernNavbarNl />
       <main id="main-content" role="main" aria-label="Hoofdinhoud" className="pb-0">
         <ModernHeroNl />
-        <ModernFeatures />
-        <ModernComparison />
-        <ModernPricing />
+        <ModernProblemSolutionNl />
+        <ModernFeaturesNl />
+        <ModernHowItWorksNl />
+        <ModernLiveDemoNl />
+        <ModernSocialProofNl />
+        <ModernPricingNl />
         <AIOptimizedFAQ />
-        <ModernFinalCTA />
-        <Contact />
+        <ModernFinalCTANl />
+        <ContactNl />
       </main>
-      <Footer />
+      <FooterNl />
       <LanguageSwitcher />
     </>
   );

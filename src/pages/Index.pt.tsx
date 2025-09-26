@@ -1,11 +1,14 @@
 import ModernNavbarPt from "@/components/marketing/ModernNavbar.pt";
 import ModernHeroPt from "@/components/marketing/ModernHero.pt";
-import ModernFeatures from "@/components/marketing/ModernFeatures";
-import ModernComparison from "@/components/marketing/ModernComparison";
-import ModernPricing from "@/components/marketing/ModernPricing";
-import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
-import Contact from "@/components/marketing/Contact";
-import Footer from "@/components/marketing/Footer";
+import ModernProblemSolutionPt from "@/components/marketing/ModernProblemSolution.pt";
+import ModernFeaturesPt from "@/components/marketing/ModernFeatures.pt";
+import ModernHowItWorksPt from "@/components/marketing/ModernHowItWorks.pt";
+import ModernLiveDemoPt from "@/components/marketing/ModernLiveDemo.pt";
+import ModernSocialProofPt from "@/components/marketing/ModernSocialProof.pt";
+import ModernPricingPt from "@/components/marketing/ModernPricing.pt";
+import ModernFinalCTAPt from "@/components/marketing/ModernFinalCTA.pt";
+import ContactPt from "@/components/marketing/Contact.pt";
+import FooterPt from "@/components/marketing/Footer.pt";
 import SEO from "@/components/SEO";
 import FAQPt from "@/components/marketing/FAQ.pt";
 import OrganizationJsonLd from "@/components/SEOOrganization";
@@ -63,14 +66,17 @@ const IndexPt = () => {
       <ModernNavbarPt />
       <main id="main-content" role="main" aria-label="Conteúdo principal" className="pb-0">
         <ModernHeroPt />
-        <ModernFeatures />
-        <ModernComparison />
-        <ModernPricing />
+        <ModernProblemSolutionPt />
+        <ModernFeaturesPt />
+        <ModernHowItWorksPt />
+        <ModernLiveDemoPt />
+        <ModernSocialProofPt />
+        <ModernPricingPt />
         <AIOptimizedFAQ />
-        <ModernFinalCTA />
-        <Contact />
+        <ModernFinalCTAPt />
+        <ContactPt />
       </main>
-      <Footer />
+      <FooterPt />
       <LanguageSwitcher />
     </>
   );

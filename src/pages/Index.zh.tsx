@@ -1,11 +1,14 @@
 import ModernNavbarZh from "@/components/marketing/ModernNavbar.zh";
 import ModernHeroZh from "@/components/marketing/ModernHero.zh";
-import ModernFeatures from "@/components/marketing/ModernFeatures";
-import ModernComparison from "@/components/marketing/ModernComparison";
-import ModernPricing from "@/components/marketing/ModernPricing";
-import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
-import Contact from "@/components/marketing/Contact";
-import Footer from "@/components/marketing/Footer";
+import ModernProblemSolutionZh from "@/components/marketing/ModernProblemSolution.zh";
+import ModernFeaturesZh from "@/components/marketing/ModernFeatures.zh";
+import ModernHowItWorksZh from "@/components/marketing/ModernHowItWorks.zh";
+import ModernLiveDemoZh from "@/components/marketing/ModernLiveDemo.zh";
+import ModernSocialProofZh from "@/components/marketing/ModernSocialProof.zh";
+import ModernPricingZh from "@/components/marketing/ModernPricing.zh";
+import ModernFinalCTAZh from "@/components/marketing/ModernFinalCTA.zh";
+import ContactZh from "@/components/marketing/Contact.zh";
+import FooterZh from "@/components/marketing/Footer.zh";
 import SEO from "@/components/SEO";
 import FAQZh from "@/components/marketing/FAQ.zh";
 import OrganizationJsonLd from "@/components/SEOOrganization";
@@ -63,14 +66,17 @@ const IndexZh = () => {
       <ModernNavbarZh />
       <main id="main-content" role="main" aria-label="主要内容" className="pb-0">
         <ModernHeroZh />
-        <ModernFeatures />
-        <ModernComparison />
-        <ModernPricing />
+        <ModernProblemSolutionZh />
+        <ModernFeaturesZh />
+        <ModernHowItWorksZh />
+        <ModernLiveDemoZh />
+        <ModernSocialProofZh />
+        <ModernPricingZh />
         <AIOptimizedFAQ />
-        <ModernFinalCTA />
-        <Contact />
+        <ModernFinalCTAZh />
+        <ContactZh />
       </main>
-      <Footer />
+      <FooterZh />
       <LanguageSwitcher />
     </>
   );

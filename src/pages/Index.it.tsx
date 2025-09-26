@@ -6,6 +6,9 @@ import ModernHowItWorksIt from "@/components/marketing/ModernHowItWorks.it";
 import ModernLiveDemoIt from "@/components/marketing/ModernLiveDemo.it";
 import ModernSocialProofIt from "@/components/marketing/ModernSocialProof.it";
 import ModernPricingIt from "@/components/marketing/ModernPricing.it";
+import ModernFinalCTAIt from "@/components/marketing/ModernFinalCTA.it";
+import ContactIt from "@/components/marketing/Contact.it";
+import FooterIt from "@/components/marketing/Footer.it";
 import SEO from "@/components/SEO";
 import FAQIt from "@/components/marketing/FAQ.it";
 import OrganizationJsonLd from "@/components/SEOOrganization";
@@ -63,14 +66,17 @@ const IndexIt = () => {
       <ModernNavbarIt />
       <main id="main-content" role="main" aria-label="Contenuto principale" className="pb-0">
         <ModernHeroIt />
-        <ModernFeatures />
-        <ModernComparison />
-        <ModernPricing />
+        <ModernProblemSolutionIt />
+        <ModernFeaturesIt />
+        <ModernHowItWorksIt />
+        <ModernLiveDemoIt />
+        <ModernSocialProofIt />
+        <ModernPricingIt />
         <AIOptimizedFAQ />
-        <ModernFinalCTA />
-        <Contact />
+        <ModernFinalCTAIt />
+        <ContactIt />
       </main>
-      <Footer />
+      <FooterIt />
       <LanguageSwitcher />
     </>
   );
