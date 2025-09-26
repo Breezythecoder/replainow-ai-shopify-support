@@ -89,11 +89,6 @@ const ModernPricing = () => {
           {plans.map((plan, i) => {
             const Card = (
               <div className="glass-card rounded-3xl p-8 h-full flex flex-col interactive-card border border-white/40 shadow-brand hover-lift">
-                {plan.highlight && (
-                  <div className="absolute -top-3 -right-3 bg-brand-warning text-white px-4 py-2 rounded-full text-sm font-black shadow-brand animate-pulse">
-                    {plan.badge}
-                  </div>
-                )}
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2 text-slate-800">{plan.name}</h3>
                   <p className="text-sm text-slate-500 mb-4">{plan.description}</p>
