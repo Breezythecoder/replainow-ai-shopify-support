@@ -1,59 +1,12 @@
 const ModernComparison = () => {
   const comparisonData = [
-    {
-      feature: "AI Intelligence",
-      replainow: { value: "GPT-4.1 Latest", icon: "🧠", status: "winner" },
-      competitors: [
-        { name: "Gorgias", value: "Basic AI", status: "loser" },
-        { name: "Intercom", value: "Limited AI", status: "loser" },
-        { name: "Zendesk", value: "Old AI", status: "loser" }
-      ]
-    },
-    {
-      feature: "Antwortzeit",
-      replainow: { value: "3 Sekunden", icon: "⚡", status: "winner" },
-      competitors: [
-        { name: "Gorgias", value: "2-5 Minuten", status: "loser" },
-        { name: "Intercom", value: "5-10 Minuten", status: "loser" },
-        { name: "Zendesk", value: "10+ Minuten", status: "loser" }
-      ]
-    },
-    {
-      feature: "Sprachen",
-      replainow: { value: "32+ Nativ", icon: "🌍", status: "winner" },
-      competitors: [
-        { name: "Gorgias", value: "10 Basic", status: "loser" },
-        { name: "Intercom", value: "15 Basic", status: "loser" },
-        { name: "Zendesk", value: "20 Basic", status: "loser" }
-      ]
-    },
-    {
-      feature: "Shopify Integration",
-      replainow: { value: "Echtzeit-Sync", icon: "🔄", status: "winner" },
-      competitors: [
-        { name: "Gorgias", value: "Manual Import", status: "loser" },
-        { name: "Intercom", value: "Basic Connect", status: "loser" },
-        { name: "Zendesk", value: "Complex Setup", status: "loser" }
-      ]
-    },
-    {
-      feature: "Preis/Monat",
-      replainow: { value: "€19/Monat", icon: "💎", status: "winner" },
-      competitors: [
-        { name: "Gorgias", value: "€50+", status: "loser" },
-        { name: "Intercom", value: "€74+", status: "loser" },
-        { name: "Zendesk", value: "€115+", status: "loser" }
-      ]
-    },
-    {
-      feature: "Setup Zeit",
-      replainow: { value: "60 Sekunden", icon: "🚀", status: "winner" },
-      competitors: [
-        { name: "Gorgias", value: "2-3 Tage", status: "loser" },
-        { name: "Intercom", value: "1 Woche", status: "loser" },
-        { name: "Zendesk", value: "2 Wochen", status: "loser" }
-      ]
-    }
+    ["AI Intelligence", "✅ GPT-4.1 Latest", "❌ Basic AI", "❌ Limited AI", "❌ Old AI"],
+    ["Antwortzeit", "✅ 3 Sekunden", "❌ 2-5 Minuten", "❌ 5-10 Minuten", "❌ 10+ Minuten"],
+    ["Sprachen", "✅ 32+ Nativ", "❌ 10 Basic", "❌ 15 Basic", "❌ 20 Basic"],
+    ["Shopify Integration", "✅ Echtzeit-Sync", "❌ Manual Import", "❌ Basic Connect", "❌ Complex Setup"],
+    ["Preis/Monat", "✅ €19/Monat", "❌ €50+", "❌ €74+", "❌ €115+"],
+    ["Setup Zeit", "✅ 60 Sekunden", "❌ 2-3 Tage", "❌ 1 Woche", "❌ 2 Wochen"],
+    ["ROI Garantie", "✅ 6x Conversion", "❌ Neutral", "❌ Neutral", "❌ Negativ"]
   ];
 
   return (
@@ -73,67 +26,44 @@ const ModernComparison = () => {
             Direkter Vergleich mit Gorgias, Intercom & Zendesk
           </p>
         </div>
-
-        {/* Battle Cards */}
-        <div className="max-w-6xl mx-auto space-y-6">
-          {comparisonData.map((item, i) => (
-            <div 
-              key={i} 
-              className="glass-card rounded-3xl p-4 sm:p-8 shadow-brand hover-lift"
-              style={{ animationDelay: `${i * 100}ms` }}
-            >
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
-                {/* Feature Name */}
-                <div className="lg:col-span-3 text-center lg:text-left">
-                  <h3 className="text-lg sm:text-xl font-bold text-slate-800 mb-2">
-                    {item.feature}
-                  </h3>
-                </div>
-
-                {/* ReplAInow Winner */}
-                <div className="lg:col-span-4 order-1 lg:order-none">
-                  <div className="bg-gradient-primary text-white rounded-2xl p-4 sm:p-6 shadow-brand-glow relative overflow-hidden">
-                    <div className="absolute top-2 right-2 text-2xl">👑</div>
-                    <div className="flex items-center gap-3 mb-3">
-                      <div className="text-2xl sm:text-3xl">{item.replainow.icon}</div>
-                      <div className="font-black text-lg sm:text-xl">ReplAInow</div>
-                    </div>
-                    <div className="text-base sm:text-lg font-bold opacity-95">
-                      {item.replainow.value}
-                    </div>
-                    <div className="absolute -bottom-1 -right-1 w-16 h-16 bg-white/10 rounded-full blur-xl"></div>
-                  </div>
-                </div>
-
-                {/* VS Separator */}
-                <div className="lg:col-span-1 flex justify-center">
-                  <div className="bg-slate-200 rounded-full px-3 py-1 text-sm font-bold text-slate-600">
-                    VS
-                  </div>
-                </div>
-
-                {/* Competitors */}
-                <div className="lg:col-span-4 order-3 lg:order-none">
-                  <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-3">
-                    {item.competitors.map((comp, j) => (
-                      <div 
-                        key={j} 
-                        className="bg-slate-100 rounded-xl p-3 sm:p-4 border border-slate-200 relative"
-                      >
-                        <div className="flex items-center justify-between mb-2">
-                          <div className="font-semibold text-sm text-slate-600">{comp.name}</div>
-                          <div className="text-xl">❌</div>
+        
+        <div className="max-w-7xl mx-auto">
+          <div className="overflow-x-auto">
+            <div className="glass-card rounded-3xl p-1 shadow-hero">
+              <table className="w-full min-w-[800px]">
+                <thead>
+                  <tr className="border-b border-white/20">
+                    <th className="text-left py-6 px-6 font-bold text-lg text-slate-800">Feature</th>
+                    <th className="text-center py-6 px-4 bg-gradient-primary text-white rounded-t-2xl relative overflow-hidden">
+                      <div className="font-black text-lg">ReplAInow</div>
+                      <div className="text-sm opacity-90">Powered by GPT-4.1</div>
+                      <div className="absolute top-2 right-2 text-xl">👑</div>
+                    </th>
+                    <th className="text-center py-6 px-4 text-slate-600 font-semibold bg-slate-50/50">Gorgias</th>
+                    <th className="text-center py-6 px-4 text-slate-600 font-semibold bg-slate-50/30">Intercom</th>
+                    <th className="text-center py-6 px-4 text-slate-600 font-semibold bg-slate-50/20">Zendesk</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonData.map((row, i) => (
+                    <tr key={i} className="border-b border-white/10 hover:bg-white/5 transition-all duration-300 group">
+                      <td className="py-5 px-6 font-bold text-slate-800 bg-white/50">{row[0]}</td>
+                      <td className="py-5 px-4 text-center bg-gradient-to-r from-brand-primary/10 via-brand-secondary/10 to-brand-primary/10 font-bold text-brand-primary relative">
+                        <div className="flex items-center justify-center gap-2">
+                          <span className="text-lg">⚡</span>
+                          <span>{row[1]}</span>
                         </div>
-                        <div className="text-sm text-slate-500 font-medium">
-                          {comp.value}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                      </td>
+                      <td className="py-5 px-4 text-center text-slate-600 font-medium bg-slate-50/30 hover:bg-red-50/50 transition-colors">{row[2]}</td>
+                      <td className="py-5 px-4 text-center text-slate-600 font-medium bg-slate-50/20 hover:bg-red-50/30 transition-colors">{row[3]}</td>
+                      <td className="py-5 px-4 text-center text-slate-600 font-medium bg-slate-50/10 hover:bg-red-50/20 transition-colors">{row[4]}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-          ))}
+          </div>
         </div>
 
         {/* Enhanced Cost Savings */}
