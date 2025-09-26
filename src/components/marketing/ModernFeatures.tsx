@@ -66,20 +66,20 @@ const ModernFeatures = () => {
           {features.map((feature, i) => (
             <div 
               key={i} 
-              className="group glass-premium rounded-3xl p-6 sm:p-8 premium-card border border-white/60 shadow-card h-full relative overflow-hidden"
+              className="group glass-world-class rounded-3xl p-6 sm:p-8 world-class-card border border-white/30 shadow-card h-full relative overflow-hidden"
             >
-              {/* Card Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity rounded-3xl"></div>
+              {/* Professional card glow effect */}
+              <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-3 transition-opacity rounded-3xl"></div>
               
-              <div className={`relative text-3xl sm:text-4xl mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center text-white shadow-card group-hover:scale-110 group-hover:shadow-brand-glow transition-all duration-300`}>
+              <div className={`relative text-3xl sm:text-4xl mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center text-white shadow-card group-hover:scale-105 group-hover:shadow-brand transition-all duration-500`}>
                 {feature.icon}
               </div>
-              <h3 className="relative text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-slate-800 group-hover:text-gradient-primary transition-all duration-300">{feature.title}</h3>
-              <p className="relative text-slate-600 leading-relaxed text-sm sm:text-base">{feature.desc}</p>
+              <h3 className="relative text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-brand-neutral-800 group-hover:text-brand-primary transition-all duration-300">{feature.title}</h3>
+              <p className="relative text-brand-neutral-800/80 leading-relaxed text-sm sm:text-base">{feature.desc}</p>
               
-              {/* Connecting Lines */}
+              {/* Professional connecting lines */}
               {i < features.length - 1 && (
-                <div className="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-0.5 bg-gradient-primary opacity-30"></div>
+                <div className="hidden lg:block absolute -right-4 top-1/2 transform -translate-y-1/2 w-8 h-px bg-gradient-to-r from-brand-primary/30 to-transparent"></div>
               )}
             </div>
           ))}
