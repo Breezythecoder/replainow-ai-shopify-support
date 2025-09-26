@@ -44,11 +44,17 @@ const IndexPt = () => {
           "Alternativa Zendesk"
         ]}
         canonicalUrl="https://replainow.com/pt/"
+        locale="pt_PT"
         structuredData={structuredData}
         hreflang={{
           "pt": "https://replainow.com/pt/",
           "de": "https://replainow.com/",
           "en": "https://replainow.com/en/",
+          "es": "https://replainow.com/es/",
+          "fr": "https://replainow.com/fr/",
+          "it": "https://replainow.com/it/",
+          "nl": "https://replainow.com/nl/",
+          "zh": "https://replainow.com/zh/",
           "x-default": "https://replainow.com/"
         }}
       />

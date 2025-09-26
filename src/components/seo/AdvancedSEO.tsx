@@ -9,6 +9,7 @@ interface AdvancedSEOProps {
   structuredData?: object;
   hreflang?: { [key: string]: string };
   noindex?: boolean;
+  locale?: string;
 }
 
 const AdvancedSEO = ({
@@ -19,7 +20,8 @@ const AdvancedSEO = ({
   ogImage = "/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png",
   structuredData,
   hreflang,
-  noindex = false
+  noindex = false,
+  locale = "de_DE"
 }: AdvancedSEOProps) => {
   const fullTitle = title.includes('ReplAInow') ? title : `${title} | ReplAInow - AI Shopify Helpdesk`;
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
@@ -76,7 +78,22 @@ const AdvancedSEO = ({
     updateMetaProperty('og:image', ogImage);
     updateMetaProperty('og:type', 'website');
     updateMetaProperty('og:site_name', 'ReplAInow');
-    updateMetaProperty('og:locale', 'de_DE');
+    updateMetaProperty('og:locale', locale);
+    
+    // Add hreflang tags
+    if (hreflang) {
+      // Remove existing hreflang tags
+      document.querySelectorAll('link[hreflang]').forEach(link => link.remove());
+      
+      // Add new hreflang tags
+      Object.entries(hreflang).forEach(([lang, url]) => {
+        const link = document.createElement('link');
+        link.rel = 'alternate';
+        link.hreflang = lang;
+        link.href = url;
+        document.head.appendChild(link);
+      });
+    }
     
     // Update Twitter Card tags  
     const updateTwitterMeta = (name: string, content: string) => {
@@ -119,7 +136,7 @@ const AdvancedSEO = ({
       'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1'
     );
     
-  }, [fullTitle, description, keywords, canonicalUrl, ogImage, structuredData, noindex, currentUrl]);
+  }, [fullTitle, description, keywords, canonicalUrl, ogImage, structuredData, hreflang, noindex, locale, currentUrl]);
   
   return null;
 };

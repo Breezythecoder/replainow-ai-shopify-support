@@ -46,10 +46,17 @@ const Index = () => {
           "Zendesk Alternative"
         ]}
         canonicalUrl="https://replainow.com/"
+        locale="de_DE"
         structuredData={structuredData}
         hreflang={{
           "de": "https://replainow.com/",
           "en": "https://replainow.com/en/",
+          "es": "https://replainow.com/es/",
+          "fr": "https://replainow.com/fr/",
+          "it": "https://replainow.com/it/",
+          "nl": "https://replainow.com/nl/",
+          "pt": "https://replainow.com/pt/",
+          "zh": "https://replainow.com/zh/",
           "x-default": "https://replainow.com/"
         }}
       />
