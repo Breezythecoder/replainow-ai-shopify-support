@@ -8,7 +8,7 @@ const ProblemSolution = () => {
         <div className="grid md:grid-cols-2 gap-8 items-start">
           <article className="rounded-xl border bg-card p-6 shadow-sm">
             <header className="mb-3">
-              <h3 className="font-medium text-lg">Before</h3>
+              <h3 className="font-medium text-lg">Vorher</h3>
               <p className="text-muted-foreground text-sm">Jeden Tag 50+ Mails, endlose Copy-Paste-Routinen, stundenlange Datensuche. Du bist Support-Agent statt Unternehmer.</p>
             </header>
             <figure>
@@ -22,7 +22,7 @@ const ProblemSolution = () => {
 
           <article className="rounded-xl border bg-card p-6 shadow-brand">
             <header className="mb-3">
-              <h3 className="font-medium text-lg">After</h3>
+              <h3 className="font-medium text-lg">Nachher</h3>
               <p className="text-muted-foreground text-sm">Deine KI übernimmt – in unter 3 Sekunden steht jede Antwort bereit, mit allen Bestell- und Produktinfos. Du klickst „Senden“. Fertig.</p>
             </header>
             <figure>
