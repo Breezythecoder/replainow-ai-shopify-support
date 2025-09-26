@@ -1,50 +1,79 @@
-import NavbarZh from "@/components/marketing/Navbar.zh";
-import HeroZh from "@/components/marketing/Hero.zh";
-import HowItWorksZh from "@/components/marketing/HowItWorks.zh";
-import ProblemSolutionZh from "@/components/marketing/ProblemSolution.zh";
-import FeaturesZh from "@/components/marketing/Features.zh";
-import SocialProofZh from "@/components/marketing/SocialProof.zh";
-import LiveDemoZh from "@/components/marketing/LiveDemo.zh";
-import PricingZh from "@/components/marketing/Pricing.zh";
-import AboutZh from "@/components/marketing/About.zh";
-import ContactZh from "@/components/marketing/Contact.zh";
-import FinalCTAZh from "@/components/marketing/FinalCTA.zh";
-import FooterZh from "@/components/marketing/Footer.zh";
-import StoreDataFlowZh from "@/components/marketing/StoreDataFlow.zh";
+import ModernNavbar from "@/components/marketing/ModernNavbar";
+import ModernHero from "@/components/marketing/ModernHero";
+import ModernHowItWorks from "@/components/marketing/ModernHowItWorks";
+import ModernProblemSolution from "@/components/marketing/ModernProblemSolution";
+import ModernFeatures from "@/components/marketing/ModernFeatures";
+import ModernSocialProof from "@/components/marketing/ModernSocialProof";
+import ModernLiveDemo from "@/components/marketing/ModernLiveDemo";
+import ModernPricing from "@/components/marketing/ModernPricing";
+import ModernComparison from "@/components/marketing/ModernComparison";
+import About from "@/components/marketing/About.zh";
+import Contact from "@/components/marketing/Contact.zh";
+import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
+import Footer from "@/components/marketing/Footer.zh";
 import SEO from "@/components/SEO";
-import FAQZh from "@/components/marketing/FAQ.zh";
-import StickyInstallBarZh from "@/components/marketing/StickyInstallBar.zh";
+import FAQ from "@/components/marketing/FAQ.zh";
+import ModernStickyInstallBar from "@/components/marketing/ModernStickyInstallBar";
 import OrganizationJsonLd from "@/components/SEOOrganization";
-import MailAndChatZh from "@/components/marketing/MailAndChat.zh";
 import LanguageSwitcher from "@/components/ui/language-switcher";
+import AdvancedSEO from "@/components/seo/AdvancedSEO";
+import AIOptimizedFAQ from "@/components/seo/AIOptimizedFAQ";
+import { softwareApplicationSchema, organizationSchema } from "@/components/seo/StructuredData";
 
 const IndexZh = () => {
+  const structuredData = [
+    organizationSchema,
+    softwareApplicationSchema
+  ];
+
   return (
     <div>
+      <AdvancedSEO
+        title="ReplAInow – Shopify AI客服系统 | 用AI自动化客户支持"
+        description="用GPT-4 AI自动化您的Shopify客户支持。✅ 3秒响应时间 ✅ 32+种语言 ✅ 符合GDPR ✅ 比Gorgias和Zendesk便宜75%。免费试用14天！"
+        keywords={[
+          "Shopify AI客服",
+          "Shopify AI支持", 
+          "AI客户服务Shopify",
+          "自动化Shopify支持",
+          "GPT-4 Shopify集成",
+          "Shopify支持自动化",
+          "AI聊天机器人Shopify",
+          "Gorgias替代方案",
+          "Intercom替代方案",
+          "Zendesk替代方案"
+        ]}
+        canonicalUrl="https://replainow.com/zh/"
+        structuredData={structuredData}
+        hreflang={{
+          "zh": "https://replainow.com/zh/",
+          "de": "https://replainow.com/",
+          "en": "https://replainow.com/en/",
+          "x-default": "https://replainow.com/"
+        }}
+      />
       <SEO
-        title="ReplAInow – 用AI自动化您的Shopify客服支持"
-        description="几秒内回答客户询问：符合GDPR标准，保持品牌风格，直接获取Shopify数据。免费试用14天。"
+        title="ReplAInow – 用AI自动化Shopify客户支持"
+        description="几秒内回复客户咨询：符合GDPR，符合品牌形象，直接Shopify数据。免费试用14天。"
         image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
-      <NavbarZh />
-      <main>
-        <HeroZh />
-        <HowItWorksZh />
-        <ProblemSolutionZh />
-        <FeaturesZh />
-        <MailAndChatZh />
-        <StoreDataFlowZh />
-        <SocialProofZh />
-        <LiveDemoZh />
-        <PricingZh />
-        <FAQZh />
-        <FinalCTAZh />
-        <AboutZh />
-        <ContactZh />
+      <ModernNavbar />
+      <main id="main-content" role="main" aria-label="主要内容">
+        <ModernHero />
+        <ModernProblemSolution />
+        <ModernFeatures />
+        <ModernHowItWorks />
+        <ModernLiveDemo />
+        <ModernSocialProof />
+        <ModernComparison />
+        <ModernPricing />
+        <AIOptimizedFAQ />
+        <ModernFinalCTA />
+        <Contact />
       </main>
-      <FooterZh />
-      <StickyInstallBarZh />
+      <Footer />
+      <ModernStickyInstallBar />
       <LanguageSwitcher />
     </div>
   );

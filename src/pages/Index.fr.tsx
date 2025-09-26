@@ -1,50 +1,79 @@
-import NavbarFr from "@/components/marketing/Navbar.fr";
-import HeroFr from "@/components/marketing/Hero.fr";
-import HowItWorksFr from "@/components/marketing/HowItWorks.fr";
-import ProblemSolutionFr from "@/components/marketing/ProblemSolution.fr";
-import FeaturesFr from "@/components/marketing/Features.fr";
-import SocialProofFr from "@/components/marketing/SocialProof.fr";
-import LiveDemoFr from "@/components/marketing/LiveDemo.fr";
-import PricingFr from "@/components/marketing/Pricing.fr";
-import AboutFr from "@/components/marketing/About.fr";
-import ContactFr from "@/components/marketing/Contact.fr";
-import FinalCTAFr from "@/components/marketing/FinalCTA.fr";
-import FooterFr from "@/components/marketing/Footer.fr";
-import StoreDataFlowFr from "@/components/marketing/StoreDataFlow.fr";
+import ModernNavbar from "@/components/marketing/ModernNavbar";
+import ModernHero from "@/components/marketing/ModernHero";
+import ModernHowItWorks from "@/components/marketing/ModernHowItWorks";
+import ModernProblemSolution from "@/components/marketing/ModernProblemSolution";
+import ModernFeatures from "@/components/marketing/ModernFeatures";
+import ModernSocialProof from "@/components/marketing/ModernSocialProof";
+import ModernLiveDemo from "@/components/marketing/ModernLiveDemo";
+import ModernPricing from "@/components/marketing/ModernPricing";
+import ModernComparison from "@/components/marketing/ModernComparison";
+import About from "@/components/marketing/About.fr";
+import Contact from "@/components/marketing/Contact.fr";
+import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
+import Footer from "@/components/marketing/Footer.fr";
 import SEO from "@/components/SEO";
-import FAQFr from "@/components/marketing/FAQ.fr";
-import StickyInstallBarFr from "@/components/marketing/StickyInstallBar.fr";
+import FAQ from "@/components/marketing/FAQ.fr";
+import ModernStickyInstallBar from "@/components/marketing/ModernStickyInstallBar";
 import OrganizationJsonLd from "@/components/SEOOrganization";
-import MailAndChatFr from "@/components/marketing/MailAndChat.fr";
 import LanguageSwitcher from "@/components/ui/language-switcher";
+import AdvancedSEO from "@/components/seo/AdvancedSEO";
+import AIOptimizedFAQ from "@/components/seo/AIOptimizedFAQ";
+import { softwareApplicationSchema, organizationSchema } from "@/components/seo/StructuredData";
 
 const IndexFr = () => {
+  const structuredData = [
+    organizationSchema,
+    softwareApplicationSchema
+  ];
+
   return (
     <div>
+      <AdvancedSEO
+        title="ReplAInow – Service Client IA pour Shopify | Automatisez avec l'IA"
+        description="Automatisez votre support client Shopify avec GPT-4 IA. ✅ 3sec temps réponse ✅ 32+ langues ✅ Conforme RGPD ✅ 75% moins cher que Gorgias et Zendesk. Essai 14 jours gratuit!"
+        keywords={[
+          "Service Client IA Shopify",
+          "Support IA Shopify", 
+          "Support Client IA Shopify",
+          "Support Automatisé Shopify",
+          "Intégration GPT-4 Shopify",
+          "Automatisation Support Shopify",
+          "Chatbot IA Shopify",
+          "Alternative Gorgias",
+          "Alternative Intercom",
+          "Alternative Zendesk"
+        ]}
+        canonicalUrl="https://replainow.com/fr/"
+        structuredData={structuredData}
+        hreflang={{
+          "fr": "https://replainow.com/fr/",
+          "de": "https://replainow.com/",
+          "en": "https://replainow.com/en/",
+          "x-default": "https://replainow.com/"
+        }}
+      />
       <SEO
         title="ReplAInow – Automatisez le Support Shopify avec l'IA"
-        description="Répondez aux demandes clients en secondes : conforme RGPD, respectueux de la marque, données Shopify directes. Essayez 14 jours gratuitement."
+        description="Répondez aux demandes clients en secondes: conforme RGPD, conforme à la marque, données Shopify directes. Essai 14 jours gratuit."
         image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
-      <NavbarFr />
-      <main>
-        <HeroFr />
-        <HowItWorksFr />
-        <ProblemSolutionFr />
-        <FeaturesFr />
-        <MailAndChatFr />
-        <StoreDataFlowFr />
-        <SocialProofFr />
-        <LiveDemoFr />
-        <PricingFr />
-        <FAQFr />
-        <FinalCTAFr />
-        <AboutFr />
-        <ContactFr />
+      <ModernNavbar />
+      <main id="main-content" role="main" aria-label="Contenu principal">
+        <ModernHero />
+        <ModernProblemSolution />
+        <ModernFeatures />
+        <ModernHowItWorks />
+        <ModernLiveDemo />
+        <ModernSocialProof />
+        <ModernComparison />
+        <ModernPricing />
+        <AIOptimizedFAQ />
+        <ModernFinalCTA />
+        <Contact />
       </main>
-      <FooterFr />
-      <StickyInstallBarFr />
+      <Footer />
+      <ModernStickyInstallBar />
       <LanguageSwitcher />
     </div>
   );
