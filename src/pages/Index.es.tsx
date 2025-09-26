@@ -13,7 +13,6 @@ import FinalCTAEs from "@/components/marketing/FinalCTA.es";
 import FooterEs from "@/components/marketing/Footer.es";
 import SEO from "@/components/SEO";
 import FAQEs from "@/components/marketing/FAQ.es";
-import ModernStickyInstallBar from "@/components/marketing/ModernStickyInstallBar";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import LanguageSwitcher from "@/components/ui/language-switcher";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
@@ -65,7 +64,7 @@ const IndexEs = () => {
       />
       <OrganizationJsonLd />
       <ModernNavbarEs />
-      <main id="main-content" role="main" aria-label="Contenido principal" className="pb-20 md:pb-0">
+      <main id="main-content" role="main" aria-label="Contenido principal" className="pb-0">
         <HeroEs />
         <ProblemSolutionEs />
         <FeaturesEs />
@@ -79,7 +78,6 @@ const IndexEs = () => {
         <ContactEs />
       </main>
       <FooterEs />
-      <ModernStickyInstallBar />
       <LanguageSwitcher />
     </div>
   );

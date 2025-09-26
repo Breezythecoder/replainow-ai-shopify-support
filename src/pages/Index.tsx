@@ -14,7 +14,6 @@ import Footer from "@/components/marketing/Footer";
 import StoreDataFlow from "@/components/marketing/StoreDataFlow";
 import SEO from "@/components/SEO";
 import FAQ from "@/components/marketing/FAQ";
-import ModernStickyInstallBar from "@/components/marketing/ModernStickyInstallBar";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import MailAndChat from "@/components/marketing/MailAndChat";
 import LanguageSwitcher from "@/components/ui/language-switcher";
@@ -67,7 +66,7 @@ const Index = () => {
       />
       <OrganizationJsonLd />
       <ModernNavbar />
-      <main id="main-content" role="main" aria-label="Hauptinhalt" className="pb-20 md:pb-0">
+      <main id="main-content" role="main" aria-label="Hauptinhalt" className="pb-0">
         <ModernHero />
         <ModernProblemSolution />
         <ModernFeatures />
@@ -81,7 +80,6 @@ const Index = () => {
         <Contact />
       </main>
       <Footer />
-      <ModernStickyInstallBar />
       <LanguageSwitcher />
     </div>
   );

@@ -13,7 +13,6 @@ import FinalCTANl from "@/components/marketing/FinalCTA.nl";
 import FooterNl from "@/components/marketing/Footer.nl";
 import SEO from "@/components/SEO";
 import FAQNl from "@/components/marketing/FAQ.nl";
-import ModernStickyInstallBar from "@/components/marketing/ModernStickyInstallBar";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import LanguageSwitcher from "@/components/ui/language-switcher";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
@@ -65,7 +64,7 @@ const IndexNl = () => {
       />
       <OrganizationJsonLd />
       <ModernNavbarNl />
-      <main id="main-content" role="main" aria-label="Hoofdinhoud" className="pb-20 md:pb-0">
+      <main id="main-content" role="main" aria-label="Hoofdinhoud" className="pb-0">
         <HeroNl />
         <ProblemSolutionNl />
         <FeaturesNl />
@@ -79,7 +78,6 @@ const IndexNl = () => {
         <ContactNl />
       </main>
       <FooterNl />
-      <ModernStickyInstallBar />
       <LanguageSwitcher />
     </div>
   );

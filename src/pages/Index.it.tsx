@@ -13,7 +13,6 @@ import FinalCTAIt from "@/components/marketing/FinalCTA.it";
 import FooterIt from "@/components/marketing/Footer.it";
 import SEO from "@/components/SEO";
 import FAQIt from "@/components/marketing/FAQ.it";
-import ModernStickyInstallBar from "@/components/marketing/ModernStickyInstallBar";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import LanguageSwitcher from "@/components/ui/language-switcher";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
@@ -65,7 +64,7 @@ const IndexIt = () => {
       />
       <OrganizationJsonLd />
       <ModernNavbarIt />
-      <main id="main-content" role="main" aria-label="Contenuto principale" className="pb-20 md:pb-0">
+      <main id="main-content" role="main" aria-label="Contenuto principale" className="pb-0">
         <HeroIt />
         <ProblemSolutionIt />
         <FeaturesIt />
@@ -79,7 +78,6 @@ const IndexIt = () => {
         <ContactIt />
       </main>
       <FooterIt />
-      <ModernStickyInstallBar />
       <LanguageSwitcher />
     </div>
   );

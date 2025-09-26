@@ -13,7 +13,6 @@ import FinalCTAZh from "@/components/marketing/FinalCTA.zh";
 import FooterZh from "@/components/marketing/Footer.zh";
 import SEO from "@/components/SEO";
 import FAQZh from "@/components/marketing/FAQ.zh";
-import ModernStickyInstallBar from "@/components/marketing/ModernStickyInstallBar";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import LanguageSwitcher from "@/components/ui/language-switcher";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
@@ -65,7 +64,7 @@ const IndexZh = () => {
       />
       <OrganizationJsonLd />
       <ModernNavbarZh />
-      <main id="main-content" role="main" aria-label="主要内容" className="pb-20 md:pb-0">
+      <main id="main-content" role="main" aria-label="主要内容" className="pb-0">
         <HeroZh />
         <ProblemSolutionZh />
         <FeaturesZh />
@@ -79,7 +78,6 @@ const IndexZh = () => {
         <ContactZh />
       </main>
       <FooterZh />
-      <ModernStickyInstallBar />
       <LanguageSwitcher />
     </div>
   );

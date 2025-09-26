@@ -13,7 +13,6 @@ import FinalCTAPt from "@/components/marketing/FinalCTA.pt";
 import FooterPt from "@/components/marketing/Footer.pt";
 import SEO from "@/components/SEO";
 import FAQPt from "@/components/marketing/FAQ.pt";
-import ModernStickyInstallBar from "@/components/marketing/ModernStickyInstallBar";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import LanguageSwitcher from "@/components/ui/language-switcher";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
@@ -65,7 +64,7 @@ const IndexPt = () => {
       />
       <OrganizationJsonLd />
       <ModernNavbarPt />
-      <main id="main-content" role="main" aria-label="Conteúdo principal" className="pb-20 md:pb-0">
+      <main id="main-content" role="main" aria-label="Conteúdo principal" className="pb-0">
         <HeroPt />
         <ProblemSolutionPt />
         <FeaturesPt />
@@ -79,7 +78,6 @@ const IndexPt = () => {
         <ContactPt />
       </main>
       <FooterPt />
-      <ModernStickyInstallBar />
       <LanguageSwitcher />
     </div>
   );
