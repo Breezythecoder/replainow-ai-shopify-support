@@ -13,21 +13,20 @@ const ModernNavbar = () => {
             alt="ReplAInow Logo" 
             className="h-8 w-auto hover:scale-110 transition-transform" 
           />
-          <span className="hidden sm:block text-gradient-primary">ReplAInow</span>
         </a>
         
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
           <a href="#features" className="text-slate-600 hover:text-indigo-600 transition-colors story-link">
-            Features
+            Funktionen
           </a>
           <a href="#live-demo" className="text-slate-600 hover:text-indigo-600 transition-colors story-link">
             Demo
           </a>
-          <a href="#pricing" className="text-slate-600 hover:text-indigo-600 transition-colors story-link">
-            Pricing
+          <a href="#preise" className="text-slate-600 hover:text-indigo-600 transition-colors story-link">
+            Preise
           </a>
           <a href="#contact" className="text-slate-600 hover:text-indigo-600 transition-colors story-link">
-            Contact
+            Kontakt
           </a>
           <LanguageSwitcher variant="desktop" />
         </div>
