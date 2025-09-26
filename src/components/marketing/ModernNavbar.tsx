@@ -58,44 +58,44 @@ const ModernNavbar = () => {
         
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-lg border-t border-slate-200 shadow-lg">
-            <div className="container px-4 py-6 space-y-4">
+          <div className="md:hidden bg-white/98 backdrop-blur-lg border-t border-slate-200 shadow-lg">
+            <div className="container px-4 py-6 space-y-1">
               <a 
                 href="#features" 
-                className="block py-3 text-slate-700 hover:text-indigo-600 transition-colors font-semibold text-lg border-b border-slate-100"
+                className="block py-4 px-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors font-semibold text-base touch-target"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Funktionen
               </a>
               <a 
                 href="#live-demo" 
-                className="block py-3 text-slate-700 hover:text-indigo-600 transition-colors font-semibold text-lg border-b border-slate-100"
+                className="block py-4 px-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors font-semibold text-base touch-target"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Demo
               </a>
               <a 
                 href="#preise" 
-                className="block py-3 text-slate-700 hover:text-indigo-600 transition-colors font-semibold text-lg border-b border-slate-100"
+                className="block py-4 px-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors font-semibold text-base touch-target"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Preise
               </a>
               <a 
                 href="#contact" 
-                className="block py-3 text-slate-700 hover:text-indigo-600 transition-colors font-semibold text-lg border-b border-slate-100"
+                className="block py-4 px-3 text-slate-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors font-semibold text-base touch-target"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Kontakt
               </a>
               <div className="pt-4">
-                <Button asChild variant="cta" size="lg" className="w-full font-bold text-lg">
+                <Button asChild variant="cta" size="lg" className="w-full font-bold text-base">
                   <a href={OAUTH_URL}>
                     🚀 Kostenlos testen
                   </a>
                 </Button>
               </div>
-              <div className="pt-2 flex justify-center">
+              <div className="pt-3 flex justify-center">
                 <LanguageSwitcher variant="mobile" />
               </div>
             </div>

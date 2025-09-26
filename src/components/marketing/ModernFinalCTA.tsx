@@ -22,25 +22,25 @@ const ModernFinalCTA = () => {
           Werde Teil der Elite und <strong className="text-brand-warning">zerstöre deine Konkurrenz</strong> mit überlegener AI-Technologie.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 justify-center items-center mb-8 sm:mb-12 px-4 max-w-4xl mx-auto">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 justify-center items-stretch max-w-5xl mx-auto">
           <Button 
             asChild 
             variant="glass" 
             size="xl" 
-            className="text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-12 py-4 sm:py-6 bg-white text-indigo-600 hover:bg-white hover:scale-105 font-black shadow-brand-mega w-full sm:w-auto"
+            className="flex-1 sm:flex-none text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-12 py-4 sm:py-5 lg:py-6 bg-white text-indigo-600 hover:bg-white hover:scale-105 font-black shadow-brand-mega min-h-[56px] max-w-none sm:max-w-xs"
           >
-            <a href={OAUTH_URL} className="flex items-center gap-2 justify-center">
-              🚀 <span className="whitespace-nowrap">Kostenlos starten - Shopify App</span>
+            <a href={OAUTH_URL} className="flex items-center gap-2 justify-center text-center">
+              🚀 <span className="whitespace-normal break-words">Kostenlos starten - Shopify App</span>
             </a>
           </Button>
           <Button 
             asChild 
             variant="glass" 
             size="xl" 
-            className="text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-12 py-4 sm:py-6 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 hover:scale-105 font-bold shadow-brand w-full sm:w-auto"
+            className="flex-1 sm:flex-none text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-12 py-4 sm:py-5 lg:py-6 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 hover:scale-105 font-bold shadow-brand min-h-[56px] max-w-none sm:max-w-xs"
           >
-            <a href="#live-demo" className="flex items-center gap-2 justify-center">
-              📞 <span className="whitespace-nowrap">Demo buchen</span>
+            <a href="#live-demo" className="flex items-center gap-2 justify-center text-center">
+              📞 <span className="whitespace-normal break-words">Demo buchen</span>
             </a>
           </Button>
         </div>
