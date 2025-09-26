@@ -15,9 +15,9 @@ const Hero = () => {
   }, []);
 
   return (
-    <section aria-label="ReplAInow Hero" className="relative overflow-hidden">
+    <section aria-label="ReplAInow Hero" className="relative overflow-hidden bg-gradient-primary">
       <div
-        className="relative isolate hero-spotlight bg-gradient-primary"
+        className="relative hero-spotlight min-h-[600px] md:min-h-[700px]"
         onMouseMove={onMove}
         style={{ ["--x" as any]: pos.x, ["--y" as any]: pos.y } as React.CSSProperties}
       >
@@ -26,14 +26,14 @@ const Hero = () => {
           <OptimizedImage
             src={content.media.background.src}
             alt={content.media.background.alt}
-            className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-20"
+            className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-20 z-0"
             priority={true}
             sizes="100vw"
           />
         )}
-        <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-20 speed-lines" />
+        <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-20 speed-lines z-0" />
 
-        <div className="relative container mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-32 md:pb-28">
+        <div className="relative z-10 container mx-auto max-w-6xl px-6 pt-24 pb-20 md:pt-32 md:pb-28">
           <div className="grid md:grid-cols-2 items-center gap-10">
             {/* Textspalte */}
             <div className="text-center md:text-left order-2 md:order-1">
