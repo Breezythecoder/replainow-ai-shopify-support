@@ -1,3 +1,7 @@
+import testimonialLisa from "@/assets/testimonial-lisa.jpg";
+import testimonialMarco from "@/assets/testimonial-marco.jpg";
+import testimonialSarah from "@/assets/testimonial-sarah.jpg";
+
 const ModernSocialProof = () => {
   const testimonials = [
     {
@@ -5,21 +9,21 @@ const ModernSocialProof = () => {
       owner: "Lisa M.",
       result: "15 Stunden/Woche gespart",
       quote: "ReplAInow hat unseren Support revolutioniert. Die AI versteht unsere Produkte besser als manche Mitarbeiter!",
-      image: "/lovable-uploads/30fe7c43-2fec-4711-a733-85a1c76d1942.png"
+      image: testimonialLisa
     },
     {
       company: "TechGadgets", 
       owner: "Marco K.",
       result: "+37% Kundenzufriedenheit",
       quote: "Kunden lieben die instant Antworten. Conversion ist durch die Decke gegangen!",
-      image: "/lovable-uploads/1d082320-2e70-4359-aaed-382d72ddacb7.png"
+      image: testimonialMarco
     },
     {
       company: "FashionHub",
       owner: "Sarah T.", 
       result: "12x ROI in 3 Monaten",
       quote: "Von Intercom zu ReplAInow - beste Entscheidung ever! Kosten runter, Performance hoch.",
-      image: "/lovable-uploads/91677a2e-50c4-4aeb-8a6e-f6626412e034.png"
+      image: testimonialSarah
     }
   ];
 

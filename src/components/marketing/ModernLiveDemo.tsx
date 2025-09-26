@@ -14,7 +14,7 @@ const ModernLiveDemo = () => {
           <div className="relative rounded-3xl overflow-hidden shadow-hero bg-gradient-primary p-2">
             <div className="glass-card rounded-2xl overflow-hidden">
               <iframe
-                src="https://www.youtube-nocookie.com/embed/9KHLTZaJcR8"
+                src="https://www.youtube-nocookie.com/embed/x1VLcGBbcgo?controls=1&rel=0&modestbranding=1&showinfo=0"
                 className="w-full aspect-video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 title="ReplAInow Live Demo - AI Helpdesk für Shopify"
