@@ -5,11 +5,12 @@ const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 const ModernFinalCTA = () => {
   return (
     <section className="py-24 bg-gradient-hero text-white relative overflow-hidden">
-      {/* Animated background elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-cyan-300 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-3/4 left-3/4 w-32 h-32 bg-purple-300 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      {/* Enhanced animated background elements */}
+      <div className="absolute inset-0 opacity-40 speed-lines">
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-white rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-64 h-64 bg-cyan-300 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-3/4 left-3/4 w-48 h-48 bg-purple-300 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-32 h-32 bg-yellow-300 rounded-full blur-xl animate-float" style={{ animationDelay: '3s' }}></div>
       </div>
       
       <div className="container mx-auto px-6 text-center relative z-10">
@@ -64,17 +65,17 @@ const ModernFinalCTA = () => {
         </div>
 
         {/* Urgency Counter */}
-        <div className="mt-12 bg-white/95 backdrop-blur-md p-8 rounded-3xl max-w-3xl mx-auto border border-white/30 shadow-brand-mega">
-          <p className="text-indigo-600 font-black text-2xl mb-3">
+        <div className="mt-12 bg-white/95 backdrop-blur-md p-10 rounded-3xl max-w-3xl mx-auto border border-white/30 shadow-brand-mega hover-lift">
+          <p className="text-indigo-600 font-black text-3xl mb-4 animate-pulse">
             🔥 Limitiertes Onboarding-Angebot
           </p>
-          <p className="text-slate-700 text-lg leading-relaxed mb-6">
-            Nur die ersten <strong className="text-indigo-600">100 Stores</strong> diesen Monat bekommen kostenloses Setup + 1 Monat gratis
+          <p className="text-slate-700 text-xl leading-relaxed mb-8">
+            Nur die ersten <strong className="text-indigo-600 text-2xl">100 Stores</strong> diesen Monat bekommen kostenloses Setup + 1 Monat gratis
           </p>
-          <div className="bg-slate-200 rounded-full h-3 mb-3">
-            <div className="bg-gradient-to-r from-indigo-500 to-purple-500 h-3 rounded-full transition-all duration-1000" style={{ width: '73%' }}></div>
+          <div className="bg-slate-200 rounded-full h-4 mb-4 overflow-hidden">
+            <div className="bg-gradient-primary h-4 rounded-full transition-all duration-1000 shadow-neon" style={{ width: '73%' }}></div>
           </div>
-          <p className="text-slate-600 font-semibold">73 von 100 Plätzen bereits vergeben</p>
+          <p className="text-slate-600 font-black text-lg">73 von 100 Plätzen bereits vergeben</p>
         </div>
       </div>
     </section>

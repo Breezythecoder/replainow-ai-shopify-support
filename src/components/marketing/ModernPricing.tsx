@@ -67,8 +67,14 @@ const plans = [
 
 const ModernPricing = () => {
   return (
-    <section id="preise" aria-labelledby="pricing-heading" className="py-24 bg-gradient-to-b from-white to-indigo-50">
-      <div className="container mx-auto px-6">
+    <section id="preise" aria-labelledby="pricing-heading" className="py-24 bg-gradient-subtle relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 opacity-30">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-brand-secondary/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-3/4 left-3/4 w-32 h-32 bg-brand-accent/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+      <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-5xl font-black text-center mb-4 tracking-tight">
           Mehr Support-Power für <span className="text-brand-success">weniger Geld</span>
         </h2>
@@ -82,7 +88,12 @@ const ModernPricing = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto mb-16">
           {plans.map((plan, i) => {
             const Card = (
-              <div className="glass-card rounded-3xl p-8 h-full flex flex-col interactive-card border border-white/40">
+              <div className="glass-card rounded-3xl p-8 h-full flex flex-col interactive-card border border-white/40 shadow-brand hover-lift">
+                {plan.highlight && (
+                  <div className="absolute -top-3 -right-3 bg-brand-warning text-white px-4 py-2 rounded-full text-sm font-black shadow-brand animate-pulse">
+                    {plan.badge}
+                  </div>
+                )}
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold mb-2 text-slate-800">{plan.name}</h3>
                   <p className="text-sm text-slate-500 mb-4">{plan.description}</p>
