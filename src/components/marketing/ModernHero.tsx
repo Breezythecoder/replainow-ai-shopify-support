@@ -15,7 +15,7 @@ const ModernHero = () => {
 
   return (
       <section 
-        className="relative min-h-screen flex items-center overflow-hidden bg-gradient-hero"
+        className="relative min-h-screen flex items-center overflow-hidden bg-gradient-subtle"
         onMouseMove={onMove}
         style={{
           "--x": `${pos.x}px`,
@@ -23,13 +23,13 @@ const ModernHero = () => {
         } as React.CSSProperties}
       >
         {/* Animated Background Mesh */}
-        <div className="absolute inset-0 bg-gradient-mesh opacity-60 speed-lines"></div>
+        <div className="absolute inset-0 bg-gradient-mesh opacity-40"></div>
         
         {/* Enhanced Floating Elements */}
-        <div className="absolute inset-0 opacity-30">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-white rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-cyan-300 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-3/4 left-3/4 w-32 h-32 bg-purple-300 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-brand-primary/30 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-brand-secondary/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+          <div className="absolute top-3/4 left-3/4 w-32 h-32 bg-brand-accent/30 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
         </div>
         
         {/* Interactive Spotlight */}
@@ -53,24 +53,24 @@ const ModernHero = () => {
               <span className="block">Antwortet in Sekunden.</span>
             </h1>
             
-            <p className="text-xl text-white/90 leading-relaxed backdrop-blur-sm">
-              Revolutionäre AI mit <strong className="text-brand-warning font-black">Echtzeit-Shopify-Daten</strong>: 
+            <p className="text-xl text-slate-700 leading-relaxed">
+              Revolutionäre AI mit <strong className="text-gradient-primary">Echtzeit-Shopify-Daten</strong>: 
               Höhere Conversion, schnellere Antworten, 90% weniger Support-Tickets.
             </p>
             
             {/* ROI Stats Row */}
             <div className="grid grid-cols-3 gap-4">
               <div className="glass-card p-6 rounded-3xl text-center shadow-brand hover-lift">
-                <div className="text-3xl lg:text-4xl font-black text-brand-warning animate-pulse-glow">+187%</div>
-                <div className="text-sm text-white/80 font-bold mt-2">Conversion</div>
+                <div className="text-3xl lg:text-4xl font-black text-brand-primary">+187%</div>
+                <div className="text-sm text-slate-600 font-bold mt-2">Conversion</div>
               </div>
               <div className="glass-card p-6 rounded-3xl text-center shadow-brand hover-lift">
-                <div className="text-3xl lg:text-4xl font-black text-brand-success animate-pulse-glow">3 Sek</div>
-                <div className="text-sm text-white/80 font-bold mt-2">Antwortzeit</div>
+                <div className="text-3xl lg:text-4xl font-black text-brand-success">3 Sek</div>
+                <div className="text-sm text-slate-600 font-bold mt-2">Antwortzeit</div>
               </div>
               <div className="glass-card p-6 rounded-3xl text-center shadow-brand hover-lift">
-                <div className="text-3xl lg:text-4xl font-black text-brand-accent animate-pulse-glow">75%</div>
-                <div className="text-sm text-white/80 font-bold mt-2">Einsparung</div>
+                <div className="text-3xl lg:text-4xl font-black text-brand-accent">75%</div>
+                <div className="text-sm text-slate-600 font-bold mt-2">Einsparung</div>
               </div>
             </div>
             
@@ -89,15 +89,15 @@ const ModernHero = () => {
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center gap-6 text-sm text-white/90">
-              <div className="flex items-center gap-1 glass-card px-3 py-2 rounded-full">
+            <div className="flex flex-wrap items-center gap-6 text-sm text-slate-600">
+              <div className="flex items-center gap-1 glass-card px-4 py-2 rounded-full shadow-brand">
                 <span className="text-brand-warning">★★★★★</span>
-                <span className="font-semibold text-white">4.9/5</span>
+                <span className="font-semibold text-slate-700">4.9/5</span>
               </div>
               <span className="px-4 py-2 glass-card text-brand-success rounded-full font-bold shadow-brand">
                 ✅ GDPR Compliant
               </span>
-              <span className="font-bold text-white glass-card px-4 py-2 rounded-full">👥 5000+ Händler</span>
+              <span className="font-bold text-slate-700 glass-card px-4 py-2 rounded-full shadow-brand">👥 5000+ Händler</span>
             </div>
           </div>
           
@@ -110,7 +110,7 @@ const ModernHero = () => {
                 className="w-full drop-shadow-2xl hover-float" 
               />
               {/* Floating Success Badge */}
-              <div className="absolute -top-4 -right-4 glass-card px-6 py-3 rounded-full text-sm font-black text-brand-success animate-pulse shadow-brand-glow">
+              <div className="absolute -top-4 -right-4 glass-card px-6 py-3 rounded-full text-sm font-black text-brand-success shadow-brand-glow animate-pulse">
                 ✅ +37% Zufriedenheit
               </div>
               {/* Floating Cost Savings */}
