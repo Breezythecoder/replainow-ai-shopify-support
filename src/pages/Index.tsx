@@ -18,9 +18,41 @@ import ModernStickyInstallBar from "@/components/marketing/ModernStickyInstallBa
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import MailAndChat from "@/components/marketing/MailAndChat";
 import LanguageSwitcher from "@/components/ui/language-switcher";
+import AdvancedSEO from "@/components/seo/AdvancedSEO";
+import AIOptimizedFAQ from "@/components/seo/AIOptimizedFAQ";
+import { softwareApplicationSchema, organizationSchema } from "@/components/seo/StructuredData";
+
 const Index = () => {
+  const structuredData = [
+    organizationSchema,
+    softwareApplicationSchema
+  ];
+
   return (
     <div>
+      <AdvancedSEO
+        title="ReplAInow – AI Shopify Helpdesk | Automatisiere Support mit KI"
+        description="Automatisiere deinen Shopify Kundensupport mit GPT-4 AI. ✅ 3 Sek Antwortzeit ✅ 32+ Sprachen ✅ DSGVO-konform ✅ 75% günstiger als Gorgias & Zendesk. Jetzt 14 Tage kostenlos testen!"
+        keywords={[
+          "AI Shopify Helpdesk",
+          "Shopify AI Support", 
+          "KI Kundensupport Shopify",
+          "Automatisierter Shopify Support",
+          "GPT-4 Shopify Integration",
+          "Shopify Support Automatisierung",
+          "AI Chatbot Shopify",
+          "Gorgias Alternative",
+          "Intercom Alternative",
+          "Zendesk Alternative"
+        ]}
+        canonicalUrl="https://replainow.com/"
+        structuredData={structuredData}
+        hreflang={{
+          "de": "https://replainow.com/",
+          "en": "https://replainow.com/en/",
+          "x-default": "https://replainow.com/"
+        }}
+      />
       <SEO
         title="ReplAInow – Shopify Support automatisieren mit KI"
         description="Beantworte Kundenanfragen in Sekunden: DSGVO‑konform, markenkonform, direkte Shopify‑Daten. 14 Tage gratis testen."
@@ -37,6 +69,7 @@ const Index = () => {
         <ModernSocialProof />
         <ModernComparison />
         <ModernPricing />
+        <AIOptimizedFAQ />
         <ModernFinalCTA />
         <Contact />
       </main>

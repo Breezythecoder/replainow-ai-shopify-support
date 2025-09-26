@@ -39,7 +39,7 @@ const ModernFeatures = () => {
   ];
 
   return (
-    <section className="py-24 bg-ultra-light">
+    <section id="features" className="py-24 bg-ultra-light">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-4 tracking-tight">
           Warum <span className="text-gradient-primary">ReplAInow</span> überlegen ist
