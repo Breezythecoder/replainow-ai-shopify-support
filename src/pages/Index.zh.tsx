@@ -1,16 +1,11 @@
 import ModernNavbarZh from "@/components/marketing/ModernNavbar.zh";
-import HeroZh from "@/components/marketing/Hero.zh";
-import HowItWorksZh from "@/components/marketing/HowItWorks.zh";
-import ProblemSolutionZh from "@/components/marketing/ProblemSolution.zh";
-import FeaturesZh from "@/components/marketing/Features.zh";
-import SocialProofZh from "@/components/marketing/SocialProof.zh";
-import LiveDemoZh from "@/components/marketing/LiveDemo.zh";
-import PricingZh from "@/components/marketing/Pricing.zh";
-import ModernComparisonZh from "@/components/marketing/ModernComparison.zh";
-import AboutZh from "@/components/marketing/About.zh";
-import ContactZh from "@/components/marketing/Contact.zh";
-import FinalCTAZh from "@/components/marketing/FinalCTA.zh";
-import FooterZh from "@/components/marketing/Footer.zh";
+import ModernHeroZh from "@/components/marketing/ModernHero.zh";
+import ModernFeatures from "@/components/marketing/ModernFeatures";
+import ModernComparison from "@/components/marketing/ModernComparison";
+import ModernPricing from "@/components/marketing/ModernPricing";
+import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
+import Contact from "@/components/marketing/Contact";
+import Footer from "@/components/marketing/Footer";
 import SEO from "@/components/SEO";
 import FAQZh from "@/components/marketing/FAQ.zh";
 import OrganizationJsonLd from "@/components/SEOOrganization";
@@ -67,19 +62,15 @@ const IndexZh = () => {
       <OrganizationJsonLd />
       <ModernNavbarZh />
       <main id="main-content" role="main" aria-label="主要内容" className="pb-0">
-        <HeroZh />
-        <ProblemSolutionZh />
-        <FeaturesZh />
-        <HowItWorksZh />
-        <LiveDemoZh />
-        <SocialProofZh />
-        <ModernComparisonZh />
-        <PricingZh />
-        <FAQZh />
-        <FinalCTAZh />
-        <ContactZh />
+        <ModernHeroZh />
+        <ModernFeatures />
+        <ModernComparison />
+        <ModernPricing />
+        <AIOptimizedFAQ />
+        <ModernFinalCTA />
+        <Contact />
       </main>
-      <FooterZh />
+      <Footer />
       <LanguageSwitcher />
     </>
   );

@@ -1,16 +1,11 @@
 import ModernNavbarIt from "@/components/marketing/ModernNavbar.it";
-import HeroIt from "@/components/marketing/Hero.it";
-import HowItWorksIt from "@/components/marketing/HowItWorks.it";
-import ProblemSolutionIt from "@/components/marketing/ProblemSolution.it";
-import FeaturesIt from "@/components/marketing/Features.it";
-import SocialProofIt from "@/components/marketing/SocialProof.it";
-import LiveDemoIt from "@/components/marketing/LiveDemo.it";
-import PricingIt from "@/components/marketing/Pricing.it";
-import ModernComparisonIt from "@/components/marketing/ModernComparison.it";
-import AboutIt from "@/components/marketing/About.it";
-import ContactIt from "@/components/marketing/Contact.it";
-import FinalCTAIt from "@/components/marketing/FinalCTA.it";
-import FooterIt from "@/components/marketing/Footer.it";
+import ModernHeroIt from "@/components/marketing/ModernHero.it";
+import ModernFeatures from "@/components/marketing/ModernFeatures";
+import ModernComparison from "@/components/marketing/ModernComparison";
+import ModernPricing from "@/components/marketing/ModernPricing";
+import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
+import Contact from "@/components/marketing/Contact";
+import Footer from "@/components/marketing/Footer";
 import SEO from "@/components/SEO";
 import FAQIt from "@/components/marketing/FAQ.it";
 import OrganizationJsonLd from "@/components/SEOOrganization";
@@ -67,19 +62,15 @@ const IndexIt = () => {
       <OrganizationJsonLd />
       <ModernNavbarIt />
       <main id="main-content" role="main" aria-label="Contenuto principale" className="pb-0">
-        <HeroIt />
-        <ProblemSolutionIt />
-        <FeaturesIt />
-        <HowItWorksIt />
-        <LiveDemoIt />
-        <SocialProofIt />
-        <ModernComparisonIt />
-        <PricingIt />
-        <FAQIt />
-        <FinalCTAIt />
-        <ContactIt />
+        <ModernHeroIt />
+        <ModernFeatures />
+        <ModernComparison />
+        <ModernPricing />
+        <AIOptimizedFAQ />
+        <ModernFinalCTA />
+        <Contact />
       </main>
-      <FooterIt />
+      <Footer />
       <LanguageSwitcher />
     </>
   );

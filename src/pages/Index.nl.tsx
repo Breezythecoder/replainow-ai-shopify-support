@@ -1,16 +1,11 @@
 import ModernNavbarNl from "@/components/marketing/ModernNavbar.nl";
-import HeroNl from "@/components/marketing/Hero.nl";
-import HowItWorksNl from "@/components/marketing/HowItWorks.nl";
-import ProblemSolutionNl from "@/components/marketing/ProblemSolution.nl";
-import FeaturesNl from "@/components/marketing/Features.nl";
-import SocialProofNl from "@/components/marketing/SocialProof.nl";
-import LiveDemoNl from "@/components/marketing/LiveDemo.nl";
-import PricingNl from "@/components/marketing/Pricing.nl";
-import ModernComparisonNl from "@/components/marketing/ModernComparison.nl";
-import AboutNl from "@/components/marketing/About.nl";
-import ContactNl from "@/components/marketing/Contact.nl";
-import FinalCTANl from "@/components/marketing/FinalCTA.nl";
-import FooterNl from "@/components/marketing/Footer.nl";
+import ModernHeroNl from "@/components/marketing/ModernHero.nl";
+import ModernFeatures from "@/components/marketing/ModernFeatures";
+import ModernComparison from "@/components/marketing/ModernComparison";
+import ModernPricing from "@/components/marketing/ModernPricing";
+import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
+import Contact from "@/components/marketing/Contact";
+import Footer from "@/components/marketing/Footer";
 import SEO from "@/components/SEO";
 import FAQNl from "@/components/marketing/FAQ.nl";
 import OrganizationJsonLd from "@/components/SEOOrganization";
@@ -67,19 +62,15 @@ const IndexNl = () => {
       <OrganizationJsonLd />
       <ModernNavbarNl />
       <main id="main-content" role="main" aria-label="Hoofdinhoud" className="pb-0">
-        <HeroNl />
-        <ProblemSolutionNl />
-        <FeaturesNl />
-        <HowItWorksNl />
-        <LiveDemoNl />
-        <SocialProofNl />
-        <ModernComparisonNl />
-        <PricingNl />
-        <FAQNl />
-        <FinalCTANl />
-        <ContactNl />
+        <ModernHeroNl />
+        <ModernFeatures />
+        <ModernComparison />
+        <ModernPricing />
+        <AIOptimizedFAQ />
+        <ModernFinalCTA />
+        <Contact />
       </main>
-      <FooterNl />
+      <Footer />
       <LanguageSwitcher />
     </>
   );

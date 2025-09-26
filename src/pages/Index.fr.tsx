@@ -4,6 +4,7 @@ import ModernFeatures from "@/components/marketing/ModernFeatures";
 import ModernComparison from "@/components/marketing/ModernComparison";
 import ModernPricing from "@/components/marketing/ModernPricing";
 import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
+import Contact from "@/components/marketing/Contact";
 import Footer from "@/components/marketing/Footer";
 import SEO from "@/components/SEO";
 import FAQFr from "@/components/marketing/FAQ.fr";

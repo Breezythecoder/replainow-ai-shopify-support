@@ -1,16 +1,11 @@
 import ModernNavbarPt from "@/components/marketing/ModernNavbar.pt";
-import HeroPt from "@/components/marketing/Hero.pt";
-import HowItWorksPt from "@/components/marketing/HowItWorks.pt";
-import ProblemSolutionPt from "@/components/marketing/ProblemSolution.pt";
-import FeaturesPt from "@/components/marketing/Features.pt";
-import SocialProofPt from "@/components/marketing/SocialProof.pt";
-import LiveDemoPt from "@/components/marketing/LiveDemo.pt";
-import PricingPt from "@/components/marketing/Pricing.pt";
-import ModernComparisonPt from "@/components/marketing/ModernComparison.pt";
-import AboutPt from "@/components/marketing/About.pt";
-import ContactPt from "@/components/marketing/Contact.pt";
-import FinalCTAPt from "@/components/marketing/FinalCTA.pt";
-import FooterPt from "@/components/marketing/Footer.pt";
+import ModernHeroPt from "@/components/marketing/ModernHero.pt";
+import ModernFeatures from "@/components/marketing/ModernFeatures";
+import ModernComparison from "@/components/marketing/ModernComparison";
+import ModernPricing from "@/components/marketing/ModernPricing";
+import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
+import Contact from "@/components/marketing/Contact";
+import Footer from "@/components/marketing/Footer";
 import SEO from "@/components/SEO";
 import FAQPt from "@/components/marketing/FAQ.pt";
 import OrganizationJsonLd from "@/components/SEOOrganization";
@@ -67,19 +62,15 @@ const IndexPt = () => {
       <OrganizationJsonLd />
       <ModernNavbarPt />
       <main id="main-content" role="main" aria-label="Conteúdo principal" className="pb-0">
-        <HeroPt />
-        <ProblemSolutionPt />
-        <FeaturesPt />
-        <HowItWorksPt />
-        <LiveDemoPt />
-        <SocialProofPt />
-        <ModernComparisonPt />
-        <PricingPt />
-        <FAQPt />
-        <FinalCTAPt />
-        <ContactPt />
+        <ModernHeroPt />
+        <ModernFeatures />
+        <ModernComparison />
+        <ModernPricing />
+        <AIOptimizedFAQ />
+        <ModernFinalCTA />
+        <Contact />
       </main>
-      <FooterPt />
+      <Footer />
       <LanguageSwitcher />
     </>
   );
