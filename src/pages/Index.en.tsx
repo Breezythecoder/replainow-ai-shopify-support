@@ -1,16 +1,16 @@
 import ModernNavbarEn from "@/components/marketing/ModernNavbar.en";
-import HeroEn from "@/components/marketing/Hero.en";
-import HowItWorksEn from "@/components/marketing/HowItWorks.en";
-import ProblemSolutionEn from "@/components/marketing/ProblemSolution.en";
-import FeaturesEn from "@/components/marketing/Features.en";
-import SocialProofEn from "@/components/marketing/SocialProof.en";
-import LiveDemoEn from "@/components/marketing/LiveDemo.en";
-import PricingEn from "@/components/marketing/Pricing.en";
-import ModernComparisonEn from "@/components/marketing/ModernComparison.en";
-import AboutEn from "@/components/marketing/About.en";
-import ContactEn from "@/components/marketing/Contact.en";
-import FinalCTAEn from "@/components/marketing/FinalCTA.en";
-import FooterEn from "@/components/marketing/Footer.en";
+import ModernHeroEn from "@/components/marketing/ModernHero.en";
+import ModernHowItWorksEn from "@/components/marketing/ModernHowItWorks.en";
+import ModernProblemSolutionEn from "@/components/marketing/ModernProblemSolution.en";
+import ModernFeaturesEn from "@/components/marketing/ModernFeatures.en";
+import ModernSocialProofEn from "@/components/marketing/ModernSocialProof.en";
+import ModernLiveDemoEn from "@/components/marketing/ModernLiveDemo.en";
+import ModernPricingEn from "@/components/marketing/ModernPricing.en";
+import ModernComparison from "@/components/marketing/ModernComparison";
+import About from "@/components/marketing/About";
+import Contact from "@/components/marketing/Contact";
+import ModernFinalCTAEn from "@/components/marketing/ModernFinalCTA.en";
+import Footer from "@/components/marketing/Footer";
 import SEO from "@/components/SEO";
 import FAQEn from "@/components/marketing/FAQ.en";
 import OrganizationJsonLd from "@/components/SEOOrganization";
@@ -67,19 +67,19 @@ const IndexEn = () => {
       <OrganizationJsonLd />
       <ModernNavbarEn />
       <main id="main-content" role="main" aria-label="Main content" className="pb-0">
-        <HeroEn />
-        <ProblemSolutionEn />
-        <FeaturesEn />
-        <HowItWorksEn />
-        <LiveDemoEn />
-        <SocialProofEn />
-        <ModernComparisonEn />
-        <PricingEn />
-        <FAQEn />
-        <FinalCTAEn />
-        <ContactEn />
+        <ModernHeroEn />
+        <ModernProblemSolutionEn />
+        <ModernFeaturesEn />
+        <ModernHowItWorksEn />
+        <ModernLiveDemoEn />
+        <ModernSocialProofEn />
+        <ModernComparison />
+        <ModernPricingEn />
+        <AIOptimizedFAQ />
+        <ModernFinalCTAEn />
+        <Contact />
       </main>
-      <FooterEn />
+      <Footer />
       <LanguageSwitcher />
     </>
   );

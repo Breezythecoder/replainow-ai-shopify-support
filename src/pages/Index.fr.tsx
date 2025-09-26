@@ -1,16 +1,10 @@
 import ModernNavbarFr from "@/components/marketing/ModernNavbar.fr";
-import HeroFr from "@/components/marketing/Hero.fr";
-import HowItWorksFr from "@/components/marketing/HowItWorks.fr";
-import ProblemSolutionFr from "@/components/marketing/ProblemSolution.fr";
-import FeaturesFr from "@/components/marketing/Features.fr";
-import SocialProofFr from "@/components/marketing/SocialProof.fr";
-import LiveDemoFr from "@/components/marketing/LiveDemo.fr";
-import PricingFr from "@/components/marketing/Pricing.fr";
-import ModernComparisonFr from "@/components/marketing/ModernComparison.fr";
-import AboutFr from "@/components/marketing/About.fr";
-import ContactFr from "@/components/marketing/Contact.fr";
-import FinalCTAFr from "@/components/marketing/FinalCTA.fr";
-import FooterFr from "@/components/marketing/Footer.fr";
+import ModernHeroFr from "@/components/marketing/ModernHero.fr";
+import ModernFeatures from "@/components/marketing/ModernFeatures";
+import ModernComparison from "@/components/marketing/ModernComparison";
+import ModernPricing from "@/components/marketing/ModernPricing";
+import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
+import Footer from "@/components/marketing/Footer";
 import SEO from "@/components/SEO";
 import FAQFr from "@/components/marketing/FAQ.fr";
 import OrganizationJsonLd from "@/components/SEOOrganization";
@@ -67,19 +61,15 @@ const IndexFr = () => {
       <OrganizationJsonLd />
       <ModernNavbarFr />
       <main id="main-content" role="main" aria-label="Contenu principal" className="pb-0">
-        <HeroFr />
-        <ProblemSolutionFr />
-        <FeaturesFr />
-        <HowItWorksFr />
-        <LiveDemoFr />
-        <SocialProofFr />
-        <ModernComparisonFr />
-        <PricingFr />
-        <FAQFr />
-        <FinalCTAFr />
-        <ContactFr />
+        <ModernHeroFr />
+        <ModernFeatures />
+        <ModernComparison />
+        <ModernPricing />
+        <AIOptimizedFAQ />
+        <ModernFinalCTA />
+        <Contact />
       </main>
-      <FooterFr />
+      <Footer />
       <LanguageSwitcher />
     </>
   );

@@ -1,16 +1,16 @@
 import ModernNavbarEs from "@/components/marketing/ModernNavbar.es";
-import HeroEs from "@/components/marketing/Hero.es";
-import HowItWorksEs from "@/components/marketing/HowItWorks.es";
-import ProblemSolutionEs from "@/components/marketing/ProblemSolution.es";
-import FeaturesEs from "@/components/marketing/Features.es";
-import SocialProofEs from "@/components/marketing/SocialProof.es";
-import LiveDemoEs from "@/components/marketing/LiveDemo.es";
-import PricingEs from "@/components/marketing/Pricing.es";
-import ModernComparisonEs from "@/components/marketing/ModernComparison.es";
-import AboutEs from "@/components/marketing/About.es";
-import ContactEs from "@/components/marketing/Contact.es";
-import FinalCTAEs from "@/components/marketing/FinalCTA.es";
-import FooterEs from "@/components/marketing/Footer.es";
+import ModernHeroEs from "@/components/marketing/ModernHero.es";
+import ModernHowItWorksEs from "@/components/marketing/ModernHowItWorks.es";
+import ModernProblemSolutionEs from "@/components/marketing/ModernProblemSolution.es";
+import ModernFeaturesEs from "@/components/marketing/ModernFeatures.es";
+import ModernSocialProofEs from "@/components/marketing/ModernSocialProof.es";
+import ModernLiveDemoEs from "@/components/marketing/ModernLiveDemo.es";
+import ModernPricingEs from "@/components/marketing/ModernPricing.es";
+import ModernComparison from "@/components/marketing/ModernComparison";
+import About from "@/components/marketing/About";
+import Contact from "@/components/marketing/Contact";
+import ModernFinalCTAEs from "@/components/marketing/ModernFinalCTA.es";
+import Footer from "@/components/marketing/Footer";
 import SEO from "@/components/SEO";
 import FAQEs from "@/components/marketing/FAQ.es";
 import OrganizationJsonLd from "@/components/SEOOrganization";
@@ -67,19 +67,19 @@ const IndexEs = () => {
       <OrganizationJsonLd />
       <ModernNavbarEs />
       <main id="main-content" role="main" aria-label="Contenido principal" className="pb-0">
-        <HeroEs />
-        <ProblemSolutionEs />
-        <FeaturesEs />
-        <HowItWorksEs />
-        <LiveDemoEs />
-        <SocialProofEs />
-        <ModernComparisonEs />
-        <PricingEs />
-        <FAQEs />
-        <FinalCTAEs />
-        <ContactEs />
+        <ModernHeroEs />
+        <ModernProblemSolutionEs />
+        <ModernFeaturesEs />
+        <ModernHowItWorksEs />
+        <ModernLiveDemoEs />
+        <ModernSocialProofEs />
+        <ModernComparison />
+        <ModernPricingEs />
+        <AIOptimizedFAQ />
+        <ModernFinalCTAEs />
+        <Contact />
       </main>
-      <FooterEs />
+      <Footer />
       <LanguageSwitcher />
     </>
   );
