@@ -70,7 +70,7 @@ const ModernPricing = () => {
     <section id="preise" aria-labelledby="pricing-heading" className="py-24 bg-gradient-to-b from-white to-indigo-50">
       <div className="container mx-auto px-6">
         <h2 className="text-5xl font-black text-center mb-4 tracking-tight">
-          Mehr Support-Power für <span className="text-green-500">weniger Geld</span>
+          Mehr Support-Power für <span className="text-brand-success">weniger Geld</span>
         </h2>
         <p className="text-center text-slate-600 max-w-3xl mx-auto mb-2 text-lg">
           Ein Support-Agent kostet im Schnitt 2.000 € pro Monat.
@@ -95,12 +95,12 @@ const ModernPricing = () => {
                 
                 <ul className="space-y-3 mb-8 flex-grow">
                   <li className="flex items-start gap-3">
-                    <span className="text-green-500 text-lg mt-0.5">✅</span>
+                    <span className="text-brand-success text-lg mt-0.5">✅</span>
                     <span className="text-slate-700 font-bold">{plan.quota}</span>
                   </li>
                   {plan.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-3">
-                      <span className="text-green-500 text-lg mt-0.5">✅</span>
+                      <span className="text-brand-success text-lg mt-0.5">✅</span>
                       <span className="text-slate-700 font-medium leading-relaxed">{feature}</span>
                     </li>
                   ))}
@@ -149,46 +149,46 @@ const ModernPricing = () => {
         
         {/* Savings Calculator */}
         <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl p-8 border border-green-200 shadow-float">
-            <h3 className="text-3xl font-black text-green-700 mb-4 text-center">
+          <div className="bg-gradient-to-r from-brand-success/10 to-brand-success/5 rounded-3xl p-8 border border-brand-success/20 shadow-float">
+            <h3 className="text-3xl font-black text-brand-success mb-4 text-center">
               💰 Massive Kosteneinsparung vs. Per-Ticket-Abrechnung
             </h3>
-            <p className="text-center text-green-700 mb-8 text-lg font-semibold">
-              Während Konkurrenten <span className="text-red-600 font-black">pro Ticket</span> abrechnen, ist bei uns im Scale Plan <span className="text-green-600 font-black">ALLES UNLIMITIERT</span>!
+            <p className="text-center text-brand-success mb-8 text-lg font-semibold">
+              Während Konkurrenten <span className="text-destructive font-black">pro Ticket</span> abrechnen, ist bei uns im Scale Plan <span className="text-brand-success font-black">ALLES UNLIMITIERT</span>!
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 text-center mb-8">
-              <div className="bg-white rounded-2xl p-6 shadow-md border-2 border-red-100">
-                <div className="text-red-500 font-bold text-lg mb-2">🎟️ Gorgias</div>
-                <div className="text-red-500 font-semibold mb-1">€50+/Monat</div>
-                <div className="text-xs text-red-400 mb-3">+ €2-5 pro Ticket</div>
-                <div className="text-green-600 font-black text-xl">€372+/Jahr gespart</div>
+              <div className="bg-white rounded-2xl p-6 shadow-md border-2 border-destructive/20">
+                <div className="text-destructive font-bold text-lg mb-2">🎟️ Gorgias</div>
+                <div className="text-destructive font-semibold mb-1">€50+/Monat</div>
+                <div className="text-xs text-destructive/70 mb-3">+ €2-5 pro Ticket</div>
+                <div className="text-brand-success font-black text-xl">€372+/Jahr gespart</div>
               </div>
-              <div className="bg-white rounded-2xl p-6 shadow-md border-2 border-red-100">
-                <div className="text-red-500 font-bold text-lg mb-2">💬 Intercom</div>
-                <div className="text-red-500 font-semibold mb-1">€74+/Monat</div>
-                <div className="text-xs text-red-400 mb-3">+ €1-3 pro Ticket</div>
-                <div className="text-green-600 font-black text-xl">€660+/Jahr gespart</div>
+              <div className="bg-white rounded-2xl p-6 shadow-md border-2 border-destructive/20">
+                <div className="text-destructive font-bold text-lg mb-2">💬 Intercom</div>
+                <div className="text-destructive font-semibold mb-1">€74+/Monat</div>
+                <div className="text-xs text-destructive/70 mb-3">+ €1-3 pro Ticket</div>
+                <div className="text-brand-success font-black text-xl">€660+/Jahr gespart</div>
               </div>
-              <div className="bg-white rounded-2xl p-6 shadow-md border-2 border-red-100">
-                <div className="text-red-500 font-bold text-lg mb-2">🎫 Zendesk</div>
-                <div className="text-red-500 font-semibold mb-1">€115+/Monat</div>
-                <div className="text-xs text-red-400 mb-3">+ €0.50-2 pro Ticket</div>
-                <div className="text-green-600 font-black text-xl">€1.152+/Jahr gespart</div>
+              <div className="bg-white rounded-2xl p-6 shadow-md border-2 border-destructive/20">
+                <div className="text-destructive font-bold text-lg mb-2">🎫 Zendesk</div>
+                <div className="text-destructive font-semibold mb-1">€115+/Monat</div>
+                <div className="text-xs text-destructive/70 mb-3">+ €0.50-2 pro Ticket</div>
+                <div className="text-brand-success font-black text-xl">€1.152+/Jahr gespart</div>
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl p-6 text-center">
+            <div className="bg-gradient-primary text-white rounded-2xl p-6 text-center">
               <h4 className="text-2xl font-black mb-3">🚀 ReplAInow Scale Plan: €199/Monat</h4>
               <p className="text-lg font-semibold mb-2">✨ UNLIMITIERTE AI-Antworten</p>
               <p className="text-sm opacity-90">Keine versteckten Kosten • Keine Per-Ticket-Gebühren • Keine Limits</p>
             </div>
 
             <div className="mt-6 text-center">
-              <p className="text-green-700 font-bold text-lg mb-2">
+              <p className="text-brand-success font-bold text-lg mb-2">
                 Bei 1.000 Tickets/Monat zahlst du bei Gorgias über €3.000 extra!
               </p>
-              <p className="text-green-600 font-semibold">
+              <p className="text-brand-success font-semibold">
                 Mit ReplAInow: €0 extra – egal ob 100 oder 10.000 Tickets! 🎯
               </p>
             </div>

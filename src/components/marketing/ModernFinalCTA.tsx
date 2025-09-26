@@ -17,8 +17,8 @@ const ModernFinalCTA = () => {
           Bereit für die AI-Revolution?
         </h2>
         <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
-          Über <strong className="text-yellow-300">5000+ Shopify-Händler</strong> nutzen bereits ReplAInow. 
-          Werde Teil der Elite und <strong className="text-yellow-300">zerstöre deine Konkurrenz</strong> mit überlegener AI-Technologie.
+          Über <strong className="text-brand-warning">5000+ Shopify-Händler</strong> nutzen bereits ReplAInow. 
+          Werde Teil der Elite und <strong className="text-brand-warning">zerstöre deine Konkurrenz</strong> mit überlegener AI-Technologie.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
@@ -46,19 +46,19 @@ const ModernFinalCTA = () => {
         
         <div className="flex flex-wrap justify-center items-center gap-8 text-sm opacity-75">
           <div className="flex items-center gap-2">
-            <span className="text-green-300">✅</span>
+            <span className="text-brand-success">✅</span>
             <span>14 Tage kostenlos</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-300">✅</span>
+            <span className="text-brand-success">✅</span>
             <span>Keine Setup-Gebühren</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-300">✅</span>
+            <span className="text-brand-success">✅</span>
             <span>Jederzeit kündbar</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-green-300">✅</span>
+            <span className="text-brand-success">✅</span>
             <span>Geld-zurück-Garantie</span>
           </div>
         </div>

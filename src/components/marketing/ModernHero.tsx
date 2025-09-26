@@ -30,7 +30,7 @@ const ModernHero = () => {
           <div 
             className="absolute w-96 h-96 rounded-full blur-3xl"
             style={{
-              background: "radial-gradient(circle, rgba(99,102,241,0.6) 0%, rgba(139,92,246,0.3) 30%, transparent 70%)",
+              background: "radial-gradient(circle, hsl(var(--brand-primary) / 0.6) 0%, hsl(var(--brand-secondary) / 0.3) 30%, transparent 70%)",
               left: `${pos.x - 192}px`,
               top: `${pos.y - 192}px`,
               transition: "all 0.3s ease-out",
@@ -87,7 +87,7 @@ const ModernHero = () => {
                 <span className="text-yellow-500">★★★★★</span>
                 <span className="font-semibold">4.9/5</span>
               </div>
-              <span className="px-3 py-1 bg-green-100 text-green-700 rounded-full font-medium">
+              <span className="px-3 py-1 glass text-brand-success rounded-full font-medium">
                 GDPR Compliant
               </span>
               <span className="font-medium">5000+ Händler</span>

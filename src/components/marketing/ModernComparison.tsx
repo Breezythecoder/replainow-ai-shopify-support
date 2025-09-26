@@ -13,7 +13,7 @@ const ModernComparison = () => {
     <section className="py-24 bg-ultra-light">
       <div className="container mx-auto px-6">
         <h2 className="text-5xl font-black text-center mb-8 tracking-tight">
-          Warum ReplAInow die Konkurrenz <span className="text-red-500">zerstört</span>
+          Warum ReplAInow die Konkurrenz <span className="text-destructive">zerstört</span>
         </h2>
         <p className="text-xl text-slate-600 text-center mb-16">
           Direkter Vergleich mit Gorgias, Intercom & Zendesk
@@ -55,25 +55,25 @@ const ModernComparison = () => {
 
         {/* Cost Savings Highlight */}
         <div className="mt-16 max-w-4xl mx-auto">
-          <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl p-8 border border-green-200 shadow-float">
-            <h3 className="text-3xl font-black text-green-700 mb-6 text-center">
+          <div className="bg-gradient-to-r from-brand-success/10 to-brand-success/5 rounded-3xl p-8 border border-brand-success/20 shadow-float">
+            <h3 className="text-3xl font-black text-brand-success mb-6 text-center">
               💰 Massive Kosteneinsparung vs. Konkurrenz
             </h3>
             <div className="grid md:grid-cols-2 gap-8 text-center">
               <div className="space-y-3">
-                <div className="text-red-600 font-bold text-lg">Teure Konkurrenz:</div>
+                <div className="text-destructive font-bold text-lg">Teure Konkurrenz:</div>
                 <div className="space-y-2">
-                  <div className="text-red-500 font-semibold">Gorgias: €50+/Monat</div>
-                  <div className="text-red-500 font-semibold">Intercom: €74+/Monat</div>
-                  <div className="text-red-500 font-semibold">Zendesk: €115+/Monat</div>
+                  <div className="text-destructive font-semibold">Gorgias: €50+/Monat</div>
+                  <div className="text-destructive font-semibold">Intercom: €74+/Monat</div>
+                  <div className="text-destructive font-semibold">Zendesk: €115+/Monat</div>
                 </div>
               </div>
               <div className="space-y-3">
-                <div className="text-green-600 font-bold text-lg">ReplAInow Power:</div>
+                <div className="text-brand-success font-bold text-lg">ReplAInow Power:</div>
                 <div className="space-y-2">
-                  <div className="text-green-600 font-black text-xl">Nur €19/Monat</div>
-                  <div className="text-green-600 text-lg font-bold">= Bis zu €96/Monat gespart!</div>
-                  <div className="text-green-600 font-semibold">Bei überlegener Performance</div>
+                  <div className="text-brand-success font-black text-xl">Nur €19/Monat</div>
+                  <div className="text-brand-success text-lg font-bold">= Bis zu €96/Monat gespart!</div>
+                  <div className="text-brand-success font-semibold">Bei überlegener Performance</div>
                 </div>
               </div>
             </div>

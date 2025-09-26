@@ -3,15 +3,15 @@ const ModernProblemSolution = () => {
     <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-16 tracking-tight">
-          <span className="text-red-500">Das Problem:</span> Überforderter Support
+          <span className="text-destructive">Das Problem:</span> Überforderter Support
           <br />
-          <span className="text-green-500">Die Lösung:</span> Intelligente AI
+          <span className="text-brand-success">Die Lösung:</span> Intelligente AI
         </h2>
         
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Before Card - Problem */}
-          <div className="bg-red-50 border border-red-200 rounded-3xl p-8 relative shadow-lg">
-            <div className="absolute -top-3 left-6 bg-red-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+          <div className="bg-destructive/10 border border-destructive/20 rounded-3xl p-8 relative shadow-lg">
+            <div className="absolute -top-3 left-6 bg-destructive text-destructive-foreground px-4 py-2 rounded-full text-sm font-bold">
               😫 OHNE REPLAINOW
             </div>
             <img 
@@ -21,23 +21,23 @@ const ModernProblemSolution = () => {
             />
             <ul className="space-y-4 text-slate-700">
               <li className="flex items-center gap-3">
-                <span className="text-red-500 text-xl">❌</span>
+                <span className="text-destructive text-xl">❌</span>
                 <span className="font-medium">50+ E-Mails täglich bearbeiten</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-red-500 text-xl">❌</span>
+                <span className="text-destructive text-xl">❌</span>
                 <span className="font-medium">Endlose Copy-Paste Antworten</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-red-500 text-xl">❌</span>
+                <span className="text-destructive text-xl">❌</span>
                 <span className="font-medium">Kunden warten stundenlang</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-red-500 text-xl">❌</span>
+                <span className="text-destructive text-xl">❌</span>
                 <span className="font-medium">Verlorene Verkäufe durch schlechten Service</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-red-500 text-xl">❌</span>
+                <span className="text-destructive text-xl">❌</span>
                 <span className="font-medium">Überarbeitetes, gestresstes Team</span>
               </li>
             </ul>
@@ -55,23 +55,23 @@ const ModernProblemSolution = () => {
             />
             <ul className="space-y-4 text-slate-700">
               <li className="flex items-center gap-3">
-                <span className="text-green-500 text-xl">✅</span>
+                <span className="text-brand-success text-xl">✅</span>
                 <span className="font-medium">AI antwortet in 3 Sekunden automatisch</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-green-500 text-xl">✅</span>
+                <span className="text-brand-success text-xl">✅</span>
                 <span className="font-medium">Perfekte Produktempfehlungen</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-green-500 text-xl">✅</span>
+                <span className="text-brand-success text-xl">✅</span>
                 <span className="font-medium">32+ Sprachen automatisch</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-green-500 text-xl">✅</span>
+                <span className="text-brand-success text-xl">✅</span>
                 <span className="font-medium">+187% höhere Conversion Rate</span>
               </li>
               <li className="flex items-center gap-3">
-                <span className="text-green-500 text-xl">✅</span>
+                <span className="text-brand-success text-xl">✅</span>
                 <span className="font-medium">90% weniger Support-Aufwand</span>
               </li>
             </ul>
