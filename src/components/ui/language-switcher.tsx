@@ -76,7 +76,7 @@ const LanguageSwitcher = ({ variant = 'mobile' }: LanguageSwitcherProps = {}) =>
   }
 
   return (
-    <div className="fixed bottom-20 left-4 z-50 md:hidden">
+    <div className="fixed bottom-4 left-4 z-50 md:hidden">
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button

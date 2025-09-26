@@ -14,45 +14,45 @@ const ModernFinalCTA = () => {
       </div>
       
       <div className="container mx-auto px-6 text-center relative z-10">
-        <h2 className="text-6xl font-black mb-6 tracking-tighter">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tighter px-4">
           Bereit für die AI-Revolution?
         </h2>
-        <p className="text-xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed px-4">
           Über <strong className="text-brand-warning">5000+ Shopify-Händler</strong> nutzen bereits ReplAInow. 
           Werde Teil der Elite und <strong className="text-brand-warning">zerstöre deine Konkurrenz</strong> mit überlegener AI-Technologie.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 px-4">
           <Button 
             asChild 
             variant="glass" 
             size="xl" 
-            className="text-lg px-16 py-6 bg-white text-indigo-600 hover:bg-white hover:scale-110 font-black shadow-brand-mega"
+            className="text-base sm:text-lg px-6 sm:px-8 md:px-12 py-6 bg-white text-indigo-600 hover:bg-white hover:scale-105 font-black shadow-brand-mega w-full sm:w-auto max-w-[90vw]"
           >
-            <a href={OAUTH_URL} className="flex items-center gap-3">
-              🚀 Kostenlos starten - Shopify App Store
+            <a href={OAUTH_URL} className="flex items-center gap-2 justify-center">
+              🚀 <span className="hidden sm:inline">Kostenlos starten -</span> Shopify App
             </a>
           </Button>
           <Button 
             asChild 
             variant="glass" 
             size="xl" 
-            className="text-lg px-12 py-6 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 hover:scale-105 font-bold shadow-brand"
+            className="text-base sm:text-lg px-6 sm:px-8 md:px-12 py-6 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 hover:scale-105 font-bold shadow-brand w-full sm:w-auto"
           >
-            <a href="#live-demo" className="flex items-center gap-3">
+            <a href="#live-demo" className="flex items-center gap-2 justify-center">
               📞 Demo buchen
             </a>
           </Button>
         </div>
         
-        <div className="flex flex-wrap justify-center items-center gap-8 text-sm opacity-75">
+        <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-xs sm:text-sm opacity-75 px-4">
           <div className="flex items-center gap-2">
             <span className="text-brand-success">✅</span>
             <span>14 Tage kostenlos</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-brand-success">✅</span>
-            <span>Keine Setup-Gebühren</span>
+            <span>Setup-frei</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-brand-success">✅</span>
@@ -60,22 +60,22 @@ const ModernFinalCTA = () => {
           </div>
           <div className="flex items-center gap-2">
             <span className="text-brand-success">✅</span>
-            <span>Geld-zurück-Garantie</span>
+            <span>Geld-zurück</span>
           </div>
         </div>
 
         {/* Urgency Counter */}
-        <div className="mt-12 bg-white/95 backdrop-blur-md p-10 rounded-3xl max-w-3xl mx-auto border border-white/30 shadow-brand-mega hover-lift">
-          <p className="text-indigo-600 font-black text-3xl mb-4 animate-pulse">
+        <div className="mt-8 sm:mt-12 bg-white/95 backdrop-blur-md p-6 sm:p-8 lg:p-10 rounded-3xl max-w-3xl mx-4 sm:mx-auto border border-white/30 shadow-brand-mega hover-lift">
+          <p className="text-indigo-600 font-black text-xl sm:text-2xl lg:text-3xl mb-4 animate-pulse">
             🔥 Limitiertes Onboarding-Angebot
           </p>
-          <p className="text-slate-700 text-xl leading-relaxed mb-8">
-            Nur die ersten <strong className="text-indigo-600 text-2xl">100 Stores</strong> diesen Monat bekommen kostenloses Setup + 1 Monat gratis
+          <p className="text-slate-700 text-base sm:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8">
+            Nur die ersten <strong className="text-indigo-600 text-lg sm:text-xl lg:text-2xl">100 Stores</strong> diesen Monat bekommen kostenloses Setup + 1 Monat gratis
           </p>
-          <div className="bg-slate-200 rounded-full h-4 mb-4 overflow-hidden">
-            <div className="bg-gradient-primary h-4 rounded-full transition-all duration-1000 shadow-neon" style={{ width: '73%' }}></div>
+          <div className="bg-slate-200 rounded-full h-3 sm:h-4 mb-4 overflow-hidden">
+            <div className="bg-gradient-primary h-3 sm:h-4 rounded-full transition-all duration-1000 shadow-neon" style={{ width: '73%' }}></div>
           </div>
-          <p className="text-slate-600 font-black text-lg">73 von 100 Plätzen bereits vergeben</p>
+          <p className="text-slate-600 font-black text-sm sm:text-base lg:text-lg">73 von 100 Plätzen bereits vergeben</p>
         </div>
       </div>
     </section>

@@ -75,7 +75,7 @@ const ModernPricing = () => {
         <div className="absolute top-3/4 left-3/4 w-32 h-32 bg-brand-accent/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
       <div className="container mx-auto px-6 relative z-10">
-        <h2 className="text-5xl font-black text-center mb-4 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-4 tracking-tight px-4">
           Mehr Support-Power für <span className="text-brand-success">weniger Geld</span>
         </h2>
         <p className="text-center text-slate-600 max-w-3xl mx-auto mb-2 text-lg">

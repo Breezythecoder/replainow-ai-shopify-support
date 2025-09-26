@@ -33,7 +33,7 @@ const ModernHowItWorks = () => {
   return (
     <section className="py-24 bg-gradient-to-b from-indigo-50 to-purple-50">
       <div className="container mx-auto px-6">
-        <h2 className="text-5xl font-black text-center mb-16 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-12 sm:mb-16 tracking-tight px-4">
           So einfach <span className="text-gradient-primary">dominierst</span> du den Kundenservice
         </h2>
         
@@ -60,13 +60,13 @@ const ModernHowItWorks = () => {
         
         {/* CTA Row */}
         <div className="text-center">
-          <Button asChild variant="cta" size="xl" className="text-lg px-16 py-6">
-            <a href={OAUTH_URL}>
-              🚀 Jetzt starten - Kostenlos testen
+          <Button asChild variant="cta" size="xl" className="text-lg px-4 sm:px-8 md:px-12 py-6 max-w-[95vw]">
+            <a href={OAUTH_URL} className="whitespace-nowrap">
+              🚀 Kostenlos starten
             </a>
           </Button>
-          <p className="text-sm text-slate-500 mt-4">
-            ✅ 14 Tage kostenlos • ✅ Keine Setup-Gebühren • ✅ Jederzeit kündbar
+          <p className="text-xs sm:text-sm text-slate-500 mt-4 px-4">
+            ✅ 14 Tage kostenlos • ✅ Setup-frei • ✅ Jederzeit kündbar
           </p>
         </div>
       </div>

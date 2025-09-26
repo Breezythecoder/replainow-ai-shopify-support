@@ -48,7 +48,7 @@ const ModernHero = () => {
         <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
           {/* Left Column */}
           <div className="space-y-8">
-            <h1 className="text-5xl lg:text-6xl font-black text-gradient-hero leading-tight tracking-tighter">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gradient-hero leading-tight tracking-tighter">
               KI-Helpdesk für Shopify.
               <span className="block">Antwortet in Sekunden.</span>
             </h1>
@@ -59,18 +59,18 @@ const ModernHero = () => {
             </p>
             
             {/* ROI Stats Row */}
-            <div className="grid grid-cols-3 gap-4">
-              <div className="glass-card p-6 rounded-3xl text-center shadow-brand hover-lift">
-                <div className="text-3xl lg:text-4xl font-black text-brand-primary">+187%</div>
-                <div className="text-sm text-slate-600 font-bold mt-2">Conversion</div>
+            <div className="grid grid-cols-3 gap-2 sm:gap-4">
+              <div className="glass-card p-3 sm:p-4 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
+                <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-black text-brand-primary">+187%</div>
+                <div className="text-xs sm:text-sm text-slate-600 font-bold mt-1 sm:mt-2">Conversion</div>
               </div>
-              <div className="glass-card p-6 rounded-3xl text-center shadow-brand hover-lift">
-                <div className="text-3xl lg:text-4xl font-black text-brand-success">3 Sek</div>
-                <div className="text-sm text-slate-600 font-bold mt-2">Antwortzeit</div>
+              <div className="glass-card p-3 sm:p-4 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
+                <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-black text-brand-success">3 Sek</div>
+                <div className="text-xs sm:text-sm text-slate-600 font-bold mt-1 sm:mt-2">Antwortzeit</div>
               </div>
-              <div className="glass-card p-6 rounded-3xl text-center shadow-brand hover-lift">
-                <div className="text-3xl lg:text-4xl font-black text-brand-accent">75%</div>
-                <div className="text-sm text-slate-600 font-bold mt-2">Einsparung</div>
+              <div className="glass-card p-3 sm:p-4 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
+                <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-black text-brand-accent">75%</div>
+                <div className="text-xs sm:text-sm text-slate-600 font-bold mt-1 sm:mt-2">Einsparung</div>
               </div>
             </div>
             
