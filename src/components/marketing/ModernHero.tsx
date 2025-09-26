@@ -61,42 +61,42 @@ const ModernHero = () => {
         <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 pt-8 lg:pt-0">
           {/* Left Column */}
           <div className="space-y-6 lg:space-y-8">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gradient-hero leading-tight tracking-tighter">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-on-hero leading-tight tracking-tighter">
               KI-Helpdesk für Shopify.
               <span className="block">Antwortet in Sekunden.</span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-slate-700 leading-relaxed">
-              Revolutionäre AI mit <strong className="text-gradient-primary">Echtzeit-Shopify-Daten</strong>: 
+            <p className="text-lg sm:text-xl text-on-hero leading-relaxed font-medium">
+              Revolutionäre AI mit <strong className="text-on-hero font-bold">Echtzeit-Shopify-Daten</strong>: 
               Höhere Conversion, schnellere Antworten, 90% weniger Support-Tickets.
             </p>
             
-            {/* World-Class ROI Stats */}
+            {/* High-Contrast ROI Stats */}
             <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
-              <div className="glass-world-class p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-card world-class-card group border border-brand-primary/10">
+              <div className="glass-hero p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-card world-class-card group border border-brand-primary/20">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-primary group-hover:scale-105 transition-transform">+187%</div>
-                <div className="text-sm sm:text-base text-brand-neutral-800 font-bold mt-2">Conversion</div>
+                <div className="text-sm sm:text-base text-on-glass font-bold mt-2">Conversion</div>
               </div>
-              <div className="glass-world-class p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-card world-class-card group border border-brand-success/10">
+              <div className="glass-hero p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-card world-class-card group border border-brand-success/20">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-success group-hover:scale-105 transition-transform">3 Sek</div>
-                <div className="text-sm sm:text-base text-brand-neutral-800 font-bold mt-2">Antwortzeit</div>
+                <div className="text-sm sm:text-base text-on-glass font-bold mt-2">Antwortzeit</div>
               </div>
-              <div className="glass-world-class p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-card world-class-card group border border-brand-accent/10">
+              <div className="glass-hero p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-card world-class-card group border border-brand-accent/20">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-accent group-hover:scale-105 transition-transform">75%</div>
-                <div className="text-sm sm:text-base text-brand-neutral-800 font-bold mt-2">Einsparung</div>
+                <div className="text-sm sm:text-base text-on-glass font-bold mt-2">Einsparung</div>
               </div>
             </div>
             
-            {/* World-Class CTAs */}
+            {/* High-Contrast CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
-              <Button asChild variant="cta" size="xl" className="group flex-1 sm:flex-none premium-button bg-gradient-button shadow-button hover:shadow-button-hover text-white font-bold relative overflow-hidden">
+              <Button asChild variant="cta" size="xl" className="group flex-1 sm:flex-none premium-button bg-gradient-button shadow-button hover:shadow-button-hover text-on-brand font-bold relative overflow-hidden">
                 <a href={OAUTH_URL} className="flex items-center justify-center gap-3 text-base lg:text-lg font-bold relative z-10">
                   <span className="text-xl group-hover:scale-110 transition-transform">🚀</span>
                   Jetzt kostenlos testen
                   <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
                 </a>
               </Button>
-              <Button asChild variant="glass" size="xl" className="flex-1 sm:flex-none premium-button glass-world-class text-brand-primary hover:text-brand-primary-dark">
+              <Button asChild variant="glass" size="xl" className="flex-1 sm:flex-none premium-button glass-hero text-on-glass hover:text-on-glass">
                 <a href="#live-demo" className="flex items-center justify-center gap-3 text-base lg:text-lg font-semibold">
                   <span className="text-xl">📺</span>
                   Live-Demo ansehen
@@ -104,16 +104,16 @@ const ModernHero = () => {
               </Button>
             </div>
 
-            {/* World-Class Trust Indicators */}
+            {/* High-Contrast Trust Indicators */}
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4 lg:gap-6 text-sm">
-              <div className="flex items-center gap-2 glass-world-class px-5 py-3 rounded-full shadow-card hover-lift group">
+              <div className="flex items-center gap-2 glass-hero px-5 py-3 rounded-full shadow-card hover-lift group">
                 <span className="text-brand-warning text-lg">★★★★★</span>
-                <span className="font-bold text-brand-neutral-800">4.9/5</span>
+                <span className="font-bold text-on-glass">4.9/5</span>
               </div>
-              <span className="px-5 py-3 glass-world-class text-brand-success rounded-full font-bold shadow-card hover-lift">
+              <span className="px-5 py-3 glass-hero text-brand-success rounded-full font-bold shadow-card hover-lift">
                 ✅ DSGVO-konform
               </span>
-              <span className="font-bold text-brand-neutral-800 glass-world-class px-5 py-3 rounded-full shadow-card hover-lift">👥 5000+ Händler</span>
+              <span className="font-bold text-on-glass glass-hero px-5 py-3 rounded-full shadow-card hover-lift">👥 5000+ Händler</span>
             </div>
           </div>
           
@@ -130,8 +130,8 @@ const ModernHero = () => {
                   className="w-full shadow-hero rounded-2xl lg:rounded-3xl" 
                 />
                 
-                {/* Professional Success Indicator */}
-                <div className="absolute top-2 right-2 sm:top-4 sm:right-4 lg:-top-4 lg:-right-4 glass-world-class px-3 py-2 sm:px-4 sm:py-3 lg:px-6 lg:py-4 rounded-2xl text-xs sm:text-sm font-bold text-brand-success shadow-card hover-lift max-w-[140px] sm:max-w-none">
+                {/* High-Contrast Success Indicator */}
+                <div className="absolute top-2 right-2 sm:top-4 sm:right-4 lg:-top-4 lg:-right-4 glass-hero px-3 py-2 sm:px-4 sm:py-3 lg:px-6 lg:py-4 rounded-2xl text-xs sm:text-sm font-bold text-brand-success shadow-card hover-lift max-w-[140px] sm:max-w-none border border-brand-success/20">
                   <div className="flex items-center gap-2">
                     <span className="text-base">✅</span>
                     <span className="hidden sm:block">+37% Zufriedenheit</span>
@@ -139,8 +139,8 @@ const ModernHero = () => {
                   </div>
                 </div>
                 
-                {/* Professional ROI Indicator */}
-                <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 lg:-bottom-4 lg:-left-4 glass-world-class px-3 py-2 sm:px-4 sm:py-3 lg:px-6 lg:py-4 rounded-2xl text-xs sm:text-sm font-bold text-brand-warning shadow-card hover-lift max-w-[160px] sm:max-w-none">
+                {/* High-Contrast ROI Indicator */}
+                <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 lg:-bottom-4 lg:-left-4 glass-hero px-3 py-2 sm:px-4 sm:py-3 lg:px-6 lg:py-4 rounded-2xl text-xs sm:text-sm font-bold text-brand-warning shadow-card hover-lift max-w-[160px] sm:max-w-none border border-brand-warning/20">
                   <div className="flex items-center gap-2">
                     <span className="text-base">💰</span>
                     <span className="hidden sm:block">€1.900/Monat gespart</span>
@@ -148,8 +148,8 @@ const ModernHero = () => {
                   </div>
                 </div>
                 
-                {/* Professional AI Badge */}
-                <div className="absolute top-1/2 left-2 sm:left-4 lg:-left-8 transform -translate-y-1/2 glass-world-class px-3 py-2 sm:px-4 sm:py-3 lg:px-6 lg:py-4 rounded-2xl text-xs sm:text-sm font-bold text-brand-primary shadow-card hover-lift max-w-[120px] sm:max-w-none">
+                {/* High-Contrast AI Badge */}
+                <div className="absolute top-1/2 left-2 sm:left-4 lg:-left-8 transform -translate-y-1/2 glass-hero px-3 py-2 sm:px-4 sm:py-3 lg:px-6 lg:py-4 rounded-2xl text-xs sm:text-sm font-bold text-brand-primary shadow-card hover-lift max-w-[120px] sm:max-w-none border border-brand-primary/20">
                   <div className="flex items-center gap-2">
                     <span className="text-base">🤖</span>
                     <span className="hidden sm:block">GPT-4 AI</span>

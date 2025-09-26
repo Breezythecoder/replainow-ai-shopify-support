@@ -15,12 +15,12 @@ const buttonVariants = cva(
         secondary: "bg-secondary text-secondary-foreground shadow-card hover:bg-secondary/80 hover:scale-[1.02] hover:shadow-card-hover active:scale-95",
         ghost: "hover:bg-accent hover:text-accent-foreground hover:scale-[1.02] active:scale-95",
         link: "text-brand-primary underline-offset-4 hover:underline hover:text-brand-primary-dark transition-colors",
-        hero: "bg-gradient-primary text-white shadow-glass hover:shadow-hero hover:scale-[1.02] active:scale-95 font-bold",
-        premium: "bg-gradient-hero text-white shadow-glass-lg hover:shadow-brand-mega hover:scale-[1.02] active:scale-95 font-bold border border-white/20",
-        glass: "glass-world-class hover:bg-white/95 hover:shadow-float hover:scale-[1.02] active:scale-95 font-semibold",
-        cta: "bg-gradient-button text-white font-bold shadow-button hover:shadow-button-hover hover:scale-[1.02] active:scale-95 transform transition-premium",
-        success: "bg-brand-success text-white shadow-card hover:bg-brand-success/90 hover:scale-[1.02] hover:shadow-card-hover active:scale-95",
-        warning: "bg-brand-warning text-white shadow-card hover:bg-brand-warning/90 hover:scale-[1.02] hover:shadow-card-hover active:scale-95"
+        hero: "bg-gradient-primary text-on-brand shadow-glass hover:shadow-hero hover:scale-[1.02] active:scale-95 font-bold",
+        premium: "bg-gradient-hero text-on-brand shadow-glass-lg hover:shadow-brand-mega hover:scale-[1.02] active:scale-95 font-bold border border-white/20",
+        glass: "glass-hero hover:bg-white/95 hover:shadow-float hover:scale-[1.02] active:scale-95 font-semibold",
+        cta: "bg-gradient-button text-on-brand font-bold shadow-button hover:shadow-button-hover hover:scale-[1.02] active:scale-95 transform transition-premium",
+        success: "bg-brand-success text-on-brand shadow-card hover:bg-brand-success/90 hover:scale-[1.02] hover:shadow-card-hover active:scale-95",
+        warning: "bg-brand-warning text-on-brand shadow-card hover:bg-brand-warning/90 hover:scale-[1.02] hover:shadow-card-hover active:scale-95"
       },
       size: {
         default: "h-10 px-4 py-2",

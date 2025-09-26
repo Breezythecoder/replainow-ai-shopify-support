@@ -115,32 +115,40 @@ All colors MUST be HSL.
 /* Enhanced Professional Design System */
 @layer base {
   :root {
-    /* World-Class Brand Colors - Perfect Contrast & Accessibility */
-    --brand-primary: 230 100% 45%; /* Deep royal blue - perfect contrast */
-    --brand-secondary: 270 100% 50%; /* Rich purple for premium feel */  
-    --brand-accent: 185 100% 35%; /* Professional cyan for highlights */
+    /* Professional Brand Colors - Perfect Contrast */
+    --brand-primary: 230 100% 35%; /* Deep royal blue - high contrast */
+    --brand-secondary: 270 100% 40%; /* Rich purple for premium feel */  
+    --brand-accent: 185 100% 25%; /* Professional teal for highlights */
     --brand-success: 140 70% 35%; /* Trust-building green */
     --brand-warning: 35 100% 45%; /* Attention-grabbing orange */
-    --brand-popular: 270 100% 50%; /* Premium purple */
+    --brand-popular: 270 100% 40%; /* Premium purple */
+    
+    /* Text-on-Color Tokens - Guaranteed Contrast */
+    --text-on-hero: 0 0% 100%; /* Pure white for hero text */
+    --text-on-hero-shadow: 0 0 8px rgba(0,0,0,0.3); /* Text shadow for readability */
+    --text-on-brand: 0 0% 100%; /* White text on brand colors */
+    --text-on-light: 220 30% 15%; /* Dark text on light backgrounds */
+    --text-on-glass: 220 30% 15%; /* Dark text on glass components */
     
     /* Professional Color Variations */
-    --brand-primary-light: 230 100% 55%;
-    --brand-primary-dark: 230 100% 35%;
-    --brand-secondary-light: 270 100% 60%;
-    --brand-accent-light: 185 100% 45%;
+    --brand-primary-light: 230 100% 45%;
+    --brand-primary-dark: 230 100% 25%;
+    --brand-secondary-light: 270 100% 50%;
+    --brand-accent-light: 185 100% 35%;
     --brand-neutral-50: 220 20% 98%;
     --brand-neutral-100: 220 15% 95%;
     --brand-neutral-200: 220 15% 88%;
     --brand-neutral-800: 220 25% 15%;
     --brand-neutral-900: 220 30% 8%;
 
-    /* World-Class Premium Gradients */
+    /* Professional Gradients - High Contrast */
     --gradient-primary: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-primary-light)) 100%);
     --gradient-hero: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-secondary)) 50%, hsl(var(--brand-accent)) 100%);
-    --gradient-mesh: linear-gradient(145deg, hsla(var(--brand-primary), 0.03) 0%, hsla(var(--brand-secondary), 0.02) 50%, hsla(var(--brand-accent), 0.03) 100%);
-    --gradient-glass: linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.85) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(var(--brand-neutral-50)) 0%, hsla(var(--brand-primary), 0.008) 100%);
-    --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.92) 100%);
+    --gradient-mesh: linear-gradient(145deg, hsla(var(--brand-primary), 0.02) 0%, hsla(var(--brand-secondary), 0.01) 50%, hsla(var(--brand-accent), 0.02) 100%);
+    --gradient-glass: linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.88) 100%);
+    --gradient-glass-dark: linear-gradient(145deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(var(--brand-neutral-50)) 0%, hsla(var(--brand-primary), 0.005) 100%);
+    --gradient-card: linear-gradient(145deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.95) 100%);
     --gradient-button: linear-gradient(135deg, hsl(var(--brand-primary)) 0%, hsl(var(--brand-primary-light)) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(var(--brand-accent)) 0%, hsl(var(--brand-accent-light)) 100%);
 
@@ -246,12 +254,13 @@ All colors MUST be HSL.
   .shadow-button { box-shadow: var(--shadow-button) !important; }
   .shadow-button-hover { box-shadow: var(--shadow-button-hover) !important; }
 
-  /* World-Class Glass Effects */
-  .glass { @apply backdrop-blur-md bg-white/80 border border-white/40 !important; }
-  .glass-card { @apply backdrop-blur-lg bg-white/95 border border-white/30 !important; box-shadow: var(--shadow-card) !important; }
-  .glass-strong { @apply backdrop-blur-xl bg-white/60 border border-white/50 !important; }
+  /* High-Contrast Glass Effects */
+  .glass { @apply backdrop-blur-md bg-white/85 border border-white/50 !important; }
+  .glass-card { @apply backdrop-blur-lg bg-gradient-glass border border-white/40 !important; box-shadow: var(--shadow-card) !important; }
+  .glass-strong { @apply backdrop-blur-xl bg-white/90 border border-white/60 !important; }
   .glass-premium { @apply backdrop-blur-xl bg-gradient-card border border-white/50 !important; box-shadow: var(--shadow-glass) !important; }
-  .glass-world-class { @apply backdrop-blur-2xl bg-white/95 border border-white/60 !important; box-shadow: var(--shadow-glass-lg) !important; }
+  .glass-world-class { @apply backdrop-blur-2xl bg-white/95 border border-white/40 !important; box-shadow: var(--shadow-glass-lg) !important; }
+  .glass-hero { @apply backdrop-blur-xl bg-white/95 border border-white/60 !important; box-shadow: var(--shadow-card) !important; }
 
   /* World-Class Animation System */
   .hover-scale { @apply transition-premium active:scale-95; }
@@ -416,14 +425,26 @@ All colors MUST be HSL.
     animation: slide-in-up 0.8s ease-out forwards; 
   }
   
+  /* High Contrast Typography Classes */
+  .text-on-hero { 
+    color: hsl(var(--text-on-hero)); 
+    text-shadow: var(--text-on-hero-shadow);
+  }
+  .text-on-brand { color: hsl(var(--text-on-brand)); }
+  .text-on-light { color: hsl(var(--text-on-light)); }
+  .text-on-glass { color: hsl(var(--text-on-glass)); }
+  
   /* Premium Brand Colors */
   .text-brand-primary { color: hsl(var(--brand-primary)); }
   .text-brand-secondary { color: hsl(var(--brand-secondary)); }
   .text-brand-accent { color: hsl(var(--brand-accent)); }
   .text-brand-success { color: hsl(var(--brand-success)); }
   .text-brand-warning { color: hsl(var(--brand-warning)); }
+  .text-brand-neutral-800 { color: hsl(var(--brand-neutral-800)); }
+  .text-brand-neutral-900 { color: hsl(var(--brand-neutral-900)); }
   
-  /* Typography Enhancement */
-  .font-heading { font-family: 'Inter', 'SF Pro Display', system-ui; font-weight: 800; letter-spacing: -0.02em; }
-  .tracking-headline { letter-spacing: -0.03em; }
+  /* Background Utilities */
+  .bg-brand-neutral-50 { background-color: hsl(var(--brand-neutral-50)); }
+  .bg-brand-neutral-100 { background-color: hsl(var(--brand-neutral-100)); }
+  .bg-brand-neutral-200 { background-color: hsl(var(--brand-neutral-200)); }
 }

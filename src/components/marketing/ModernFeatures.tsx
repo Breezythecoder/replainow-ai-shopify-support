@@ -39,7 +39,7 @@ const ModernFeatures = () => {
   ];
 
   return (
-    <section id="features" className="py-24 bg-gradient-subtle relative overflow-hidden">
+    <section id="features" className="py-24 bg-brand-neutral-50 relative overflow-hidden">
       {/* Wave Divider Top */}
       <div className="absolute top-0 left-0 w-full overflow-hidden leading-none">
         <svg className="relative block w-full h-16 sm:h-24" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -47,18 +47,18 @@ const ModernFeatures = () => {
         </svg>
       </div>
 
-      {/* Background Elements */}
-      <div className="absolute inset-0 opacity-20">
+      {/* Subtle Background Elements */}
+      <div className="absolute inset-0 opacity-5">
         <div className="absolute top-1/4 left-1/6 w-80 h-80 bg-gradient-primary rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-1/4 right-1/6 w-64 h-64 bg-gradient-accent rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
         <div className="absolute top-3/4 left-3/4 w-48 h-48 bg-gradient-button rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-8 sm:mb-12 lg:mb-16 tracking-tight px-4">
-          Warum <span className="text-gradient-hero">ReplAInow</span> überlegen ist
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-8 sm:mb-12 lg:mb-16 tracking-tight px-4 text-on-light">
+          Warum <span className="text-brand-primary">ReplAInow</span> überlegen ist
         </h2>
-        <p className="text-lg sm:text-xl text-slate-600 text-center mb-12 sm:mb-16 max-w-4xl mx-auto px-4">
+        <p className="text-lg sm:text-xl text-on-light/80 text-center mb-12 sm:mb-16 max-w-4xl mx-auto px-4">
           Modernste GPT-4.1 Technologie trifft auf perfekte Shopify-Integration
         </p>
         
@@ -74,8 +74,8 @@ const ModernFeatures = () => {
               <div className={`relative text-3xl sm:text-4xl mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center text-white shadow-card group-hover:scale-105 group-hover:shadow-brand transition-all duration-500`}>
                 {feature.icon}
               </div>
-              <h3 className="relative text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-brand-neutral-800 group-hover:text-brand-primary transition-all duration-300">{feature.title}</h3>
-              <p className="relative text-brand-neutral-800/80 leading-relaxed text-sm sm:text-base">{feature.desc}</p>
+              <h3 className="relative text-lg sm:text-xl font-bold mb-3 sm:mb-4 text-on-glass group-hover:text-brand-primary transition-all duration-300">{feature.title}</h3>
+              <p className="relative text-on-glass/80 leading-relaxed text-sm sm:text-base">{feature.desc}</p>
               
               {/* Professional connecting lines */}
               {i < features.length - 1 && (
