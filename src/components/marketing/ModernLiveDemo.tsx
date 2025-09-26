@@ -2,10 +2,10 @@ const ModernLiveDemo = () => {
   return (
     <section id="live-demo" className="py-24 bg-ultra-light">
       <div className="container mx-auto px-6 text-center">
-        <h2 className="text-5xl font-black mb-8 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8 tracking-tight text-center px-4">
           Sieh ReplAInow <span className="text-gradient-hero">live in Aktion</span>
         </h2>
-        <p className="text-xl text-slate-600 mb-12 max-w-3xl mx-auto">
+        <p className="text-lg sm:text-xl text-slate-600 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
           Von 0 auf Hero in 3 Sekunden - so arbeitet modernste AI-Technologie für deinen Shopify Store
         </p>
         
@@ -24,36 +24,36 @@ const ModernLiveDemo = () => {
         </div>
         
         {/* Demo Stats */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-          <div className="glass-card p-6 rounded-2xl text-center interactive-card">
-            <div className="text-4xl font-black text-gradient-primary mb-2">3 Sek</div>
-            <div className="text-slate-600 font-medium">Durchschnittliche Antwortzeit</div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto px-4">
+          <div className="glass-card p-6 sm:p-8 rounded-2xl text-center interactive-card hover-lift">
+            <div className="text-3xl sm:text-4xl font-black text-gradient-primary mb-3">3 Sek</div>
+            <div className="text-slate-600 font-medium text-sm sm:text-base">Durchschnittliche Antwortzeit</div>
           </div>
-          <div className="glass-card p-6 rounded-2xl text-center interactive-card">
-            <div className="text-4xl font-black text-gradient-primary mb-2">98%</div>
-            <div className="text-slate-600 font-medium">Accuracy Rate</div>
+          <div className="glass-card p-6 sm:p-8 rounded-2xl text-center interactive-card hover-lift">
+            <div className="text-3xl sm:text-4xl font-black text-gradient-primary mb-3">98%</div>
+            <div className="text-slate-600 font-medium text-sm sm:text-base">Accuracy Rate</div>
           </div>
-          <div className="glass-card p-6 rounded-2xl text-center interactive-card">
-            <div className="text-4xl font-black text-gradient-primary mb-2">24/7</div>
-            <div className="text-slate-600 font-medium">Verfügbarkeit</div>
+          <div className="glass-card p-6 sm:p-8 rounded-2xl text-center interactive-card hover-lift">
+            <div className="text-3xl sm:text-4xl font-black text-gradient-primary mb-3">24/7</div>
+            <div className="text-slate-600 font-medium text-sm sm:text-base">Verfügbarkeit</div>
           </div>
         </div>
 
         {/* Additional Trust Elements */}
-        <div className="mt-16 glass-card p-8 rounded-3xl max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold mb-6 text-slate-800">Live aus echten Shopify Stores:</h3>
-          <div className="grid md:grid-cols-3 gap-6 text-left">
-            <div className="space-y-2">
-              <div className="text-brand-success font-bold">🔥 TechGadgets24</div>
-              <div className="text-sm text-slate-600">"AI hat gerade eine Produktempfehlung zu iPhone Cases gegeben - Kunde kauft sofort 3 Stück!"</div>
+        <div className="mt-12 sm:mt-16 glass-card p-6 sm:p-8 rounded-3xl max-w-5xl mx-auto">
+          <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-slate-800 text-center px-4">Live aus echten Shopify Stores:</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 text-left">
+            <div className="space-y-3 p-4 bg-white/50 rounded-2xl">
+              <div className="text-brand-success font-bold text-sm sm:text-base">🔥 TechGadgets24</div>
+              <div className="text-xs sm:text-sm text-slate-600 leading-relaxed">"AI hat gerade eine Produktempfehlung zu iPhone Cases gegeben - Kunde kauft sofort 3 Stück!"</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-brand-success font-bold">💄 BeautyStore</div>
-              <div className="text-sm text-slate-600">"Französische Kundin bekommt perfekte Antwort auf Französisch über Hautpflege-Routine"</div>
+            <div className="space-y-3 p-4 bg-white/50 rounded-2xl">
+              <div className="text-brand-success font-bold text-sm sm:text-base">💄 BeautyStore</div>
+              <div className="text-xs sm:text-sm text-slate-600 leading-relaxed">"Französische Kundin bekommt perfekte Antwort auf Französisch über Hautpflege-Routine"</div>
             </div>
-            <div className="space-y-2">
-              <div className="text-brand-success font-bold">👗 FashionHub</div>
-              <div className="text-sm text-slate-600">"AI erklärt Größentabelle und empfiehlt passende Größe - Return Rate sinkt um 60%"</div>
+            <div className="space-y-3 p-4 bg-white/50 rounded-2xl">
+              <div className="text-brand-success font-bold text-sm sm:text-base">👗 FashionHub</div>
+              <div className="text-xs sm:text-sm text-slate-600 leading-relaxed">"AI erklärt Größentabelle und empfiehlt passende Größe - Return Rate sinkt um 60%"</div>
             </div>
           </div>
         </div>

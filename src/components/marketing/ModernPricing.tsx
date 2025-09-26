@@ -85,29 +85,29 @@ const ModernPricing = () => {
           ReplAInow startet bei <strong className="text-gradient-primary">19 $/Monat</strong> – und arbeitet 24/7, ohne Pause.
         </p>
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-7xl mx-auto mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 sm:mb-16">
           {plans.map((plan, i) => {
             const Card = (
-              <div className="glass-card rounded-3xl p-8 h-full flex flex-col interactive-card border border-white/40 shadow-brand hover-lift">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold mb-2 text-slate-800">{plan.name}</h3>
-                  <p className="text-sm text-slate-500 mb-4">{plan.description}</p>
-                  <div className="flex items-baseline justify-center gap-2 mb-2">
-                    <span className="text-5xl font-black text-gradient-primary">{plan.price}</span>
-                    <span className="text-slate-600 font-medium">{plan.period}</span>
+              <div className="glass-card rounded-3xl p-6 sm:p-8 h-full flex flex-col interactive-card border border-white/40 shadow-brand hover-lift">
+                <div className="text-center mb-6 sm:mb-8">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-2 text-slate-800">{plan.name}</h3>
+                  <p className="text-xs sm:text-sm text-slate-500 mb-3 sm:mb-4">{plan.description}</p>
+                  <div className="flex items-baseline justify-center gap-1 sm:gap-2 mb-2">
+                    <span className="text-3xl sm:text-4xl lg:text-5xl font-black text-gradient-primary">{plan.price}</span>
+                    <span className="text-slate-600 font-medium text-sm sm:text-base">{plan.period}</span>
                   </div>
                   <p className="text-xs text-slate-500 font-medium">{plan.trial}</p>
                 </div>
                 
-                <ul className="space-y-3 mb-8 flex-grow">
-                  <li className="flex items-start gap-3">
-                    <span className="text-brand-success text-lg mt-0.5">✅</span>
-                    <span className="text-slate-700 font-bold">{plan.quota}</span>
+                <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 flex-grow">
+                  <li className="flex items-start gap-2 sm:gap-3">
+                    <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0">✅</span>
+                    <span className="text-slate-700 font-bold text-xs sm:text-sm leading-relaxed">{plan.quota}</span>
                   </li>
                   {plan.features.map((feature, j) => (
-                    <li key={j} className="flex items-start gap-3">
-                      <span className="text-brand-success text-lg mt-0.5">✅</span>
-                      <span className="text-slate-700 font-medium leading-relaxed">{feature}</span>
+                    <li key={j} className="flex items-start gap-2 sm:gap-3">
+                      <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0">✅</span>
+                      <span className="text-slate-700 font-medium leading-relaxed text-xs sm:text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
@@ -117,7 +117,7 @@ const ModernPricing = () => {
                     asChild 
                     variant={plan.highlight ? "cta" : "glass"} 
                     size="lg" 
-                    className="w-full"
+                    className="w-full text-sm sm:text-base"
                   >
                     <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(plan.name)}&utm_content=pricing`}>
                       Kostenlos testen
@@ -127,7 +127,7 @@ const ModernPricing = () => {
                     <img
                       src="/images/shopify-logo-black.svg"
                       alt="Shopify Logo"
-                      className="h-4 w-auto opacity-80"
+                      className="h-3 sm:h-4 w-auto opacity-80"
                       loading="lazy"
                     />
                     <span>Im Shopify App Store</span>

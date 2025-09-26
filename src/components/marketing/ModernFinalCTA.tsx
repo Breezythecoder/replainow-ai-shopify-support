@@ -22,25 +22,25 @@ const ModernFinalCTA = () => {
           Werde Teil der Elite und <strong className="text-brand-warning">zerstöre deine Konkurrenz</strong> mit überlegener AI-Technologie.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mb-12 px-4">
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 justify-center items-center mb-8 sm:mb-12 px-4 max-w-4xl mx-auto">
           <Button 
             asChild 
             variant="glass" 
             size="xl" 
-            className="text-base sm:text-lg px-6 sm:px-8 md:px-12 py-6 bg-white text-indigo-600 hover:bg-white hover:scale-105 font-black shadow-brand-mega w-full sm:w-auto max-w-[90vw]"
+            className="text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-12 py-4 sm:py-6 bg-white text-indigo-600 hover:bg-white hover:scale-105 font-black shadow-brand-mega w-full sm:w-auto"
           >
             <a href={OAUTH_URL} className="flex items-center gap-2 justify-center">
-              🚀 <span className="hidden sm:inline">Kostenlos starten -</span> Shopify App
+              🚀 <span className="whitespace-nowrap">Kostenlos starten - Shopify App</span>
             </a>
           </Button>
           <Button 
             asChild 
             variant="glass" 
             size="xl" 
-            className="text-base sm:text-lg px-6 sm:px-8 md:px-12 py-6 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 hover:scale-105 font-bold shadow-brand w-full sm:w-auto"
+            className="text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-12 py-4 sm:py-6 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 hover:scale-105 font-bold shadow-brand w-full sm:w-auto"
           >
             <a href="#live-demo" className="flex items-center gap-2 justify-center">
-              📞 Demo buchen
+              📞 <span className="whitespace-nowrap">Demo buchen</span>
             </a>
           </Button>
         </div>
