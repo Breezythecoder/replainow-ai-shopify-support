@@ -64,7 +64,7 @@ const IndexZh = () => {
         image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
-      <ModernNavbar />
+      <ModernNavbarZh />
       <main id="main-content" role="main" aria-label="主要内容">
         <HeroZh />
         <ProblemSolutionZh />
@@ -72,7 +72,7 @@ const IndexZh = () => {
         <HowItWorksZh />
         <LiveDemoZh />
         <SocialProofZh />
-        <ModernComparison />
+        <ModernComparisonZh />
         <PricingZh />
         <FAQZh />
         <FinalCTAZh />

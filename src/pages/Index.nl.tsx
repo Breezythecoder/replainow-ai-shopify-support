@@ -64,7 +64,7 @@ const IndexNl = () => {
         image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
-      <ModernNavbar />
+      <ModernNavbarNl />
       <main id="main-content" role="main" aria-label="Hoofdinhoud">
         <HeroNl />
         <ProblemSolutionNl />
@@ -72,7 +72,7 @@ const IndexNl = () => {
         <HowItWorksNl />
         <LiveDemoNl />
         <SocialProofNl />
-        <ModernComparison />
+        <ModernComparisonNl />
         <PricingNl />
         <FAQNl />
         <FinalCTANl />

@@ -1,4 +1,4 @@
-import ModernNavbar from "@/components/marketing/ModernNavbar";
+import ModernNavbarFr from "@/components/marketing/ModernNavbar.fr";
 import HeroFr from "@/components/marketing/Hero.fr";
 import HowItWorksFr from "@/components/marketing/HowItWorks.fr";
 import ProblemSolutionFr from "@/components/marketing/ProblemSolution.fr";
@@ -6,7 +6,7 @@ import FeaturesFr from "@/components/marketing/Features.fr";
 import SocialProofFr from "@/components/marketing/SocialProof.fr";
 import LiveDemoFr from "@/components/marketing/LiveDemo.fr";
 import PricingFr from "@/components/marketing/Pricing.fr";
-import ModernComparison from "@/components/marketing/ModernComparison";
+import ModernComparisonFr from "@/components/marketing/ModernComparison.fr";
 import AboutFr from "@/components/marketing/About.fr";
 import ContactFr from "@/components/marketing/Contact.fr";
 import FinalCTAFr from "@/components/marketing/FinalCTA.fr";
@@ -64,7 +64,7 @@ const IndexFr = () => {
         image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
-      <ModernNavbar />
+      <ModernNavbarFr />
       <main id="main-content" role="main" aria-label="Contenu principal">
         <HeroFr />
         <ProblemSolutionFr />
@@ -72,7 +72,7 @@ const IndexFr = () => {
         <HowItWorksFr />
         <LiveDemoFr />
         <SocialProofFr />
-        <ModernComparison />
+        <ModernComparisonFr />
         <PricingFr />
         <FAQFr />
         <FinalCTAFr />

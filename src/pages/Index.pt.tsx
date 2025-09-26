@@ -64,7 +64,7 @@ const IndexPt = () => {
         image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
-      <ModernNavbar />
+      <ModernNavbarPt />
       <main id="main-content" role="main" aria-label="Conteúdo principal">
         <HeroPt />
         <ProblemSolutionPt />
@@ -72,7 +72,7 @@ const IndexPt = () => {
         <HowItWorksPt />
         <LiveDemoPt />
         <SocialProofPt />
-        <ModernComparison />
+        <ModernComparisonPt />
         <PricingPt />
         <FAQPt />
         <FinalCTAPt />
