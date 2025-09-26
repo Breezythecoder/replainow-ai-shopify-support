@@ -7,6 +7,7 @@ import ModernSocialProofEn from "@/components/marketing/ModernSocialProof.en";
 import ModernLiveDemoEn from "@/components/marketing/ModernLiveDemo.en";
 import ModernPricingEn from "@/components/marketing/ModernPricing.en";
 import ModernComparison from "@/components/marketing/ModernComparison";
+import ModernComparisonEn from "@/components/marketing/ModernComparison.en";
 import About from "@/components/marketing/About";
 import Contact from "@/components/marketing/Contact";
 import ModernFinalCTAEn from "@/components/marketing/ModernFinalCTA.en";
@@ -73,7 +74,7 @@ const IndexEn = () => {
         <ModernHowItWorksEn />
         <ModernLiveDemoEn />
         <ModernSocialProofEn />
-        <ModernComparison />
+        <ModernComparisonEn />
         <ModernPricingEn />
         <AIOptimizedFAQ />
         <ModernFinalCTAEn />

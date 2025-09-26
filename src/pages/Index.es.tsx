@@ -6,7 +6,7 @@ import ModernFeaturesEs from "@/components/marketing/ModernFeatures.es";
 import ModernSocialProofEs from "@/components/marketing/ModernSocialProof.es";
 import ModernLiveDemoEs from "@/components/marketing/ModernLiveDemo.es";
 import ModernPricingEs from "@/components/marketing/ModernPricing.es";
-import ModernComparison from "@/components/marketing/ModernComparison";
+import ModernComparisonEs from "@/components/marketing/ModernComparison.es";
 import About from "@/components/marketing/About";
 import Contact from "@/components/marketing/Contact";
 import ModernFinalCTAEs from "@/components/marketing/ModernFinalCTA.es";
@@ -73,7 +73,7 @@ const IndexEs = () => {
         <ModernHowItWorksEs />
         <ModernLiveDemoEs />
         <ModernSocialProofEs />
-        <ModernComparison />
+        <ModernComparisonEs />
         <ModernPricingEs />
         <AIOptimizedFAQ />
         <ModernFinalCTAEs />
