@@ -1,17 +1,18 @@
-import { useState, MouseEvent } from "react";
+import { useState, MouseEvent, useCallback } from "react";
 import { Button } from "@/components/ui/button";
 import { ShieldCheck, Zap, Plug, Star } from "lucide-react";
 import { heroContent as content } from "@/content/hero";
+import { OptimizedImage, performanceMonitor } from "@/components/ui/performance";
 
 const Hero = () => {
   const [pos, setPos] = useState({ x: "50%", y: "50%" });
 
-  const onMove = (e: MouseEvent<HTMLDivElement>) => {
+  const onMove = useCallback((e: MouseEvent<HTMLDivElement>) => {
     const r = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - r.left) / r.width) * 100;
     const y = ((e.clientY - r.top) / r.height) * 100;
     setPos({ x: `${x}%`, y: `${y}%` });
-  };
+  }, []);
 
   return (
     <section aria-label="ReplAInow Hero" className="relative overflow-hidden">
@@ -22,13 +23,12 @@ const Hero = () => {
       >
         {/* Optionaler Hintergrund (austauschbar) */}
         {content.media.background?.src && (
-          <img
+          <OptimizedImage
             src={content.media.background.src}
             alt={content.media.background.alt}
-            aria-hidden="true"
             className="pointer-events-none absolute inset-0 h-full w-full object-cover opacity-20"
-            loading="eager"
-            decoding="async"
+            priority={true}
+            sizes="100vw"
           />
         )}
         <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-20 speed-lines" />
@@ -87,14 +87,14 @@ const Hero = () => {
 
             {/* Medien-/Screenshotspalte */}
             <figure className="order-1 md:order-2">
-              <img
+              <OptimizedImage
                 src={content.media.image.src}
                 alt={content.media.image.alt}
-                className="w-full max-w-[560px] md:max-w-[640px] mx-auto rounded-xl shadow-brand hover-scale ring-1 ring-primary/10 object-contain"
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
+                className="w-full max-w-[560px] md:max-w-[640px] mx-auto rounded-xl shadow-brand hover-lift ring-1 ring-brand-primary/10 object-contain"
+                priority={true}
                 sizes="(min-width: 768px) 640px, 100vw"
+                width={640}
+                height={400}
               />
               <figcaption className="sr-only">{content.media.image.alt}</figcaption>
             </figure>

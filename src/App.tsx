@@ -1,8 +1,11 @@
+import React, { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { SkipToMainContent, useKeyboardNavigation } from "@/components/ui/accessibility";
+import { trackWebVitals } from "@/components/ui/performance";
 import Index from "./pages/Index";
 import IndexEn from "./pages/Index.en";
 import IndexEs from "./pages/Index.es";
@@ -21,12 +24,17 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+const AppContent = () => {
+  useKeyboardNavigation();
+  
+  // Initialize performance tracking
+  useEffect(() => {
+    trackWebVitals();
+  }, []);
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
+  return (
+    <>
+      <SkipToMainContent />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
@@ -45,6 +53,16 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+    </>
+  );
+};
+
+const App = () => (
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <AppContent />
     </TooltipProvider>
   </QueryClientProvider>
 );

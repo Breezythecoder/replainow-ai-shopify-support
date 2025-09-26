@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { X } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
-const OAUTH_URL = "https://apps.shopify.com/replainow/install";
+const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
 const StickyInstallBarFr = () => {
   const [visible, setVisible] = useState(false);

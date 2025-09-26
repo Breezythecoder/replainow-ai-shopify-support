@@ -27,7 +27,7 @@ const Index = () => {
       />
       <OrganizationJsonLd />
       <Navbar />
-      <main>
+      <main id="main-content" role="main" aria-label="Hauptinhalt">
         <Hero />
         <HowItWorks />
         <ProblemSolution />
