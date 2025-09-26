@@ -1,13 +1,16 @@
 import ModernNavbarFr from "@/components/marketing/ModernNavbar.fr";
 import ModernHeroFr from "@/components/marketing/ModernHero.fr";
-import ModernFeatures from "@/components/marketing/ModernFeatures";
+import ModernProblemSolutionFr from "@/components/marketing/ModernProblemSolution.fr";
+import ModernFeaturesFr from "@/components/marketing/ModernFeatures.fr";
+import ModernHowItWorksFr from "@/components/marketing/ModernHowItWorks.fr";
+import ModernLiveDemoFr from "@/components/marketing/ModernLiveDemo.fr";
+import ModernSocialProofFr from "@/components/marketing/ModernSocialProof.fr";
+import ModernPricingFr from "@/components/marketing/ModernPricing.fr";
 import ModernComparison from "@/components/marketing/ModernComparison";
-import ModernPricing from "@/components/marketing/ModernPricing";
-import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
 import Contact from "@/components/marketing/Contact";
+import ModernFinalCTAFr from "@/components/marketing/ModernFinalCTA.fr";
 import Footer from "@/components/marketing/Footer";
 import SEO from "@/components/SEO";
-import FAQFr from "@/components/marketing/FAQ.fr";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import LanguageSwitcher from "@/components/ui/language-switcher";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
@@ -63,11 +66,15 @@ const IndexFr = () => {
       <ModernNavbarFr />
       <main id="main-content" role="main" aria-label="Contenu principal" className="pb-0">
         <ModernHeroFr />
-        <ModernFeatures />
+        <ModernProblemSolutionFr />
+        <ModernFeaturesFr />
+        <ModernHowItWorksFr />
+        <ModernLiveDemoFr />
+        <ModernSocialProofFr />
         <ModernComparison />
-        <ModernPricing />
+        <ModernPricingFr />
         <AIOptimizedFAQ />
-        <ModernFinalCTA />
+        <ModernFinalCTAFr />
         <Contact />
       </main>
       <Footer />
