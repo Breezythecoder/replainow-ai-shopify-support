@@ -32,7 +32,7 @@ const ModernNavbarFr = () => {
         </div>
         
         <div className="flex items-center gap-3">
-          <Button asChild variant="cta" size="sm" className="font-bold">
+          <Button asChild variant="cta" size="lg" className="font-bold min-h-[44px] min-w-[44px] px-4">
             <a href={OAUTH_URL}>
               Essai Gratuit
             </a>

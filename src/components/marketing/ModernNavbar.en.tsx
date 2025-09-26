@@ -37,7 +37,7 @@ const ModernNavbarEn = () => {
           </div>
           
           <div className="flex items-center gap-3">
-            <Button asChild variant="cta" size="sm" className="font-bold hidden sm:flex">
+            <Button asChild variant="cta" size="lg" className="font-bold hidden sm:flex min-h-[44px] min-w-[44px] px-4">
               <a href={OAUTH_URL}>
                 Try Free
               </a>
@@ -45,8 +45,8 @@ const ModernNavbarEn = () => {
             
             <Button
               variant="ghost"
-              size="sm"
-              className="md:hidden"
+              size="lg"
+              className="md:hidden min-h-[44px] min-w-[44px]"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -86,7 +86,7 @@ const ModernNavbarEn = () => {
                 Contact
               </a>
               <div className="pt-2">
-                <Button asChild variant="cta" size="sm" className="w-full font-bold">
+                <Button asChild variant="cta" size="lg" className="w-full font-bold min-h-[44px]">
                   <a href={OAUTH_URL}>
                     Try Free
                   </a>
