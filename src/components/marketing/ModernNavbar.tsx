@@ -58,42 +58,45 @@ const ModernNavbar = () => {
         
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden glass-strong border-t border-white/30 backdrop-blur-lg">
-            <div className="container px-4 py-4 space-y-4">
+          <div className="md:hidden bg-white/95 backdrop-blur-lg border-t border-slate-200 shadow-lg">
+            <div className="container px-4 py-6 space-y-4">
               <a 
                 href="#features" 
-                className="block py-2 text-slate-600 hover:text-indigo-600 transition-colors font-medium"
+                className="block py-3 text-slate-700 hover:text-indigo-600 transition-colors font-semibold text-lg border-b border-slate-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Funktionen
               </a>
               <a 
                 href="#live-demo" 
-                className="block py-2 text-slate-600 hover:text-indigo-600 transition-colors font-medium"
+                className="block py-3 text-slate-700 hover:text-indigo-600 transition-colors font-semibold text-lg border-b border-slate-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Demo
               </a>
               <a 
                 href="#preise" 
-                className="block py-2 text-slate-600 hover:text-indigo-600 transition-colors font-medium"
+                className="block py-3 text-slate-700 hover:text-indigo-600 transition-colors font-semibold text-lg border-b border-slate-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Preise
               </a>
               <a 
                 href="#contact" 
-                className="block py-2 text-slate-600 hover:text-indigo-600 transition-colors font-medium"
+                className="block py-3 text-slate-700 hover:text-indigo-600 transition-colors font-semibold text-lg border-b border-slate-100"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Kontakt
               </a>
-              <div className="pt-2">
-                <Button asChild variant="cta" size="sm" className="w-full font-bold">
+              <div className="pt-4">
+                <Button asChild variant="cta" size="lg" className="w-full font-bold text-lg">
                   <a href={OAUTH_URL}>
-                    Kostenlos testen
+                    🚀 Kostenlos testen
                   </a>
                 </Button>
+              </div>
+              <div className="pt-2 flex justify-center">
+                <LanguageSwitcher variant="mobile" />
               </div>
             </div>
           </div>

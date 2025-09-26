@@ -45,76 +45,76 @@ const ModernHero = () => {
           ></div>
         </div>
 
-        <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 pt-8 lg:pt-0">
           {/* Left Column */}
-          <div className="space-y-8">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-gradient-hero leading-tight tracking-tighter">
+          <div className="space-y-6 lg:space-y-8">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gradient-hero leading-tight tracking-tighter">
               KI-Helpdesk für Shopify.
               <span className="block">Antwortet in Sekunden.</span>
             </h1>
             
-            <p className="text-xl text-slate-700 leading-relaxed">
+            <p className="text-lg sm:text-xl text-slate-700 leading-relaxed">
               Revolutionäre AI mit <strong className="text-gradient-primary">Echtzeit-Shopify-Daten</strong>: 
               Höhere Conversion, schnellere Antworten, 90% weniger Support-Tickets.
             </p>
             
             {/* ROI Stats Row */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-4">
-              <div className="glass-card p-3 sm:p-4 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
-                <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-black text-brand-primary">+187%</div>
-                <div className="text-xs sm:text-sm text-slate-600 font-bold mt-1 sm:mt-2">Conversion</div>
+            <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
+              <div className="glass-card p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-primary">+187%</div>
+                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Conversion</div>
               </div>
-              <div className="glass-card p-3 sm:p-4 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
-                <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-black text-brand-success">3 Sek</div>
-                <div className="text-xs sm:text-sm text-slate-600 font-bold mt-1 sm:mt-2">Antwortzeit</div>
+              <div className="glass-card p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-success">3 Sek</div>
+                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Antwortzeit</div>
               </div>
-              <div className="glass-card p-3 sm:p-4 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
-                <div className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-black text-brand-accent">75%</div>
-                <div className="text-xs sm:text-sm text-slate-600 font-bold mt-1 sm:mt-2">Einsparung</div>
+              <div className="glass-card p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-accent">75%</div>
+                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Einsparung</div>
               </div>
             </div>
             
             {/* Dual CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button asChild variant="cta" size="xl" className="group">
-                <a href={OAUTH_URL} className="flex items-center gap-2">
+            <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
+              <Button asChild variant="cta" size="xl" className="group flex-1 sm:flex-none">
+                <a href={OAUTH_URL} className="flex items-center justify-center gap-2 text-base lg:text-lg">
                   🚀 Jetzt kostenlos testen
                 </a>
               </Button>
-              <Button asChild variant="glass" size="xl">
-                <a href="#live-demo" className="flex items-center gap-2">
+              <Button asChild variant="glass" size="xl" className="flex-1 sm:flex-none">
+                <a href="#live-demo" className="flex items-center justify-center gap-2 text-base lg:text-lg">
                   📺 Live-Demo ansehen
                 </a>
               </Button>
             </div>
 
             {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center gap-6 text-sm text-slate-600">
-              <div className="flex items-center gap-1 glass-card px-4 py-2 rounded-full shadow-brand">
-                <span className="text-brand-warning">★★★★★</span>
-                <span className="font-semibold text-slate-700">4.9/5</span>
+            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4 lg:gap-6 text-sm">
+              <div className="flex items-center gap-2 glass-card px-4 py-3 rounded-full shadow-brand">
+                <span className="text-brand-warning text-lg">★★★★★</span>
+                <span className="font-bold text-slate-700">4.9/5</span>
               </div>
-              <span className="px-4 py-2 glass-card text-brand-success rounded-full font-bold shadow-brand">
+              <span className="px-4 py-3 glass-card text-brand-success rounded-full font-bold shadow-brand">
                 ✅ GDPR Compliant
               </span>
-              <span className="font-bold text-slate-700 glass-card px-4 py-2 rounded-full shadow-brand">👥 5000+ Händler</span>
+              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand">👥 5000+ Händler</span>
             </div>
           </div>
           
           {/* Right Column */}
-          <div className="relative">
+          <div className="relative mt-8 lg:mt-0">
             <div className="relative transform hover:scale-105 transition-transform duration-700">
               <img 
                 src="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png" 
                 alt="ReplAInow AI Dashboard 3D Mockup" 
-                className="w-full drop-shadow-2xl hover-float" 
+                className="w-full max-w-lg mx-auto lg:max-w-none drop-shadow-2xl hover-float" 
               />
               {/* Floating Success Badge */}
-              <div className="absolute -top-4 -right-4 glass-card px-6 py-3 rounded-full text-sm font-black text-brand-success shadow-brand-glow animate-pulse">
+              <div className="absolute -top-2 -right-2 sm:-top-4 sm:-right-4 glass-card px-3 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-black text-brand-success shadow-brand-glow animate-pulse">
                 ✅ +37% Zufriedenheit
               </div>
               {/* Floating Cost Savings */}
-              <div className="absolute -bottom-4 -left-4 glass-card px-6 py-3 rounded-full text-sm font-black text-brand-warning shadow-brand-glow animate-float">
+              <div className="absolute -bottom-2 -left-2 sm:-bottom-4 sm:-left-4 glass-card px-3 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-black text-brand-warning shadow-brand-glow animate-float">
                 💰 €1.900/Monat gespart
               </div>
             </div>
