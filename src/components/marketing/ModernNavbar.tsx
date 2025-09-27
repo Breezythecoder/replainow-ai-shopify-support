@@ -44,12 +44,12 @@ const ModernNavbar = () => {
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-opacity duration-300"></div>
               
               {/* Logo Container - Nur Icon */}
-              <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-2 border border-blue-500/30 group-hover:border-blue-400/60 transition-all duration-300">
-                <img
-                  src="/lovable-uploads/100738e9-73dd-442e-b79a-8b064b5b00c3.png"
-                  alt="ReplAInow Logo - KI-gestützter Shopify Support mit GPT-4.1 Technologie für automatisierten Kundenservice"
-                  className="h-8 w-auto group-hover:scale-110 transition-transform duration-300"
-                />
+                <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-2 border border-blue-500/30 group-hover:border-blue-400/60 transition-all duration-300">
+                  <img
+                    src="/lovable-uploads/100738e9-73dd-442e-b79a-8b064b5b00c3.png"
+                    alt="ReplAInow Logo - KI-gestützter Shopify Support mit GPT-4.1 Technologie für automatisierten Kundenservice"
+                    className="h-8 w-8 group-hover:scale-110 transition-transform duration-300 rounded-lg"
+                  />
                 
                 {/* AI Activity Indicator */}
                 <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse border-2 border-slate-800"></div>
