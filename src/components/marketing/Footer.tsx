@@ -56,13 +56,13 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="md:col-span-1">
-            <div className="flex items-center mb-4">
-              <img
-                src="/lovable-uploads/100738e9-73dd-442e-b79a-8b064b5b00c3.png"
-                alt="ReplAInow Logo"
-                className="h-10 w-auto"
-              />
-            </div>
+              <div className="flex items-center mb-4">
+                <img
+                  src="/lovable-uploads/ReplAInow Logo_Logogram_RGB.png"
+                  alt="ReplAInow Logo"
+                  className="h-10 w-10 rounded-lg"
+                />
+              </div>
             <p className="text-slate-300 text-sm leading-relaxed mb-4">
               Der intelligenteste AI-Support für Shopify-Händler. 
               24/7 verfügbar, 32+ Sprachen, DSGVO-konform.
