@@ -8,6 +8,7 @@ import { HelmetProvider } from "react-helmet-async";
 import { SkipToMainContent, useKeyboardNavigation } from "@/components/ui/accessibility";
 import { trackWebVitals } from "@/components/ui/performance";
 import { initWebVitals } from "@/utils/webVitals";
+import { initializeGA, trackPageView } from "@/utils/analytics";
 import Index from "./pages/Index";
 import IndexEn from "./pages/Index.en";
 import IndexEs from "./pages/Index.es";
@@ -31,6 +32,10 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 // SEO Pillar Pages
 const AIShopifyHelpdesk = lazy(() => import("./pages/AIShopifyHelpdesk"));
 const MultilingualSupport = lazy(() => import("./pages/MultilingualSupport"));
+const ShopifyCustomerService = lazy(() => import("./pages/ShopifyCustomerService"));
+const GorgiasAlternative = lazy(() => import("./pages/GorgiasAlternative"));
+const IntercomAlternative = lazy(() => import("./pages/IntercomAlternative"));
+const ShopifyAISupport = lazy(() => import("./pages/ShopifyAISupport"));
 
 // SEO Utility Pages
 const SitemapXML = lazy(() => import("./pages/SitemapXML"));
@@ -53,6 +58,7 @@ const AppContent = () => {
     useEffect(() => {
       trackWebVitals();
       initWebVitals();
+      initializeGA();
     
     // Handle GitHub Pages SPA redirect format
     // GitHub Pages redirects to /?/path format for SPAs
@@ -97,9 +103,13 @@ const AppContent = () => {
               <Route path="/nl" element={<IndexNl />} />
               <Route path="/zh" element={<IndexZh />} />
               
-              {/* SEO Pillar Pages */}
-              <Route path="/ai-shopify-helpdesk" element={<AIShopifyHelpdesk />} />
-              <Route path="/multilingual-support" element={<MultilingualSupport />} />
+                {/* SEO Pillar Pages */}
+                <Route path="/ai-shopify-helpdesk" element={<AIShopifyHelpdesk />} />
+                <Route path="/multilingual-support" element={<MultilingualSupport />} />
+                <Route path="/shopify-customer-service" element={<ShopifyCustomerService />} />
+                <Route path="/gorgias-alternative" element={<GorgiasAlternative />} />
+                <Route path="/intercom-alternative" element={<IntercomAlternative />} />
+                <Route path="/shopify-ai-support" element={<ShopifyAISupport />} />
               
               {/* SEO Utility Routes */}
               <Route path="/sitemap.xml" element={<SitemapXML />} />
