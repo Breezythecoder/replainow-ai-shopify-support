@@ -1,0 +1,1508 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - link "Zum Hauptinhalt springen" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=e4]:
+    - navigation [ref=e7]:
+      - link "ReplAInow Home" [ref=e8] [cursor=pointer]:
+        - /url: /
+        - img "ReplAInow Logo - KI-gestützter Shopify Support mit GPT-4.1 Technologie für automatisierten Kundenservice" [ref=e12] [cursor=pointer]
+        - generic [ref=e14] [cursor=pointer]:
+          - generic [ref=e15] [cursor=pointer]:
+            - text: Repl
+            - generic [ref=e16] [cursor=pointer]: AI
+            - text: now
+          - generic [ref=e17] [cursor=pointer]: GPT-4.1 Powered
+      - generic [ref=e18]:
+        - link "AI Features" [ref=e19] [cursor=pointer]:
+          - /url: "#features"
+          - img [ref=e21] [cursor=pointer]
+          - generic [ref=e31] [cursor=pointer]: AI Features
+        - link "Live Demo" [ref=e32] [cursor=pointer]:
+          - /url: "#live-demo"
+          - img [ref=e34] [cursor=pointer]
+          - generic [ref=e36] [cursor=pointer]: Live Demo
+        - link "Preise" [ref=e37] [cursor=pointer]:
+          - /url: "#pricing"
+          - img [ref=e39] [cursor=pointer]
+          - generic [ref=e50] [cursor=pointer]: Preise
+        - link "Kontakt" [ref=e51] [cursor=pointer]:
+          - /url: "#contact"
+          - img [ref=e53] [cursor=pointer]
+          - generic [ref=e59] [cursor=pointer]: Kontakt
+        - button "DE" [ref=e60] [cursor=pointer]:
+          - img
+          - generic [ref=e61] [cursor=pointer]: DE
+          - img
+      - link "JETZT INSTALLIEREN" [ref=e63] [cursor=pointer]:
+        - /url: https://apps.shopify.com/replainow-ai-support
+        - generic [ref=e65] [cursor=pointer]:
+          - img
+          - generic [ref=e66] [cursor=pointer]: JETZT INSTALLIEREN
+          - img
+  - main "Hauptinhalt" [ref=e68]:
+    - generic [ref=e69]:
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - generic [ref=e73]: "1"
+          - generic [ref=e74]: "0"
+          - generic [ref=e75]: "1"
+          - generic [ref=e76]: "1"
+          - generic [ref=e77]: "0"
+          - generic [ref=e78]: "1"
+          - generic [ref=e79]: "1"
+          - generic [ref=e80]: "1"
+          - generic [ref=e81]: "1"
+          - generic [ref=e82]: "0"
+          - generic [ref=e83]: "0"
+          - generic [ref=e84]: "0"
+          - generic [ref=e85]: "1"
+          - generic [ref=e86]: "0"
+          - generic [ref=e87]: "1"
+          - generic [ref=e88]: "0"
+          - generic [ref=e89]: "0"
+          - generic [ref=e90]: "0"
+          - generic [ref=e91]: "1"
+          - generic [ref=e92]: "0"
+        - generic [ref=e93]:
+          - generic [ref=e94]: "0"
+          - generic [ref=e95]: "0"
+          - generic [ref=e96]: "1"
+          - generic [ref=e97]: "1"
+          - generic [ref=e98]: "0"
+          - generic [ref=e99]: "0"
+          - generic [ref=e100]: "1"
+          - generic [ref=e101]: "1"
+          - generic [ref=e102]: "0"
+          - generic [ref=e103]: "1"
+          - generic [ref=e104]: "0"
+          - generic [ref=e105]: "0"
+          - generic [ref=e106]: "1"
+          - generic [ref=e107]: "1"
+          - generic [ref=e108]: "0"
+          - generic [ref=e109]: "1"
+          - generic [ref=e110]: "0"
+          - generic [ref=e111]: "1"
+          - generic [ref=e112]: "1"
+          - generic [ref=e113]: "0"
+        - generic [ref=e114]:
+          - generic [ref=e115]: "1"
+          - generic [ref=e116]: "0"
+          - generic [ref=e117]: "1"
+          - generic [ref=e118]: "0"
+          - generic [ref=e119]: "1"
+          - generic [ref=e120]: "0"
+          - generic [ref=e121]: "0"
+          - generic [ref=e122]: "0"
+          - generic [ref=e123]: "0"
+          - generic [ref=e124]: "1"
+          - generic [ref=e125]: "0"
+          - generic [ref=e126]: "0"
+          - generic [ref=e127]: "0"
+          - generic [ref=e128]: "1"
+          - generic [ref=e129]: "1"
+          - generic [ref=e130]: "0"
+          - generic [ref=e131]: "1"
+          - generic [ref=e132]: "1"
+          - generic [ref=e133]: "0"
+          - generic [ref=e134]: "1"
+        - generic [ref=e135]:
+          - generic [ref=e136]: "0"
+          - generic [ref=e137]: "0"
+          - generic [ref=e138]: "1"
+          - generic [ref=e139]: "0"
+          - generic [ref=e140]: "1"
+          - generic [ref=e141]: "1"
+          - generic [ref=e142]: "0"
+          - generic [ref=e143]: "1"
+          - generic [ref=e144]: "1"
+          - generic [ref=e145]: "1"
+          - generic [ref=e146]: "1"
+          - generic [ref=e147]: "1"
+          - generic [ref=e148]: "0"
+          - generic [ref=e149]: "0"
+          - generic [ref=e150]: "1"
+          - generic [ref=e151]: "0"
+          - generic [ref=e152]: "0"
+          - generic [ref=e153]: "0"
+          - generic [ref=e154]: "0"
+          - generic [ref=e155]: "1"
+        - generic [ref=e156]:
+          - generic [ref=e157]: "0"
+          - generic [ref=e158]: "0"
+          - generic [ref=e159]: "0"
+          - generic [ref=e160]: "1"
+          - generic [ref=e161]: "1"
+          - generic [ref=e162]: "1"
+          - generic [ref=e163]: "0"
+          - generic [ref=e164]: "1"
+          - generic [ref=e165]: "1"
+          - generic [ref=e166]: "1"
+          - generic [ref=e167]: "1"
+          - generic [ref=e168]: "0"
+          - generic [ref=e169]: "1"
+          - generic [ref=e170]: "0"
+          - generic [ref=e171]: "0"
+          - generic [ref=e172]: "0"
+          - generic [ref=e173]: "0"
+          - generic [ref=e174]: "1"
+          - generic [ref=e175]: "0"
+          - generic [ref=e176]: "0"
+        - generic [ref=e177]:
+          - generic [ref=e178]: "1"
+          - generic [ref=e179]: "0"
+          - generic [ref=e180]: "1"
+          - generic [ref=e181]: "1"
+          - generic [ref=e182]: "1"
+          - generic [ref=e183]: "1"
+          - generic [ref=e184]: "0"
+          - generic [ref=e185]: "1"
+          - generic [ref=e186]: "1"
+          - generic [ref=e187]: "0"
+          - generic [ref=e188]: "1"
+          - generic [ref=e189]: "0"
+          - generic [ref=e190]: "0"
+          - generic [ref=e191]: "1"
+          - generic [ref=e192]: "0"
+          - generic [ref=e193]: "1"
+          - generic [ref=e194]: "1"
+          - generic [ref=e195]: "1"
+          - generic [ref=e196]: "1"
+          - generic [ref=e197]: "1"
+        - generic [ref=e198]:
+          - generic [ref=e199]: "0"
+          - generic [ref=e200]: "0"
+          - generic [ref=e201]: "0"
+          - generic [ref=e202]: "0"
+          - generic [ref=e203]: "1"
+          - generic [ref=e204]: "1"
+          - generic [ref=e205]: "1"
+          - generic [ref=e206]: "0"
+          - generic [ref=e207]: "1"
+          - generic [ref=e208]: "1"
+          - generic [ref=e209]: "0"
+          - generic [ref=e210]: "1"
+          - generic [ref=e211]: "0"
+          - generic [ref=e212]: "1"
+          - generic [ref=e213]: "1"
+          - generic [ref=e214]: "0"
+          - generic [ref=e215]: "0"
+          - generic [ref=e216]: "1"
+          - generic [ref=e217]: "0"
+          - generic [ref=e218]: "1"
+        - generic [ref=e219]:
+          - generic [ref=e220]: "1"
+          - generic [ref=e221]: "0"
+          - generic [ref=e222]: "1"
+          - generic [ref=e223]: "1"
+          - generic [ref=e224]: "1"
+          - generic [ref=e225]: "0"
+          - generic [ref=e226]: "1"
+          - generic [ref=e227]: "1"
+          - generic [ref=e228]: "0"
+          - generic [ref=e229]: "1"
+          - generic [ref=e230]: "1"
+          - generic [ref=e231]: "0"
+          - generic [ref=e232]: "0"
+          - generic [ref=e233]: "1"
+          - generic [ref=e234]: "1"
+          - generic [ref=e235]: "1"
+          - generic [ref=e236]: "1"
+          - generic [ref=e237]: "1"
+          - generic [ref=e238]: "1"
+          - generic [ref=e239]: "1"
+        - generic [ref=e240]:
+          - generic [ref=e241]: "0"
+          - generic [ref=e242]: "1"
+          - generic [ref=e243]: "0"
+          - generic [ref=e244]: "1"
+          - generic [ref=e245]: "0"
+          - generic [ref=e246]: "0"
+          - generic [ref=e247]: "1"
+          - generic [ref=e248]: "0"
+          - generic [ref=e249]: "1"
+          - generic [ref=e250]: "0"
+          - generic [ref=e251]: "0"
+          - generic [ref=e252]: "1"
+          - generic [ref=e253]: "0"
+          - generic [ref=e254]: "1"
+          - generic [ref=e255]: "0"
+          - generic [ref=e256]: "1"
+          - generic [ref=e257]: "1"
+          - generic [ref=e258]: "0"
+          - generic [ref=e259]: "1"
+          - generic [ref=e260]: "0"
+        - generic [ref=e261]:
+          - generic [ref=e262]: "1"
+          - generic [ref=e263]: "1"
+          - generic [ref=e264]: "0"
+          - generic [ref=e265]: "1"
+          - generic [ref=e266]: "1"
+          - generic [ref=e267]: "0"
+          - generic [ref=e268]: "1"
+          - generic [ref=e269]: "1"
+          - generic [ref=e270]: "1"
+          - generic [ref=e271]: "1"
+          - generic [ref=e272]: "1"
+          - generic [ref=e273]: "1"
+          - generic [ref=e274]: "1"
+          - generic [ref=e275]: "1"
+          - generic [ref=e276]: "1"
+          - generic [ref=e277]: "0"
+          - generic [ref=e278]: "1"
+          - generic [ref=e279]: "1"
+          - generic [ref=e280]: "0"
+          - generic [ref=e281]: "1"
+        - generic [ref=e282]:
+          - generic [ref=e283]: "1"
+          - generic [ref=e284]: "0"
+          - generic [ref=e285]: "1"
+          - generic [ref=e286]: "0"
+          - generic [ref=e287]: "0"
+          - generic [ref=e288]: "0"
+          - generic [ref=e289]: "0"
+          - generic [ref=e290]: "0"
+          - generic [ref=e291]: "1"
+          - generic [ref=e292]: "1"
+          - generic [ref=e293]: "0"
+          - generic [ref=e294]: "0"
+          - generic [ref=e295]: "1"
+          - generic [ref=e296]: "0"
+          - generic [ref=e297]: "1"
+          - generic [ref=e298]: "1"
+          - generic [ref=e299]: "0"
+          - generic [ref=e300]: "1"
+          - generic [ref=e301]: "0"
+          - generic [ref=e302]: "0"
+        - generic [ref=e303]:
+          - generic [ref=e304]: "0"
+          - generic [ref=e305]: "0"
+          - generic [ref=e306]: "0"
+          - generic [ref=e307]: "0"
+          - generic [ref=e308]: "0"
+          - generic [ref=e309]: "0"
+          - generic [ref=e310]: "0"
+          - generic [ref=e311]: "0"
+          - generic [ref=e312]: "1"
+          - generic [ref=e313]: "0"
+          - generic [ref=e314]: "1"
+          - generic [ref=e315]: "0"
+          - generic [ref=e316]: "0"
+          - generic [ref=e317]: "0"
+          - generic [ref=e318]: "0"
+          - generic [ref=e319]: "1"
+          - generic [ref=e320]: "0"
+          - generic [ref=e321]: "1"
+          - generic [ref=e322]: "0"
+          - generic [ref=e323]: "0"
+        - generic [ref=e324]:
+          - generic [ref=e325]: "0"
+          - generic [ref=e326]: "0"
+          - generic [ref=e327]: "1"
+          - generic [ref=e328]: "0"
+          - generic [ref=e329]: "0"
+          - generic [ref=e330]: "1"
+          - generic [ref=e331]: "0"
+          - generic [ref=e332]: "1"
+          - generic [ref=e333]: "1"
+          - generic [ref=e334]: "1"
+          - generic [ref=e335]: "1"
+          - generic [ref=e336]: "0"
+          - generic [ref=e337]: "0"
+          - generic [ref=e338]: "0"
+          - generic [ref=e339]: "1"
+          - generic [ref=e340]: "1"
+          - generic [ref=e341]: "0"
+          - generic [ref=e342]: "0"
+          - generic [ref=e343]: "0"
+          - generic [ref=e344]: "0"
+        - generic [ref=e345]:
+          - generic [ref=e346]: "1"
+          - generic [ref=e347]: "1"
+          - generic [ref=e348]: "0"
+          - generic [ref=e349]: "0"
+          - generic [ref=e350]: "1"
+          - generic [ref=e351]: "0"
+          - generic [ref=e352]: "1"
+          - generic [ref=e353]: "0"
+          - generic [ref=e354]: "1"
+          - generic [ref=e355]: "0"
+          - generic [ref=e356]: "1"
+          - generic [ref=e357]: "0"
+          - generic [ref=e358]: "1"
+          - generic [ref=e359]: "0"
+          - generic [ref=e360]: "1"
+          - generic [ref=e361]: "0"
+          - generic [ref=e362]: "1"
+          - generic [ref=e363]: "1"
+          - generic [ref=e364]: "1"
+          - generic [ref=e365]: "1"
+        - generic [ref=e366]:
+          - generic [ref=e367]: "1"
+          - generic [ref=e368]: "0"
+          - generic [ref=e369]: "0"
+          - generic [ref=e370]: "0"
+          - generic [ref=e371]: "0"
+          - generic [ref=e372]: "0"
+          - generic [ref=e373]: "0"
+          - generic [ref=e374]: "1"
+          - generic [ref=e375]: "0"
+          - generic [ref=e376]: "1"
+          - generic [ref=e377]: "1"
+          - generic [ref=e378]: "1"
+          - generic [ref=e379]: "0"
+          - generic [ref=e380]: "1"
+          - generic [ref=e381]: "0"
+          - generic [ref=e382]: "1"
+          - generic [ref=e383]: "0"
+          - generic [ref=e384]: "0"
+          - generic [ref=e385]: "1"
+          - generic [ref=e386]: "0"
+        - generic [ref=e387]:
+          - generic [ref=e388]: "1"
+          - generic [ref=e389]: "1"
+          - generic [ref=e390]: "0"
+          - generic [ref=e391]: "0"
+          - generic [ref=e392]: "0"
+          - generic [ref=e393]: "1"
+          - generic [ref=e394]: "1"
+          - generic [ref=e395]: "1"
+          - generic [ref=e396]: "1"
+          - generic [ref=e397]: "1"
+          - generic [ref=e398]: "0"
+          - generic [ref=e399]: "1"
+          - generic [ref=e400]: "1"
+          - generic [ref=e401]: "0"
+          - generic [ref=e402]: "1"
+          - generic [ref=e403]: "1"
+          - generic [ref=e404]: "0"
+          - generic [ref=e405]: "0"
+          - generic [ref=e406]: "0"
+          - generic [ref=e407]: "0"
+        - generic [ref=e408]:
+          - generic [ref=e409]: "1"
+          - generic [ref=e410]: "0"
+          - generic [ref=e411]: "0"
+          - generic [ref=e412]: "1"
+          - generic [ref=e413]: "1"
+          - generic [ref=e414]: "1"
+          - generic [ref=e415]: "1"
+          - generic [ref=e416]: "1"
+          - generic [ref=e417]: "0"
+          - generic [ref=e418]: "0"
+          - generic [ref=e419]: "1"
+          - generic [ref=e420]: "0"
+          - generic [ref=e421]: "1"
+          - generic [ref=e422]: "0"
+          - generic [ref=e423]: "0"
+          - generic [ref=e424]: "1"
+          - generic [ref=e425]: "0"
+          - generic [ref=e426]: "0"
+          - generic [ref=e427]: "1"
+          - generic [ref=e428]: "0"
+        - generic [ref=e429]:
+          - generic [ref=e430]: "1"
+          - generic [ref=e431]: "1"
+          - generic [ref=e432]: "0"
+          - generic [ref=e433]: "1"
+          - generic [ref=e434]: "1"
+          - generic [ref=e435]: "0"
+          - generic [ref=e436]: "0"
+          - generic [ref=e437]: "0"
+          - generic [ref=e438]: "0"
+          - generic [ref=e439]: "0"
+          - generic [ref=e440]: "1"
+          - generic [ref=e441]: "1"
+          - generic [ref=e442]: "1"
+          - generic [ref=e443]: "1"
+          - generic [ref=e444]: "0"
+          - generic [ref=e445]: "0"
+          - generic [ref=e446]: "1"
+          - generic [ref=e447]: "0"
+          - generic [ref=e448]: "1"
+          - generic [ref=e449]: "0"
+        - generic [ref=e450]:
+          - generic [ref=e451]: "0"
+          - generic [ref=e452]: "0"
+          - generic [ref=e453]: "1"
+          - generic [ref=e454]: "0"
+          - generic [ref=e455]: "1"
+          - generic [ref=e456]: "1"
+          - generic [ref=e457]: "0"
+          - generic [ref=e458]: "1"
+          - generic [ref=e459]: "1"
+          - generic [ref=e460]: "0"
+          - generic [ref=e461]: "1"
+          - generic [ref=e462]: "1"
+          - generic [ref=e463]: "1"
+          - generic [ref=e464]: "0"
+          - generic [ref=e465]: "0"
+          - generic [ref=e466]: "0"
+          - generic [ref=e467]: "0"
+          - generic [ref=e468]: "0"
+          - generic [ref=e469]: "0"
+          - generic [ref=e470]: "0"
+        - generic [ref=e471]:
+          - generic [ref=e472]: "1"
+          - generic [ref=e473]: "1"
+          - generic [ref=e474]: "0"
+          - generic [ref=e475]: "1"
+          - generic [ref=e476]: "0"
+          - generic [ref=e477]: "1"
+          - generic [ref=e478]: "1"
+          - generic [ref=e479]: "0"
+          - generic [ref=e480]: "0"
+          - generic [ref=e481]: "0"
+          - generic [ref=e482]: "1"
+          - generic [ref=e483]: "0"
+          - generic [ref=e484]: "0"
+          - generic [ref=e485]: "0"
+          - generic [ref=e486]: "1"
+          - generic [ref=e487]: "1"
+          - generic [ref=e488]: "1"
+          - generic [ref=e489]: "1"
+          - generic [ref=e490]: "0"
+          - generic [ref=e491]: "1"
+      - generic [ref=e947]:
+        - generic [ref=e948]:
+          - generic [ref=e949]:
+            - generic [ref=e953]: 🚀 AI REVOLUTION 2025
+            - heading "KI-Helpdesk für Shopify. Antwortet in 3 Sekunden" [level=1] [ref=e954]:
+              - generic [ref=e955]: KI-Helpdesk für Shopify.
+              - generic [ref=e956]:
+                - text: Antwortet in
+                - generic [ref=e957]: 3 Sekunden
+          - paragraph [ref=e958]:
+            - generic [ref=e959]: Revolutionäre GPT-4.1 AI
+            - text: mit
+            - generic [ref=e960]: Echtzeit-Shopify-Daten
+            - text: ":"
+            - text: Höhere Conversion, schnellere Antworten,
+            - generic [ref=e961]: 90% weniger Support-Tickets
+            - text: .
+          - generic [ref=e962]:
+            - generic [ref=e963]:
+              - generic [ref=e964]: 5000+
+              - generic [ref=e965]: Aktive Stores
+            - generic [ref=e967]:
+              - generic [ref=e968]: 98%
+              - generic [ref=e969]: AI Genauigkeit
+            - generic [ref=e971]:
+              - generic [ref=e972]: 3s
+              - generic [ref=e973]: Response Time
+          - generic [ref=e975]:
+            - link "JETZT INSTALLIEREN" [ref=e976] [cursor=pointer]:
+              - /url: https://apps.shopify.com/replainow-ai-support
+              - text: JETZT INSTALLIEREN
+            - link "Live-Demo ansehen" [ref=e978] [cursor=pointer]:
+              - /url: "#live-demo"
+              - text: Live-Demo ansehen
+          - generic [ref=e979]:
+            - generic [ref=e981]: 4.9/5
+            - generic [ref=e982]: DSGVO-konform
+            - generic [ref=e983]: 5000+ Händler
+        - generic [ref=e985]:
+          - generic [ref=e987]:
+            - img "ReplAInow AI Support Dashboard zeigt intelligente Kundensupport-Automatisierung mit GPT-4.1 Technologie für Shopify-Händler. Dashboard mit Live-Chat, E-Mail-Management und automatisierten Antworten in 3 Sekunden." [ref=e988]
+            - generic [ref=e989]: LIVE
+            - generic [ref=e990]: AI ACTIVE
+          - generic [ref=e991]:
+            - generic [ref=e992]: 3s
+            - generic [ref=e993]: Response
+          - generic [ref=e994]:
+            - generic [ref=e995]: 98%
+            - generic [ref=e996]: Accuracy
+    - generic [ref=e1015]:
+      - generic [ref=e1019]: ⚡ PROBLEM VS LÖSUNG
+      - 'heading "Das Problem: überforderter Support Die Lösung: Intelligente AI" [level=2] [ref=e1020]':
+        - generic [ref=e1021]: "Das Problem:"
+        - generic [ref=e1022]: überforderter Support
+        - generic [ref=e1023]: "Die Lösung:"
+        - generic [ref=e1024]: Intelligente AI
+      - generic [ref=e1025]:
+        - generic [ref=e1026]:
+          - generic [ref=e1027]: ⚠️ OHNE REPLAINOW
+          - img "Chaotisches überfülltes E-Mail Postfach" [ref=e1028]
+          - list [ref=e1029]:
+            - listitem [ref=e1030]:
+              - img [ref=e1031]
+              - generic [ref=e1035]: 50+ E-Mails täglich bearbeiten
+            - listitem [ref=e1036]:
+              - img [ref=e1037]
+              - generic [ref=e1041]: Endlose Copy-Paste Antworten
+            - listitem [ref=e1042]:
+              - img [ref=e1043]
+              - generic [ref=e1046]: Kunden warten stundenlang
+            - listitem [ref=e1047]:
+              - img [ref=e1048]
+              - generic [ref=e1051]: Verlorene Verkäufe durch schlechten Service
+            - listitem [ref=e1052]:
+              - img [ref=e1053]
+              - generic [ref=e1058]: Überarbeitetes, gestresstes Team
+        - generic [ref=e1059]:
+          - generic [ref=e1060]: 🚀 MIT REPLAINOW
+          - img "ReplAInow AI Dashboard mit perfekter Antwort" [ref=e1061]
+          - list [ref=e1062]:
+            - listitem [ref=e1063]:
+              - img [ref=e1064]
+              - generic [ref=e1066]: AI antwortet in 3 Sekunden automatisch
+            - listitem [ref=e1067]:
+              - img [ref=e1068]
+              - generic [ref=e1072]: Perfekte Produktempfehlungen
+            - listitem [ref=e1073]:
+              - img [ref=e1074]
+              - generic [ref=e1078]: 32+ Sprachen automatisch
+            - listitem [ref=e1079]:
+              - img [ref=e1080]
+              - generic [ref=e1083]: +187% höhere Conversion Rate
+            - listitem [ref=e1084]:
+              - img [ref=e1085]
+              - generic [ref=e1095]: 90% weniger Support-Aufwand
+    - generic [ref=e1117]:
+      - generic [ref=e1118]:
+        - generic [ref=e1122]: 🚀 AI FEATURES
+        - heading "Warum ReplAInow die Konkurrenz zerstört" [level=2] [ref=e1123]:
+          - generic [ref=e1124]: Warum ReplAInow
+          - generic [ref=e1125]: die Konkurrenz zerstört
+        - paragraph [ref=e1126]:
+          - generic [ref=e1127]: Revolutionäre GPT-4.1 Technologie
+          - text: trifft auf
+          - generic [ref=e1128]: perfekte Shopify-Integration
+      - generic [ref=e1129]:
+        - generic [ref=e1130] [cursor=pointer]:
+          - img [ref=e1133] [cursor=pointer]
+          - heading "GPT-4.1 Intelligence" [level=3] [ref=e1143] [cursor=pointer]
+          - paragraph [ref=e1144] [cursor=pointer]: Neueste AI-Technologie versteht Kontext wie ein menschlicher Experte
+          - generic [ref=e1145] [cursor=pointer]:
+            - paragraph [ref=e1146] [cursor=pointer]: "🚀 AI Realität:"
+            - paragraph [ref=e1147] [cursor=pointer]: Deine AI denkt wie ein 10-jähriger Shopify-Experte - nur 1000x schneller
+          - generic [ref=e1149] [cursor=pointer]: +187% Conversion
+        - generic [ref=e1150] [cursor=pointer]:
+          - img [ref=e1153] [cursor=pointer]
+          - heading "3-Sekunden Antworten" [level=3] [ref=e1156] [cursor=pointer]
+          - paragraph [ref=e1157] [cursor=pointer]: Instant-Responses während Gorgias & Co. noch laden
+          - generic [ref=e1158] [cursor=pointer]:
+            - paragraph [ref=e1159] [cursor=pointer]: "🚀 AI Realität:"
+            - paragraph [ref=e1160] [cursor=pointer]: Kunde fragt AI antwortet Kunde kauft. Alles in 3 Sekunden
+          - generic [ref=e1162] [cursor=pointer]: 90% weniger Tickets
+        - generic [ref=e1163] [cursor=pointer]:
+          - img [ref=e1166] [cursor=pointer]
+          - heading "32+ Sprachen Nativ" [level=3] [ref=e1170] [cursor=pointer]
+          - paragraph [ref=e1171] [cursor=pointer]: Perfekte Antworten in Kundensprache - keine Übersetzungsfehler
+          - generic [ref=e1172] [cursor=pointer]:
+            - paragraph [ref=e1173] [cursor=pointer]: "🚀 AI Realität:"
+            - paragraph [ref=e1174] [cursor=pointer]: Französische Kundin bekommt perfekte Antwort auf Französisch
+          - generic [ref=e1176] [cursor=pointer]: +45% International
+        - generic [ref=e1177] [cursor=pointer]:
+          - img [ref=e1180] [cursor=pointer]
+          - heading "Echtzeit Shopify-Daten" [level=3] [ref=e1185] [cursor=pointer]
+          - paragraph [ref=e1186] [cursor=pointer]: AI kennt ALLE Produkte, Preise, Lagerbestände automatisch
+          - generic [ref=e1187] [cursor=pointer]:
+            - paragraph [ref=e1188] [cursor=pointer]: "🚀 AI Realität:"
+            - paragraph [ref=e1189] [cursor=pointer]: "AI weiß: 'iPhone Case ist auf Lager, 15% Rabatt verfügbar, Versand morgen'"
+          - generic [ref=e1191] [cursor=pointer]: 100% Accuracy
+        - generic [ref=e1192] [cursor=pointer]:
+          - img [ref=e1195] [cursor=pointer]
+          - heading "75% Kosteneinsparung" [level=3] [ref=e1198] [cursor=pointer]
+          - paragraph [ref=e1199] [cursor=pointer]: Überlegen UND günstiger als teure Konkurrenz
+          - generic [ref=e1200] [cursor=pointer]:
+            - paragraph [ref=e1201] [cursor=pointer]: "🚀 AI Realität:"
+            - paragraph [ref=e1202] [cursor=pointer]: Während Gorgias €200/Monat kostet, zahlst du nur €19
+          - generic [ref=e1204] [cursor=pointer]: €1.368/Jahr gespart
+        - generic [ref=e1205] [cursor=pointer]:
+          - heading "1-Klick Installation" [level=3] [ref=e1209] [cursor=pointer]
+          - paragraph [ref=e1210] [cursor=pointer]: Setup in unter 60 Sekunden - keine komplexe Konfiguration
+          - generic [ref=e1211] [cursor=pointer]:
+            - paragraph [ref=e1212] [cursor=pointer]: "🚀 AI Realität:"
+            - paragraph [ref=e1213] [cursor=pointer]: Klick → AI lernt deinen Store → Fertig. Keine IT-Abteilung nötig
+          - generic [ref=e1215] [cursor=pointer]: 60s Setup
+      - generic [ref=e1217]:
+        - heading "Bewiesene Resultate" [level=3] [ref=e1218]:
+          - generic [ref=e1219]: Bewiesene
+          - text: Resultate
+        - generic [ref=e1220]:
+          - generic [ref=e1221]:
+            - generic [ref=e1222]: 5000+
+            - generic [ref=e1223]: Aktive Stores
+          - generic [ref=e1224]:
+            - generic [ref=e1225]: 187%
+            - generic [ref=e1226]: Conversion Boost
+          - generic [ref=e1227]:
+            - generic [ref=e1228]: 2.1M
+            - generic [ref=e1229]: Umsatz generiert
+          - generic [ref=e1230]:
+            - generic [ref=e1231]: 90%
+            - generic [ref=e1232]: Weniger Tickets
+    - generic [ref=e1234]:
+      - heading "So einfach dominierst du den Kundenservice" [level=2] [ref=e1235]:
+        - text: So einfach
+        - generic [ref=e1236]: dominierst
+        - text: du den Kundenservice
+      - generic [ref=e1237]:
+        - generic [ref=e1238]:
+          - generic [ref=e1239]:
+            - img [ref=e1241]
+            - generic [ref=e1245]: "01"
+          - heading "App installieren" [level=3] [ref=e1247]
+          - paragraph [ref=e1248]: 1-Klick Installation aus dem Shopify App Store
+        - generic [ref=e1249]:
+          - generic [ref=e1250]:
+            - img [ref=e1252]
+            - generic [ref=e1254]: "02"
+          - heading "Automatische Verbindung" [level=3] [ref=e1256]
+          - paragraph [ref=e1257]: AI lernt ALLE deine Produkte & Policies automatisch
+        - generic [ref=e1258]:
+          - generic [ref=e1259]:
+            - img [ref=e1261]
+            - generic [ref=e1271]: "03"
+          - heading "AI antwortet sofort" [level=3] [ref=e1273]
+          - paragraph [ref=e1274]: Kunden bekommen perfekte Antworten in 3 Sekunden
+        - generic [ref=e1275]:
+          - generic [ref=e1276]:
+            - img [ref=e1278]
+            - generic [ref=e1281]: "04"
+          - heading "Profits explodieren" [level=3] [ref=e1282]
+          - paragraph [ref=e1283]: +187% Conversion bei 75% niedrigeren Kosten
+      - generic [ref=e1284]:
+        - link "Kostenlos starten" [ref=e1285] [cursor=pointer]:
+          - /url: https://apps.shopify.com/replainow-ai-support
+        - paragraph [ref=e1286]: 14 Tage kostenlos Setup-frei Jederzeit kündbar
+    - generic [ref=e1313]:
+      - generic [ref=e1314]:
+        - generic [ref=e1318]: ⚡ INTERAKTIVE DEMO
+        - heading "Live AI in Aktion" [level=2] [ref=e1319]:
+          - generic [ref=e1320]: Live AI in Aktion
+        - paragraph [ref=e1321]:
+          - generic [ref=e1322]: Echte AI-Antworten
+          - text: in Echtzeit -
+          - generic [ref=e1323]: 3 Sekunden
+          - text: von Frage zu Lösung
+      - generic [ref=e1327]:
+        - generic [ref=e1329]:
+          - generic [ref=e1330]:
+            - heading "Wähle ein Szenario:" [level=3] [ref=e1331]
+            - generic [ref=e1332]:
+              - button "Switch to Tech Store scenario" [ref=e1333] [cursor=pointer]:
+                - generic [ref=e1334] [cursor=pointer]: 📱
+                - text: Tech Store
+              - button "Switch to Fashion Store scenario" [ref=e1335] [cursor=pointer]:
+                - generic [ref=e1336] [cursor=pointer]: 👗
+                - text: Fashion Store
+              - button "Switch to Beauty Store scenario" [ref=e1337] [cursor=pointer]:
+                - generic [ref=e1338] [cursor=pointer]: 💄
+                - text: Beauty Store
+          - generic [ref=e1339]:
+            - button "Pause" [ref=e1340] [cursor=pointer]:
+              - img
+              - text: Pause
+            - button "Reset" [ref=e1341] [cursor=pointer]:
+              - img
+              - text: Reset
+        - generic [ref=e1342]:
+          - generic [ref=e1343]:
+            - generic [ref=e1344]:
+              - generic [ref=e1346]: ReplAInow AI Support
+              - generic [ref=e1347]: LIVE
+              - generic [ref=e1348]: Tech Store
+            - generic [ref=e1349]: 3s Response Time
+          - generic [ref=e1350]:
+            - generic [ref=e1352]:
+              - generic [ref=e1353]:
+                - img [ref=e1355]
+                - generic [ref=e1357]: Kunde
+                - generic [ref=e1358]: vor 2s
+              - paragraph [ref=e1359]: Hallo! Ich habe eine Frage...
+            - generic [ref=e1361]:
+              - generic [ref=e1362]:
+                - img [ref=e1364]
+                - generic [ref=e1374]: ReplAInow AI
+                - generic [ref=e1375]: vor 1s
+              - paragraph [ref=e1378]: Hallo! Wie kann ich dir heute helfen?
+          - generic [ref=e1379]:
+            - generic [ref=e1380]:
+              - generic [ref=e1381]:
+                - img [ref=e1382]
+                - text: 3s
+              - generic [ref=e1384]: Response Time
+            - generic [ref=e1385]:
+              - generic [ref=e1386]: 98%
+              - generic [ref=e1387]: Accuracy
+            - generic [ref=e1388]:
+              - generic [ref=e1389]: 24/7
+              - generic [ref=e1390]: Available
+            - generic [ref=e1391]:
+              - generic [ref=e1392]: 32+
+              - generic [ref=e1393]: Languages
+      - generic [ref=e1395]:
+        - heading "Live aus echten Shopify Stores" [level=3] [ref=e1396]:
+          - generic [ref=e1397]: Live
+          - text: aus echten Shopify Stores
+        - generic [ref=e1398]:
+          - generic [ref=e1399]:
+            - generic [ref=e1402]: TechGadgets24
+            - generic [ref=e1403]: "\"AI hat gerade eine Produktempfehlung zu iPhone Cases gegeben - Kunde kauft sofort 3 Stück!\""
+            - generic [ref=e1404]: +EUR 89.97 Umsatz
+          - generic [ref=e1405]:
+            - generic [ref=e1408]: BeautyStore
+            - generic [ref=e1409]: "\"Französische Kundin bekommt perfekte Antwort auf Französisch über Hautpflege-Routine\""
+            - generic [ref=e1410]: +37% Conversion
+          - generic [ref=e1411]:
+            - generic [ref=e1414]: FashionHub
+            - generic [ref=e1415]: "\"AI erklärt Größentabelle und empfiehlt passende Größe - Return Rate sinkt um 60%\""
+            - generic [ref=e1416]: "-60% Returns"
+    - generic [ref=e1418]:
+      - generic [ref=e1419]:
+        - heading "Live-Demo in Aktion" [level=2] [ref=e1420]:
+          - generic [ref=e1421]: Live-Demo
+          - text: in Aktion
+        - paragraph [ref=e1422]:
+          - text: Sieh dir an, wie ReplAInow in
+          - generic [ref=e1423]: 3 Sekunden
+          - text: komplexe Kundenfragen lst
+      - generic [ref=e1424]:
+        - generic [ref=e1425]:
+          - generic [ref=e1427]:
+            - heading "Demo Video" [level=3] [ref=e1428]
+            - paragraph [ref=e1429]:
+              - text: "Hier siehst du ReplAInow in Aktion:"
+              - text: Live Chat mit Kunden
+              - text: Automatische Produktempfehlungen
+              - text: 3-Sekunden Antwortzeit
+              - text: 32+ Sprachen
+            - button "Demo ansehen" [ref=e1430] [cursor=pointer]:
+              - img [ref=e1431] [cursor=pointer]
+              - text: Demo ansehen
+          - generic [ref=e1433]:
+            - generic [ref=e1434]:
+              - button [ref=e1435] [cursor=pointer]:
+                - img [ref=e1436] [cursor=pointer]
+              - button [ref=e1438] [cursor=pointer]:
+                - img [ref=e1439] [cursor=pointer]
+            - generic [ref=e1443]: ReplAInow Demo - 2:30
+        - generic [ref=e1444]:
+          - generic [ref=e1445]:
+            - heading "3 Sekunden" [level=3] [ref=e1446]
+            - paragraph [ref=e1447]: Durchschnittliche Antwortzeit
+          - generic [ref=e1448]:
+            - heading "32+ Sprachen" [level=3] [ref=e1449]
+            - paragraph [ref=e1450]: Automatische bersetzung
+          - generic [ref=e1451]:
+            - heading "98% Genauigkeit" [level=3] [ref=e1452]
+            - paragraph [ref=e1453]: Korrekte Antworten
+    - generic [ref=e1475]:
+      - generic [ref=e1479]: 🏭 BRANCHENLÖSUNGEN
+      - generic [ref=e1480]:
+        - heading "Branchenspezifische AI-Lösungen" [level=2] [ref=e1481]:
+          - generic [ref=e1482]: Branchenspezifische
+          - generic [ref=e1483]: AI-Lösungen
+        - paragraph [ref=e1484]:
+          - text: ReplAInow passt sich perfekt an deine Branche an und löst
+          - generic [ref=e1485]: branchenspezifische Kundenfragen
+      - generic [ref=e1486]:
+        - generic [ref=e1487]:
+          - img [ref=e1490]
+          - heading "Fashion & Mode" [level=3] [ref=e1494]
+          - generic [ref=e1495]:
+            - generic [ref=e1496]:
+              - generic [ref=e1497]: "Beispiel:"
+              - generic [ref=e1498]: ModeStore
+            - generic [ref=e1499]:
+              - generic [ref=e1500]: "Herausforderung:"
+              - generic [ref=e1501]: Größenberatung, Rückgabe, Styling-Tipps
+            - generic [ref=e1502]:
+              - generic [ref=e1503]: "AI-Lösung:"
+              - generic [ref=e1504]: AI erkennt Produktmerkmale und gibt personalisierte Empfehlungen
+            - generic [ref=e1505]:
+              - generic [ref=e1506]: "Ergebnis:"
+              - generic [ref=e1507]: +45% Conversion, -60% Support-Tickets
+        - generic [ref=e1508]:
+          - img [ref=e1511]
+          - heading "Elektronik & Tech" [level=3] [ref=e1514]
+          - generic [ref=e1515]:
+            - generic [ref=e1516]:
+              - generic [ref=e1517]: "Beispiel:"
+              - generic [ref=e1518]: TechGadgets
+            - generic [ref=e1519]:
+              - generic [ref=e1520]: "Herausforderung:"
+              - generic [ref=e1521]: Technische Fragen, Kompatibilität, Setup-Hilfe
+            - generic [ref=e1522]:
+              - generic [ref=e1523]: "AI-Lösung:"
+              - generic [ref=e1524]: AI kennt alle Produktspezifikationen und löst 90% der Fragen
+            - generic [ref=e1525]:
+              - generic [ref=e1526]: "Ergebnis:"
+              - generic [ref=e1527]: +67% Kundenzufriedenheit, -80% Wartezeiten
+        - generic [ref=e1528]:
+          - img [ref=e1531]
+          - heading "Beauty & Kosmetik" [level=3] [ref=e1533]
+          - generic [ref=e1534]:
+            - generic [ref=e1535]:
+              - generic [ref=e1536]: "Beispiel:"
+              - generic [ref=e1537]: BeautyStore
+            - generic [ref=e1538]:
+              - generic [ref=e1539]: "Herausforderung:"
+              - generic [ref=e1540]: Produktberatung, Hauttyp-Analyse, Anwendungstipps
+            - generic [ref=e1541]:
+              - generic [ref=e1542]: "AI-Lösung:"
+              - generic [ref=e1543]: AI analysiert Hauttyp und empfiehlt passende Produkte
+            - generic [ref=e1544]:
+              - generic [ref=e1545]: "Ergebnis:"
+              - generic [ref=e1546]: +52% Upselling, -70% Retouren
+        - generic [ref=e1547]:
+          - img [ref=e1550]
+          - heading "Home & Garten" [level=3] [ref=e1553]
+          - generic [ref=e1554]:
+            - generic [ref=e1555]:
+              - generic [ref=e1556]: "Beispiel:"
+              - generic [ref=e1557]: HomeGarden
+            - generic [ref=e1558]:
+              - generic [ref=e1559]: "Herausforderung:"
+              - generic [ref=e1560]: Montageanleitungen, Pflegetipps, Kompatibilität
+            - generic [ref=e1561]:
+              - generic [ref=e1562]: "AI-Lösung:"
+              - generic [ref=e1563]: AI liefert detaillierte Anleitungen und Pflegehinweise
+            - generic [ref=e1564]:
+              - generic [ref=e1565]: "Ergebnis:"
+              - generic [ref=e1566]: +38% Kundenzufriedenheit, -55% Support-Aufwand
+    - generic [ref=e1568]:
+      - generic [ref=e1569]:
+        - img "Shopify Plus Partner" [ref=e1570]
+        - generic [ref=e1571]:
+          - generic [ref=e1572]:
+            - img [ref=e1573]
+            - img [ref=e1575]
+            - img [ref=e1577]
+            - img [ref=e1579]
+            - img [ref=e1581]
+          - generic [ref=e1583]: 4.9/5
+        - generic [ref=e1584]: GDPR Compliant
+        - generic [ref=e1585]: 5000+ Stores
+      - heading "Das sagen echte Händler" [level=2] [ref=e1586]:
+        - text: Das sagen
+        - generic [ref=e1587]: echte Händler
+      - generic [ref=e1588]:
+        - generic [ref=e1589]:
+          - generic [ref=e1590]:
+            - img "Lisa M. Profile" [ref=e1591]
+            - generic [ref=e1592]:
+              - generic [ref=e1593]: Lisa M.
+              - generic [ref=e1594]: BeautyStore
+          - blockquote [ref=e1595]: "\"ReplAInow hat unseren Support revolutioniert. Die AI versteht unsere Produkte besser als manche Mitarbeiter!\""
+          - generic [ref=e1596]: 15 Stunden/Woche gespart
+        - generic [ref=e1597]:
+          - generic [ref=e1598]:
+            - img "Marco K. Profile" [ref=e1599]
+            - generic [ref=e1600]:
+              - generic [ref=e1601]: Marco K.
+              - generic [ref=e1602]: TechGadgets
+          - blockquote [ref=e1603]: "\"Kunden lieben die instant Antworten. Conversion ist durch die Decke gegangen!\""
+          - generic [ref=e1604]: +37% Kundenzufriedenheit
+        - generic [ref=e1605]:
+          - generic [ref=e1606]:
+            - img "Sarah T. Profile" [ref=e1607]
+            - generic [ref=e1608]:
+              - generic [ref=e1609]: Sarah T.
+              - generic [ref=e1610]: FashionHub
+          - blockquote [ref=e1611]: "\"Von Intercom zu ReplAInow - beste Entscheidung ever! Kosten runter, Performance hoch.\""
+          - generic [ref=e1612]: 12x ROI in 3 Monaten
+      - generic [ref=e1613]:
+        - heading "Bewiesene Resultate in Zahlen" [level=3] [ref=e1614]
+        - generic [ref=e1615]:
+          - generic [ref=e1616]:
+            - generic [ref=e1617]: 5000+
+            - generic [ref=e1618]: Zufriedene Händler
+          - generic [ref=e1619]:
+            - generic [ref=e1620]: 187%
+            - generic [ref=e1621]: Conversion Steigerung
+          - generic [ref=e1622]:
+            - generic [ref=e1623]: 2.1M
+            - generic [ref=e1624]: Zusätzlicher Umsatz generiert
+          - generic [ref=e1625]:
+            - generic [ref=e1626]: 90%
+            - generic [ref=e1627]: Weniger Support-Aufwand
+    - generic [ref=e1643]:
+      - generic [ref=e1647]: ⚔️ AI COMPARISON
+      - generic [ref=e1648]:
+        - heading "Warum ReplAInow die Konkurrenz zerstört" [level=2] [ref=e1649]:
+          - text: Warum ReplAInow die Konkurrenz
+          - generic [ref=e1650]: zerstört
+        - paragraph [ref=e1651]: Direkter Vergleich mit Gorgias, Intercom & Zendesk
+      - region "Comparison table - scrollable" [ref=e1653]:
+        - table "Comparison table between ReplAInow and competitors" [ref=e1657]:
+          - rowgroup [ref=e1658]:
+            - row "Feature ReplAInow Powered by GPT-4.1 Gorgias Intercom Zendesk" [ref=e1659]:
+              - cell "Feature" [ref=e1660]
+              - cell "ReplAInow Powered by GPT-4.1" [ref=e1661]:
+                - generic [ref=e1662]: ReplAInow
+                - generic [ref=e1663]: Powered by GPT-4.1
+                - img [ref=e1665]
+              - cell "Gorgias" [ref=e1667]
+              - cell "Intercom" [ref=e1668]
+              - cell "Zendesk" [ref=e1669]
+          - rowgroup [ref=e1670]:
+            - row "AI Intelligence YES GPT-4.1 Latest NO Basic AI NO Limited AI NO Old AI" [ref=e1671]:
+              - cell "AI Intelligence" [ref=e1672]
+              - cell "YES GPT-4.1 Latest" [ref=e1673]:
+                - generic [ref=e1674]:
+                  - img [ref=e1676]
+                  - generic [ref=e1678]: YES GPT-4.1 Latest
+              - cell "NO Basic AI" [ref=e1680]:
+                - generic [ref=e1681]: NO Basic AI
+              - cell "NO Limited AI" [ref=e1682]:
+                - generic [ref=e1683]: NO Limited AI
+              - cell "NO Old AI" [ref=e1684]:
+                - generic [ref=e1685]: NO Old AI
+            - row "Antwortzeit YES 3 Sekunden NO 2-5 Minuten NO 5-10 Minuten NO 10+ Minuten" [ref=e1686]:
+              - cell "Antwortzeit" [ref=e1687]
+              - cell "YES 3 Sekunden" [ref=e1688]:
+                - generic [ref=e1689]:
+                  - img [ref=e1691]
+                  - generic [ref=e1693]: YES 3 Sekunden
+              - cell "NO 2-5 Minuten" [ref=e1695]:
+                - generic [ref=e1696]: NO 2-5 Minuten
+              - cell "NO 5-10 Minuten" [ref=e1697]:
+                - generic [ref=e1698]: NO 5-10 Minuten
+              - cell "NO 10+ Minuten" [ref=e1699]:
+                - generic [ref=e1700]: NO 10+ Minuten
+            - row "Sprachen YES 32+ Nativ NO 10 Basic NO 15 Basic NO 20 Basic" [ref=e1701]:
+              - cell "Sprachen" [ref=e1702]
+              - cell "YES 32+ Nativ" [ref=e1703]:
+                - generic [ref=e1704]:
+                  - img [ref=e1706]
+                  - generic [ref=e1708]: YES 32+ Nativ
+              - cell "NO 10 Basic" [ref=e1710]:
+                - generic [ref=e1711]: NO 10 Basic
+              - cell "NO 15 Basic" [ref=e1712]:
+                - generic [ref=e1713]: NO 15 Basic
+              - cell "NO 20 Basic" [ref=e1714]:
+                - generic [ref=e1715]: NO 20 Basic
+            - row "Shopify Integration YES Echtzeit-Sync NO Manual Import NO Basic Connect NO Complex Setup" [ref=e1716]:
+              - cell "Shopify Integration" [ref=e1717]
+              - cell "YES Echtzeit-Sync" [ref=e1718]:
+                - generic [ref=e1719]:
+                  - img [ref=e1721]
+                  - generic [ref=e1723]: YES Echtzeit-Sync
+              - cell "NO Manual Import" [ref=e1725]:
+                - generic [ref=e1726]: NO Manual Import
+              - cell "NO Basic Connect" [ref=e1727]:
+                - generic [ref=e1728]: NO Basic Connect
+              - cell "NO Complex Setup" [ref=e1729]:
+                - generic [ref=e1730]: NO Complex Setup
+            - row "Preis/Monat YES EUR 19/Monat NO EUR 50+ NO EUR 74+ NO EUR 115+" [ref=e1731]:
+              - cell "Preis/Monat" [ref=e1732]
+              - cell "YES EUR 19/Monat" [ref=e1733]:
+                - generic [ref=e1734]:
+                  - img [ref=e1736]
+                  - generic [ref=e1738]: YES EUR 19/Monat
+              - cell "NO EUR 50+" [ref=e1740]:
+                - generic [ref=e1741]: NO EUR 50+
+              - cell "NO EUR 74+" [ref=e1742]:
+                - generic [ref=e1743]: NO EUR 74+
+              - cell "NO EUR 115+" [ref=e1744]:
+                - generic [ref=e1745]: NO EUR 115+
+            - row "Setup Zeit YES 60 Sekunden NO 2-3 Tage NO 1 Woche NO 2 Wochen" [ref=e1746]:
+              - cell "Setup Zeit" [ref=e1747]
+              - cell "YES 60 Sekunden" [ref=e1748]:
+                - generic [ref=e1749]:
+                  - img [ref=e1751]
+                  - generic [ref=e1753]: YES 60 Sekunden
+              - cell "NO 2-3 Tage" [ref=e1755]:
+                - generic [ref=e1756]: NO 2-3 Tage
+              - cell "NO 1 Woche" [ref=e1757]:
+                - generic [ref=e1758]: NO 1 Woche
+              - cell "NO 2 Wochen" [ref=e1759]:
+                - generic [ref=e1760]: NO 2 Wochen
+            - row "ROI Garantie YES 6x Conversion NO Neutral NO Neutral NO Negativ" [ref=e1761]:
+              - cell "ROI Garantie" [ref=e1762]
+              - cell "YES 6x Conversion" [ref=e1763]:
+                - generic [ref=e1764]:
+                  - img [ref=e1766]
+                  - generic [ref=e1768]: YES 6x Conversion
+              - cell "NO Neutral" [ref=e1770]:
+                - generic [ref=e1771]: NO Neutral
+              - cell "NO Neutral" [ref=e1772]:
+                - generic [ref=e1773]: NO Neutral
+              - cell "NO Negativ" [ref=e1774]:
+                - generic [ref=e1775]: NO Negativ
+      - generic [ref=e1782]:
+        - generic [ref=e1783]:
+          - heading "Kosteneinsparung" [level=3] [ref=e1784]:
+            - generic [ref=e1785]: Kosteneinsparung
+          - paragraph [ref=e1786]: Warum 75% weniger bezahlen und trotzdem die beste KI-Performance bekommen?
+        - generic [ref=e1787]:
+          - generic [ref=e1788]:
+            - generic [ref=e1789]:
+              - heading "Teure Konkurrenz" [level=4] [ref=e1790]
+              - paragraph [ref=e1791]: Basis-Features für Premium-Preise
+            - generic [ref=e1792]:
+              - generic [ref=e1793]:
+                - generic [ref=e1794]:
+                  - heading "Gorgias" [level=5] [ref=e1795]
+                  - generic [ref=e1796]: €50+/Monat
+                - generic [ref=e1797]:
+                  - generic [ref=e1800]: Basis AI
+                  - generic [ref=e1803]: Langsame Antworten
+                  - generic [ref=e1806]: Begrenzte Sprachen
+              - generic [ref=e1807]:
+                - generic [ref=e1808]:
+                  - heading "Intercom" [level=5] [ref=e1809]
+                  - generic [ref=e1810]: €74+/Monat
+                - generic [ref=e1811]:
+                  - generic [ref=e1814]: Teure Add-ons
+                  - generic [ref=e1817]: Komplexe Setup
+                  - generic [ref=e1820]: Begrenzte Integration
+              - generic [ref=e1821]:
+                - generic [ref=e1822]:
+                  - heading "Zendesk" [level=5] [ref=e1823]
+                  - generic [ref=e1824]: €115+/Monat
+                - generic [ref=e1825]:
+                  - generic [ref=e1828]: Überteuerte Features
+                  - generic [ref=e1831]: Lange Einarbeitung
+                  - generic [ref=e1834]: Versteckte Kosten
+            - generic [ref=e1835]:
+              - generic [ref=e1836]: €1.800+/Jahr
+              - generic [ref=e1837]: Nur für Basis-Features
+          - generic [ref=e1838]:
+            - generic [ref=e1839]:
+              - heading "ReplAInow Power" [level=4] [ref=e1840]
+              - paragraph [ref=e1841]: Premium-Features für faire Preise
+            - generic [ref=e1842]:
+              - generic [ref=e1843]:
+                - generic [ref=e1844]: €19/Monat
+                - generic [ref=e1845]: Alle Premium-Features inklusive
+              - generic [ref=e1846]:
+                - generic [ref=e1849]: GPT-4.1 AI Engine
+                - generic [ref=e1852]: 32+ Sprachen nativ
+                - generic [ref=e1855]: 3 Sekunden Antwortzeit
+                - generic [ref=e1858]: Unlimitierte AI-Antworten
+                - generic [ref=e1861]: DSGVO-konform
+                - generic [ref=e1864]: 24/7 Verfügbarkeit
+            - generic [ref=e1865]:
+              - generic [ref=e1866]: €228/Jahr
+              - generic [ref=e1867]: €1.572/Jahr gespart!
+              - generic [ref=e1868]: "ROI: 600%+ garantiert"
+    - region [ref=e1869]:
+      - generic [ref=e1887]:
+        - generic [ref=e1891]: 💰 AI PRICING
+        - heading "Mehr Support-Power für weniger Geld" [level=2] [ref=e1892]:
+          - generic [ref=e1893]: Mehr Support-Power für
+          - generic [ref=e1894]: weniger Geld
+        - paragraph [ref=e1895]: Ein Support-Agent kostet im Schnitt €2.000 pro Monat.
+        - paragraph [ref=e1896]:
+          - text: ReplAInow startet bei
+          - strong [ref=e1897]: €19/Monat
+          - text: und arbeitet 24/7, ohne Pause.
+        - generic [ref=e1898]:
+          - generic [ref=e1900]:
+            - generic [ref=e1901]:
+              - heading "Starter" [level=3] [ref=e1902]
+              - paragraph [ref=e1903]: Perfekt zum Testen
+              - generic [ref=e1904]:
+                - generic [ref=e1905]: €19
+                - generic [ref=e1906]: / Monat
+              - paragraph [ref=e1907]: 14 Tage kostenlos testen
+            - list [ref=e1908]:
+              - listitem [ref=e1909]:
+                - generic [ref=e1910]: Bis zu 300 AI Antworten / Monat
+              - listitem [ref=e1911]:
+                - generic [ref=e1912]: 1-Klick-Installation
+              - listitem [ref=e1913]:
+                - generic [ref=e1914]: Unlimitierte Shopdaten (Produkte, Seiten, Richtlinien etc.)
+              - listitem [ref=e1915]:
+                - generic [ref=e1916]: AI Mail & AI Live Chat
+              - listitem [ref=e1917]:
+                - generic [ref=e1918]: Personalisierbares Branding
+              - listitem [ref=e1919]:
+                - generic [ref=e1920]: E-Mail Versand über ReplAInow Adresse
+            - generic [ref=e1921]:
+              - link "Kostenlos testen" [ref=e1922] [cursor=pointer]:
+                - /url: https://apps.shopify.com/replainow-ai-support?utm_source=site&utm_campaign=Starter&utm_content=pricing
+              - generic [ref=e1923]:
+                - img "Shopify Logo"
+                - generic [ref=e1924]: Im Shopify App Store
+          - generic [ref=e1925]:
+            - generic [ref=e1926]: Beliebtester Plan
+            - generic [ref=e1928]:
+              - generic [ref=e1929]:
+                - heading "Growth" [level=3] [ref=e1930]
+                - paragraph [ref=e1931]: Für wachsende Stores
+                - generic [ref=e1932]:
+                  - generic [ref=e1933]: €49
+                  - generic [ref=e1934]: / Monat
+                - paragraph [ref=e1935]: 14 Tage kostenlos testen
+              - list [ref=e1936]:
+                - listitem [ref=e1937]:
+                  - generic [ref=e1938]: Bis zu 1500 AI Antworten / Monat
+                - listitem [ref=e1939]:
+                  - generic [ref=e1940]: 1-Klick-Installation
+                - listitem [ref=e1941]:
+                  - generic [ref=e1942]: Unlimitierte Shopdaten (Produkte, Seiten, Richtlinien etc.)
+                - listitem [ref=e1943]:
+                  - generic [ref=e1944]: AI Mail & AI Live Chat
+                - listitem [ref=e1945]:
+                  - generic [ref=e1946]: Personalisierbares Branding
+                - listitem [ref=e1947]:
+                  - generic [ref=e1948]: E-Mail Versand mit deiner Domain
+              - generic [ref=e1949]:
+                - link "Kostenlos testen" [ref=e1950] [cursor=pointer]:
+                  - /url: https://apps.shopify.com/replainow-ai-support?utm_source=site&utm_campaign=Growth&utm_content=pricing
+                - generic [ref=e1951]:
+                  - img "Shopify Logo"
+                  - generic [ref=e1952]: Im Shopify App Store
+          - generic [ref=e1954]:
+            - generic [ref=e1955]:
+              - heading "Pro" [level=3] [ref=e1956]
+              - paragraph [ref=e1957]: Für etablierte Stores
+              - generic [ref=e1958]:
+                - generic [ref=e1959]: €99
+                - generic [ref=e1960]: / Monat
+              - paragraph [ref=e1961]: 14 Tage kostenlos testen
+            - list [ref=e1962]:
+              - listitem [ref=e1963]:
+                - generic [ref=e1964]: Bis zu 3000 AI Antworten / Monat
+              - listitem [ref=e1965]:
+                - generic [ref=e1966]: 1-Klick-Installation
+              - listitem [ref=e1967]:
+                - generic [ref=e1968]: Unlimitierte Shopdaten (Produkte, Seiten, Richtlinien etc.)
+              - listitem [ref=e1969]:
+                - generic [ref=e1970]: AI Mail & AI Live Chat
+              - listitem [ref=e1971]:
+                - generic [ref=e1972]: Personalisierbares Branding
+              - listitem [ref=e1973]:
+                - generic [ref=e1974]: E-Mail Versand mit deiner Domain
+            - generic [ref=e1975]:
+              - link "Kostenlos testen" [ref=e1976] [cursor=pointer]:
+                - /url: https://apps.shopify.com/replainow-ai-support?utm_source=site&utm_campaign=Pro&utm_content=pricing
+              - generic [ref=e1977]:
+                - img "Shopify Logo"
+                - generic [ref=e1978]: Im Shopify App Store
+          - generic [ref=e1980]:
+            - generic [ref=e1981]:
+              - heading "Scale" [level=3] [ref=e1982]
+              - paragraph [ref=e1983]: Für Store-Ketten
+              - generic [ref=e1984]:
+                - generic [ref=e1985]: €199
+                - generic [ref=e1986]: / Monat
+              - paragraph [ref=e1987]: 14 Tage kostenlos testen
+            - list [ref=e1988]:
+              - listitem [ref=e1989]:
+                - generic [ref=e1990]: Unlimitierte AI Antworten
+              - listitem [ref=e1991]:
+                - generic [ref=e1992]: 1-Klick-Installation
+              - listitem [ref=e1993]:
+                - generic [ref=e1994]: Unlimitierte Shopdaten (Produkte, Seiten, Richtlinien etc.)
+              - listitem [ref=e1995]:
+                - generic [ref=e1996]: AI Mail & AI Live Chat
+              - listitem [ref=e1997]:
+                - generic [ref=e1998]: Personalisierbares Branding
+              - listitem [ref=e1999]:
+                - generic [ref=e2000]: E-Mail Versand mit deiner Domain
+            - generic [ref=e2001]:
+              - link "Kostenlos testen" [ref=e2002] [cursor=pointer]:
+                - /url: https://apps.shopify.com/replainow-ai-support?utm_source=site&utm_campaign=Scale&utm_content=pricing
+              - generic [ref=e2003]:
+                - img "Shopify Logo"
+                - generic [ref=e2004]: Im Shopify App Store
+        - generic [ref=e2006]:
+          - heading "Massive Kosteneinsparung vs. Per-Ticket-Abrechnung" [level=3] [ref=e2007]
+          - paragraph [ref=e2008]:
+            - text: Während Konkurrenten
+            - generic [ref=e2009]: pro Ticket
+            - text: abrechnen, ist bei uns im Scale Plan
+            - generic [ref=e2010]: ALLES UNLIMITIERT
+            - text: "!"
+          - generic [ref=e2011]:
+            - generic [ref=e2012]:
+              - generic [ref=e2013]: Gorgias
+              - generic [ref=e2014]: €50+/Monat
+              - generic [ref=e2015]: + 2-5 pro Ticket
+              - generic [ref=e2016]: €372+/Jahr gespart
+            - generic [ref=e2017]:
+              - generic [ref=e2018]: Intercom
+              - generic [ref=e2019]: €74+/Monat
+              - generic [ref=e2020]: + 1-3 pro Ticket
+              - generic [ref=e2021]: €660+/Jahr gespart
+            - generic [ref=e2022]:
+              - generic [ref=e2023]: Zendesk
+              - generic [ref=e2024]: €115+/Monat
+              - generic [ref=e2025]: + 0.50-2 pro Ticket
+              - generic [ref=e2026]: €1.152+/Jahr gespart
+          - generic [ref=e2027]:
+            - 'heading "ReplAInow Scale Plan: €199/Monat" [level=4] [ref=e2028]'
+            - paragraph [ref=e2029]: UNLIMITIERTE AI-Antworten
+            - paragraph [ref=e2030]: Keine versteckten Kosten Keine Per-Ticket-Gebühren Keine Limits
+          - generic [ref=e2031]:
+            - paragraph [ref=e2032]: Bei 1.000 Tickets/Monat zahlst du bei Gorgias über €3.000 extra!
+            - paragraph [ref=e2033]: "Mit ReplAInow: 0 extra - egal ob 100 oder 10.000 Tickets!"
+    - generic [ref=e2036]:
+      - generic [ref=e2037]:
+        - generic [ref=e2039]: HÄUFIGE FRAGEN
+        - heading "Häufig gestellte Fragen zu ReplAInow AI Helpdesk" [level=2] [ref=e2040]:
+          - generic [ref=e2041]: Häufig gestellte Fragen
+          - generic [ref=e2042]: zu ReplAInow AI Helpdesk
+        - paragraph [ref=e2043]: Alle wichtigen Informationen über AI-gestützten Shopify Support
+      - generic [ref=e2044]:
+        - generic [ref=e2045]:
+          - button "Was ist ReplAInow AI Helpdesk? + ReplAInow ist eine AI-gestützte Kundensupport-Lösung für Shopify mit GPT-4 Technologie." [ref=e2046] [cursor=pointer]:
+            - generic [ref=e2047] [cursor=pointer]:
+              - heading "Was ist ReplAInow AI Helpdesk?" [level=3] [ref=e2048] [cursor=pointer]
+              - generic [ref=e2050] [cursor=pointer]: +
+            - generic [ref=e2051] [cursor=pointer]: ReplAInow ist eine AI-gestützte Kundensupport-Lösung für Shopify mit GPT-4 Technologie.
+          - generic [ref=e2053]: ReplAInow ist eine AI-gestützte Kundensupport-Lösung für Shopify, die automatisch auf Kundenanfragen antwortet, Produktempfehlungen gibt und in über 32 Sprachen verfügbar ist. Die Software nutzt GPT-4 Technologie für präzise, menschenähnliche Antworten und integriert sich nahtlos in bestehende Shopify Stores.
+        - generic [ref=e2054]:
+          - button "Wie viel kostet ReplAInow? + ReplAInow startet bei €19/Monat mit 14 Tagen kostenloser Testphase." [ref=e2055] [cursor=pointer]:
+            - generic [ref=e2056] [cursor=pointer]:
+              - heading "Wie viel kostet ReplAInow?" [level=3] [ref=e2057] [cursor=pointer]
+              - generic [ref=e2059] [cursor=pointer]: +
+            - generic [ref=e2060] [cursor=pointer]: ReplAInow startet bei €19/Monat mit 14 Tagen kostenloser Testphase.
+          - generic [ref=e2062]: "ReplAInow startet bei €19/Monat für den Starter Plan. Weitere Pläne: Pro (€49/Monat), Scale (€199/Monat). Alle Pläne inkludieren 14 Tage kostenlose Testphase ohne Setup-Gebühren und unlimitierte AI-Antworten."
+        - generic [ref=e2063]:
+          - button "Ist ReplAInow DSGVO-konform? + Ja, ReplAInow ist vollständig DSGVO-konform und erfüllt alle EU-Datenschutzbestimmungen." [ref=e2064] [cursor=pointer]:
+            - generic [ref=e2065] [cursor=pointer]:
+              - heading "Ist ReplAInow DSGVO-konform?" [level=3] [ref=e2066] [cursor=pointer]
+              - generic [ref=e2068] [cursor=pointer]: +
+            - generic [ref=e2069] [cursor=pointer]: Ja, ReplAInow ist vollständig DSGVO-konform und erfüllt alle EU-Datenschutzbestimmungen.
+          - generic [ref=e2071]: Ja, ReplAInow ist vollständig DSGVO-konform und erfüllt alle europäischen Datenschutzbestimmungen. Alle Kundendaten werden sicher verschlüsselt übertragen und gespeichert, mit vollständiger Transparenz über Datenverarbeitung und Löschungsrechte.
+        - generic [ref=e2072]:
+          - button "Welche Sprachen unterstützt ReplAInow? + ReplAInow unterstützt über 32 Sprachen nativ, einschließlich Deutsch, Englisch, Französisch und Spanisch." [ref=e2073] [cursor=pointer]:
+            - generic [ref=e2074] [cursor=pointer]:
+              - heading "Welche Sprachen unterstützt ReplAInow?" [level=3] [ref=e2075] [cursor=pointer]
+              - generic [ref=e2077] [cursor=pointer]: +
+            - generic [ref=e2078] [cursor=pointer]: ReplAInow unterstützt über 32 Sprachen nativ, einschließlich Deutsch, Englisch, Französisch und Spanisch.
+          - generic [ref=e2080]: ReplAInow unterstützt über 32 Sprachen nativ, einschließlich Deutsch, Englisch, Französisch, Spanisch, Italienisch, Niederländisch, Portugiesisch, Chinesisch und viele weitere. Die AI erkennt automatisch die Kundensprache und antwortet entsprechend ohne Übersetzungsfehler.
+        - generic [ref=e2081]:
+          - button "Wie schnell antwortet die ReplAInow AI? + ReplAInow AI antwortet durchschnittlich in 3 Sekunden auf alle Kundenanfragen." [ref=e2082] [cursor=pointer]:
+            - generic [ref=e2083] [cursor=pointer]:
+              - heading "Wie schnell antwortet die ReplAInow AI?" [level=3] [ref=e2084] [cursor=pointer]
+              - generic [ref=e2086] [cursor=pointer]: +
+            - generic [ref=e2087] [cursor=pointer]: ReplAInow AI antwortet durchschnittlich in 3 Sekunden auf alle Kundenanfragen.
+          - generic [ref=e2089]: ReplAInow AI antwortet durchschnittlich in 3 Sekunden auf Kundenanfragen - 24/7 ohne Wartezeiten, Feiertage oder Verzögerungen. Dies ist 60x schneller als herkömmliche Support-Tools wie Gorgias oder Zendesk.
+        - generic [ref=e2090]:
+          - button "Kann ReplAInow menschliche Support-Mitarbeiter ersetzen? + ReplAInow automatisiert 90% der Support-Anfragen, menschliche Mitarbeiter bleiben für komplexe Fälle wichtig." [ref=e2091] [cursor=pointer]:
+            - generic [ref=e2092] [cursor=pointer]:
+              - heading "Kann ReplAInow menschliche Support-Mitarbeiter ersetzen?" [level=3] [ref=e2093] [cursor=pointer]
+              - generic [ref=e2095] [cursor=pointer]: +
+            - generic [ref=e2096] [cursor=pointer]: ReplAInow automatisiert 90% der Support-Anfragen, menschliche Mitarbeiter bleiben für komplexe Fälle wichtig.
+          - generic [ref=e2098]: ReplAInow automatisiert bis zu 90% aller Standard-Support-Anfragen wie Produktfragen, Bestellstatus, Rücksendungen und Größenberatung. Für komplexe oder sensible Angelegenheiten können menschliche Mitarbeiter nahtlos übernehmen. Dies reduziert die Arbeitsbelastung erheblich, ohne die Servicequalität zu beeinträchtigen.
+        - generic [ref=e2099]:
+          - 'button "Wie installiert man ReplAInow in Shopify? + Installation dauert unter 60 Sekunden: App aus Shopify Store installieren und automatisch konfigurieren lassen." [ref=e2100] [cursor=pointer]':
+            - generic [ref=e2101] [cursor=pointer]:
+              - heading "Wie installiert man ReplAInow in Shopify?" [level=3] [ref=e2102] [cursor=pointer]
+              - generic [ref=e2104] [cursor=pointer]: +
+            - generic [ref=e2105] [cursor=pointer]: "Installation dauert unter 60 Sekunden: App aus Shopify Store installieren und automatisch konfigurieren lassen."
+          - generic [ref=e2107]: "1. Gehe zum Shopify App Store und suche 'ReplAInow'. 2. Klicke 'App hinzufügen' und bestätige Installation. 3. ReplAInow synchronisiert automatisch alle Shopify-Daten. 4. Aktiviere AI Support für E-Mail und Chat. Gesamtdauer: unter 60 Sekunden."
+        - generic [ref=e2108]:
+          - button "Was ist der ROI von ReplAInow? + Kunden berichten von 187% höherer Conversion und 75% Kosteneinsparung gegenüber traditionellen Tools." [ref=e2109] [cursor=pointer]:
+            - generic [ref=e2110] [cursor=pointer]:
+              - heading "Was ist der ROI von ReplAInow?" [level=3] [ref=e2111] [cursor=pointer]
+              - generic [ref=e2113] [cursor=pointer]: +
+            - generic [ref=e2114] [cursor=pointer]: Kunden berichten von 187% höherer Conversion und 75% Kosteneinsparung gegenüber traditionellen Tools.
+          - generic [ref=e2116]: "ReplAInow Kunden berichten durchschnittlich von: 187% höhere Conversion-Rate durch schnellere Antworten, 75% Kosteneinsparung gegenüber Gorgias/Zendesk, 90% weniger Support-Aufwand für Teams, 12x ROI innerhalb von 3 Monaten durch automatisierte Produktempfehlungen."
+      - generic [ref=e2118]:
+        - heading "Weitere Fragen zu ReplAInow AI Helpdesk?" [level=3] [ref=e2119]
+        - paragraph [ref=e2120]: Unser Support-Team hilft gerne weiter - natürlich auch mit AI-Unterstützung!
+        - generic [ref=e2121]:
+          - link "Kostenlos testen" [ref=e2122] [cursor=pointer]:
+            - /url: https://apps.shopify.com/replainow-ai-support
+          - link "Live Demo ansehen" [ref=e2123] [cursor=pointer]:
+            - /url: "#live-demo"
+    - generic [ref=e2144]:
+      - generic [ref=e2145]:
+        - generic [ref=e2147]: STARTE JETZT
+        - heading "Bereit für die AI-Revolution?" [level=2] [ref=e2148]:
+          - generic [ref=e2149]: Bereit für die AI-Revolution?
+        - paragraph [ref=e2150]:
+          - text: Über
+          - generic [ref=e2151]: 5000+ Shopify-Händler
+          - text: nutzen bereits ReplAInow. Werde Teil der Elite und
+          - generic [ref=e2152]: zerstöre deine Konkurrenz
+          - text: mit überlegener AI-Technologie.
+      - generic [ref=e2153]:
+        - link "→ JETZT INSTALLIEREN" [ref=e2154] [cursor=pointer]:
+          - /url: https://apps.shopify.com/replainow-ai-support
+          - generic [ref=e2155] [cursor=pointer]: →
+          - generic [ref=e2156] [cursor=pointer]: JETZT INSTALLIEREN
+        - link "📺 LIVE DEMO" [ref=e2158] [cursor=pointer]:
+          - /url: "#live-demo"
+          - generic [ref=e2159] [cursor=pointer]: 📺
+          - generic [ref=e2160] [cursor=pointer]: LIVE DEMO
+      - generic [ref=e2161]:
+        - generic [ref=e2162]:
+          - generic [ref=e2163]: ✓
+          - generic [ref=e2164]: 14 Tage kostenlos
+        - generic [ref=e2165]:
+          - generic [ref=e2166]: ⚡
+          - generic [ref=e2167]: Setup-frei
+        - generic [ref=e2168]:
+          - generic [ref=e2169]: 🔄
+          - generic [ref=e2170]: Jederzeit kündbar
+        - generic [ref=e2171]:
+          - generic [ref=e2172]: 💰
+          - generic [ref=e2173]: Geld-zurück
+      - generic [ref=e2174]:
+        - generic [ref=e2175]:
+          - heading "Warum 5000+ Shopify-Händler auf ReplAInow setzen" [level=3] [ref=e2176]
+          - paragraph [ref=e2177]: Starte noch heute mit der 14-tägigen kostenlosen Testphase
+        - generic [ref=e2178]:
+          - generic [ref=e2179]:
+            - generic [ref=e2180]: 5000+
+            - generic [ref=e2181]: Zufriedene Händler
+          - generic [ref=e2182]:
+            - generic [ref=e2183]: €2.1M
+            - generic [ref=e2184]: Umsatz generiert
+          - generic [ref=e2185]:
+            - generic [ref=e2186]: 187%
+            - generic [ref=e2187]: Conversion Boost
+    - region "Kontakt" [ref=e2188]:
+      - generic [ref=e2189]:
+        - generic [ref=e2190]:
+          - heading "Kontakt" [level=2] [ref=e2191]
+          - paragraph [ref=e2192]:
+            - text: Haben Sie Fragen? Wir sind hier, um zu helfen.
+            - generic [ref=e2193]: Antworten innerhalb von 24 Stunden.
+        - generic [ref=e2195]:
+          - generic [ref=e2196]:
+            - generic [ref=e2197]:
+              - heading "Kontaktinformationen" [level=3] [ref=e2198]
+              - generic [ref=e2199]:
+                - generic [ref=e2200]:
+                  - img [ref=e2202]
+                  - generic [ref=e2205]:
+                    - heading "E-Mail Support" [level=4] [ref=e2206]
+                    - paragraph [ref=e2207]: support@replainow.com
+                    - paragraph [ref=e2208]: Antworten innerhalb von 24h
+                - generic [ref=e2209]:
+                  - img [ref=e2211]
+                  - generic [ref=e2214]:
+                    - heading "Support Zeiten" [level=4] [ref=e2215]
+                    - paragraph [ref=e2216]: "Mo-Fr: 9:00 - 18:00 CET"
+                    - paragraph [ref=e2217]: 24/7 AI Support verfgbar
+                - generic [ref=e2218]:
+                  - img [ref=e2220]
+                  - generic [ref=e2222]:
+                    - heading "Live Chat" [level=4] [ref=e2223]
+                    - paragraph [ref=e2224]: Direkt auf der Website
+                    - paragraph [ref=e2225]: AI antwortet sofort
+            - generic [ref=e2226]:
+              - heading "Hufige Fragen" [level=4] [ref=e2227]
+              - generic [ref=e2228]:
+                - link "Wie funktioniert die Installation?" [ref=e2229] [cursor=pointer]:
+                  - /url: "#faq"
+                - link "Welche Sprachen werden untersttzt?" [ref=e2230] [cursor=pointer]:
+                  - /url: "#faq"
+                - link "Kann ich die AI trainieren?" [ref=e2231] [cursor=pointer]:
+                  - /url: "#faq"
+                - link "Wie sicher sind meine Daten?" [ref=e2232] [cursor=pointer]:
+                  - /url: "#faq"
+          - generic [ref=e2233]:
+            - heading "Nachricht senden" [level=3] [ref=e2234]
+            - generic [ref=e2235]:
+              - generic [ref=e2236]:
+                - generic [ref=e2237]:
+                  - generic [ref=e2238]: Name *
+                  - textbox "Name *" [ref=e2239]
+                - generic [ref=e2240]:
+                  - generic [ref=e2241]: E-Mail *
+                  - textbox "E-Mail *" [ref=e2242]
+              - generic [ref=e2243]:
+                - generic [ref=e2244]: Nachricht *
+                - textbox "Nachricht *" [ref=e2245]
+              - button "Nachricht senden" [ref=e2246] [cursor=pointer]:
+                - generic [ref=e2247] [cursor=pointer]:
+                  - img
+                  - text: Nachricht senden
+  - contentinfo [ref=e2248]:
+    - generic [ref=e2251]:
+      - generic [ref=e2252]:
+        - heading "Über ReplAInow" [level=3] [ref=e2253]:
+          - text: Über
+          - generic [ref=e2254]: ReplAInow
+        - paragraph [ref=e2255]: ReplAInow wurde von Shopify-Experten entwickelt, die selbst jahrelang mit ineffizienten Support-Tools kämpften. Wir haben die Lösung geschaffen, die wir selbst gebraucht hätten.
+        - generic [ref=e2256]:
+          - heading "Unser Versprechen" [level=4] [ref=e2257]
+          - paragraph [ref=e2258]: Jeder Shopify-Händler verdient einen Support, der 24/7 verfügbar ist, in der Sprache des Kunden antwortet und dabei 75% günstiger ist als die Konkurrenz.
+      - generic [ref=e2259]:
+        - heading "Von Ruben Calabrese, CEO" [level=3] [ref=e2260]:
+          - text: Von
+          - generic [ref=e2261]: Ruben Calabrese
+          - text: ", CEO"
+        - generic [ref=e2262]:
+          - generic [ref=e2263]:
+            - generic [ref=e2264]: RC
+            - generic [ref=e2265]:
+              - heading "Ruben Calabrese" [level=4] [ref=e2266]
+              - paragraph [ref=e2267]: CEO & Gründer
+          - blockquote [ref=e2268]: "\"Als E-Commerce Unternehmer und Programmierer habe ich selbst erlebt, wie frustrierend es ist, wenn Kundenanfragen stundenlang unbeantwortet bleiben. ReplAInow ist die Lösung, die ich mir damals gewünscht hätte - intelligent, schnell und bezahlbar.\""
+    - generic [ref=e2270]:
+      - generic [ref=e2271]:
+        - img "ReplAInow Logo" [ref=e2273]
+        - paragraph [ref=e2274]: Der intelligenteste AI-Support für Shopify-Händler. 24/7 verfügbar, 32+ Sprachen, DSGVO-konform.
+        - generic [ref=e2275]:
+          - link "Twitter" [ref=e2276] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e2277] [cursor=pointer]
+          - link "LinkedIn" [ref=e2279] [cursor=pointer]:
+            - /url: "#"
+            - img [ref=e2280] [cursor=pointer]
+      - generic [ref=e2284]:
+        - heading "Produkt" [level=4] [ref=e2285]
+        - list [ref=e2286]:
+          - listitem [ref=e2287]:
+            - link "Funktionen" [ref=e2288] [cursor=pointer]:
+              - /url: "#features"
+          - listitem [ref=e2289]:
+            - link "Preise" [ref=e2290] [cursor=pointer]:
+              - /url: "#pricing"
+          - listitem [ref=e2291]:
+            - link "Live Demo" [ref=e2292] [cursor=pointer]:
+              - /url: "#live-demo"
+          - listitem [ref=e2293]:
+            - link "Installieren" [ref=e2294] [cursor=pointer]:
+              - /url: https://apps.shopify.com/replainow-ai-support
+      - generic [ref=e2295]:
+        - heading "Support" [level=4] [ref=e2296]
+        - list [ref=e2297]:
+          - listitem [ref=e2298]:
+            - link "Kontakt" [ref=e2299] [cursor=pointer]:
+              - /url: "#contact"
+          - listitem [ref=e2300]:
+            - link "Datenschutz" [ref=e2301] [cursor=pointer]:
+              - /url: /privacy
+          - listitem [ref=e2302]:
+            - link "Nutzungsbedingungen" [ref=e2303] [cursor=pointer]:
+              - /url: /terms
+          - listitem [ref=e2304]:
+            - link "Sicherheit" [ref=e2305] [cursor=pointer]:
+              - /url: /security
+          - listitem [ref=e2306]:
+            - link "Impressum" [ref=e2307] [cursor=pointer]:
+              - /url: /impressum
+          - listitem [ref=e2308]:
+            - link "Rückerstattung" [ref=e2309] [cursor=pointer]:
+              - /url: /refund
+          - listitem [ref=e2310]:
+            - link "Cookie-Richtlinie" [ref=e2311] [cursor=pointer]:
+              - /url: /cookies
+          - listitem [ref=e2312]:
+            - link "Deinstallation" [ref=e2313] [cursor=pointer]:
+              - /url: /uninstall
+      - generic [ref=e2314]:
+        - heading "Kontakt" [level=4] [ref=e2315]
+        - generic [ref=e2316]:
+          - generic [ref=e2317]:
+            - img [ref=e2318]
+            - generic [ref=e2321]: support@replainow.com
+          - generic [ref=e2322]:
+            - img [ref=e2323]
+            - generic [ref=e2326]: Dubai, UAE
+    - generic [ref=e2329]:
+      - paragraph [ref=e2330]: © 2025 ReplAInow - PrimeVision Group LLC. Alle Rechte vorbehalten.
+      - generic [ref=e2331]:
+        - generic [ref=e2332]: Made with
+        - img [ref=e2333]
+        - generic [ref=e2335]: in Dubai
+```

@@ -151,4 +151,24 @@ test.describe('SEO Tests', () => {
       expect(alt).not.toBe('');
     }
   });
+
+  test('JSON-LD enthält Organization', async ({ page }) => {
+    await page.goto('/');
+    const ldHandles = await page.$$eval('script[type="application/ld+json"]', els => els.map(e => e.textContent));
+    const hasOrg = ldHandles.some(txt => txt && JSON.parse(txt)['@type']?.includes?.("Organization") || JSON.parse(txt)['@type']==="Organization");
+    expect(hasOrg).toBeTruthy();
+  });
+
+  test('JSON-LD ist valide', async ({ page }) => {
+    await page.goto('/ai-shopify-helpdesk');
+    const ldHandles = await page.$$eval('script[type="application/ld+json"]', els => els.map(e => e.textContent));
+    
+    for (const ldText of ldHandles) {
+      if (ldText) {
+        const ld = JSON.parse(ldText);
+        expect(ld['@context']).toBe('https://schema.org');
+        expect(ld['@type']).toBeTruthy();
+      }
+    }
+  });
 });

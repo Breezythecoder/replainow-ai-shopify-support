@@ -1,0 +1,250 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - link "Zum Hauptinhalt springen" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - generic [ref=e6]:
+      - heading "Multilingual Support" [level=1] [ref=e7]:
+        - generic [ref=e8]: Multilingual
+        - text: Support
+      - paragraph [ref=e9]: Automatischer mehrsprachiger Kundenservice für globale Shopify Stores. Unterstützung für 32+ Sprachen mit KI-gestützter Übersetzung.
+      - generic [ref=e10]:
+        - heading "🌍 TL;DR" [level=2] [ref=e11]
+        - paragraph [ref=e12]:
+          - text: ReplAInow unterstützt
+          - strong [ref=e13]: 32+ Sprachen nativ
+          - text: mit automatischer Spracherkennung und
+          - strong [ref=e14]: 99%+ Übersetzungsgenauigkeit
+          - text: . Ihre Kunden erhalten Support in ihrer Muttersprache ohne zusätzliche Kosten.
+          - link "Ab €19/Monat" [ref=e15] [cursor=pointer]:
+            - /url: /pricing
+          - text: .
+      - generic [ref=e16]:
+        - link "Jetzt installieren" [ref=e17] [cursor=pointer]:
+          - /url: https://apps.shopify.com/replainow-ai-support
+          - img
+          - text: Jetzt installieren
+        - link "Sprachen ansehen" [ref=e18] [cursor=pointer]:
+          - /url: "#languages"
+          - img
+          - text: Sprachen ansehen
+    - generic [ref=e20]:
+      - heading "Was ist Multilingual Support?" [level=2] [ref=e21]
+      - generic [ref=e22]:
+        - paragraph [ref=e23]:
+          - strong [ref=e24]: Multilingual Support
+          - text: bedeutet, dass Ihr Kundenservice automatisch in der Sprache des Kunden antwortet. ReplAInow erkennt die Sprache der Kundenanfrage und generiert passende Antworten in der jeweiligen Muttersprache.
+        - paragraph [ref=e25]: Im Gegensatz zu traditionellen Übersetzungsdiensten versteht ReplAInow Kontext, kulturelle Nuancen und branchenspezifische Begriffe, um authentische und hilfreiche Antworten zu liefern.
+    - generic [ref=e27]:
+      - heading "Wie funktioniert mehrsprachiger Support?" [level=2] [ref=e28]
+      - generic [ref=e29]:
+        - generic [ref=e30]:
+          - generic [ref=e31]: "1"
+          - heading "Sprache erkennen" [level=3] [ref=e32]
+          - paragraph [ref=e33]: KI erkennt automatisch die Sprache der Kundenanfrage mit 99%+ Genauigkeit
+        - generic [ref=e34]:
+          - generic [ref=e35]: "2"
+          - heading "Kontext verstehen" [level=3] [ref=e36]
+          - paragraph [ref=e37]: GPT-4.1 versteht die Anfrage und den kulturellen Kontext der Sprache
+        - generic [ref=e38]:
+          - generic [ref=e39]: "3"
+          - heading "Antworten generieren" [level=3] [ref=e40]
+          - paragraph [ref=e41]: Natürliche, hilfreiche Antworten in der Muttersprache des Kunden
+    - generic [ref=e43]:
+      - heading "Unterstützte Sprachen" [level=2] [ref=e44]
+      - generic [ref=e46]:
+        - generic [ref=e47]:
+          - generic [ref=e48]: Deutsch
+          - generic [ref=e49]: Deutsch
+          - generic [ref=e50]: de
+        - generic [ref=e51]:
+          - generic [ref=e52]: English
+          - generic [ref=e53]: Englisch
+          - generic [ref=e54]: en
+        - generic [ref=e55]:
+          - generic [ref=e56]: Español
+          - generic [ref=e57]: Spanisch
+          - generic [ref=e58]: es
+        - generic [ref=e59]:
+          - generic [ref=e60]: Français
+          - generic [ref=e61]: Französisch
+          - generic [ref=e62]: fr
+        - generic [ref=e63]:
+          - generic [ref=e64]: Português
+          - generic [ref=e65]: Portugiesisch
+          - generic [ref=e66]: pt
+        - generic [ref=e67]:
+          - generic [ref=e68]: Italiano
+          - generic [ref=e69]: Italienisch
+          - generic [ref=e70]: it
+        - generic [ref=e71]:
+          - generic [ref=e72]: Nederlands
+          - generic [ref=e73]: Niederländisch
+          - generic [ref=e74]: nl
+        - generic [ref=e75]:
+          - generic [ref=e76]: 中文
+          - generic [ref=e77]: Chinesisch
+          - generic [ref=e78]: zh
+        - generic [ref=e79]:
+          - generic [ref=e80]: 日本語
+          - generic [ref=e81]: Japanisch
+          - generic [ref=e82]: ja
+        - generic [ref=e83]:
+          - generic [ref=e84]: 한국어
+          - generic [ref=e85]: Koreanisch
+          - generic [ref=e86]: ko
+        - generic [ref=e87]:
+          - generic [ref=e88]: Русский
+          - generic [ref=e89]: Russisch
+          - generic [ref=e90]: ru
+        - generic [ref=e91]:
+          - generic [ref=e92]: العربية
+          - generic [ref=e93]: Arabisch
+          - generic [ref=e94]: ar
+        - generic [ref=e95]:
+          - generic [ref=e96]: हिन्दी
+          - generic [ref=e97]: Hindi
+          - generic [ref=e98]: hi
+        - generic [ref=e99]:
+          - generic [ref=e100]: Türkçe
+          - generic [ref=e101]: Türkisch
+          - generic [ref=e102]: tr
+        - generic [ref=e103]:
+          - generic [ref=e104]: Polski
+          - generic [ref=e105]: Polnisch
+          - generic [ref=e106]: pl
+        - generic [ref=e107]:
+          - generic [ref=e108]: Svenska
+          - generic [ref=e109]: Schwedisch
+          - generic [ref=e110]: sv
+        - generic [ref=e111]:
+          - generic [ref=e112]: Dansk
+          - generic [ref=e113]: Dänisch
+          - generic [ref=e114]: da
+        - generic [ref=e115]:
+          - generic [ref=e116]: Norsk
+          - generic [ref=e117]: Norwegisch
+          - generic [ref=e118]: "no"
+        - generic [ref=e119]:
+          - generic [ref=e120]: Suomi
+          - generic [ref=e121]: Finnisch
+          - generic [ref=e122]: fi
+        - generic [ref=e123]:
+          - generic [ref=e124]: Čeština
+          - generic [ref=e125]: Tschechisch
+          - generic [ref=e126]: cs
+        - generic [ref=e127]:
+          - generic [ref=e128]: Magyar
+          - generic [ref=e129]: Ungarisch
+          - generic [ref=e130]: hu
+        - generic [ref=e131]:
+          - generic [ref=e132]: Română
+          - generic [ref=e133]: Rumänisch
+          - generic [ref=e134]: ro
+        - generic [ref=e135]:
+          - generic [ref=e136]: Български
+          - generic [ref=e137]: Bulgarisch
+          - generic [ref=e138]: bg
+        - generic [ref=e139]:
+          - generic [ref=e140]: Hrvatski
+          - generic [ref=e141]: Kroatisch
+          - generic [ref=e142]: hr
+        - generic [ref=e143]:
+          - generic [ref=e144]: Slovenčina
+          - generic [ref=e145]: Slowakisch
+          - generic [ref=e146]: sk
+        - generic [ref=e147]:
+          - generic [ref=e148]: Slovenščina
+          - generic [ref=e149]: Slowenisch
+          - generic [ref=e150]: sl
+        - generic [ref=e151]:
+          - generic [ref=e152]: Eesti
+          - generic [ref=e153]: Estnisch
+          - generic [ref=e154]: et
+        - generic [ref=e155]:
+          - generic [ref=e156]: Latviešu
+          - generic [ref=e157]: Lettisch
+          - generic [ref=e158]: lv
+        - generic [ref=e159]:
+          - generic [ref=e160]: Lietuvių
+          - generic [ref=e161]: Litauisch
+          - generic [ref=e162]: lt
+        - generic [ref=e163]:
+          - generic [ref=e164]: Ελληνικά
+          - generic [ref=e165]: Griechisch
+          - generic [ref=e166]: el
+        - generic [ref=e167]:
+          - generic [ref=e168]: עברית
+          - generic [ref=e169]: Hebräisch
+          - generic [ref=e170]: he
+        - generic [ref=e171]:
+          - generic [ref=e172]: ไทย
+          - generic [ref=e173]: Thai
+          - generic [ref=e174]: th
+    - generic [ref=e176]:
+      - heading "Vorteile für internationale Stores" [level=2] [ref=e177]
+      - generic [ref=e178]:
+        - generic [ref=e179]:
+          - heading "Globale Reichweite" [level=3] [ref=e180]
+          - list [ref=e181]:
+            - listitem [ref=e182]:
+              - img [ref=e183]
+              - generic [ref=e186]: Kunden weltweit in ihrer Muttersprache bedienen
+            - listitem [ref=e187]:
+              - img [ref=e188]
+              - generic [ref=e191]: Kulturelle Sensibilität und lokale Gewohnheiten verstehen
+            - listitem [ref=e192]:
+              - img [ref=e193]
+              - generic [ref=e196]: Automatische Erkennung ohne manuelle Konfiguration
+        - generic [ref=e197]:
+          - heading "Kosteneffizienz" [level=3] [ref=e198]
+          - list [ref=e199]:
+            - listitem [ref=e200]:
+              - img [ref=e201]
+              - generic [ref=e204]: Keine separaten Übersetzer oder mehrsprachige Teams nötig
+            - listitem [ref=e205]:
+              - img [ref=e206]
+              - generic [ref=e209]: Ein System für alle Sprachen und Märkte
+            - listitem [ref=e210]:
+              - img [ref=e211]
+              - generic [ref=e214]: Skalierbar für neue Märkte und Sprachen
+    - generic [ref=e216]:
+      - heading "Häufig gestellte Fragen" [level=2] [ref=e217]
+      - generic [ref=e218]:
+        - generic [ref=e219]:
+          - heading "Welche Sprachen unterstützt ReplAInow?" [level=3] [ref=e220]
+          - paragraph [ref=e221]: ReplAInow unterstützt über 32 Sprachen nativ, darunter alle wichtigen europäischen Sprachen, asiatische Sprachen wie Chinesisch, Japanisch und Koreanisch, sowie weitere globale Sprachen wie Arabisch, Hindi und Russisch.
+        - generic [ref=e222]:
+          - heading "Wie erkennt ReplAInow die Sprache des Kunden?" [level=3] [ref=e223]
+          - paragraph [ref=e224]: ReplAInow nutzt fortschrittliche KI-Technologie, um automatisch die Sprache des Kunden aus der Anfrage zu erkennen. Die Erkennung erfolgt in Echtzeit und ist zu über 99% akkurat.
+        - generic [ref=e225]:
+          - heading "Kann ich die Sprachen für meinen Store anpassen?" [level=3] [ref=e226]
+          - paragraph [ref=e227]: Ja, Sie können in den Einstellungen festlegen, welche Sprachen für Ihren Store aktiviert sein sollen. ReplAInow passt sich automatisch an Ihre gewünschten Sprachen an.
+        - generic [ref=e228]:
+          - heading "Werden Produktinformationen auch in anderen Sprachen übersetzt?" [level=3] [ref=e229]
+          - paragraph [ref=e230]: Ja, ReplAInow kann automatisch Produktinformationen, Beschreibungen und sogar technische Details in die Sprache des Kunden übersetzen, während der ursprüngliche Kontext erhalten bleibt.
+        - generic [ref=e231]:
+          - heading "Ist die Übersetzungsqualität vergleichbar mit menschlichen Übersetzern?" [level=3] [ref=e232]
+          - paragraph [ref=e233]: ReplAInow nutzt GPT-4.1 Technologie, die eine Übersetzungsqualität bietet, die mit professionellen menschlichen Übersetzern vergleichbar ist. Die KI versteht Kontext und Nuancen.
+        - generic [ref=e234]:
+          - heading "Funktioniert mehrsprachiger Support auch bei komplexen Anfragen?" [level=3] [ref=e235]
+          - paragraph [ref=e236]: Ja, ReplAInow kann auch komplexe Kundenanfragen wie Retouren, technische Probleme oder spezielle Produktanfragen in der jeweiligen Sprache des Kunden bearbeiten.
+    - generic [ref=e238]:
+      - heading "Bereit für globale Kunden?" [level=2] [ref=e239]
+      - paragraph [ref=e240]: Erweitern Sie Ihren Shopify Store mit mehrsprachigem AI-Support
+      - generic [ref=e241]:
+        - link "Jetzt installieren" [ref=e242] [cursor=pointer]:
+          - /url: https://apps.shopify.com/replainow-ai-support
+          - img
+          - text: Jetzt installieren
+          - img
+        - link "Preise ansehen" [ref=e243] [cursor=pointer]:
+          - /url: /pricing
+          - img
+          - text: Preise ansehen
+```

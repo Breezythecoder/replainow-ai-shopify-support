@@ -20,11 +20,10 @@ export const generateRobotsTxt = (config: RobotsConfig): string => {
     robots += 'Allow: /\n';
     robots += 'Disallow: /api/\n';
     robots += 'Disallow: /admin/\n';
-    robots += 'Disallow: /_next/\n';
-    robots += 'Disallow: /static/\n';
-    robots += 'Disallow: /assets/\n';
-    robots += 'Disallow: /*.json$\n';
-    robots += 'Disallow: /*?*\n';
+    // Assets & JSON generell erlaubt, um Rendering/Schema/AEO nicht zu bremsen:
+    // (Parameter-Handling via Canonical/Sitemaps, nicht per robots blocken)
+    robots += 'Allow: /.well-known/llm-facts.json\n';
+    robots += 'Allow: /sitemap.xml\n';
     robots += 'Disallow: /404\n';
     robots += 'Disallow: /500\n';
   } else {
@@ -33,16 +32,9 @@ export const generateRobotsTxt = (config: RobotsConfig): string => {
   
   // AI Bot specific rules
   if (allowAIBots) {
-    const aiBots = [
-      'GPTBot',
-      'OAI-SearchBot', 
-      'PerplexityBot',
-      'Perplexity-User',
-      'anthropic-ai',
-      'ClaudeBot'
-    ];
+    const aiBots = ['GPTBot','OAI-SearchBot','PerplexityBot','Perplexity-User','anthropic-ai','ClaudeBot'];
     
-    aiBots.forEach(bot => {
+    aiBots.forEach((bot) => {
       robots += `\nUser-agent: ${bot}\n`;
       if (allowCrawling) {
         robots += 'Allow: /\n';
@@ -60,10 +52,8 @@ export const generateRobotsTxt = (config: RobotsConfig): string => {
     robots += 'Allow: /\n';
     robots += 'Disallow: /api/\n';
     robots += 'Disallow: /admin/\n';
-    robots += 'Disallow: /_next/\n';
-    robots += 'Disallow: /static/\n';
-    robots += 'Disallow: /*.json$\n';
-    robots += 'Disallow: /*?*\n';
+    robots += 'Allow: /.well-known/llm-facts.json\n';
+    robots += 'Allow: /sitemap.xml\n';
   } else {
     robots += 'Disallow: /\n';
   }
@@ -74,10 +64,8 @@ export const generateRobotsTxt = (config: RobotsConfig): string => {
     robots += 'Allow: /\n';
     robots += 'Disallow: /api/\n';
     robots += 'Disallow: /admin/\n';
-    robots += 'Disallow: /_next/\n';
-    robots += 'Disallow: /static/\n';
-    robots += 'Disallow: /*.json$\n';
-    robots += 'Disallow: /*?*\n';
+    robots += 'Allow: /.well-known/llm-facts.json\n';
+    robots += 'Allow: /sitemap.xml\n';
   } else {
     robots += 'Disallow: /\n';
   }
@@ -131,13 +119,28 @@ export const developmentRobots = generateRobotsTxt({
 
 // Get robots.txt based on environment
 export const getRobotsTxt = (environment: 'production' | 'staging' | 'development'): string => {
-  switch (environment) {
+  const SEO_ENV = process.env.SEO_ENV || environment || 'development';
+  const allowAIBots = (process.env.SEO_ALLOW_AI_BOTS ?? 'false') === 'true';
+  
+  switch (SEO_ENV) {
     case 'production':
-      return productionRobots;
+      return generateRobotsTxt({
+        allowAIBots: allowAIBots,
+        allowCrawling: true,
+        sitemapUrl: 'https://replainow.com/sitemap.xml'
+      });
     case 'staging':
-      return stagingRobots;
+      return generateRobotsTxt({
+        allowAIBots: false,
+        allowCrawling: false,
+        sitemapUrl: 'https://replainow.com/sitemap.xml'
+      });
     case 'development':
     default:
-      return developmentRobots;
+      return generateRobotsTxt({
+        allowAIBots: false,
+        allowCrawling: false,
+        sitemapUrl: 'https://replainow.com/sitemap.xml'
+      });
   }
 };

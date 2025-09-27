@@ -10,18 +10,28 @@ const __dirname = path.dirname(__filename);
 // Inline SEO utilities for build script
 const baseUrl = 'https://replainow.com';
 
+import { execSync } from "child_process";
+
+function lastCommitISO(urlPath) {
+  try { 
+    return execSync(`git log -1 --pretty=format:%cI -- .${urlPath}`).toString().trim(); 
+  } catch { 
+    return new Date().toISOString().split('T')[0]; 
+  }
+}
+
 const generateSitemapXML = () => {
   const currentDate = new Date().toISOString().split('T')[0];
   const urls = [
-    { loc: `${baseUrl}/`, lastmod: currentDate, changefreq: 'daily', priority: 1.0 },
-    { loc: `${baseUrl}/ai-shopify-helpdesk`, lastmod: currentDate, changefreq: 'weekly', priority: 0.9 },
-    { loc: `${baseUrl}/multilingual-support`, lastmod: currentDate, changefreq: 'weekly', priority: 0.9 },
-    { loc: `${baseUrl}/pricing`, lastmod: currentDate, changefreq: 'weekly', priority: 0.8 },
-    { loc: `${baseUrl}/faq`, lastmod: currentDate, changefreq: 'weekly', priority: 0.7 },
-    { loc: `${baseUrl}/privacy`, lastmod: currentDate, changefreq: 'yearly', priority: 0.3 },
-    { loc: `${baseUrl}/terms`, lastmod: currentDate, changefreq: 'yearly', priority: 0.3 },
-    { loc: `${baseUrl}/security`, lastmod: currentDate, changefreq: 'yearly', priority: 0.3 },
-    { loc: `${baseUrl}/impressum`, lastmod: currentDate, changefreq: 'yearly', priority: 0.3 }
+    { loc: `${baseUrl}/`, lastmod: lastCommitISO('/'), changefreq: 'daily', priority: 1.0 },
+    { loc: `${baseUrl}/ai-shopify-helpdesk`, lastmod: lastCommitISO('/ai-shopify-helpdesk'), changefreq: 'weekly', priority: 0.9 },
+    { loc: `${baseUrl}/multilingual-support`, lastmod: lastCommitISO('/multilingual-support'), changefreq: 'weekly', priority: 0.9 },
+    { loc: `${baseUrl}/pricing`, lastmod: lastCommitISO('/pricing'), changefreq: 'weekly', priority: 0.8 },
+    { loc: `${baseUrl}/faq`, lastmod: lastCommitISO('/faq'), changefreq: 'weekly', priority: 0.7 },
+    { loc: `${baseUrl}/privacy`, lastmod: lastCommitISO('/privacy'), changefreq: 'yearly', priority: 0.3 },
+    { loc: `${baseUrl}/terms`, lastmod: lastCommitISO('/terms'), changefreq: 'yearly', priority: 0.3 },
+    { loc: `${baseUrl}/security`, lastmod: lastCommitISO('/security'), changefreq: 'yearly', priority: 0.3 },
+    { loc: `${baseUrl}/impressum`, lastmod: lastCommitISO('/impressum'), changefreq: 'yearly', priority: 0.3 }
   ];
   
   const xmlHeader = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
@@ -197,7 +207,7 @@ try {
 
   // Generate robots.txt
   console.log('🤖 Generating robots.txt...');
-  const environment = process.env.NODE_ENV === 'production' ? 'production' : 'development';
+  const environment = process.env.SEO_ENV || (process.env.NODE_ENV === 'production' ? 'production' : 'development');
   const robotsTxt = getRobotsTxt(environment);
   fs.writeFileSync(path.join(distDir, 'robots.txt'), robotsTxt);
   fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt);

@@ -1,0 +1,156 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Notifications (F8)":
+    - list
+  - region "Notifications alt+T"
+  - link "Zum Hauptinhalt springen" [ref=e3] [cursor=pointer]:
+    - /url: "#main-content"
+  - generic [ref=e4]:
+    - generic [ref=e6]:
+      - heading "AI Shopify Helpdesk" [level=1] [ref=e7]:
+        - text: AI
+        - generic [ref=e8]: Shopify Helpdesk
+      - paragraph [ref=e9]: Der intelligenteste AI-gestützte Kundenservice für Shopify Stores. Automatisiere 24/7 Support mit GPT-4.1 Technologie in 32+ Sprachen.
+      - generic [ref=e10]:
+        - heading "🚀 TL;DR" [level=2] [ref=e11]
+        - paragraph [ref=e12]:
+          - text: ReplAInow ist der führende AI Shopify Helpdesk mit
+          - strong [ref=e13]: 3-Sekunden Antwortzeiten
+          - text: ","
+          - strong [ref=e14]: 32+ Sprachen
+          - text: und
+          - strong [ref=e15]: 75% Kosteneinsparung
+          - text: gegenüber traditionellen Lösungen.
+          - link "Starten Sie ab €19/Monat" [ref=e16] [cursor=pointer]:
+            - /url: "#pricing"
+          - text: mit
+          - link "14 Tagen kostenlos" [ref=e17] [cursor=pointer]:
+            - /url: /pricing
+          - text: .
+      - generic [ref=e18]:
+        - link "Jetzt installieren" [ref=e19] [cursor=pointer]:
+          - /url: https://apps.shopify.com/replainow-ai-support
+          - img
+          - text: Jetzt installieren
+        - link "Live Demo ansehen" [ref=e20] [cursor=pointer]:
+          - /url: "#live-demo"
+          - img
+          - text: Live Demo ansehen
+    - generic [ref=e22]:
+      - heading "Was ist ein AI Shopify Helpdesk?" [level=2] [ref=e23]
+      - generic [ref=e24]:
+        - paragraph [ref=e25]:
+          - text: Ein
+          - strong [ref=e26]: AI Shopify Helpdesk
+          - text: ist ein automatisiertes Kundenservice-System, das künstliche Intelligenz nutzt, um Kundenanfragen in Echtzeit zu beantworten. ReplAInow verwendet die neueste GPT-4.1 Technologie, um intelligente, kontextbezogene Antworten zu generieren.
+        - paragraph [ref=e27]: Im Gegensatz zu traditionellen Helpdesk-Systemen arbeitet ReplAInow vollständig autonom und kann komplexe Kundenanfragen verstehen, Produktinformationen abrufen und personalisierte Lösungen anbieten.
+    - generic [ref=e29]:
+      - heading "Wie funktioniert ReplAInow?" [level=2] [ref=e30]
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: "1"
+          - heading "App installieren" [level=3] [ref=e34]
+          - paragraph [ref=e35]: Installieren Sie ReplAInow mit einem Klick aus dem Shopify App Store in weniger als 60 Sekunden.
+        - generic [ref=e36]:
+          - generic [ref=e37]: "2"
+          - heading "Store verbinden" [level=3] [ref=e38]
+          - paragraph [ref=e39]: Die App verbindet sich automatisch mit Ihrem Shopify Store über die sichere API-Verbindung.
+        - generic [ref=e40]:
+          - generic [ref=e41]: "3"
+          - heading "KI trainieren" [level=3] [ref=e42]
+          - paragraph [ref=e43]: ReplAInow lernt automatisch aus Ihren Produktdaten und wird sofort einsatzbereit.
+        - generic [ref=e44]:
+          - generic [ref=e45]: "4"
+          - heading "Support automatisieren" [level=3] [ref=e46]
+          - paragraph [ref=e47]: Ihre Kunden erhalten sofort 24/7 Support in ihrer Sprache mit GPT-4.1 Technologie.
+    - generic [ref=e49]:
+      - heading "Warum ReplAInow?" [level=2] [ref=e50]
+      - generic [ref=e51]:
+        - generic [ref=e52]:
+          - img [ref=e53]
+          - heading "3 Sekunden Antwortzeit" [level=3] [ref=e56]
+          - paragraph [ref=e57]: Bis zu 10x schneller als menschliche Support-Mitarbeiter
+        - generic [ref=e58]:
+          - img [ref=e59]
+          - heading "32+ Sprachen" [level=3] [ref=e63]
+          - paragraph [ref=e64]: Automatische Erkennung und Antwort in der Kunden-Sprache
+        - generic [ref=e65]:
+          - img [ref=e66]
+          - heading "GPT-4.1 Technologie" [level=3] [ref=e76]
+          - paragraph [ref=e77]: Die neueste KI-Technologie für intelligente Antworten
+        - generic [ref=e78]:
+          - img [ref=e79]
+          - heading "DSGVO-konform" [level=3] [ref=e81]
+          - paragraph [ref=e82]: Vollständige Compliance mit europäischen Datenschutzgesetzen
+        - generic [ref=e83]:
+          - img [ref=e84]
+          - heading "24/7 Verfügbarkeit" [level=3] [ref=e95]
+          - paragraph [ref=e96]: Ununterbrochener Support rund um die Uhr
+        - generic [ref=e97]:
+          - img [ref=e98]
+          - heading "1-Klick Installation" [level=3] [ref=e100]
+          - paragraph [ref=e101]: Schnelle Einrichtung direkt aus dem Shopify App Store
+    - generic [ref=e103]:
+      - heading "Vorteile für Shopify-Händler" [level=2] [ref=e104]
+      - generic [ref=e106]:
+        - generic [ref=e107]:
+          - heading "Kosteneinsparung" [level=3] [ref=e108]
+          - list [ref=e109]:
+            - listitem [ref=e110]:
+              - img [ref=e111]
+              - generic [ref=e114]: 75% günstiger als traditionelle Lösungen
+            - listitem [ref=e115]:
+              - img [ref=e116]
+              - generic [ref=e119]: Keine Personalkosten für Support-Mitarbeiter
+            - listitem [ref=e120]:
+              - img [ref=e121]
+              - generic [ref=e124]: Transparente Preise ohne versteckte Kosten
+        - generic [ref=e125]:
+          - heading "Bessere Performance" [level=3] [ref=e126]
+          - list [ref=e127]:
+            - listitem [ref=e128]:
+              - img [ref=e129]
+              - generic [ref=e132]: Höhere Kundenzufriedenheit durch schnelle Antworten
+            - listitem [ref=e133]:
+              - img [ref=e134]
+              - generic [ref=e137]: Reduzierte Warenkorbabbrüche
+            - listitem [ref=e138]:
+              - img [ref=e139]
+              - generic [ref=e142]: Skalierbar für jedes Store-Volumen
+    - generic [ref=e144]:
+      - heading "Häufig gestellte Fragen" [level=2] [ref=e145]
+      - generic [ref=e146]:
+        - generic [ref=e147]:
+          - heading "Was ist ein AI Shopify Helpdesk?" [level=3] [ref=e148]
+          - paragraph [ref=e149]: Ein AI Shopify Helpdesk ist ein automatisiertes Kundenservice-System, das mit künstlicher Intelligenz (GPT-4.1) Kundenanfragen in Echtzeit beantwortet. Es integriert sich nahtlos in Shopify Stores und bietet 24/7 Support in 32+ Sprachen.
+        - generic [ref=e150]:
+          - heading "Wie funktioniert ReplAInow mit Shopify?" [level=3] [ref=e151]
+          - paragraph [ref=e152]: ReplAInow installiert sich mit einem Klick aus dem Shopify App Store. Nach der Installation verbindet es sich automatisch mit Ihrem Store und beginnt sofort, Kundenanfragen zu beantworten. Die Integration erfolgt über die Shopify API ohne technische Kenntnisse.
+        - generic [ref=e153]:
+          - heading "Welche Sprachen unterstützt ReplAInow?" [level=3] [ref=e154]
+          - paragraph [ref=e155]: ReplAInow unterstützt über 32 Sprachen nativ, darunter Deutsch, Englisch, Spanisch, Französisch, Portugiesisch, Italienisch, Niederländisch, Chinesisch und viele weitere. Die KI antwortet automatisch in der Sprache des Kunden.
+        - generic [ref=e156]:
+          - heading "Ist ReplAInow DSGVO-konform?" [level=3] [ref=e157]
+          - paragraph [ref=e158]: Ja, ReplAInow ist vollständig DSGVO-konform. Alle Kundendaten werden sicher verarbeitet und gespeichert. Wir bieten detaillierte Datenschutzerklärungen und Compliance-Dokumentation.
+        - generic [ref=e159]:
+          - heading "Wie schnell antwortet ReplAInow?" [level=3] [ref=e160]
+          - paragraph [ref=e161]: ReplAInow antwortet in durchschnittlich 3 Sekunden auf Kundenanfragen. Dies ist deutlich schneller als menschliche Support-Mitarbeiter und bietet eine bessere Kundenerfahrung.
+        - generic [ref=e162]:
+          - heading "Kann ich ReplAInow kostenlos testen?" [level=3] [ref=e163]
+          - paragraph [ref=e164]: Ja, ReplAInow bietet eine 14-tägige kostenlose Testphase für alle Pläne. Sie können alle Features ohne Einschränkungen testen und bei Gefallen einfach upgraden.
+    - generic [ref=e166]:
+      - heading "Bereit für die AI-Revolution?" [level=2] [ref=e167]
+      - paragraph [ref=e168]: Starten Sie noch heute mit dem intelligentesten AI Shopify Helpdesk
+      - generic [ref=e169]:
+        - link "Jetzt installieren" [ref=e170] [cursor=pointer]:
+          - /url: https://apps.shopify.com/replainow-ai-support
+          - img
+          - text: Jetzt installieren
+          - img
+        - link "Preise ansehen" [ref=e171] [cursor=pointer]:
+          - /url: /pricing
+          - img
+          - text: Preise ansehen
+```

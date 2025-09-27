@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { SkipToMainContent, useKeyboardNavigation } from "@/components/ui/accessibility";
 import { trackWebVitals } from "@/components/ui/performance";
+import { initWebVitals } from "@/utils/webVitals";
 import Index from "./pages/Index";
 import IndexEn from "./pages/Index.en";
 import IndexEs from "./pages/Index.es";
@@ -48,9 +49,10 @@ const queryClient = new QueryClient();
 const AppContent = () => {
   useKeyboardNavigation();
   
-  // Initialize performance tracking
-  useEffect(() => {
-    trackWebVitals();
+    // Initialize performance tracking
+    useEffect(() => {
+      trackWebVitals();
+      initWebVitals();
     
     // Handle GitHub Pages SPA redirect format
     // GitHub Pages redirects to /?/path format for SPAs

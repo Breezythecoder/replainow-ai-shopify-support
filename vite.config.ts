@@ -34,15 +34,23 @@ export default defineConfig(({ mode }) => ({
             './src/pages/CookiePolicy.tsx'
           ]
         }
-      }
+      },
+      external: [
+        // Keep dev dependencies external
+        /^@lhci\/cli/,
+        /^playwright/,
+        /^@playwright\/test/
+      ]
     },
     // Optimize bundle size
-    chunkSizeWarningLimit: 500,
+    chunkSizeWarningLimit: 400, // Reduced from 500
     minify: 'terser',
     terserOptions: {
       compress: {
         drop_console: true,
-        drop_debugger: true
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug'],
+        passes: 2
       }
     }
   },
