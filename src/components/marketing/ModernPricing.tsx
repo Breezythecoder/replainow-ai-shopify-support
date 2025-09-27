@@ -126,12 +126,12 @@ const ModernPricing = () => {
                 <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 flex-grow">
                   <li className="flex items-start gap-2 sm:gap-3">
                     <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span>
-                    <span className="text-slate-700 font-bold text-xs sm:text-sm leading-relaxed">{plan.quota}</span>
+                    <span className="text-blue-200 font-bold text-xs sm:text-sm leading-relaxed">{plan.quota}</span>
                   </li>
                   {plan.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-2 sm:gap-3">
                       <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span>
-                      <span className="text-slate-700 font-medium leading-relaxed text-xs sm:text-sm">{feature}</span>
+                      <span className="text-blue-200 font-medium leading-relaxed text-xs sm:text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
