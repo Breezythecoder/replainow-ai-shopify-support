@@ -58,9 +58,9 @@ const ModernNavbar = () => {
             
             {/* AI Brand Text */}
             <div className="ml-3">
-              <div className="text-white font-black text-lg">
-                Repl<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 animate-pulse">AI</span>now
-              </div>
+                <div className="text-white font-black text-lg">
+                  Repl<span className="text-blue-300 font-bold">AI</span>now
+                </div>
               <div className="text-xs text-blue-300 font-medium">GPT-4.1 Powered</div>
             </div>
           </a>
@@ -112,7 +112,7 @@ const ModernNavbar = () => {
                 {/* Button Content */}
                 <div className="relative flex items-center gap-2">
                   <Rocket className="w-4 h-4 group-hover:animate-bounce" />
-                  <span className="bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent font-black">
+                  <span className="text-white font-black">
                     JETZT INSTALLIEREN
                   </span>
                   <Sparkles className="w-4 h-4 text-yellow-300 group-hover:animate-pulse" />

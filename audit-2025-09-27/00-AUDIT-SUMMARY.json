@@ -1,15 +1,15 @@
 {
-  "timestamp": "2025-09-27T10:17:06.446Z",
+  "timestamp": "2025-09-27T10:19:50.612Z",
   "url": "https://replainow.com",
   "issues": {
-    "contrast": 39,
+    "contrast": 31,
     "umlauts": 4,
     "accessibility": 2
   },
-  "criticalIssues": 34,
+  "criticalIssues": 26,
   "warningIssues": 5,
   "recommendations": [
-    "🔴 CRITICAL: Fix 34 contrast issues (ratio < 3.0)",
+    "🔴 CRITICAL: Fix 26 contrast issues (ratio < 3.0)",
     "🟡 WARNING: Fix 5 contrast issues (ratio < 4.5)",
     "🔤 Fix 4 German umlaut encoding issues",
     "♿ Fix 2 accessibility issues"

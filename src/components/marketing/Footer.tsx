@@ -67,14 +67,14 @@ const Footer = () => {
               Der intelligenteste AI-Support für Shopify-Händler. 
               24/7 verfügbar, 32+ Sprachen, DSGVO-konform.
             </p>
-            <div className="flex gap-3">
-              <a href="#" aria-label="Twitter" className="text-slate-400 hover:text-blue-400 transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" aria-label="LinkedIn" className="text-slate-400 hover:text-blue-400 transition-colors">
-                <Linkedin size={20} />
-              </a>
-            </div>
+              <div className="flex gap-3">
+                <a href="#" aria-label="Twitter" className="text-slate-400 hover:text-blue-400 transition-colors" title="Twitter">
+                  <Twitter size={20} />
+                </a>
+                <a href="#" aria-label="LinkedIn" className="text-slate-400 hover:text-blue-400 transition-colors" title="LinkedIn">
+                  <Linkedin size={20} />
+                </a>
+              </div>
           </div>
 
           {/* Quick Links */}
