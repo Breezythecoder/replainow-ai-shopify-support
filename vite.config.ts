@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/replainow-ai-shopify-support/",
+  base: "/",
   server: {
     host: "::",
     port: 8080,
