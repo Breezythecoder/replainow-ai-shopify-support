@@ -57,9 +57,9 @@ const ModernHero = () => {
     >
       {/* Ultra-Modern AI Background */}
       <div className="absolute inset-0">
-        {/* Matrix Rain Effect */}
-        <div className="absolute inset-0 opacity-10">
-          {Array.from({ length: 50 }).map((_, i) => (
+        {/* Matrix Rain Effect - Reduced for Performance */}
+        <div className="absolute inset-0 opacity-5">
+          {Array.from({ length: 20 }).map((_, i) => (
             <div
               key={i}
               className="absolute text-green-400 font-mono text-xs"
@@ -95,9 +95,9 @@ const ModernHero = () => {
           </div>
         </div>
 
-        {/* Floating AI Neural Networks */}
+        {/* Floating AI Neural Networks - Reduced for Performance */}
         <div className="absolute inset-0">
-          {Array.from({ length: 30 }).map((_, i) => (
+          {Array.from({ length: 15 }).map((_, i) => (
             <div
               key={i}
               className="absolute"
@@ -227,7 +227,9 @@ const ModernHero = () => {
               <img
                 src="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
                 alt="ReplAInow AI Support Dashboard zeigt intelligente Kundensupport-Automatisierung mit GPT-4.1 Technologie für Shopify-Händler. Dashboard mit Live-Chat, E-Mail-Management und automatisierten Antworten in 3 Sekunden."
-                className="w-full rounded-xl"
+                className="w-full h-auto rounded-xl"
+                width="600"
+                height="400"
                 loading="lazy"
                 decoding="async"
               />

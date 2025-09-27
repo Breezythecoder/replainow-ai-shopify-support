@@ -50,7 +50,11 @@ const ModernProblemSolution = () => {
             <img 
               src="/assets/1d082320-2e70-4359-aaed-382d72ddacb7.png" 
               alt="Chaotisches überfülltes E-Mail Postfach" 
-              className="w-full mb-6 rounded-xl shadow-md" 
+              className="w-full h-auto mb-6 rounded-xl shadow-md" 
+              width="600"
+              height="400"
+              loading="lazy"
+              decoding="async"
             />
             <ul className="space-y-4 text-slate-600">
               <li className="flex items-center gap-3">
@@ -84,7 +88,11 @@ const ModernProblemSolution = () => {
             <img 
               src="/assets/91677a2e-50c4-4aeb-8a6e-f6626412e034.png" 
               alt="ReplAInow AI Dashboard mit perfekter Antwort" 
-              className="w-full mb-6 rounded-xl shadow-md" 
+              className="w-full h-auto mb-6 rounded-xl shadow-md" 
+              width="600"
+              height="400"
+              loading="lazy"
+              decoding="async"
             />
             <ul className="space-y-4 text-slate-600">
               <li className="flex items-center gap-3">

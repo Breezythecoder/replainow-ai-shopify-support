@@ -49,6 +49,10 @@ const ModernNavbar = () => {
                     src="/lovable-uploads/ReplAInow_Logo_optimized.png"
                     alt="ReplAInow Logo - KI-gestützter Shopify Support mit GPT-4.1 Technologie für automatisierten Kundenservice"
                     className="h-7 w-7 group-hover:scale-105 transition-transform duration-300 rounded"
+                    width="28"
+                    height="28"
+                    loading="eager"
+                    decoding="async"
                   />
                 
                 {/* AI Activity Indicator */}
