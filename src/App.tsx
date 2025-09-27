@@ -37,11 +37,13 @@ const AppContent = () => {
   useEffect(() => {
     trackWebVitals();
     
-    // Handle GitHub Pages redirect for React Router
-    const redirectPath = sessionStorage.getItem('redirectPath');
-    if (redirectPath && redirectPath !== window.location.pathname) {
-      sessionStorage.removeItem('redirectPath');
-      window.history.replaceState(null, '', redirectPath);
+    // Handle GitHub Pages SPA redirect format
+    // GitHub Pages redirects to /?/path format for SPAs
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirectPath = urlParams.get('/');
+    if (redirectPath) {
+      const cleanPath = redirectPath.replace(/~and~/g, '&');
+      window.history.replaceState(null, '', cleanPath);
     }
     
     // Register Service Worker for perfect performance
