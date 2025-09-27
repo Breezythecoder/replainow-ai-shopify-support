@@ -58,6 +58,7 @@ const AIShopifyHelpdesk = () => {
         description="Der intelligenteste AI Shopify Helpdesk mit GPT-4.1. 24/7 Support, 32+ Sprachen, 3-Sekunden Antworten, DSGVO-konform. Jetzt kostenlos testen!"
         canonical="/ai-shopify-helpdesk"
         keywords="AI Shopify Helpdesk, Shopify AI Support, automatischer Kundenservice, GPT-4.1, 24/7 Support, mehrsprachig"
+        generateOG={true}
         structuredData={[
           organizationSchema,
           softwareApplicationSchema,

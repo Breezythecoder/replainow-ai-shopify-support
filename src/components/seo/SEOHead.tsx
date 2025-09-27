@@ -14,6 +14,7 @@ interface SEOHeadProps {
   keywords?: string;
   structuredData?: object;
   breadcrumbs?: Array<{ name: string; url: string }>;
+  generateOG?: boolean;
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -28,11 +29,16 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   nofollow = false,
   keywords,
   structuredData,
-  breadcrumbs
+  breadcrumbs,
+  generateOG = false
 }) => {
   const baseUrl = 'https://replainow.com';
   const fullCanonical = canonical ? `${baseUrl}${canonical}` : baseUrl;
-  const fullOgImage = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
+  
+  // Generate dynamic OG image if requested
+  const finalOgImage = generateOG 
+    ? `${baseUrl}/og?title=${encodeURIComponent(title)}&subtitle=${encodeURIComponent(description.substring(0, 100))}`
+    : ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
 
   // Generate robots meta
   const robotsContent = [
@@ -76,7 +82,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:url" content={fullCanonical} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={fullOgImage} />
+      <meta property="og:image" content={finalOgImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:site_name" content="ReplAInow" />
@@ -86,7 +92,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="twitter:url" content={fullCanonical} />
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
-      <meta property="twitter:image" content={fullOgImage} />
+      <meta property="twitter:image" content={finalOgImage} />
       
       {/* Structured Data */}
       {structuredData && (

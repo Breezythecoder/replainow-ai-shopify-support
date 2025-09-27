@@ -74,6 +74,7 @@ const MultilingualSupport = () => {
         description="Automatischer mehrsprachiger Support für Shopify Stores. 32+ Sprachen nativ unterstützt, automatische Spracherkennung, DSGVO-konform. Jetzt testen!"
         canonical="/multilingual-support"
         keywords="multilingual support, mehrsprachiger support, shopify sprachen, ai übersetzung, automatische spracherkennung"
+        generateOG={true}
         structuredData={[
           organizationSchema,
           generateFAQSchema(faqs)
