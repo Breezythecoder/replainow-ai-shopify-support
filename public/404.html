@@ -5,17 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReplAInow - Redirecting...</title>
     <script>
-        // Redirect to index.html with the current path as a hash
-        // This allows React Router to handle the routing
-        var pathSegmentsToKeep = 0;
-        var l = window.location;
-        l.replace(
-            l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-            l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-            l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-            (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-            l.hash
-        );
+        // GitHub Pages SPA redirect for React Router
+        // Store the current path and redirect to index.html
+        var path = window.location.pathname;
+        sessionStorage.setItem('redirectPath', path);
+        window.location.replace('/index.html');
     </script>
 </head>
 <body>

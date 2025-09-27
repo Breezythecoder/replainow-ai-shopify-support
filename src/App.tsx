@@ -37,6 +37,13 @@ const AppContent = () => {
   useEffect(() => {
     trackWebVitals();
     
+    // Handle GitHub Pages redirect for React Router
+    const redirectPath = sessionStorage.getItem('redirectPath');
+    if (redirectPath && redirectPath !== window.location.pathname) {
+      sessionStorage.removeItem('redirectPath');
+      window.history.replaceState(null, '', redirectPath);
+    }
+    
     // Register Service Worker for perfect performance
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/sw.js')
