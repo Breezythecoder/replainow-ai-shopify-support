@@ -14,7 +14,7 @@ const ModernSocialProofIt = () => {
         <div className="flex flex-wrap justify-center items-center gap-8 mb-16 opacity-70">
           <img src="/images/shopify-logo-black.svg" alt="Partner Shopify Plus" className="h-8 grayscale hover:grayscale-0 transition-all" />
           <div className="flex items-center gap-2 glass-card px-4 py-2 rounded-full"><span className="text-yellow-500 text-lg"></span><span className="font-bold text-slate-700">4.9/5</span></div>
-          <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-bold border border-green-200">Conforme GDPR</span>
+          <span className="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-bold border border-green-200">Conforme GDPR</span>
           <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-bold border border-blue-200">5000+ Negozi</span>
         </div>
         <h2 className="text-4xl font-black text-center mb-16 tracking-tight">Cosa dicono <span className="text-gradient-primary">i veri commercianti</span></h2>

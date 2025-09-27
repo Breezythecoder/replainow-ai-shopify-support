@@ -235,7 +235,7 @@ const ModernHero = () => {
               />
               
               {/* Floating UI Elements */}
-              <div className="absolute top-4 right-4 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-bold animate-bounce shadow-lg">
+              <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-bounce shadow-lg">
                 LIVE
               </div>
               <div className="absolute bottom-4 left-4 bg-cyan-500 text-black px-3 py-1 rounded-full text-xs font-bold">
@@ -245,13 +245,13 @@ const ModernHero = () => {
 
             {/* Floating Stats */}
             <div className="absolute -top-4 -left-4 bg-slate-900/95 backdrop-blur-lg p-3 rounded-xl border border-slate-700/50 animate-float shadow-lg">
-              <div className="text-cyan-300 font-black text-lg">3s</div>
-              <div className="text-xs text-slate-100 font-semibold">Response</div>
+              <div className="text-cyan-200 font-black text-lg">3s</div>
+              <div className="text-xs text-slate-200 font-semibold">Response</div>
             </div>
             
             <div className="absolute -bottom-4 -right-4 bg-slate-900/95 backdrop-blur-lg p-3 rounded-xl border border-slate-700/50 animate-float shadow-lg" style={{ animationDelay: '1s' }}>
-              <div className="text-green-300 font-black text-lg">98%</div>
-              <div className="text-xs text-slate-100 font-semibold">Accuracy</div>
+              <div className="text-green-200 font-black text-lg">98%</div>
+              <div className="text-xs text-slate-200 font-semibold">Accuracy</div>
             </div>
           </div>
         </div>
