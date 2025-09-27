@@ -40,7 +40,7 @@ const MailAndChatEn = () => {
             <figure className="rounded-lg border bg-muted">
               <AspectRatio ratio={16 / 10}>
                 <img
-                  src="/lovable-uploads/30fe7c43-2fec-4711-a733-85a1c76d1942.png"
+                  src="/assets/30fe7c43-2fec-4711-a733-85a1c76d1942.png"
                   alt="ReplAInow Mail Inbox  AI response with Shopify data"
                   loading="lazy"
                   className="h-full w-full object-cover rounded-lg"
@@ -73,7 +73,7 @@ const MailAndChatEn = () => {
             <figure className="rounded-lg border bg-muted">
               <AspectRatio ratio={16 / 10}>
                 <img
-                  src="/lovable-uploads/ad586425-618c-4760-ad1a-4e949029cd8f.png"
+                  src="/assets/ad586425-618c-4760-ad1a-4e949029cd8f.png"
                   alt="ReplAInow Live Chat  AI chat in real-time on desktop & mobile"
                   loading="lazy"
                   className="h-full w-full object-cover rounded-lg"

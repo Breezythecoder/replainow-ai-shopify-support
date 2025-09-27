@@ -25,6 +25,6 @@ export const heroContent: HeroContent = {
   secondaryCta: { label: "观看演示", href: "#live-demo" },
   media: {
     background: { src: heroBackground, alt: "抽象AI背景图" },
-    image: { src: "/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png", alt: "ReplAInow – 笔记本电脑和移动设备展示" },
+    image: { src: "/assets/193e41bc-af60-4d70-947d-659804d66b83.png", alt: "ReplAInow – 笔记本电脑和移动设备展示" },
   },
 };

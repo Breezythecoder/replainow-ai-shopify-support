@@ -11,7 +11,7 @@ Allow: /de/
 
 # Statische Assets erlauben
 Allow: /images/
-Allow: /lovable-uploads/
+Allow: /assets/
 Allow: /*.css
 Allow: /*.js
 Allow: /*.png

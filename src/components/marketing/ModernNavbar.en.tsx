@@ -14,7 +14,7 @@ const ModernNavbarEn = () => {
         <nav className="container flex items-center justify-between h-16 px-4 sm:px-6">
           <a href="/en" aria-label="ReplAInow Home" className="flex items-center gap-3 font-black text-lg">
             <img 
-              src="/lovable-uploads/100738e9-73dd-442e-b79a-8b064b5b00c3.png" 
+              src="/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png" 
               alt="ReplAInow Logo" 
               className="h-8 w-auto hover:scale-110 transition-transform" 
             />

@@ -7,7 +7,7 @@ const OrganizationJsonLd = () => {
       "@type": "Organization",
       name: "ReplAInow",
       url: window.location.origin,
-      logo: `${window.location.origin}/lovable-uploads/100738e9-73dd-442e-b79a-8b064b5b00c3.png`,
+      logo: `${window.location.origin}/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png`,
       sameAs: [
         // Add social profiles when available
       ],

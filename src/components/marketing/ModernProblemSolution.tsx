@@ -15,7 +15,7 @@ const ModernProblemSolution = () => {
                OHNE REPLAINOW
             </div>
             <img 
-              src="/lovable-uploads/1d082320-2e70-4359-aaed-382d72ddacb7.png" 
+              src="/assets/1d082320-2e70-4359-aaed-382d72ddacb7.png" 
               alt="Chaotisches berflltes E-Mail Postfach" 
               className="w-full mb-6 rounded-xl shadow-md" 
             />
@@ -49,7 +49,7 @@ const ModernProblemSolution = () => {
               MIT REPLAINOW
             </div>
             <img 
-              src="/lovable-uploads/91677a2e-50c4-4aeb-8a6e-f6626412e034.png" 
+              src="/assets/91677a2e-50c4-4aeb-8a6e-f6626412e034.png" 
               alt="ReplAInow AI Dashboard mit perfekter Antwort" 
               className="w-full mb-6 rounded-xl shadow-md" 
             />

@@ -9,6 +9,6 @@ export const heroContentIt: HeroContent = {
   secondaryCta: { label: "Guarda demo live", href: "#live-demo" },
   media: {
     background: { src: heroBackground, alt: "Grafica di sfondo AI astratta" },
-    image: { src: "/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png", alt: "ReplAInow – Mockup laptop e mobile" },
+    image: { src: "/assets/193e41bc-af60-4d70-947d-659804d66b83.png", alt: "ReplAInow – Mockup laptop e mobile" },
   },
 };

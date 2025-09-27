@@ -180,4 +180,4 @@ export const getHreflangUrls = (basePath: string = "") => {
 };
 
 // Standard OG Image für alle Seiten
-export const defaultOGImage = "/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png";
+export const defaultOGImage = "/assets/193e41bc-af60-4d70-947d-659804d66b83.png";

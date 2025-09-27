@@ -6,7 +6,7 @@ export const organizationSchema = {
   "name": "ReplAInow",
   "alternateName": "ReplAI Now",
   "url": "https://replainow.com",
-  "logo": "https://replainow.com/lovable-uploads/100738e9-73dd-442e-b79a-8b064b5b00c3.png",
+  "logo": "https://replainow.com/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png",
   "description": "KI-gestützter Kundensupport für Shopify: automatisierte Antworten mit GPT-4, sichere Webhooks, DSGVO-konform.",
   "foundingDate": "2023",
   "industry": "Software",

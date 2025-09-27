@@ -11,7 +11,7 @@ const ProblemSolutionIt = () => {
               <p className="text-muted-foreground text-sm">50+ email al giorno, routine infinite di copia-incolla, ore di ricerca dati. Fai l'agente di supporto invece dell'imprenditore.</p>
             </header>
             <figure>
-              <img src="/lovable-uploads/1d082320-2e70-4359-aaed-382d72ddacb7.png" alt="Screenshot casella Shopify  ReplAInow" className="rounded-lg border w-full" loading="lazy" decoding="async" />
+              <img src="/assets/1d082320-2e70-4359-aaed-382d72ddacb7.png" alt="Screenshot casella Shopify  ReplAInow" className="rounded-lg border w-full" loading="lazy" decoding="async" />
               <figcaption className="sr-only">Prima: Casella stracolma</figcaption>
             </figure>
             <p className="mt-4 text-muted-foreground text-sm">
@@ -25,7 +25,7 @@ const ProblemSolutionIt = () => {
               <p className="text-muted-foreground text-sm">La tua AI prende il controllo  in meno di 3 secondi ogni risposta  pronta, con tutte le info ordini e prodotti. Clicchi "Invia". Fatto.</p>
             </header>
             <figure>
-              <img src="/lovable-uploads/91677a2e-50c4-4aeb-8a6e-f6626412e034.png" alt="Casella ReplAInow  Risposta AI nell'admin Shopify" className="rounded-lg border w-full" loading="lazy" decoding="async" />
+              <img src="/assets/91677a2e-50c4-4aeb-8a6e-f6626412e034.png" alt="Casella ReplAInow  Risposta AI nell'admin Shopify" className="rounded-lg border w-full" loading="lazy" decoding="async" />
               <figcaption className="sr-only">Dopo: Shopify con risposta AI</figcaption>
             </figure>
           </article>

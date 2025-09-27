@@ -63,7 +63,7 @@ const IndexEn = () => {
       <SEO
         title="ReplAInow – Automate Shopify Support with AI"
         description="Answer customer inquiries in seconds: GDPR-compliant, brand-compliant, direct Shopify data. Try 14 days free."
-        image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
+        image="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
       <ModernNavbarEn />

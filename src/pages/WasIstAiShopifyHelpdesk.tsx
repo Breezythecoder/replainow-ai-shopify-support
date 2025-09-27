@@ -22,7 +22,7 @@ const WasIstAiShopifyHelpdesk = () => {
         "name": "ReplAInow",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://replainow.com/lovable-uploads/100738e9-73dd-442e-b79a-8b064b5b00c3.png"
+          "url": "https://replainow.com/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png"
         }
       },
       "datePublished": "2024-12-19",

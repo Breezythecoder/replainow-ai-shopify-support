@@ -130,7 +130,7 @@ const MultilingualSEO = ({
             "url": baseUrl,
             "logo": {
               "@type": "ImageObject",
-              "url": `${baseUrl}/lovable-uploads/100738e9-73dd-442e-b79a-8b064b5b00c3.png`,
+              "url": `${baseUrl}/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png`,
               "caption": "ReplAInow Logo"
             },
             "sameAs": [

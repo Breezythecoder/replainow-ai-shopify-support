@@ -111,8 +111,8 @@ const SEO = ({
     ogLocale.setAttribute("content", "de_DE");
 
     // Enhanced image handling with fallback
-    const defaultOgImage = `${window.location.origin}/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png`;
-    const finalImage = image?.startsWith("http") ? image : `${window.location.origin}${image || "/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"}`;
+    const defaultOgImage = `${window.location.origin}/assets/193e41bc-af60-4d70-947d-659804d66b83.png`;
+    const finalImage = image?.startsWith("http") ? image : `${window.location.origin}${image || "/assets/193e41bc-af60-4d70-947d-659804d66b83.png"}`;
     
     const ogImage = ensureMeta('meta[property="og:image"]', "property", "og:image");
     ogImage.setAttribute("content", finalImage);

@@ -66,7 +66,7 @@ const Index = () => {
       <SEO
         title="ReplAInow – Shopify Support automatisieren mit KI"
         description="Beantworte Kundenanfragen in Sekunden: DSGVO‑konform, markenkonform, direkte Shopify‑Daten. 14 Tage gratis testen."
-        image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
+        image="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
       <ModernNavbar />

@@ -37,7 +37,7 @@ const ModernNavbar = () => {
           <a href="/" aria-label="ReplAInow Home" className="flex items-center gap-3 font-black text-lg group">
             <div className="relative">
               <img
-                src="/lovable-uploads/100738e9-73dd-442e-b79a-8b064b5b00c3.png"
+                src="/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png"
                 alt="ReplAInow Logo - KI-gestützter Shopify Support mit GPT-4.1 Technologie für automatisierten Kundenservice"
                 className="h-8 w-auto hover:scale-110 transition-transform duration-300"
               />

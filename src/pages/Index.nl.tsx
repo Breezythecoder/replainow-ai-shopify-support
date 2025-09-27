@@ -61,7 +61,7 @@ const IndexNl = () => {
       <SEO
         title="ReplAInow – Shopify Ondersteuning automatiseren met AI"
         description="Beantwoord klantenvragen in seconden: GDPR-conform, merkconform, directe Shopify-data. 14 dagen gratis testen."
-        image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
+        image="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
       <ModernNavbarNl />

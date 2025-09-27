@@ -11,7 +11,7 @@ const ProblemSolutionNl = () => {
               <p className="text-muted-foreground text-sm">Elke dag 50+ e-mails, eindeloze copy-paste-routines, urenlang data zoeken. Je bent support-agent in plaats van ondernemer.</p>
             </header>
             <figure>
-              <img src="/lovable-uploads/1d082320-2e70-4359-aaed-382d72ddacb7.png" alt="Shopify-postvak Screenshot  ReplAInow" className="rounded-lg border w-full" loading="lazy" decoding="async" />
+              <img src="/assets/1d082320-2e70-4359-aaed-382d72ddacb7.png" alt="Shopify-postvak Screenshot  ReplAInow" className="rounded-lg border w-full" loading="lazy" decoding="async" />
               <figcaption className="sr-only">Voorheen: Overvol postvak</figcaption>
             </figure>
             <p className="mt-4 text-muted-foreground text-sm">
@@ -25,7 +25,7 @@ const ProblemSolutionNl = () => {
               <p className="text-muted-foreground text-sm">Je AI neemt het over  in onder 3 seconden staat elk antwoord klaar, met alle bestel- en productinfo. Je klikt "Verzenden". Klaar.</p>
             </header>
             <figure>
-              <img src="/lovable-uploads/91677a2e-50c4-4aeb-8a6e-f6626412e034.png" alt="ReplAInow Inbox  AI-antwoord in Shopify Admin" className="rounded-lg border w-full" loading="lazy" decoding="async" />
+              <img src="/assets/91677a2e-50c4-4aeb-8a6e-f6626412e034.png" alt="ReplAInow Inbox  AI-antwoord in Shopify Admin" className="rounded-lg border w-full" loading="lazy" decoding="async" />
               <figcaption className="sr-only">Nu: Shopify met AI-antwoord</figcaption>
             </figure>
           </article>

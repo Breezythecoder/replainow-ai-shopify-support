@@ -83,7 +83,7 @@ const ModernHeroNl = () => {
           <div className="relative mt-8 lg:mt-0">
             <div className="relative transform hover:scale-105 transition-transform duration-700 mx-auto max-w-md sm:max-w-lg lg:max-w-none">
               <img 
-                src="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png" 
+                src="/assets/193e41bc-af60-4d70-947d-659804d66b83.png" 
                 alt="ReplAInow AI Dashboard 3D Mockup" 
                 className="w-full drop-shadow-2xl hover-float" 
               />

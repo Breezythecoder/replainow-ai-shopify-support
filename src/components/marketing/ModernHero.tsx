@@ -185,7 +185,7 @@ const ModernHero = () => {
             {/* Main Product Image */}
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
+                src="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
                 alt="ReplAInow AI Support Dashboard zeigt intelligente Kundensupport-Automatisierung mit GPT-4.1 Technologie für Shopify-Händler. Dashboard mit Live-Chat, E-Mail-Management und automatisierten Antworten in 3 Sekunden."
                 className="w-full rounded-xl"
                 loading="lazy"

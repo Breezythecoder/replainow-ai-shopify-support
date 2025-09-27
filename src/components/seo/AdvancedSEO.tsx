@@ -17,7 +17,7 @@ const AdvancedSEO = ({
   description,
   keywords = [],
   canonicalUrl,
-  ogImage = "/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png",
+  ogImage = "/assets/193e41bc-af60-4d70-947d-659804d66b83.png",
   structuredData,
   hreflang,
   noindex = false,

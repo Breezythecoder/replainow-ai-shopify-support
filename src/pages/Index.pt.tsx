@@ -61,7 +61,7 @@ const IndexPt = () => {
       <SEO
         title="ReplAInow – Automatize o Suporte Shopify com IA"
         description="Responda consultas de clientes em segundos: conforme LGPD, conforme à marca, dados diretos do Shopify. Teste 14 dias grátis."
-        image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
+        image="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
       <ModernNavbarPt />

@@ -11,7 +11,7 @@ const ProblemSolutionEn = () => {
               <p className="text-muted-foreground text-sm">50+ emails daily, endless copy-paste routines, hours of data searching. You're a support agent instead of an entrepreneur.</p>
             </header>
             <figure>
-              <img src="/lovable-uploads/1d082320-2e70-4359-aaed-382d72ddacb7.png" alt="Shopify inbox screenshot  ReplAInow" className="rounded-lg border w-full" loading="lazy" decoding="async" />
+              <img src="/assets/1d082320-2e70-4359-aaed-382d72ddacb7.png" alt="Shopify inbox screenshot  ReplAInow" className="rounded-lg border w-full" loading="lazy" decoding="async" />
               <figcaption className="sr-only">Before: Overflowing inbox</figcaption>
             </figure>
             <p className="mt-4 text-muted-foreground text-sm">
@@ -25,7 +25,7 @@ const ProblemSolutionEn = () => {
               <p className="text-muted-foreground text-sm">Your AI takes over  in under 3 seconds every response is ready, with all order and product info. You click "Send". Done.</p>
             </header>
             <figure>
-              <img src="/lovable-uploads/91677a2e-50c4-4aeb-8a6e-f6626412e034.png" alt="ReplAInow Inbox  AI response in Shopify admin" className="rounded-lg border w-full" loading="lazy" decoding="async" />
+              <img src="/assets/91677a2e-50c4-4aeb-8a6e-f6626412e034.png" alt="ReplAInow Inbox  AI response in Shopify admin" className="rounded-lg border w-full" loading="lazy" decoding="async" />
               <figcaption className="sr-only">After: Shopify with AI response</figcaption>
             </figure>
           </article>

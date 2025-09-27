@@ -61,7 +61,7 @@ const IndexZh = () => {
       <SEO
         title="ReplAInow – 用AI自动化Shopify客户支持"
         description="几秒内回复客户咨询：符合GDPR，符合品牌形象，直接Shopify数据。免费试用14天。"
-        image="/lovable-uploads/193e41bc-af60-4d70-947d-659804d66b83.png"
+        image="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
       <ModernNavbarZh />
