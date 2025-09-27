@@ -199,7 +199,7 @@ const ModernLiveDemo = () => {
                           className={`px-4 py-2 rounded-xl font-medium transition-all duration-300 ${
                             selectedScenario === index
                               ? 'bg-blue-600 text-white shadow-lg transform scale-105'
-                              : 'bg-white text-slate-600 border border-slate-300 hover:bg-blue-50 hover:border-blue-300'
+                              : 'bg-white text-slate-700 border border-slate-300 hover:bg-blue-50 hover:border-blue-300'
                           }`}
                         >
                           <span className="mr-2" aria-hidden="true">{scenario.icon}</span>
@@ -214,7 +214,7 @@ const ModernLiveDemo = () => {
                       onClick={togglePlay}
                       variant={isPlaying ? "destructive" : "default"}
                       size="sm"
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2 min-h-[44px] min-w-[44px]"
                     >
                       {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
                       {isPlaying ? "Pause" : "Play"}
@@ -223,7 +223,7 @@ const ModernLiveDemo = () => {
                       onClick={resetDemo}
                       variant="outline"
                       size="sm"
-                      className="flex items-center gap-2"
+                      className="flex items-center gap-2 min-h-[44px] min-w-[44px]"
                     >
                       <RotateCcw className="w-4 h-4" />
                       Reset

@@ -36,9 +36,9 @@ const ModernProblemSolution = () => {
         </div>
         
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-center mb-16 tracking-tight">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-500">Das Problem:</span> überforderter Support
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-500">Das Problem:</span> <span className="text-white">überforderter Support</span>
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-500">Die Lösung:</span> Intelligente AI
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-500">Die Lösung:</span> <span className="text-white">Intelligente AI</span>
         </h2>
         
         <div className="grid lg:grid-cols-2 gap-12">

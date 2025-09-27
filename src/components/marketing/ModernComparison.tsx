@@ -69,9 +69,9 @@ const ModernComparison = () => {
                              </svg>
                            </div>
                         </th>
-                          <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-blue-100 font-semibold bg-slate-700/30 text-sm sm:text-base min-w-[120px]">Gorgias</th>
-                          <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-blue-100 font-semibold bg-slate-700/20 text-sm sm:text-base min-w-[120px]">Intercom</th>
-                          <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-blue-100 font-semibold bg-slate-700/10 text-sm sm:text-base rounded-tr-3xl min-w-[120px]">Zendesk</th>
+                          <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-white font-semibold bg-slate-700/30 text-sm sm:text-base min-w-[120px]">Gorgias</th>
+                          <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-white font-semibold bg-slate-700/20 text-sm sm:text-base min-w-[120px]">Intercom</th>
+                          <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-white font-semibold bg-slate-700/10 text-sm sm:text-base rounded-tr-3xl min-w-[120px]">Zendesk</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -91,13 +91,13 @@ const ModernComparison = () => {
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                           </td>
-                          <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-300 font-medium bg-slate-700/20 hover:bg-red-500/20 transition-colors text-sm sm:text-base">
+                          <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-200 font-medium bg-slate-700/20 hover:bg-red-500/20 transition-colors text-sm sm:text-base">
                             <span className="whitespace-nowrap">{row[2]}</span>
                           </td>
-                          <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-300 font-medium bg-slate-700/15 hover:bg-red-500/15 transition-colors text-sm sm:text-base">
+                          <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-200 font-medium bg-slate-700/15 hover:bg-red-500/15 transition-colors text-sm sm:text-base">
                             <span className="whitespace-nowrap">{row[3]}</span>
                           </td>
-                          <td className={`py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-300 font-medium bg-slate-700/10 hover:bg-red-500/10 transition-colors text-sm sm:text-base ${i === comparisonData.length - 1 ? 'rounded-br-3xl' : ''}`}>
+                          <td className={`py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-200 font-medium bg-slate-700/10 hover:bg-red-500/10 transition-colors text-sm sm:text-base ${i === comparisonData.length - 1 ? 'rounded-br-3xl' : ''}`}>
                             <span className="whitespace-nowrap">{row[4]}</span>
                           </td>
                         </tr>
