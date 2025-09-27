@@ -127,7 +127,7 @@ const ModernComparison = () => {
                     Kosteneinsparung
                   </span>
                 </h3>
-                <p className="text-xl text-slate-700 max-w-4xl mx-auto leading-relaxed">
+                <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
                   Warum 75% weniger bezahlen und trotzdem die beste KI-Performance bekommen?
                 </p>
               </div>
@@ -138,7 +138,7 @@ const ModernComparison = () => {
                 <div className="space-y-8">
                   <div className="text-center">
                     <h4 className="text-3xl font-bold text-red-600 mb-2">Teure Konkurrenz</h4>
-                    <p className="text-blue-200">Basis-Features für Premium-Preise</p>
+                    <p className="text-slate-600">Basis-Features für Premium-Preise</p>
                   </div>
                   
                   <div className="space-y-6">
@@ -174,7 +174,7 @@ const ModernComparison = () => {
                 <div className="space-y-8">
                   <div className="text-center">
                     <h4 className="text-3xl font-bold text-green-600 mb-2">ReplAInow Power</h4>
-                    <p className="text-blue-200">Premium-Features für faire Preise</p>
+                    <p className="text-slate-600">Premium-Features für faire Preise</p>
                   </div>
                   
                   <div className="bg-gradient-to-br from-green-50 via-emerald-50 to-green-100/50 border-2 border-green-200/50 rounded-2xl p-8 shadow-xl">

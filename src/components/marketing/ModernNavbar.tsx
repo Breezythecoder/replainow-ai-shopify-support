@@ -43,25 +43,25 @@ const ModernNavbar = () => {
               {/* Glow Effect */}
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-opacity duration-300"></div>
               
-              {/* Logo Container - Nur Icon */}
-                <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-2 border border-blue-500/30 group-hover:border-blue-400/60 transition-all duration-300">
+              {/* Logo Container - Professional Size */}
+                <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-lg p-1.5 border border-blue-500/30 group-hover:border-blue-400/60 transition-all duration-300">
                   <img
                     src="/lovable-uploads/ReplAInow_Logo_optimized.png"
                     alt="ReplAInow Logo - KI-gestützter Shopify Support mit GPT-4.1 Technologie für automatisierten Kundenservice"
-                    className="h-10 w-10 group-hover:scale-110 transition-transform duration-300 rounded-lg"
+                    className="h-7 w-7 group-hover:scale-105 transition-transform duration-300 rounded"
                   />
                 
                 {/* AI Activity Indicator */}
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-400 rounded-full animate-pulse border-2 border-slate-800"></div>
+                <div className="absolute -top-0.5 -right-0.5 w-2 h-2 bg-green-400 rounded-full animate-pulse border border-slate-800"></div>
               </div>
             </div>
             
-            {/* AI Brand Text */}
-            <div className="ml-3">
-                <div className="text-white font-black text-lg">
+            {/* AI Brand Text - Professional */}
+            <div className="ml-2">
+                <div className="text-white font-bold text-base">
                   Repl<span className="text-blue-300 font-bold">AI</span>now
                 </div>
-              <div className="text-xs text-blue-300 font-medium">GPT-4.1 Powered</div>
+              <div className="text-xs text-blue-200 font-medium">GPT-4.1 Powered</div>
             </div>
           </a>
           
