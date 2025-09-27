@@ -8,9 +8,9 @@ export default defineConfig(({ mode }) => ({
   build: {
     rollupOptions: {
       output: {
-        entryFileNames: `assets/index-[hash]-${Date.now()}.js`,
-        chunkFileNames: `assets/[name]-[hash]-${Date.now()}.js`,
-        assetFileNames: `assets/[name]-[hash]-${Date.now()}.[ext]`
+        entryFileNames: `assets/index-[hash]-${Date.now()}-${Math.random().toString(36).substr(2, 9)}.js`,
+        chunkFileNames: `assets/[name]-[hash]-${Date.now()}-${Math.random().toString(36).substr(2, 9)}.js`,
+        assetFileNames: `assets/[name]-[hash]-${Date.now()}-${Math.random().toString(36).substr(2, 9)}.[ext]`
       }
     }
   },
