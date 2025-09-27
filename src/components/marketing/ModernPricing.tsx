@@ -179,46 +179,46 @@ const ModernPricing = () => {
         
         {/* Savings Calculator */}
         <div className="max-w-5xl mx-auto">
-          <div className="bg-gradient-to-r from-brand-success/10 to-brand-success/5 rounded-3xl p-8 border border-brand-success/20 shadow-float">
-            <h3 className="text-3xl font-black text-brand-success mb-4 text-center">
+          <div className="bg-gradient-to-r from-slate-800 via-slate-900 to-slate-800 rounded-3xl p-8 border border-blue-500/30 shadow-float">
+            <h3 className="text-3xl font-black text-green-400 mb-4 text-center">
                Massive Kosteneinsparung vs. Per-Ticket-Abrechnung
             </h3>
-            <p className="text-center text-brand-success mb-8 text-lg font-semibold">
-              Während Konkurrenten <span className="text-destructive font-black">pro Ticket</span> abrechnen, ist bei uns im Scale Plan <span className="text-brand-success font-black">ALLES UNLIMITIERT</span>!
+            <p className="text-center text-slate-300 mb-8 text-lg font-semibold">
+              Während Konkurrenten <span className="text-red-400 font-black">pro Ticket</span> abrechnen, ist bei uns im Scale Plan <span className="text-green-400 font-black">ALLES UNLIMITIERT</span>!
             </p>
             
             <div className="grid md:grid-cols-3 gap-6 text-center mb-8">
-              <div className="bg-slate-800/80 backdrop-blur-lg rounded-2xl p-6 shadow-md border-2 border-destructive/20">
-                <div className="text-destructive font-bold text-lg mb-2"> Gorgias</div>
-                <div className="text-destructive font-semibold mb-1">€50+/Monat</div>
-                <div className="text-xs text-destructive/70 mb-3">+ 2-5 pro Ticket</div>
-                <div className="text-brand-success font-black text-xl">€372+/Jahr gespart</div>
+              <div className="bg-slate-700/80 backdrop-blur-lg rounded-2xl p-6 shadow-md border-2 border-red-500/30">
+                <div className="text-red-300 font-bold text-lg mb-2"> Gorgias</div>
+                <div className="text-red-200 font-semibold mb-1">€50+/Monat</div>
+                <div className="text-xs text-red-300 mb-3">+ 2-5 pro Ticket</div>
+                <div className="text-green-400 font-black text-xl">€372+/Jahr gespart</div>
               </div>
-              <div className="bg-slate-800/80 backdrop-blur-lg rounded-2xl p-6 shadow-md border-2 border-destructive/20">
-                <div className="text-destructive font-bold text-lg mb-2"> Intercom</div>
-                <div className="text-destructive font-semibold mb-1">€74+/Monat</div>
-                <div className="text-xs text-destructive/70 mb-3">+ 1-3 pro Ticket</div>
-                <div className="text-brand-success font-black text-xl">€660+/Jahr gespart</div>
+              <div className="bg-slate-700/80 backdrop-blur-lg rounded-2xl p-6 shadow-md border-2 border-red-500/30">
+                <div className="text-red-300 font-bold text-lg mb-2"> Intercom</div>
+                <div className="text-red-200 font-semibold mb-1">€74+/Monat</div>
+                <div className="text-xs text-red-300 mb-3">+ 1-3 pro Ticket</div>
+                <div className="text-green-400 font-black text-xl">€660+/Jahr gespart</div>
               </div>
-              <div className="bg-slate-800/80 backdrop-blur-lg rounded-2xl p-6 shadow-md border-2 border-destructive/20">
-                <div className="text-destructive font-bold text-lg mb-2"> Zendesk</div>
-                <div className="text-destructive font-semibold mb-1">€115+/Monat</div>
-                <div className="text-xs text-destructive/70 mb-3">+ 0.50-2 pro Ticket</div>
-                <div className="text-brand-success font-black text-xl">€1.152+/Jahr gespart</div>
+              <div className="bg-slate-700/80 backdrop-blur-lg rounded-2xl p-6 shadow-md border-2 border-red-500/30">
+                <div className="text-red-300 font-bold text-lg mb-2"> Zendesk</div>
+                <div className="text-red-200 font-semibold mb-1">€115+/Monat</div>
+                <div className="text-xs text-red-300 mb-3">+ 0.50-2 pro Ticket</div>
+                <div className="text-green-400 font-black text-xl">€1.152+/Jahr gespart</div>
               </div>
             </div>
 
-            <div className="bg-gradient-primary text-white rounded-2xl p-6 text-center">
+            <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-2xl p-6 text-center">
               <h4 className="text-2xl font-bold mb-3">ReplAInow Scale Plan: €199/Monat</h4>
               <p className="text-lg font-semibold mb-2">UNLIMITIERTE AI-Antworten</p>
               <p className="text-sm opacity-90">Keine versteckten Kosten  Keine Per-Ticket-Gebühren  Keine Limits</p>
             </div>
 
             <div className="mt-6 text-center">
-              <p className="text-brand-success font-bold text-lg mb-2">
+              <p className="text-green-400 font-bold text-lg mb-2">
                 Bei 1.000 Tickets/Monat zahlst du bei Gorgias über €3.000 extra!
               </p>
-              <p className="text-brand-success font-semibold">
+              <p className="text-green-400 font-semibold">
                 Mit ReplAInow: 0 extra - egal ob 100 oder 10.000 Tickets! 
               </p>
             </div>
