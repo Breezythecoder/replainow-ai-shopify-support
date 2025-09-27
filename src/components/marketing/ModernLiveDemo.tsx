@@ -196,7 +196,7 @@ const ModernLiveDemo = () => {
                             resetDemo();
                           }}
                           aria-label={`Switch to ${scenario.name} scenario`}
-                          className={`px-4 py-2 rounded-xl font-medium transition-all duration-300 ${
+                          className={`px-4 py-3 rounded-xl font-medium transition-all duration-300 min-h-[48px] touch-manipulation ${
                             selectedScenario === index
                               ? 'bg-blue-600 text-white shadow-lg transform scale-105'
                               : 'bg-white text-slate-700 border border-slate-300 hover:bg-blue-50 hover:border-blue-300'
@@ -214,18 +214,18 @@ const ModernLiveDemo = () => {
                       onClick={togglePlay}
                       variant={isPlaying ? "destructive" : "default"}
                       size="sm"
-                      className="flex items-center gap-2 min-h-[44px] min-w-[44px]"
+                      className="flex items-center gap-2 min-h-[48px] min-w-[48px] touch-manipulation"
                     >
-                      {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                      {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
                       {isPlaying ? "Pause" : "Play"}
                     </Button>
                     <Button
                       onClick={resetDemo}
                       variant="outline"
                       size="sm"
-                      className="flex items-center gap-2 min-h-[44px] min-w-[44px]"
+                      className="flex items-center gap-2 min-h-[48px] min-w-[48px] touch-manipulation"
                     >
-                      <RotateCcw className="w-4 h-4" />
+                      <RotateCcw className="w-5 h-5" />
                       Reset
                     </Button>
                   </div>

@@ -33,10 +33,16 @@ export const useSwipe = (options: SwipeOptions = {}) => {
 
     const deltaX = touchStart.current.x - touchEnd.current.x;
     const deltaY = touchStart.current.y - touchEnd.current.y;
-    const isLeftSwipe = deltaX > threshold;
-    const isRightSwipe = deltaX < -threshold;
-    const isUpSwipe = deltaY > threshold;
-    const isDownSwipe = deltaY < -threshold;
+    
+    // Only trigger swipe if horizontal movement is significantly greater than vertical
+    // This prevents accidental swipes during vertical scrolling
+    const isHorizontalSwipe = Math.abs(deltaX) > Math.abs(deltaY) * 2;
+    const isVerticalSwipe = Math.abs(deltaY) > Math.abs(deltaX) * 2;
+    
+    const isLeftSwipe = isHorizontalSwipe && deltaX > threshold;
+    const isRightSwipe = isHorizontalSwipe && deltaX < -threshold;
+    const isUpSwipe = isVerticalSwipe && deltaY > threshold;
+    const isDownSwipe = isVerticalSwipe && deltaY < -threshold;
 
     if (isLeftSwipe && options.onSwipeLeft) {
       options.onSwipeLeft();

@@ -10,10 +10,11 @@ const ModernNavbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Swipe gestures for mobile
+  // Swipe gestures for mobile - only on mobile devices
   useSwipe({
-    onSwipeLeft: () => setMobileMenuOpen(false),
-    onSwipeRight: () => setMobileMenuOpen(true),
+    onSwipeLeft: () => window.innerWidth < 768 && setMobileMenuOpen(false),
+    onSwipeRight: () => window.innerWidth < 768 && setMobileMenuOpen(true),
+    threshold: 100, // Higher threshold for more intentional swipes
   });
 
   useEffect(() => {
@@ -131,11 +132,11 @@ const ModernNavbar = () => {
               </a>
             </Button>
             
-            {/* AI-Style Mobile Menu Button */}
+            {/* AI-Style Mobile Menu Button - Optimized for Touch */}
               <Button
                 variant="ghost"
                 size="sm"
-                className="md:hidden text-blue-200 hover:text-white hover:bg-blue-500/20 transition-all duration-300 p-3 min-h-[44px] min-w-[44px]"
+                className="md:hidden text-white hover:text-blue-200 hover:bg-blue-500/30 transition-all duration-300 p-4 min-h-[48px] min-w-[48px] border border-blue-500/30 hover:border-blue-400/60 rounded-xl"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 aria-label={mobileMenuOpen ? "Navigation schließen" : "Navigation öffnen"}
               >
@@ -155,7 +156,7 @@ const ModernNavbar = () => {
               {/* AI Navigation Links */}
               <a 
                 href="#features" 
-                className="block py-4 px-4 text-blue-200 hover:text-white hover:bg-blue-500/20 rounded-xl transition-all duration-300 font-semibold text-base flex items-center gap-4 group"
+                className="block py-5 px-6 text-blue-200 hover:text-white hover:bg-blue-500/20 rounded-xl transition-all duration-300 font-semibold text-lg flex items-center gap-4 group min-h-[56px] touch-manipulation"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <div className="p-2 rounded-lg bg-blue-500/20 group-hover:bg-blue-500/40 transition-colors">
@@ -167,7 +168,7 @@ const ModernNavbar = () => {
               
               <a 
                 href="#live-demo" 
-                className="block py-4 px-4 text-blue-200 hover:text-white hover:bg-purple-500/20 rounded-xl transition-all duration-300 font-semibold text-base flex items-center gap-4 group"
+                className="block py-5 px-6 text-blue-200 hover:text-white hover:bg-purple-500/20 rounded-xl transition-all duration-300 font-semibold text-lg flex items-center gap-4 group min-h-[56px] touch-manipulation"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <div className="p-2 rounded-lg bg-purple-500/20 group-hover:bg-purple-500/40 transition-colors">
@@ -179,7 +180,7 @@ const ModernNavbar = () => {
               
               <a 
                 href="#pricing" 
-                className="block py-4 px-4 text-blue-200 hover:text-white hover:bg-green-500/20 rounded-xl transition-all duration-300 font-semibold text-base flex items-center gap-4 group"
+                className="block py-5 px-6 text-blue-200 hover:text-white hover:bg-green-500/20 rounded-xl transition-all duration-300 font-semibold text-lg flex items-center gap-4 group min-h-[56px] touch-manipulation"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <div className="p-2 rounded-lg bg-green-500/20 group-hover:bg-green-500/40 transition-colors">
@@ -191,7 +192,7 @@ const ModernNavbar = () => {
               
               <a 
                 href="#contact" 
-                className="block py-4 px-4 text-blue-200 hover:text-white hover:bg-indigo-500/20 rounded-xl transition-all duration-300 font-semibold text-base flex items-center gap-4 group"
+                className="block py-5 px-6 text-blue-200 hover:text-white hover:bg-indigo-500/20 rounded-xl transition-all duration-300 font-semibold text-lg flex items-center gap-4 group min-h-[56px] touch-manipulation"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 <div className="p-2 rounded-lg bg-indigo-500/20 group-hover:bg-indigo-500/40 transition-colors">
@@ -201,14 +202,14 @@ const ModernNavbar = () => {
                 <div className="ml-auto w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></div>
               </a>
               
-              {/* AI CTA Button */}
-              <div className="pt-4">
-                <Button asChild variant="cta" size="lg" className="w-full font-bold text-base relative overflow-hidden group">
-                  <a href={OAUTH_URL} className="flex items-center gap-3 justify-center relative z-10">
+              {/* AI CTA Button - Mobile Optimized */}
+              <div className="pt-6">
+                <Button asChild variant="cta" size="lg" className="w-full font-bold text-lg relative overflow-hidden group min-h-[56px] touch-manipulation">
+                  <a href={OAUTH_URL} className="flex items-center gap-3 justify-center relative z-10 py-4">
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                    <Rocket className="w-5 h-5 group-hover:animate-bounce" />
+                    <Rocket className="w-6 h-6 group-hover:animate-bounce" />
                     <span>JETZT INSTALLIEREN</span>
-                    <Sparkles className="w-5 h-5 text-yellow-300 group-hover:animate-pulse" />
+                    <Sparkles className="w-6 h-6 text-yellow-300 group-hover:animate-pulse" />
                   </a>
                 </Button>
               </div>

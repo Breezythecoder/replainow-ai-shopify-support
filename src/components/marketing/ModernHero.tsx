@@ -167,36 +167,36 @@ const ModernHero = () => {
             <span className="text-green-400 font-bold"> 90% weniger Support-Tickets</span>.
           </p>
 
-          {/* AI-Powered Live Stats */}
-          <div className="grid grid-cols-3 gap-6 my-12">
-            <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/30 backdrop-blur-lg p-6 rounded-2xl text-center border border-blue-400/30 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105">
-              <div className="text-3xl font-black text-cyan-400 mb-2">5000+</div>
-              <div className="text-sm text-blue-200 font-semibold">Aktive Stores</div>
+          {/* AI-Powered Live Stats - Mobile Optimized */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 my-8 sm:my-12">
+            <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/30 backdrop-blur-lg p-4 sm:p-6 rounded-2xl text-center border border-blue-400/30 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 touch-manipulation">
+              <div className="text-2xl sm:text-3xl font-black text-cyan-400 mb-2">5000+</div>
+              <div className="text-xs sm:text-sm text-blue-200 font-semibold">Aktive Stores</div>
               <div className="w-full h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full mt-2 animate-pulse"></div>
             </div>
-            <div className="bg-gradient-to-br from-green-500/20 to-emerald-600/30 backdrop-blur-lg p-6 rounded-2xl text-center border border-green-400/30 shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-105">
-              <div className="text-3xl font-black text-green-400 mb-2">98%</div>
-              <div className="text-sm text-green-200 font-semibold">AI Genauigkeit</div>
+            <div className="bg-gradient-to-br from-green-500/20 to-emerald-600/30 backdrop-blur-lg p-4 sm:p-6 rounded-2xl text-center border border-green-400/30 shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-105 touch-manipulation">
+              <div className="text-2xl sm:text-3xl font-black text-green-400 mb-2">98%</div>
+              <div className="text-xs sm:text-sm text-green-200 font-semibold">AI Genauigkeit</div>
               <div className="w-full h-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full mt-2 animate-pulse"></div>
             </div>
-            <div className="bg-gradient-to-br from-purple-500/20 to-indigo-600/30 backdrop-blur-lg p-6 rounded-2xl text-center border border-purple-400/30 shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105">
-              <div className="text-3xl font-black text-purple-400 mb-2">3s</div>
-              <div className="text-sm text-purple-200 font-semibold">Response Time</div>
+            <div className="bg-gradient-to-br from-purple-500/20 to-indigo-600/30 backdrop-blur-lg p-4 sm:p-6 rounded-2xl text-center border border-purple-400/30 shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 touch-manipulation">
+              <div className="text-2xl sm:text-3xl font-black text-purple-400 mb-2">3s</div>
+              <div className="text-xs sm:text-sm text-purple-200 font-semibold">Response Time</div>
               <div className="w-full h-1 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full mt-2 animate-pulse"></div>
             </div>
           </div>
           
           {/* Revolutionary CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-            <Button asChild variant="cta" size="xl" className="group flex-1 sm:flex-none premium-button bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-2xl hover:shadow-blue-500/25 text-white font-black relative overflow-hidden transform hover:scale-105 transition-all duration-300 focus-ring-enhanced">
-              <a href={OAUTH_URL} className="flex items-center justify-center gap-3 text-base lg:text-lg font-bold relative z-10">
+            <Button asChild variant="cta" size="xl" className="group flex-1 sm:flex-none premium-button bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-2xl hover:shadow-blue-500/25 text-white font-black relative overflow-hidden transform hover:scale-105 transition-all duration-300 focus-ring-enhanced min-h-[56px] touch-manipulation">
+              <a href={OAUTH_URL} className="flex items-center justify-center gap-3 text-base lg:text-lg font-bold relative z-10 py-4">
                 <span className="text-xl group-hover:scale-110 transition-transform"></span>
                 JETZT INSTALLIEREN
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
               </a>
             </Button>
-            <Button asChild variant="outline" size="xl" className="flex-1 sm:flex-none border-2 border-blue-400 text-blue-100 hover:bg-blue-500 hover:text-white font-bold focus-ring-enhanced bg-blue-500/10">
-              <a href="#live-demo" className="flex items-center justify-center gap-3 text-base lg:text-lg font-semibold">
+            <Button asChild variant="outline" size="xl" className="flex-1 sm:flex-none border-2 border-blue-400 text-blue-100 hover:bg-blue-500 hover:text-white font-bold focus-ring-enhanced bg-blue-500/10 min-h-[56px] touch-manipulation">
+              <a href="#live-demo" className="flex items-center justify-center gap-3 text-base lg:text-lg font-semibold py-4">
                 <span className="text-xl"></span>
                 Live-Demo ansehen
               </a>
