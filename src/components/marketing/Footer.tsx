@@ -41,7 +41,7 @@ const Footer = () => {
                   </div>
                 </div>
                 <blockquote className="text-slate-300 italic text-lg leading-relaxed">
-                  "Als ehemaliger Shopify-Entwickler habe ich selbst erlebt, wie frustrierend es ist, 
+                  "Als E-Commerce Unternehmer und Programmierer habe ich selbst erlebt, wie frustrierend es ist, 
                   wenn Kundenanfragen stundenlang unbeantwortet bleiben. ReplAInow ist die Lösung, 
                   die ich mir damals gewünscht hätte - intelligent, schnell und bezahlbar."
                 </blockquote>
@@ -111,12 +111,8 @@ const Footer = () => {
                 <span className="text-slate-300 text-sm">support@replainow.com</span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="text-blue-400" size={16} />
-                <span className="text-slate-300 text-sm">+49 (0) 30 123 456 789</span>
-              </div>
-              <div className="flex items-center gap-3">
                 <MapPin className="text-blue-400" size={16} />
-                <span className="text-slate-300 text-sm">Berlin, Deutschland</span>
+                <span className="text-slate-300 text-sm">Dubai, UAE</span>
               </div>
             </div>
           </div>
@@ -133,7 +129,7 @@ const Footer = () => {
             <div className="flex items-center gap-2 text-slate-400 text-sm">
               <span>Made with</span>
               <Heart className="text-red-500" size={16} />
-              <span>in Berlin</span>
+              <span>in Dubai</span>
             </div>
           </div>
         </div>

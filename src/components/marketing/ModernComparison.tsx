@@ -86,63 +86,86 @@ const ModernComparison = () => {
           </div>
         </div>
 
-        {/* Enhanced Cost Savings */}
-        <div className="mt-20 max-w-5xl mx-auto">
-          <div className="bg-gradient-to-br from-brand-success/10 via-brand-success/5 to-transparent rounded-3xl p-6 sm:p-10 border border-brand-success/20 shadow-brand-glow relative overflow-hidden">
-            {/* Floating Elements */}
-            <div className="absolute bottom-4 left-4 w-20 h-20 bg-brand-success/10 rounded-full blur-xl"></div>
+        {/* Modern Cost Savings Block */}
+        <div className="mt-20 max-w-6xl mx-auto">
+          <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-2xl relative overflow-hidden">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-green-50/50"></div>
+            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-100/30 to-transparent rounded-full blur-2xl"></div>
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-green-100/30 to-transparent rounded-full blur-2xl"></div>
             
             <div className="relative z-10">
-              <h3 className="text-3xl sm:text-4xl font-black text-brand-success mb-8 text-center">
-                Massive Kosteneinsparung vs. Konkurrenz
-              </h3>
+              <div className="text-center mb-12">
+                <h3 className="text-4xl sm:text-5xl font-bold mb-4">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">
+                    Massive Kosteneinsparung
+                  </span>
+                </h3>
+                <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+                  Warum 75% weniger bezahlen und trotzdem die beste KI-Performance bekommen?
+                </p>
+              </div>
               
-              <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
-                {/* Expensive Competition */}
-                <div className="text-center space-y-6">
-                  <div className="text-destructive font-bold text-xl mb-4">
-                    Teure Konkurrenz
-                  </div>
+              <div className="grid lg:grid-cols-3 gap-8">
+                {/* Competition */}
+                <div className="lg:col-span-1">
+                  <h4 className="text-2xl font-bold text-red-600 mb-6 text-center">Teure Konkurrenz</h4>
                   <div className="space-y-4">
                     {[
-                       { name: "Gorgias", price: "EUR 50+", color: "bg-red-100 border-red-200 text-red-700" },
-                       { name: "Intercom", price: "EUR 74+", color: "bg-red-100 border-red-200 text-red-700" },
-                       { name: "Zendesk", price: "EUR 115+", color: "bg-red-100 border-red-200 text-red-700" }
+                       { name: "Gorgias", price: "€50+", features: "Basis AI, langsam" },
+                       { name: "Intercom", price: "€74+", features: "Begrenzte Sprachen" },
+                       { name: "Zendesk", price: "€115+", features: "Komplexe Setup" }
                     ].map((item, i) => (
-                      <div key={i} className={`${item.color} rounded-xl p-4 border font-bold flex justify-between items-center`}>
-                        <span>{item.name}</span>
-                        <span className="text-lg">{item.price}/Monat</span>
+                      <div key={i} className="bg-red-50 border border-red-200 rounded-xl p-4 hover:shadow-lg transition-shadow">
+                        <div className="flex justify-between items-start mb-2">
+                          <span className="font-bold text-red-800">{item.name}</span>
+                          <span className="text-lg font-black text-red-600">{item.price}/Monat</span>
+                        </div>
+                        <p className="text-sm text-red-600">{item.features}</p>
                       </div>
                     ))}
                   </div>
+                  <div className="mt-6 bg-red-100 border border-red-200 rounded-xl p-4 text-center">
+                    <div className="text-red-700 font-bold">= €1.800+/Jahr</div>
+                    <div className="text-sm text-red-600">Nur für Basis-Features</div>
+                  </div>
                 </div>
 
-                {/* ReplAInow Power */}
-                <div className="text-center space-y-6">
-                  <div className="text-green-600 font-bold text-xl mb-4">
-                      <span className="flex items-center justify-center gap-2">
-                       <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                         <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
-                       </svg>
-                       ReplAInow Power
-                     </span>
+                {/* VS Arrow */}
+                <div className="lg:col-span-1 flex items-center justify-center">
+                  <div className="text-6xl text-slate-400 font-bold">VS</div>
+                </div>
+
+                {/* ReplAInow */}
+                <div className="lg:col-span-1">
+                  <h4 className="text-2xl font-bold text-green-600 mb-6 text-center">ReplAInow Power</h4>
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-6 shadow-lg">
+                    <div className="text-center mb-4">
+                      <div className="text-4xl font-black text-green-600 mb-2">€19/Monat</div>
+                      <div className="text-sm text-green-600 font-semibold">Alle Features inklusive</div>
+                    </div>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center gap-2 text-sm">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span>GPT-4.1 AI Engine</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span>32+ Sprachen nativ</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span>3 Sekunden Antwortzeit</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-sm">
+                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                        <span>Unlimitierte AI-Antworten</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-200 shadow-lg">
-                    <div className="text-4xl sm:text-5xl font-black text-green-600 mb-3">
-                      €19/Monat
-                    </div>
-                    <div className="text-green-600 text-lg font-bold mb-4">
-                      = Bis zu €1.368/Jahr gespart!
-                    </div>
-                    <div className="text-slate-600 font-semibold">
-                      Bei überlegener KI-Performance
-                    </div>
-                  </div>
-                  
-                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-200">
-                    <div className="text-blue-600 font-bold">
-                      ROI: 600%+ garantiert
-                    </div>
+                  <div className="mt-6 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-4 text-center">
+                    <div className="text-blue-700 font-bold text-lg">= €228/Jahr</div>
+                    <div className="text-sm text-blue-600">€1.572/Jahr gespart!</div>
                   </div>
                 </div>
               </div>
