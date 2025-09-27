@@ -4,10 +4,10 @@ const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
 const ModernHowItWorksFr = () => {
   const steps = [
-    { step: "01", icon: "⬇️", title: "Installer l'app", desc: "Installation en 1 clic depuis Shopify App Store" },
-    { step: "02", icon: "🔗", title: "Connexion automatique", desc: "L'IA apprend tous vos produits & politiques" },
-    { step: "03", icon: "🤖", title: "IA répond instantanément", desc: "Réponses parfaites en 3 secondes" },
-    { step: "04", icon: "📈", title: "Les profits explosent", desc: "+187% de conversion à 75% moins cher" },
+    { step: "01", icon: "", title: "Installer l'app", desc: "Installation en 1 clic depuis Shopify App Store" },
+    { step: "02", icon: "", title: "Connexion automatique", desc: "L'IA apprend tous vos produits & politiques" },
+    { step: "03", icon: "", title: "IA rpond instantanment", desc: "Rponses parfaites en 3 secondes" },
+    { step: "04", icon: "", title: "Les profits explosent", desc: "+187% de conversion  75% moins cher" },
   ];
 
   return (
@@ -37,9 +37,9 @@ const ModernHowItWorksFr = () => {
         </div>
         <div className="text-center px-4">
           <Button asChild variant="cta" size="xl" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 font-bold min-h-[56px] max-w-md mx-auto">
-            <a href={OAUTH_URL} className="flex items-center justify-center gap-2">🚀 Commencer Gratuitement</a>
+            <a href={OAUTH_URL} className="flex items-center justify-center gap-2"> Commencer Gratuitement</a>
           </Button>
-          <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed">✅ 14 jours gratuits • ✅ Sans setup • ✅ Résiliable à tout moment</p>
+          <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed"> 14 jours gratuits   Sans setup   Rsiliable  tout moment</p>
         </div>
       </div>
     </section>

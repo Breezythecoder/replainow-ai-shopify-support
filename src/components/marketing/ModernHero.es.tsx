@@ -55,14 +55,14 @@ const ModernHeroEs = () => {
             
             <p className="text-lg sm:text-xl text-slate-700 leading-relaxed">
               IA revolucionaria con <strong className="text-gradient-primary">datos de Shopify en tiempo real</strong>: 
-              Mayor conversión, respuestas más rápidas, 90% menos tickets de soporte.
+              Mayor conversin, respuestas ms rpidas, 90% menos tickets de soporte.
             </p>
             
             {/* ROI Stats Row */}
             <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
               <div className="glass-card p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-primary">+187%</div>
-                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Conversión</div>
+                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Conversin</div>
               </div>
               <div className="glass-card p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-success">3 Seg</div>
@@ -78,12 +78,12 @@ const ModernHeroEs = () => {
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
               <Button asChild variant="cta" size="xl" className="group flex-1 sm:flex-none">
                 <a href={OAUTH_URL} className="flex items-center justify-center gap-2 text-base lg:text-lg">
-                  🚀 Prueba Gratis Ahora
+                   Prueba Gratis Ahora
                 </a>
               </Button>
               <Button asChild variant="glass" size="xl" className="flex-1 sm:flex-none">
                 <a href="#live-demo" className="flex items-center justify-center gap-2 text-base lg:text-lg">
-                  📺 Ver Demo en Vivo
+                   Ver Demo en Vivo
                 </a>
               </Button>
             </div>
@@ -91,13 +91,13 @@ const ModernHeroEs = () => {
             {/* Trust Indicators */}
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4 lg:gap-6 text-sm">
               <div className="flex items-center gap-2 glass-card px-4 py-3 rounded-full shadow-brand">
-                <span className="text-brand-warning text-lg">★★★★★</span>
+                <span className="text-brand-warning text-lg"></span>
                 <span className="font-bold text-slate-700">4.9/5</span>
               </div>
               <span className="px-4 py-3 glass-card text-brand-success rounded-full font-bold shadow-brand">
-                ✅ Cumple RGPD
+                 Cumple RGPD
               </span>
-              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand">👥 5000+ Tiendas</span>
+              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand"> 5000+ Tiendas</span>
             </div>
           </div>
           
@@ -111,13 +111,13 @@ const ModernHeroEs = () => {
               />
               {/* Floating Success Badge */}
               <div className="absolute top-2 right-2 sm:top-4 sm:right-4 lg:-top-4 lg:-right-4 glass-card px-2 py-1 sm:px-3 sm:py-2 lg:px-6 lg:py-3 rounded-full text-xs sm:text-sm font-black text-brand-success shadow-brand-glow animate-pulse max-w-[120px] sm:max-w-none">
-                <span className="block sm:hidden">✅ +37%</span>
-                <span className="hidden sm:block">✅ +37% Satisfacción</span>
+                <span className="block sm:hidden"> +37%</span>
+                <span className="hidden sm:block"> +37% Satisfaccin</span>
               </div>
               {/* Floating Cost Savings */}
               <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 lg:-bottom-4 lg:-left-4 glass-card px-2 py-1 sm:px-3 sm:py-2 lg:px-6 lg:py-3 rounded-full text-xs sm:text-sm font-black text-brand-warning shadow-brand-glow animate-float max-w-[140px] sm:max-w-none">
-                <span className="block sm:hidden">💰 €1.9k ahorrados</span>
-                <span className="hidden sm:block">💰 €1,900/mes ahorrados</span>
+                <span className="block sm:hidden"> 1.9k ahorrados</span>
+                <span className="hidden sm:block"> 1,900/mes ahorrados</span>
               </div>
             </div>
           </div>

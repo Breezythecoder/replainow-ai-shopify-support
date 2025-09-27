@@ -34,7 +34,7 @@ const HowItWorks = () => {
             So startest du in Minuten
           </h2>
           <p className="text-muted-foreground">
-            Installieren, verbinden, Antworten versenden – und mit Regeln automatisieren.
+            Installieren, verbinden, Antworten versenden  und mit Regeln automatisieren.
           </p>
         </header>
 
@@ -53,7 +53,7 @@ const HowItWorks = () => {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <Step Icon={Plug} title="Installieren" desc="1 Klick im Shopify App Store." />
             <Step Icon={Database} title="Verbinden" desc="Echtzeit-Zugriff auf Shopify-Daten." />
-            <Step Icon={Bot} title="Antworten" desc="KI-Vorschläge direkt im Admin." />
+            <Step Icon={Bot} title="Antworten" desc="KI-Vorschlge direkt im Admin." />
             <Step Icon={Settings2} title="Automatisieren" desc="Regeln & Auto-Send optional." />
           </div>
         </div>

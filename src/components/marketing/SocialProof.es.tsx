@@ -10,11 +10,11 @@ const SocialProofEs = () => {
           Usado y amado por las principales tiendas Shopify.
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
-          Más confianza. Menos esfuerzo. Respuestas más rápidas.
+          Ms confianza. Menos esfuerzo. Respuestas ms rpidas.
         </p>
         <div className="mb-8 flex flex-wrap items-center justify-center gap-3 text-xs">
           <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify Plus Partner</span>
-          <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify App Store ★★★★★ 4.9 / 5</span>
+          <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify App Store  4.9 / 5</span>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center mb-12">
@@ -27,16 +27,16 @@ const SocialProofEs = () => {
 
         <div className="grid gap-6 md:grid-cols-3">
           <article className="rounded-xl border bg-card p-6">
-            <p className="mb-4">"Ahorramos 15 horas de soporte por semana – y nuestros clientes aman el tiempo de respuesta rápido."</p>
-            <div className="text-sm text-muted-foreground">Lisa – Tienda Fashion • 7 cifras</div>
+            <p className="mb-4">"Ahorramos 15 horas de soporte por semana  y nuestros clientes aman el tiempo de respuesta rpido."</p>
+            <div className="text-sm text-muted-foreground">Lisa  Tienda Fashion  7 cifras</div>
           </article>
           <article className="rounded-xl border bg-card p-6">
             <p className="mb-4">"Finalmente puedo enfocarme en el crecimiento. El soporte se ejecuta solo."</p>
-            <div className="text-sm text-muted-foreground">Daniel – Marca D2C • 6 cifras</div>
+            <div className="text-sm text-muted-foreground">Daniel  Marca D2C  6 cifras</div>
           </article>
           <article className="rounded-xl border bg-card p-6">
-            <p className="mb-4">"Configuración en minutos, beneficio inmediato. Ahora cumplimos nuestros SLA fácilmente."</p>
-            <div className="text-sm text-muted-foreground">Mara – Home & Living • 8 cifras</div>
+            <p className="mb-4">"Configuracin en minutos, beneficio inmediato. Ahora cumplimos nuestros SLA fcilmente."</p>
+            <div className="text-sm text-muted-foreground">Mara  Home & Living  8 cifras</div>
           </article>
         </div>
 
@@ -47,7 +47,7 @@ const SocialProofEs = () => {
           </div>
           <div className="rounded-xl border bg-card p-6">
             <div className="text-3xl font-semibold">+37%</div>
-            <div className="text-sm text-muted-foreground">Mayor satisfacción del cliente (30 días)</div>
+            <div className="text-sm text-muted-foreground">Mayor satisfaccin del cliente (30 das)</div>
           </div>
           <div className="rounded-xl border bg-card p-6">
             <div className="text-3xl font-semibold">x12 ROI</div>

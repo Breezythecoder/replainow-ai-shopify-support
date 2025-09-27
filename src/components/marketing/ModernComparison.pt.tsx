@@ -1,12 +1,12 @@
 const ModernComparisonPt = () => {
   const comparisonData = [
-    ["Inteligência IA", "✅ GPT-4.1 Mais Recente", "❌ IA Básica", "❌ IA Limitada", "❌ IA Antiga"],
-    ["Tempo Resposta", "✅ 3 Segundos", "❌ 2-5 Minutos", "❌ 5-10 Minutos", "❌ 10+ Minutos"],
-    ["Idiomas", "✅ 32+ Nativos", "❌ 10 Básicos", "❌ 15 Básicos", "❌ 20 Básicos"],
-    ["Integração Shopify", "✅ Sync Tempo Real", "❌ Importação Manual", "❌ Conexão Básica", "❌ Setup Complexo"],
-    ["Preço/Mês", "✅ €19/Mês", "❌ €50+", "❌ €74+", "❌ €115+"],
-    ["Tempo Setup", "✅ 60 Segundos", "❌ 2-3 Dias", "❌ 1 Semana", "❌ 2 Semanas"],
-    ["Garantia ROI", "✅ 6x Conversão", "❌ Neutro", "❌ Neutro", "❌ Negativo"]
+    ["Inteligncia IA", " GPT-4.1 Mais Recente", " IA Bsica", " IA Limitada", " IA Antiga"],
+    ["Tempo Resposta", " 3 Segundos", " 2-5 Minutos", " 5-10 Minutos", " 10+ Minutos"],
+    ["Idiomas", " 32+ Nativos", " 10 Bsicos", " 15 Bsicos", " 20 Bsicos"],
+    ["Integrao Shopify", " Sync Tempo Real", " Importao Manual", " Conexo Bsica", " Setup Complexo"],
+    ["Preo/Ms", " 19/Ms", " 50+", " 74+", " 115+"],
+    ["Tempo Setup", " 60 Segundos", " 2-3 Dias", " 1 Semana", " 2 Semanas"],
+    ["Garantia ROI", " 6x Converso", " Neutro", " Neutro", " Negativo"]
   ];
 
   return (
@@ -19,10 +19,10 @@ const ModernComparisonPt = () => {
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-black mb-4 tracking-tight">
-            Por que ReplAInow <span className="text-destructive">esmaga</span> a concorrência
+            Por que ReplAInow <span className="text-destructive">esmaga</span> a concorrncia
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
-            Comparação direta com Gorgias, Intercom & Zendesk
+            Comparao direta com Gorgias, Intercom & Zendesk
           </p>
         </div>
         
@@ -38,7 +38,7 @@ const ModernComparisonPt = () => {
                         <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 bg-gradient-primary text-white relative overflow-hidden text-sm sm:text-base min-w-[140px]">
                           <div className="font-black text-base sm:text-lg md:text-xl">ReplAInow</div>
                           <div className="text-xs sm:text-sm opacity-90">Powered by GPT-4.1</div>
-                          <div className="absolute top-2 right-2 text-lg sm:text-xl md:text-2xl">👑</div>
+                          <div className="absolute top-2 right-2 text-lg sm:text-xl md:text-2xl"></div>
                         </th>
                         <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-slate-600 font-semibold bg-slate-50/50 text-sm sm:text-base min-w-[120px]">Gorgias</th>
                         <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-slate-600 font-semibold bg-slate-50/30 text-sm sm:text-base min-w-[120px]">Intercom</th>
@@ -53,7 +53,7 @@ const ModernComparisonPt = () => {
                           </td>
                           <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center bg-gradient-to-r from-brand-primary/10 via-brand-secondary/10 to-brand-primary/10 font-bold text-brand-primary relative text-sm sm:text-base">
                             <div className="flex items-center justify-center gap-2">
-                              <span className="text-base sm:text-lg">⚡</span>
+                              <span className="text-base sm:text-lg"></span>
                               <span className="whitespace-nowrap">{row[1]}</span>
                             </div>
                           </td>

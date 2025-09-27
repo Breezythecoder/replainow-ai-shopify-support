@@ -31,10 +31,10 @@ const HowItWorksZh = () => {
       <div className="container">
         <header className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
           <h2 id="how-heading" className="font-display text-3xl md:text-4xl font-semibold mb-4">
-            几分钟内即可开始
+            
           </h2>
           <p className="text-muted-foreground">
-            安装、连接、发送回复 - 并通过规则自动化。
+             - 
           </p>
         </header>
 
@@ -51,20 +51,20 @@ const HowItWorksZh = () => {
           </svg>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <Step Icon={Plug} title="安装" desc="在Shopify应用商店一键安装。" />
-            <Step Icon={Database} title="连接" desc="实时访问Shopify数据。" />
-            <Step Icon={Bot} title="回复" desc="直接在管理面板中获得AI建议。" />
-            <Step Icon={Settings2} title="自动化" desc="可选的规则和自动发送。" />
+            <Step Icon={Plug} title="" desc="Shopify" />
+            <Step Icon={Database} title="" desc="Shopify" />
+            <Step Icon={Bot} title="" desc="AI" />
+            <Step Icon={Settings2} title="" desc="" />
           </div>
         </div>
 
         <div className="text-center max-w-3xl mx-auto mt-10 md:mt-14">
           <div className="mt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
-              <a href={OAUTH_URL}>免费试用</a>
+              <a href={OAUTH_URL}></a>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-              <a href="#live-demo">观看演示</a>
+              <a href="#live-demo"></a>
             </Button>
           </div>
         </div>

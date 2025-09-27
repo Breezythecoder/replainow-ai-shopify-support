@@ -30,7 +30,7 @@ const ModernFinalCTAEn = () => {
             className="flex-1 sm:flex-none text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-12 py-4 sm:py-5 lg:py-6 bg-white text-indigo-600 hover:bg-white hover:scale-105 font-black shadow-brand-mega min-h-[56px] max-w-none sm:max-w-xs"
           >
             <a href={OAUTH_URL} className="flex items-center gap-2 justify-center text-center">
-              🚀 <span className="whitespace-normal break-words">Start Free - Shopify App</span>
+               <span className="whitespace-normal break-words">Start Free - Shopify App</span>
             </a>
           </Button>
           <Button 
@@ -40,26 +40,26 @@ const ModernFinalCTAEn = () => {
             className="flex-1 sm:flex-none text-sm sm:text-base lg:text-lg px-6 sm:px-8 lg:px-12 py-4 sm:py-5 lg:py-6 bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white/20 hover:scale-105 font-bold shadow-brand min-h-[56px] max-w-none sm:max-w-xs"
           >
             <a href="#live-demo" className="flex items-center gap-2 justify-center text-center">
-              📞 <span className="whitespace-normal break-words">Book Demo</span>
+               <span className="whitespace-normal break-words">Book Demo</span>
             </a>
           </Button>
         </div>
         
         <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-xs sm:text-sm opacity-75 px-4">
           <div className="flex items-center gap-2">
-            <span className="text-brand-success">✅</span>
+            <span className="text-brand-success"></span>
             <span>14 days free</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-brand-success">✅</span>
+            <span className="text-brand-success"></span>
             <span>No setup</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-brand-success">✅</span>
+            <span className="text-brand-success"></span>
             <span>Cancel anytime</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="text-brand-success">✅</span>
+            <span className="text-brand-success"></span>
             <span>Money back</span>
           </div>
         </div>
@@ -67,7 +67,7 @@ const ModernFinalCTAEn = () => {
         {/* Urgency Counter */}
         <div className="mt-8 sm:mt-12 bg-white/95 backdrop-blur-md p-6 sm:p-8 lg:p-10 rounded-3xl max-w-3xl mx-4 sm:mx-auto border border-white/30 shadow-brand-mega hover-lift">
           <p className="text-indigo-600 font-black text-xl sm:text-2xl lg:text-3xl mb-4 animate-pulse">
-            🔥 Limited onboarding offer
+             Limited onboarding offer
           </p>
           <p className="text-slate-700 text-base sm:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8">
             Only the first <strong className="text-indigo-600 text-lg sm:text-xl lg:text-2xl">100 stores</strong> this month get free setup + 1 month free

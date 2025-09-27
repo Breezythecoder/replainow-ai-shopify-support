@@ -6,7 +6,7 @@ const ModernLiveDemoFr = () => {
           Voyez ReplAInow <span className="text-gradient-hero">en action</span>
         </h2>
         <p className="text-lg sm:text-xl text-slate-600 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
-          De 0 à héros en 3 secondes — voici comment l'IA de pointe fonctionne pour votre boutique Shopify
+          De 0  hros en 3 secondes  voici comment l'IA de pointe fonctionne pour votre boutique Shopify
         </p>
         <div className="max-w-5xl mx-auto mb-16">
           <div className="relative rounded-3xl overflow-hidden shadow-hero bg-gradient-primary p-2">
@@ -15,7 +15,7 @@ const ModernLiveDemoFr = () => {
                 src="https://www.youtube-nocookie.com/embed/x1VLcGBbcgo?controls=1&rel=0&modestbranding=1&showinfo=0"
                 className="w-full aspect-video"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                title="ReplAInow Démo en direct - IA Helpdesk pour Shopify"
+                title="ReplAInow Dmo en direct - IA Helpdesk pour Shopify"
               />
             </div>
           </div>
@@ -23,15 +23,15 @@ const ModernLiveDemoFr = () => {
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 max-w-4xl mx-auto px-4">
           <div className="glass-card p-6 sm:p-8 rounded-2xl text-center interactive-card hover-lift">
             <div className="text-3xl sm:text-4xl font-black text-gradient-primary mb-3">3 sec</div>
-            <div className="text-slate-600 font-medium text-sm sm:text-base">Temps de réponse moyen</div>
+            <div className="text-slate-600 font-medium text-sm sm:text-base">Temps de rponse moyen</div>
           </div>
           <div className="glass-card p-6 sm:p-8 rounded-2xl text-center interactive-card hover-lift">
             <div className="text-3xl sm:text-4xl font-black text-gradient-primary mb-3">98%</div>
-            <div className="text-slate-600 font-medium text-sm sm:text-base">Taux de précision</div>
+            <div className="text-slate-600 font-medium text-sm sm:text-base">Taux de prcision</div>
           </div>
           <div className="glass-card p-6 sm:p-8 rounded-2xl text-center interactive-card hover-lift">
             <div className="text-3xl sm:text-4xl font-black text-gradient-primary mb-3">24/7</div>
-            <div className="text-slate-600 font-medium text-sm sm:text-base">Disponibilité</div>
+            <div className="text-slate-600 font-medium text-sm sm:text-base">Disponibilit</div>
           </div>
         </div>
       </div>

@@ -58,7 +58,7 @@ const HeroFr = () => {
               </div>
 
               <p className="mt-2 text-sm text-primary-foreground/80">
-                Prêt en 2 minutes. Sans carte de crédit. Sans risque.
+                Prt en 2 minutes. Sans carte de crdit. Sans risque.
               </p>
 
               <div className="mt-5 flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-primary-foreground/90">
@@ -66,10 +66,10 @@ const HeroFr = () => {
                   <ShieldCheck className="size-4" /> Conforme RGPD
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-3 py-1">
-                  <Zap className="size-4" /> Réponse en secondes
+                  <Zap className="size-4" /> Rponse en secondes
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-3 py-1">
-                  <Plug className="size-4" /> Intégration Shopify parfaite
+                  <Plug className="size-4" /> Intgration Shopify parfaite
                 </span>
               </div>
 
@@ -78,8 +78,8 @@ const HeroFr = () => {
                   <Star className="size-4 fill-current" aria-hidden="true" />
                   <span>4.9/5 sur Shopify App Store</span>
                 </span>
-                <span className="hidden md:inline text-sm opacity-80">•</span>
-                <span className="text-sm">Approuvé par les équipes Shopify</span>
+                <span className="hidden md:inline text-sm opacity-80"></span>
+                <span className="text-sm">Approuv par les quipes Shopify</span>
               </div>
             </div>
 

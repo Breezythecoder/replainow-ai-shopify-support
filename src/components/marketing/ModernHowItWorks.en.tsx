@@ -6,25 +6,25 @@ const ModernHowItWorksEn = () => {
   const steps = [
     {
       step: "01",
-      icon: "⬇️",
+      icon: "",
       title: "Install App",
       desc: "1-click installation from Shopify App Store"
     },
     {
       step: "02", 
-      icon: "🔗",
+      icon: "",
       title: "Automatic Connection",
       desc: "AI learns ALL your products & policies automatically"
     },
     {
       step: "03",
-      icon: "🤖",
+      icon: "",
       title: "AI responds instantly",
       desc: "Customers get perfect answers in 3 seconds"
     },
     {
       step: "04",
-      icon: "📈",
+      icon: "",
       title: "Profits explode", 
       desc: "+187% conversion at 75% lower costs"
     }
@@ -62,11 +62,11 @@ const ModernHowItWorksEn = () => {
         <div className="text-center px-4">
           <Button asChild variant="cta" size="xl" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 font-bold min-h-[56px] max-w-md mx-auto">
             <a href={OAUTH_URL} className="flex items-center justify-center gap-2">
-              🚀 Start Free
+               Start Free
             </a>
           </Button>
           <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed">
-            ✅ 14 days free • ✅ No setup • ✅ Cancel anytime
+             14 days free   No setup   Cancel anytime
           </p>
         </div>
       </div>

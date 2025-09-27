@@ -6,27 +6,27 @@ const ModernHowItWorksEs = () => {
   const steps = [
     {
       step: "01",
-      icon: "⬇️",
+      icon: "",
       title: "Instalar App",
-      desc: "Instalación con 1 clic desde Shopify App Store"
+      desc: "Instalacin con 1 clic desde Shopify App Store"
     },
     {
       step: "02", 
-      icon: "🔗",
-      title: "Conexión Automática",
-      desc: "IA aprende TODOS tus productos y políticas automáticamente"
+      icon: "",
+      title: "Conexin Automtica",
+      desc: "IA aprende TODOS tus productos y polticas automticamente"
     },
     {
       step: "03",
-      icon: "🤖",
+      icon: "",
       title: "IA responde al instante",
       desc: "Los clientes obtienen respuestas perfectas en 3 segundos"
     },
     {
       step: "04",
-      icon: "📈",
+      icon: "",
       title: "Las ganancias explotan", 
-      desc: "+187% conversión con 75% menores costos"
+      desc: "+187% conversin con 75% menores costos"
     }
   ];
 
@@ -34,7 +34,7 @@ const ModernHowItWorksEs = () => {
     <section className="py-24 bg-gradient-to-b from-indigo-50 to-purple-50">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8 tracking-tight px-4 text-center">
-          Cómo <span className="text-gradient-primary">dominas</span> el servicio al cliente
+          Cmo <span className="text-gradient-primary">dominas</span> el servicio al cliente
         </h2>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16">
@@ -62,11 +62,11 @@ const ModernHowItWorksEs = () => {
         <div className="text-center px-4">
           <Button asChild variant="cta" size="xl" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 font-bold min-h-[56px] max-w-md mx-auto">
             <a href={OAUTH_URL} className="flex items-center justify-center gap-2">
-              🚀 Comenzar Gratis
+               Comenzar Gratis
             </a>
           </Button>
           <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed">
-            ✅ 14 días gratis • ✅ Sin configuración • ✅ Cancelar cuando quieras
+             14 das gratis   Sin configuracin   Cancelar cuando quieras
           </p>
         </div>
       </div>

@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
-const baseFeatures = ["Instalação 1 clique","Dados ilimitados da loja (Produtos, Páginas, Políticas)","AI Mail & AI Live Chat","Branding personalizável"];
+const baseFeatures = ["Instalao 1 clique","Dados ilimitados da loja (Produtos, Pginas, Polticas)","AI Mail & AI Live Chat","Branding personalizvel"];
 const plans = [
-  { name: "Starter", price: "$19", period: "/ mês", quota: "Até 300 respostas IA / mês", trial: "14 dias grátis", features: [...baseFeatures, "Envio de email via endereço ReplAInow"], highlight: false, description: "Perfeito para testar" },
-  { name: "Growth", price: "$49", period: "/ mês", quota: "Até 1500 respostas IA / mês", trial: "14 dias grátis", features: [...baseFeatures, "Envio de email com seu domínio"], highlight: true, badge: "Mais Popular", description: "Para lojas em crescimento" },
-  { name: "Pro", price: "$99", period: "/ mês", quota: "Até 3000 respostas IA / mês", trial: "14 dias grátis", features: [...baseFeatures, "Envio de email com seu domínio"], highlight: false, description: "Para lojas estabelecidas" },
-  { name: "Scale", price: "$199", period: "/ mês", quota: "Respostas IA ilimitadas", trial: "14 dias grátis", features: [...baseFeatures, "Envio de email com seu domínio"], highlight: false, description: "Para redes de lojas" },
+  { name: "Starter", price: "$19", period: "/ ms", quota: "At 300 respostas IA / ms", trial: "14 dias grtis", features: [...baseFeatures, "Envio de email via endereo ReplAInow"], highlight: false, description: "Perfeito para testar" },
+  { name: "Growth", price: "$49", period: "/ ms", quota: "At 1500 respostas IA / ms", trial: "14 dias grtis", features: [...baseFeatures, "Envio de email com seu domnio"], highlight: true, badge: "Mais Popular", description: "Para lojas em crescimento" },
+  { name: "Pro", price: "$99", period: "/ ms", quota: "At 3000 respostas IA / ms", trial: "14 dias grtis", features: [...baseFeatures, "Envio de email com seu domnio"], highlight: false, description: "Para lojas estabelecidas" },
+  { name: "Scale", price: "$199", period: "/ ms", quota: "Respostas IA ilimitadas", trial: "14 dias grtis", features: [...baseFeatures, "Envio de email com seu domnio"], highlight: false, description: "Para redes de lojas" },
 ];
 const ModernPricingPt = () => {
   return (
@@ -17,8 +17,8 @@ const ModernPricingPt = () => {
       </div>
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-4 tracking-tight px-4">Mais poder de suporte por <span className="text-brand-success">menos dinheiro</span></h2>
-        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-2 text-lg">Um agente de suporte custa em média €2.000 / mês.</p>
-        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-16 text-lg">ReplAInow começa em <strong className="text-gradient-primary">$19/mês</strong> — e trabalha 24/7.</p>
+        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-2 text-lg">Um agente de suporte custa em mdia 2.000 / ms.</p>
+        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-16 text-lg">ReplAInow comea em <strong className="text-gradient-primary">$19/ms</strong>  e trabalha 24/7.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 sm:mb-16">
           {plans.map((plan) => {
             const Card = (
@@ -33,13 +33,13 @@ const ModernPricingPt = () => {
                   <p className="text-xs text-slate-500 font-medium">{plan.trial}</p>
                 </div>
                 <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 flex-grow">
-                  <li className="flex items-start gap-2 sm:gap-3"><span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0">✅</span><span className="text-slate-700 font-bold text-xs sm:text-sm leading-relaxed">{plan.quota}</span></li>
+                  <li className="flex items-start gap-2 sm:gap-3"><span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span><span className="text-slate-700 font-bold text-xs sm:text-sm leading-relaxed">{plan.quota}</span></li>
                   {plan.features.map((feature, j) => (
-                    <li key={j} className="flex items-start gap-2 sm:gap-3"><span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0">✅</span><span className="text-slate-700 font-medium leading-relaxed text-xs sm:text-sm">{feature}</span></li>
+                    <li key={j} className="flex items-start gap-2 sm:gap-3"><span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span><span className="text-slate-700 font-medium leading-relaxed text-xs sm:text-sm">{feature}</span></li>
                   ))}
                 </ul>
                 <div className="space-y-3">
-                  <Button asChild variant={plan.highlight ? 'cta' : 'glass'} size="lg" className="w-full text-sm sm:text-base"><a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(plan.name)}&utm_content=pricing`}>Teste Grátis</a></Button>
+                  <Button asChild variant={plan.highlight ? 'cta' : 'glass'} size="lg" className="w-full text-sm sm:text-base"><a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(plan.name)}&utm_content=pricing`}>Teste Grtis</a></Button>
                   <div className="flex items-center justify-center gap-2 text-xs text-slate-500"><img src="/images/shopify-logo-black.svg" alt="Logo Shopify" className="h-3 sm:h-4 w-auto opacity-80" loading="lazy" /><span>No Shopify App Store</span></div>
                 </div>
               </div>

@@ -19,7 +19,7 @@ const features = [
   {
     icon: ShieldCheck,
     title: "GDPR & HMAC secure",
-    desc: "Encrypted, GDPR compliant and HMAC verified – reliable & trustworthy.",
+    desc: "Encrypted, GDPR compliant and HMAC verified  reliable & trustworthy.",
   },
   {
     icon: Bot,
@@ -29,7 +29,7 @@ const features = [
   {
     icon: Globe,
     title: "Multilingual, brand-compliant",
-    desc: "Responses in many languages in your brand's tone – ideal for global support.",
+    desc: "Responses in many languages in your brand's tone  ideal for global support.",
   },
   {
     icon: BarChart3,
@@ -39,7 +39,7 @@ const features = [
   {
     icon: Users,
     title: "Team collaboration",
-    desc: "Assign, notes, escalations – seamlessly in the team.",
+    desc: "Assign, notes, escalations  seamlessly in the team.",
   },
 ];
 
@@ -51,7 +51,7 @@ const FeaturesEn = () => {
           Core features: AI support for Shopify
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          Eight concrete benefits – technically strong and clearly measurable.
+          Eight concrete benefits  technically strong and clearly measurable.
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
           {features.map(({ icon: Icon, title, desc }) => (

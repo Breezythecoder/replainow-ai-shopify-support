@@ -6,7 +6,7 @@ const AboutIt = () => {
           Chi siamo
         </h2>
         <p className="text-center text-muted-foreground">
-          ReplAInow è un prodotto di <strong>PrimeVision Group LLC</strong>. La nostra missione: 
+          ReplAInow  un prodotto di <strong>PrimeVision Group LLC</strong>. La nostra missione: 
           Far risparmiare tempo ai merchant Shopify e migliorare durevolmente le esperienze cliente con la moderna tecnologia AI.
         </p>
       </div>

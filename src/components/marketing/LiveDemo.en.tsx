@@ -9,10 +9,10 @@ const LiveDemoEn = () => {
     <section id="live-demo" aria-labelledby="live-demo-heading" className="py-16 md:py-24">
       <div className="container max-w-5xl">
         <h2 id="live-demo-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          How ReplAInow works – so simple.
+          How ReplAInow works  so simple.
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
-          A customer asks about shipping status – ReplAInow automatically pulls order data from Shopify, formulates a perfect response in your brand's tone and sends it in 3 seconds. Result: Happy customer, you save time – and make more revenue in parallel.
+          A customer asks about shipping status  ReplAInow automatically pulls order data from Shopify, formulates a perfect response in your brand's tone and sends it in 3 seconds. Result: Happy customer, you save time  and make more revenue in parallel.
         </p>
 
         <div className="rounded-xl border bg-card p-2 shadow-brand mb-6">

@@ -52,10 +52,10 @@ const StoreDataFlowZh = () => {
             id="data-context-heading"
             className="font-display text-3xl md:text-4xl font-semibold mb-4"
           >
-            您的AI了解您的Shopify商店 — 了如指掌
+            AIShopify  
           </h2>
           <p className="text-muted-foreground">
-            ReplAInow直接连接您的Shopify商店，实时获取所有相关数据，立即准确回答客户询问。
+            ReplAInowShopify
           </p>
         </header>
 
@@ -70,7 +70,7 @@ const StoreDataFlowZh = () => {
                 <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/40" />
                 <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/40" />
                 <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/40" />
-                <span className="ml-4 text-xs text-muted-foreground">Shopify 管理后台</span>
+                <span className="ml-4 text-xs text-muted-foreground">Shopify </span>
               </div>
               {/* Mock content */}
               <div className="p-6 grid grid-cols-3 gap-4">
@@ -78,7 +78,7 @@ const StoreDataFlowZh = () => {
                   <div className="flex items-center justify-between mb-3">
                     <div className="h-4 w-28 rounded bg-muted/60" />
                     <span className="inline-flex items-center gap-2 text-xs text-muted-foreground">
-                      <Bot className="h-4 w-4" /> AI已激活
+                      <Bot className="h-4 w-4" /> AI
                     </span>
                   </div>
                   <div className="space-y-2">
@@ -120,24 +120,24 @@ const StoreDataFlowZh = () => {
               <div className="absolute -top-4 left-0 w-64">
                 <Card
                   Icon={ShoppingCart}
-                  title="订单数据"
-                  desc="订单ID、状态、商品、追踪信息"
+                  title=""
+                  desc="ID"
                 />
               </div>
               <div className="absolute -top-4 right-0 w-64">
-                <Card Icon={Package} title="产品数据" desc="标题、SKU、价格、库存" />
+                <Card Icon={Package} title="" desc="SKU" />
               </div>
               <div className="absolute top-1/3 -left-2 w-64">
-                <Card Icon={User} title="客户数据" desc="姓名、邮箱、购买历史" />
+                <Card Icon={User} title="" desc="" />
               </div>
               <div className="absolute top-1/3 -right-2 w-64">
-                <Card Icon={FileText} title="商店内容" desc="页面、常见问题、配送规则" />
+                <Card Icon={FileText} title="" desc="" />
               </div>
               <div className="absolute bottom-0 left-4 w-64">
-                <Card Icon={Truck} title="追踪配送" desc="实时链接、配送时间" />
+                <Card Icon={Truck} title="" desc="" />
               </div>
               <div className="absolute bottom-0 right-4 w-64">
-                <Card Icon={Languages} title="多语言" desc="首选语言设置" />
+                <Card Icon={Languages} title="" desc="" />
               </div>
             </div>
           </div>
@@ -148,7 +148,7 @@ const StoreDataFlowZh = () => {
               <div className="flex items-center justify-between mb-3">
                 <div className="h-4 w-24 rounded bg-muted/60" />
                 <span className="inline-flex items-center gap-2 text-xs text-muted-foreground">
-                  <Bot className="h-4 w-4" /> AI已激活
+                  <Bot className="h-4 w-4" /> AI
                 </span>
               </div>
               <div className="space-y-2">
@@ -158,12 +158,12 @@ const StoreDataFlowZh = () => {
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Card Icon={ShoppingCart} title="订单数据" desc="订单ID、状态、商品、追踪信息" />
-              <Card Icon={Package} title="产品数据" desc="标题、SKU、价格、库存" />
-              <Card Icon={User} title="客户数据" desc="姓名、邮箱、购买历史" />
-              <Card Icon={FileText} title="商店内容" desc="页面、常见问题、配送规则" />
-              <Card Icon={Truck} title="追踪配送" desc="实时链接、配送时间" />
-              <Card Icon={Languages} title="多语言" desc="首选语言设置" />
+              <Card Icon={ShoppingCart} title="" desc="ID" />
+              <Card Icon={Package} title="" desc="SKU" />
+              <Card Icon={User} title="" desc="" />
+              <Card Icon={FileText} title="" desc="" />
+              <Card Icon={Truck} title="" desc="" />
+              <Card Icon={Languages} title="" desc="" />
             </div>
           </div>
         </div>
@@ -171,14 +171,14 @@ const StoreDataFlowZh = () => {
         {/* Caption + CTA */}
         <div className="text-center max-w-3xl mx-auto mt-10 md:mt-14">
           <p className="text-muted-foreground">
-            ReplAInow利用这些数据，在&lt;3秒内提供符合品牌的精准回复 — 完全集成到Shopify中。
+            ReplAInow&lt;3  Shopify
           </p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
-              <a href={OAUTH_URL}>立即免费试用</a>
+              <a href={OAUTH_URL}></a>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-              <a href="#live-demo">观看实时演示</a>
+              <a href="#live-demo"></a>
             </Button>
           </div>
         </div>

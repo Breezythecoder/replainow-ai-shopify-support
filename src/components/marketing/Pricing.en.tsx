@@ -73,7 +73,7 @@ const PricingEn = () => {
           A support agent costs on average $2,000 per month.
         </p>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          ReplAInow starts at $19/month – and works 24/7, without breaks.
+          ReplAInow starts at $19/month  and works 24/7, without breaks.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -121,14 +121,14 @@ const PricingEn = () => {
 
                 <div className="mt-auto space-y-3">
                   <Button asChild variant="hero" className="w-full">
-                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Try for free – ${p.name} plan`}>
+                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Try for free  ${p.name} plan`}>
                       Try for free
                     </a>
                   </Button>
                   <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                     <img
                       src="/images/shopify-logo-black.svg"
-                      alt="Shopify Logo – App Store"
+                      alt="Shopify Logo  App Store"
                       className="h-4 w-auto opacity-80"
                       loading="lazy"
                     />

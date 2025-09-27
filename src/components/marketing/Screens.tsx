@@ -13,7 +13,7 @@ const Screens = () => {
           So sieht ReplAInow in deinem Shopify-Admin aus
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          Übersichtlich, schnell und nahtlos integriert.
+          bersichtlich, schnell und nahtlos integriert.
         </p>
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <figure>
@@ -30,11 +30,11 @@ const Screens = () => {
             <img
               ref={chatView.ref}
               src={chat}
-              alt="Mockup: Chatfenster mit KI-Unterstützung"
+              alt="Mockup: Chatfenster mit KI-Untersttzung"
               className={`rounded-xl border bg-card w-full shadow-sm ${chatView.inView ? 'animate-fade-in hover-scale' : 'opacity-0'}`}
               loading="lazy"
             />
-            <figcaption className="sr-only">Chatfenster mit KI-Unterstützung</figcaption>
+            <figcaption className="sr-only">Chatfenster mit KI-Untersttzung</figcaption>
           </figure>
         </div>
       </div>

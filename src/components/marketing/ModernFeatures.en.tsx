@@ -1,37 +1,37 @@
 const ModernFeaturesEn = () => {
   const features = [
     {
-      icon: "🧠",
+      icon: "",
       title: "GPT-4.1 Intelligence",
       desc: "Latest AI technology understands context like a human expert",
       gradient: "from-indigo-500 to-blue-500"
     },
     {
-      icon: "⚡",
+      icon: "",
       title: "3-Second Responses",
       desc: "Instant responses while Gorgias & Co. are still loading",
       gradient: "from-purple-500 to-pink-500"
     },
     {
-      icon: "🌍",
+      icon: "",
       title: "32+ Languages Native",
       desc: "Perfect answers in customer language - no translation errors",
       gradient: "from-cyan-500 to-teal-500"
     },
     {
-      icon: "📊",
+      icon: "",
       title: "Real-time Shopify Data",
       desc: "AI knows ALL products, prices, inventory automatically",
       gradient: "from-green-500 to-emerald-500"
     },
     {
-      icon: "💰",
+      icon: "",
       title: "75% Cost Savings",
       desc: "Superior AND cheaper than expensive competitors",
       gradient: "from-amber-500 to-orange-500"
     },
     {
-      icon: "🚀",
+      icon: "",
       title: "1-Click Installation",
       desc: "Setup in under 60 seconds - no complex configuration",
       gradient: "from-rose-500 to-red-500"

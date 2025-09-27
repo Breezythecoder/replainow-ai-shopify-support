@@ -35,7 +35,7 @@ const ContactEs = () => {
       });
 
       if (response.ok) {
-        toast({ title: "¡Gracias!", description: "Te contactaremos pronto." });
+        toast({ title: "Gracias!", description: "Te contactaremos pronto." });
         (e.currentTarget as HTMLFormElement).reset();
       } else {
         throw new Error('Failed to send message');
@@ -43,7 +43,7 @@ const ContactEs = () => {
     } catch (error) {
       toast({ 
         title: "Error", 
-        description: "No se pudo enviar el mensaje. Por favor intenta de nuevo o escríbenos directamente a support@replainow.com",
+        description: "No se pudo enviar el mensaje. Por favor intenta de nuevo o escrbenos directamente a support@replainow.com",
         variant: "destructive"
       });
     } finally {
@@ -64,7 +64,7 @@ const ContactEs = () => {
           <div className="grid md:grid-cols-2 gap-4">
             <div className="grid gap-2">
               <label className="text-sm" htmlFor="name">Nombre</label>
-              <Input id="name" name="name" placeholder="Juan Pérez" required />
+              <Input id="name" name="name" placeholder="Juan Prez" required />
             </div>
             <div className="grid gap-2">
               <label className="text-sm" htmlFor="email">Email</label>
@@ -73,7 +73,7 @@ const ContactEs = () => {
           </div>
           <div className="grid gap-2">
             <label className="text-sm" htmlFor="message">Mensaje</label>
-            <Textarea id="message" name="message" placeholder="¿Cómo podemos ayudarte?" rows={5} required />
+            <Textarea id="message" name="message" placeholder="Cmo podemos ayudarte?" rows={5} required />
           </div>
           <div className="flex justify-end">
             <Button type="submit" variant="hero" disabled={isSubmitting}>

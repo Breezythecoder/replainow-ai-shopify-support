@@ -5,7 +5,7 @@ type Feature = string | { label: string; sub: string[] };
 
 const baseFeatures: string[] = [
   "Installation en 1 clic",
-  "Données boutique illimitées (produits, pages, politiques, etc.)",
+  "Donnes boutique illimites (produits, pages, politiques, etc.)",
   "IA Mail & IA Live Chat",
   "Marque personnalisable",
 ];
@@ -15,7 +15,7 @@ const plans = [
     name: "Starter",
     price: "$19",
     period: "/ mois",
-    quota: "Jusqu'à 300 réponses IA / mois",
+    quota: "Jusqu' 300 rponses IA / mois",
     trial: "14 jours d'essai gratuit",
     features: [
       ...baseFeatures,
@@ -27,7 +27,7 @@ const plans = [
     name: "Growth",
     price: "$49",
     period: "/ mois",
-    quota: "Jusqu'à 1500 réponses IA / mois",
+    quota: "Jusqu' 1500 rponses IA / mois",
     trial: "14 jours d'essai gratuit",
     features: [
       ...baseFeatures,
@@ -40,7 +40,7 @@ const plans = [
     name: "Pro",
     price: "$99",
     period: "/ mois",
-    quota: "Jusqu'à 3000 réponses IA / mois",
+    quota: "Jusqu' 3000 rponses IA / mois",
     trial: "14 jours d'essai gratuit",
     features: [
       ...baseFeatures,
@@ -52,7 +52,7 @@ const plans = [
     name: "Scale",
     price: "$199",
     period: "/ mois",
-    quota: "Réponses IA illimitées",
+    quota: "Rponses IA illimites",
     trial: "14 jours d'essai gratuit",
     features: [
       ...baseFeatures,
@@ -67,13 +67,13 @@ const PricingFr = () => {
     <section id="preise" aria-labelledby="pricing-heading" className="py-16 md:py-24">
       <div className="container">
         <h2 id="pricing-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Plus de puissance support pour moins d'argent qu'un seul employé.
+          Plus de puissance support pour moins d'argent qu'un seul employ.
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-2">
-          Un agent support coûte en moyenne 2 000 $ par mois.
+          Un agent support cote en moyenne 2 000 $ par mois.
         </p>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          ReplAInow commence à 19 $/mois – et travaille 24/7, sans pause.
+          ReplAInow commence  19 $/mois  et travaille 24/7, sans pause.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -121,18 +121,18 @@ const PricingFr = () => {
 
                 <div className="mt-auto space-y-3">
                   <Button asChild variant="hero" className="w-full">
-                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Essayer gratuitement – Plan ${p.name}`}>
+                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Essayer gratuitement  Plan ${p.name}`}>
                       Essayer gratuitement
                     </a>
                   </Button>
                   <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                     <img
                       src="/images/shopify-logo-black.svg"
-                      alt="Shopify Logo – App Store"
+                      alt="Shopify Logo  App Store"
                       className="h-4 w-auto opacity-80"
                       loading="lazy"
                     />
-                    <span>Listé sur Shopify App Store</span>
+                    <span>List sur Shopify App Store</span>
                   </div>
                 </div>
               </article>

@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: "How fast do I get responses?",
-    a: "In seconds. ReplAInow structures the inquiry, checks matching Shopify data and delivers a brand-compliant response – usually under 3 seconds.",
+    a: "In seconds. ReplAInow structures the inquiry, checks matching Shopify data and delivers a brand-compliant response  usually under 3 seconds.",
   },
   {
     q: "Can I customize the brand tone?",
@@ -45,7 +45,7 @@ const FAQEn = () => {
           Frequently Asked Questions
         </h2>
         <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-          Everything you want to know before getting started – short and clear.
+          Everything you want to know before getting started  short and clear.
         </p>
 
         <Accordion type="single" collapsible className="w-full">

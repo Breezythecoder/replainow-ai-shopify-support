@@ -8,15 +8,15 @@ const FinalCTAZh = () => {
       <div className="container">
         <div className="relative overflow-hidden rounded-2xl border bg-gradient-primary p-10 text-center shadow-brand-glow">
           <h2 id="cta-final-heading" className="font-display text-3xl md:text-4xl font-semibold text-primary-foreground mb-3">
-            告别客服烦恼 — 2分钟即可开始
+              2
           </h2>
-          <p className="text-primary-foreground/90 mb-8">14天免费试用，完整功能体验，无需信用卡。</p>
+          <p className="text-primary-foreground/90 mb-8">14</p>
           <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
-              <a href={OAUTH_URL}>免费试用</a>
+              <a href={OAUTH_URL}></a>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-              <a href="#live-demo">观看演示</a>
+              <a href="#live-demo"></a>
             </Button>
           </div>
         </div>

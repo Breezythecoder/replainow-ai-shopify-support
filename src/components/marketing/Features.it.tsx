@@ -13,13 +13,13 @@ const features = [
   },
   {
     icon: TrendingUp,
-    title: "Più fatturato, più veloce",
-    desc: "Risposte precise e veloci aumentano conversione e fedeltà cliente in modo misurabile.",
+    title: "Pi fatturato, pi veloce",
+    desc: "Risposte precise e veloci aumentano conversione e fedelt cliente in modo misurabile.",
   },
   {
     icon: ShieldCheck,
     title: "GDPR & HMAC sicuro",
-    desc: "Crittografato, conforme GDPR e verificato HMAC – affidabile e sicuro.",
+    desc: "Crittografato, conforme GDPR e verificato HMAC  affidabile e sicuro.",
   },
   {
     icon: Bot,
@@ -29,7 +29,7 @@ const features = [
   {
     icon: Globe,
     title: "Multilingue, conforme al brand",
-    desc: "Risposte in molte lingue nel tono del tuo brand – ideale per supporto globale.",
+    desc: "Risposte in molte lingue nel tono del tuo brand  ideale per supporto globale.",
   },
   {
     icon: BarChart3,
@@ -39,7 +39,7 @@ const features = [
   {
     icon: Users,
     title: "Collaborazione team",
-    desc: "Assegna, note, escalation – perfettamente integrato nel team.",
+    desc: "Assegna, note, escalation  perfettamente integrato nel team.",
   },
 ];
 
@@ -48,10 +48,10 @@ const FeaturesIt = () => {
     <section id="features" aria-labelledby="features-heading" className="py-16 md:py-24">
       <div className="container">
         <h2 id="features-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Funzionalità principali: AI-Support per Shopify
+          Funzionalit principali: AI-Support per Shopify
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          Otto vantaggi concreti – tecnicamente forti e chiaramente misurabili.
+          Otto vantaggi concreti  tecnicamente forti e chiaramente misurabili.
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
           {features.map(({ icon: Icon, title, desc }) => (

@@ -32,12 +32,12 @@ const ModernHeroFr = () => {
           <div className="space-y-6 lg:space-y-8">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gradient-hero leading-tight tracking-tighter">
               Helpdesk IA pour Shopify.
-              <span className="block">Répond en secondes.</span>
+              <span className="block">Rpond en secondes.</span>
             </h1>
             
             <p className="text-lg sm:text-xl text-slate-700 leading-relaxed">
-              IA révolutionnaire avec <strong className="text-gradient-primary">données Shopify en temps réel</strong>: 
-              Conversion plus élevée, réponses plus rapides, 90% moins de tickets support.
+              IA rvolutionnaire avec <strong className="text-gradient-primary">donnes Shopify en temps rel</strong>: 
+              Conversion plus leve, rponses plus rapides, 90% moins de tickets support.
             </p>
             
             <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
@@ -47,36 +47,36 @@ const ModernHeroFr = () => {
               </div>
               <div className="glass-card p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-success">3 Sec</div>
-                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Réponse</div>
+                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Rponse</div>
               </div>
               <div className="glass-card p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-accent">75%</div>
-                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Économies</div>
+                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">conomies</div>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
               <Button asChild variant="cta" size="xl" className="group flex-1 sm:flex-none">
                 <a href={OAUTH_URL} className="flex items-center justify-center gap-2 text-base lg:text-lg">
-                  🚀 Essayez Gratuitement
+                   Essayez Gratuitement
                 </a>
               </Button>
               <Button asChild variant="glass" size="xl" className="flex-1 sm:flex-none">
                 <a href="#live-demo" className="flex items-center justify-center gap-2 text-base lg:text-lg">
-                  📺 Voir Démo Live
+                   Voir Dmo Live
                 </a>
               </Button>
             </div>
 
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4 lg:gap-6 text-sm">
               <div className="flex items-center gap-2 glass-card px-4 py-3 rounded-full shadow-brand">
-                <span className="text-brand-warning text-lg">★★★★★</span>
+                <span className="text-brand-warning text-lg"></span>
                 <span className="font-bold text-slate-700">4.9/5</span>
               </div>
               <span className="px-4 py-3 glass-card text-brand-success rounded-full font-bold shadow-brand">
-                ✅ Conforme RGPD
+                 Conforme RGPD
               </span>
-              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand">👥 5000+ Magasins</span>
+              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand"> 5000+ Magasins</span>
             </div>
           </div>
           

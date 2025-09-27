@@ -14,7 +14,7 @@ const SocialProofEn = () => {
         </p>
         <div className="mb-8 flex flex-wrap items-center justify-center gap-3 text-xs">
           <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify Plus Partner</span>
-          <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify App Store ★★★★★ 4.9 / 5</span>
+          <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify App Store  4.9 / 5</span>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center mb-12">
@@ -27,16 +27,16 @@ const SocialProofEn = () => {
 
         <div className="grid gap-6 md:grid-cols-3">
           <article className="rounded-xl border bg-card p-6">
-            <p className="mb-4">"We save 15 hours of support per week – and our customers love the fast response time."</p>
-            <div className="text-sm text-muted-foreground">Lisa – Fashion Store • 7-figure</div>
+            <p className="mb-4">"We save 15 hours of support per week  and our customers love the fast response time."</p>
+            <div className="text-sm text-muted-foreground">Lisa  Fashion Store  7-figure</div>
           </article>
           <article className="rounded-xl border bg-card p-6">
             <p className="mb-4">"Finally I can focus on growth. Support runs by itself."</p>
-            <div className="text-sm text-muted-foreground">Daniel – D2C Brand • 6-figure</div>
+            <div className="text-sm text-muted-foreground">Daniel  D2C Brand  6-figure</div>
           </article>
           <article className="rounded-xl border bg-card p-6">
             <p className="mb-4">"Setup in minutes, benefit immediately. We now easily meet our SLAs."</p>
-            <div className="text-sm text-muted-foreground">Mara – Home & Living • 8-figure</div>
+            <div className="text-sm text-muted-foreground">Mara  Home & Living  8-figure</div>
           </article>
         </div>
 

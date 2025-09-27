@@ -1,12 +1,12 @@
 const ModernComparisonEn = () => {
   const comparisonData = [
-    ["AI Intelligence", "✅ GPT-4.1 Latest", "❌ Basic AI", "❌ Limited AI", "❌ Old AI"],
-    ["Response Time", "✅ 3 Seconds", "❌ 2-5 Minutes", "❌ 5-10 Minutes", "❌ 10+ Minutes"],
-    ["Languages", "✅ 32+ Native", "❌ 10 Basic", "❌ 15 Basic", "❌ 20 Basic"],
-    ["Shopify Integration", "✅ Real-time Sync", "❌ Manual Import", "❌ Basic Connect", "❌ Complex Setup"],
-    ["Price/Month", "✅ $19/Month", "❌ $50+", "❌ $74+", "❌ $115+"],
-    ["Setup Time", "✅ 60 Seconds", "❌ 2-3 Days", "❌ 1 Week", "❌ 2 Weeks"],
-    ["ROI Guarantee", "✅ 6x Conversion", "❌ Neutral", "❌ Neutral", "❌ Negative"]
+    ["AI Intelligence", " GPT-4.1 Latest", " Basic AI", " Limited AI", " Old AI"],
+    ["Response Time", " 3 Seconds", " 2-5 Minutes", " 5-10 Minutes", " 10+ Minutes"],
+    ["Languages", " 32+ Native", " 10 Basic", " 15 Basic", " 20 Basic"],
+    ["Shopify Integration", " Real-time Sync", " Manual Import", " Basic Connect", " Complex Setup"],
+    ["Price/Month", " $19/Month", " $50+", " $74+", " $115+"],
+    ["Setup Time", " 60 Seconds", " 2-3 Days", " 1 Week", " 2 Weeks"],
+    ["ROI Guarantee", " 6x Conversion", " Neutral", " Neutral", " Negative"]
   ];
 
   return (
@@ -38,7 +38,7 @@ const ModernComparisonEn = () => {
                         <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 bg-gradient-primary text-white relative overflow-hidden text-sm sm:text-base min-w-[140px]">
                           <div className="font-black text-base sm:text-lg md:text-xl">ReplAInow</div>
                           <div className="text-xs sm:text-sm opacity-90">Powered by GPT-4.1</div>
-                          <div className="absolute top-2 right-2 text-lg sm:text-xl md:text-2xl">👑</div>
+                          <div className="absolute top-2 right-2 text-lg sm:text-xl md:text-2xl"></div>
                         </th>
                         <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-slate-600 font-semibold bg-slate-50/50 text-sm sm:text-base min-w-[120px]">Gorgias</th>
                         <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-slate-600 font-semibold bg-slate-50/30 text-sm sm:text-base min-w-[120px]">Intercom</th>
@@ -53,7 +53,7 @@ const ModernComparisonEn = () => {
                           </td>
                           <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center bg-gradient-to-r from-brand-primary/10 via-brand-secondary/10 to-brand-primary/10 font-bold text-brand-primary relative text-sm sm:text-base">
                             <div className="flex items-center justify-center gap-2">
-                              <span className="text-base sm:text-lg">⚡</span>
+                              <span className="text-base sm:text-lg"></span>
                               <span className="whitespace-nowrap">{row[1]}</span>
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -79,18 +79,18 @@ const ModernComparisonEn = () => {
 
         <div className="mt-20 max-w-5xl mx-auto">
           <div className="bg-gradient-to-br from-brand-success/10 via-brand-success/5 to-transparent rounded-3xl p-6 sm:p-10 border border-brand-success/20 shadow-brand-glow relative overflow-hidden">
-            <div className="absolute top-4 right-4 text-4xl sm:text-6xl opacity-20">💰</div>
+            <div className="absolute top-4 right-4 text-4xl sm:text-6xl opacity-20"></div>
             <div className="absolute bottom-4 left-4 w-20 h-20 bg-brand-success/10 rounded-full blur-xl"></div>
             
             <div className="relative z-10">
               <h3 className="text-3xl sm:text-4xl font-black text-brand-success mb-8 text-center">
-                💰 Massive Cost Savings vs. Competition
+                 Massive Cost Savings vs. Competition
               </h3>
               
               <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
                 <div className="text-center space-y-6">
                   <div className="text-destructive font-bold text-xl mb-4">
-                    🔥 Expensive Competition
+                     Expensive Competition
                   </div>
                   <div className="space-y-4">
                     {[
@@ -108,14 +108,14 @@ const ModernComparisonEn = () => {
 
                 <div className="text-center space-y-6">
                   <div className="text-brand-success font-bold text-xl mb-4">
-                    ⚡ ReplAInow Power
+                     ReplAInow Power
                   </div>
                   <div className="bg-gradient-to-br from-brand-success/20 to-brand-success/10 rounded-2xl p-6 border border-brand-success/30 shadow-brand">
                     <div className="text-4xl sm:text-5xl font-black text-brand-success mb-3">
                       $19/Month
                     </div>
                     <div className="text-brand-success text-lg font-bold mb-4">
-                      = Up to $1,152/Year saved! 💸
+                      = Up to $1,152/Year saved! 
                     </div>
                     <div className="text-brand-success font-semibold">
                       With superior AI performance
@@ -124,7 +124,7 @@ const ModernComparisonEn = () => {
                   
                   <div className="bg-brand-warning/10 rounded-xl p-4 border border-brand-warning/30">
                     <div className="text-brand-warning font-bold">
-                      🎯 ROI: 600%+ guaranteed
+                       ROI: 600%+ guaranteed
                     </div>
                   </div>
                 </div>

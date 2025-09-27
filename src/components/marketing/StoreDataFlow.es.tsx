@@ -51,10 +51,10 @@ const StoreDataFlowEs = () => {
             id="data-context-heading"
             className="font-display text-3xl md:text-4xl font-semibold mb-4"
           >
-            Tu IA conoce tu tienda Shopify – hasta el último detalle
+            Tu IA conoce tu tienda Shopify  hasta el ltimo detalle
           </h2>
           <p className="text-muted-foreground">
-            ReplAInow se conecta directamente a tu tienda Shopify y extrae todos los datos relevantes en tiempo real para responder consultas de clientes instantánea y precisamente.
+            ReplAInow se conecta directamente a tu tienda Shopify y extrae todos los datos relevantes en tiempo real para responder consultas de clientes instantnea y precisamente.
           </p>
         </header>
 
@@ -112,20 +112,20 @@ const StoreDataFlowEs = () => {
                 <Card
                   Icon={ShoppingCart}
                   title="Datos de pedidos"
-                  desc="ID pedido, estado, artículos, seguimiento"
+                  desc="ID pedido, estado, artculos, seguimiento"
                 />
               </div>
               <div className="absolute -top-4 right-0 w-64">
-                <Card Icon={Package} title="Datos de productos" desc="Títulos, SKUs, precios, inventario" />
+                <Card Icon={Package} title="Datos de productos" desc="Ttulos, SKUs, precios, inventario" />
               </div>
               <div className="absolute top-1/3 -left-2 w-64">
                 <Card Icon={User} title="Datos de clientes" desc="Nombre, email, historial de compras" />
               </div>
               <div className="absolute top-1/3 -right-2 w-64">
-                <Card Icon={FileText} title="Contenido de tienda" desc="Páginas, FAQs, reglas de envío" />
+                <Card Icon={FileText} title="Contenido de tienda" desc="Pginas, FAQs, reglas de envo" />
               </div>
               <div className="absolute bottom-0 left-4 w-64">
-                <Card Icon={Truck} title="Seguimiento y envío" desc="Enlaces en vivo, tiempos de entrega" />
+                <Card Icon={Truck} title="Seguimiento y envo" desc="Enlaces en vivo, tiempos de entrega" />
               </div>
               <div className="absolute bottom-0 right-4 w-64">
                 <Card Icon={Languages} title="Multiidioma" desc="Idiomas preferidos" />
@@ -148,11 +148,11 @@ const StoreDataFlowEs = () => {
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Card Icon={ShoppingCart} title="Datos de pedidos" desc="ID pedido, estado, artículos, seguimiento" />
-              <Card Icon={Package} title="Datos de productos" desc="Títulos, SKUs, precios, inventario" />
+              <Card Icon={ShoppingCart} title="Datos de pedidos" desc="ID pedido, estado, artculos, seguimiento" />
+              <Card Icon={Package} title="Datos de productos" desc="Ttulos, SKUs, precios, inventario" />
               <Card Icon={User} title="Datos de clientes" desc="Nombre, email, historial de compras" />
-              <Card Icon={FileText} title="Contenido de tienda" desc="Páginas, FAQs, reglas de envío" />
-              <Card Icon={Truck} title="Seguimiento y envío" desc="Enlaces en vivo, tiempos de entrega" />
+              <Card Icon={FileText} title="Contenido de tienda" desc="Pginas, FAQs, reglas de envo" />
+              <Card Icon={Truck} title="Seguimiento y envo" desc="Enlaces en vivo, tiempos de entrega" />
               <Card Icon={Languages} title="Multiidioma" desc="Idiomas preferidos" />
             </div>
           </div>
@@ -160,7 +160,7 @@ const StoreDataFlowEs = () => {
 
         <div className="text-center max-w-3xl mx-auto mt-10 md:mt-14">
           <p className="text-muted-foreground">
-            ReplAInow usa estos datos para entregar respuestas conformes a la marca y precisas en &lt;3 segundos – completamente integrado en Shopify.
+            ReplAInow usa estos datos para entregar respuestas conformes a la marca y precisas en &lt;3 segundos  completamente integrado en Shopify.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">

@@ -34,7 +34,7 @@ const HowItWorksEs = () => {
             Comienza en minutos
           </h2>
           <p className="text-muted-foreground">
-            Instalar, conectar, enviar respuestas – y automatizar con reglas.
+            Instalar, conectar, enviar respuestas  y automatizar con reglas.
           </p>
         </header>
 
@@ -53,7 +53,7 @@ const HowItWorksEs = () => {
             <Step Icon={Plug} title="Instalar" desc="1 clic en Shopify App Store." />
             <Step Icon={Database} title="Conectar" desc="Acceso en tiempo real a datos Shopify." />
             <Step Icon={Bot} title="Responder" desc="Sugerencias IA directamente en admin." />
-            <Step Icon={Settings2} title="Automatizar" desc="Reglas y auto-envío opcionales." />
+            <Step Icon={Settings2} title="Automatizar" desc="Reglas y auto-envo opcionales." />
           </div>
         </div>
 

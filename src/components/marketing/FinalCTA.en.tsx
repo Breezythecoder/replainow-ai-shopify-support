@@ -8,7 +8,7 @@ const FinalCTAEn = () => {
       <div className="container">
         <div className="relative overflow-hidden rounded-2xl border bg-gradient-primary p-10 text-center shadow-brand-glow">
           <h2 id="cta-final-heading" className="font-display text-3xl md:text-4xl font-semibold text-primary-foreground mb-3">
-            End support stress – ready in 2 minutes.
+            End support stress  ready in 2 minutes.
           </h2>
           <p className="text-primary-foreground/90 mb-8">14 days free trial. Full functionality. No credit card required.</p>
           <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">

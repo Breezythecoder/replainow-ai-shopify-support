@@ -34,7 +34,7 @@ const HowItWorksIt = () => {
             Come iniziare in pochi minuti
           </h2>
           <p className="text-muted-foreground">
-            Installa, connetti, invia risposte – e automatizza con le regole.
+            Installa, connetti, invia risposte  e automatizza con le regole.
           </p>
         </header>
 

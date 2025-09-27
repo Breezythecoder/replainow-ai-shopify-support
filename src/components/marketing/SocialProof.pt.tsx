@@ -10,11 +10,11 @@ const SocialProofPt = () => {
           Usado e amado pelas principais lojas Shopify.
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
-          Mais confiança. Menos esforço. Respostas mais rápidas.
+          Mais confiana. Menos esforo. Respostas mais rpidas.
         </p>
         <div className="mb-8 flex flex-wrap items-center justify-center gap-3 text-xs">
           <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify Plus Partner</span>
-          <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify App Store ★★★★★ 4.9 / 5</span>
+          <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify App Store  4.9 / 5</span>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center mb-12">
@@ -27,16 +27,16 @@ const SocialProofPt = () => {
 
         <div className="grid gap-6 md:grid-cols-3">
           <article className="rounded-xl border bg-card p-6">
-            <p className="mb-4">"Economizamos 15 horas de suporte por semana – e nossos clientes adoram o tempo de resposta rápido."</p>
-            <div className="text-sm text-muted-foreground">Lisa – Loja Fashion • 7 dígitos</div>
+            <p className="mb-4">"Economizamos 15 horas de suporte por semana  e nossos clientes adoram o tempo de resposta rpido."</p>
+            <div className="text-sm text-muted-foreground">Lisa  Loja Fashion  7 dgitos</div>
           </article>
           <article className="rounded-xl border bg-card p-6">
             <p className="mb-4">"Finalmente posso focar no crescimento. O suporte funciona sozinho."</p>
-            <div className="text-sm text-muted-foreground">Daniel – Marca D2C • 6 dígitos</div>
+            <div className="text-sm text-muted-foreground">Daniel  Marca D2C  6 dgitos</div>
           </article>
           <article className="rounded-xl border bg-card p-6">
-            <p className="mb-4">"Configuração em minutos, benefício imediato. Agora cumprimos nossos SLAs facilmente."</p>
-            <div className="text-sm text-muted-foreground">Mara – Home & Living • 8 dígitos</div>
+            <p className="mb-4">"Configurao em minutos, benefcio imediato. Agora cumprimos nossos SLAs facilmente."</p>
+            <div className="text-sm text-muted-foreground">Mara  Home & Living  8 dgitos</div>
           </article>
         </div>
 
@@ -47,18 +47,18 @@ const SocialProofPt = () => {
           </div>
           <div className="rounded-xl border bg-card p-6">
             <div className="text-3xl font-semibold">+37%</div>
-            <div className="text-sm text-muted-foreground">Maior satisfação do cliente (30 dias)</div>
+            <div className="text-sm text-muted-foreground">Maior satisfao do cliente (30 dias)</div>
           </div>
           <div className="rounded-xl border bg-card p-6">
             <div className="text-3xl font-semibold">x12 ROI</div>
-            <div className="text-sm text-muted-foreground">No primeiro mês</div>
+            <div className="text-sm text-muted-foreground">No primeiro ms</div>
           </div>
         </div>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
           <span className="inline-flex items-center gap-2"><BadgeCheck className="size-4" /> Shopify App Store</span>
           <span className="inline-flex items-center gap-2"><ShieldCheck className="size-4" /> Conforme GDPR</span>
-          <span className="inline-flex items-center gap-2"><Lock className="size-4" /> Segurança SSL & HMAC</span>
+          <span className="inline-flex items-center gap-2"><Lock className="size-4" /> Segurana SSL & HMAC</span>
         </div>
       </div>
     </section>

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Download, Zap, Brain, TrendingUp } from "lucide-react";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
@@ -6,25 +7,25 @@ const ModernHowItWorks = () => {
   const steps = [
     {
       step: "01",
-      icon: "⬇️",
+      icon: <Download className="w-8 h-8" />,
       title: "App installieren",
       desc: "1-Klick Installation aus dem Shopify App Store"
     },
     {
       step: "02", 
-      icon: "🔗",
+      icon: <Zap className="w-8 h-8" />,
       title: "Automatische Verbindung",
       desc: "AI lernt ALLE deine Produkte & Policies automatisch"
     },
     {
       step: "03",
-      icon: "🤖",
+      icon: <Brain className="w-8 h-8" />,
       title: "AI antwortet sofort",
       desc: "Kunden bekommen perfekte Antworten in 3 Sekunden"
     },
     {
       step: "04",
-      icon: "📈",
+      icon: <TrendingUp className="w-8 h-8" />,
       title: "Profits explodieren", 
       desc: "+187% Conversion bei 75% niedrigeren Kosten"
     }
@@ -62,11 +63,11 @@ const ModernHowItWorks = () => {
         <div className="text-center px-4">
           <Button asChild variant="cta" size="xl" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 font-bold min-h-[56px] max-w-md mx-auto">
             <a href={OAUTH_URL} className="flex items-center justify-center gap-2">
-              🚀 Kostenlos starten
+              Kostenlos starten
             </a>
           </Button>
           <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed">
-            ✅ 14 Tage kostenlos • ✅ Setup-frei • ✅ Jederzeit kündbar
+            14 Tage kostenlos  Setup-frei  Jederzeit kündbar
           </p>
         </div>
       </div>

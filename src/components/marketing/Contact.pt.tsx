@@ -30,7 +30,7 @@ const ContactPt = () => {
           name: data.name,
           message: data.message,
           _replyto: data.email,
-          _subject: `Mensagem do formulário de contato de ${data.name}`
+          _subject: `Mensagem do formulrio de contato de ${data.name}`
         })
       });
 
@@ -43,7 +43,7 @@ const ContactPt = () => {
     } catch (error) {
       toast({ 
         title: "Erro", 
-        description: "Não foi possível enviar a mensagem. Tente novamente ou escreva diretamente para support@replainow.com",
+        description: "No foi possvel enviar a mensagem. Tente novamente ou escreva diretamente para support@replainow.com",
         variant: "destructive"
       });
     } finally {
@@ -64,7 +64,7 @@ const ContactPt = () => {
           <div className="grid md:grid-cols-2 gap-4">
             <div className="grid gap-2">
               <label className="text-sm" htmlFor="name">Nome</label>
-              <Input id="name" name="name" placeholder="João Silva" required />
+              <Input id="name" name="name" placeholder="Joo Silva" required />
             </div>
             <div className="grid gap-2">
               <label className="text-sm" htmlFor="email">Email</label>

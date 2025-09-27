@@ -17,10 +17,10 @@ const ModernNavbarFr = () => {
         
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
           <a href="#features" className="text-slate-600 hover:text-indigo-600 transition-colors story-link">
-            Fonctionnalités
+            Fonctionnalits
           </a>
           <a href="#live-demo" className="text-slate-600 hover:text-indigo-600 transition-colors story-link">
-            Démo
+            Dmo
           </a>
           <a href="#preise" className="text-slate-600 hover:text-indigo-600 transition-colors story-link">
             Tarifs

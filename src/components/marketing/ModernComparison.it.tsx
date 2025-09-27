@@ -1,12 +1,12 @@
 const ModernComparisonIt = () => {
   const comparisonData = [
-    ["Intelligenza IA", "✅ GPT-4.1 Ultimo", "❌ IA Base", "❌ IA Limitata", "❌ IA Vecchia"],
-    ["Tempo Risposta", "✅ 3 Secondi", "❌ 2-5 Minuti", "❌ 5-10 Minuti", "❌ 10+ Minuti"],
-    ["Lingue", "✅ 32+ Native", "❌ 10 Base", "❌ 15 Base", "❌ 20 Base"],
-    ["Integrazione Shopify", "✅ Sync Tempo Reale", "❌ Import Manuale", "❌ Connessione Base", "❌ Setup Complesso"],
-    ["Prezzo/Mese", "✅ €19/Mese", "❌ €50+", "❌ €74+", "❌ €115+"],
-    ["Tempo Setup", "✅ 60 Secondi", "❌ 2-3 Giorni", "❌ 1 Settimana", "❌ 2 Settimane"],
-    ["Garanzia ROI", "✅ 6x Conversione", "❌ Neutro", "❌ Neutro", "❌ Negativo"]
+    ["Intelligenza IA", " GPT-4.1 Ultimo", " IA Base", " IA Limitata", " IA Vecchia"],
+    ["Tempo Risposta", " 3 Secondi", " 2-5 Minuti", " 5-10 Minuti", " 10+ Minuti"],
+    ["Lingue", " 32+ Native", " 10 Base", " 15 Base", " 20 Base"],
+    ["Integrazione Shopify", " Sync Tempo Reale", " Import Manuale", " Connessione Base", " Setup Complesso"],
+    ["Prezzo/Mese", " 19/Mese", " 50+", " 74+", " 115+"],
+    ["Tempo Setup", " 60 Secondi", " 2-3 Giorni", " 1 Settimana", " 2 Settimane"],
+    ["Garanzia ROI", " 6x Conversione", " Neutro", " Neutro", " Negativo"]
   ];
 
   return (
@@ -19,7 +19,7 @@ const ModernComparisonIt = () => {
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-black mb-4 tracking-tight">
-            Perché ReplAInow <span className="text-destructive">distrugge</span> la concorrenza
+            Perch ReplAInow <span className="text-destructive">distrugge</span> la concorrenza
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
             Confronto diretto con Gorgias, Intercom & Zendesk
@@ -34,11 +34,11 @@ const ModernComparisonIt = () => {
                   <table className="w-full min-w-[600px] sm:min-w-full">
                     <thead>
                       <tr className="border-b border-white/20">
-                        <th className="text-left py-4 px-4 sm:py-5 sm:px-6 md:py-6 md:px-8 font-bold text-slate-800 text-sm sm:text-base bg-white/60 rounded-tl-3xl">Funzionalità</th>
+                        <th className="text-left py-4 px-4 sm:py-5 sm:px-6 md:py-6 md:px-8 font-bold text-slate-800 text-sm sm:text-base bg-white/60 rounded-tl-3xl">Funzionalit</th>
                         <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 bg-gradient-primary text-white relative overflow-hidden text-sm sm:text-base min-w-[140px]">
                           <div className="font-black text-base sm:text-lg md:text-xl">ReplAInow</div>
                           <div className="text-xs sm:text-sm opacity-90">Powered by GPT-4.1</div>
-                          <div className="absolute top-2 right-2 text-lg sm:text-xl md:text-2xl">👑</div>
+                          <div className="absolute top-2 right-2 text-lg sm:text-xl md:text-2xl"></div>
                         </th>
                         <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-slate-600 font-semibold bg-slate-50/50 text-sm sm:text-base min-w-[120px]">Gorgias</th>
                         <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-slate-600 font-semibold bg-slate-50/30 text-sm sm:text-base min-w-[120px]">Intercom</th>
@@ -53,7 +53,7 @@ const ModernComparisonIt = () => {
                           </td>
                           <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center bg-gradient-to-r from-brand-primary/10 via-brand-secondary/10 to-brand-primary/10 font-bold text-brand-primary relative text-sm sm:text-base">
                             <div className="flex items-center justify-center gap-2">
-                              <span className="text-base sm:text-lg">⚡</span>
+                              <span className="text-base sm:text-lg"></span>
                               <span className="whitespace-nowrap">{row[1]}</span>
                             </div>
                           </td>

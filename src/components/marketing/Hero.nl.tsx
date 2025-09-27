@@ -80,7 +80,7 @@ const HeroNl = () => {
                   <Star className="size-4 fill-current" aria-hidden="true" />
                   <span>4.9/5 in Shopify App Store</span>
                 </span>
-                <span className="hidden md:inline text-sm opacity-80">•</span>
+                <span className="hidden md:inline text-sm opacity-80"></span>
                 <span className="text-sm">Vertrouwd door Shopify-Merchant-Teams</span>
               </div>
             </div>

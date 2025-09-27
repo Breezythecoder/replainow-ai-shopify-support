@@ -51,10 +51,10 @@ const StoreDataFlowFr = () => {
             id="data-context-heading"
             className="font-display text-3xl md:text-4xl font-semibold mb-4"
           >
-            Votre IA connaît votre boutique Shopify – jusque dans les détails
+            Votre IA connat votre boutique Shopify  jusque dans les dtails
           </h2>
           <p className="text-muted-foreground">
-            ReplAInow se connecte directement à votre boutique Shopify et extrait toutes les données pertinentes en temps réel pour répondre aux demandes clients instantanément et précisément.
+            ReplAInow se connecte directement  votre boutique Shopify et extrait toutes les donnes pertinentes en temps rel pour rpondre aux demandes clients instantanment et prcisment.
           </p>
         </header>
 
@@ -111,24 +111,24 @@ const StoreDataFlowFr = () => {
               <div className="absolute -top-4 left-0 w-64">
                 <Card
                   Icon={ShoppingCart}
-                  title="Données commandes"
+                  title="Donnes commandes"
                   desc="ID commande, statut, articles, suivi"
                 />
               </div>
               <div className="absolute -top-4 right-0 w-64">
-                <Card Icon={Package} title="Données produits" desc="Titres, SKUs, prix, inventaire" />
+                <Card Icon={Package} title="Donnes produits" desc="Titres, SKUs, prix, inventaire" />
               </div>
               <div className="absolute top-1/3 -left-2 w-64">
-                <Card Icon={User} title="Données clients" desc="Nom, email, historique d'achats" />
+                <Card Icon={User} title="Donnes clients" desc="Nom, email, historique d'achats" />
               </div>
               <div className="absolute top-1/3 -right-2 w-64">
-                <Card Icon={FileText} title="Contenu boutique" desc="Pages, FAQ, règles livraison" />
+                <Card Icon={FileText} title="Contenu boutique" desc="Pages, FAQ, rgles livraison" />
               </div>
               <div className="absolute bottom-0 left-4 w-64">
-                <Card Icon={Truck} title="Suivi & livraison" desc="Liens en direct, délais de livraison" />
+                <Card Icon={Truck} title="Suivi & livraison" desc="Liens en direct, dlais de livraison" />
               </div>
               <div className="absolute bottom-0 right-4 w-64">
-                <Card Icon={Languages} title="Multilingue" desc="Langues préférées" />
+                <Card Icon={Languages} title="Multilingue" desc="Langues prfres" />
               </div>
             </div>
           </div>
@@ -148,26 +148,26 @@ const StoreDataFlowFr = () => {
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Card Icon={ShoppingCart} title="Données commandes" desc="ID commande, statut, articles, suivi" />
-              <Card Icon={Package} title="Données produits" desc="Titres, SKUs, prix, inventaire" />
-              <Card Icon={User} title="Données clients" desc="Nom, email, historique d'achats" />
-              <Card Icon={FileText} title="Contenu boutique" desc="Pages, FAQ, règles livraison" />
-              <Card Icon={Truck} title="Suivi & livraison" desc="Liens en direct, délais de livraison" />
-              <Card Icon={Languages} title="Multilingue" desc="Langues préférées" />
+              <Card Icon={ShoppingCart} title="Donnes commandes" desc="ID commande, statut, articles, suivi" />
+              <Card Icon={Package} title="Donnes produits" desc="Titres, SKUs, prix, inventaire" />
+              <Card Icon={User} title="Donnes clients" desc="Nom, email, historique d'achats" />
+              <Card Icon={FileText} title="Contenu boutique" desc="Pages, FAQ, rgles livraison" />
+              <Card Icon={Truck} title="Suivi & livraison" desc="Liens en direct, dlais de livraison" />
+              <Card Icon={Languages} title="Multilingue" desc="Langues prfres" />
             </div>
           </div>
         </div>
 
         <div className="text-center max-w-3xl mx-auto mt-10 md:mt-14">
           <p className="text-muted-foreground">
-            ReplAInow utilise ces données pour livrer des réponses conformes à la marque et précises en &lt;3 secondes – entièrement intégré dans Shopify.
+            ReplAInow utilise ces donnes pour livrer des rponses conformes  la marque et prcises en &lt;3 secondes  entirement intgr dans Shopify.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
               <a href={OAUTH_URL}>Essayer gratuitement maintenant</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-              <a href="#live-demo">Voir la démo en direct</a>
+              <a href="#live-demo">Voir la dmo en direct</a>
             </Button>
           </div>
         </div>

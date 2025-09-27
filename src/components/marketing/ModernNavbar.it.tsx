@@ -17,7 +17,7 @@ const ModernNavbarIt = () => {
         
         <div className="hidden md:flex items-center gap-8 text-sm font-medium">
           <a href="#features" className="text-slate-600 hover:text-indigo-600 transition-colors story-link">
-            Funzionalità
+            Funzionalit
           </a>
           <a href="#live-demo" className="text-slate-600 hover:text-indigo-600 transition-colors story-link">
             Demo

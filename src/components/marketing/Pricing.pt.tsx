@@ -4,34 +4,34 @@ const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 type Feature = string | { label: string; sub: string[] };
 
 const baseFeatures: string[] = [
-  "Instalação com 1 clique",
-  "Dados ilimitados da loja (produtos, páginas, políticas, etc.)",
+  "Instalao com 1 clique",
+  "Dados ilimitados da loja (produtos, pginas, polticas, etc.)",
   "IA Mail & IA Live Chat",
-  "Marca personalizável",
+  "Marca personalizvel",
 ];
 
 const plans = [
   {
     name: "Starter",
     price: "$19",
-    period: "/ mês",
-    quota: "Até 300 respostas IA / mês",
-    trial: "14 dias de teste grátis",
+    period: "/ ms",
+    quota: "At 300 respostas IA / ms",
+    trial: "14 dias de teste grtis",
     features: [
       ...baseFeatures,
-      "Envio de email via endereço ReplAInow",
+      "Envio de email via endereo ReplAInow",
     ] as Feature[],
     popular: false,
   },
   {
     name: "Growth",
     price: "$49",
-    period: "/ mês",
-    quota: "Até 1500 respostas IA / mês",
-    trial: "14 dias de teste grátis",
+    period: "/ ms",
+    quota: "At 1500 respostas IA / ms",
+    trial: "14 dias de teste grtis",
     features: [
       ...baseFeatures,
-      "Envio de email com seu domínio",
+      "Envio de email com seu domnio",
     ] as Feature[],
     popular: true,
     badge: "Plano mais popular",
@@ -39,24 +39,24 @@ const plans = [
   {
     name: "Pro",
     price: "$99",
-    period: "/ mês",
-    quota: "Até 3000 respostas IA / mês",
-    trial: "14 dias de teste grátis",
+    period: "/ ms",
+    quota: "At 3000 respostas IA / ms",
+    trial: "14 dias de teste grtis",
     features: [
       ...baseFeatures,
-      "Envio de email com seu domínio",
+      "Envio de email com seu domnio",
     ] as Feature[],
     popular: false,
   },
   {
     name: "Scale",
     price: "$199",
-    period: "/ mês",
+    period: "/ ms",
     quota: "Respostas IA ilimitadas",
-    trial: "14 dias de teste grátis",
+    trial: "14 dias de teste grtis",
     features: [
       ...baseFeatures,
-      "Envio de email com seu domínio",
+      "Envio de email com seu domnio",
     ] as Feature[],
     popular: false,
   },
@@ -67,13 +67,13 @@ const PricingPt = () => {
     <section id="preise" aria-labelledby="pricing-heading" className="py-16 md:py-24">
       <div className="container">
         <h2 id="pricing-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Mais poder de suporte por menos dinheiro que um único funcionário.
+          Mais poder de suporte por menos dinheiro que um nico funcionrio.
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-2">
-          Um agente de suporte custa em média $2.000 por mês.
+          Um agente de suporte custa em mdia $2.000 por ms.
         </p>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          ReplAInow começa em $19/mês – e trabalha 24/7, sem pausas.
+          ReplAInow comea em $19/ms  e trabalha 24/7, sem pausas.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -86,7 +86,7 @@ const PricingPt = () => {
                     <span className="text-3xl font-bold">{p.price}</span>
                     <span className="text-muted-foreground">{p.period}</span>
                   </div>
-                  <p className="mt-1 text-xs text-muted-foreground">{(p as any).trial ?? "14 dias de teste grátis"}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">{(p as any).trial ?? "14 dias de teste grtis"}</p>
                   {'blurb' in p && (p as any).blurb ? (
                     <p className="mt-3 text-sm text-muted-foreground">{(p as any).blurb}</p>
                   ) : null}
@@ -121,14 +121,14 @@ const PricingPt = () => {
 
                 <div className="mt-auto space-y-3">
                   <Button asChild variant="hero" className="w-full">
-                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Testar grátis – Plano ${p.name}`}>
-                      Testar grátis
+                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Testar grtis  Plano ${p.name}`}>
+                      Testar grtis
                     </a>
                   </Button>
                   <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                     <img
                       src="/images/shopify-logo-black.svg"
-                      alt="Shopify Logo – App Store"
+                      alt="Shopify Logo  App Store"
                       className="h-4 w-auto opacity-80"
                       loading="lazy"
                     />

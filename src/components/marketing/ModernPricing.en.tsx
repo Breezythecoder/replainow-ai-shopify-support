@@ -82,7 +82,7 @@ const ModernPricingEn = () => {
           A support agent costs on average $2,000 per month.
         </p>
         <p className="text-center text-slate-600 max-w-3xl mx-auto mb-16 text-lg">
-          ReplAInow starts at <strong className="text-gradient-primary">$19/month</strong> – and works 24/7, without breaks.
+          ReplAInow starts at <strong className="text-gradient-primary">$19/month</strong>  and works 24/7, without breaks.
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 sm:mb-16">
@@ -101,12 +101,12 @@ const ModernPricingEn = () => {
                 
                 <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 flex-grow">
                   <li className="flex items-start gap-2 sm:gap-3">
-                    <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0">✅</span>
+                    <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span>
                     <span className="text-slate-700 font-bold text-xs sm:text-sm leading-relaxed">{plan.quota}</span>
                   </li>
                   {plan.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-2 sm:gap-3">
-                      <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0">✅</span>
+                      <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span>
                       <span className="text-slate-700 font-medium leading-relaxed text-xs sm:text-sm">{feature}</span>
                     </li>
                   ))}
@@ -157,7 +157,7 @@ const ModernPricingEn = () => {
         <div className="max-w-5xl mx-auto">
           <div className="bg-gradient-to-r from-brand-success/10 to-brand-success/5 rounded-3xl p-8 border border-brand-success/20 shadow-float">
             <h3 className="text-3xl font-black text-brand-success mb-4 text-center">
-              💰 Massive cost savings vs. per-ticket billing
+               Massive cost savings vs. per-ticket billing
             </h3>
             <p className="text-center text-brand-success mb-8 text-lg font-semibold">
               While competitors charge <span className="text-destructive font-black">per ticket</span>, our Scale plan is <span className="text-brand-success font-black">COMPLETELY UNLIMITED</span>!
@@ -165,19 +165,19 @@ const ModernPricingEn = () => {
             
             <div className="grid md:grid-cols-3 gap-6 text-center mb-8">
               <div className="bg-white rounded-2xl p-6 shadow-md border-2 border-destructive/20">
-                <div className="text-destructive font-bold text-lg mb-2">🎟️ Gorgias</div>
+                <div className="text-destructive font-bold text-lg mb-2"> Gorgias</div>
                 <div className="text-destructive font-semibold mb-1">$50+/month</div>
                 <div className="text-xs text-destructive/70 mb-3">+ $2-5 per ticket</div>
                 <div className="text-brand-success font-black text-xl">$372+/year saved</div>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-md border-2 border-destructive/20">
-                <div className="text-destructive font-bold text-lg mb-2">💬 Intercom</div>
+                <div className="text-destructive font-bold text-lg mb-2"> Intercom</div>
                 <div className="text-destructive font-semibold mb-1">$74+/month</div>
                 <div className="text-xs text-destructive/70 mb-3">+ $1-3 per ticket</div>
                 <div className="text-brand-success font-black text-xl">$660+/year saved</div>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-md border-2 border-destructive/20">
-                <div className="text-destructive font-bold text-lg mb-2">🎫 Zendesk</div>
+                <div className="text-destructive font-bold text-lg mb-2"> Zendesk</div>
                 <div className="text-destructive font-semibold mb-1">$115+/month</div>
                 <div className="text-xs text-destructive/70 mb-3">+ $0.50-2 per ticket</div>
                 <div className="text-brand-success font-black text-xl">$1,152+/year saved</div>
@@ -185,9 +185,9 @@ const ModernPricingEn = () => {
             </div>
 
             <div className="bg-gradient-primary text-white rounded-2xl p-6 text-center">
-              <h4 className="text-2xl font-black mb-3">🚀 ReplAInow Scale Plan: $199/month</h4>
-              <p className="text-lg font-semibold mb-2">✨ UNLIMITED AI responses</p>
-              <p className="text-sm opacity-90">No hidden costs • No per-ticket fees • No limits</p>
+              <h4 className="text-2xl font-black mb-3"> ReplAInow Scale Plan: $199/month</h4>
+              <p className="text-lg font-semibold mb-2"> UNLIMITED AI responses</p>
+              <p className="text-sm opacity-90">No hidden costs  No per-ticket fees  No limits</p>
             </div>
 
             <div className="mt-6 text-center">
@@ -195,7 +195,7 @@ const ModernPricingEn = () => {
                 At 1,000 tickets/month you pay Gorgias over $3,000 extra!
               </p>
               <p className="text-brand-success font-semibold">
-                With ReplAInow: $0 extra – whether 100 or 10,000 tickets! 🎯
+                With ReplAInow: $0 extra  whether 100 or 10,000 tickets! 
               </p>
             </div>
           </div>

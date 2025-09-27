@@ -31,20 +31,20 @@ const ContactZh = () => {
           name: data.name,
           message: data.message,
           _replyto: data.email,
-          _subject: `联系表单消息来自 ${data.name}`
+          _subject: ` ${data.name}`
         })
       });
 
       if (response.ok) {
-        toast({ title: "谢谢！", description: "我们会尽快与您联系。" });
+        toast({ title: "", description: "" });
         (e.currentTarget as HTMLFormElement).reset();
       } else {
         throw new Error('Failed to send message');
       }
     } catch (error) {
       toast({ 
-        title: "错误", 
-        description: "消息发送失败。请重试或直接发送邮件至 support@replainow.com",
+        title: "", 
+        description: " support@replainow.com",
         variant: "destructive"
       });
     } finally {
@@ -56,29 +56,29 @@ const ContactZh = () => {
     <section id="kontakt" aria-labelledby="contact-heading" className="py-16 md:py-24">
       <div className="container max-w-4xl">
         <h2 id="contact-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          联系我们
+          
         </h2>
         <p className="text-center text-muted-foreground mb-8">
-          邮箱: <a href="mailto:support@replainow.com" className="story-link">support@replainow.com</a>
+          : <a href="mailto:support@replainow.com" className="story-link">support@replainow.com</a>
         </p>
         <form onSubmit={onSubmit} className="grid gap-4">
           <div className="grid md:grid-cols-2 gap-4">
             <div className="grid gap-2">
-              <label className="text-sm" htmlFor="name">姓名</label>
-              <Input id="name" name="name" placeholder="张三" required />
+              <label className="text-sm" htmlFor="name"></label>
+              <Input id="name" name="name" placeholder="" required />
             </div>
             <div className="grid gap-2">
-              <label className="text-sm" htmlFor="email">邮箱</label>
+              <label className="text-sm" htmlFor="email"></label>
               <Input id="email" name="email" type="email" placeholder="you@shop.com" required />
             </div>
           </div>
           <div className="grid gap-2">
-            <label className="text-sm" htmlFor="message">消息</label>
-            <Textarea id="message" name="message" placeholder="我们如何帮助您？" rows={5} required />
+            <label className="text-sm" htmlFor="message"></label>
+            <Textarea id="message" name="message" placeholder="" rows={5} required />
           </div>
           <div className="flex justify-end">
             <Button type="submit" variant="hero" disabled={isSubmitting}>
-              {isSubmitting ? "发送中..." : "发送消息"}
+              {isSubmitting ? "..." : ""}
             </Button>
           </div>
         </form>

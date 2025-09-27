@@ -58,25 +58,25 @@ const ModernHeroNl = () => {
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
               <Button asChild variant="cta" size="xl" className="group flex-1 sm:flex-none">
                 <a href={OAUTH_URL} className="flex items-center justify-center gap-2 text-base lg:text-lg">
-                  🚀 Probeer Nu Gratis
+                   Probeer Nu Gratis
                 </a>
               </Button>
               <Button asChild variant="glass" size="xl" className="flex-1 sm:flex-none">
                 <a href="#live-demo" className="flex items-center justify-center gap-2 text-base lg:text-lg">
-                  📺 Bekijk Live Demo
+                   Bekijk Live Demo
                 </a>
               </Button>
             </div>
 
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4 lg:gap-6 text-sm">
               <div className="flex items-center gap-2 glass-card px-4 py-3 rounded-full shadow-brand">
-                <span className="text-brand-warning text-lg">★★★★★</span>
+                <span className="text-brand-warning text-lg"></span>
                 <span className="font-bold text-slate-700">4.9/5</span>
               </div>
               <span className="px-4 py-3 glass-card text-brand-success rounded-full font-bold shadow-brand">
-                ✅ GDPR Conform
+                 GDPR Conform
               </span>
-              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand">👥 5000+ Winkels</span>
+              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand"> 5000+ Winkels</span>
             </div>
           </div>
           

@@ -21,11 +21,11 @@ const MailAndChat = () => {
       <div className="container max-w-6xl">
         <header className="mb-10 text-center">
           <h2 id="mail-live-heading" className="font-display text-3xl md:text-4xl font-semibold mb-3">
-            AI-Powered Mail & Live Chat – 24/7, Fully Integrated
+            AI-Powered Mail & Live Chat  24/7, Fully Integrated
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto">
-            Handle every customer message instantly in any channel. ReplAInow verbindet sich mit deinem Shopify‑Store und beantwortet E‑Mails
-            und Live‑Chat‑Nachrichten in unter 3 Sekunden – markenkonform, kontextbewusst und mehrsprachig.
+            Handle every customer message instantly in any channel. ReplAInow verbindet sich mit deinem ShopifyStore und beantwortet EMails
+            und LiveChatNachrichten in unter 3 Sekunden  markenkonform, kontextbewusst und mehrsprachig.
           </p>
         </header>
 
@@ -36,14 +36,14 @@ const MailAndChat = () => {
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-gradient-primary text-primary-foreground">
                 <Mail className="h-4 w-4" />
               </span>
-              <h3 className="font-semibold text-lg">Mail – AI‑Inbox</h3>
+              <h3 className="font-semibold text-lg">Mail  AIInbox</h3>
             </div>
 
             <figure className="rounded-lg border bg-muted">
               <AspectRatio ratio={16 / 10}>
                 <img
                   src="/lovable-uploads/30fe7c43-2fec-4711-a733-85a1c76d1942.png"
-                  alt="ReplAInow Mail Inbox – AI‑Antwort mit Shopify‑Daten"
+                  alt="ReplAInow Mail Inbox  AIAntwort mit ShopifyDaten"
                   loading="lazy"
                   className="h-full w-full object-cover rounded-lg"
                 />
@@ -51,14 +51,14 @@ const MailAndChat = () => {
             </figure>
 
             <ul className="mt-5 space-y-3">
-              <Bullet Icon={CheckCircle2}>Sofortige AI‑Antworten auf Kunden‑E‑Mails</Bullet>
-              <Bullet Icon={Globe}>Shopify‑Daten automatisch eingebettet (Bestellungen, Produkte, Versand)</Bullet>
-              <Bullet Icon={CheckCircle2}>Mehrsprachig und markenkonformer Ton – automatisch</Bullet>
+              <Bullet Icon={CheckCircle2}>Sofortige AIAntworten auf KundenEMails</Bullet>
+              <Bullet Icon={Globe}>ShopifyDaten automatisch eingebettet (Bestellungen, Produkte, Versand)</Bullet>
+              <Bullet Icon={CheckCircle2}>Mehrsprachig und markenkonformer Ton  automatisch</Bullet>
             </ul>
 
             <ul className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
               <Bullet Icon={CheckCircle2}>Inbox zero, jeden Tag</Bullet>
-              <Bullet Icon={CheckCircle2}>Präzise, Shopify‑integrierte Antworten</Bullet>
+              <Bullet Icon={CheckCircle2}>Przise, Shopifyintegrierte Antworten</Bullet>
               <Bullet Icon={CheckCircle2}>Spare 15+ Stunden pro Woche</Bullet>
             </ul>
           </article>
@@ -69,14 +69,14 @@ const MailAndChat = () => {
               <span className="inline-flex h-8 w-8 items-center justify-center rounded-md bg-gradient-primary text-primary-foreground">
                 <MessageSquare className="h-4 w-4" />
               </span>
-              <h3 className="font-semibold text-lg">Live‑Chat – in Echtzeit</h3>
+              <h3 className="font-semibold text-lg">LiveChat  in Echtzeit</h3>
             </div>
 
             <figure className="rounded-lg border bg-muted">
               <AspectRatio ratio={16 / 10}>
                 <img
                   src="/lovable-uploads/ad586425-618c-4760-ad1a-4e949029cd8f.png"
-                  alt="ReplAInow Live Chat – AI‑Chat in Echtzeit auf Desktop & Mobile"
+                  alt="ReplAInow Live Chat  AIChat in Echtzeit auf Desktop & Mobile"
                   loading="lazy"
                   className="h-full w-full object-cover rounded-lg"
                 />
@@ -84,15 +84,15 @@ const MailAndChat = () => {
             </figure>
 
             <ul className="mt-5 space-y-3">
-              <Bullet Icon={Clock}>Vollautomatische Chat‑Betreuung – AI beantwortet Anfragen rund um die Uhr.</Bullet>
-              <Bullet Icon={CheckCircle2}>Shopify‑Daten in Echtzeit – Bestell‑ & Versandinfos, Produktdaten, Policies sofort abrufbar.</Bullet>
-              <Bullet Icon={CheckCircle2}>Backend‑Übersicht aller Chats – Händler sieht alle laufenden Gespräche zentral.</Bullet>
+              <Bullet Icon={Clock}>Vollautomatische ChatBetreuung  AI beantwortet Anfragen rund um die Uhr.</Bullet>
+              <Bullet Icon={CheckCircle2}>ShopifyDaten in Echtzeit  Bestell & Versandinfos, Produktdaten, Policies sofort abrufbar.</Bullet>
+              <Bullet Icon={CheckCircle2}>Backendbersicht aller Chats  Hndler sieht alle laufenden Gesprche zentral.</Bullet>
             </ul>
 
             <ul className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
-              <Bullet Icon={CheckCircle2}>AI Auto‑Mode Toggle – Händler kann jederzeit selbst übernehmen oder AI antworten lassen.</Bullet>
-              <Bullet Icon={CheckCircle2}>Kategorisierung & Verwaltung – Chats organisieren, taggen und priorisieren.</Bullet>
-              <Bullet Icon={Globe}>Mehrsprachiger Support – AI antwortet automatisch in der Kundensprache.</Bullet>
+              <Bullet Icon={CheckCircle2}>AI AutoMode Toggle  Hndler kann jederzeit selbst bernehmen oder AI antworten lassen.</Bullet>
+              <Bullet Icon={CheckCircle2}>Kategorisierung & Verwaltung  Chats organisieren, taggen und priorisieren.</Bullet>
+              <Bullet Icon={Globe}>Mehrsprachiger Support  AI antwortet automatisch in der Kundensprache.</Bullet>
             </ul>
           </article>
         </div>

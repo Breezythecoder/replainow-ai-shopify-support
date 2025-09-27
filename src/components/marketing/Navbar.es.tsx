@@ -12,7 +12,7 @@ const NavbarEs = () => {
           <span className="sr-only">ReplAInow</span>
         </a>
         <div className="hidden md:flex items-center gap-6 text-sm">
-          <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors story-link">Características</a>
+          <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors story-link">Caractersticas</a>
           <a href="#live-demo" className="text-muted-foreground hover:text-foreground transition-colors story-link">Demo</a>
           <a href="#precios" className="text-muted-foreground hover:text-foreground transition-colors story-link">Precios</a>
           <a href="#contacto" className="text-muted-foreground hover:text-foreground transition-colors story-link">Contacto</a>

@@ -28,7 +28,7 @@ const StickyInstallBarZh = () => {
       <div className="container">
         <div className="relative mx-auto flex flex-col sm:flex-row items-center gap-3 rounded-xl border bg-card/95 backdrop-blur px-4 py-3 shadow-brand">
           <p className="text-sm sm:text-base text-muted-foreground flex-1 text-center sm:text-left">
-            2分钟即可开始 - 14天免费试用。
+            2 - 14
           </p>
           <div className="flex items-center gap-2">
             <Button
@@ -36,7 +36,7 @@ const StickyInstallBarZh = () => {
               size="lg"
               variant="hero"
               onClick={() => {
-                toast({ title: "正在跳转到Shopify应用商店…" });
+                toast({ title: "Shopify" });
                 console.log("analytics:event", {
                   category: "cta",
                   action: "click",
@@ -44,10 +44,10 @@ const StickyInstallBarZh = () => {
                 });
               }}
             >
-              <a href={OAUTH_URL} aria-label="立即安装">立即安装</a>
+              <a href={OAUTH_URL} aria-label=""></a>
             </Button>
             <button
-              aria-label="关闭工具栏"
+              aria-label=""
               className="p-2 rounded-md hover:bg-muted text-muted-foreground"
               onClick={() => setDismissed(true)}
             >

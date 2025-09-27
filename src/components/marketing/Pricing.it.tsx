@@ -34,7 +34,7 @@ const plans = [
       "Invio e-mail con il tuo dominio",
     ] as Feature[],
     popular: true,
-    badge: "Piano più popolare",
+    badge: "Piano pi popolare",
   },
   {
     name: "Pro",
@@ -67,13 +67,13 @@ const PricingIt = () => {
     <section id="prezzi" aria-labelledby="pricing-heading" className="py-16 md:py-24">
       <div className="container">
         <h2 id="pricing-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Più potenza di supporto per meno soldi di un singolo dipendente.
+          Pi potenza di supporto per meno soldi di un singolo dipendente.
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-2">
-          Un agente di supporto costa in media 2.000 € al mese.
+          Un agente di supporto costa in media 2.000  al mese.
         </p>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          ReplAInow inizia da 19 $/mese – e lavora 24/7, senza pause.
+          ReplAInow inizia da 19 $/mese  e lavora 24/7, senza pause.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -121,14 +121,14 @@ const PricingIt = () => {
 
                 <div className="mt-auto space-y-3">
                   <Button asChild variant="hero" className="w-full">
-                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Prova gratuita – Piano ${p.name}`}>
+                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Prova gratuita  Piano ${p.name}`}>
                       Prova gratuita
                     </a>
                   </Button>
                   <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                     <img
                       src="/images/shopify-logo-black.svg"
-                      alt="Logo Shopify – App Store"
+                      alt="Logo Shopify  App Store"
                       className="h-4 w-auto opacity-80"
                       loading="lazy"
                     />
@@ -141,7 +141,7 @@ const PricingIt = () => {
             return p.popular ? (
               <div key={p.name} className="relative rounded-2xl p-[1px] bg-gradient-primary shadow-brand-glow hover:shadow-brand-glow transition-shadow">
                 <span className="absolute -top-3 left-4 rounded-full bg-primary text-primary-foreground text-xs px-2.5 py-1 border border-primary/60 shadow-brand">
-                  {(p as any).badge ?? 'Piano più popolare'}
+                  {(p as any).badge ?? 'Piano pi popolare'}
                 </span>
                 {Card}
               </div>

@@ -35,7 +35,7 @@ const ContactFr = () => {
       });
 
       if (response.ok) {
-        toast({ title: "Merci!", description: "Nous vous contacterons bientôt." });
+        toast({ title: "Merci!", description: "Nous vous contacterons bientt." });
         (e.currentTarget as HTMLFormElement).reset();
       } else {
         throw new Error('Failed to send message');
@@ -43,7 +43,7 @@ const ContactFr = () => {
     } catch (error) {
       toast({ 
         title: "Erreur", 
-        description: "Impossible d'envoyer le message. Réessayez ou écrivez directement à support@replainow.com",
+        description: "Impossible d'envoyer le message. Ressayez ou crivez directement  support@replainow.com",
         variant: "destructive"
       });
     } finally {

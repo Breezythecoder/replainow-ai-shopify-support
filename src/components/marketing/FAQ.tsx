@@ -4,23 +4,23 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqs = [
   {
     q: "Wie integriert sich ReplAInow in Shopify?",
-    a: "Per App‑Installation. Nach dem Verbinden zieht ReplAInow relevante Daten (Bestellungen, Versandstatus, Produkte) DSGVO‑konform direkt aus Shopify, um Antworten zu generieren.",
+    a: "Per AppInstallation. Nach dem Verbinden zieht ReplAInow relevante Daten (Bestellungen, Versandstatus, Produkte) DSGVOkonform direkt aus Shopify, um Antworten zu generieren.",
   },
   {
-    q: "Ist das DSGVO‑konform?",
-    a: "Ja. Daten werden zweckgebunden verarbeitet. Du kannst jederzeit Datenzugriffe einschränken oder entziehen. Wir speichern nur, was für die Antwort nötig ist.",
+    q: "Ist das DSGVOkonform?",
+    a: "Ja. Daten werden zweckgebunden verarbeitet. Du kannst jederzeit Datenzugriffe einschrnken oder entziehen. Wir speichern nur, was fr die Antwort ntig ist.",
   },
   {
     q: "Wie schnell bekomme ich Antworten?",
-    a: "In Sekunden. ReplAInow strukturiert die Anfrage, prüft passende Shopify‑Daten und liefert eine markenkonforme Antwort – meist unter 3 Sekunden.",
+    a: "In Sekunden. ReplAInow strukturiert die Anfrage, prft passende ShopifyDaten und liefert eine markenkonforme Antwort  meist unter 3 Sekunden.",
   },
   {
     q: "Kann ich den Ton der Marke anpassen?",
-    a: "Ja. Du definierst Stilrichtlinien (z. B. Du/Sie, Tonalität, Emojis). Antworten werden automatisch daran ausgerichtet.",
+    a: "Ja. Du definierst Stilrichtlinien (z. B. Du/Sie, Tonalitt, Emojis). Antworten werden automatisch daran ausgerichtet.",
   },
   {
     q: "Wie sieht die Preisgestaltung aus?",
-    a: "Transparente Pläne mit klaren Limits, 14 Tage kostenlos testen ohne Kreditkarte. Upgrade jederzeit möglich.",
+    a: "Transparente Plne mit klaren Limits, 14 Tage kostenlos testen ohne Kreditkarte. Upgrade jederzeit mglich.",
   },
 ];
 
@@ -42,10 +42,10 @@ const FAQ = () => {
     <section id="faq" aria-labelledby="faq-heading" className="py-16 md:py-24">
       <div className="container max-w-4xl">
         <h2 id="faq-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Häufige Fragen
+          Hufige Fragen
         </h2>
         <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-          Alles, was du vor dem Start wissen möchtest – kurz und klar.
+          Alles, was du vor dem Start wissen mchtest  kurz und klar.
         </p>
 
         <Accordion type="single" collapsible className="w-full">

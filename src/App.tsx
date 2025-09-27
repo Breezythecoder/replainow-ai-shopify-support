@@ -23,6 +23,10 @@ import NotFound from "./pages/NotFound";
 
 
 import ContrastAuditor from "@/components/dev/ContrastAuditor";
+import DesignAuditor from "@/components/dev/DesignAuditor";
+import ScrollProgress from "@/components/ui/ScrollProgress";
+import ExitIntent from "@/components/ui/ExitIntent";
+import SkipLinks from "@/components/ui/SkipLinks";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +36,17 @@ const AppContent = () => {
   // Initialize performance tracking
   useEffect(() => {
     trackWebVitals();
+    
+    // Register Service Worker for perfect performance
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
   }, []);
 
   return (
@@ -55,7 +70,15 @@ const AppContent = () => {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-      {import.meta.env.MODE === 'development' && <ContrastAuditor />}
+        <SkipLinks />
+        <ScrollProgress />
+        <ExitIntent />
+        {import.meta.env.MODE === 'development' && (
+          <>
+            <ContrastAuditor />
+            <DesignAuditor />
+          </>
+        )}
     </>
   );
 };

@@ -8,7 +8,7 @@ const FinalCTANl = () => {
       <div className="container">
         <div className="relative overflow-hidden rounded-2xl border bg-gradient-primary p-10 text-center shadow-brand-glow">
           <h2 id="cta-final-heading" className="font-display text-3xl md:text-4xl font-semibold text-primary-foreground mb-3">
-            Maak een einde aan support-stress – in 2 minuten klaar.
+            Maak een einde aan support-stress  in 2 minuten klaar.
           </h2>
           <p className="text-primary-foreground/90 mb-8">14 dagen gratis testen. Volledige functionaliteit. Geen creditcard nodig.</p>
           <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">

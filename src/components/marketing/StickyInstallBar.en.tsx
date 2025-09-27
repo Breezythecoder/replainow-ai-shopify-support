@@ -28,7 +28,7 @@ const StickyInstallBarEn = () => {
       <div className="container">
         <div className="relative mx-auto flex flex-col sm:flex-row items-center gap-3 rounded-xl border bg-card/95 backdrop-blur px-4 py-3 shadow-brand">
           <p className="text-sm sm:text-base text-muted-foreground flex-1 text-center sm:text-left">
-            Ready in 2 minutes – 14 days free trial.
+            Ready in 2 minutes  14 days free trial.
           </p>
           <div className="flex items-center gap-2">
             <Button
@@ -36,7 +36,7 @@ const StickyInstallBarEn = () => {
               size="lg"
               variant="hero"
               onClick={() => {
-                toast({ title: "Redirecting to Shopify App Store…" });
+                toast({ title: "Redirecting to Shopify App Store" });
                 console.log("analytics:event", {
                   category: "cta",
                   action: "click",

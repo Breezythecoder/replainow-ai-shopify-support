@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="border-t py-8 sm:py-10 mt-8 sm:mt-10 bg-white/50">
       <div className="container flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 px-4 sm:px-6">
-        <p className="text-xs sm:text-sm text-muted-foreground text-center md:text-left">© {new Date().getFullYear()} ReplAInow – PrimeVision Group LLC</p>
+        <p className="text-xs sm:text-sm text-muted-foreground text-center md:text-left"> {new Date().getFullYear()} ReplAInow  PrimeVision Group LLC</p>
         <nav className="w-full md:w-auto flex flex-wrap items-center justify-center md:justify-end gap-x-3 sm:gap-x-4 gap-y-2 text-xs sm:text-sm" aria-label="Footer">
           <a href="/privacy" className="whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors px-2 py-1 hover:bg-slate-100 rounded-lg">Datenschutz</a>
           <a href="/terms" className="whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors px-2 py-1 hover:bg-slate-100 rounded-lg">Nutzungsbedingungen</a>

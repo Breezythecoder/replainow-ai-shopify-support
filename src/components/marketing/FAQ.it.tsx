@@ -4,19 +4,19 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqs = [
   {
     q: "Come si integra ReplAInow in Shopify?",
-    a: "Tramite installazione app. Dopo la connessione, ReplAInow estrae dati rilevanti (ordini, stato spedizione, prodotti) direttamente da Shopify in conformità GDPR per generare risposte.",
+    a: "Tramite installazione app. Dopo la connessione, ReplAInow estrae dati rilevanti (ordini, stato spedizione, prodotti) direttamente da Shopify in conformit GDPR per generare risposte.",
   },
   {
-    q: "È conforme al GDPR?",
-    a: "Sì. I dati vengono elaborati per scopi specifici. Puoi limitare o revocare l'accesso ai dati in qualsiasi momento. Archiviamo solo ciò che è necessario per la risposta.",
+    q: " conforme al GDPR?",
+    a: "S. I dati vengono elaborati per scopi specifici. Puoi limitare o revocare l'accesso ai dati in qualsiasi momento. Archiviamo solo ci che  necessario per la risposta.",
   },
   {
     q: "Quanto velocemente ottengo le risposte?",
-    a: "In secondi. ReplAInow struttura la richiesta, controlla i dati Shopify appropriati e fornisce una risposta conforme al brand – solitamente in meno di 3 secondi.",
+    a: "In secondi. ReplAInow struttura la richiesta, controlla i dati Shopify appropriati e fornisce una risposta conforme al brand  solitamente in meno di 3 secondi.",
   },
   {
     q: "Posso personalizzare il tono del brand?",
-    a: "Sì. Definisci le linee guida di stile (es. formale/informale, tonalità, emoji). Le risposte vengono automaticamente allineate di conseguenza.",
+    a: "S. Definisci le linee guida di stile (es. formale/informale, tonalit, emoji). Le risposte vengono automaticamente allineate di conseguenza.",
   },
   {
     q: "Come funziona la tariffazione?",
@@ -45,7 +45,7 @@ const FAQIt = () => {
           Domande frequenti
         </h2>
         <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-          Tutto quello che vuoi sapere prima di iniziare – breve e chiaro.
+          Tutto quello che vuoi sapere prima di iniziare  breve e chiaro.
         </p>
 
         <Accordion type="single" collapsible className="w-full">

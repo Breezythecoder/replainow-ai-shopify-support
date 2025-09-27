@@ -52,7 +52,7 @@ const StoreDataFlowIt = () => {
             id="data-context-heading"
             className="font-display text-3xl md:text-4xl font-semibold mb-4"
           >
-            La tua AI conosce il tuo negozio Shopify – nei minimi dettagli
+            La tua AI conosce il tuo negozio Shopify  nei minimi dettagli
           </h2>
           <p className="text-muted-foreground">
             ReplAInow si collega direttamente al tuo negozio Shopify e raccoglie in tempo reale tutti i dati rilevanti per rispondere istantaneamente e con precisione alle richieste dei clienti.
@@ -171,7 +171,7 @@ const StoreDataFlowIt = () => {
         {/* Caption + CTA */}
         <div className="text-center max-w-3xl mx-auto mt-10 md:mt-14">
           <p className="text-muted-foreground">
-            ReplAInow utilizza questi dati per fornire risposte precise e conformi al brand in &lt;3 secondi – completamente integrato in Shopify.
+            ReplAInow utilizza questi dati per fornire risposte precise e conformi al brand in &lt;3 secondi  completamente integrato in Shopify.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">

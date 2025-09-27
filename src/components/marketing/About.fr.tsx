@@ -3,11 +3,11 @@ const AboutFr = () => {
     <section id="about" aria-labelledby="about-heading" className="py-16 md:py-24 bg-muted/40">
       <div className="container max-w-4xl">
         <h2 id="about-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          À propos de nous
+           propos de nous
         </h2>
         <p className="text-center text-muted-foreground">
           ReplAInow est un produit de <strong>PrimeVision Group LLC</strong>. Notre mission : 
-          Faire gagner du temps aux marchands Shopify et améliorer durablement les expériences client avec la technologie IA moderne.
+          Faire gagner du temps aux marchands Shopify et amliorer durablement les expriences client avec la technologie IA moderne.
         </p>
       </div>
     </section>

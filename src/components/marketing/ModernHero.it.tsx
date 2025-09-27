@@ -37,7 +37,7 @@ const ModernHeroIt = () => {
             
             <p className="text-lg sm:text-xl text-slate-700 leading-relaxed">
               IA rivoluzionaria con <strong className="text-gradient-primary">dati Shopify in tempo reale</strong>: 
-              Conversioni più alte, risposte più veloci, 90% meno ticket di supporto.
+              Conversioni pi alte, risposte pi veloci, 90% meno ticket di supporto.
             </p>
             
             <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
@@ -58,25 +58,25 @@ const ModernHeroIt = () => {
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
               <Button asChild variant="cta" size="xl" className="group flex-1 sm:flex-none">
                 <a href={OAUTH_URL} className="flex items-center justify-center gap-2 text-base lg:text-lg">
-                  🚀 Prova Gratis Ora
+                   Prova Gratis Ora
                 </a>
               </Button>
               <Button asChild variant="glass" size="xl" className="flex-1 sm:flex-none">
                 <a href="#live-demo" className="flex items-center justify-center gap-2 text-base lg:text-lg">
-                  📺 Guarda Demo Live
+                   Guarda Demo Live
                 </a>
               </Button>
             </div>
 
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4 lg:gap-6 text-sm">
               <div className="flex items-center gap-2 glass-card px-4 py-3 rounded-full shadow-brand">
-                <span className="text-brand-warning text-lg">★★★★★</span>
+                <span className="text-brand-warning text-lg"></span>
                 <span className="font-bold text-slate-700">4.9/5</span>
               </div>
               <span className="px-4 py-3 glass-card text-brand-success rounded-full font-bold shadow-brand">
-                ✅ Conforme GDPR
+                 Conforme GDPR
               </span>
-              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand">👥 5000+ Negozi</span>
+              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand"> 5000+ Negozi</span>
             </div>
           </div>
           

@@ -58,7 +58,7 @@ const HeroEs = () => {
               </div>
 
               <p className="mt-2 text-sm text-primary-foreground/80">
-                Listo en 2 minutos. Sin tarjeta de crédito. Sin riesgo.
+                Listo en 2 minutos. Sin tarjeta de crdito. Sin riesgo.
               </p>
 
               <div className="mt-5 flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-primary-foreground/90">
@@ -69,7 +69,7 @@ const HeroEs = () => {
                   <Zap className="size-4" /> Respuesta en segundos
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-3 py-1">
-                  <Plug className="size-4" /> Integración Shopify perfecta
+                  <Plug className="size-4" /> Integracin Shopify perfecta
                 </span>
               </div>
 
@@ -78,7 +78,7 @@ const HeroEs = () => {
                   <Star className="size-4 fill-current" aria-hidden="true" />
                   <span>4.9/5 en Shopify App Store</span>
                 </span>
-                <span className="hidden md:inline text-sm opacity-80">•</span>
+                <span className="hidden md:inline text-sm opacity-80"></span>
                 <span className="text-sm">Confiado por equipos de Shopify</span>
               </div>
             </div>

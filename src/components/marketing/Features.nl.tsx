@@ -19,7 +19,7 @@ const features = [
   {
     icon: ShieldCheck,
     title: "GDPR- & HMAC-veilig",
-    desc: "Versleuteld, GDPR-conform en HMAC-geverifieerd – betrouwbaar & vertrouwd.",
+    desc: "Versleuteld, GDPR-conform en HMAC-geverifieerd  betrouwbaar & vertrouwd.",
   },
   {
     icon: Bot,
@@ -29,7 +29,7 @@ const features = [
   {
     icon: Globe,
     title: "Meertalig, merkconform",
-    desc: "Antwoorden in vele talen in de toon van je merk – ideaal voor wereldwijde support.",
+    desc: "Antwoorden in vele talen in de toon van je merk  ideaal voor wereldwijde support.",
   },
   {
     icon: BarChart3,
@@ -39,7 +39,7 @@ const features = [
   {
     icon: Users,
     title: "Team-samenwerking",
-    desc: "Toewijzen, notities, escalaties – naadloos in het team.",
+    desc: "Toewijzen, notities, escalaties  naadloos in het team.",
   },
 ];
 
@@ -51,7 +51,7 @@ const FeaturesNl = () => {
           Kernfeatures: AI-Support voor Shopify
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          Acht concrete voordelen – technisch sterk en duidelijk meetbaar.
+          Acht concrete voordelen  technisch sterk en duidelijk meetbaar.
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
           {features.map(({ icon: Icon, title, desc }) => (

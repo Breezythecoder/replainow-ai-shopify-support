@@ -44,15 +44,15 @@ const ModernLiveDemoEn = () => {
           <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-slate-800 text-center px-4">Live from real Shopify stores:</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 text-left">
             <div className="space-y-3 p-4 bg-white/50 rounded-2xl">
-              <div className="text-brand-success font-bold text-sm sm:text-base">🔥 TechGadgets24</div>
+              <div className="text-brand-success font-bold text-sm sm:text-base"> TechGadgets24</div>
               <div className="text-xs sm:text-sm text-slate-600 leading-relaxed">"AI just recommended iPhone cases - customer immediately buys 3 pieces!"</div>
             </div>
             <div className="space-y-3 p-4 bg-white/50 rounded-2xl">
-              <div className="text-brand-success font-bold text-sm sm:text-base">💄 BeautyStore</div>
+              <div className="text-brand-success font-bold text-sm sm:text-base"> BeautyStore</div>
               <div className="text-xs sm:text-sm text-slate-600 leading-relaxed">"French customer gets perfect answer in French about skincare routine"</div>
             </div>
             <div className="space-y-3 p-4 bg-white/50 rounded-2xl">
-              <div className="text-brand-success font-bold text-sm sm:text-base">👗 FashionHub</div>
+              <div className="text-brand-success font-bold text-sm sm:text-base"> FashionHub</div>
               <div className="text-xs sm:text-sm text-slate-600 leading-relaxed">"AI explains size chart and recommends perfect fit - return rate drops 60%"</div>
             </div>
           </div>

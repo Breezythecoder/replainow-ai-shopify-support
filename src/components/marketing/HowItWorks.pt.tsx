@@ -34,7 +34,7 @@ const HowItWorksPt = () => {
             Comece em minutos
           </h2>
           <p className="text-muted-foreground">
-            Instalar, conectar, enviar respostas – e automatizar com regras.
+            Instalar, conectar, enviar respostas  e automatizar com regras.
           </p>
         </header>
 
@@ -52,7 +52,7 @@ const HowItWorksPt = () => {
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             <Step Icon={Plug} title="Instalar" desc="1 clique na Shopify App Store." />
             <Step Icon={Database} title="Conectar" desc="Acesso em tempo real aos dados Shopify." />
-            <Step Icon={Bot} title="Responder" desc="Sugestões IA diretamente no admin." />
+            <Step Icon={Bot} title="Responder" desc="Sugestes IA diretamente no admin." />
             <Step Icon={Settings2} title="Automatizar" desc="Regras & auto-envio opcionais." />
           </div>
         </div>
@@ -60,7 +60,7 @@ const HowItWorksPt = () => {
         <div className="text-center max-w-3xl mx-auto mt-10 md:mt-14">
           <div className="mt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
-              <a href={OAUTH_URL}>Testar grátis</a>
+              <a href={OAUTH_URL}>Testar grtis</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
               <a href="#live-demo">Ver demo ao vivo</a>

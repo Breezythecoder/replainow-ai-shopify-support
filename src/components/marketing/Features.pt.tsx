@@ -13,33 +13,33 @@ const features = [
   },
   {
     icon: TrendingUp,
-    title: "Mais receita, mais rápido",
-    desc: "Respostas precisas e rápidas aumentam conversão e fidelidade de forma mensurável.",
+    title: "Mais receita, mais rpido",
+    desc: "Respostas precisas e rpidas aumentam converso e fidelidade de forma mensurvel.",
   },
   {
     icon: ShieldCheck,
     title: "Seguro GDPR & HMAC",
-    desc: "Criptografado, conforme GDPR e verificado HMAC – confiável e seguro.",
+    desc: "Criptografado, conforme GDPR e verificado HMAC  confivel e seguro.",
   },
   {
     icon: Bot,
-    title: "Automação inteligente",
-    desc: "Auto-categorização, IA-triagem e regras lidam com casos rotineiros automaticamente.",
+    title: "Automao inteligente",
+    desc: "Auto-categorizao, IA-triagem e regras lidam com casos rotineiros automaticamente.",
   },
   {
     icon: Globe,
-    title: "Multilíngue, conforme marca",
-    desc: "Respostas em muitos idiomas no tom da sua marca – ideal para suporte global.",
+    title: "Multilngue, conforme marca",
+    desc: "Respostas em muitos idiomas no tom da sua marca  ideal para suporte global.",
   },
   {
     icon: BarChart3,
     title: "Analytics & insights",
-    desc: "Tempos de resposta, CSAT & conversão num relance.",
+    desc: "Tempos de resposta, CSAT & converso num relance.",
   },
   {
     icon: Users,
-    title: "Colaboração em equipe",
-    desc: "Atribuir, notas, escalações – fluido em equipe.",
+    title: "Colaborao em equipe",
+    desc: "Atribuir, notas, escalaes  fluido em equipe.",
   },
 ];
 
@@ -51,7 +51,7 @@ const FeaturesPt = () => {
           Recursos principais: Suporte IA para Shopify
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          Oito benefícios concretos – tecnicamente fortes e claramente mensuráveis.
+          Oito benefcios concretos  tecnicamente fortes e claramente mensurveis.
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
           {features.map(({ icon: Icon, title, desc }) => (

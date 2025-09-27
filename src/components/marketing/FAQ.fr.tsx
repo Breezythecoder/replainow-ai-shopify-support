@@ -3,24 +3,24 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   {
-    q: "Comment ReplAInow s'intègre-t-il dans Shopify?",
-    a: "Via installation d'app. Après connexion, ReplAInow extrait données pertinentes (commandes, statut livraison, produits) conforme RGPD directement de Shopify pour générer réponses.",
+    q: "Comment ReplAInow s'intgre-t-il dans Shopify?",
+    a: "Via installation d'app. Aprs connexion, ReplAInow extrait donnes pertinentes (commandes, statut livraison, produits) conforme RGPD directement de Shopify pour gnrer rponses.",
   },
   {
     q: "Est-ce conforme RGPD?",
-    a: "Oui. Les données sont traitées à des fins spécifiques. Vous pouvez restreindre ou révoquer l'accès aux données à tout moment. Nous ne stockons que ce qui est nécessaire pour la réponse.",
+    a: "Oui. Les donnes sont traites  des fins spcifiques. Vous pouvez restreindre ou rvoquer l'accs aux donnes  tout moment. Nous ne stockons que ce qui est ncessaire pour la rponse.",
   },
   {
-    q: "À quelle vitesse j'obtiens des réponses?",
-    a: "En secondes. ReplAInow structure la requête, vérifie les données Shopify correspondantes et livre une réponse conforme à la marque – généralement sous 3 secondes.",
+    q: " quelle vitesse j'obtiens des rponses?",
+    a: "En secondes. ReplAInow structure la requte, vrifie les donnes Shopify correspondantes et livre une rponse conforme  la marque  gnralement sous 3 secondes.",
   },
   {
     q: "Puis-je personnaliser le ton de marque?",
-    a: "Oui. Vous définissez des directives de style (ex. formel/informel, tonalité, emojis). Les réponses s'alignent automatiquement avec elles.",
+    a: "Oui. Vous dfinissez des directives de style (ex. formel/informel, tonalit, emojis). Les rponses s'alignent automatiquement avec elles.",
   },
   {
     q: "Comment sont les prix?",
-    a: "Plans transparents avec limites claires, 14 jours d'essai gratuit sans carte de crédit. Upgrade possible à tout moment.",
+    a: "Plans transparents avec limites claires, 14 jours d'essai gratuit sans carte de crdit. Upgrade possible  tout moment.",
   },
 ];
 
@@ -42,10 +42,10 @@ const FAQFr = () => {
     <section id="faq" aria-labelledby="faq-heading" className="py-16 md:py-24">
       <div className="container max-w-4xl">
         <h2 id="faq-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Questions Fréquentes
+          Questions Frquentes
         </h2>
         <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-          Tout ce que vous voulez savoir avant de commencer – court et clair.
+          Tout ce que vous voulez savoir avant de commencer  court et clair.
         </p>
 
         <Accordion type="single" collapsible className="w-full">

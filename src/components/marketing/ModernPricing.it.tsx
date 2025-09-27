@@ -3,7 +3,7 @@ const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 const baseFeatures = ["Installazione 1 clic","Dati negozio illimitati (Prodotti, Pagine, Policy, ecc.)","AI Mail & AI Live Chat","Branding personalizzabile"];
 const plans = [
   { name: "Starter", price: "$19", period: "/ mese", quota: "Fino a 300 risposte IA / mese", trial: "14 giorni gratis", features: [...baseFeatures, "Invio email tramite indirizzo ReplAInow"], highlight: false, description: "Perfetto per test" },
-  { name: "Growth", price: "$49", period: "/ mese", quota: "Fino a 1500 risposte IA / mese", trial: "14 giorni gratis", features: [...baseFeatures, "Invio email con il tuo dominio"], highlight: true, badge: "Più Popolare", description: "Per store in crescita" },
+  { name: "Growth", price: "$49", period: "/ mese", quota: "Fino a 1500 risposte IA / mese", trial: "14 giorni gratis", features: [...baseFeatures, "Invio email con il tuo dominio"], highlight: true, badge: "Pi Popolare", description: "Per store in crescita" },
   { name: "Pro", price: "$99", period: "/ mese", quota: "Fino a 3000 risposte IA / mese", trial: "14 giorni gratis", features: [...baseFeatures, "Invio email con il tuo dominio"], highlight: false, description: "Per store affermati" },
   { name: "Scale", price: "$199", period: "/ mese", quota: "Risposte IA illimitate", trial: "14 giorni gratis", features: [...baseFeatures, "Invio email con il tuo dominio"], highlight: false, description: "Per catene di store" },
 ];
@@ -16,9 +16,9 @@ const ModernPricingIt = () => {
         <div className="absolute top-3/4 left-3/4 w-32 h-32 bg-brand-accent/20 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }} />
       </div>
       <div className="container mx-auto px-6 relative z-10">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-4 tracking-tight px-4">Più potenza di supporto per <span className="text-brand-success">meno</span></h2>
-        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-2 text-lg">Un agente di supporto costa in media €2.000 / mese.</p>
-        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-16 text-lg">ReplAInow parte da <strong className="text-gradient-primary">$19/mese</strong> — e lavora 24/7.</p>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-4 tracking-tight px-4">Pi potenza di supporto per <span className="text-brand-success">meno</span></h2>
+        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-2 text-lg">Un agente di supporto costa in media 2.000 / mese.</p>
+        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-16 text-lg">ReplAInow parte da <strong className="text-gradient-primary">$19/mese</strong>  e lavora 24/7.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 sm:mb-16">
           {plans.map((plan) => {
             const Card = (
@@ -33,9 +33,9 @@ const ModernPricingIt = () => {
                   <p className="text-xs text-slate-500 font-medium">{plan.trial}</p>
                 </div>
                 <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 flex-grow">
-                  <li className="flex items-start gap-2 sm:gap-3"><span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0">✅</span><span className="text-slate-700 font-bold text-xs sm:text-sm leading-relaxed">{plan.quota}</span></li>
+                  <li className="flex items-start gap-2 sm:gap-3"><span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span><span className="text-slate-700 font-bold text-xs sm:text-sm leading-relaxed">{plan.quota}</span></li>
                   {plan.features.map((feature, j) => (
-                    <li key={j} className="flex items-start gap-2 sm:gap-3"><span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0">✅</span><span className="text-slate-700 font-medium leading-relaxed text-xs sm:text-sm">{feature}</span></li>
+                    <li key={j} className="flex items-start gap-2 sm:gap-3"><span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span><span className="text-slate-700 font-medium leading-relaxed text-xs sm:text-sm">{feature}</span></li>
                   ))}
                 </ul>
                 <div className="space-y-3">

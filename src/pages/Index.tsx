@@ -7,6 +7,8 @@ import ModernSocialProof from "@/components/marketing/ModernSocialProof";
 import ModernLiveDemo from "@/components/marketing/ModernLiveDemo";
 import ModernPricing from "@/components/marketing/ModernPricing";
 import ModernComparison from "@/components/marketing/ModernComparison";
+import IndustryExamples from "@/components/marketing/IndustryExamples";
+import VideoDemo from "@/components/marketing/VideoDemo";
 import About from "@/components/marketing/About";
 import Contact from "@/components/marketing/Contact";
 import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
@@ -74,6 +76,8 @@ const Index = () => {
         <ModernFeatures />
         <ModernHowItWorks />
         <ModernLiveDemo />
+        <VideoDemo />
+        <IndustryExamples />
         <ModernSocialProof />
         <ModernComparison />
         <ModernPricing />

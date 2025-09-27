@@ -17,7 +17,7 @@ const StickyInstallBarIt = () => {
             Pronto per trasformare il tuo supporto clienti?
           </p>
           <p className="text-xs text-primary-foreground/80">
-            Prova gratuita di 14 giorni • Nessuna carta di credito necessaria
+            Prova gratuita di 14 giorni  Nessuna carta di credito necessaria
           </p>
         </div>
         <div className="flex items-center gap-3">

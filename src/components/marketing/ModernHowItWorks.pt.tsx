@@ -2,15 +2,15 @@ import { Button } from "@/components/ui/button";
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 const ModernHowItWorksPt = () => {
   const steps = [
-    { step: "01", icon: "⬇️", title: "Instalar App", desc: "Instalação 1 clique pela Shopify App Store" },
-    { step: "02", icon: "🔗", title: "Conexão automática", desc: "IA aprende TODOS os seus produtos e políticas" },
-    { step: "03", icon: "🤖", title: "IA responde na hora", desc: "Respostas perfeitas em 3 segundos" },
-    { step: "04", icon: "📈", title: "Lucros explodem", desc: "+187% conversão com 75% menos custos" },
+    { step: "01", icon: "", title: "Instalar App", desc: "Instalao 1 clique pela Shopify App Store" },
+    { step: "02", icon: "", title: "Conexo automtica", desc: "IA aprende TODOS os seus produtos e polticas" },
+    { step: "03", icon: "", title: "IA responde na hora", desc: "Respostas perfeitas em 3 segundos" },
+    { step: "04", icon: "", title: "Lucros explodem", desc: "+187% converso com 75% menos custos" },
   ];
   return (
     <section className="py-24 bg-gradient-to-b from-indigo-50 to-purple-50">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8 tracking-tight px-4 text-center">Como você <span className="text-gradient-primary">domina</span> o suporte</h2>
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8 tracking-tight px-4 text-center">Como voc <span className="text-gradient-primary">domina</span> o suporte</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {steps.map((s, i) => (
             <div key={i} className="text-center group px-4">
@@ -25,8 +25,8 @@ const ModernHowItWorksPt = () => {
           ))}
         </div>
         <div className="text-center px-4">
-          <Button asChild variant="cta" size="xl" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 font-bold min-h-[56px] max-w-md mx-auto"><a href={OAUTH_URL} className="flex items-center justify-center gap-2">🚀 Começar Grátis</a></Button>
-          <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed">✅ 14 dias grátis • ✅ Sem setup • ✅ Cancele quando quiser</p>
+          <Button asChild variant="cta" size="xl" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 font-bold min-h-[56px] max-w-md mx-auto"><a href={OAUTH_URL} className="flex items-center justify-center gap-2"> Comear Grtis</a></Button>
+          <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed"> 14 dias grtis   Sem setup   Cancele quando quiser</p>
         </div>
       </div>
     </section>

@@ -51,10 +51,10 @@ const StoreDataFlowPt = () => {
             id="data-context-heading"
             className="font-display text-3xl md:text-4xl font-semibold mb-4"
           >
-            Sua IA conhece sua loja Shopify – até o último detalhe
+            Sua IA conhece sua loja Shopify  at o ltimo detalhe
           </h2>
           <p className="text-muted-foreground">
-            ReplAInow se conecta diretamente à sua loja Shopify e extrai todos os dados relevantes em tempo real para responder consultas de clientes instantânea e precisamente.
+            ReplAInow se conecta diretamente  sua loja Shopify e extrai todos os dados relevantes em tempo real para responder consultas de clientes instantnea e precisamente.
           </p>
         </header>
 
@@ -116,19 +116,19 @@ const StoreDataFlowPt = () => {
                 />
               </div>
               <div className="absolute -top-4 right-0 w-64">
-                <Card Icon={Package} title="Dados de produtos" desc="Títulos, SKUs, preços, estoque" />
+                <Card Icon={Package} title="Dados de produtos" desc="Ttulos, SKUs, preos, estoque" />
               </div>
               <div className="absolute top-1/3 -left-2 w-64">
-                <Card Icon={User} title="Dados de clientes" desc="Nome, email, histórico de compras" />
+                <Card Icon={User} title="Dados de clientes" desc="Nome, email, histrico de compras" />
               </div>
               <div className="absolute top-1/3 -right-2 w-64">
-                <Card Icon={FileText} title="Conteúdo da loja" desc="Páginas, FAQs, regras de envio" />
+                <Card Icon={FileText} title="Contedo da loja" desc="Pginas, FAQs, regras de envio" />
               </div>
               <div className="absolute bottom-0 left-4 w-64">
                 <Card Icon={Truck} title="Rastreamento & envio" desc="Links ao vivo, prazos de entrega" />
               </div>
               <div className="absolute bottom-0 right-4 w-64">
-                <Card Icon={Languages} title="Multilíngue" desc="Idiomas preferidos" />
+                <Card Icon={Languages} title="Multilngue" desc="Idiomas preferidos" />
               </div>
             </div>
           </div>
@@ -149,22 +149,22 @@ const StoreDataFlowPt = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Card Icon={ShoppingCart} title="Dados de pedidos" desc="ID pedido, status, itens, rastreamento" />
-              <Card Icon={Package} title="Dados de produtos" desc="Títulos, SKUs, preços, estoque" />
-              <Card Icon={User} title="Dados de clientes" desc="Nome, email, histórico de compras" />
-              <Card Icon={FileText} title="Conteúdo da loja" desc="Páginas, FAQs, regras de envio" />
+              <Card Icon={Package} title="Dados de produtos" desc="Ttulos, SKUs, preos, estoque" />
+              <Card Icon={User} title="Dados de clientes" desc="Nome, email, histrico de compras" />
+              <Card Icon={FileText} title="Contedo da loja" desc="Pginas, FAQs, regras de envio" />
               <Card Icon={Truck} title="Rastreamento & envio" desc="Links ao vivo, prazos de entrega" />
-              <Card Icon={Languages} title="Multilíngue" desc="Idiomas preferidos" />
+              <Card Icon={Languages} title="Multilngue" desc="Idiomas preferidos" />
             </div>
           </div>
         </div>
 
         <div className="text-center max-w-3xl mx-auto mt-10 md:mt-14">
           <p className="text-muted-foreground">
-            ReplAInow usa esses dados para entregar respostas conformes à marca e precisas em &lt;3 segundos – totalmente integrado ao Shopify.
+            ReplAInow usa esses dados para entregar respostas conformes  marca e precisas em &lt;3 segundos  totalmente integrado ao Shopify.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
-              <a href={OAUTH_URL}>Testar grátis agora</a>
+              <a href={OAUTH_URL}>Testar grtis agora</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
               <a href="#live-demo">Ver demo ao vivo</a>

@@ -4,59 +4,59 @@ const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 type Feature = string | { label: string; sub: string[] };
 
 const baseFeatures: string[] = [
-  "一键安装",
-  "无限商店数据（产品、页面、政策等）",
-  "AI邮件和AI实时聊天",
-  "可个性化品牌定制",
+  "",
+  "",
+  "AIAI",
+  "",
 ];
 
 const plans = [
   {
-    name: "入门版",
+    name: "",
     price: "$19",
-    period: "/ 月",
-    quota: "每月最多300个AI回复",
-    trial: "14天免费试用",
+    period: "/ ",
+    quota: "300AI",
+    trial: "14",
     features: [
       ...baseFeatures,
-      "通过ReplAInow地址发送邮件",
+      "ReplAInow",
     ] as Feature[],
     popular: false,
   },
   {
-    name: "成长版",
+    name: "",
     price: "$49",
-    period: "/ 月",
-    quota: "每月最多1500个AI回复",
-    trial: "14天免费试用",
+    period: "/ ",
+    quota: "1500AI",
+    trial: "14",
     features: [
       ...baseFeatures,
-      "使用您的域名发送邮件",
+      "",
     ] as Feature[],
     popular: true,
-    badge: "最受欢迎的方案",
+    badge: "",
   },
   {
-    name: "专业版",
+    name: "",
     price: "$99",
-    period: "/ 月",
-    quota: "每月最多3000个AI回复",
-    trial: "14天免费试用",
+    period: "/ ",
+    quota: "3000AI",
+    trial: "14",
     features: [
       ...baseFeatures,
-      "使用您的域名发送邮件",
+      "",
     ] as Feature[],
     popular: false,
   },
   {
-    name: "企业版",
+    name: "",
     price: "$199",
-    period: "/ 月",
-    quota: "无限AI回复",
-    trial: "14天免费试用",
+    period: "/ ",
+    quota: "AI",
+    trial: "14",
     features: [
       ...baseFeatures,
-      "使用您的域名发送邮件",
+      "",
     ] as Feature[],
     popular: false,
   },
@@ -67,13 +67,13 @@ const PricingZh = () => {
     <section id="preise" aria-labelledby="pricing-heading" className="py-16 md:py-24">
       <div className="container">
         <h2 id="pricing-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          用更少的钱获得比单个员工更强的支持力量。
+          
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-2">
-          一个支持代理平均每月花费2000欧元。
+          2000
         </p>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          ReplAInow从19美元/月开始——全天候工作，无休息。
+          ReplAInow19/
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -86,7 +86,7 @@ const PricingZh = () => {
                     <span className="text-3xl font-bold">{p.price}</span>
                     <span className="text-muted-foreground">{p.period}</span>
                   </div>
-                  <p className="mt-1 text-xs text-muted-foreground">{(p as any).trial ?? "14天免费试用"}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">{(p as any).trial ?? "14"}</p>
                   {'blurb' in p && (p as any).blurb ? (
                     <p className="mt-3 text-sm text-muted-foreground">{(p as any).blurb}</p>
                   ) : null}
@@ -121,18 +121,18 @@ const PricingZh = () => {
 
                 <div className="mt-auto space-y-3">
                   <Button asChild variant="hero" className="w-full">
-                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`免费试用 – ${p.name}方案`}>
-                      免费试用
+                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`  ${p.name}`}>
+                      
                     </a>
                   </Button>
                   <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                     <img
                       src="/images/shopify-logo-black.svg"
-                      alt="Shopify Logo – App Store"
+                      alt="Shopify Logo  App Store"
                       className="h-4 w-auto opacity-80"
                       loading="lazy"
                     />
-                    <span>在Shopify应用商店上线</span>
+                    <span>Shopify</span>
                   </div>
                 </div>
               </article>
@@ -141,7 +141,7 @@ const PricingZh = () => {
             return p.popular ? (
               <div key={p.name} className="relative rounded-2xl p-[1px] bg-gradient-primary shadow-brand-glow hover:shadow-brand-glow transition-shadow">
                 <span className="absolute -top-3 left-4 rounded-full bg-primary text-primary-foreground text-xs px-2.5 py-1 border border-primary/60 shadow-brand">
-                  {(p as any).badge ?? '最受欢迎的方案'}
+                  {(p as any).badge ?? ''}
                 </span>
                 {Card}
               </div>

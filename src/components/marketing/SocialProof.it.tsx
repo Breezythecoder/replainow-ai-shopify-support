@@ -10,11 +10,11 @@ const SocialProofIt = () => {
           Utilizzato e amato dai principali negozi Shopify.
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
-          Più fiducia. Meno sforzo. Risposte più veloci.
+          Pi fiducia. Meno sforzo. Risposte pi veloci.
         </p>
         <div className="mb-8 flex flex-wrap items-center justify-center gap-3 text-xs">
           <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify Plus Partner</span>
-          <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify App Store ★★★★★ 4,9 / 5</span>
+          <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify App Store  4,9 / 5</span>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center mb-12">
@@ -27,16 +27,16 @@ const SocialProofIt = () => {
 
         <div className="grid gap-6 md:grid-cols-3">
           <article className="rounded-xl border bg-card p-6">
-            <p className="mb-4">„Risparmiamo 15 ore di supporto a settimana – e i nostri clienti adorano i tempi di risposta rapidi."</p>
-            <div className="text-sm text-muted-foreground">Lisa – Fashion Store • 7 cifre</div>
+            <p className="mb-4">Risparmiamo 15 ore di supporto a settimana  e i nostri clienti adorano i tempi di risposta rapidi."</p>
+            <div className="text-sm text-muted-foreground">Lisa  Fashion Store  7 cifre</div>
           </article>
           <article className="rounded-xl border bg-card p-6">
-            <p className="mb-4">„Finalmente posso concentrarmi sulla crescita. Il supporto funziona da solo."</p>
-            <div className="text-sm text-muted-foreground">Daniel – D2C Brand • 6 cifre</div>
+            <p className="mb-4">Finalmente posso concentrarmi sulla crescita. Il supporto funziona da solo."</p>
+            <div className="text-sm text-muted-foreground">Daniel  D2C Brand  6 cifre</div>
           </article>
           <article className="rounded-xl border bg-card p-6">
-            <p className="mb-4">„Setup in minuti, benefici immediati. Ora rispettiamo facilmente i nostri SLA."</p>
-            <div className="text-sm text-muted-foreground">Mara – Casa e Living • 8 cifre</div>
+            <p className="mb-4">Setup in minuti, benefici immediati. Ora rispettiamo facilmente i nostri SLA."</p>
+            <div className="text-sm text-muted-foreground">Mara  Casa e Living  8 cifre</div>
           </article>
         </div>
 
@@ -47,7 +47,7 @@ const SocialProofIt = () => {
           </div>
           <div className="rounded-xl border bg-card p-6">
             <div className="text-3xl font-semibold">+37 %</div>
-            <div className="text-sm text-muted-foreground">soddisfazione clienti più alta (30 giorni)</div>
+            <div className="text-sm text-muted-foreground">soddisfazione clienti pi alta (30 giorni)</div>
           </div>
           <div className="rounded-xl border bg-card p-6">
             <div className="text-3xl font-semibold">x12 ROI</div>

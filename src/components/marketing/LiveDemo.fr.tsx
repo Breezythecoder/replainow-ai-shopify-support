@@ -12,7 +12,7 @@ const LiveDemoFr = () => {
           ReplAInow fonctionne si simplement.
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
-          Un client demande le statut de livraison – ReplAInow extrait automatiquement les données de commande de Shopify, formule une réponse parfaite dans le ton de votre marque et l'envoie en 3 secondes. Résultat : Client content, vous gagnez du temps – et générez plus de revenus en parallèle.
+          Un client demande le statut de livraison  ReplAInow extrait automatiquement les donnes de commande de Shopify, formule une rponse parfaite dans le ton de votre marque et l'envoie en 3 secondes. Rsultat : Client content, vous gagnez du temps  et gnrez plus de revenus en parallle.
         </p>
 
         <div className="rounded-xl border bg-card p-2 shadow-brand mb-6">
@@ -30,7 +30,7 @@ const LiveDemoFr = () => {
 
         <div className="text-center">
           <Button asChild size="lg" variant="hero">
-            <a href={OAUTH_URL}>Essayez-le vous-même maintenant</a>
+            <a href={OAUTH_URL}>Essayez-le vous-mme maintenant</a>
           </Button>
         </div>
       </div>

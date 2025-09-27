@@ -4,8 +4,8 @@ const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 type Feature = string | { label: string; sub: string[] };
 
 const baseFeatures: string[] = [
-  "Instalación con 1 clic",
-  "Datos ilimitados de tienda (productos, páginas, políticas, etc.)",
+  "Instalacin con 1 clic",
+  "Datos ilimitados de tienda (productos, pginas, polticas, etc.)",
   "IA Mail & IA Live Chat",
   "Marca personalizable",
 ];
@@ -16,10 +16,10 @@ const plans = [
     price: "$19",
     period: "/ mes",
     quota: "Hasta 300 respuestas IA / mes",
-    trial: "14 días de prueba gratis",
+    trial: "14 das de prueba gratis",
     features: [
       ...baseFeatures,
-      "Envío de email vía dirección ReplAInow",
+      "Envo de email va direccin ReplAInow",
     ] as Feature[],
     popular: false,
   },
@@ -28,23 +28,23 @@ const plans = [
     price: "$49",
     period: "/ mes",
     quota: "Hasta 1500 respuestas IA / mes",
-    trial: "14 días de prueba gratis",
+    trial: "14 das de prueba gratis",
     features: [
       ...baseFeatures,
-      "Envío de email con tu dominio",
+      "Envo de email con tu dominio",
     ] as Feature[],
     popular: true,
-    badge: "Plan más popular",
+    badge: "Plan ms popular",
   },
   {
     name: "Pro",
     price: "$99",
     period: "/ mes",
     quota: "Hasta 3000 respuestas IA / mes",
-    trial: "14 días de prueba gratis",
+    trial: "14 das de prueba gratis",
     features: [
       ...baseFeatures,
-      "Envío de email con tu dominio",
+      "Envo de email con tu dominio",
     ] as Feature[],
     popular: false,
   },
@@ -53,10 +53,10 @@ const plans = [
     price: "$199",
     period: "/ mes",
     quota: "Respuestas IA ilimitadas",
-    trial: "14 días de prueba gratis",
+    trial: "14 das de prueba gratis",
     features: [
       ...baseFeatures,
-      "Envío de email con tu dominio",
+      "Envo de email con tu dominio",
     ] as Feature[],
     popular: false,
   },
@@ -67,13 +67,13 @@ const PricingEs = () => {
     <section id="preise" aria-labelledby="pricing-heading" className="py-16 md:py-24">
       <div className="container">
         <h2 id="pricing-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Más poder de soporte por menos dinero que un solo empleado.
+          Ms poder de soporte por menos dinero que un solo empleado.
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-2">
           Un agente de soporte cuesta en promedio $2,000 por mes.
         </p>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          ReplAInow comienza en $19/mes – y trabaja 24/7, sin descansos.
+          ReplAInow comienza en $19/mes  y trabaja 24/7, sin descansos.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -86,7 +86,7 @@ const PricingEs = () => {
                     <span className="text-3xl font-bold">{p.price}</span>
                     <span className="text-muted-foreground">{p.period}</span>
                   </div>
-                  <p className="mt-1 text-xs text-muted-foreground">{(p as any).trial ?? "14 días de prueba gratis"}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">{(p as any).trial ?? "14 das de prueba gratis"}</p>
                   {'blurb' in p && (p as any).blurb ? (
                     <p className="mt-3 text-sm text-muted-foreground">{(p as any).blurb}</p>
                   ) : null}
@@ -121,14 +121,14 @@ const PricingEs = () => {
 
                 <div className="mt-auto space-y-3">
                   <Button asChild variant="hero" className="w-full">
-                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Probar gratis – Plan ${p.name}`}>
+                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Probar gratis  Plan ${p.name}`}>
                       Probar gratis
                     </a>
                   </Button>
                   <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                     <img
                       src="/images/shopify-logo-black.svg"
-                      alt="Shopify Logo – App Store"
+                      alt="Shopify Logo  App Store"
                       className="h-4 w-auto opacity-80"
                       loading="lazy"
                     />
@@ -141,7 +141,7 @@ const PricingEs = () => {
             return p.popular ? (
               <div key={p.name} className="relative rounded-2xl p-[1px] bg-gradient-primary shadow-brand-glow hover:shadow-brand-glow transition-shadow">
                 <span className="absolute -top-3 left-4 rounded-full bg-primary text-primary-foreground text-xs px-2.5 py-1 border border-primary/60 shadow-brand">
-                  {(p as any).badge ?? 'Plan más popular'}
+                  {(p as any).badge ?? 'Plan ms popular'}
                 </span>
                 {Card}
               </div>

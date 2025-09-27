@@ -4,12 +4,12 @@ const FooterPt = () => {
   return (
     <footer className="border-t py-10 mt-10">
       <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
-        <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} ReplAInow – PrimeVision Group LLC</p>
+        <p className="text-sm text-muted-foreground"> {new Date().getFullYear()} ReplAInow  PrimeVision Group LLC</p>
         <nav className="w-full md:w-auto flex flex-wrap items-center justify-center md:justify-end gap-x-4 gap-y-2 text-sm" aria-label="Footer">
-          <a href="/privacy" className="whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors">Política de Privacidade</a>
-          <a href="/terms" className="whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors">Termos de Serviço</a>
+          <a href="/privacy" className="whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors">Poltica de Privacidade</a>
+          <a href="/terms" className="whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors">Termos de Servio</a>
           <a href="/uninstall" className="whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors">Desinstalar</a>
-          <a href="/security" className="whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors">Declaração de Segurança</a>
+          <a href="/security" className="whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors">Declarao de Segurana</a>
           <a href="/impressum" className="whitespace-nowrap text-muted-foreground hover:text-foreground transition-colors">Aviso Legal</a>
           <span className="inline-flex items-center gap-3">
             <a href="#" aria-label="Twitter" className="text-muted-foreground hover:text-foreground"><Twitter size={18} /></a>

@@ -12,7 +12,7 @@ const NavbarIt = () => {
           <span className="sr-only">ReplAInow</span>
         </a>
         <div className="hidden md:flex items-center gap-6 text-sm">
-          <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors story-link">Funzionalità</a>
+          <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors story-link">Funzionalit</a>
           <a href="#live-demo" className="text-muted-foreground hover:text-foreground transition-colors story-link">Demo</a>
           <a href="#prezzi" className="text-muted-foreground hover:text-foreground transition-colors story-link">Prezzi</a>
           <a href="#contatto" className="text-muted-foreground hover:text-foreground transition-colors story-link">Contatto</a>

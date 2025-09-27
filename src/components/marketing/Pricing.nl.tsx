@@ -67,13 +67,13 @@ const PricingNl = () => {
     <section id="preise" aria-labelledby="pricing-heading" className="py-16 md:py-24">
       <div className="container">
         <h2 id="pricing-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Meer support-kracht voor minder geld dan één medewerker.
+          Meer support-kracht voor minder geld dan n medewerker.
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-2">
-          Een support-agent kost gemiddeld €2.000 per maand.
+          Een support-agent kost gemiddeld 2.000 per maand.
         </p>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          ReplAInow begint bij $19/maand – en werkt 24/7, zonder pauze.
+          ReplAInow begint bij $19/maand  en werkt 24/7, zonder pauze.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -121,14 +121,14 @@ const PricingNl = () => {
 
                 <div className="mt-auto space-y-3">
                   <Button asChild variant="hero" className="w-full">
-                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Gratis testen – Plan ${p.name}`}>
+                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Gratis testen  Plan ${p.name}`}>
                       Gratis testen
                     </a>
                   </Button>
                   <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                     <img
                       src="/images/shopify-logo-black.svg"
-                      alt="Shopify Logo – App Store"
+                      alt="Shopify Logo  App Store"
                       className="h-4 w-auto opacity-80"
                       loading="lazy"
                     />

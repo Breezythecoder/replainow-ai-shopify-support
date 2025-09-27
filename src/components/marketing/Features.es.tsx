@@ -9,37 +9,37 @@ const features = [
   {
     icon: Plug,
     title: "Directamente en Shopify",
-    desc: "Sin cambio de pestaña: datos de productos, pedidos y clientes fluyen automáticamente.",
+    desc: "Sin cambio de pestaa: datos de productos, pedidos y clientes fluyen automticamente.",
   },
   {
     icon: TrendingUp,
-    title: "Más ingresos, más rápido",
-    desc: "Respuestas precisas y rápidas aumentan conversión y fidelidad de forma medible.",
+    title: "Ms ingresos, ms rpido",
+    desc: "Respuestas precisas y rpidas aumentan conversin y fidelidad de forma medible.",
   },
   {
     icon: ShieldCheck,
     title: "Seguro GDPR y HMAC",
-    desc: "Encriptado, cumple GDPR y verificado HMAC – confiable y seguro.",
+    desc: "Encriptado, cumple GDPR y verificado HMAC  confiable y seguro.",
   },
   {
     icon: Bot,
-    title: "Automatización inteligente",
-    desc: "Auto-categorización, AI-triage y reglas manejan casos rutinarios automáticamente.",
+    title: "Automatizacin inteligente",
+    desc: "Auto-categorizacin, AI-triage y reglas manejan casos rutinarios automticamente.",
   },
   {
     icon: Globe,
     title: "Multiidioma, conforme marca",
-    desc: "Respuestas en muchos idiomas en el tono de tu marca – ideal para soporte global.",
+    desc: "Respuestas en muchos idiomas en el tono de tu marca  ideal para soporte global.",
   },
   {
     icon: BarChart3,
-    title: "Analíticas e insights",
-    desc: "Tiempos de respuesta, CSAT y conversión de un vistazo.",
+    title: "Analticas e insights",
+    desc: "Tiempos de respuesta, CSAT y conversin de un vistazo.",
   },
   {
     icon: Users,
-    title: "Colaboración en equipo",
-    desc: "Asignar, notas, escalaciones – sin problemas en equipo.",
+    title: "Colaboracin en equipo",
+    desc: "Asignar, notas, escalaciones  sin problemas en equipo.",
   },
 ];
 
@@ -48,10 +48,10 @@ const FeaturesEs = () => {
     <section id="features" aria-labelledby="features-heading" className="py-16 md:py-24">
       <div className="container">
         <h2 id="features-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Características principales: Soporte IA para Shopify
+          Caractersticas principales: Soporte IA para Shopify
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          Ocho beneficios concretos – técnicamente fuertes y claramente medibles.
+          Ocho beneficios concretos  tcnicamente fuertes y claramente medibles.
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
           {features.map(({ icon: Icon, title, desc }) => (

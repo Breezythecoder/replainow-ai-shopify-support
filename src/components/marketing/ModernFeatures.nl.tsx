@@ -1,11 +1,11 @@
 const ModernFeaturesNl = () => {
   const features = [
-    { icon: "🧠", title: "GPT-4.1 Intelligentie", desc: "Nieuwste AI begrijpt context als een expert", gradient: "from-indigo-500 to-blue-500" },
-    { icon: "⚡", title: "3-seconden reacties", desc: "Directe antwoorden terwijl Gorgias & Co. nog laden", gradient: "from-purple-500 to-pink-500" },
-    { icon: "🌍", title: "32+ talen native", desc: "Perfecte antwoorden in klanttaal", gradient: "from-cyan-500 to-teal-500" },
-    { icon: "📊", title: "Realtime Shopify-data", desc: "AI kent ALLE producten, prijzen, voorraad", gradient: "from-green-500 to-emerald-500" },
-    { icon: "💰", title: "75% kostenbesparing", desc: "Beter EN goedkoper dan concurrenten", gradient: "from-amber-500 to-orange-500" },
-    { icon: "🚀", title: "1-klik installatie", desc: "Binnen 60 seconden live, geen complexiteit", gradient: "from-rose-500 to-red-500" },
+    { icon: "", title: "GPT-4.1 Intelligentie", desc: "Nieuwste AI begrijpt context als een expert", gradient: "from-indigo-500 to-blue-500" },
+    { icon: "", title: "3-seconden reacties", desc: "Directe antwoorden terwijl Gorgias & Co. nog laden", gradient: "from-purple-500 to-pink-500" },
+    { icon: "", title: "32+ talen native", desc: "Perfecte antwoorden in klanttaal", gradient: "from-cyan-500 to-teal-500" },
+    { icon: "", title: "Realtime Shopify-data", desc: "AI kent ALLE producten, prijzen, voorraad", gradient: "from-green-500 to-emerald-500" },
+    { icon: "", title: "75% kostenbesparing", desc: "Beter EN goedkoper dan concurrenten", gradient: "from-amber-500 to-orange-500" },
+    { icon: "", title: "1-klik installatie", desc: "Binnen 60 seconden live, geen complexiteit", gradient: "from-rose-500 to-red-500" },
   ];
   return (
     <section id="features" className="py-24 bg-ultra-light">

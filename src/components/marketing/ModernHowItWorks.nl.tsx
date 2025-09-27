@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 const ModernHowItWorksNl = () => {
   const steps = [
-    { step: "01", icon: "⬇️", title: "App installeren", desc: "1-klik installatie via Shopify App Store" },
-    { step: "02", icon: "🔗", title: "Automatische koppeling", desc: "AI leert AL je producten & policies" },
-    { step: "03", icon: "🤖", title: "AI reageert direct", desc: "Perfecte antwoorden in 3 seconden" },
-    { step: "04", icon: "📈", title: "Winst explodeert", desc: "+187% conversie met 75% lagere kosten" },
+    { step: "01", icon: "", title: "App installeren", desc: "1-klik installatie via Shopify App Store" },
+    { step: "02", icon: "", title: "Automatische koppeling", desc: "AI leert AL je producten & policies" },
+    { step: "03", icon: "", title: "AI reageert direct", desc: "Perfecte antwoorden in 3 seconden" },
+    { step: "04", icon: "", title: "Winst explodeert", desc: "+187% conversie met 75% lagere kosten" },
   ];
   return (
     <section className="py-24 bg-gradient-to-b from-indigo-50 to-purple-50">
@@ -25,8 +25,8 @@ const ModernHowItWorksNl = () => {
           ))}
         </div>
         <div className="text-center px-4">
-          <Button asChild variant="cta" size="xl" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 font-bold min-h-[56px] max-w-md mx-auto"><a href={OAUTH_URL} className="flex items-center justify-center gap-2">🚀 Gratis Starten</a></Button>
-          <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed">✅ 14 dagen gratis • ✅ Geen setup • ✅ Altijd opzegbaar</p>
+          <Button asChild variant="cta" size="xl" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 font-bold min-h-[56px] max-w-md mx-auto"><a href={OAUTH_URL} className="flex items-center justify-center gap-2"> Gratis Starten</a></Button>
+          <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed"> 14 dagen gratis   Geen setup   Altijd opzegbaar</p>
         </div>
       </div>
     </section>

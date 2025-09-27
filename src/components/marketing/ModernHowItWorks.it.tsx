@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 const ModernHowItWorksIt = () => {
   const steps = [
-    { step: "01", icon: "⬇️", title: "Installa l'app", desc: "Installazione con 1 clic dallo Shopify App Store" },
-    { step: "02", icon: "🔗", title: "Connessione automatica", desc: "L'IA impara tutti i tuoi prodotti e politiche" },
-    { step: "03", icon: "🤖", title: "IA risponde subito", desc: "Risposte perfette in 3 secondi" },
-    { step: "04", icon: "📈", title: "Profitti esplodono", desc: "+187% conversione a costi -75%" },
+    { step: "01", icon: "", title: "Installa l'app", desc: "Installazione con 1 clic dallo Shopify App Store" },
+    { step: "02", icon: "", title: "Connessione automatica", desc: "L'IA impara tutti i tuoi prodotti e politiche" },
+    { step: "03", icon: "", title: "IA risponde subito", desc: "Risposte perfette in 3 secondi" },
+    { step: "04", icon: "", title: "Profitti esplodono", desc: "+187% conversione a costi -75%" },
   ];
   return (
     <section className="py-24 bg-gradient-to-b from-indigo-50 to-purple-50">
@@ -25,8 +25,8 @@ const ModernHowItWorksIt = () => {
           ))}
         </div>
         <div className="text-center px-4">
-          <Button asChild variant="cta" size="xl" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 font-bold min-h-[56px] max-w-md mx-auto"><a href={OAUTH_URL} className="flex items-center justify-center gap-2">🚀 Inizia Gratis</a></Button>
-          <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed">✅ 14 giorni gratis • ✅ Nessun setup • ✅ Disdici quando vuoi</p>
+          <Button asChild variant="cta" size="xl" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 font-bold min-h-[56px] max-w-md mx-auto"><a href={OAUTH_URL} className="flex items-center justify-center gap-2"> Inizia Gratis</a></Button>
+          <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed"> 14 giorni gratis   Nessun setup   Disdici quando vuoi</p>
         </div>
       </div>
     </section>

@@ -4,16 +4,16 @@ const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
 const baseFeatures = [
   "Installation 1-clic",
-  "Données boutique illimitées (Produits, Pages, Politiques, etc.)",
+  "Donnes boutique illimites (Produits, Pages, Politiques, etc.)",
   "AI Mail & AI Live Chat",
   "Branding personnalisable",
 ];
 
 const plans = [
-  { name: "Starter", price: "$19", period: "/ mois", quota: "Jusqu'à 300 réponses IA / mois", trial: "14 jours gratuits", features: [...baseFeatures, "Envoi d'email via adresse ReplAInow"], highlight: false, description: "Parfait pour tester" },
-  { name: "Growth", price: "$49", period: "/ mois", quota: "Jusqu'à 1500 réponses IA / mois", trial: "14 jours gratuits", features: [...baseFeatures, "Envoi d'email avec votre domaine"], highlight: true, badge: "Le plus populaire", description: "Pour boutiques en croissance" },
-  { name: "Pro", price: "$99", period: "/ mois", quota: "Jusqu'à 3000 réponses IA / mois", trial: "14 jours gratuits", features: [...baseFeatures, "Envoi d'email avec votre domaine"], highlight: false, description: "Pour boutiques établies" },
-  { name: "Scale", price: "$199", period: "/ mois", quota: "Réponses IA illimitées", trial: "14 jours gratuits", features: [...baseFeatures, "Envoi d'email avec votre domaine"], highlight: false, description: "Pour chaînes de boutiques" },
+  { name: "Starter", price: "$19", period: "/ mois", quota: "Jusqu' 300 rponses IA / mois", trial: "14 jours gratuits", features: [...baseFeatures, "Envoi d'email via adresse ReplAInow"], highlight: false, description: "Parfait pour tester" },
+  { name: "Growth", price: "$49", period: "/ mois", quota: "Jusqu' 1500 rponses IA / mois", trial: "14 jours gratuits", features: [...baseFeatures, "Envoi d'email avec votre domaine"], highlight: true, badge: "Le plus populaire", description: "Pour boutiques en croissance" },
+  { name: "Pro", price: "$99", period: "/ mois", quota: "Jusqu' 3000 rponses IA / mois", trial: "14 jours gratuits", features: [...baseFeatures, "Envoi d'email avec votre domaine"], highlight: false, description: "Pour boutiques tablies" },
+  { name: "Scale", price: "$199", period: "/ mois", quota: "Rponses IA illimites", trial: "14 jours gratuits", features: [...baseFeatures, "Envoi d'email avec votre domaine"], highlight: false, description: "Pour chanes de boutiques" },
 ];
 
 const ModernPricingFr = () => {
@@ -28,8 +28,8 @@ const ModernPricingFr = () => {
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-4 tracking-tight px-4">
           Plus de puissance support pour <span className="text-brand-success">moins cher</span>
         </h2>
-        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-2 text-lg">Un agent support coûte en moyenne 2 000 € / mois.</p>
-        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-16 text-lg">ReplAInow commence à <strong className="text-gradient-primary">19 $/mois</strong> — et travaille 24/7.</p>
+        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-2 text-lg">Un agent support cote en moyenne 2000  / mois.</p>
+        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-16 text-lg">ReplAInow commence  <strong className="text-gradient-primary">19 $/mois</strong>  et travaille 24/7.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 sm:mb-16">
           {plans.map((plan) => {
             const Card = (
@@ -45,12 +45,12 @@ const ModernPricingFr = () => {
                 </div>
                 <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 flex-grow">
                   <li className="flex items-start gap-2 sm:gap-3">
-                    <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0">✅</span>
+                    <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span>
                     <span className="text-slate-700 font-bold text-xs sm:text-sm leading-relaxed">{plan.quota}</span>
                   </li>
                   {plan.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-2 sm:gap-3">
-                      <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0">✅</span>
+                      <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span>
                       <span className="text-slate-700 font-medium leading-relaxed text-xs sm:text-sm">{feature}</span>
                     </li>
                   ))}

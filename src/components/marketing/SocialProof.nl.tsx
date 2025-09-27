@@ -14,7 +14,7 @@ const SocialProofNl = () => {
         </p>
         <div className="mb-8 flex flex-wrap items-center justify-center gap-3 text-xs">
           <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify Plus Partner</span>
-          <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify App Store ★★★★★ 4,9 / 5</span>
+          <span className="inline-flex items-center rounded-full border bg-card px-3 py-1">Shopify App Store  4,9 / 5</span>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 items-center mb-12">
@@ -27,16 +27,16 @@ const SocialProofNl = () => {
 
         <div className="grid gap-6 md:grid-cols-3">
           <article className="rounded-xl border bg-card p-6">
-            <p className="mb-4">„We besparen 15 uur support per week – en onze klanten zijn dol op de snelle responstijd."</p>
-            <div className="text-sm text-muted-foreground">Lisa – Fashion-Store • 7-cijferig</div>
+            <p className="mb-4">We besparen 15 uur support per week  en onze klanten zijn dol op de snelle responstijd."</p>
+            <div className="text-sm text-muted-foreground">Lisa  Fashion-Store  7-cijferig</div>
           </article>
           <article className="rounded-xl border bg-card p-6">
-            <p className="mb-4">„Eindelijk kan ik me focussen op groei. Support loopt vanzelf."</p>
-            <div className="text-sm text-muted-foreground">Daniel – D2C-Merk • 6-cijferig</div>
+            <p className="mb-4">Eindelijk kan ik me focussen op groei. Support loopt vanzelf."</p>
+            <div className="text-sm text-muted-foreground">Daniel  D2C-Merk  6-cijferig</div>
           </article>
           <article className="rounded-xl border bg-card p-6">
-            <p className="mb-4">„Setup in minuten, direct resultaat. Onze SLA's halen we nu spelenderwijs."</p>
-            <div className="text-sm text-muted-foreground">Mara – Home & Living • 8-cijferig</div>
+            <p className="mb-4">Setup in minuten, direct resultaat. Onze SLA's halen we nu spelenderwijs."</p>
+            <div className="text-sm text-muted-foreground">Mara  Home & Living  8-cijferig</div>
           </article>
         </div>
 

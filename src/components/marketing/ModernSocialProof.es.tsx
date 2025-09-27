@@ -8,21 +8,21 @@ const ModernSocialProofEs = () => {
       company: "BeautyStore",
       owner: "Lisa M.",
       result: "15 horas/semana ahorradas",
-      quote: "ReplAInow revolucionó nuestro soporte. ¡La IA entiende nuestros productos mejor que algunos empleados!",
+      quote: "ReplAInow revolucion nuestro soporte. La IA entiende nuestros productos mejor que algunos empleados!",
       image: testimonialLisa
     },
     {
       company: "TechGadgets", 
       owner: "Marco K.",
-      result: "+37% satisfacción del cliente",
-      quote: "Los clientes aman las respuestas instantáneas. ¡La conversión se fue por las nubes!",
+      result: "+37% satisfaccin del cliente",
+      quote: "Los clientes aman las respuestas instantneas. La conversin se fue por las nubes!",
       image: testimonialMarco
     },
     {
       company: "FashionHub",
       owner: "Sarah T.", 
       result: "12x ROI en 3 meses",
-      quote: "De Intercom a ReplAInow - ¡mejor decisión de la vida! Costos abajo, rendimiento arriba.",
+      quote: "De Intercom a ReplAInow - mejor decisin de la vida! Costos abajo, rendimiento arriba.",
       image: testimonialSarah
     }
   ];
@@ -38,7 +38,7 @@ const ModernSocialProofEs = () => {
             className="h-8 grayscale hover:grayscale-0 transition-all" 
           />
           <div className="flex items-center gap-2 glass-card px-4 py-2 rounded-full">
-            <span className="text-yellow-500 text-lg">★★★★★</span>
+            <span className="text-yellow-500 text-lg"></span>
             <span className="font-bold text-slate-700">4.9/5</span>
           </div>
           <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-bold border border-green-200">
@@ -72,7 +72,7 @@ const ModernSocialProofEs = () => {
                 "{testimonial.quote}"
               </blockquote>
               <div className="text-gradient-primary font-bold text-lg">
-                🚀 {testimonial.result}
+                 {testimonial.result}
               </div>
             </div>
           ))}
@@ -80,7 +80,7 @@ const ModernSocialProofEs = () => {
 
         {/* Success Metrics */}
         <div className="bg-gradient-primary rounded-3xl p-8 text-center text-white shadow-hero">
-          <h3 className="text-2xl font-bold mb-8">Resultados probados en números</h3>
+          <h3 className="text-2xl font-bold mb-8">Resultados probados en nmeros</h3>
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="text-4xl font-black mb-2">5000+</div>
@@ -88,10 +88,10 @@ const ModernSocialProofEs = () => {
             </div>
             <div>
               <div className="text-4xl font-black mb-2">187%</div>
-              <div className="text-white/90">Aumento promedio de conversión</div>
+              <div className="text-white/90">Aumento promedio de conversin</div>
             </div>
             <div>
-              <div className="text-4xl font-black mb-2">€2.1M</div>
+              <div className="text-4xl font-black mb-2">2.1M</div>
               <div className="text-white/90">Ingresos adicionales generados</div>
             </div>
             <div>

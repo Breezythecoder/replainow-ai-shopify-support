@@ -1,6 +1,7 @@
 import testimonialLisa from "@/assets/testimonial-lisa.jpg";
 import testimonialMarco from "@/assets/testimonial-marco.jpg";
 import testimonialSarah from "@/assets/testimonial-sarah.jpg";
+import { Star } from "lucide-react";
 
 const ModernSocialProof = () => {
   const testimonials = [
@@ -28,7 +29,7 @@ const ModernSocialProof = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
+    <section className="py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-6">
         {/* Trust Badges Row */}
         <div className="flex flex-wrap justify-center items-center gap-8 mb-16 opacity-70">
@@ -38,7 +39,13 @@ const ModernSocialProof = () => {
             className="h-8 grayscale hover:grayscale-0 transition-all" 
           />
           <div className="flex items-center gap-2 glass-card px-4 py-2 rounded-full">
-            <span className="text-yellow-500 text-lg">★★★★★</span>
+            <div className="flex items-center gap-1">
+              <Star className="w-4 h-4 text-yellow-500 fill-current" />
+              <Star className="w-4 h-4 text-yellow-500 fill-current" />
+              <Star className="w-4 h-4 text-yellow-500 fill-current" />
+              <Star className="w-4 h-4 text-yellow-500 fill-current" />
+              <Star className="w-4 h-4 text-yellow-500 fill-current" />
+            </div>
             <span className="font-bold text-slate-700">4.9/5</span>
           </div>
           <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-bold border border-green-200">
@@ -50,13 +57,13 @@ const ModernSocialProof = () => {
         </div>
         
         <h2 className="text-4xl font-black text-center mb-16 tracking-tight">
-          Das sagen <span className="text-gradient-primary">echte Händler</span>
+          Das sagen <span className="text-blue-600">echte Händler</span>
         </h2>
         
         {/* Testimonials Grid */}
         <div className="grid lg:grid-cols-3 gap-8 mb-16">
           {testimonials.map((testimonial, i) => (
-            <div key={i} className="glass-card rounded-3xl p-8 interactive-card border border-white/40">
+            <div key={i} className="bg-white/80 backdrop-blur-lg rounded-3xl p-8 interactive-card border border-slate-200 shadow-lg">
               <div className="flex items-center gap-4 mb-6">
                 <img 
                   src={testimonial.image} 
@@ -72,7 +79,7 @@ const ModernSocialProof = () => {
                 "{testimonial.quote}"
               </blockquote>
               <div className="text-gradient-primary font-bold text-lg">
-                🚀 {testimonial.result}
+                {testimonial.result}
               </div>
             </div>
           ))}
@@ -88,10 +95,10 @@ const ModernSocialProof = () => {
             </div>
             <div>
               <div className="text-4xl font-black mb-2">187%</div>
-              <div className="text-white/90">Ø Conversion Steigerung</div>
+              <div className="text-white/90"> Conversion Steigerung</div>
             </div>
             <div>
-              <div className="text-4xl font-black mb-2">€2.1M</div>
+              <div className="text-4xl font-black mb-2">2.1M</div>
               <div className="text-white/90">Zusätzlicher Umsatz generiert</div>
             </div>
             <div>

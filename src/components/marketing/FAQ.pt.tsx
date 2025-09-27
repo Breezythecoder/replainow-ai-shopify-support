@@ -4,23 +4,23 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqs = [
   {
     q: "Como ReplAInow se integra ao Shopify?",
-    a: "Via instalação de app. Após conectar, ReplAInow extrai dados relevantes (pedidos, status de entrega, produtos) conforme GDPR diretamente do Shopify para gerar respostas.",
+    a: "Via instalao de app. Aps conectar, ReplAInow extrai dados relevantes (pedidos, status de entrega, produtos) conforme GDPR diretamente do Shopify para gerar respostas.",
   },
   {
-    q: "É conforme GDPR?",
-    a: "Sim. Os dados são processados para propósitos específicos. Você pode restringir ou revogar acesso aos dados a qualquer momento. Armazenamos apenas o que é necessário para a resposta.",
+    q: " conforme GDPR?",
+    a: "Sim. Os dados so processados para propsitos especficos. Voc pode restringir ou revogar acesso aos dados a qualquer momento. Armazenamos apenas o que  necessrio para a resposta.",
   },
   {
-    q: "Quão rápido obtenho respostas?",
-    a: "Em segundos. ReplAInow estrutura a consulta, verifica dados correspondentes do Shopify e entrega uma resposta conforme à marca – geralmente em menos de 3 segundos.",
+    q: "Quo rpido obtenho respostas?",
+    a: "Em segundos. ReplAInow estrutura a consulta, verifica dados correspondentes do Shopify e entrega uma resposta conforme  marca  geralmente em menos de 3 segundos.",
   },
   {
     q: "Posso personalizar o tom da marca?",
-    a: "Sim. Você define diretrizes de estilo (ex. formal/informal, tonalidade, emojis). As respostas se alinham automaticamente com elas.",
+    a: "Sim. Voc define diretrizes de estilo (ex. formal/informal, tonalidade, emojis). As respostas se alinham automaticamente com elas.",
   },
   {
-    q: "Como é o preço?",
-    a: "Planos transparentes com limites claros, 14 dias de teste grátis sem cartão de crédito. Upgrade possível a qualquer momento.",
+    q: "Como  o preo?",
+    a: "Planos transparentes com limites claros, 14 dias de teste grtis sem carto de crdito. Upgrade possvel a qualquer momento.",
   },
 ];
 
@@ -45,7 +45,7 @@ const FAQPt = () => {
           Perguntas Frequentes
         </h2>
         <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-          Tudo o que você quer saber antes de começar – curto e claro.
+          Tudo o que voc quer saber antes de comear  curto e claro.
         </p>
 
         <Accordion type="single" collapsible className="w-full">

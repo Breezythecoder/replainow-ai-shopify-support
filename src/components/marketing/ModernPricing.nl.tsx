@@ -17,8 +17,8 @@ const ModernPricingNl = () => {
       </div>
       <div className="container mx-auto px-6 relative z-10">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-4 tracking-tight px-4">Meer support power voor <span className="text-brand-success">minder geld</span></h2>
-        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-2 text-lg">Een supportmedewerker kost gemiddeld €2.000 / maand.</p>
-        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-16 text-lg">ReplAInow begint bij <strong className="text-gradient-primary">$19/maand</strong> — en werkt 24/7.</p>
+        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-2 text-lg">Een supportmedewerker kost gemiddeld 2.000 / maand.</p>
+        <p className="text-center text-slate-600 max-w-3xl mx-auto mb-16 text-lg">ReplAInow begint bij <strong className="text-gradient-primary">$19/maand</strong>  en werkt 24/7.</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 sm:mb-16">
           {plans.map((plan) => {
             const Card = (
@@ -33,9 +33,9 @@ const ModernPricingNl = () => {
                   <p className="text-xs text-slate-500 font-medium">{plan.trial}</p>
                 </div>
                 <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 flex-grow">
-                  <li className="flex items-start gap-2 sm:gap-3"><span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0">✅</span><span className="text-slate-700 font-bold text-xs sm:text-sm leading-relaxed">{plan.quota}</span></li>
+                  <li className="flex items-start gap-2 sm:gap-3"><span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span><span className="text-slate-700 font-bold text-xs sm:text-sm leading-relaxed">{plan.quota}</span></li>
                   {plan.features.map((feature, j) => (
-                    <li key={j} className="flex items-start gap-2 sm:gap-3"><span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0">✅</span><span className="text-slate-700 font-medium leading-relaxed text-xs sm:text-sm">{feature}</span></li>
+                    <li key={j} className="flex items-start gap-2 sm:gap-3"><span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span><span className="text-slate-700 font-medium leading-relaxed text-xs sm:text-sm">{feature}</span></li>
                   ))}
                 </ul>
                 <div className="space-y-3">

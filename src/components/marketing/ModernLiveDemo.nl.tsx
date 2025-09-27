@@ -3,7 +3,7 @@ const ModernLiveDemoNl = () => {
     <section id="live-demo" className="py-24 bg-ultra-light">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8 tracking-tight text-center px-4">Bekijk ReplAInow <span className="text-gradient-hero">live in actie</span></h2>
-        <p className="text-lg sm:text-xl text-slate-600 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">Van 0 naar held in 3 seconden — zo werkt toonaangevende AI voor jouw Shopify store</p>
+        <p className="text-lg sm:text-xl text-slate-600 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">Van 0 naar held in 3 seconden  zo werkt toonaangevende AI voor jouw Shopify store</p>
         <div className="max-w-5xl mx-auto mb-16">
           <div className="relative rounded-3xl overflow-hidden shadow-hero bg-gradient-primary p-2">
             <div className="glass-card rounded-2xl overflow-hidden">

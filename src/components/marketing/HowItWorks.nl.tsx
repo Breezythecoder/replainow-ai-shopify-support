@@ -34,7 +34,7 @@ const HowItWorksNl = () => {
             Zo start je in minuten
           </h2>
           <p className="text-muted-foreground">
-            Installeren, verbinden, antwoorden verzenden – en automatiseren met regels.
+            Installeren, verbinden, antwoorden verzenden  en automatiseren met regels.
           </p>
         </header>
 

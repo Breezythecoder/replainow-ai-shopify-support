@@ -6,14 +6,14 @@ const ModernSocialProofNl = () => {
   const testimonials = [
     { company: "BeautyStore", owner: "Lisa M.", result: "15 uur/week bespaard", quote: "ReplAInow heeft onze support getransformeerd. De AI begrijpt onze producten beter dan sommige medewerkers!", image: testimonialLisa },
     { company: "TechGadgets", owner: "Marco K.", result: "+37% klanttevredenheid", quote: "Klanten houden van de directe antwoorden. Conversie door het dak!", image: testimonialMarco },
-    { company: "FashionHub", owner: "Sarah T.", result: "12x ROI in 3 maanden", quote: "Van Intercom naar ReplAInow — beste keuze! Kosten omlaag, performance omhoog.", image: testimonialSarah },
+    { company: "FashionHub", owner: "Sarah T.", result: "12x ROI in 3 maanden", quote: "Van Intercom naar ReplAInow  beste keuze! Kosten omlaag, performance omhoog.", image: testimonialSarah },
   ];
   return (
     <section className="py-24 bg-gradient-to-b from-slate-50 to-white">
       <div className="container mx-auto px-6">
         <div className="flex flex-wrap justify-center items-center gap-8 mb-16 opacity-70">
           <img src="/images/shopify-logo-black.svg" alt="Shopify Plus Partner" className="h-8 grayscale hover:grayscale-0 transition-all" />
-          <div className="flex items-center gap-2 glass-card px-4 py-2 rounded-full"><span className="text-yellow-500 text-lg">★★★★★</span><span className="font-bold text-slate-700">4.9/5</span></div>
+          <div className="flex items-center gap-2 glass-card px-4 py-2 rounded-full"><span className="text-yellow-500 text-lg"></span><span className="font-bold text-slate-700">4.9/5</span></div>
           <span className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-bold border border-green-200">GDPR Conform</span>
           <span className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-bold border border-blue-200">5000+ Winkels</span>
         </div>
@@ -29,7 +29,7 @@ const ModernSocialProofNl = () => {
                 </div>
               </div>
               <blockquote className="text-slate-700 leading-relaxed mb-6 italic">"{t.quote}"</blockquote>
-              <div className="text-gradient-primary font-bold text-lg">🚀 {t.result}</div>
+              <div className="text-gradient-primary font-bold text-lg"> {t.result}</div>
             </div>
           ))}
         </div>

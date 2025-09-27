@@ -8,9 +8,9 @@ const FinalCTAIt = () => {
       <div className="container">
         <div className="relative overflow-hidden rounded-2xl border bg-gradient-primary p-10 text-center shadow-brand-glow">
           <h2 id="cta-final-heading" className="font-display text-3xl md:text-4xl font-semibold text-primary-foreground mb-3">
-            Basta con lo stress del supporto – pronto in 2 minuti.
+            Basta con lo stress del supporto  pronto in 2 minuti.
           </h2>
-          <p className="text-primary-foreground/90 mb-8">14 giorni di prova gratuita. Funzionalità complete. Nessuna carta di credito necessaria.</p>
+          <p className="text-primary-foreground/90 mb-8">14 giorni di prova gratuita. Funzionalit complete. Nessuna carta di credito necessaria.</p>
           <div className="flex flex-col sm:flex-row gap-3 items-center justify-center">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
               <a href={OAUTH_URL}>Prova gratuita</a>

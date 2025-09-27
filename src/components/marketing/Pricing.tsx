@@ -19,7 +19,7 @@ const plans = [
     trial: "14 Tage kostenlos testen",
     features: [
       ...baseFeatures,
-      "E-Mail Versand über ReplAInow Adresse",
+      "E-Mail Versand ber ReplAInow Adresse",
     ] as Feature[],
     popular: false,
   },
@@ -67,13 +67,13 @@ const Pricing = () => {
     <section id="preise" aria-labelledby="pricing-heading" className="py-16 md:py-24">
       <div className="container">
         <h2 id="pricing-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Mehr Support-Power für weniger Geld als ein einziger Mitarbeiter.
+          Mehr Support-Power fr weniger Geld als ein einziger Mitarbeiter.
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-2">
-          Ein Support-Agent kostet im Schnitt 2.000 € pro Monat.
+          Ein Support-Agent kostet im Schnitt 2.000  pro Monat.
         </p>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          ReplAInow startet bei 19 $/Monat – und arbeitet 24/7, ohne Pause.
+          ReplAInow startet bei 19 $/Monat  und arbeitet 24/7, ohne Pause.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 max-w-6xl mx-auto">
@@ -121,14 +121,14 @@ const Pricing = () => {
 
                 <div className="mt-auto space-y-3">
                   <Button asChild variant="hero" className="w-full">
-                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Kostenlos testen – Plan ${p.name}`}>
+                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Kostenlos testen  Plan ${p.name}`}>
                       Kostenlos testen
                     </a>
                   </Button>
                   <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">
                     <img
                       src="/images/shopify-logo-black.svg"
-                      alt="Shopify Logo – App Store"
+                      alt="Shopify Logo  App Store"
                       className="h-4 w-auto opacity-80"
                       loading="lazy"
                     />

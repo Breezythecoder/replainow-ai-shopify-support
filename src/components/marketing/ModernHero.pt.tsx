@@ -36,14 +36,14 @@ const ModernHeroPt = () => {
             </h1>
             
             <p className="text-lg sm:text-xl text-slate-700 leading-relaxed">
-              IA revolucionária com <strong className="text-gradient-primary">dados Shopify em tempo real</strong>: 
-              Conversão mais alta, respostas mais rápidas, 90% menos tickets de suporte.
+              IA revolucionria com <strong className="text-gradient-primary">dados Shopify em tempo real</strong>: 
+              Converso mais alta, respostas mais rpidas, 90% menos tickets de suporte.
             </p>
             
             <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
               <div className="glass-card p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-primary">+187%</div>
-                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Conversão</div>
+                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Converso</div>
               </div>
               <div className="glass-card p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-success">3 Seg</div>
@@ -51,32 +51,32 @@ const ModernHeroPt = () => {
               </div>
               <div className="glass-card p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
                 <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-accent">75%</div>
-                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Poupança</div>
+                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Poupana</div>
               </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
               <Button asChild variant="cta" size="xl" className="group flex-1 sm:flex-none">
                 <a href={OAUTH_URL} className="flex items-center justify-center gap-2 text-base lg:text-lg">
-                  🚀 Teste Grátis Agora
+                   Teste Grtis Agora
                 </a>
               </Button>
               <Button asChild variant="glass" size="xl" className="flex-1 sm:flex-none">
                 <a href="#live-demo" className="flex items-center justify-center gap-2 text-base lg:text-lg">
-                  📺 Ver Demo Ao Vivo
+                   Ver Demo Ao Vivo
                 </a>
               </Button>
             </div>
 
             <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4 lg:gap-6 text-sm">
               <div className="flex items-center gap-2 glass-card px-4 py-3 rounded-full shadow-brand">
-                <span className="text-brand-warning text-lg">★★★★★</span>
+                <span className="text-brand-warning text-lg"></span>
                 <span className="font-bold text-slate-700">4.9/5</span>
               </div>
               <span className="px-4 py-3 glass-card text-brand-success rounded-full font-bold shadow-brand">
-                ✅ Conforme LGPD
+                 Conforme LGPD
               </span>
-              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand">👥 5000+ Lojas</span>
+              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand"> 5000+ Lojas</span>
             </div>
           </div>
           

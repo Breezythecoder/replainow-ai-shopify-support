@@ -58,7 +58,7 @@ const HeroPt = () => {
               </div>
 
               <p className="mt-2 text-sm text-primary-foreground/80">
-                Pronto em 2 minutos. Sem cartão de crédito. Sem risco.
+                Pronto em 2 minutos. Sem carto de crdito. Sem risco.
               </p>
 
               <div className="mt-5 flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-primary-foreground/90">
@@ -69,7 +69,7 @@ const HeroPt = () => {
                   <Zap className="size-4" /> Resposta em segundos
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-3 py-1">
-                  <Plug className="size-4" /> Integração Shopify perfeita
+                  <Plug className="size-4" /> Integrao Shopify perfeita
                 </span>
               </div>
 
@@ -78,7 +78,7 @@ const HeroPt = () => {
                   <Star className="size-4 fill-current" aria-hidden="true" />
                   <span>4.9/5 no Shopify App Store</span>
                 </span>
-                <span className="hidden md:inline text-sm opacity-80">•</span>
+                <span className="hidden md:inline text-sm opacity-80"></span>
                 <span className="text-sm">Confiado por equipes Shopify</span>
               </div>
             </div>

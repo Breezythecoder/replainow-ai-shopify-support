@@ -3,43 +3,43 @@ import { Bot, Plug, ShieldCheck, Zap, TrendingUp, Globe, BarChart3, Users } from
 const features = [
   {
     icon: Zap,
-    title: "Réponse en <3 sec.",
-    desc: "IA avec contexte Shopify livre des réponses en moins de 3 sec.; FRT -90%.",
+    title: "Rponse en <3 sec.",
+    desc: "IA avec contexte Shopify livre des rponses en moins de 3 sec.; FRT -90%.",
   },
   {
     icon: Plug,
     title: "Directement dans Shopify",
-    desc: "Pas de changement d'onglet : données produits, commandes et clients fluent automatiquement.",
+    desc: "Pas de changement d'onglet : donnes produits, commandes et clients fluent automatiquement.",
   },
   {
     icon: TrendingUp,
     title: "Plus de revenus, plus vite",
-    desc: "Réponses précises et rapides augmentent conversion et fidélité de manière mesurable.",
+    desc: "Rponses prcises et rapides augmentent conversion et fidlit de manire mesurable.",
   },
   {
     icon: ShieldCheck,
-    title: "Sécurisé RGPD & HMAC",
-    desc: "Chiffré, conforme RGPD et vérifié HMAC – fiable et sûr.",
+    title: "Scuris RGPD & HMAC",
+    desc: "Chiffr, conforme RGPD et vrifi HMAC  fiable et sr.",
   },
   {
     icon: Bot,
     title: "Automatisation intelligente",
-    desc: "Auto-catégorisation, IA-triage et règles gèrent les cas routiniers automatiquement.",
+    desc: "Auto-catgorisation, IA-triage et rgles grent les cas routiniers automatiquement.",
   },
   {
     icon: Globe,
     title: "Multilingue, conforme marque",
-    desc: "Réponses en plusieurs langues dans le ton de votre marque – idéal pour support global.",
+    desc: "Rponses en plusieurs langues dans le ton de votre marque  idal pour support global.",
   },
   {
     icon: BarChart3,
     title: "Analytics & insights",
-    desc: "Temps de réponse, CSAT et conversion en un coup d'œil.",
+    desc: "Temps de rponse, CSAT et conversion en un coup d'il.",
   },
   {
     icon: Users,
-    title: "Collaboration d'équipe",
-    desc: "Assigner, notes, escalades – fluide en équipe.",
+    title: "Collaboration d'quipe",
+    desc: "Assigner, notes, escalades  fluide en quipe.",
   },
 ];
 
@@ -48,10 +48,10 @@ const FeaturesFr = () => {
     <section id="features" aria-labelledby="features-heading" className="py-16 md:py-24">
       <div className="container">
         <h2 id="features-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Fonctionnalités principales : Support IA pour Shopify
+          Fonctionnalits principales : Support IA pour Shopify
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
-          Huit avantages concrets – techniquement forts et clairement mesurables.
+          Huit avantages concrets  techniquement forts et clairement mesurables.
         </p>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
           {features.map(({ icon: Icon, title, desc }) => (

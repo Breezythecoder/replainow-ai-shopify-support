@@ -80,7 +80,7 @@ const Hero = () => {
                   <Star className="size-4 fill-current" aria-hidden="true" />
                   <span>4.9/5 im Shopify App Store</span>
                 </span>
-                <span className="hidden md:inline text-sm opacity-80">•</span>
+                <span className="hidden md:inline text-sm opacity-80"></span>
                 <span className="text-sm">Vertraut von Shopify-Merchant-Teams</span>
               </div>
             </div>
