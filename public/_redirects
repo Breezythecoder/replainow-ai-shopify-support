@@ -1,0 +1,21 @@
+# GitHub Pages redirects for React Router
+# This file ensures all routes work properly on GitHub Pages
+
+# Redirect all routes to index.html for React Router to handle
+/*    /index.html   200
+
+# Specific redirects for legal pages (backup)
+/privacy    /index.html   200
+/terms      /index.html   200
+/security   /index.html   200
+/impressum  /index.html   200
+/uninstall  /index.html   200
+
+# Language redirects
+/en    /index.html   200
+/es    /index.html   200
+/fr    /index.html   200
+/pt    /index.html   200
+/it    /index.html   200
+/nl    /index.html   200
+/zh    /index.html   200

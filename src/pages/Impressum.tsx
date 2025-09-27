@@ -1,4 +1,4 @@
-import Navbar from "@/components/marketing/Navbar";
+import ModernNavbar from "@/components/marketing/ModernNavbar";
 import Footer from "@/components/marketing/Footer";
 import SEO from "@/components/SEO";
 
@@ -12,7 +12,7 @@ const Impressum = () => {
         description="Impressum der PrimeVision Group LLC (ReplAInow): Anschrift, Kontakt, Verantwortlicher gem. § 55 Abs. 2 RStV, Tax Registration Number."
         path="/impressum"
       />
-      <Navbar />
+      <ModernNavbar />
       <main>
         <section className="container mx-auto max-w-[800px] px-4 py-12 md:py-16">
           <article className="space-y-6 leading-relaxed">
