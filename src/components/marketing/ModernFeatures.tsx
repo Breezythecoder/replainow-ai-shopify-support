@@ -136,7 +136,7 @@ const ModernFeatures = () => {
             </span>
             <span className="block text-white mt-2">die Konkurrenz zerstört</span>
           </h2>
-          <p className="text-lg sm:text-xl text-blue-200 text-center mb-12 sm:mb-16 max-w-4xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-blue-100 text-center mb-12 sm:mb-16 max-w-4xl mx-auto px-4">
             <span className="text-cyan-400 font-bold">Revolutionäre GPT-4.1 Technologie</span> trifft auf
             <span className="text-purple-400 font-bold"> perfekte Shopify-Integration</span>
           </p>
@@ -165,14 +165,14 @@ const ModernFeatures = () => {
                 {feature.title}
               </h3>
               
-              <p className="relative text-blue-200 leading-loose text-sm sm:text-base mb-4 group-hover:text-blue-100 transition-all duration-300">
+                <p className="relative text-blue-100 leading-loose text-sm sm:text-base mb-4 group-hover:text-white transition-all duration-300">
                 {feature.desc}
               </p>
 
               {/* AI Story */}
               <div className="relative bg-blue-500/10 rounded-2xl p-4 mb-4 border border-blue-400/30">
                 <p className="text-cyan-400 text-sm font-bold mb-2">🚀 AI Realität:</p>
-                <p className="text-blue-200 text-sm leading-loose">{feature.story}</p>
+                  <p className="text-blue-100 text-sm leading-loose">{feature.story}</p>
               </div>
 
               {/* Impact Badge */}

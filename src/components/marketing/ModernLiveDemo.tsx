@@ -169,7 +169,7 @@ const ModernLiveDemo = () => {
               Live AI in Aktion
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-blue-200 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
+            <p className="text-lg sm:text-xl text-blue-100 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
             <span className="text-cyan-400 font-bold">Echte AI-Antworten</span> in Echtzeit - 
             <span className="text-purple-400 font-bold"> 3 Sekunden</span> von Frage zu Lösung
           </p>

@@ -46,7 +46,7 @@ const ModernComparison = () => {
           <h2 className="text-4xl sm:text-5xl font-black mb-4 tracking-tight">
             Warum ReplAInow die Konkurrenz <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-500">zerstört</span>
           </h2>
-          <p className="text-lg sm:text-xl text-blue-200 max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
             Direkter Vergleich mit Gorgias, Intercom & Zendesk
           </p>
         </div>
@@ -69,9 +69,9 @@ const ModernComparison = () => {
                              </svg>
                            </div>
                         </th>
-                        <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-blue-200 font-semibold bg-slate-700/30 text-sm sm:text-base min-w-[120px]">Gorgias</th>
-                        <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-blue-200 font-semibold bg-slate-700/20 text-sm sm:text-base min-w-[120px]">Intercom</th>
-                        <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-blue-200 font-semibold bg-slate-700/10 text-sm sm:text-base rounded-tr-3xl min-w-[120px]">Zendesk</th>
+                          <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-blue-100 font-semibold bg-slate-700/30 text-sm sm:text-base min-w-[120px]">Gorgias</th>
+                          <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-blue-100 font-semibold bg-slate-700/20 text-sm sm:text-base min-w-[120px]">Intercom</th>
+                          <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-blue-100 font-semibold bg-slate-700/10 text-sm sm:text-base rounded-tr-3xl min-w-[120px]">Zendesk</th>
                       </tr>
                     </thead>
                     <tbody>

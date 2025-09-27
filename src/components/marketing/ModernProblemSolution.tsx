@@ -52,7 +52,7 @@ const ModernProblemSolution = () => {
               alt="Chaotisches überfülltes E-Mail Postfach" 
               className="w-full mb-6 rounded-xl shadow-md" 
             />
-            <ul className="space-y-4 text-red-200">
+            <ul className="space-y-4 text-red-100">
               <li className="flex items-center gap-3">
                 <AlertTriangle className="text-red-500 w-5 h-5 flex-shrink-0" />
                 <span className="font-medium">50+ E-Mails täglich bearbeiten</span>
@@ -86,7 +86,7 @@ const ModernProblemSolution = () => {
               alt="ReplAInow AI Dashboard mit perfekter Antwort" 
               className="w-full mb-6 rounded-xl shadow-md" 
             />
-            <ul className="space-y-4 text-green-200">
+            <ul className="space-y-4 text-green-100">
               <li className="flex items-center gap-3">
                 <Zap className="text-green-500 w-5 h-5 flex-shrink-0" />
                 <span className="font-medium">AI antwortet in 3 Sekunden automatisch</span>
