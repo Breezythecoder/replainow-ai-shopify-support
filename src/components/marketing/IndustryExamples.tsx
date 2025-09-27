@@ -89,33 +89,33 @@ const IndustryExamples = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {industries.map((industry, i) => (
-            <div key={i} className="bg-slate-800/80 backdrop-blur-lg rounded-3xl p-6 border border-blue-500/50 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 group">
+            <div key={i} className="bg-slate-800/80 backdrop-blur-lg rounded-3xl p-6 border border-blue-500/50 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 group h-full flex flex-col">
               {/* AI Glow Effect */}
               <div className={`absolute inset-0 bg-gradient-to-r ${industry.gradient} opacity-0 group-hover:opacity-20 transition-opacity rounded-3xl`}></div>
               
               {/* Icon with Animation */}
-              <div className={`relative text-4xl mb-4 w-16 h-16 rounded-3xl bg-gradient-to-r ${industry.gradient} flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
+              <div className={`relative text-4xl mb-4 w-16 h-16 rounded-3xl bg-gradient-to-r ${industry.gradient} flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 mx-auto`}>
                 <industry.icon className="w-8 h-8" />
               </div>
-              <h3 className="relative text-xl font-bold text-white mb-3 text-center group-hover:text-cyan-400 transition-all duration-300">
+              <h3 className="relative text-xl font-bold text-white mb-4 text-center group-hover:text-cyan-400 transition-all duration-300">
                 {industry.name}
               </h3>
-              <div className="relative space-y-3 text-sm">
-                <div>
+              <div className="relative space-y-3 text-sm flex-1 flex flex-col">
+                <div className="flex flex-col">
                   <span className="font-semibold text-blue-400">Beispiel:</span>
-                  <span className="text-blue-100 ml-1">{industry.example}</span>
+                  <span className="text-blue-100">{industry.example}</span>
                 </div>
-                <div>
+                <div className="flex flex-col">
                   <span className="font-semibold text-red-400">Herausforderung:</span>
-                  <span className="text-blue-100 ml-1">{industry.challenge}</span>
+                  <span className="text-blue-100 break-words">{industry.challenge}</span>
                 </div>
-                <div>
+                <div className="flex flex-col flex-1">
                   <span className="font-semibold text-green-400">AI-Lösung:</span>
-                  <span className="text-blue-100 ml-1">{industry.solution}</span>
+                  <span className="text-blue-100 break-words">{industry.solution}</span>
                 </div>
-                <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-lg p-3 border border-green-400/30">
+                <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-lg p-3 border border-green-400/30 mt-auto">
                   <span className="font-semibold text-green-400">Ergebnis:</span>
-                  <span className="text-green-300 ml-1 font-semibold">{industry.result}</span>
+                  <span className="text-green-300 ml-1 font-semibold break-words">{industry.result}</span>
                 </div>
               </div>
             </div>

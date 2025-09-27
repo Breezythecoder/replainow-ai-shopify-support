@@ -46,7 +46,7 @@ const LanguageSwitcher = ({ variant = 'mobile' }: LanguageSwitcherProps = {}) =>
           <Button
             size="sm"
             variant="ghost"
-            className="flex items-center gap-1 text-sm text-muted-foreground hover:text-foreground"
+            className="flex items-center gap-1 text-sm text-blue-200 hover:text-white hover:bg-blue-500/20 transition-all duration-300"
           >
             <Globe className="h-4 w-4" />
             <span className="font-medium">{currentLang.code}</span>

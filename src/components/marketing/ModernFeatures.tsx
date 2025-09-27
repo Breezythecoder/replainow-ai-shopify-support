@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Brain, Zap, Clock, Globe, Target, Shield, TrendingUp, Users, MessageSquare, BarChart3, CheckCircle } from "lucide-react";
+import { Brain, Zap, Clock, Globe, Target, Shield, TrendingUp, Users, MessageSquare, BarChart3, CheckCircle, Download } from "lucide-react";
 
 const ModernFeatures = () => {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -53,7 +53,7 @@ const ModernFeatures = () => {
       color: "yellow"
     },
     {
-      icon: "Zap",
+      icon: Download,
       title: "1-Klick Installation",
       desc: "Setup in unter 60 Sekunden - keine komplexe Konfiguration",
         gradient: "from-emerald-500 to-green-500",

@@ -44,7 +44,7 @@ const ModernComparison = () => {
         
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-black mb-4 tracking-tight">
-            Warum ReplAInow die Konkurrenz <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-500">zerstört</span>
+            <span className="text-white">Warum ReplAInow die Konkurrenz</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-500">zerstört</span>
           </h2>
             <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
             Direkter Vergleich mit Gorgias, Intercom & Zendesk
