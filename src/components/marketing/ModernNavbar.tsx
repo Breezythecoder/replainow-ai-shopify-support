@@ -135,7 +135,7 @@ const ModernNavbar = () => {
               <Button
                 variant="ghost"
                 size="sm"
-                className="md:hidden text-blue-200 hover:text-white hover:bg-blue-500/20 transition-all duration-300 p-3"
+                className="md:hidden text-blue-200 hover:text-white hover:bg-blue-500/20 transition-all duration-300 p-3 min-h-[44px] min-w-[44px]"
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 aria-label={mobileMenuOpen ? "Navigation schließen" : "Navigation öffnen"}
               >

@@ -84,7 +84,7 @@ const GorgiasAlternative = () => {
                 ReplAInow vs. Gorgias - Direkter Vergleich
               </h2>
               
-              <div className="overflow-x-auto">
+              <div className="overflow-x-auto" tabIndex="0" role="region" aria-label="Gorgias comparison table - scrollable">
                 <div className="glass-card rounded-3xl p-1 shadow-hero">
                   <table className="w-full min-w-[700px]">
                     <thead>
