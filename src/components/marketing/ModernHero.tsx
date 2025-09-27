@@ -144,7 +144,7 @@ const ModernHero = () => {
             <div className="inline-block">
               <span className="px-6 py-3 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 text-white font-black text-sm rounded-full shadow-2xl animate-pulse relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
-                <span className="relative z-10">🚀 AI REVOLUTION 2024</span>
+                <span className="relative z-10">🚀 AI REVOLUTION 2025</span>
               </span>
             </div>
             
