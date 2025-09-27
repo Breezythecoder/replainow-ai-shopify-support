@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { SkipToMainContent, useKeyboardNavigation } from "@/components/ui/accessibility";
 import { trackWebVitals } from "@/components/ui/performance";
@@ -60,13 +60,7 @@ const AppContent = () => {
       initWebVitals();
       initializeGA();
     
-      // Handle direct URL access for GitHub Pages
-      // Check if there's a target route from static HTML files
-      const targetRoute = sessionStorage.getItem('targetRoute');
-      if (targetRoute) {
-        sessionStorage.removeItem('targetRoute');
-        window.history.replaceState(null, '', targetRoute);
-      }
+      // Hash routing is handled automatically by HashRouter
     
     // Register Service Worker for perfect performance
     if ('serviceWorker' in navigator) {
@@ -83,7 +77,7 @@ const AppContent = () => {
   return (
     <>
       <SkipToMainContent />
-        <BrowserRouter>
+        <HashRouter>
           <Suspense fallback={
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
               <div className="text-center">
@@ -126,7 +120,7 @@ const AppContent = () => {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
-        </BrowserRouter>
+        </HashRouter>
         <SkipLinks />
         <ScrollProgress />
         {/* <ExitIntent /> */} {/* Removed - no discount popup */}
