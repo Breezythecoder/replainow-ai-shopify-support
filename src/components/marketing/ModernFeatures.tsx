@@ -147,8 +147,8 @@ const ModernFeatures = () => {
           {features.map((feature, i) => (
             <div 
               key={i} 
-                className={`group bg-slate-800/80 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/50 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 ${
-                  activeFeature === i ? 'scale-105 shadow-blue-500/25 border-blue-400/70 bg-slate-800/90' : 'hover:scale-102 hover:border-blue-400/60'
+                className={`group bg-white/95 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/30 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 ${
+                  activeFeature === i ? 'scale-105 shadow-blue-500/25 border-blue-400/50 bg-white' : 'hover:scale-102 hover:border-blue-400/40'
                 }`}
               onClick={() => setActiveFeature(i)}
             >
@@ -161,18 +161,18 @@ const ModernFeatures = () => {
               </div>
               
               {/* Feature Content */}
-              <h3 className="relative text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-cyan-400 transition-all duration-300">
+              <h3 className="relative text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-slate-800 group-hover:text-blue-600 transition-all duration-300">
                 {feature.title}
               </h3>
               
-                <p className="relative text-blue-100 leading-loose text-sm sm:text-base mb-4 group-hover:text-white transition-all duration-300">
+                <p className="relative text-slate-600 leading-loose text-sm sm:text-base mb-4 group-hover:text-slate-700 transition-all duration-300">
                 {feature.desc}
               </p>
 
               {/* AI Story */}
               <div className="relative bg-blue-500/10 rounded-2xl p-4 mb-4 border border-blue-400/30">
                 <p className="text-cyan-400 text-sm font-bold mb-2">🚀 AI Realität:</p>
-                  <p className="text-blue-100 text-sm leading-loose">{feature.story}</p>
+                  <p className="text-slate-600 text-sm leading-loose">{feature.story}</p>
               </div>
 
               {/* Impact Badge */}

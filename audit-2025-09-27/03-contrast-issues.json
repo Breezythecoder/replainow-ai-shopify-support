@@ -55,73 +55,73 @@
   },
   {
     "element": "DIV",
-    "className": "bg-slate-800/50 backdrop-blur-lg border border-red-500/30 rounded-3xl p-8 relative shadow-2xl hover:shadow-red-500/25 transition-all duration-300 hover:scale-102",
+    "className": "bg-slate-800/80 backdrop-blur-lg border border-red-500/50 rounded-3xl p-8 relative shadow-2xl hover:shadow-red-500/25 transition-all duration-300 hover:scale-102",
     "text": "⚠️ OHNE REPLAINOW50+ E-Mails täglich bearbeitenEndlose Copy-Paste AntwortenKunden warten stundenlang",
     "contrast": "1.63",
-    "bgColor": "rgba(30, 41, 59, 0.5)",
+    "bgColor": "rgba(30, 41, 59, 0.8)",
     "textColor": "rgb(6, 25, 70)",
     "needsFix": "CRITICAL"
   },
   {
     "element": "DIV",
-    "className": "bg-slate-800/50 backdrop-blur-lg border border-green-500/30 rounded-3xl p-8 relative shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-102",
+    "className": "bg-slate-800/80 backdrop-blur-lg border border-green-500/50 rounded-3xl p-8 relative shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-102",
     "text": "🚀 MIT REPLAINOWAI antwortet in 3 Sekunden automatischPerfekte Produktempfehlungen32+ Sprachen autom",
     "contrast": "1.63",
-    "bgColor": "rgba(30, 41, 59, 0.5)",
+    "bgColor": "rgba(30, 41, 59, 0.8)",
     "textColor": "rgb(6, 25, 70)",
     "needsFix": "CRITICAL"
   },
   {
     "element": "DIV",
-    "className": "group bg-slate-800/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/30 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 scale-105 shadow-blue-500/25 border-blue-400/60 bg-slate-800/70",
+    "className": "group bg-slate-800/80 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/50 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 scale-105 shadow-blue-500/25 border-blue-400/70 bg-slate-800/90",
     "text": "GPT-4.1 IntelligenceNeueste AI-Technologie versteht Kontext wie ein menschlicher Experte🚀 AI Realit",
     "contrast": "1.63",
-    "bgColor": "rgba(30, 41, 59, 0.7)",
+    "bgColor": "rgba(30, 41, 59, 0.9)",
     "textColor": "rgb(6, 25, 70)",
     "needsFix": "CRITICAL"
   },
   {
     "element": "DIV",
-    "className": "group bg-slate-800/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/30 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 hover:scale-102 hover:border-blue-400/50",
+    "className": "group bg-slate-800/80 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/50 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 hover:scale-102 hover:border-blue-400/60",
     "text": "3-Sekunden AntwortenInstant-Responses während Gorgias & Co. noch laden🚀 AI Realität:Kunde fragt  AI",
     "contrast": "1.63",
-    "bgColor": "rgba(30, 41, 59, 0.5)",
+    "bgColor": "rgba(30, 41, 59, 0.8)",
     "textColor": "rgb(6, 25, 70)",
     "needsFix": "CRITICAL"
   },
   {
     "element": "DIV",
-    "className": "group bg-slate-800/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/30 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 hover:scale-102 hover:border-blue-400/50",
+    "className": "group bg-slate-800/80 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/50 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 hover:scale-102 hover:border-blue-400/60",
     "text": "32+ Sprachen NativPerfekte Antworten in Kundensprache - keine Übersetzungsfehler🚀 AI Realität:Franz",
     "contrast": "1.63",
-    "bgColor": "rgba(30, 41, 59, 0.5)",
+    "bgColor": "rgba(30, 41, 59, 0.8)",
     "textColor": "rgb(6, 25, 70)",
     "needsFix": "CRITICAL"
   },
   {
     "element": "DIV",
-    "className": "group bg-slate-800/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/30 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 hover:scale-102 hover:border-blue-400/50",
+    "className": "group bg-slate-800/80 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/50 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 hover:scale-102 hover:border-blue-400/60",
     "text": "Echtzeit Shopify-DatenAI kennt ALLE Produkte, Preise, Lagerbestände automatisch🚀 AI Realität:AI wei",
     "contrast": "1.63",
-    "bgColor": "rgba(30, 41, 59, 0.5)",
+    "bgColor": "rgba(30, 41, 59, 0.8)",
     "textColor": "rgb(6, 25, 70)",
     "needsFix": "CRITICAL"
   },
   {
     "element": "DIV",
-    "className": "group bg-slate-800/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/30 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 hover:scale-102 hover:border-blue-400/50",
+    "className": "group bg-slate-800/80 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/50 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 hover:scale-102 hover:border-blue-400/60",
     "text": "75% KosteneinsparungÜberlegen UND günstiger als teure Konkurrenz🚀 AI Realität:Während Gorgias €200/",
     "contrast": "1.63",
-    "bgColor": "rgba(30, 41, 59, 0.5)",
+    "bgColor": "rgba(30, 41, 59, 0.8)",
     "textColor": "rgb(6, 25, 70)",
     "needsFix": "CRITICAL"
   },
   {
     "element": "DIV",
-    "className": "group bg-slate-800/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/30 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 hover:scale-102 hover:border-blue-400/50",
+    "className": "group bg-slate-800/80 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/50 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 hover:scale-102 hover:border-blue-400/60",
     "text": "1-Klick InstallationSetup in unter 60 Sekunden - keine komplexe Konfiguration🚀 AI Realität:Klick → ",
     "contrast": "1.63",
-    "bgColor": "rgba(30, 41, 59, 0.5)",
+    "bgColor": "rgba(30, 41, 59, 0.8)",
     "textColor": "rgb(6, 25, 70)",
     "needsFix": "CRITICAL"
   },
@@ -180,6 +180,42 @@
     "needsFix": "CRITICAL"
   },
   {
+    "element": "DIV",
+    "className": "bg-slate-800/80 backdrop-blur-lg rounded-3xl p-6 border border-blue-500/50 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 group",
+    "text": "Fashion & ModeBeispiel:ModeStoreHerausforderung:Größenberatung, Rückgabe, Styling-TippsAI-Lösung:AI ",
+    "contrast": "1.63",
+    "bgColor": "rgba(30, 41, 59, 0.8)",
+    "textColor": "rgb(6, 25, 70)",
+    "needsFix": "CRITICAL"
+  },
+  {
+    "element": "DIV",
+    "className": "bg-slate-800/80 backdrop-blur-lg rounded-3xl p-6 border border-blue-500/50 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 group",
+    "text": "Elektronik & TechBeispiel:TechGadgetsHerausforderung:Technische Fragen, Kompatibilität, Setup-HilfeA",
+    "contrast": "1.63",
+    "bgColor": "rgba(30, 41, 59, 0.8)",
+    "textColor": "rgb(6, 25, 70)",
+    "needsFix": "CRITICAL"
+  },
+  {
+    "element": "DIV",
+    "className": "bg-slate-800/80 backdrop-blur-lg rounded-3xl p-6 border border-blue-500/50 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 group",
+    "text": "Beauty & KosmetikBeispiel:BeautyStoreHerausforderung:Produktberatung, Hauttyp-Analyse, Anwendungstip",
+    "contrast": "1.63",
+    "bgColor": "rgba(30, 41, 59, 0.8)",
+    "textColor": "rgb(6, 25, 70)",
+    "needsFix": "CRITICAL"
+  },
+  {
+    "element": "DIV",
+    "className": "bg-slate-800/80 backdrop-blur-lg rounded-3xl p-6 border border-blue-500/50 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 group",
+    "text": "Home & GartenBeispiel:HomeGardenHerausforderung:Montageanleitungen, Pflegetipps, KompatibilitätAI-Lö",
+    "contrast": "1.63",
+    "bgColor": "rgba(30, 41, 59, 0.8)",
+    "textColor": "rgb(6, 25, 70)",
+    "needsFix": "CRITICAL"
+  },
+  {
     "element": "SPAN",
     "className": "px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-bold border border-green-200",
     "text": "GDPR Compliant",
@@ -199,10 +235,10 @@
   },
   {
     "element": "DIV",
-    "className": "bg-slate-800/50 backdrop-blur-lg rounded-3xl overflow-hidden shadow-2xl mx-4 sm:mx-0 border border-blue-500/30",
+    "className": "bg-slate-800/80 backdrop-blur-lg rounded-3xl overflow-hidden shadow-2xl mx-4 sm:mx-0 border border-blue-500/50",
     "text": "FeatureReplAInowPowered by GPT-4.1GorgiasIntercomZendeskAI IntelligenceYES GPT-4.1 LatestNO Basic AI",
     "contrast": "1.63",
-    "bgColor": "rgba(30, 41, 59, 0.5)",
+    "bgColor": "rgba(30, 41, 59, 0.8)",
     "textColor": "rgb(6, 25, 70)",
     "needsFix": "CRITICAL"
   },
@@ -295,5 +331,23 @@
     "bgColor": "rgb(44, 66, 237)",
     "textColor": "rgb(255, 255, 255)",
     "needsFix": "WARNING"
+  },
+  {
+    "element": "DIV",
+    "className": "chaport-message-input",
+    "text": "Geben Sie hier Ihre Nachricht ein...",
+    "contrast": "1.61",
+    "bgColor": "rgb(255, 255, 255)",
+    "textColor": "rgb(153, 160, 165)",
+    "needsFix": "CRITICAL"
+  },
+  {
+    "element": "A",
+    "className": "chaport-message-powered-by-inner",
+    "text": "Free live chat⚡ by·",
+    "contrast": "1.55",
+    "bgColor": "rgb(245, 245, 245)",
+    "textColor": "rgb(153, 160, 165)",
+    "needsFix": "CRITICAL"
   }
 ]

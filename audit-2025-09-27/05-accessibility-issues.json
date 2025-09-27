@@ -2,11 +2,6 @@
   {
     "type": "missing-aria-label",
     "element": "button",
-    "className": "inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium ring-offset-background transition-premium focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 will-change-transform relative overflow-hidden hover:scale-[1.02] active:scale-95 h-9 rounded-md text-xs md:hidden text-blue-200 hover:text-white hover:bg-blue-500/20 transition-all duration-300 p-3"
-  },
-  {
-    "type": "missing-aria-label",
-    "element": "button",
     "className": "text-white hover:text-blue-400 transition-colors"
   },
   {
