@@ -58,9 +58,9 @@ const Footer = () => {
           <div className="md:col-span-1">
               <div className="flex items-center mb-4">
                 <img
-                  src="/lovable-uploads/ReplAInow Logo_Logogram_RGB.png"
+                  src="/lovable-uploads/ReplAInow_Logo_optimized.png"
                   alt="ReplAInow Logo"
-                  className="h-10 w-10 rounded-lg"
+                  className="h-12 w-12 rounded-lg"
                 />
               </div>
             <p className="text-slate-300 text-sm leading-relaxed mb-4">
