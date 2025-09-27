@@ -10,19 +10,43 @@ const ModernComparison = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden">
-      {/* Animated Background */}
+    <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+      {/* AI-Powered Background */}
       <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-brand-primary/30 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-brand-secondary/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/30 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-purple-500/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+        
+        {/* Floating AI Particles */}
+        <div className="absolute inset-0">
+          {Array.from({ length: 10 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-40"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
+                animationDelay: `${Math.random() * 2}s`
+              }}
+            />
+          ))}
+        </div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        {/* AI Badge */}
+        <div className="inline-block mb-6">
+          <span className="px-6 py-3 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 text-white font-black text-sm rounded-full shadow-2xl animate-pulse relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
+            <span className="relative z-10">⚔️ AI COMPARISON</span>
+          </span>
+        </div>
+        
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-black mb-4 tracking-tight">
-            Warum ReplAInow die Konkurrenz <span className="text-red-600">zerstört</span>
+            Warum ReplAInow die Konkurrenz <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-pink-500">zerstört</span>
           </h2>
-          <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
+          <p className="text-lg sm:text-xl text-blue-200 max-w-3xl mx-auto">
             Direkter Vergleich mit Gorgias, Intercom & Zendesk
           </p>
         </div>
