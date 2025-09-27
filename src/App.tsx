@@ -19,6 +19,8 @@ import TermsOfService from "./pages/TermsOfService";
 import UninstallInstructions from "./pages/UninstallInstructions";
 import SecurityStatement from "./pages/SecurityStatement";
 import Impressum from "./pages/Impressum";
+import RefundPolicy from "./pages/RefundPolicy";
+import CookiePolicy from "./pages/CookiePolicy";
 import NotFound from "./pages/NotFound";
 
 
@@ -71,12 +73,14 @@ const AppContent = () => {
           <Route path="/it" element={<IndexIt />} />
           <Route path="/nl" element={<IndexNl />} />
           <Route path="/zh" element={<IndexZh />} />
-          <Route path="/privacy" element={<PrivacyPolicy />} />
-          <Route path="/terms" element={<TermsOfService />} />
-          <Route path="/uninstall" element={<UninstallInstructions />} />
-          <Route path="/security" element={<SecurityStatement />} />
-          <Route path="/impressum" element={<Impressum />} />
-          <Route path="*" element={<NotFound />} />
+            <Route path="/privacy" element={<PrivacyPolicy />} />
+            <Route path="/terms" element={<TermsOfService />} />
+            <Route path="/uninstall" element={<UninstallInstructions />} />
+            <Route path="/security" element={<SecurityStatement />} />
+            <Route path="/impressum" element={<Impressum />} />
+            <Route path="/refund" element={<RefundPolicy />} />
+            <Route path="/cookies" element={<CookiePolicy />} />
+            <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
         <SkipLinks />

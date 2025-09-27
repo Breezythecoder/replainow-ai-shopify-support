@@ -97,6 +97,8 @@ const Footer = () => {
               <li><a href="/terms" className="text-slate-300 hover:text-blue-400 transition-colors">Nutzungsbedingungen</a></li>
               <li><a href="/security" className="text-slate-300 hover:text-blue-400 transition-colors">Sicherheit</a></li>
               <li><a href="/impressum" className="text-slate-300 hover:text-blue-400 transition-colors">Impressum</a></li>
+              <li><a href="/refund" className="text-slate-300 hover:text-blue-400 transition-colors">Rückerstattung</a></li>
+              <li><a href="/cookies" className="text-slate-300 hover:text-blue-400 transition-colors">Cookie-Richtlinie</a></li>
               <li><a href="/uninstall" className="text-slate-300 hover:text-blue-400 transition-colors">Deinstallation</a></li>
             </ul>
           </div>
