@@ -1,4 +1,6 @@
 import { useState, useEffect, useRef } from "react";
+import { Button } from "@/components/ui/button";
+import { Play, Pause, RotateCcw, Zap, Brain, Clock } from "lucide-react";
 
 const ModernLiveDemo = () => {
   const [isTyping, setIsTyping] = useState(false);
@@ -6,22 +8,59 @@ const ModernLiveDemo = () => {
   const [currentResponse, setCurrentResponse] = useState("");
   const [messageIndex, setMessageIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [selectedScenario, setSelectedScenario] = useState(0);
   const demoRef = useRef<HTMLDivElement>(null);
 
-  const demoMessages = [
-     "Hallo! Ich suche ein iPhone Case für mein iPhone 14 Pro. Was könnt ihr empfehlen?",
-     "Gibt es Rabatte für Studenten?",
-    "Wie lange dauert der Versand nach Deutschland?",
-    "Kann ich das Produkt zurückgeben, wenn es mir nicht gefällt?",
-    "Welche Zahlungsmethoden akzeptiert ihr?"
-  ];
-
-  const aiResponses = [
-    "Hallo! Für dein iPhone 14 Pro empfehle ich unser Premium Clear Case (EUR 24.99) oder das Rugged Case (EUR 29.99). Beide sind gerade auf Lager und bieten optimalen Schutz!",
-    "Ja! Studenten bekommen 15% Rabatt mit dem Code STUDENT15. Einfach bei der Bestellung eingeben!",
-    "Standard-Versand nach Deutschland dauert 2-3 Werktage (EUR 4.99), Express-Versand 1-2 Werktage (EUR 9.99). Kostenloser Versand ab EUR 50!",
-    "Ja, du hast 30 Tage Rückgaberecht! Kostenlose Rücksendung, Geld-zurück-Garantie. Einfach in deinem Account die Rücksendung anmelden!",
-    "Wir akzeptieren: Kreditkarte, PayPal, Klarna, Apple Pay, Google Pay, SEPA-Lastschrift und Bitcoin!"
+  const scenarios = [
+    {
+      name: "Tech Store",
+      icon: "📱",
+      messages: [
+        "Hallo! Ich suche ein iPhone Case für mein iPhone 14 Pro. Was könnt ihr empfehlen?",
+        "Gibt es Rabatte für Studenten?",
+        "Wie lange dauert der Versand nach Deutschland?",
+        "Kann ich das Produkt zurückgeben, wenn es mir nicht gefällt?"
+      ],
+      responses: [
+        "Hallo! Für dein iPhone 14 Pro empfehle ich unser Premium Clear Case (€24.99) oder das Rugged Case (€29.99). Beide sind gerade auf Lager und bieten optimalen Schutz! 🛡️",
+        "Ja! Studenten bekommen 15% Rabatt mit dem Code STUDENT15. Einfach bei der Bestellung eingeben! 🎓",
+        "Standard-Versand nach Deutschland dauert 2-3 Werktage (€4.99), Express-Versand 1-2 Werktage (€9.99). Kostenloser Versand ab €50! 🚚",
+        "Ja, du hast 30 Tage Rückgaberecht! Kostenlose Rücksendung, Geld-zurück-Garantie. Einfach in deinem Account die Rücksendung anmelden! ✅"
+      ]
+    },
+    {
+      name: "Fashion Store",
+      icon: "👗",
+      messages: [
+        "Welche Größe sollte ich bei diesem Kleid wählen?",
+        "Ist das Material nachhaltig?",
+        "Kann ich mehrere Farben bestellen?",
+        "Wie ist die Qualität?"
+      ],
+      responses: [
+        "Basierend auf deinen Angaben empfehle ich Größe M. Das Kleid fällt locker und ist true-to-size. Bei Unsicherheit lieber eine Größe größer! 📏",
+        "Ja! 100% Bio-Baumwolle, fair gehandelt und umweltfreundlich verpackt. 🌱 Nachhaltigkeit ist uns wichtig!",
+        "Natürlich! Du kannst alle verfügbaren Farben bestellen. Aktuell haben wir: Schwarz, Weiß, Navy und Beige auf Lager. 🎨",
+        "Premium-Qualität! 200g/m² Bio-Baumwolle, maschinenwaschbar, bügelfrei. Unsere Kunden lieben es! ⭐⭐⭐⭐⭐"
+      ]
+    },
+    {
+      name: "Beauty Store",
+      icon: "💄",
+      messages: [
+        "Welche Hautpflege-Routine empfiehlst du für trockene Haut?",
+        "Sind eure Produkte vegan?",
+        "Kann ich eine Proben-Box bestellen?",
+        "Wie lange halten die Produkte?"
+      ],
+      responses: [
+        "Für trockene Haut empfehle ich: Morgens unser Hydrating Serum (€29.99) + Moisturizer (€24.99), abends das Repair Night Cream (€34.99). Perfekt für deinen Hauttyp! ✨",
+        "Ja! Alle unsere Produkte sind 100% vegan, cruelty-free und dermatologisch getestet. 🌿 Keine tierischen Inhaltsstoffe!",
+        "Ja! Unsere Discovery Box (€19.99) enthält 5 Mini-Produkte zum Testen. Ideal zum Kennenlernen unserer Marke! 📦",
+        "Ungeöffnet 3 Jahre, nach Öffnung 12 Monate. Alle Produkte haben das PAO-Symbol (Period After Opening) auf der Verpackung! ⏰"
+      ]
+    }
   ];
 
   // Intersection Observer
@@ -44,33 +83,48 @@ const ModernLiveDemo = () => {
 
   // Auto-typing demo
   useEffect(() => {
-    if (!isVisible) return;
+    if (!isVisible || !isPlaying) return;
 
+    const currentScenario = scenarios[selectedScenario];
     const interval = setInterval(() => {
-      if (messageIndex < demoMessages.length) {
+      if (messageIndex < currentScenario.messages.length) {
         // Set current message
-        setCurrentMessage(demoMessages[messageIndex]);
+        setCurrentMessage(currentScenario.messages[messageIndex]);
         
         // Show typing indicator
         setIsTyping(true);
         
         // After 2 seconds, show the CORRECT response for this message
         setTimeout(() => {
-          setCurrentResponse(aiResponses[messageIndex]);
+          setCurrentResponse(currentScenario.responses[messageIndex]);
           setIsTyping(false);
           
           // Move to next message after showing response
           setTimeout(() => {
             setMessageIndex(prev => prev + 1);
-          }, 2000);
+          }, 3000);
         }, 2000);
       } else {
         setMessageIndex(0);
       }
-    }, 6000);
+    }, 7000);
 
     return () => clearInterval(interval);
-  }, [isVisible, messageIndex]);
+  }, [isVisible, messageIndex, isPlaying, selectedScenario]);
+
+  const resetDemo = () => {
+    setMessageIndex(0);
+    setCurrentMessage("");
+    setCurrentResponse("");
+    setIsTyping(false);
+  };
+
+  const togglePlay = () => {
+    setIsPlaying(!isPlaying);
+    if (!isPlaying) {
+      resetDemo();
+    }
+  };
 
   return (
     <section 
@@ -105,79 +159,151 @@ const ModernLiveDemo = () => {
         </div>
         
         {/* Revolutionary Interactive Chat Demo */}
-        <div className={`max-w-6xl mx-auto mb-16 transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+        <div className={`max-w-7xl mx-auto mb-16 transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="relative">
             {/* Clean Frame */}
             <div className="absolute -inset-6 bg-gradient-to-r from-blue-500/10 via-indigo-500/10 to-purple-500/10 rounded-3xl blur-2xl animate-pulse"></div>
             
-            <div className="relative bg-white/80 backdrop-blur-lg rounded-3xl overflow-hidden shadow-2xl border border-slate-200 p-6">
-              {/* Chat Header */}
-              <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl mb-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-white font-bold">ReplAInow AI Support</span>
-                  <span className="px-2 py-1 bg-green-500 text-white text-xs font-bold rounded-full">LIVE</span>
-                </div>
-                <div className="text-blue-200 text-sm font-bold">3s Response Time</div>
-              </div>
-
-              {/* Chat Messages */}
-              <div className="space-y-4 max-h-96 overflow-y-auto">
-                {/* Customer Message */}
-                <div className="flex justify-end">
-                  <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-4 rounded-2xl max-w-md shadow-lg">
-                    <div className="flex items-center gap-2 mb-2">
-                       <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs">
-                         <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                           <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                         </svg>
-                       </div>
-                      <span className="text-xs font-bold">Kunde</span>
+            <div className="relative bg-white/90 backdrop-blur-lg rounded-3xl overflow-hidden shadow-2xl border border-slate-200">
+              {/* Scenario Selector */}
+              <div className="p-6 border-b border-slate-200 bg-gradient-to-r from-slate-50 to-blue-50">
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-lg font-bold text-slate-800 mb-2">Wähle ein Szenario:</h3>
+                    <div className="flex flex-wrap gap-2">
+                      {scenarios.map((scenario, index) => (
+                        <button
+                          key={index}
+                          onClick={() => {
+                            setSelectedScenario(index);
+                            resetDemo();
+                          }}
+                          className={`px-4 py-2 rounded-xl font-medium transition-all duration-300 ${
+                            selectedScenario === index
+                              ? 'bg-blue-600 text-white shadow-lg transform scale-105'
+                              : 'bg-white text-slate-600 border border-slate-300 hover:bg-blue-50 hover:border-blue-300'
+                          }`}
+                        >
+                          <span className="mr-2">{scenario.icon}</span>
+                          {scenario.name}
+                        </button>
+                      ))}
                     </div>
-                    <p className="text-sm">{currentMessage || "Hallo! Ich habe eine Frage..."}</p>
+                  </div>
+                  
+                  <div className="flex items-center gap-3">
+                    <Button
+                      onClick={togglePlay}
+                      variant={isPlaying ? "destructive" : "default"}
+                      size="sm"
+                      className="flex items-center gap-2"
+                    >
+                      {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                      {isPlaying ? "Pause" : "Play"}
+                    </Button>
+                    <Button
+                      onClick={resetDemo}
+                      variant="outline"
+                      size="sm"
+                      className="flex items-center gap-2"
+                    >
+                      <RotateCcw className="w-4 h-4" />
+                      Reset
+                    </Button>
                   </div>
                 </div>
+              </div>
 
-                {/* AI Response */}
-                <div className="flex justify-start">
-                  <div className="bg-gradient-to-r from-slate-100 to-slate-200 text-slate-800 p-4 rounded-2xl max-w-md shadow-lg border border-slate-300">
-                    <div className="flex items-center gap-2 mb-2">
-                       <div className="w-6 h-6 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-xs text-white">
-                         <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                           <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
-                         </svg>
-                       </div>
-                      <span className="text-xs font-bold text-blue-600">ReplAInow AI</span>
-                      <div className="flex gap-1">
-                        <div className="w-1 h-1 bg-blue-600 rounded-full animate-pulse"></div>
-                        <div className="w-1 h-1 bg-blue-600 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                        <div className="w-1 h-1 bg-blue-600 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+              <div className="p-6">
+                {/* Chat Header */}
+                <div className="flex items-center justify-between p-4 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl mb-6">
+                  <div className="flex items-center gap-3">
+                    <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    <span className="text-white font-bold">ReplAInow AI Support</span>
+                    <span className="px-2 py-1 bg-green-500 text-white text-xs font-bold rounded-full">LIVE</span>
+                    <span className="text-blue-200 text-sm">{scenarios[selectedScenario].name}</span>
+                  </div>
+                  <div className="text-blue-200 text-sm font-bold">3s Response Time</div>
+                </div>
+
+                {/* Chat Messages */}
+                <div className="space-y-6 max-h-96 overflow-y-auto p-4 bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl border border-slate-200">
+                  {/* Customer Message */}
+                  <div className="flex justify-end">
+                    <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white p-4 rounded-2xl max-w-lg shadow-lg">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center text-xs">
+                          <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <span className="text-xs font-bold">Kunde</span>
+                        <span className="text-xs text-blue-200">vor 2s</span>
+                      </div>
+                      <p className="text-sm leading-relaxed">{currentMessage || "Hallo! Ich habe eine Frage..."}</p>
+                    </div>
+                  </div>
+
+                  {/* AI Response */}
+                  <div className="flex justify-start">
+                    <div className="bg-white text-slate-800 p-4 rounded-2xl max-w-lg shadow-lg border border-slate-300">
+                      <div className="flex items-center gap-2 mb-3">
+                        <div className="w-6 h-6 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-xs text-white">
+                          <Brain className="w-3 h-3" />
+                        </div>
+                        <span className="text-xs font-bold text-blue-600">ReplAInow AI</span>
+                        <span className="text-xs text-slate-500">vor 1s</span>
+                        {isTyping && (
+                          <div className="flex gap-1 ml-2">
+                            <div className="w-1 h-1 bg-blue-600 rounded-full animate-pulse"></div>
+                            <div className="w-1 h-1 bg-blue-600 rounded-full animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                            <div className="w-1 h-1 bg-blue-600 rounded-full animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                          </div>
+                        )}
+                      </div>
+                      <div className="text-sm leading-relaxed">
+                        {isTyping ? (
+                          <div className="flex items-center gap-2 text-blue-600">
+                            <Clock className="w-4 h-4 animate-spin" />
+                            <span className="animate-pulse">AI denkt nach...</span>
+                          </div>
+                        ) : (
+                          <div className="space-y-2">
+                            {currentResponse ? (
+                              <div className="prose prose-sm max-w-none">
+                                <p className="m-0">{currentResponse}</p>
+                              </div>
+                            ) : (
+                              <p className="text-slate-600">Hallo! Wie kann ich dir heute helfen?</p>
+                            )}
+                          </div>
+                        )}
                       </div>
                     </div>
-                    <p className="text-sm">
-                      {isTyping ? (
-                        <span className="text-blue-600 animate-pulse">AI denkt nach...</span>
-                      ) : (
-                        currentResponse || "Hallo! Wie kann ich dir heute helfen?"
-                      )}
-                    </p>
                   </div>
                 </div>
-              </div>
 
-              {/* Live Stats */}
-              <div className="grid grid-cols-3 gap-4 mt-6 p-4 bg-slate-100 rounded-2xl border border-slate-200">
-                <div className="text-center">
-                  <div className="text-2xl font-black text-blue-600">3s</div>
-                  <div className="text-xs text-slate-600">Response Time</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-black text-green-600">98%</div>
-                  <div className="text-xs text-slate-600">Accuracy</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-black text-indigo-600">24/7</div>
-                  <div className="text-xs text-slate-600">Available</div>
+                {/* Live Stats */}
+                <div className="grid grid-cols-4 gap-4 mt-6 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl border border-blue-200">
+                  <div className="text-center">
+                    <div className="text-2xl font-black text-blue-600 flex items-center justify-center gap-1">
+                      <Zap className="w-5 h-5" />
+                      3s
+                    </div>
+                    <div className="text-xs text-slate-600 font-medium">Response Time</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-black text-green-600">98%</div>
+                    <div className="text-xs text-slate-600 font-medium">Accuracy</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-black text-indigo-600">24/7</div>
+                    <div className="text-xs text-slate-600 font-medium">Available</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-black text-purple-600">32+</div>
+                    <div className="text-xs text-slate-600 font-medium">Languages</div>
+                  </div>
                 </div>
               </div>
             </div>
