@@ -60,14 +60,13 @@ const AppContent = () => {
       initWebVitals();
       initializeGA();
     
-    // Handle GitHub Pages SPA redirect format
-    // GitHub Pages redirects to /?/path format for SPAs
-    const urlParams = new URLSearchParams(window.location.search);
-    const redirectPath = urlParams.get('/');
-    if (redirectPath) {
-      const cleanPath = redirectPath.replace(/~and~/g, '&');
-      window.history.replaceState(null, '', cleanPath);
-    }
+      // Handle direct URL access for GitHub Pages
+      // Check if there's a target route from static HTML files
+      const targetRoute = sessionStorage.getItem('targetRoute');
+      if (targetRoute) {
+        sessionStorage.removeItem('targetRoute');
+        window.history.replaceState(null, '', targetRoute);
+      }
     
     // Register Service Worker for perfect performance
     if ('serviceWorker' in navigator) {

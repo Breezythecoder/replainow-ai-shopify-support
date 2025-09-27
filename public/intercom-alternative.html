@@ -21,8 +21,10 @@
     }
     </script>
     <script>
-        // Redirect to React app with proper routing
-        window.location.replace('/?/intercom-alternative');
+        // Load React app and navigate to correct route
+        window.location.href = '/';
+        // Set the target route in sessionStorage for React Router
+        sessionStorage.setItem('targetRoute', '/intercom-alternative');
     </script>
 </head>
 <body>
