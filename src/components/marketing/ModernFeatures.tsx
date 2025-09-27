@@ -56,7 +56,7 @@ const ModernFeatures = () => {
       icon: "Zap",
       title: "1-Klick Installation",
       desc: "Setup in unter 60 Sekunden - keine komplexe Konfiguration",
-      gradient: "from-rose-500 to-red-500",
+        gradient: "from-emerald-500 to-green-500",
       story: "Klick → AI lernt deinen Store → Fertig. Keine IT-Abteilung nötig",
       impact: "60s Setup",
       color: "red"
