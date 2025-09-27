@@ -96,32 +96,49 @@ const ModernFeatures = () => {
     <section
       ref={featuresRef}
       id="features"
-      className="py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden"
+      className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden"
     >
-      {/* Revolutionary Background Effects */}
+      {/* AI-Powered Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 via-transparent to-purple-500/5 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-purple-500/5 animate-pulse"></div>
+        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse"></div>
+        
+        {/* Floating AI Particles */}
+        <div className="absolute inset-0">
+          {Array.from({ length: 15 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-40"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
+                animationDelay: `${Math.random() * 2}s`
+              }}
+            />
+          ))}
+        </div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="inline-block mb-6">
-            <span className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm rounded-full shadow-lg animate-pulse">
-              REVOLUTIONARY FEATURES
+            <span className="px-6 py-3 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 text-white font-black text-sm rounded-full shadow-2xl animate-pulse relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
+              <span className="relative z-10">🚀 AI FEATURES</span>
             </span>
           </div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-center mb-6 sm:mb-8 tracking-tight px-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 animate-gradient-x">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-center mb-6 sm:mb-8 tracking-tight px-4">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient-x">
               Warum ReplAInow
             </span>
-            <span className="block text-slate-800 mt-2">die Konkurrenz zerstört</span>
+            <span className="block text-white mt-2">die Konkurrenz zerstört</span>
           </h2>
-          <p className="text-lg sm:text-xl text-slate-600 text-center mb-12 sm:mb-16 max-w-4xl mx-auto px-4">
-            <span className="text-blue-600 font-bold">Revolutionäre GPT-4.1 Technologie</span> trifft auf
-            <span className="text-indigo-600 font-bold"> perfekte Shopify-Integration</span>
+          <p className="text-lg sm:text-xl text-blue-200 text-center mb-12 sm:mb-16 max-w-4xl mx-auto px-4">
+            <span className="text-cyan-400 font-bold">Revolutionäre GPT-4.1 Technologie</span> trifft auf
+            <span className="text-purple-400 font-bold"> perfekte Shopify-Integration</span>
           </p>
         </div>
         
@@ -130,13 +147,13 @@ const ModernFeatures = () => {
           {features.map((feature, i) => (
             <div 
               key={i} 
-              className={`group bg-white/80 backdrop-blur-lg rounded-3xl p-6 sm:p-8 world-class-card border border-slate-200 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 ${
-                activeFeature === i ? 'scale-105 shadow-blue-500/25 border-blue-400/60' : 'hover:scale-102'
+              className={`group bg-slate-800/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/30 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 ${
+                activeFeature === i ? 'scale-105 shadow-blue-500/25 border-blue-400/60 bg-slate-800/70' : 'hover:scale-102 hover:border-blue-400/50'
               }`}
               onClick={() => setActiveFeature(i)}
             >
-              {/* Revolutionary Glow Effect */}
-              <div className={`absolute inset-0 bg-gradient-to-r ${feature.gradient} opacity-0 group-hover:opacity-10 transition-opacity rounded-3xl`}></div>
+              {/* AI Glow Effect */}
+              <div className={`absolute inset-0 bg-gradient-to-r ${feature.gradient} opacity-0 group-hover:opacity-20 transition-opacity rounded-3xl`}></div>
               
               {/* Feature Icon with Animation */}
               <div className={`relative text-4xl sm:text-5xl mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
@@ -144,23 +161,23 @@ const ModernFeatures = () => {
               </div>
               
               {/* Feature Content */}
-              <h3 className="relative text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-slate-800 group-hover:text-blue-600 transition-all duration-300">
+              <h3 className="relative text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-white group-hover:text-cyan-400 transition-all duration-300">
                 {feature.title}
               </h3>
               
-              <p className="relative text-slate-600 leading-loose text-sm sm:text-base mb-4">
+              <p className="relative text-blue-200 leading-loose text-sm sm:text-base mb-4 group-hover:text-blue-100 transition-all duration-300">
                 {feature.desc}
               </p>
 
-              {/* Emotional Story */}
-              <div className="relative bg-blue-50 rounded-2xl p-4 mb-4 border border-blue-200">
-                <p className="text-blue-600 text-sm font-bold mb-2"> Real Story:</p>
-                <p className="text-slate-600 text-sm leading-loose">{feature.story}</p>
+              {/* AI Story */}
+              <div className="relative bg-blue-500/10 rounded-2xl p-4 mb-4 border border-blue-400/30">
+                <p className="text-cyan-400 text-sm font-bold mb-2">🚀 AI Realität:</p>
+                <p className="text-blue-200 text-sm leading-loose">{feature.story}</p>
               </div>
 
               {/* Impact Badge */}
               <div className="relative">
-                <span className={`inline-block px-4 py-2 bg-gradient-to-r ${feature.gradient} text-white text-sm font-black rounded-full shadow-lg`}>
+                <span className={`inline-block px-4 py-2 bg-gradient-to-r ${feature.gradient} text-white text-sm font-black rounded-full shadow-lg border border-white/20`}>
                   {feature.impact}
                 </span>
               </div>

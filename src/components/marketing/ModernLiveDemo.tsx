@@ -130,31 +130,48 @@ const ModernLiveDemo = () => {
     <section 
       ref={demoRef}
       id="live-demo" 
-      className="py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 relative overflow-hidden"
+      className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden"
     >
-      {/* Clean Background Effects */}
+      {/* AI-Powered Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-purple-500/5 animate-pulse"></div>
         <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-pulse"></div>
         <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo-400 to-transparent animate-pulse"></div>
+        
+        {/* Floating AI Particles */}
+        <div className="absolute inset-0">
+          {Array.from({ length: 20 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
+                animationDelay: `${Math.random() * 2}s`
+              }}
+            />
+          ))}
+        </div>
       </div>
 
       <div className="container mx-auto px-6 text-center relative z-10">
         <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="inline-block mb-6">
-            <span className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-black text-sm rounded-full shadow-lg animate-pulse">
-              INTERAKTIVE DEMO
+            <span className="px-6 py-3 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 text-white font-black text-sm rounded-full shadow-2xl animate-pulse relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
+              <span className="relative z-10">⚡ INTERAKTIVE DEMO</span>
             </span>
           </div>
           
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 sm:mb-8 tracking-tight text-center px-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 animate-gradient-x">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient-x">
               Live AI in Aktion
             </span>
           </h2>
-          <p className="text-lg sm:text-xl text-slate-600 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
-            <span className="text-blue-600 font-bold">Echte AI-Antworten</span> in Echtzeit - 
-            <span className="text-indigo-600 font-bold"> 3 Sekunden</span> von Frage zu Lösung
+          <p className="text-lg sm:text-xl text-blue-200 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
+            <span className="text-cyan-400 font-bold">Echte AI-Antworten</span> in Echtzeit - 
+            <span className="text-purple-400 font-bold"> 3 Sekunden</span> von Frage zu Lösung
           </p>
         </div>
         
