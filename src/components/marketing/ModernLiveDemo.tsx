@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button-variants";
 import { Play, Pause, RotateCcw, Zap, Brain, Clock } from "lucide-react";
 
 const ModernLiveDemo = () => {
@@ -214,7 +215,7 @@ const ModernLiveDemo = () => {
                       onClick={togglePlay}
                       variant={isPlaying ? "destructive" : "default"}
                       size="sm"
-                      className="flex items-center gap-2 min-h-[48px] min-w-[48px] touch-manipulation"
+                      className={`flex items-center gap-2 ${buttonVariants({ variant: isPlaying ? "destructive" : "default", size: "sm" })}`}
                     >
                       {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5" />}
                       {isPlaying ? "Pause" : "Play"}
@@ -223,7 +224,7 @@ const ModernLiveDemo = () => {
                       onClick={resetDemo}
                       variant="outline"
                       size="sm"
-                      className="flex items-center gap-2 min-h-[48px] min-w-[48px] touch-manipulation"
+                      className={`flex items-center gap-2 ${buttonVariants({ variant: "outline", size: "sm" })}`}
                     >
                       <RotateCcw className="w-5 h-5" />
                       Reset

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button-variants";
 import LanguageSwitcher from "@/components/ui/language-switcher";
 import { Menu, X, Zap, Brain, Rocket, Sparkles, Cpu, Activity } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -204,9 +205,9 @@ const ModernNavbar = () => {
               
               {/* AI CTA Button - Mobile Optimized */}
               <div className="pt-6">
-                <Button asChild variant="cta" size="lg" className="w-full font-bold text-lg relative overflow-hidden group min-h-[56px] touch-manipulation">
-                  <a href={OAUTH_URL} className="flex items-center gap-3 justify-center relative z-10 py-4">
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <Button asChild variant="cta" size="lg" className={`w-full ${buttonVariants({ variant: "ai", size: "lg" })}`}>
+                  <a href={OAUTH_URL} className="flex items-center gap-3 justify-center relative z-10">
+                    <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
                     <Rocket className="w-6 h-6 group-hover:animate-bounce" />
                     <span>JETZT INSTALLIEREN</span>
                     <Sparkles className="w-6 h-6 text-yellow-300 group-hover:animate-pulse" />

@@ -14,14 +14,17 @@ import IndexPt from "./pages/Index.pt";
 import IndexIt from "./pages/Index.it";
 import IndexNl from "./pages/Index.nl";
 import IndexZh from "./pages/Index.zh";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsOfService from "./pages/TermsOfService";
-import UninstallInstructions from "./pages/UninstallInstructions";
-import SecurityStatement from "./pages/SecurityStatement";
-import Impressum from "./pages/Impressum";
-import RefundPolicy from "./pages/RefundPolicy";
-import CookiePolicy from "./pages/CookiePolicy";
-import NotFound from "./pages/NotFound";
+import { lazy, Suspense } from "react";
+
+// Lazy load legal pages for better performance
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const UninstallInstructions = lazy(() => import("./pages/UninstallInstructions"));
+const SecurityStatement = lazy(() => import("./pages/SecurityStatement"));
+const Impressum = lazy(() => import("./pages/Impressum"));
+const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
+const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
+const NotFound = lazy(() => import("./pages/NotFound"));
 
 
 import ContrastAuditor from "@/components/dev/ContrastAuditor";
@@ -63,26 +66,35 @@ const AppContent = () => {
   return (
     <>
       <SkipToMainContent />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/en" element={<IndexEn />} />
-          <Route path="/es" element={<IndexEs />} />
-          <Route path="/fr" element={<IndexFr />} />
-          <Route path="/pt" element={<IndexPt />} />
-          <Route path="/it" element={<IndexIt />} />
-          <Route path="/nl" element={<IndexNl />} />
-          <Route path="/zh" element={<IndexZh />} />
-            <Route path="/privacy" element={<PrivacyPolicy />} />
-            <Route path="/terms" element={<TermsOfService />} />
-            <Route path="/uninstall" element={<UninstallInstructions />} />
-            <Route path="/security" element={<SecurityStatement />} />
-            <Route path="/impressum" element={<Impressum />} />
-            <Route path="/refund" element={<RefundPolicy />} />
-            <Route path="/cookies" element={<CookiePolicy />} />
-            <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
+        <BrowserRouter>
+          <Suspense fallback={
+            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4"></div>
+                <p className="text-blue-200">Loading...</p>
+              </div>
+            </div>
+          }>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/en" element={<IndexEn />} />
+              <Route path="/es" element={<IndexEs />} />
+              <Route path="/fr" element={<IndexFr />} />
+              <Route path="/pt" element={<IndexPt />} />
+              <Route path="/it" element={<IndexIt />} />
+              <Route path="/nl" element={<IndexNl />} />
+              <Route path="/zh" element={<IndexZh />} />
+              <Route path="/privacy" element={<PrivacyPolicy />} />
+              <Route path="/terms" element={<TermsOfService />} />
+              <Route path="/uninstall" element={<UninstallInstructions />} />
+              <Route path="/security" element={<SecurityStatement />} />
+              <Route path="/impressum" element={<Impressum />} />
+              <Route path="/refund" element={<RefundPolicy />} />
+              <Route path="/cookies" element={<CookiePolicy />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Suspense>
+        </BrowserRouter>
         <SkipLinks />
         <ScrollProgress />
         {/* <ExitIntent /> */} {/* Removed - no discount popup */}
