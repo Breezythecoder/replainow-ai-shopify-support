@@ -52,50 +52,85 @@ const ModernHero = () => {
   return (
     <section
       ref={heroRef}
-      className="relative min-h-screen flex items-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 overflow-hidden"
+      className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden"
       onMouseMove={onMove}
     >
-      {/* Revolutionary Animated Background */}
+      {/* Ultra-Modern AI Background */}
       <div className="absolute inset-0">
-        {/* Cyberpunk Grid */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="grid grid-cols-12 grid-rows-12 h-full w-full">
-            {Array.from({ length: 144 }).map((_, i) => (
+        {/* Matrix Rain Effect */}
+        <div className="absolute inset-0 opacity-10">
+          {Array.from({ length: 50 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute text-green-400 font-mono text-xs"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: '-100px',
+                animation: `matrix-rain ${5 + Math.random() * 10}s linear infinite`,
+                animationDelay: `${Math.random() * 5}s`
+              }}
+            >
+              {Array.from({ length: 20 }).map((_, j) => (
+                <div key={j} className="opacity-70">
+                  {Math.random() > 0.5 ? '1' : '0'}
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+
+        {/* Holographic Grid */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="grid grid-cols-20 grid-rows-20 h-full w-full">
+            {Array.from({ length: 400 }).map((_, i) => (
               <div
                 key={i}
-                className="border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300"
+                className="border border-blue-500/20 hover:border-blue-400/60 transition-all duration-500"
                 style={{
-                  animationDelay: `${i * 0.01}s`,
-                  animation: isVisible ? 'pulse 2s ease-in-out infinite' : 'none'
+                  animationDelay: `${i * 0.005}s`,
+                  animation: isVisible ? 'cyberpunk-glow 3s ease-in-out infinite' : 'none'
                 }}
               />
             ))}
           </div>
         </div>
 
-        {/* Floating AI Particles */}
+        {/* Floating AI Neural Networks */}
         <div className="absolute inset-0">
-          {Array.from({ length: 20 }).map((_, i) => (
+          {Array.from({ length: 30 }).map((_, i) => (
             <div
               key={i}
-              className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-60"
+              className="absolute"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 2}s`
+                animation: `particle-float ${4 + Math.random() * 6}s ease-in-out infinite`,
+                animationDelay: `${Math.random() * 3}s`
               }}
-            />
+            >
+              <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full animate-pulse"></div>
+              <div className="absolute -inset-2 border border-blue-400/30 rounded-full animate-ping"></div>
+            </div>
           ))}
         </div>
 
-        {/* Dynamic Light Rays */}
+        {/* Dynamic Holographic Light */}
         <div 
-          className="absolute inset-0 opacity-30"
+          className="absolute inset-0 opacity-40"
           style={{
-            background: `radial-gradient(circle at ${pos.x}px ${pos.y}px, rgba(59, 130, 246, 0.3) 0%, transparent 50%)`
+            background: `radial-gradient(circle at ${pos.x}px ${pos.y}px, rgba(59, 130, 246, 0.4) 0%, rgba(147, 51, 234, 0.2) 30%, transparent 70%)`
           }}
         />
+
+        {/* AI Scan Lines */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="h-full w-full bg-gradient-to-b from-transparent via-blue-500/10 to-transparent animate-pulse"></div>
+        </div>
+
+        {/* Cyberpunk Glow Orbs */}
+        <div className="absolute top-20 left-20 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
 
         {/* Holographic Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse" />
@@ -104,45 +139,50 @@ const ModernHero = () => {
       <div className="container mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 min-h-screen py-8 lg:py-0">
         {/* Left Column - Revolutionary Content */}
         <div className={`space-y-6 lg:space-y-8 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          {/* Revolutionary Headline */}
-          <div className="space-y-4">
+          {/* Ultra-Modern AI Headline */}
+          <div className="space-y-6">
             <div className="inline-block">
-              <span className="px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white font-black text-sm rounded-full shadow-lg animate-pulse">
-                AI REVOLUTION
+              <span className="px-6 py-3 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 text-white font-black text-sm rounded-full shadow-2xl animate-pulse relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
+                <span className="relative z-10">🚀 AI REVOLUTION 2024</span>
               </span>
             </div>
             
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight tracking-tight" role="heading" aria-level="1">
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 animate-gradient-x drop-shadow-lg">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight tracking-tight" role="heading" aria-level="1">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient-x">
                 {typingText}
               </span>
-              <span className="block text-slate-800 mt-2 drop-shadow-lg">
-                Antwortet in <span className="text-blue-600 animate-pulse drop-shadow-lg">3 Sekunden</span>
+              <span className="block text-white mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                Antwortet in <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 animate-pulse">3 Sekunden</span>
               </span>
             </h1>
           </div>
           
-          {/* Revolutionary Subtitle */}
-          <p className="text-base sm:text-lg md:text-xl text-slate-600 leading-loose max-w-2xl drop-shadow-md">
-            <span className="text-blue-600 font-bold">Revolutionäre GPT-4.1 AI</span> mit
-            <span className="text-indigo-600 font-bold"> Echtzeit-Shopify-Daten</span>:
+          {/* AI-Powered Subtitle */}
+          <p className="text-lg sm:text-xl md:text-2xl text-blue-200 leading-relaxed max-w-3xl">
+            <span className="text-cyan-400 font-bold">Revolutionäre GPT-4.1 AI</span> mit
+            <span className="text-purple-400 font-bold"> Echtzeit-Shopify-Daten</span>:
+            <br />
             Höhere Conversion, schnellere Antworten,
-            <span className="text-green-600 font-bold"> 90% weniger Support-Tickets</span>.
+            <span className="text-green-400 font-bold"> 90% weniger Support-Tickets</span>.
           </p>
 
-          {/* Live Stats Counter */}
-          <div className="grid grid-cols-3 gap-4 my-8">
-            <div className="bg-white/80 backdrop-blur-lg p-4 rounded-xl text-center hover-lift border border-slate-200 shadow-lg">
-              <div className="text-2xl font-black text-blue-600">5000+</div>
-              <div className="text-sm text-slate-600">Aktive Stores</div>
+          {/* AI-Powered Live Stats */}
+          <div className="grid grid-cols-3 gap-6 my-12">
+            <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/30 backdrop-blur-lg p-6 rounded-2xl text-center border border-blue-400/30 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105">
+              <div className="text-3xl font-black text-cyan-400 mb-2">5000+</div>
+              <div className="text-sm text-blue-200 font-semibold">Aktive Stores</div>
+              <div className="w-full h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full mt-2 animate-pulse"></div>
             </div>
-            <div className="bg-white/80 backdrop-blur-lg p-4 rounded-xl text-center hover-lift border border-slate-200 shadow-lg">
-              <div className="text-2xl font-black text-green-600">98%</div>
-              <div className="text-sm text-slate-600">Genauigkeit</div>
+            <div className="bg-gradient-to-br from-green-500/20 to-emerald-600/30 backdrop-blur-lg p-6 rounded-2xl text-center border border-green-400/30 shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-105">
+              <div className="text-3xl font-black text-green-400 mb-2">98%</div>
+              <div className="text-sm text-green-200 font-semibold">AI Genauigkeit</div>
+              <div className="w-full h-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full mt-2 animate-pulse"></div>
             </div>
-            <div className="bg-white/80 backdrop-blur-lg p-4 rounded-xl text-center hover-lift border border-slate-200 shadow-lg">
-              <div className="text-2xl font-black text-indigo-600">3s</div>
-              <div className="text-sm text-slate-600">Antwortzeit</div>
+            <div className="bg-gradient-to-br from-purple-500/20 to-indigo-600/30 backdrop-blur-lg p-6 rounded-2xl text-center border border-purple-400/30 shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105">
+              <div className="text-3xl font-black text-purple-400 mb-2">3s</div>
+              <div className="text-sm text-purple-200 font-semibold">Response Time</div>
+              <div className="w-full h-1 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full mt-2 animate-pulse"></div>
             </div>
           </div>
           
