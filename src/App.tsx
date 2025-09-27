@@ -25,7 +25,7 @@ import NotFound from "./pages/NotFound";
 import ContrastAuditor from "@/components/dev/ContrastAuditor";
 import DesignAuditor from "@/components/dev/DesignAuditor";
 import ScrollProgress from "@/components/ui/ScrollProgress";
-import ExitIntent from "@/components/ui/ExitIntent";
+// import ExitIntent from "@/components/ui/ExitIntent"; // Removed - no discount popup
 import SkipLinks from "@/components/ui/SkipLinks";
 
 const queryClient = new QueryClient();

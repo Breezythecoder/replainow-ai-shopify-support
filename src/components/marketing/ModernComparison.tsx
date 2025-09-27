@@ -119,28 +119,28 @@ const ModernComparison = () => {
 
                 {/* ReplAInow Power */}
                 <div className="text-center space-y-6">
-                  <div className="text-brand-success font-bold text-xl mb-4">
-                      <span className="flex items-center gap-2">
+                  <div className="text-green-600 font-bold text-xl mb-4">
+                      <span className="flex items-center justify-center gap-2">
                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
                          <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd" />
                        </svg>
                        ReplAInow Power
                      </span>
                   </div>
-                  <div className="bg-gradient-to-br from-brand-success/20 to-brand-success/10 rounded-2xl p-6 border border-brand-success/30 shadow-brand">
-                    <div className="text-4xl sm:text-5xl font-black text-brand-success mb-3">
-                      EUR 19/Monat
+                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 border border-green-200 shadow-lg">
+                    <div className="text-4xl sm:text-5xl font-black text-green-600 mb-3">
+                      €19/Monat
                     </div>
-                    <div className="text-brand-success text-lg font-bold mb-4">
-                      = Bis zu EUR 1.368/Jahr gespart!
+                    <div className="text-green-600 text-lg font-bold mb-4">
+                      = Bis zu €1.368/Jahr gespart!
                     </div>
-                    <div className="text-brand-success font-semibold">
+                    <div className="text-slate-600 font-semibold">
                       Bei überlegener KI-Performance
                     </div>
                   </div>
                   
-                  <div className="bg-brand-warning/10 rounded-xl p-4 border border-brand-warning/30">
-                    <div className="text-brand-warning font-bold">
+                  <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-4 border border-blue-200">
+                    <div className="text-blue-600 font-bold">
                       ROI: 600%+ garantiert
                     </div>
                   </div>

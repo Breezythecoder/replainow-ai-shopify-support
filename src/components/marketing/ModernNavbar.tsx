@@ -33,17 +33,17 @@ const ModernNavbar = () => {
           : 'bg-white/90 border-b border-slate-100 backdrop-blur-lg'
       }`}>
         <nav className="container flex items-center justify-between h-16 px-4 sm:px-6">
-          {/* Revolutionary Logo */}
-          <a href="/" aria-label="ReplAInow Home" className="flex items-center gap-3 font-black text-lg group">
+          {/* Professional Logo */}
+          <a href="/" aria-label="ReplAInow Home" className="flex items-center gap-3 group">
             <div className="relative">
               <img
-                src="/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png"
+                src="/lovable-uploads/100738e9-73dd-442e-b79a-8b064b5b00c3.png"
                 alt="ReplAInow Logo - KI-gestützter Shopify Support mit GPT-4.1 Technologie für automatisierten Kundenservice"
-                className="h-8 w-auto hover:scale-110 transition-transform duration-300"
+                className="h-10 w-auto hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <span className="text-slate-800 group-hover:text-blue-600 transition-colors duration-300 font-bold">
-              ReplAInow
+            <span className="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors duration-300">
+              Repl<span className="text-blue-600">AI</span>now
             </span>
           </a>
           
@@ -57,8 +57,8 @@ const ModernNavbar = () => {
               <Zap className="w-4 h-4 group-hover:scale-110 transition-transform" />
               Demo
             </a>
-            <a href="#preise" className="text-slate-600 hover:text-blue-600 transition-colors story-link flex items-center gap-2 group focus-ring-enhanced">
-                <span className="text-yellow-500 font-bold">EUR</span>
+            <a href="#pricing" className="text-slate-600 hover:text-blue-600 transition-colors story-link flex items-center gap-2 group focus-ring-enhanced">
+              <span className="text-yellow-500 font-bold">€</span>
               Preise
             </a>
             <a href="#contact" className="text-slate-600 hover:text-blue-600 transition-colors story-link focus-ring-enhanced">
@@ -79,7 +79,7 @@ const ModernNavbar = () => {
             <Button
               variant="ghost"
               size="sm"
-              className="md:hidden text-white hover:bg-slate-800/50"
+              className="md:hidden text-slate-600 hover:bg-slate-100"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -108,16 +108,16 @@ const ModernNavbar = () => {
                 Demo
               </a>
               <a 
-                href="#preise" 
+                href="#pricing" 
                 className="block py-4 px-3 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition-colors font-semibold text-base touch-target flex items-center gap-3"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                 <span className="text-yellow-300 text-lg font-bold">EUR</span>
+                <span className="text-yellow-500 font-bold">€</span>
                 Preise
               </a>
               <a 
                 href="#contact" 
-                className="block py-4 px-3 text-white hover:text-cyan-300 hover:bg-slate-800/50 rounded-lg transition-colors font-semibold text-base touch-target"
+                className="block py-4 px-3 text-slate-600 hover:text-blue-600 hover:bg-slate-50 rounded-lg transition-colors font-semibold text-base touch-target"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Kontakt

@@ -14,8 +14,8 @@ const AIOptimizedFAQ = () => {
     },
     {
       question: "Wie viel kostet ReplAInow?",
-      shortAnswer: "ReplAInow startet bei $19/Monat mit 14 Tagen kostenloser Testphase.",
-      detailedAnswer: "ReplAInow startet bei $19/Monat für bis zu 300 AI-Antworten. Weitere Pläne: Growth ($49/Monat, 1500 Antworten), Pro ($99/Monat, 3000 Antworten), Scale ($199/Monat, unlimitiert). Alle Pläne inkludieren 14 Tage kostenlose Testphase ohne Setup-Gebühren."
+      shortAnswer: "ReplAInow startet bei €19/Monat mit 14 Tagen kostenloser Testphase.",
+      detailedAnswer: "ReplAInow startet bei €19/Monat für den Starter Plan. Weitere Pläne: Pro (€49/Monat), Scale (€199/Monat). Alle Pläne inkludieren 14 Tage kostenlose Testphase ohne Setup-Gebühren und unlimitierte AI-Antworten."
     },
     {
       question: "Ist ReplAInow DSGVO-konform?",
@@ -50,14 +50,22 @@ const AIOptimizedFAQ = () => {
   ];
 
   return (
-    <section className="py-24 bg-ultra-light" itemScope itemType="https://schema.org/FAQPage">
+    <section className="py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50" itemScope itemType="https://schema.org/FAQPage">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-black mb-4 tracking-tight">
-              Häufig gestellte Fragen zu <span className="text-gradient-primary">ReplAInow AI Helpdesk</span>
+            <div className="inline-block mb-6">
+              <span className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm rounded-full shadow-lg animate-pulse">
+                HÄUFIGE FRAGEN
+              </span>
+            </div>
+            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 animate-gradient-x">
+                Häufig gestellte Fragen
+              </span>
+              <span className="block text-slate-800 mt-2">zu ReplAInow AI Helpdesk</span>
             </h2>
-            <p className="text-xl text-slate-600">
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Alle wichtigen Informationen über AI-gestützten Shopify Support
             </p>
           </div>
@@ -66,13 +74,13 @@ const AIOptimizedFAQ = () => {
             {faqs.map((faq, index) => (
               <div 
                 key={index}
-                className="glass-card rounded-2xl overflow-hidden shadow-glass"
+                className="bg-white/80 backdrop-blur-lg rounded-2xl overflow-hidden shadow-xl border border-slate-200 hover:shadow-2xl transition-all duration-300"
                 itemScope 
                 itemType="https://schema.org/Question"
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full text-left p-6 hover:bg-white/50 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-inset"
+                  className="w-full text-left p-6 hover:bg-blue-50/50 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
                   aria-expanded={openIndex === index}
                 >
                   <div className="flex items-center justify-between">
@@ -83,7 +91,7 @@ const AIOptimizedFAQ = () => {
                       {faq.question}
                     </h3>
                     <div className="flex-shrink-0">
-                      <div className={`w-6 h-6 rounded-full bg-gradient-primary flex items-center justify-center text-white text-sm transform transition-transform ${
+                      <div className={`w-8 h-8 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 flex items-center justify-center text-white text-lg transform transition-transform ${
                         openIndex === index ? 'rotate-45' : ''
                       }`}>
                         +
@@ -92,7 +100,7 @@ const AIOptimizedFAQ = () => {
                   </div>
                   
                   {/* Short Answer für AI Extraction */}
-                  <div className="mt-2 text-sm text-indigo-600 font-semibold">
+                  <div className="mt-3 text-sm text-blue-600 font-semibold">
                     {faq.shortAnswer}
                   </div>
                 </button>
@@ -119,7 +127,7 @@ const AIOptimizedFAQ = () => {
 
           {/* Call-to-Action */}
           <div className="text-center mt-16">
-            <div className="glass-card p-8 rounded-3xl">
+            <div className="bg-white/80 backdrop-blur-lg p-8 rounded-3xl border border-slate-200 shadow-xl">
               <h3 className="text-2xl font-bold mb-4 text-slate-800">
                 Weitere Fragen zu ReplAInow AI Helpdesk?
               </h3>
@@ -129,15 +137,15 @@ const AIOptimizedFAQ = () => {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
                   href="https://apps.shopify.com/replainow-ai-support"
-                  className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-primary text-white font-semibold rounded-xl shadow-brand hover:shadow-brand-glow hover:-translate-y-1 transition-all"
+                  className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-blue-500/25 hover:-translate-y-1 transition-all"
                 >
-                  🚀 Kostenlos testen
+                  Kostenlos testen
                 </a>
                 <a 
                   href="#live-demo"
-                  className="inline-flex items-center gap-2 px-8 py-3 glass border border-indigo-200 text-indigo-600 font-semibold rounded-xl hover:bg-white/90 transition-all"
+                  className="inline-flex items-center gap-2 px-8 py-3 bg-white/80 border border-blue-200 text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-all"
                 >
-                  📺 Live Demo ansehen
+                  Live Demo ansehen
                 </a>
               </div>
             </div>

@@ -37,19 +37,19 @@ const ModernFeatures = () => {
     {
       icon: BarChart3,
       title: "Echtzeit Shopify-Daten",
-      desc: "AI kennt ALLE Produkte, Preise, Lagerbestnde automatisch",
+      desc: "AI kennt ALLE Produkte, Preise, Lagerbestände automatisch",
       gradient: "from-green-500 to-emerald-500",
-      story: "AI wei: 'iPhone Case ist auf Lager, 15% Rabatt verfgbar, Versand morgen'",
+      story: "AI weiß: 'iPhone Case ist auf Lager, 15% Rabatt verfügbar, Versand morgen'",
       impact: "100% Accuracy",
       color: "green"
     },
     {
       icon: TrendingUp,
       title: "75% Kosteneinsparung",
-      desc: "berlegen UND gnstiger als teure Konkurrenz",
+      desc: "Überlegen UND günstiger als teure Konkurrenz",
       gradient: "from-amber-500 to-orange-500",
-      story: "Whrend Gorgias 200/Monat kostet, zahlst du nur 19",
-      impact: "1.368/Jahr gespart",
+      story: "Während Gorgias €200/Monat kostet, zahlst du nur €19",
+      impact: "€1.368/Jahr gespart",
       color: "yellow"
     },
     {
@@ -57,7 +57,7 @@ const ModernFeatures = () => {
       title: "1-Klick Installation",
       desc: "Setup in unter 60 Sekunden - keine komplexe Konfiguration",
       gradient: "from-rose-500 to-red-500",
-      story: "Klick  AI lernt deinen Store  Fertig. Keine IT-Abteilung ntig",
+      story: "Klick → AI lernt deinen Store → Fertig. Keine IT-Abteilung nötig",
       impact: "60s Setup",
       color: "red"
     }
@@ -117,10 +117,10 @@ const ModernFeatures = () => {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 animate-gradient-x">
               Warum ReplAInow
             </span>
-            <span className="block text-slate-800 mt-2">die Konkurrenz zerstrt</span>
+            <span className="block text-slate-800 mt-2">die Konkurrenz zerstört</span>
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 text-center mb-12 sm:mb-16 max-w-4xl mx-auto px-4">
-            <span className="text-blue-600 font-bold">Revolutionre GPT-4.1 Technologie</span> trifft auf
+            <span className="text-blue-600 font-bold">Revolutionäre GPT-4.1 Technologie</span> trifft auf
             <span className="text-indigo-600 font-bold"> perfekte Shopify-Integration</span>
           </p>
         </div>
