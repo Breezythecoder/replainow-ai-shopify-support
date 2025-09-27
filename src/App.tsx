@@ -4,6 +4,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { SkipToMainContent, useKeyboardNavigation } from "@/components/ui/accessibility";
 import { trackWebVitals } from "@/components/ui/performance";
 import Index from "./pages/Index";
@@ -25,6 +26,15 @@ const Impressum = lazy(() => import("./pages/Impressum"));
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+
+// SEO Pillar Pages
+const AIShopifyHelpdesk = lazy(() => import("./pages/AIShopifyHelpdesk"));
+const MultilingualSupport = lazy(() => import("./pages/MultilingualSupport"));
+
+// SEO Utility Pages
+const SitemapXML = lazy(() => import("./pages/SitemapXML"));
+const RobotsTXT = lazy(() => import("./pages/RobotsTXT"));
+const LLMFactsJSON = lazy(() => import("./pages/LLMFactsJSON"));
 
 
 import ContrastAuditor from "@/components/dev/ContrastAuditor";
@@ -84,6 +94,17 @@ const AppContent = () => {
               <Route path="/it" element={<IndexIt />} />
               <Route path="/nl" element={<IndexNl />} />
               <Route path="/zh" element={<IndexZh />} />
+              
+              {/* SEO Pillar Pages */}
+              <Route path="/ai-shopify-helpdesk" element={<AIShopifyHelpdesk />} />
+              <Route path="/multilingual-support" element={<MultilingualSupport />} />
+              
+              {/* SEO Utility Routes */}
+              <Route path="/sitemap.xml" element={<SitemapXML />} />
+              <Route path="/robots.txt" element={<RobotsTXT />} />
+              <Route path="/.well-known/llm-facts.json" element={<LLMFactsJSON />} />
+              
+              {/* Legal Pages */}
               <Route path="/privacy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<TermsOfService />} />
               <Route path="/uninstall" element={<UninstallInstructions />} />
@@ -109,13 +130,15 @@ const AppContent = () => {
 };
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <AppContent />
-    </TooltipProvider>
-  </QueryClientProvider>
+  <HelmetProvider>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <AppContent />
+      </TooltipProvider>
+    </QueryClientProvider>
+  </HelmetProvider>
 );
 
 export default App;

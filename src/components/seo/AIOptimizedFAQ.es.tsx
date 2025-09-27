@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { faqPageSchema } from './StructuredData';
+import { generateFAQSchema } from './StructuredData';
 
 // Sección FAQ optimizada para IA para mejor visibilidad en resultados de búsqueda IA
 const AIOptimizedFAQEs = () => {
@@ -147,7 +147,7 @@ const AIOptimizedFAQEs = () => {
 
       {/* Structured Data */}
       <script type="application/ld+json">
-        {JSON.stringify(faqPageSchema)}
+        {JSON.stringify(generateFAQSchema(faqs))}
       </script>
     </section>
   );
