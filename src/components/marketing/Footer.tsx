@@ -53,7 +53,7 @@ const Footer = () => {
 
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Company Info */}
           <div className="md:col-span-1">
               <div className="flex items-center mb-4">
@@ -85,6 +85,19 @@ const Footer = () => {
               <li><a href="#pricing" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Preise</a></li>
               <li><a href="#live-demo" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Live Demo</a></li>
               <li><a href="https://apps.shopify.com/replainow-ai-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Installieren</a></li>
+            </ul>
+          </div>
+
+          {/* SEO Pillar Pages */}
+          <div>
+            <h4 className="text-white font-bold mb-4">Ressourcen</h4>
+            <ul className="space-y-3">
+              <li><a href="/ai-shopify-helpdesk" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">AI Shopify Helpdesk</a></li>
+              <li><a href="/multilingual-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Multilingual Support</a></li>
+              <li><a href="/shopify-customer-service" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Shopify Customer Service</a></li>
+              <li><a href="/shopify-ai-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Shopify AI Support</a></li>
+              <li><a href="/gorgias-alternative" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Gorgias Alternative</a></li>
+              <li><a href="/intercom-alternative" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Intercom Alternative</a></li>
             </ul>
           </div>
 
