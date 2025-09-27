@@ -180,7 +180,7 @@ const ModernComparison = () => {
                   <div className="bg-gradient-to-br from-green-50 via-emerald-50 to-green-100/50 border-2 border-green-200/50 rounded-2xl p-8 shadow-xl">
                     <div className="text-center mb-6">
                       <div className="text-5xl font-black text-green-600 mb-2">€19/Monat</div>
-                      <div className="text-green-700 font-semibold text-lg">Alle Premium-Features inklusive</div>
+                      <div className="text-green-800 font-semibold text-lg">Alle Premium-Features inklusive</div>
                     </div>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
