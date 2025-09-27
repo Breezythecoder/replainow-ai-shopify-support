@@ -52,11 +52,11 @@ const ModernComparison = () => {
         </div>
         
         <div className="max-w-7xl mx-auto">
-          <div className="overflow-x-auto -mx-4 sm:mx-0">
+          <div className="overflow-x-auto -mx-4 sm:mx-0" tabIndex="0" role="region" aria-label="Comparison table - scrollable">
             <div className="inline-block min-w-full align-middle">
                 <div className="bg-slate-800/80 backdrop-blur-lg rounded-3xl overflow-hidden shadow-2xl mx-4 sm:mx-0 border border-blue-500/50">
                 <div className="overflow-hidden rounded-3xl">
-                  <table className="w-full min-w-[600px] sm:min-w-full">
+                  <table className="w-full min-w-[600px] sm:min-w-full" role="table" aria-label="Comparison table between ReplAInow and competitors">
                     <thead>
                       <tr className="border-b border-blue-500/30">
                         <th className="text-left py-4 px-4 sm:py-5 sm:px-6 md:py-6 md:px-8 font-bold text-white text-sm sm:text-base bg-slate-700/50 rounded-tl-3xl">Feature</th>

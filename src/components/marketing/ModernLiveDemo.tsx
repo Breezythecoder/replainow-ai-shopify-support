@@ -195,13 +195,14 @@ const ModernLiveDemo = () => {
                             setSelectedScenario(index);
                             resetDemo();
                           }}
+                          aria-label={`Switch to ${scenario.name} scenario`}
                           className={`px-4 py-2 rounded-xl font-medium transition-all duration-300 ${
                             selectedScenario === index
                               ? 'bg-blue-600 text-white shadow-lg transform scale-105'
                               : 'bg-white text-slate-600 border border-slate-300 hover:bg-blue-50 hover:border-blue-300'
                           }`}
                         >
-                          <span className="mr-2">{scenario.icon}</span>
+                          <span className="mr-2" aria-hidden="true">{scenario.icon}</span>
                           {scenario.name}
                         </button>
                       ))}

@@ -10,7 +10,7 @@ const ModernProblemSolutionZh = () => {
         <div className="grid lg:grid-cols-2 gap-12">
           <div className="bg-destructive/10 border border-destructive/20 rounded-3xl p-8 relative shadow-lg">
             <div className="absolute -top-3 left-6 bg-destructive text-destructive-foreground px-4 py-2 rounded-full text-sm font-bold">  REPLAINOW</div>
-            <img src="/assets/1d082320-2e70-4359-aaed-38272ddacb7.png" alt="" className="w-full mb-6 rounded-xl shadow-md" />
+            <img src="/assets/1d082320-2e70-4359-aaed-382d72ddacb7.png" alt="Chaotisches überfülltes E-Mail Postfach" className="w-full mb-6 rounded-xl shadow-md" />
             <ul className="space-y-4 text-slate-700">
               <li className="flex items-center gap-3"><span className="text-destructive text-xl"></span><span className="font-medium"> 50+ </span></li>
               <li className="flex items-center gap-3"><span className="text-destructive text-xl"></span><span className="font-medium"></span></li>
