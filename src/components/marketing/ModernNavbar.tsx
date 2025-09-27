@@ -43,7 +43,7 @@ const ModernNavbar = () => {
               {/* Glow Effect */}
               <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl blur-lg opacity-30 group-hover:opacity-60 transition-opacity duration-300"></div>
               
-              {/* Logo Container */}
+              {/* Logo Container - Nur Icon */}
               <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-xl p-2 border border-blue-500/30 group-hover:border-blue-400/60 transition-all duration-300">
                 <img
                   src="/lovable-uploads/100738e9-73dd-442e-b79a-8b064b5b00c3.png"
@@ -57,7 +57,7 @@ const ModernNavbar = () => {
             </div>
             
             {/* AI Brand Text */}
-            <div className="ml-3 hidden sm:block">
+            <div className="ml-3">
               <div className="text-white font-black text-lg">
                 Repl<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 animate-pulse">AI</span>now
               </div>

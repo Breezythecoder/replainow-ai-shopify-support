@@ -54,12 +54,12 @@ const ModernComparison = () => {
         <div className="max-w-7xl mx-auto">
           <div className="overflow-x-auto -mx-4 sm:mx-0">
             <div className="inline-block min-w-full align-middle">
-              <div className="glass-card rounded-3xl overflow-hidden shadow-hero mx-4 sm:mx-0">
+              <div className="bg-slate-800/50 backdrop-blur-lg rounded-3xl overflow-hidden shadow-2xl mx-4 sm:mx-0 border border-blue-500/30">
                 <div className="overflow-hidden rounded-3xl">
                   <table className="w-full min-w-[600px] sm:min-w-full">
                     <thead>
-                      <tr className="border-b border-white/20">
-                        <th className="text-left py-4 px-4 sm:py-5 sm:px-6 md:py-6 md:px-8 font-bold text-slate-800 text-sm sm:text-base bg-white/80 rounded-tl-3xl">Feature</th>
+                      <tr className="border-b border-blue-500/30">
+                        <th className="text-left py-4 px-4 sm:py-5 sm:px-6 md:py-6 md:px-8 font-bold text-white text-sm sm:text-base bg-slate-700/50 rounded-tl-3xl">Feature</th>
                         <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 bg-gradient-to-r from-blue-600 to-indigo-600 text-white relative overflow-hidden text-sm sm:text-base min-w-[140px]">
                           <div className="font-black text-base sm:text-lg md:text-xl">ReplAInow</div>
                           <div className="text-xs sm:text-sm opacity-90">Powered by GPT-4.1</div>
@@ -69,15 +69,15 @@ const ModernComparison = () => {
                              </svg>
                            </div>
                         </th>
-                        <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-slate-600 font-semibold bg-white/60 text-sm sm:text-base min-w-[120px]">Gorgias</th>
-                        <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-slate-600 font-semibold bg-white/40 text-sm sm:text-base min-w-[120px]">Intercom</th>
-                        <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-slate-600 font-semibold bg-white/20 text-sm sm:text-base rounded-tr-3xl min-w-[120px]">Zendesk</th>
+                        <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-blue-200 font-semibold bg-slate-700/30 text-sm sm:text-base min-w-[120px]">Gorgias</th>
+                        <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-blue-200 font-semibold bg-slate-700/20 text-sm sm:text-base min-w-[120px]">Intercom</th>
+                        <th className="text-center py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-blue-200 font-semibold bg-slate-700/10 text-sm sm:text-base rounded-tr-3xl min-w-[120px]">Zendesk</th>
                       </tr>
                     </thead>
                     <tbody>
                       {comparisonData.map((row, i) => (
-                        <tr key={i} className={`border-b border-slate-200 hover:bg-blue-50/50 transition-all duration-300 group ${i === comparisonData.length - 1 ? 'border-b-0' : ''}`}>
-                          <td className={`py-4 px-4 sm:py-5 sm:px-6 md:py-6 md:px-8 font-bold text-slate-800 bg-white/60 text-sm sm:text-base ${i === comparisonData.length - 1 ? 'rounded-bl-3xl' : ''}`}>
+                        <tr key={i} className={`border-b border-blue-500/20 hover:bg-blue-500/10 transition-all duration-300 group ${i === comparisonData.length - 1 ? 'border-b-0' : ''}`}>
+                          <td className={`py-4 px-4 sm:py-5 sm:px-6 md:py-6 md:px-8 font-bold text-white bg-slate-700/30 text-sm sm:text-base ${i === comparisonData.length - 1 ? 'rounded-bl-3xl' : ''}`}>
                             {row[0]}
                           </td>
                           <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center bg-gradient-to-r from-blue-600 to-indigo-600 font-bold text-white relative text-sm sm:text-base">
@@ -91,13 +91,13 @@ const ModernComparison = () => {
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                           </td>
-                          <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-slate-600 font-medium bg-white/50 hover:bg-red-50/50 transition-colors text-sm sm:text-base">
+                          <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-300 font-medium bg-slate-700/20 hover:bg-red-500/20 transition-colors text-sm sm:text-base">
                             <span className="whitespace-nowrap">{row[2]}</span>
                           </td>
-                          <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-slate-600 font-medium bg-white/30 hover:bg-red-50/30 transition-colors text-sm sm:text-base">
+                          <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-300 font-medium bg-slate-700/15 hover:bg-red-500/15 transition-colors text-sm sm:text-base">
                             <span className="whitespace-nowrap">{row[3]}</span>
                           </td>
-                          <td className={`py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-slate-600 font-medium bg-white/20 hover:bg-red-50/20 transition-colors text-sm sm:text-base ${i === comparisonData.length - 1 ? 'rounded-br-3xl' : ''}`}>
+                          <td className={`py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-300 font-medium bg-slate-700/10 hover:bg-red-500/10 transition-colors text-sm sm:text-base ${i === comparisonData.length - 1 ? 'rounded-br-3xl' : ''}`}>
                             <span className="whitespace-nowrap">{row[4]}</span>
                           </td>
                         </tr>
@@ -138,7 +138,7 @@ const ModernComparison = () => {
                 <div className="space-y-8">
                   <div className="text-center">
                     <h4 className="text-3xl font-bold text-red-600 mb-2">Teure Konkurrenz</h4>
-                    <p className="text-slate-600">Basis-Features für Premium-Preise</p>
+                    <p className="text-blue-200">Basis-Features für Premium-Preise</p>
                   </div>
                   
                   <div className="space-y-6">
@@ -166,7 +166,7 @@ const ModernComparison = () => {
                   
                   <div className="bg-gradient-to-r from-red-100 to-red-200/50 border-2 border-red-300/50 rounded-2xl p-6 text-center">
                     <div className="text-red-800 font-black text-3xl mb-2">€1.800+/Jahr</div>
-                    <div className="text-red-600 font-semibold">Nur für Basis-Features</div>
+                    <div className="text-red-400 font-semibold">Nur für Basis-Features</div>
                   </div>
                 </div>
 
@@ -174,7 +174,7 @@ const ModernComparison = () => {
                 <div className="space-y-8">
                   <div className="text-center">
                     <h4 className="text-3xl font-bold text-green-600 mb-2">ReplAInow Power</h4>
-                    <p className="text-slate-600">Premium-Features für faire Preise</p>
+                    <p className="text-blue-200">Premium-Features für faire Preise</p>
                   </div>
                   
                   <div className="bg-gradient-to-br from-green-50 via-emerald-50 to-green-100/50 border-2 border-green-200/50 rounded-2xl p-8 shadow-xl">
