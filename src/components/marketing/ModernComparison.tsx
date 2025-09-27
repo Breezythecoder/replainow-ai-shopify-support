@@ -91,13 +91,13 @@ const ModernComparison = () => {
                             </div>
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                           </td>
-                          <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-200 font-medium bg-slate-700/20 hover:bg-red-500/20 transition-colors text-sm sm:text-base">
+                          <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-100 font-medium bg-slate-700/20 hover:bg-red-500/20 transition-colors text-sm sm:text-base">
                             <span className="whitespace-nowrap">{row[2]}</span>
                           </td>
-                          <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-200 font-medium bg-slate-700/15 hover:bg-red-500/15 transition-colors text-sm sm:text-base">
+                          <td className="py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-100 font-medium bg-slate-700/15 hover:bg-red-500/15 transition-colors text-sm sm:text-base">
                             <span className="whitespace-nowrap">{row[3]}</span>
                           </td>
-                          <td className={`py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-200 font-medium bg-slate-700/10 hover:bg-red-500/10 transition-colors text-sm sm:text-base ${i === comparisonData.length - 1 ? 'rounded-br-3xl' : ''}`}>
+                          <td className={`py-4 px-4 sm:py-5 sm:px-6 md:py-6 text-center text-red-100 font-medium bg-slate-700/10 hover:bg-red-500/10 transition-colors text-sm sm:text-base ${i === comparisonData.length - 1 ? 'rounded-br-3xl' : ''}`}>
                             <span className="whitespace-nowrap">{row[4]}</span>
                           </td>
                         </tr>
@@ -112,7 +112,7 @@ const ModernComparison = () => {
 
         {/* Ultra-Modern Cost Savings Block */}
         <div className="mt-20 max-w-7xl mx-auto">
-          <div className="bg-gradient-to-br from-slate-50 via-white to-slate-50 rounded-3xl p-8 sm:p-16 border border-slate-200/50 shadow-2xl relative overflow-hidden">
+          <div className="bg-gradient-to-br from-slate-800 via-slate-900 to-slate-800 rounded-3xl p-8 sm:p-16 border border-blue-500/30 shadow-2xl relative overflow-hidden">
             {/* Modern Background Elements */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-green-500/5"></div>
             <div className="absolute top-10 right-10 w-40 h-40 bg-gradient-to-bl from-blue-400/10 to-transparent rounded-full blur-3xl"></div>
@@ -123,11 +123,11 @@ const ModernComparison = () => {
               {/* Header */}
               <div className="text-center mb-16">
                 <h3 className="text-5xl sm:text-6xl font-black mb-6">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-blue-600 to-green-600">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400">
                     Kosteneinsparung
                   </span>
                 </h3>
-                <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+                <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
                   Warum 75% weniger bezahlen und trotzdem die beste KI-Performance bekommen?
                 </p>
               </div>
@@ -137,8 +137,8 @@ const ModernComparison = () => {
                 {/* Competition Side */}
                 <div className="space-y-8">
                   <div className="text-center">
-                    <h4 className="text-3xl font-bold text-red-600 mb-2">Teure Konkurrenz</h4>
-                    <p className="text-slate-600">Basis-Features für Premium-Preise</p>
+                    <h4 className="text-3xl font-bold text-red-400 mb-2">Teure Konkurrenz</h4>
+                    <p className="text-slate-300">Basis-Features für Premium-Preise</p>
                   </div>
                   
                   <div className="space-y-6">
@@ -147,16 +147,16 @@ const ModernComparison = () => {
                        { name: "Intercom", price: "€74+", features: ["Teure Add-ons", "Komplexe Setup", "Begrenzte Integration"] },
                        { name: "Zendesk", price: "€115+", features: ["Überteuerte Features", "Lange Einarbeitung", "Versteckte Kosten"] }
                     ].map((item, i) => (
-                      <div key={i} className="bg-gradient-to-r from-red-50 to-red-100/50 border-2 border-red-200/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:border-red-300">
+                      <div key={i} className="bg-gradient-to-r from-red-900/30 to-red-800/20 border-2 border-red-500/30 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:border-red-400">
                         <div className="flex justify-between items-center mb-4">
-                          <h5 className="font-bold text-red-900 text-xl">{item.name}</h5>
-                          <span className="text-2xl font-black text-red-600">{item.price}/Monat</span>
+                          <h5 className="font-bold text-red-300 text-xl">{item.name}</h5>
+                          <span className="text-2xl font-black text-red-200">{item.price}/Monat</span>
                         </div>
                         <div className="space-y-2">
                           {item.features.map((feature, j) => (
                             <div key={j} className="flex items-center gap-3 text-sm">
                               <div className="w-1.5 h-1.5 bg-red-400 rounded-full"></div>
-                              <span className="text-red-700">{feature}</span>
+                              <span className="text-red-200">{feature}</span>
                             </div>
                           ))}
                         </div>
@@ -164,23 +164,23 @@ const ModernComparison = () => {
                     ))}
                   </div>
                   
-                  <div className="bg-gradient-to-r from-red-100 to-red-200/50 border-2 border-red-300/50 rounded-2xl p-6 text-center">
-                    <div className="text-red-800 font-black text-3xl mb-2">€1.800+/Jahr</div>
-                    <div className="text-red-400 font-semibold">Nur für Basis-Features</div>
+                  <div className="bg-gradient-to-r from-red-900/40 to-red-800/30 border-2 border-red-500/40 rounded-2xl p-6 text-center">
+                    <div className="text-red-200 font-black text-3xl mb-2">€1.800+/Jahr</div>
+                    <div className="text-red-300 font-semibold">Nur für Basis-Features</div>
                   </div>
                 </div>
 
                 {/* ReplAInow Side */}
                 <div className="space-y-8">
                   <div className="text-center">
-                    <h4 className="text-3xl font-bold text-green-600 mb-2">ReplAInow Power</h4>
-                    <p className="text-slate-600">Premium-Features für faire Preise</p>
+                    <h4 className="text-3xl font-bold text-green-400 mb-2">ReplAInow Power</h4>
+                    <p className="text-slate-300">Premium-Features für faire Preise</p>
                   </div>
                   
-                  <div className="bg-gradient-to-br from-green-50 via-emerald-50 to-green-100/50 border-2 border-green-200/50 rounded-2xl p-8 shadow-xl">
+                  <div className="bg-gradient-to-br from-green-900/40 via-emerald-900/30 to-green-800/20 border-2 border-green-500/40 rounded-2xl p-8 shadow-xl">
                     <div className="text-center mb-6">
-                      <div className="text-5xl font-black text-green-600 mb-2">€19/Monat</div>
-                      <div className="text-green-800 font-semibold text-lg">Alle Premium-Features inklusive</div>
+                      <div className="text-5xl font-black text-green-300 mb-2">€19/Monat</div>
+                      <div className="text-green-200 font-semibold text-lg">Alle Premium-Features inklusive</div>
                     </div>
                     
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
@@ -193,17 +193,17 @@ const ModernComparison = () => {
                         "24/7 Verfügbarkeit"
                       ].map((feature, i) => (
                         <div key={i} className="flex items-center gap-3 text-sm">
-                          <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
-                          <span className="text-green-800 font-medium">{feature}</span>
+                          <div className="w-2 h-2 bg-green-400 rounded-full flex-shrink-0"></div>
+                          <span className="text-green-200 font-medium">{feature}</span>
                         </div>
                       ))}
                     </div>
                   </div>
                   
-                  <div className="bg-gradient-to-r from-blue-100 to-indigo-100/50 border-2 border-blue-300/50 rounded-2xl p-6 text-center">
-                    <div className="text-blue-800 font-black text-3xl mb-2">€228/Jahr</div>
-                    <div className="text-blue-600 font-semibold text-lg">€1.572/Jahr gespart!</div>
-                    <div className="text-blue-500 text-sm mt-1">ROI: 600%+ garantiert</div>
+                  <div className="bg-gradient-to-r from-blue-900/40 to-indigo-900/30 border-2 border-blue-500/40 rounded-2xl p-6 text-center">
+                    <div className="text-blue-200 font-black text-3xl mb-2">€228/Jahr</div>
+                    <div className="text-blue-300 font-semibold text-lg">€1.572/Jahr gespart!</div>
+                    <div className="text-blue-400 text-sm mt-1">ROI: 600%+ garantiert</div>
                   </div>
                 </div>
               </div>
