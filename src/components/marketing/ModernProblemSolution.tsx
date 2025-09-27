@@ -43,7 +43,7 @@ const ModernProblemSolution = () => {
         
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Before Card - Problem */}
-          <div className="bg-slate-800/50 backdrop-blur-lg border border-red-500/30 rounded-3xl p-8 relative shadow-2xl hover:shadow-red-500/25 transition-all duration-300 hover:scale-102">
+          <div className="bg-slate-800/80 backdrop-blur-lg border border-red-500/50 rounded-3xl p-8 relative shadow-2xl hover:shadow-red-500/25 transition-all duration-300 hover:scale-102">
             <div className="absolute -top-3 left-6 bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
               ⚠️ OHNE REPLAINOW
             </div>
@@ -77,7 +77,7 @@ const ModernProblemSolution = () => {
           </div>
           
           {/* After Card - Solution */}
-          <div className="bg-slate-800/50 backdrop-blur-lg border border-green-500/30 rounded-3xl p-8 relative shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-102">
+          <div className="bg-slate-800/80 backdrop-blur-lg border border-green-500/50 rounded-3xl p-8 relative shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-102">
             <div className="absolute -top-3 left-6 bg-gradient-to-r from-green-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
               🚀 MIT REPLAINOW
             </div>

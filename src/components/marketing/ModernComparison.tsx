@@ -54,7 +54,7 @@ const ModernComparison = () => {
         <div className="max-w-7xl mx-auto">
           <div className="overflow-x-auto -mx-4 sm:mx-0">
             <div className="inline-block min-w-full align-middle">
-              <div className="bg-slate-800/50 backdrop-blur-lg rounded-3xl overflow-hidden shadow-2xl mx-4 sm:mx-0 border border-blue-500/30">
+                <div className="bg-slate-800/80 backdrop-blur-lg rounded-3xl overflow-hidden shadow-2xl mx-4 sm:mx-0 border border-blue-500/50">
                 <div className="overflow-hidden rounded-3xl">
                   <table className="w-full min-w-[600px] sm:min-w-full">
                     <thead>

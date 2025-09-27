@@ -128,12 +128,13 @@ const ModernNavbar = () => {
             </Button>
             
             {/* AI-Style Mobile Menu Button */}
-            <Button
-              variant="ghost"
-              size="sm"
-              className="md:hidden text-blue-200 hover:text-white hover:bg-blue-500/20 transition-all duration-300 p-3"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
+              <Button
+                variant="ghost"
+                size="sm"
+                className="md:hidden text-blue-200 hover:text-white hover:bg-blue-500/20 transition-all duration-300 p-3"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-label={mobileMenuOpen ? "Navigation schließen" : "Navigation öffnen"}
+              >
               {mobileMenuOpen ? (
                 <X className="h-5 w-5 animate-spin" />
               ) : (

@@ -147,9 +147,9 @@ const ModernFeatures = () => {
           {features.map((feature, i) => (
             <div 
               key={i} 
-              className={`group bg-slate-800/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/30 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 ${
-                activeFeature === i ? 'scale-105 shadow-blue-500/25 border-blue-400/60 bg-slate-800/70' : 'hover:scale-102 hover:border-blue-400/50'
-              }`}
+                className={`group bg-slate-800/80 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/50 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 ${
+                  activeFeature === i ? 'scale-105 shadow-blue-500/25 border-blue-400/70 bg-slate-800/90' : 'hover:scale-102 hover:border-blue-400/60'
+                }`}
               onClick={() => setActiveFeature(i)}
             >
               {/* AI Glow Effect */}
