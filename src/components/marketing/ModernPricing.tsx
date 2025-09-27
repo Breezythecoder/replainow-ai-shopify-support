@@ -18,7 +18,7 @@ const plans = [
     trial: "14 Tage kostenlos testen",
     features: [
       ...baseFeatures,
-      "E-Mail Versand ber ReplAInow Adresse",
+      "E-Mail Versand über ReplAInow Adresse",
     ],
     highlight: false,
     description: "Perfekt zum Testen"
@@ -35,7 +35,7 @@ const plans = [
     ],
     highlight: true,
     badge: "Beliebtester Plan",
-    description: "Fr wachsende Stores"
+    description: "Für wachsende Stores"
   },
   {
     name: "Pro",

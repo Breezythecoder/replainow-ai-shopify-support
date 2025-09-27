@@ -12,14 +12,14 @@ const ModernFeatures = () => {
       title: "GPT-4.1 Intelligence",
       desc: "Neueste AI-Technologie versteht Kontext wie ein menschlicher Experte",
       gradient: "from-indigo-500 to-blue-500",
-      story: "Deine AI denkt wie ein 10-jhriger Shopify-Experte - nur 1000x schneller",
+      story: "Deine AI denkt wie ein 10-jähriger Shopify-Experte - nur 1000x schneller",
       impact: "+187% Conversion",
       color: "cyan"
     },
     {
       icon: Clock,
       title: "3-Sekunden Antworten",
-      desc: "Instant-Responses whrend Gorgias & Co. noch laden",
+      desc: "Instant-Responses während Gorgias & Co. noch laden",
       gradient: "from-purple-500 to-pink-500",
       story: "Kunde fragt  AI antwortet  Kunde kauft. Alles in 3 Sekunden",
       impact: "90% weniger Tickets",
@@ -28,9 +28,9 @@ const ModernFeatures = () => {
     {
       icon: Globe,
       title: "32+ Sprachen Nativ",
-      desc: "Perfekte Antworten in Kundensprache - keine bersetzungsfehler",
+      desc: "Perfekte Antworten in Kundensprache - keine Übersetzungsfehler",
       gradient: "from-cyan-500 to-teal-500",
-      story: "Franzsische Kundin bekommt perfekte Antwort auf Franzsisch",
+      story: "Französische Kundin bekommt perfekte Antwort auf Französisch",
       impact: "+45% International",
       color: "blue"
     },

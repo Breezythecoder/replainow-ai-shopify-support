@@ -86,86 +86,100 @@ const ModernComparison = () => {
           </div>
         </div>
 
-        {/* Modern Cost Savings Block */}
-        <div className="mt-20 max-w-6xl mx-auto">
-          <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 sm:p-12 border border-slate-200 shadow-2xl relative overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-green-50/50"></div>
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-blue-100/30 to-transparent rounded-full blur-2xl"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-green-100/30 to-transparent rounded-full blur-2xl"></div>
+        {/* Ultra-Modern Cost Savings Block */}
+        <div className="mt-20 max-w-7xl mx-auto">
+          <div className="bg-gradient-to-br from-slate-50 via-white to-slate-50 rounded-3xl p-8 sm:p-16 border border-slate-200/50 shadow-2xl relative overflow-hidden">
+            {/* Modern Background Elements */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-green-500/5"></div>
+            <div className="absolute top-10 right-10 w-40 h-40 bg-gradient-to-bl from-blue-400/10 to-transparent rounded-full blur-3xl"></div>
+            <div className="absolute bottom-10 left-10 w-32 h-32 bg-gradient-to-tr from-green-400/10 to-transparent rounded-full blur-3xl"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-blue-200/5 to-green-200/5 rounded-full blur-3xl"></div>
             
             <div className="relative z-10">
-              <div className="text-center mb-12">
-                <h3 className="text-4xl sm:text-5xl font-bold mb-4">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-600 to-blue-600">
-                    Massive Kosteneinsparung
+              {/* Header */}
+              <div className="text-center mb-16">
+                <h3 className="text-5xl sm:text-6xl font-black mb-6">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-slate-900 via-blue-600 to-green-600">
+                    Kosteneinsparung
                   </span>
                 </h3>
-                <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+                <p className="text-xl text-slate-700 max-w-4xl mx-auto leading-relaxed">
                   Warum 75% weniger bezahlen und trotzdem die beste KI-Performance bekommen?
                 </p>
               </div>
               
-              <div className="grid lg:grid-cols-3 gap-8">
-                {/* Competition */}
-                <div className="lg:col-span-1">
-                  <h4 className="text-2xl font-bold text-red-600 mb-6 text-center">Teure Konkurrenz</h4>
-                  <div className="space-y-4">
+              {/* Main Comparison Grid */}
+              <div className="grid lg:grid-cols-2 gap-12">
+                {/* Competition Side */}
+                <div className="space-y-8">
+                  <div className="text-center">
+                    <h4 className="text-3xl font-bold text-red-600 mb-2">Teure Konkurrenz</h4>
+                    <p className="text-slate-600">Basis-Features für Premium-Preise</p>
+                  </div>
+                  
+                  <div className="space-y-6">
                     {[
-                       { name: "Gorgias", price: "€50+", features: "Basis AI, langsam" },
-                       { name: "Intercom", price: "€74+", features: "Begrenzte Sprachen" },
-                       { name: "Zendesk", price: "€115+", features: "Komplexe Setup" }
+                       { name: "Gorgias", price: "€50+", features: ["Basis AI", "Langsame Antworten", "Begrenzte Sprachen"] },
+                       { name: "Intercom", price: "€74+", features: ["Teure Add-ons", "Komplexe Setup", "Begrenzte Integration"] },
+                       { name: "Zendesk", price: "€115+", features: ["Überteuerte Features", "Lange Einarbeitung", "Versteckte Kosten"] }
                     ].map((item, i) => (
-                      <div key={i} className="bg-red-50 border border-red-200 rounded-xl p-4 hover:shadow-lg transition-shadow">
-                        <div className="flex justify-between items-start mb-2">
-                          <span className="font-bold text-red-800">{item.name}</span>
-                          <span className="text-lg font-black text-red-600">{item.price}/Monat</span>
+                      <div key={i} className="bg-gradient-to-r from-red-50 to-red-100/50 border-2 border-red-200/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:border-red-300">
+                        <div className="flex justify-between items-center mb-4">
+                          <h5 className="font-bold text-red-900 text-xl">{item.name}</h5>
+                          <span className="text-2xl font-black text-red-600">{item.price}/Monat</span>
                         </div>
-                        <p className="text-sm text-red-600">{item.features}</p>
+                        <div className="space-y-2">
+                          {item.features.map((feature, j) => (
+                            <div key={j} className="flex items-center gap-3 text-sm">
+                              <div className="w-1.5 h-1.5 bg-red-400 rounded-full"></div>
+                              <span className="text-red-700">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 bg-red-100 border border-red-200 rounded-xl p-4 text-center">
-                    <div className="text-red-700 font-bold">= €1.800+/Jahr</div>
-                    <div className="text-sm text-red-600">Nur für Basis-Features</div>
+                  
+                  <div className="bg-gradient-to-r from-red-100 to-red-200/50 border-2 border-red-300/50 rounded-2xl p-6 text-center">
+                    <div className="text-red-800 font-black text-3xl mb-2">€1.800+/Jahr</div>
+                    <div className="text-red-600 font-semibold">Nur für Basis-Features</div>
                   </div>
                 </div>
 
-                {/* VS Arrow */}
-                <div className="lg:col-span-1 flex items-center justify-center">
-                  <div className="text-6xl text-slate-400 font-bold">VS</div>
-                </div>
-
-                {/* ReplAInow */}
-                <div className="lg:col-span-1">
-                  <h4 className="text-2xl font-bold text-green-600 mb-6 text-center">ReplAInow Power</h4>
-                  <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-xl p-6 shadow-lg">
-                    <div className="text-center mb-4">
-                      <div className="text-4xl font-black text-green-600 mb-2">€19/Monat</div>
-                      <div className="text-sm text-green-600 font-semibold">Alle Features inklusive</div>
+                {/* ReplAInow Side */}
+                <div className="space-y-8">
+                  <div className="text-center">
+                    <h4 className="text-3xl font-bold text-green-600 mb-2">ReplAInow Power</h4>
+                    <p className="text-slate-600">Premium-Features für faire Preise</p>
+                  </div>
+                  
+                  <div className="bg-gradient-to-br from-green-50 via-emerald-50 to-green-100/50 border-2 border-green-200/50 rounded-2xl p-8 shadow-xl">
+                    <div className="text-center mb-6">
+                      <div className="text-5xl font-black text-green-600 mb-2">€19/Monat</div>
+                      <div className="text-green-700 font-semibold text-lg">Alle Premium-Features inklusive</div>
                     </div>
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span>GPT-4.1 AI Engine</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span>32+ Sprachen nativ</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span>3 Sekunden Antwortzeit</span>
-                      </div>
-                      <div className="flex items-center gap-2 text-sm">
-                        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                        <span>Unlimitierte AI-Antworten</span>
-                      </div>
+                    
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                      {[
+                        "GPT-4.1 AI Engine",
+                        "32+ Sprachen nativ", 
+                        "3 Sekunden Antwortzeit",
+                        "Unlimitierte AI-Antworten",
+                        "DSGVO-konform",
+                        "24/7 Verfügbarkeit"
+                      ].map((feature, i) => (
+                        <div key={i} className="flex items-center gap-3 text-sm">
+                          <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
+                          <span className="text-green-800 font-medium">{feature}</span>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                  <div className="mt-6 bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-4 text-center">
-                    <div className="text-blue-700 font-bold text-lg">= €228/Jahr</div>
-                    <div className="text-sm text-blue-600">€1.572/Jahr gespart!</div>
+                  
+                  <div className="bg-gradient-to-r from-blue-100 to-indigo-100/50 border-2 border-blue-300/50 rounded-2xl p-6 text-center">
+                    <div className="text-blue-800 font-black text-3xl mb-2">€228/Jahr</div>
+                    <div className="text-blue-600 font-semibold text-lg">€1.572/Jahr gespart!</div>
+                    <div className="text-blue-500 text-sm mt-1">ROI: 600%+ garantiert</div>
                   </div>
                 </div>
               </div>

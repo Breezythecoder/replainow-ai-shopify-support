@@ -34,17 +34,14 @@ const ModernNavbar = () => {
       }`}>
         <nav className="container flex items-center justify-between h-16 px-4 sm:px-6">
           {/* Professional Logo */}
-          <a href="/" aria-label="ReplAInow Home" className="flex items-center gap-3 group">
+          <a href="/" aria-label="ReplAInow Home" className="flex items-center group">
             <div className="relative">
               <img
                 src="/lovable-uploads/100738e9-73dd-442e-b79a-8b064b5b00c3.png"
                 alt="ReplAInow Logo - KI-gestützter Shopify Support mit GPT-4.1 Technologie für automatisierten Kundenservice"
-                className="h-10 w-auto hover:scale-105 transition-transform duration-300"
+                className="h-12 w-auto hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <span className="text-xl font-bold text-slate-800 group-hover:text-blue-600 transition-colors duration-300">
-              Repl<span className="text-blue-600">AI</span>now
-            </span>
           </a>
           
           {/* Desktop Navigation */}
