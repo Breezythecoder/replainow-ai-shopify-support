@@ -6,7 +6,7 @@
 All colors MUST be HSL.
 */
 
-/* Critical CSS for above-the-fold content */
+/* Critical CSS for above-the-fold content - CLS Prevention */
 @layer critical {
   .hero-section {
     background: linear-gradient(135deg, #dbeafe 0%, #e0e7ff 50%, #f3e8ff 100%);
@@ -17,6 +17,23 @@ All colors MUST be HSL.
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+  
+  /* Prevent layout shift with reserved space */
+  .navbar-container {
+    height: 80px; /* Fixed navbar height */
+  }
+  
+  .hero-container {
+    min-height: 100vh; /* Prevent height shifts */
+  }
+  
+  .button-container {
+    min-height: 56px; /* Consistent button heights */
+  }
+  
+  .image-container {
+    aspect-ratio: 16/9; /* Prevent image layout shifts */
   }
   
   .cta-button {

@@ -37,7 +37,7 @@ const ModernNavbar = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-purple-500/5 opacity-50"></div>
         <div className="absolute inset-0 bg-[linear-gradient(90deg,transparent_0%,rgba(59,130,246,0.1)_50%,transparent_100%)] animate-pulse"></div>
         
-        <nav className="container flex items-center justify-between h-20 px-4 sm:px-6 relative z-10">
+        <nav className="container flex items-center justify-between h-20 px-4 sm:px-6 relative z-10 navbar-container">
           {/* Ultra-Modern AI Logo */}
           <a href="/" aria-label="ReplAInow Home" className="flex items-center group">
             <div className="relative">

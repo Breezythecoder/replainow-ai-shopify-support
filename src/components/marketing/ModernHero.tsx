@@ -136,7 +136,7 @@ const ModernHero = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 min-h-screen py-8 lg:py-0">
+      <div className="container mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 min-h-screen py-8 lg:py-0 hero-container">
         {/* Left Column - Revolutionary Content */}
         <div className={`space-y-6 lg:space-y-8 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           {/* Ultra-Modern AI Headline */}
@@ -188,14 +188,14 @@ const ModernHero = () => {
           
           {/* Revolutionary CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
-            <Button asChild variant="cta" size="xl" className="group flex-1 sm:flex-none premium-button bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-2xl hover:shadow-blue-500/25 text-white font-black relative overflow-hidden transform hover:scale-105 transition-all duration-300 focus-ring-enhanced min-h-[56px] touch-manipulation">
+            <Button asChild variant="cta" size="xl" className="group flex-1 sm:flex-none premium-button bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 shadow-2xl hover:shadow-blue-500/25 text-white font-black relative overflow-hidden transform hover:scale-105 transition-all duration-300 focus-ring-enhanced min-h-[56px] touch-manipulation button-container">
               <a href={OAUTH_URL} className="flex items-center justify-center gap-3 text-base lg:text-lg font-bold relative z-10 py-4">
                 <span className="text-xl group-hover:scale-110 transition-transform"></span>
                 JETZT INSTALLIEREN
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
               </a>
             </Button>
-            <Button asChild variant="outline" size="xl" className="flex-1 sm:flex-none border-2 border-blue-400 text-blue-100 hover:bg-blue-500 hover:text-white font-bold focus-ring-enhanced bg-blue-500/10 min-h-[56px] touch-manipulation">
+            <Button asChild variant="outline" size="xl" className="flex-1 sm:flex-none border-2 border-blue-400 text-blue-100 hover:bg-blue-500 hover:text-white font-bold focus-ring-enhanced bg-blue-500/10 min-h-[56px] touch-manipulation button-container">
               <a href="#live-demo" className="flex items-center justify-center gap-3 text-base lg:text-lg font-semibold py-4">
                 <span className="text-xl"></span>
                 Live-Demo ansehen

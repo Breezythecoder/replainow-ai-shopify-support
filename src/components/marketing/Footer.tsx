@@ -68,11 +68,11 @@ const Footer = () => {
               24/7 verfügbar, 32+ Sprachen, DSGVO-konform.
             </p>
               <div className="flex gap-3">
-                <a href="#" aria-label="Twitter" className="text-slate-400 hover:text-blue-400 transition-colors" title="Twitter">
-                  <Twitter size={20} />
+                <a href="#" aria-label="Twitter" className="text-slate-400 hover:text-blue-400 transition-colors p-3 min-h-[44px] min-w-[44px] flex items-center justify-center touch-manipulation" title="Twitter">
+                  <Twitter size={24} />
                 </a>
-                <a href="#" aria-label="LinkedIn" className="text-slate-400 hover:text-blue-400 transition-colors" title="LinkedIn">
-                  <Linkedin size={20} />
+                <a href="#" aria-label="LinkedIn" className="text-slate-400 hover:text-blue-400 transition-colors p-3 min-h-[44px] min-w-[44px] flex items-center justify-center touch-manipulation" title="LinkedIn">
+                  <Linkedin size={24} />
                 </a>
               </div>
           </div>
@@ -80,26 +80,26 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h4 className="text-white font-bold mb-4">Produkt</h4>
-            <ul className="space-y-2">
-              <li><a href="#features" className="text-slate-300 hover:text-blue-400 transition-colors">Funktionen</a></li>
-              <li><a href="#pricing" className="text-slate-300 hover:text-blue-400 transition-colors">Preise</a></li>
-              <li><a href="#live-demo" className="text-slate-300 hover:text-blue-400 transition-colors">Live Demo</a></li>
-              <li><a href="https://apps.shopify.com/replainow-ai-support" className="text-slate-300 hover:text-blue-400 transition-colors">Installieren</a></li>
+            <ul className="space-y-3">
+              <li><a href="#features" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Funktionen</a></li>
+              <li><a href="#pricing" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Preise</a></li>
+              <li><a href="#live-demo" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Live Demo</a></li>
+              <li><a href="https://apps.shopify.com/replainow-ai-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Installieren</a></li>
             </ul>
           </div>
 
           {/* Support */}
           <div>
             <h4 className="text-white font-bold mb-4">Support</h4>
-            <ul className="space-y-2">
-              <li><a href="#contact" className="text-slate-300 hover:text-blue-400 transition-colors">Kontakt</a></li>
-              <li><a href="/privacy" className="text-slate-300 hover:text-blue-400 transition-colors">Datenschutz</a></li>
-              <li><a href="/terms" className="text-slate-300 hover:text-blue-400 transition-colors">Nutzungsbedingungen</a></li>
-              <li><a href="/security" className="text-slate-300 hover:text-blue-400 transition-colors">Sicherheit</a></li>
-              <li><a href="/impressum" className="text-slate-300 hover:text-blue-400 transition-colors">Impressum</a></li>
-              <li><a href="/refund" className="text-slate-300 hover:text-blue-400 transition-colors">Rückerstattung</a></li>
-              <li><a href="/cookies" className="text-slate-300 hover:text-blue-400 transition-colors">Cookie-Richtlinie</a></li>
-              <li><a href="/uninstall" className="text-slate-300 hover:text-blue-400 transition-colors">Deinstallation</a></li>
+            <ul className="space-y-3">
+              <li><a href="#contact" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Kontakt</a></li>
+              <li><a href="/privacy" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Datenschutz</a></li>
+              <li><a href="/terms" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Nutzungsbedingungen</a></li>
+              <li><a href="/security" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Sicherheit</a></li>
+              <li><a href="/impressum" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Impressum</a></li>
+              <li><a href="/refund" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Rückerstattung</a></li>
+              <li><a href="/cookies" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Cookie-Richtlinie</a></li>
+              <li><a href="/uninstall" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Deinstallation</a></li>
             </ul>
           </div>
 
