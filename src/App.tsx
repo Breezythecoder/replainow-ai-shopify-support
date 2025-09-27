@@ -72,7 +72,7 @@ const AppContent = () => {
       </BrowserRouter>
         <SkipLinks />
         <ScrollProgress />
-        <ExitIntent />
+        {/* <ExitIntent /> */} {/* Removed - no discount popup */}
         {import.meta.env.MODE === 'development' && (
           <>
             <ContrastAuditor />
