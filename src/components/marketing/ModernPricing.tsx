@@ -12,7 +12,7 @@ const baseFeatures = [
 const plans = [
   {
     name: "Starter",
-    price: "$19",
+    price: "€19",
     period: "/ Monat",
     quota: "Bis zu 300 AI Antworten / Monat",
     trial: "14 Tage kostenlos testen",
@@ -25,7 +25,7 @@ const plans = [
   },
   {
     name: "Growth",
-    price: "$49",
+    price: "€49",
     period: "/ Monat",
     quota: "Bis zu 1500 AI Antworten / Monat",
     trial: "14 Tage kostenlos testen",
@@ -39,7 +39,7 @@ const plans = [
   },
   {
     name: "Pro",
-    price: "$99",
+    price: "€99",
     period: "/ Monat",
     quota: "Bis zu 3000 AI Antworten / Monat",
     trial: "14 Tage kostenlos testen",
@@ -48,11 +48,11 @@ const plans = [
       "E-Mail Versand mit deiner Domain",
     ],
     highlight: false,
-    description: "Fr etablierte Stores"
+    description: "Für etablierte Stores"
   },
   {
     name: "Scale",
-    price: "$199",
+    price: "€199",
     period: "/ Monat",
     quota: "Unlimitierte AI Antworten",
     trial: "14 Tage kostenlos testen",
@@ -61,7 +61,7 @@ const plans = [
       "E-Mail Versand mit deiner Domain",
     ],
     highlight: false,
-    description: "Fr Store-Ketten"
+    description: "Für Store-Ketten"
   }
 ];
 
@@ -100,12 +100,12 @@ const ModernPricing = () => {
         </div>
         
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-4 tracking-tight px-4">
-          Mehr Support-Power für <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">weniger Geld</span>
+          <span className="text-white">Mehr Support-Power für</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">weniger Geld</span>
         </h2>
-        <p className="text-center text-blue-200 max-w-3xl mx-auto mb-2 text-lg">
+        <p className="text-center text-blue-100 max-w-3xl mx-auto mb-2 text-lg">
           Ein Support-Agent kostet im Schnitt €2.000 pro Monat.
         </p>
-        <p className="text-center text-blue-200 max-w-3xl mx-auto mb-16 text-lg">
+        <p className="text-center text-blue-100 max-w-3xl mx-auto mb-16 text-lg">
           ReplAInow startet bei <strong className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">€19/Monat</strong> und arbeitet 24/7, ohne Pause.
         </p>
         
@@ -115,10 +115,10 @@ const ModernPricing = () => {
               <div className={`bg-slate-800/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 h-full flex flex-col border ${plan.highlight ? 'border-blue-400/60 shadow-blue-500/25 bg-slate-800/70' : 'border-blue-500/30 shadow-2xl'} relative overflow-hidden hover:border-blue-400/50 transition-all duration-300`}>
                 <div className="text-center mb-6 sm:mb-8">
                   <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white">{plan.name}</h3>
-                  <p className="text-xs sm:text-sm text-blue-200 mb-3 sm:mb-4">{plan.description}</p>
+                  <p className="text-xs sm:text-sm text-blue-100 mb-3 sm:mb-4">{plan.description}</p>
                   <div className="flex items-baseline justify-center gap-1 sm:gap-2 mb-2">
                     <span className="text-3xl sm:text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">{plan.price}</span>
-                    <span className="text-blue-200 font-medium text-sm sm:text-base">{plan.period}</span>
+                    <span className="text-blue-100 font-medium text-sm sm:text-base">{plan.period}</span>
                   </div>
                   <p className="text-xs text-blue-300 font-medium">{plan.trial}</p>
                 </div>
@@ -126,12 +126,12 @@ const ModernPricing = () => {
                 <ul className="space-y-2 sm:space-y-3 mb-6 sm:mb-8 flex-grow">
                   <li className="flex items-start gap-2 sm:gap-3">
                     <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span>
-                    <span className="text-blue-200 font-bold text-xs sm:text-sm leading-relaxed">{plan.quota}</span>
+                    <span className="text-blue-100 font-bold text-xs sm:text-sm leading-relaxed">{plan.quota}</span>
                   </li>
                   {plan.features.map((feature, j) => (
                     <li key={j} className="flex items-start gap-2 sm:gap-3">
                       <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span>
-                      <span className="text-blue-200 font-medium leading-relaxed text-xs sm:text-sm">{feature}</span>
+                      <span className="text-blue-100 font-medium leading-relaxed text-xs sm:text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
