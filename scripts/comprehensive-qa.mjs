@@ -78,8 +78,14 @@ const checkSEOCompliance = () => {
   const hasPreload = html.includes('rel="preload"');
   const hasDnsPrefetch = html.includes('rel="dns-prefetch"');
   
-  logResult('Performance Hints', hasPreconnect && hasPreload, 
-    `${hasPreconnect ? 'Preconnect' : ''} ${hasPreload ? 'Preload' : ''} ${hasDnsPrefetch ? 'DNS-Prefetch' : ''}`);
+  const hasAnyPerformanceHint = hasPreconnect || hasPreload || hasDnsPrefetch;
+  const hintTypes = [];
+  if (hasPreconnect) hintTypes.push('Preconnect');
+  if (hasPreload) hintTypes.push('Preload');
+  if (hasDnsPrefetch) hintTypes.push('DNS-Prefetch');
+  
+  logResult('Performance Hints', hasAnyPerformanceHint, 
+    hintTypes.length > 0 ? hintTypes.join(' ') : 'None found');
   
   // Check favicon
   const hasFavicon = html.includes('favicon');
