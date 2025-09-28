@@ -30,33 +30,12 @@ export const t = (key: string, locale: Locale = 'de'): string => {
   return value || key;
 };
 
-// Get locale from pathname (BrowserRouter-based)
-export const getLocaleFromPath = (pathname: string): Locale => {
-  // Check pathname for language prefix
-  if (pathname.startsWith('/en')) return 'en';
-  if (pathname.startsWith('/fr')) return 'fr';
-  if (pathname.startsWith('/es')) return 'es';
-  
-  // Default to German for root path
-  return 'de';
-};
+// Import robust locale detection
+import { getLocaleFromPath as getLocaleFromPathRobust, getPathnameForLocale as getPathnameForLocaleRobust, getStoredLocaleHint, storeLocaleHint } from './locale';
 
-// Get pathname for locale (HashRouter compatible)
-export const getPathnameForLocale = (pathname: string, locale: Locale): string => {
-  const currentHash = window.location.hash;
-  
-  if (locale === 'de') {
-    // Remove language prefix from hash
-    return currentHash.replace(/#\/(en|fr|es)/, '#/') || '#/';
-  }
-  if (locale === 'en') {
-    return currentHash.includes('#/en') ? currentHash : `#/en${currentHash.replace('#/', '')}`;
-  }
-  if (locale === 'fr') {
-    return currentHash.includes('#/fr') ? currentHash : `#/fr${currentHash.replace('#/', '')}`;
-  }
-  if (locale === 'es') {
-    return currentHash.includes('#/es') ? currentHash : `#/es${currentHash.replace('#/', '')}`;
-  }
-  return currentHash;
-};
+// Re-export robust locale detection
+export const getLocaleFromPath = getLocaleFromPathRobust;
+export const getPathnameForLocale = getPathnameForLocaleRobust;
+
+// Re-export storage helpers
+export { getStoredLocaleHint, storeLocaleHint };

@@ -39,28 +39,35 @@ const MultilingualSEO = ({
       };
     }
 
-    const { title = "ReplAInow", description = "AI Shopify Helpdesk", keywords = [], ogImage = defaultOGImage } = seoConfig;
+    // Defensive destructuring with safe defaults
+    const title = (seoConfig?.title ?? "ReplAInow").toString();
+    const description = (seoConfig?.description ?? "AI Shopify Helpdesk").toString();
+    const keywords = Array.isArray(seoConfig?.keywords) ? seoConfig.keywords : [];
+    const ogImage = (seoConfig?.ogImage ?? defaultOGImage).toString();
     
     // Helper function um Meta-Tags sicher zu erstellen/updaten
     const updateOrCreateMeta = (selector: string, attr: "name" | "property", key: string, content: string) => {
+      const safeContent = (content ?? '').toString();
       let meta = document.querySelector(selector) as HTMLMetaElement;
       if (!meta) {
         meta = document.createElement('meta');
         meta.setAttribute(attr, key);
         document.head.appendChild(meta);
       }
-      meta.setAttribute('content', content);
+      meta.setAttribute('content', safeContent);
     };
 
     const updateOrCreateLink = (selector: string, rel: string, href?: string, hreflang?: string) => {
+      const safeHref = (href ?? '').toString();
+      const safeHreflang = (hreflang ?? '').toString();
       let link = document.querySelector(selector) as HTMLLinkElement;
       if (!link) {
         link = document.createElement('link');
         link.rel = rel;
-        if (hreflang) link.hreflang = hreflang;
+        if (safeHreflang) link.hreflang = safeHreflang;
         document.head.appendChild(link);
       }
-      if (href) link.href = href;
+      if (safeHref) link.href = safeHref;
       return link;
     };
 
@@ -69,7 +76,7 @@ const MultilingualSEO = ({
 
     // Basic Meta Tags
     updateOrCreateMeta('meta[name="description"]', 'name', 'description', description);
-    updateOrCreateMeta('meta[name="keywords"]', 'name', 'keywords', (keywords || []).join(', '));
+    updateOrCreateMeta('meta[name="keywords"]', 'name', 'keywords', keywords.join(', '));
     
     // Language Meta
     updateOrCreateMeta('meta[name="language"]', 'name', 'language', language);

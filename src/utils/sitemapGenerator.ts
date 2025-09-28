@@ -182,8 +182,14 @@ export const generateLanguageSitemap = (language: 'de' | 'en'): string => {
   
   // Filter URLs for specific language
   const languageUrls = language === 'de' 
-    ? urls.filter(url => url.loc.includes('/de') || !url.loc.match(/\/(en|es|fr|pt|it|nl|zh)/))
-    : urls.filter(url => url.loc.includes(`/${language}`));
+    ? urls.filter(url => {
+        const safeLoc = (url.loc ?? '').toString();
+        return safeLoc.includes('/de') || !safeLoc.match(/\/(en|es|fr|pt|it|nl|zh)/);
+      })
+    : urls.filter(url => {
+        const safeLoc = (url.loc ?? '').toString();
+        return safeLoc.includes(`/${language}`);
+      });
   
   const urlEntries = languageUrls.map(url => {
     const lastmod = url.lastmod || currentDate;

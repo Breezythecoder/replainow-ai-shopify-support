@@ -181,8 +181,9 @@ export const getHighConfidenceFacts = (): LLMFact[] => {
 export const generateCitationPack = (topic: string): LLMFact[] => {
   const topicLower = topic.toLowerCase();
   
-  return llmFacts.filter(fact => 
-    fact.claim.toLowerCase().includes(topicLower) ||
-    fact.category.includes(topicLower as any)
-  );
+  return llmFacts.filter(fact => {
+    const safeClaim = (fact.claim ?? '').toString().toLowerCase();
+    const safeCategory = (fact.category ?? '').toString();
+    return safeClaim.includes(topicLower) || safeCategory.includes(topicLower as any);
+  });
 };

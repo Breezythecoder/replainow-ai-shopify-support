@@ -23,7 +23,8 @@ const AdvancedSEO = ({
   noindex = false,
   locale = "de_DE"
 }: AdvancedSEOProps) => {
-  const fullTitle = title.includes('ReplAInow') ? title : `${title} | ReplAInow - AI Shopify Helpdesk`;
+  const safeTitle = (title ?? '').toString();
+  const fullTitle = safeTitle.includes('ReplAInow') ? safeTitle : `${safeTitle} | ReplAInow - AI Shopify Helpdesk`;
   const currentUrl = canonicalUrl || (typeof window !== 'undefined' ? window.location.href : '');
   
   useEffect(() => {
