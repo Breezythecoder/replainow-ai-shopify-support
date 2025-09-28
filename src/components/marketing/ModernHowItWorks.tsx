@@ -1,42 +1,51 @@
 import { Button } from "@/components/ui/button";
 import { Download, Zap, Brain, TrendingUp } from "lucide-react";
+import { t, getLocaleFromPath } from "@/i18n";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
 const ModernHowItWorks = () => {
+  // Get current locale from URL path
+  const locale = getLocaleFromPath(window.location.pathname);
+
   const steps = [
     {
       step: "01",
       icon: <Download className="w-8 h-8" />,
-      title: "App installieren",
-      desc: "1-Klick Installation aus dem Shopify App Store"
+      title: t('ui.howItWorks.steps.0.title', locale),
+      desc: t('ui.howItWorks.steps.0.desc', locale)
     },
     {
       step: "02", 
       icon: <Zap className="w-8 h-8" />,
-      title: "Automatische Verbindung",
-      desc: "AI lernt ALLE deine Produkte & Policies automatisch"
+      title: t('ui.howItWorks.steps.1.title', locale),
+      desc: t('ui.howItWorks.steps.1.desc', locale)
     },
     {
       step: "03",
       icon: <Brain className="w-8 h-8" />,
-      title: "AI antwortet sofort",
-      desc: "Kunden bekommen perfekte Antworten in 3 Sekunden"
+      title: t('ui.howItWorks.steps.2.title', locale),
+      desc: t('ui.howItWorks.steps.2.desc', locale)
     },
     {
       step: "04",
       icon: <TrendingUp className="w-8 h-8" />,
-      title: "Profits explodieren", 
-      desc: "+187% Conversion bei 75% niedrigeren Kosten"
+      title: t('ui.howItWorks.steps.3.title', locale), 
+      desc: t('ui.howItWorks.steps.3.desc', locale)
     }
   ];
 
   return (
     <section className="py-24 bg-gradient-to-b from-indigo-50 to-purple-50">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8 tracking-tight px-4 text-center">
-          So einfach <span className="text-gradient-primary">dominierst</span> du den Kundenservice
-        </h2>
+        <h2 
+          className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8 tracking-tight px-4 text-center"
+          dangerouslySetInnerHTML={{ 
+            __html: t('ui.howItWorks.title', locale)
+              .replace('{highlight}', '<span class="text-gradient-primary">')
+              .replace('{/highlight}', '</span>')
+          }}
+        />
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {steps.map((step, i) => (

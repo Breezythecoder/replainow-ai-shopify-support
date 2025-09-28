@@ -104,6 +104,53 @@
           "impact": "75% Kosteneinsparung"
         }
       ]
+    },
+    "howItWorks": {
+      "title": "So einfach {highlight}dominierst{/highlight} du den Kundenservice",
+      "steps": [
+        {
+          "title": "App installieren",
+          "desc": "1-Klick Installation aus dem Shopify App Store"
+        },
+        {
+          "title": "Automatische Verbindung",
+          "desc": "AI lernt ALLE deine Produkte & Policies automatisch"
+        },
+        {
+          "title": "AI antwortet sofort",
+          "desc": "Kunden bekommen perfekte Antworten in 3 Sekunden"
+        },
+        {
+          "title": "Profits explodieren",
+          "desc": "+187% Conversion bei 75% niedrigeren Kosten"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "subtitle": "Alles, was du vor dem Start wissen musst - kurz und klar.",
+      "questions": [
+        {
+          "q": "Wie integriert sich ReplAInow in Shopify?",
+          "a": "Per App-Installation. Nach dem Verbinden zieht ReplAInow relevante Daten (Bestellungen, Versandstatus, Produkte) DSGVO-konform direkt aus Shopify, um Antworten zu generieren."
+        },
+        {
+          "q": "Ist das DSGVO-konform?",
+          "a": "Ja. Daten werden zweckgebunden verarbeitet. Du kannst jederzeit Datenzugriffe einschränken oder entziehen. Wir speichern nur, was für die Antwort nötig ist."
+        },
+        {
+          "q": "Wie schnell bekomme ich Antworten?",
+          "a": "In Sekunden. ReplAInow strukturiert die Anfrage, prüft passende Shopify-Daten und liefert eine markenkonforme Antwort - meist unter 3 Sekunden."
+        },
+        {
+          "q": "Kann ich den Ton der Marke anpassen?",
+          "a": "Ja. Du definierst Stilrichtlinien (z. B. Du/Sie, Tonalität, Emojis). Antworten werden automatisch daran ausgerichtet."
+        },
+        {
+          "q": "Wie sieht die Preisgestaltung aus?",
+          "a": "Transparente Pläne mit klaren Limits, 14 Tage kostenlos testen ohne Kreditkarte. Upgrade jederzeit möglich."
+        }
+      ]
     }
   }
 }

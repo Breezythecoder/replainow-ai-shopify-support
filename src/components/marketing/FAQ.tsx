@@ -1,30 +1,34 @@
 import { useMemo } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-
-const faqs = [
-  {
-    q: "Wie integriert sich ReplAInow in Shopify?",
-    a: "Per AppInstallation. Nach dem Verbinden zieht ReplAInow relevante Daten (Bestellungen, Versandstatus, Produkte) DSGVOkonform direkt aus Shopify, um Antworten zu generieren.",
-  },
-  {
-    q: "Ist das DSGVOkonform?",
-    a: "Ja. Daten werden zweckgebunden verarbeitet. Du kannst jederzeit Datenzugriffe einschrnken oder entziehen. Wir speichern nur, was fr die Antwort ntig ist.",
-  },
-  {
-    q: "Wie schnell bekomme ich Antworten?",
-    a: "In Sekunden. ReplAInow strukturiert die Anfrage, prft passende ShopifyDaten und liefert eine markenkonforme Antwort  meist unter 3 Sekunden.",
-  },
-  {
-    q: "Kann ich den Ton der Marke anpassen?",
-    a: "Ja. Du definierst Stilrichtlinien (z. B. Du/Sie, Tonalitt, Emojis). Antworten werden automatisch daran ausgerichtet.",
-  },
-  {
-    q: "Wie sieht die Preisgestaltung aus?",
-    a: "Transparente Plne mit klaren Limits, 14 Tage kostenlos testen ohne Kreditkarte. Upgrade jederzeit mglich.",
-  },
-];
+import { t, getLocaleFromPath } from "@/i18n";
 
 const FAQ = () => {
+  // Get current locale from URL path
+  const locale = getLocaleFromPath(window.location.pathname);
+
+  const faqs = [
+    {
+      q: t('ui.faq.questions.0.q', locale),
+      a: t('ui.faq.questions.0.a', locale),
+    },
+    {
+      q: t('ui.faq.questions.1.q', locale),
+      a: t('ui.faq.questions.1.a', locale),
+    },
+    {
+      q: t('ui.faq.questions.2.q', locale),
+      a: t('ui.faq.questions.2.a', locale),
+    },
+    {
+      q: t('ui.faq.questions.3.q', locale),
+      a: t('ui.faq.questions.3.a', locale),
+    },
+    {
+      q: t('ui.faq.questions.4.q', locale),
+      a: t('ui.faq.questions.4.a', locale),
+    },
+  ];
+
   const jsonLd = useMemo(
     () => ({
       "@context": "https://schema.org",
@@ -42,10 +46,10 @@ const FAQ = () => {
     <section id="faq" aria-labelledby="faq-heading" className="py-16 md:py-24">
       <div className="container max-w-4xl">
         <h2 id="faq-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Hufige Fragen
+          {t('ui.faq.title', locale)}
         </h2>
         <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-          Alles, was du vor dem Start wissen mchtest  kurz und klar.
+          {t('ui.faq.subtitle', locale)}
         </p>
 
         <Accordion type="single" collapsible className="w-full">

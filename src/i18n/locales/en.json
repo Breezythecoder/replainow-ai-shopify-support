@@ -199,6 +199,53 @@
       "subtitle": "Join 280+ satisfied Shopify merchants and start saving today",
       "button": "Start Free Trial",
       "demo": "Watch Demo"
+    },
+    "howItWorks": {
+      "title": "So easy you <span class=\"text-gradient-primary\">dominate</span> customer service",
+      "steps": [
+        {
+          "title": "Install App",
+          "desc": "1-Click Installation from Shopify App Store"
+        },
+        {
+          "title": "Automatic Connection", 
+          "desc": "AI learns ALL your products & policies automatically"
+        },
+        {
+          "title": "AI responds instantly",
+          "desc": "Customers get perfect answers in 3 seconds"
+        },
+        {
+          "title": "Profits explode",
+          "desc": "+187% Conversion with 75% lower costs"
+        }
+      ]
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "subtitle": "Everything you need to know before getting started - short and clear.",
+      "questions": [
+        {
+          "q": "How does ReplAInow integrate with Shopify?",
+          "a": "Via app installation. After connecting, ReplAInow pulls relevant data (orders, shipping status, products) GDPR-compliant directly from Shopify to generate responses."
+        },
+        {
+          "q": "Is it GDPR compliant?",
+          "a": "Yes. Data is processed for specific purposes. You can restrict or withdraw data access at any time. We only store what's necessary for responses."
+        },
+        {
+          "q": "How fast do I get responses?",
+          "a": "In seconds. ReplAInow structures the request, checks relevant Shopify data and delivers a brand-compliant response - usually under 3 seconds."
+        },
+        {
+          "q": "Can I customize the brand tone?",
+          "a": "Yes. You define style guidelines (e.g., formal/informal tone, emojis). Responses are automatically aligned to this."
+        },
+        {
+          "q": "What does the pricing look like?",
+          "a": "Transparent plans with clear limits, 14 days free trial without credit card. Upgrade possible anytime."
+        }
+      ]
     }
   }
 }
