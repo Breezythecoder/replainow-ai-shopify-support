@@ -15,7 +15,7 @@ import { initializeAssetLoading } from "@/utils/assetLoader";
 import { SEOErrorBoundary } from "@/components/ui/ErrorBoundary";
 import { RootErrorBoundary } from "@/components/ui/RootErrorBoundary";
 import { lazy, Suspense } from "react";
-import { LocaleProvider } from "@/contexts/LocaleContext";
+import { LocaleProvider } from "@/i18n/LocaleContext";
 
 // Lazy load main language pages for better performance
 const Index = lazy(() => import("./pages/Index"));

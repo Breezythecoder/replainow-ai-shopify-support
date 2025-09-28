@@ -23,10 +23,16 @@ import { forceEnglishText, isEnglishRoute } from './forceEnglish';
 
 // Simple i18n function with FORCE ENGLISH override
 export const t = (key: string, locale?: Locale): string => {
-  // FORCE ENGLISH OVERRIDE for /en route
+  // FORCE ENGLISH for /en route - ALWAYS use English translations
   if (typeof window !== 'undefined' && isEnglishRoute()) {
-    const forcedText = forceEnglishText(key, '');
-    if (forcedText) return forcedText;
+    const keys = key.split('.');
+    let value: any = translations['en'];
+    
+    for (const k of keys) {
+      value = value?.[k];
+    }
+    
+    return value || key;
   }
   
   // Auto-detect locale from pathname if not provided
@@ -43,6 +49,12 @@ export const t = (key: string, locale?: Locale): string => {
   }
   
   return value || key;
+};
+
+// Hook for using translations with React context
+export const useTranslation = () => {
+  const tWithLocale = (key: string, locale?: Locale) => t(key, locale);
+  return { t: tWithLocale };
 };
 
 // Import robust locale detection
