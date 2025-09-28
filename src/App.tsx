@@ -13,6 +13,7 @@ import { SEOHead } from "@/components/SEOHead";
 import { getLocaleFromPath } from "@/i18n";
 import { initializeAssetLoading } from "@/utils/assetLoader";
 import { SEOErrorBoundary } from "@/components/ui/ErrorBoundary";
+import { RootErrorBoundary } from "@/components/ui/RootErrorBoundary";
 import { lazy, Suspense } from "react";
 
 // Lazy load main language pages for better performance
@@ -143,15 +144,17 @@ const AppContent = () => {
 };
 
 const App = () => (
-  <HelmetProvider>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <AppContent />
-      </TooltipProvider>
-    </QueryClientProvider>
-  </HelmetProvider>
+  <RootErrorBoundary>
+    <HelmetProvider>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <AppContent />
+        </TooltipProvider>
+      </QueryClientProvider>
+    </HelmetProvider>
+  </RootErrorBoundary>
 );
 
 export default App;
