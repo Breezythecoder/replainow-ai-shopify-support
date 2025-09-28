@@ -11,11 +11,14 @@ import { initWebVitals } from "@/utils/webVitals";
 import { initializeGA, trackPageView } from "@/utils/analytics";
 import { SEOHead } from "@/components/SEOHead";
 import { getLocaleFromPath } from "@/i18n";
-import Index from "./pages/Index";
-import IndexEn from "./pages/IndexEn";
-import IndexEs from "./pages/IndexEs";
-import IndexFr from "./pages/IndexFr";
+import { initializeAssetLoading } from "@/utils/assetLoader";
 import { lazy, Suspense } from "react";
+
+// Lazy load main language pages for better performance
+const Index = lazy(() => import("./pages/Index"));
+const IndexEn = lazy(() => import("./pages/IndexEn"));
+const IndexEs = lazy(() => import("./pages/IndexEs"));
+const IndexFr = lazy(() => import("./pages/IndexFr"));
 
 // Lazy load legal pages for better performance
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -61,6 +64,9 @@ const AppContent = () => {
     trackWebVitals();
     initWebVitals();
     initializeGA();
+    
+    // Initialize locale-aware asset loading
+    initializeAssetLoading(locale);
   
     // Hash routing is handled automatically by HashRouter
   
@@ -74,7 +80,7 @@ const AppContent = () => {
         console.log('SW registration failed: ', registrationError);
       });
   }
-  }, []);
+  }, [locale]);
 
   return (
     <>
