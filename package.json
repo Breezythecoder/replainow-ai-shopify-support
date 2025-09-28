@@ -77,6 +77,7 @@
     "playwright": "^1.55.1",
     "postcss": "^8.4.49",
     "puppeteer": "^24.22.3",
+    "rimraf": "^6.0.1",
     "tailwindcss": "^3.4.15",
     "terser": "^5.44.0",
     "typescript": "~5.6.2",
