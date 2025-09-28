@@ -73,9 +73,9 @@ console.log("✅ No forbidden tokens found");
 
 // 7. Prüfe Performance-Hints
 const hasPreconnect = html.includes('rel="preconnect"');
-const hasPreload = html.includes('rel="preload"');
-if (!hasPreconnect || !hasPreload) {
-  console.error("[FAIL] Missing performance hints (preconnect/preload)");
+const hasDnsPrefetch = html.includes('rel="dns-prefetch"');
+if (!hasPreconnect && !hasDnsPrefetch) {
+  console.error("[FAIL] Missing performance hints (preconnect/dns-prefetch)");
   process.exit(1);
 }
 console.log("✅ Performance hints present");

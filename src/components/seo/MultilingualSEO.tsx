@@ -18,7 +18,7 @@ const MultilingualSEO = ({
 }: MultilingualSEOProps) => {
   useEffect(() => {
     // Bestimme SEO-Konfiguration basierend auf Seite und Sprache
-    let seoConfig: SEOConfig;
+    let seoConfig: SEOConfig | undefined;
     
     if (customSEO) {
       seoConfig = customSEO;
@@ -28,7 +28,18 @@ const MultilingualSEO = ({
       seoConfig = homeSEO[language];
     }
 
-    const { title, description, keywords = [], ogImage = defaultOGImage } = seoConfig;
+    // Fallback für fehlende SEO-Konfiguration
+    if (!seoConfig) {
+      console.warn(`No SEO config found for language: ${language}, page: ${page}`);
+      seoConfig = {
+        title: "ReplAInow - AI Shopify Helpdesk",
+        description: "Automate your Shopify customer support with AI",
+        keywords: ["Shopify", "AI", "Customer Support"],
+        ogImage: defaultOGImage
+      };
+    }
+
+    const { title = "ReplAInow", description = "AI Shopify Helpdesk", keywords = [], ogImage = defaultOGImage } = seoConfig;
     
     // Helper function um Meta-Tags sicher zu erstellen/updaten
     const updateOrCreateMeta = (selector: string, attr: "name" | "property", key: string, content: string) => {
