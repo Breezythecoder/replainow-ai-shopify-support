@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button-variants";
+import { STORE_COUNT } from "@/config/siteStats";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
@@ -171,7 +172,7 @@ const ModernHero = () => {
           {/* AI-Powered Live Stats - Mobile Optimized */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 my-8 sm:my-12">
             <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/30 backdrop-blur-lg p-4 sm:p-6 rounded-2xl text-center border border-blue-400/30 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 touch-manipulation">
-              <div className="text-2xl sm:text-3xl font-black text-cyan-400 mb-2">280+</div>
+              <div className="text-2xl sm:text-3xl font-black text-cyan-400 mb-2">{STORE_COUNT}</div>
               <div className="text-xs sm:text-sm text-blue-200 font-semibold">Aktive Stores</div>
               <div className="w-full h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full mt-2 animate-pulse"></div>
             </div>
@@ -219,7 +220,7 @@ const ModernHero = () => {
             <span className="px-5 py-3 bg-green-100 backdrop-blur-lg text-green-800 rounded-full font-bold shadow-lg hover-lift border border-green-200">
                DSGVO-konform
             </span>
-            <span className="font-bold text-slate-800 bg-white/80 backdrop-blur-lg px-5 py-3 rounded-full shadow-lg hover-lift border border-slate-200"> 280+ Händler</span>
+            <span className="font-bold text-slate-800 bg-white/80 backdrop-blur-lg px-5 py-3 rounded-full shadow-lg hover-lift border border-slate-200"> {STORE_COUNT} Händler</span>
           </div>
         </div>
         

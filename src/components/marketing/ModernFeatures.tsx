@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { STORE_COUNT } from "@/config/siteStats";
 import { Brain, Zap, Clock, Globe, Target, Shield, TrendingUp, Users, MessageSquare, BarChart3, CheckCircle, Download } from "lucide-react";
 
 const ModernFeatures = () => {
@@ -193,7 +194,7 @@ const ModernFeatures = () => {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-black text-blue-600 mb-2">280+</div>
+                <div className="text-3xl font-black text-blue-600 mb-2">{STORE_COUNT}</div>
                 <div className="text-sm text-slate-600">Aktive Stores</div>
               </div>
               <div className="text-center">
