@@ -17,7 +17,14 @@
     "preview": "vite preview --strictPort --port 4173",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
-    "lighthouse": "lhci autorun"
+    "lighthouse": "lhci autorun",
+    "qa": "node scripts/comprehensive-qa.mjs",
+    "qa:performance": "node scripts/performance-audit.mjs",
+    "qa:seo": "node scripts/seo-verify.mjs",
+    "qa:sitemap": "node scripts/sitemap-verify.mjs",
+    "qa:all": "npm run qa && npm run qa:performance && npm run qa:seo && npm run qa:sitemap",
+    "pre-commit": "node scripts/pre-commit-checks.mjs",
+    "ci": "npm run pre-commit && npm run build && npm run qa:all"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",

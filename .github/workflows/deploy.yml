@@ -25,6 +25,14 @@ jobs:
 
       - run: npm ci
       - run: npm run build
+      
+      # Run comprehensive QA checks
+      - name: Run QA Verification
+        run: node scripts/comprehensive-qa.mjs
+      
+      # Run performance audit
+      - name: Run Performance Audit
+        run: node scripts/performance-audit.mjs
 
       # Upload only ./dist (einzige Quelle der Wahrheit)
       - uses: actions/upload-pages-artifact@v3
