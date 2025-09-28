@@ -39,7 +39,7 @@ const ModernSocialProof = () => {
       owner: "Anna L.",
       result: "+42% Conversion Rate",
       quote: "Unsere Kunden bekommen sofort Antworten zu Versand, Rücksendungen und Produktdetails. Shopify-Integration war super einfach!",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
+      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
     },
     {
       company: "SportGear Pro",
