@@ -1,9 +1,10 @@
 {
-  "name": "vite_react_shadcn_ts",
+  "name": "replainow-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
-  "homepage": "https://breezythecoder.github.io/replainow-ai-shopify-support",
+  "description": "Official website for ReplAInow - AI Shopify Helpdesk",
+  "homepage": "https://replainow.com",
   "scripts": {
     "clean": "rimraf dist .vite",
     "typecheck": "tsc --noEmit",

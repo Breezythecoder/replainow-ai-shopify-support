@@ -54,7 +54,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="kontakt" aria-labelledby="contact-heading" className="py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
+    <section id="contact" aria-labelledby="contact-heading" className="py-24 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <h2 id="contact-heading" className="text-4xl sm:text-5xl font-bold mb-6 text-slate-800">

@@ -73,14 +73,14 @@ const Index = () => {
       <main id="main-content" role="main" aria-label="Hauptinhalt" className="pb-0">
         <ModernHero />
         <ModernProblemSolution />
-        <div id="features"><ModernFeatures /></div>
+        <ModernFeatures />
         <ModernHowItWorks />
-        <div id="live-demo"><ModernLiveDemo /></div>
+        <ModernLiveDemo />
         <VideoDemo />
         <IndustryExamples />
         <ModernSocialProof />
         <ModernComparison />
-        <div id="pricing"><ModernPricing /></div>
+        <ModernPricing />
         <AIOptimizedFAQ />
         <ModernFinalCTA />
         <Contact />

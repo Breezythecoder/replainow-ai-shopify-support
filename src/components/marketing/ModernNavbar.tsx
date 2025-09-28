@@ -4,6 +4,7 @@ import LanguageSwitcher from "@/components/ui/language-switcher";
 import { Menu, X, Zap, Brain, Rocket, Sparkles, Cpu, Activity } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useSwipe } from "@/hooks/useSwipe";
+import { enhancedSmoothScroll } from "@/utils/smoothScroll";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
@@ -26,6 +27,13 @@ const ModernNavbar = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Handle smooth scroll navigation
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    enhancedSmoothScroll(targetId);
+    setMobileMenuOpen(false); // Close mobile menu after click
+  };
 
   return (
     <>
@@ -73,7 +81,7 @@ const ModernNavbar = () => {
           
           {/* AI-Powered Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6 text-sm font-medium">
-            <a href="#features" className="text-blue-200 hover:text-white transition-all duration-300 flex items-center gap-2 group relative">
+            <a href="#features" onClick={(e) => handleNavClick(e, 'features')} className="text-blue-200 hover:text-white transition-all duration-300 flex items-center gap-2 group relative cursor-pointer">
               <div className="p-2 rounded-lg bg-blue-500/20 group-hover:bg-blue-500/40 transition-colors duration-300">
                 <Brain className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </div>
@@ -81,7 +89,7 @@ const ModernNavbar = () => {
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-400 to-purple-400 group-hover:w-full transition-all duration-300"></div>
             </a>
             
-            <a href="#live-demo" className="text-blue-200 hover:text-white transition-all duration-300 flex items-center gap-2 group relative">
+            <a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="text-blue-200 hover:text-white transition-all duration-300 flex items-center gap-2 group relative cursor-pointer">
               <div className="p-2 rounded-lg bg-purple-500/20 group-hover:bg-purple-500/40 transition-colors duration-300">
                 <Activity className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </div>
@@ -89,7 +97,7 @@ const ModernNavbar = () => {
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-400 to-pink-400 group-hover:w-full transition-all duration-300"></div>
             </a>
             
-            <a href="#pricing" className="text-blue-200 hover:text-white transition-all duration-300 flex items-center gap-2 group relative">
+            <a href="#pricing" onClick={(e) => handleNavClick(e, 'pricing')} className="text-blue-200 hover:text-white transition-all duration-300 flex items-center gap-2 group relative cursor-pointer">
               <div className="p-2 rounded-lg bg-green-500/20 group-hover:bg-green-500/40 transition-colors duration-300">
                 <Cpu className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </div>
@@ -97,7 +105,7 @@ const ModernNavbar = () => {
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-green-400 to-emerald-400 group-hover:w-full transition-all duration-300"></div>
             </a>
             
-            <a href="#contact" className="text-blue-200 hover:text-white transition-all duration-300 flex items-center gap-2 group relative">
+            <a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-blue-200 hover:text-white transition-all duration-300 flex items-center gap-2 group relative cursor-pointer">
               <div className="p-2 rounded-lg bg-indigo-500/20 group-hover:bg-indigo-500/40 transition-colors duration-300">
                 <Sparkles className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </div>
@@ -155,10 +163,10 @@ const ModernNavbar = () => {
           <div className="md:hidden border-t border-blue-500/30 shadow-2xl bg-slate-900/98 backdrop-blur-xl">
             <div className="container px-4 py-6 space-y-2">
               {/* AI Navigation Links */}
-              <a 
+              <a
                 href="#features" 
                 className="block py-5 px-6 text-blue-200 hover:text-white hover:bg-blue-500/20 rounded-xl transition-all duration-300 font-semibold text-lg flex items-center gap-4 group min-h-[56px] touch-manipulation"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => { handleNavClick(e, 'features'); setMobileMenuOpen(false); }}
               >
                 <div className="p-2 rounded-lg bg-blue-500/20 group-hover:bg-blue-500/40 transition-colors">
                   <Brain className="w-5 h-5" />
@@ -167,10 +175,10 @@ const ModernNavbar = () => {
                 <div className="ml-auto w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
               </a>
               
-              <a 
+              <a
                 href="#live-demo" 
                 className="block py-5 px-6 text-blue-200 hover:text-white hover:bg-purple-500/20 rounded-xl transition-all duration-300 font-semibold text-lg flex items-center gap-4 group min-h-[56px] touch-manipulation"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => { handleNavClick(e, 'live-demo'); setMobileMenuOpen(false); }}
               >
                 <div className="p-2 rounded-lg bg-purple-500/20 group-hover:bg-purple-500/40 transition-colors">
                   <Activity className="w-5 h-5" />
@@ -179,10 +187,10 @@ const ModernNavbar = () => {
                 <div className="ml-auto w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
               </a>
               
-              <a 
+              <a
                 href="#pricing" 
                 className="block py-5 px-6 text-blue-200 hover:text-white hover:bg-green-500/20 rounded-xl transition-all duration-300 font-semibold text-lg flex items-center gap-4 group min-h-[56px] touch-manipulation"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => { handleNavClick(e, 'pricing'); setMobileMenuOpen(false); }}
               >
                 <div className="p-2 rounded-lg bg-green-500/20 group-hover:bg-green-500/40 transition-colors">
                   <Cpu className="w-5 h-5" />
@@ -191,10 +199,10 @@ const ModernNavbar = () => {
                 <div className="ml-auto w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
               </a>
               
-              <a 
+              <a
                 href="#contact" 
                 className="block py-5 px-6 text-blue-200 hover:text-white hover:bg-indigo-500/20 rounded-xl transition-all duration-300 font-semibold text-lg flex items-center gap-4 group min-h-[56px] touch-manipulation"
-                onClick={() => setMobileMenuOpen(false)}
+                onClick={(e) => { handleNavClick(e, 'contact'); setMobileMenuOpen(false); }}
               >
                 <div className="p-2 rounded-lg bg-indigo-500/20 group-hover:bg-indigo-500/40 transition-colors">
                   <Sparkles className="w-5 h-5" />

@@ -1,6 +1,13 @@
 import { Twitter, Linkedin, Mail, Phone, MapPin, Heart } from "lucide-react";
+import { enhancedSmoothScroll } from "@/utils/smoothScroll";
 
 const Footer = () => {
+  // Handle smooth scroll navigation
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    enhancedSmoothScroll(targetId);
+  };
+
   return (
     <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* About Us Section */}
@@ -81,9 +88,9 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Produkt</h4>
             <ul className="space-y-3">
-              <li><a href="/#features" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Funktionen</a></li>
-              <li><a href="/#pricing" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Preise</a></li>
-              <li><a href="/#live-demo" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Live Demo</a></li>
+              <li><a href="#features" onClick={(e) => handleNavClick(e, 'features')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">Funktionen</a></li>
+              <li><a href="#pricing" onClick={(e) => handleNavClick(e, 'pricing')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">Preise</a></li>
+              <li><a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">Live Demo</a></li>
               <li><a href="https://apps.shopify.com/replainow-ai-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Installieren</a></li>
             </ul>
           </div>
@@ -105,7 +112,7 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Support</h4>
             <ul className="space-y-3">
-              <li><a href="#contact" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Kontakt</a></li>
+              <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">Kontakt</a></li>
               <li><a href="/#/privacy" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Datenschutz</a></li>
               <li><a href="/#/terms" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Nutzungsbedingungen</a></li>
               <li><a href="/#/security" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Sicherheit</a></li>
