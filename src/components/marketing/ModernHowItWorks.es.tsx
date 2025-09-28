@@ -66,7 +66,7 @@ const ModernHowItWorksEs = () => {
             </a>
           </Button>
           <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed">
-             14 das gratis   Sin configuracin   Cancelar cuando quieras
+             14 das free   Sin configuracin   Cancelar cuando quieras
           </p>
         </div>
       </div>

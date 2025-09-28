@@ -153,20 +153,20 @@ const ModernSocialProof = () => {
               Bereit für deinen Shopify-Store?
             </h3>
             <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-              Schließe dich über {STORE_COUNT} zufriedenen Shopify-Händlern an und automatisiere deinen Kundensupport in nur 5 Minuten.
+              Schließe dich über {STORE_COUNT} zufriedenen Shopify-Händlern an und automatisiere deinen Customer Support in nur 5 Minuten.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="https://apps.shopify.com/replainow/install" 
                 className="bg-gradient-primary text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition-all shadow-lg"
               >
-                🚀 Jetzt im Shopify App Store installieren
+                🚀 Now im Shopify App Store Install
               </a>
               <a 
                 href="#live-demo" 
                 className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-2xl font-bold hover:bg-blue-50 transition-all"
               >
-                📺 Live-Demo ansehen
+                📺 Live-Demo Watch
               </a>
             </div>
           </div>

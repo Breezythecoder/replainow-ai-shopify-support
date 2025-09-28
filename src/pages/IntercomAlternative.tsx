@@ -7,15 +7,15 @@ const IntercomAlternative = () => {
   const faqs = [
     {
       question: "Warum ist ReplAInow eine bessere Alternative zu Intercom?",
-      answer: "ReplAInow bietet 80% Kosteneinsparung gegenüber Intercom, 3-Sekunden Antwortzeiten statt Minuten, 32+ Sprachen nativ unterstützt und vollständige DSGVO-Compliance. Intercom ist überteuert, langsam und nur in wenigen Sprachen verfügbar."
+      answer: "ReplAInow bietet 80% Kosteneinsparung gegenüber Intercom, 3-seconds Antwortzeiten statt Minuten, 32+ languages nativ unterstützt und vollständige GDPR-Compliance. Intercom ist überteuert, langsam und nur in wenigen languages verfügbar."
     },
     {
       question: "Was kostet ReplAInow im Vergleich zu Intercom?",
-      answer: "ReplAInow Starter Plan: €19/Monat vs. Intercom Starter: €99/Monat. Das sind 80% Ersparnis bei besseren Features. Intercom verlangt zusätzlich für erweiterte KI-Funktionen, die bei ReplAInow inklusive sind."
+      answer: "ReplAInow Starter Plan: €19/Monat vs. Intercom Starter: €99/Monat. Das sind 80% Ersparnis bei besseren Features. Intercom verlangt zusätzlich für erweiterte AI-Features, die bei ReplAInow inklusive sind."
     },
     {
-      question: "Welche Funktionen hat ReplAInow, die Intercom nicht bietet?",
-      answer: "ReplAInow bietet GPT-4.1 Technologie, 32+ Sprachen, 3-Sekunden Antwortzeiten, vollständige DSGVO-Compliance und nahtlose Shopify-Integration. Intercom ist auf Englisch beschränkt und bietet nur grundlegende KI-Funktionen."
+      question: "Welche Features hat ReplAInow, die Intercom nicht bietet?",
+      answer: "ReplAInow bietet GPT-4.1 Technologie, 32+ languages, 3-seconds Antwortzeiten, vollständige GDPR-Compliance und nahtlose Shopify-Integration. Intercom ist auf Englisch beschränkt und bietet nur grundlegende AI-Features."
     },
     {
       question: "Ist die Migration von Intercom zu ReplAInow einfach?",
@@ -32,24 +32,24 @@ const IntercomAlternative = () => {
     },
     {
       feature: "Antwortzeit",
-      replainow: "3 Sekunden",
+      replainow: "3 seconds",
       intercom: "5-15 Minuten",
       winner: "replainow"
     },
     {
-      feature: "Sprachen",
-      replainow: "32+ Sprachen",
-      intercom: "8 Sprachen",
+      feature: "languages",
+      replainow: "32+ languages",
+      intercom: "8 languages",
       winner: "replainow"
     },
     {
-      feature: "KI-Technologie",
+      feature: "AI-Technologie",
       replainow: "GPT-4.1",
       intercom: "GPT-3.5",
       winner: "replainow"
     },
     {
-      feature: "DSGVO-Compliance",
+      feature: "GDPR-Compliance",
       replainow: "Vollständig",
       intercom: "Teilweise",
       winner: "replainow"
@@ -78,7 +78,7 @@ const IntercomAlternative = () => {
     <>
       <SEOHead
         title="Intercom Alternative | ReplAInow - 80% günstiger, 10x schneller - ReplAInow"
-        description="ReplAInow ist die bessere Intercom Alternative: 80% Kosteneinsparung, 3-Sekunden Antworten, 32+ Sprachen, GPT-4.1. Einfache Migration, bessere Features. Jetzt wechseln!"
+        description="ReplAInow ist die bessere Intercom Alternative: 80% Kosteneinsparung, 3-seconds Antworten, 32+ languages, GPT-4.1. Einfache Migration, bessere Features. Now wechseln!"
         canonical="/intercom-alternative"
         keywords="Intercom Alternative, Intercom Ersatz, günstiger als Intercom, ReplAInow vs Intercom, Kundenservice Alternative"
         generateOG={true}
@@ -98,7 +98,7 @@ const IntercomAlternative = () => {
           <div className="bg-red-800/30 border border-red-600/50 rounded-2xl p-6 mb-12 shadow-xl backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-red-200 mb-4">TL;DR: ReplAInow vs Intercom</h2>
             <p className="text-lg text-red-100 leading-relaxed">
-              ReplAInow schlägt Intercom in allen wichtigen Bereichen: 80% günstiger (€19 vs €99), 10x schneller (3s vs 5-15min), 32+ Sprachen vs 8 Sprachen, GPT-4.1 vs GPT-3.5, vollständige DSGVO-Compliance. Einfache Migration, bessere Features, drastisch niedrigere Kosten. <a href="#/pricing" className="text-red-400 hover:underline">Jetzt wechseln und €960/Jahr sparen!</a>
+              ReplAInow schlägt Intercom in allen wichtigen Bereichen: 80% günstiger (€19 vs €99), 10x schneller (3s vs 5-15min), 32+ languages vs 8 languages, GPT-4.1 vs GPT-3.5, vollständige GDPR-Compliance. Einfache Migration, bessere Features, drastisch niedrigere Kosten. <a href="#/pricing" className="text-red-400 hover:underline">Now wechseln und €960/Jahr sparen!</a>
             </p>
           </div>
 
@@ -121,12 +121,12 @@ const IntercomAlternative = () => {
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-blue-700/30 shadow-lg">
                 <Zap className="w-12 h-12 text-blue-400 mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-3">20x Schneller</h3>
-                <p className="text-slate-300">3 Sekunden vs 5-15 Minuten Antwortzeit</p>
+                <p className="text-slate-300">3 seconds vs 5-15 Minuten Antwortzeit</p>
               </div>
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-purple-700/30 shadow-lg">
                 <Globe className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">4x Mehr Sprachen</h3>
-                <p className="text-slate-300">32+ Sprachen vs nur 8 bei Intercom</p>
+                <h3 className="text-2xl font-bold text-white mb-3">4x Mehr languages</h3>
+                <p className="text-slate-300">32+ languages vs nur 8 bei Intercom</p>
               </div>
             </div>
           </section>
@@ -232,7 +232,7 @@ const IntercomAlternative = () => {
           <section className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Bereit für den Wechsel?</h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Spare 80% deiner Kosten und erlebe besseren Kundenservice. Migration in wenigen Minuten, 14 Tage kostenlos testen.
+              Spare 80% deiner Kosten und erlebe besseren Kundenservice. Migration in wenigen Minuten, 14 days free test.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -240,7 +240,7 @@ const IntercomAlternative = () => {
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 inline-flex items-center justify-center"
               >
                 <DollarSign className="w-6 h-6 mr-2" />
-                Jetzt €960/Jahr sparen
+                Now €960/Jahr sparen
               </a>
               <a 
                 href="/contact" 

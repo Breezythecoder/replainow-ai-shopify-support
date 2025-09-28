@@ -7,15 +7,15 @@ const GorgiasAlternative = () => {
   const faqs = [
     {
       question: "Warum ist ReplAInow eine bessere Alternative zu Gorgias?",
-      answer: "ReplAInow bietet 75% Kosteneinsparung gegenüber Gorgias, 3-Sekunden Antwortzeiten statt Minuten, 32+ Sprachen nativ unterstützt und vollständige DSGVO-Compliance. Gorgias ist teuer, langsam und nur in wenigen Sprachen verfügbar."
+      answer: "ReplAInow bietet 75% Kosteneinsparung gegenüber Gorgias, 3-seconds Antwortzeiten statt Minuten, 32+ languages nativ unterstützt und vollständige GDPR-Compliance. Gorgias ist teuer, langsam und nur in wenigen languages verfügbar."
     },
     {
       question: "Was kostet ReplAInow im Vergleich zu Gorgias?",
-      answer: "ReplAInow Starter Plan: €19/Monat vs. Gorgias Starter: €60/Monat. Das sind 75% Ersparnis bei besseren Features. Gorgias verlangt zusätzlich für erweiterte KI-Funktionen, die bei ReplAInow inklusive sind."
+      answer: "ReplAInow Starter Plan: €19/Monat vs. Gorgias Starter: €60/Monat. Das sind 75% Ersparnis bei besseren Features. Gorgias verlangt zusätzlich für erweiterte AI-Features, die bei ReplAInow inklusive sind."
     },
     {
-      question: "Welche Funktionen hat ReplAInow, die Gorgias nicht bietet?",
-      answer: "ReplAInow bietet GPT-4.1 Technologie, 32+ Sprachen, 3-Sekunden Antwortzeiten, vollständige DSGVO-Compliance und nahtlose Shopify-Integration. Gorgias ist auf Englisch beschränkt und bietet nur grundlegende KI-Funktionen."
+      question: "Welche Features hat ReplAInow, die Gorgias nicht bietet?",
+      answer: "ReplAInow bietet GPT-4.1 Technologie, 32+ languages, 3-seconds Antwortzeiten, vollständige GDPR-Compliance und nahtlose Shopify-Integration. Gorgias ist auf Englisch beschränkt und bietet nur grundlegende AI-Features."
     },
     {
       question: "Ist die Migration von Gorgias zu ReplAInow einfach?",
@@ -32,24 +32,24 @@ const GorgiasAlternative = () => {
     },
     {
       feature: "Antwortzeit",
-      replainow: "3 Sekunden",
+      replainow: "3 seconds",
       gorgias: "2-5 Minuten",
       winner: "replainow"
     },
     {
-      feature: "Sprachen",
-      replainow: "32+ Sprachen",
-      gorgias: "5 Sprachen",
+      feature: "languages",
+      replainow: "32+ languages",
+      gorgias: "5 languages",
       winner: "replainow"
     },
     {
-      feature: "KI-Technologie",
+      feature: "AI-Technologie",
       replainow: "GPT-4.1",
       gorgias: "GPT-3.5",
       winner: "replainow"
     },
     {
-      feature: "DSGVO-Compliance",
+      feature: "GDPR-Compliance",
       replainow: "Vollständig",
       gorgias: "Teilweise",
       winner: "replainow"
@@ -78,7 +78,7 @@ const GorgiasAlternative = () => {
     <>
       <SEOHead
         title="Gorgias Alternative | ReplAInow - 75% günstiger, 10x schneller - ReplAInow"
-        description="ReplAInow ist die bessere Gorgias Alternative: 75% Kosteneinsparung, 3-Sekunden Antworten, 32+ Sprachen, GPT-4.1. Einfache Migration, bessere Features. Jetzt wechseln!"
+        description="ReplAInow ist die bessere Gorgias Alternative: 75% Kosteneinsparung, 3-seconds Antworten, 32+ languages, GPT-4.1. Einfache Migration, bessere Features. Now wechseln!"
         canonical="/gorgias-alternative"
         keywords="Gorgias Alternative, Gorgias Ersatz, günstiger als Gorgias, ReplAInow vs Gorgias, Kundenservice Alternative"
         generateOG={true}
@@ -98,7 +98,7 @@ const GorgiasAlternative = () => {
           <div className="bg-red-800/30 border border-red-600/50 rounded-2xl p-6 mb-12 shadow-xl backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-red-200 mb-4">TL;DR: ReplAInow vs Gorgias</h2>
             <p className="text-lg text-red-100 leading-relaxed">
-              ReplAInow schlägt Gorgias in allen wichtigen Bereichen: 75% günstiger (€19 vs €60), 10x schneller (3s vs 2-5min), 32+ Sprachen vs 5 Sprachen, GPT-4.1 vs GPT-3.5, vollständige DSGVO-Compliance. Einfache Migration, bessere Features, niedrigere Kosten. <a href="#/pricing" className="text-red-400 hover:underline">Jetzt wechseln und sparen!</a>
+              ReplAInow schlägt Gorgias in allen wichtigen Bereichen: 75% günstiger (€19 vs €60), 10x schneller (3s vs 2-5min), 32+ languages vs 5 languages, GPT-4.1 vs GPT-3.5, vollständige GDPR-Compliance. Einfache Migration, bessere Features, niedrigere Kosten. <a href="#/pricing" className="text-red-400 hover:underline">Now wechseln und sparen!</a>
             </p>
           </div>
 
@@ -121,12 +121,12 @@ const GorgiasAlternative = () => {
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-blue-700/30 shadow-lg">
                 <Zap className="w-12 h-12 text-blue-400 mb-4" />
                 <h3 className="text-2xl font-bold text-white mb-3">10x Schneller</h3>
-                <p className="text-slate-300">3 Sekunden vs 2-5 Minuten Antwortzeit</p>
+                <p className="text-slate-300">3 seconds vs 2-5 Minuten Antwortzeit</p>
               </div>
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-purple-700/30 shadow-lg">
                 <Globe className="w-12 h-12 text-purple-400 mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">6x Mehr Sprachen</h3>
-                <p className="text-slate-300">32+ Sprachen vs nur 5 bei Gorgias</p>
+                <h3 className="text-2xl font-bold text-white mb-3">6x Mehr languages</h3>
+                <p className="text-slate-300">32+ languages vs nur 5 bei Gorgias</p>
               </div>
             </div>
           </section>
@@ -232,7 +232,7 @@ const GorgiasAlternative = () => {
           <section className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Bereit für den Wechsel?</h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Spare 75% deiner Kosten und erlebe besseren Kundenservice. Migration in wenigen Minuten, 14 Tage kostenlos testen.
+              Spare 75% deiner Kosten und erlebe besseren Kundenservice. Migration in wenigen Minuten, 14 days free test.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -240,7 +240,7 @@ const GorgiasAlternative = () => {
                 className="bg-gradient-to-r from-green-600 to-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-green-700 hover:to-blue-700 transition-all duration-300 inline-flex items-center justify-center"
               >
                 <DollarSign className="w-6 h-6 mr-2" />
-                Jetzt sparen und wechseln
+                Now sparen und wechseln
               </a>
               <a 
                 href="/contact" 

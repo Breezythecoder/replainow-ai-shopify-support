@@ -16,7 +16,7 @@ const plans = [
     price: "$19",
     period: "/ mes",
     quota: "Hasta 300 respuestas IA / mes",
-    trial: "14 das de prueba gratis",
+    trial: "14 das de prueba free",
     features: [
       ...baseFeatures,
       "Envo de email va direccin ReplAInow",
@@ -28,7 +28,7 @@ const plans = [
     price: "$49",
     period: "/ mes",
     quota: "Hasta 1500 respuestas IA / mes",
-    trial: "14 das de prueba gratis",
+    trial: "14 das de prueba free",
     features: [
       ...baseFeatures,
       "Envo de email con tu dominio",
@@ -41,7 +41,7 @@ const plans = [
     price: "$99",
     period: "/ mes",
     quota: "Hasta 3000 respuestas IA / mes",
-    trial: "14 das de prueba gratis",
+    trial: "14 das de prueba free",
     features: [
       ...baseFeatures,
       "Envo de email con tu dominio",
@@ -53,7 +53,7 @@ const plans = [
     price: "$199",
     period: "/ mes",
     quota: "Respuestas IA ilimitadas",
-    trial: "14 das de prueba gratis",
+    trial: "14 das de prueba free",
     features: [
       ...baseFeatures,
       "Envo de email con tu dominio",
@@ -86,7 +86,7 @@ const PricingEs = () => {
                     <span className="text-3xl font-bold">{p.price}</span>
                     <span className="text-muted-foreground">{p.period}</span>
                   </div>
-                  <p className="mt-1 text-xs text-muted-foreground">{(p as any).trial ?? "14 das de prueba gratis"}</p>
+                  <p className="mt-1 text-xs text-muted-foreground">{(p as any).trial ?? "14 das de prueba free"}</p>
                   {'blurb' in p && (p as any).blurb ? (
                     <p className="mt-3 text-sm text-muted-foreground">{(p as any).blurb}</p>
                   ) : null}
@@ -121,8 +121,8 @@ const PricingEs = () => {
 
                 <div className="mt-auto space-y-3">
                   <Button asChild variant="hero" className="w-full">
-                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Probar gratis  Plan ${p.name}`}>
-                      Probar gratis
+                    <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(p.name)}&utm_content=pricing`} aria-label={`Probar free  Plan ${p.name}`}>
+                      Probar free
                     </a>
                   </Button>
                   <div className="flex items-center justify-center gap-2 text-xs text-muted-foreground">

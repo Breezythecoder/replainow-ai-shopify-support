@@ -34,12 +34,12 @@ const Index = () => {
     <>
       <MultilingualSEO language="de" />
       <AdvancedSEO
-        title="ReplAInow – AI Shopify Helpdesk | Automatisiere Support mit KI"
-        description="Automatisiere deinen Shopify Kundensupport mit GPT-4 AI. ✅ 3 Sek Antwortzeit ✅ 32+ Sprachen ✅ DSGVO-konform ✅ 75% günstiger als Gorgias & Zendesk. Jetzt 14 Tage kostenlos testen!"
+        title="ReplAInow – AI Shopify Helpdesk | Automate Support mit AI"
+        description="Automate deinen Shopify Customer Support mit GPT-4 AI. ✅ 3 Sek Antwortzeit ✅ 32+ languages ✅ GDPR-konform ✅ 75% günstiger als Gorgias & Zendesk. Now 14 days free test!"
         keywords={[
           "AI Shopify Helpdesk",
           "Shopify AI Support", 
-          "KI Kundensupport Shopify",
+          "AI Customer Support Shopify",
           "Automatisierter Shopify Support",
           "GPT-4 Shopify Integration",
           "Shopify Support Automatisierung",
@@ -64,8 +64,8 @@ const Index = () => {
         }}
       />
       <SEO
-        title="ReplAInow – Shopify Support automatisieren mit KI"
-        description="Beantworte Kundenanfragen in Sekunden: DSGVO‑konform, markenkonform, direkte Shopify‑Daten. 14 Tage gratis testen."
+        title="ReplAInow – Shopify Support automatisieren mit AI"
+        description="Answer customer queries in seconds: GDPR‑konform, brand-consistent, direct Shopify‑Daten. 14 days free test."
         image="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />

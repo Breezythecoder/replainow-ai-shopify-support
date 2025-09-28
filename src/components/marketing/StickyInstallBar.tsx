@@ -28,7 +28,7 @@ const StickyInstallBar = () => {
       <div className="container">
         <div className="relative mx-auto flex flex-col sm:flex-row items-center gap-3 rounded-xl border bg-card/95 backdrop-blur px-4 py-3 shadow-brand">
           <p className="text-sm sm:text-base text-muted-foreground flex-1 text-center sm:text-left">
-            In 2 Minuten startklar  14 Tage kostenlos testen.
+            In 2 Minuten startklar  14 days free test.
           </p>
           <div className="flex items-center gap-2">
             <Button
@@ -44,7 +44,7 @@ const StickyInstallBar = () => {
                 });
               }}
             >
-              <a href={OAUTH_URL} aria-label="Jetzt installieren">Jetzt installieren</a>
+              <a href={OAUTH_URL} aria-label="Now Install">Now Install</a>
             </Button>
             <button
               aria-label="Leiste schlieen"

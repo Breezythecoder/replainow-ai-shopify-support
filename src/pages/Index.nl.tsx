@@ -30,7 +30,7 @@ const IndexNl = () => {
       <MultilingualSEO language="nl" />
       <AdvancedSEO
         title="ReplAInow – AI Shopify Helpdesk | Automatiseer Ondersteuning met AI"
-        description="Automatiseer je Shopify klantenservice met GPT-4 AI. ✅ 3sec reactietijd ✅ 32+ talen ✅ GDPR conform ✅ 75% goedkoper dan Gorgias en Zendesk. Probeer 14 dagen gratis!"
+        description="Automatiseer je Shopify klantenservice met GPT-4 AI. ✅ 3sec reactietijd ✅ 32+ talen ✅ GDPR conform ✅ 75% goedkoper dan Gorgias en Zendesk. Probeer 14 dagen free!"
         keywords={[
           "AI Shopify Helpdesk",
           "Shopify AI Ondersteuning", 
@@ -60,7 +60,7 @@ const IndexNl = () => {
       />
       <SEO
         title="ReplAInow – Shopify Ondersteuning automatiseren met AI"
-        description="Beantwoord klantenvragen in seconden: GDPR-conform, merkconform, directe Shopify-data. 14 dagen gratis testen."
+        description="Beantwoord klantenvragen in seconden: GDPR-conform, merkconform, directe Shopify-data. 14 dagen free test."
         image="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />

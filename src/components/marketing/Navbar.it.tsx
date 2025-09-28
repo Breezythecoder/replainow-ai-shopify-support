@@ -20,7 +20,7 @@ const NavbarIt = () => {
         </div>
         <div className="flex items-center gap-2">
           <Button asChild variant="hero">
-            <a href={OAUTH_URL} aria-label="Prova gratis ora">Prova gratis ora</a>
+            <a href={OAUTH_URL} aria-label="Prova free ora">Prova free ora</a>
           </Button>
         </div>
       </nav>

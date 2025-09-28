@@ -29,17 +29,17 @@ function template({ title, subtitle }: { title: string; subtitle?: string }) {
       <div style="font-size:64px;line-height:1.1;font-weight:700;max-width:1000px;margin-bottom:20px;background:linear-gradient(135deg,#fff,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">${title}</div>
       
       <!-- Subtitle -->
-      <div style="font-size:32px;color:#94a3b8;max-width:900px;line-height:1.3;">${subtitle ?? "AI Helpdesk für Shopify – Automatisiere deinen Kundenservice mit GPT-4.1"}</div>
+      <div style="font-size:32px;color:#94a3b8;max-width:900px;line-height:1.3;">${subtitle ?? "AI Helpdesk für Shopify – Automate deinen Kundenservice mit GPT-4.1"}</div>
       
       <!-- Features -->
       <div style="display:flex;gap:30px;margin-top:40px;font-size:20px;">
         <div style="display:flex;align-items:center;color:#10b981;">
           <span style="margin-right:8px;">⚡</span>
-          <span>3-Sekunden Antworten</span>
+          <span>3-seconds Antworten</span>
         </div>
         <div style="display:flex;align-items:center;color:#8b5cf6;">
           <span style="margin-right:8px;">🌍</span>
-          <span>32+ Sprachen</span>
+          <span>32+ languages</span>
         </div>
         <div style="display:flex;align-items:center;color:#f59e0b;">
           <span style="margin-right:8px;">💰</span>

@@ -42,36 +42,36 @@ const MultilingualSupport = () => {
 
   const faqs = [
     {
-      question: "Welche Sprachen unterstützt ReplAInow?",
-      answer: "ReplAInow unterstützt über 32 Sprachen nativ, darunter alle wichtigen europäischen Sprachen, asiatische Sprachen wie Chinesisch, Japanisch und Koreanisch, sowie weitere globale Sprachen wie Arabisch, Hindi und Russisch."
+      question: "Welche languages unterstützt ReplAInow?",
+      answer: "ReplAInow unterstützt über 32 languages nativ, darunter alle wichtigen europäischen languages, asiatische languages wie Chinesisch, Japanisch und Koreanisch, sowie weitere globale languages wie Arabisch, Hindi und Russisch."
     },
     {
       question: "Wie erkennt ReplAInow die Sprache des Kunden?",
-      answer: "ReplAInow nutzt fortschrittliche KI-Technologie, um automatisch die Sprache des Kunden aus der Anfrage zu erkennen. Die Erkennung erfolgt in Echtzeit und ist zu über 99% akkurat."
+      answer: "ReplAInow nutzt fortschrittliche AI-Technologie, um automatisch die Sprache des Kunden aus der Anfrage zu erkennen. Die Erkennung erfolgt in Echtzeit und ist zu über 99% akkurat."
     },
     {
-      question: "Kann ich die Sprachen für meinen Store anpassen?",
-      answer: "Ja, Sie können in den Einstellungen festlegen, welche Sprachen für Ihren Store aktiviert sein sollen. ReplAInow passt sich automatisch an Ihre gewünschten Sprachen an."
+      question: "Kann ich die languages für meinen Store anpassen?",
+      answer: "Ja, Sie können in den Einstellungen festlegen, welche languages für Ihren Store aktiviert sein sollen. ReplAInow passt sich automatisch an Ihre gewünschten languages an."
     },
     {
-      question: "Werden Produktinformationen auch in anderen Sprachen übersetzt?",
+      question: "Werden Produktinformationen auch in anderen languages übersetzt?",
       answer: "Ja, ReplAInow kann automatisch Produktinformationen, Beschreibungen und sogar technische Details in die Sprache des Kunden übersetzen, während der ursprüngliche Kontext erhalten bleibt."
     },
     {
       question: "Ist die Übersetzungsqualität vergleichbar mit menschlichen Übersetzern?",
-      answer: "ReplAInow nutzt GPT-4.1 Technologie, die eine Übersetzungsqualität bietet, die mit professionellen menschlichen Übersetzern vergleichbar ist. Die KI versteht Kontext und Nuancen."
+      answer: "ReplAInow nutzt GPT-4.1 Technologie, die eine Übersetzungsqualität bietet, die mit professionellen menschlichen Übersetzern vergleichbar ist. Die AI versteht Kontext und Nuancen."
     },
     {
       question: "Funktioniert mehrsprachiger Support auch bei komplexen Anfragen?",
-      answer: "Ja, ReplAInow kann auch komplexe Kundenanfragen wie Retouren, technische Probleme oder spezielle Produktanfragen in der jeweiligen Sprache des Kunden bearbeiten."
+      answer: "Ja, ReplAInow kann auch komplexe customer queries wie Retouren, technische Probleme oder spezielle Produktanfragen in der jeweiligen Sprache des Kunden bearbeiten."
     }
   ];
 
   return (
     <>
       <SEOHead
-        title="Multilingual Support für Shopify | 32+ Sprachen mit AI - ReplAInow"
-        description="Automatischer mehrsprachiger Support für Shopify Stores. 32+ Sprachen nativ unterstützt, automatische Spracherkennung, DSGVO-konform. Jetzt testen!"
+        title="Multilingual Support für Shopify | 32+ languages mit AI - ReplAInow"
+        description="Automatischer mehrsprachiger Support für Shopify Stores. 32+ languages nativ unterstützt, automatische Spracherkennung, GDPR-konform. Now test!"
         canonical="/multilingual-support"
         keywords="multilingual support, mehrsprachiger support, shopify sprachen, ai übersetzung, automatische spracherkennung"
         generateOG={true}
@@ -94,14 +94,14 @@ const MultilingualSupport = () => {
             </h1>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
               Automatischer mehrsprachiger Kundenservice für globale Shopify Stores. 
-              Unterstützung für 32+ Sprachen mit KI-gestützter Übersetzung.
+              Unterstützung für 32+ languages mit AI-gestützter Übersetzung.
             </p>
             
             {/* TL;DR Box */}
             <div className="bg-slate-800/50 rounded-2xl p-6 mb-12 border border-blue-500/30">
               <h2 className="text-2xl font-bold text-white mb-4">🌍 TL;DR</h2>
               <p className="text-blue-100 text-lg">
-                ReplAInow unterstützt <strong>32+ Sprachen nativ</strong> mit automatischer Spracherkennung 
+                ReplAInow unterstützt <strong>32+ languages nativ</strong> mit automatischer Spracherkennung 
                 und <strong>99%+ Übersetzungsgenauigkeit</strong>. Ihre Kunden erhalten Support in ihrer 
                 Muttersprache ohne zusätzliche Kosten. <a href="#/pricing" className="text-blue-400 hover:text-blue-300">Ab €19/Monat</a>.
               </p>
@@ -111,13 +111,13 @@ const MultilingualSupport = () => {
               <Button asChild size="xl" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold px-8 py-4">
                 <a href="https://apps.shopify.com/replainow-ai-support">
                   <Globe className="w-5 h-5 mr-2" />
-                  Jetzt installieren
+                  Now Install
                 </a>
               </Button>
               <Button asChild variant="outline" size="xl" className="border-2 border-blue-400 text-blue-100 hover:bg-blue-500 hover:text-white px-8 py-4">
                 <a href="#languages">
                   <Brain className="w-5 h-5 mr-2" />
-                  Sprachen ansehen
+                  languages Watch
                 </a>
               </Button>
             </div>
@@ -153,7 +153,7 @@ const MultilingualSupport = () => {
                   1
                 </div>
                 <h3 className="text-xl font-bold text-slate-800 mb-3">Sprache erkennen</h3>
-                <p className="text-slate-600">KI erkennt automatisch die Sprache der Kundenanfrage mit 99%+ Genauigkeit</p>
+                <p className="text-slate-600">AI erkennt automatisch die Sprache der Kundenanfrage mit 99%+ Genauigkeit</p>
               </div>
               <div className="bg-white/95 rounded-2xl p-6 text-center">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-4">
@@ -176,7 +176,7 @@ const MultilingualSupport = () => {
         {/* Supported Languages */}
         <section id="languages" className="container mx-auto px-4 py-16">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-white mb-12 text-center">Unterstützte Sprachen</h2>
+            <h2 className="text-4xl font-bold text-white mb-12 text-center">Unterstützte languages</h2>
             <div className="bg-white/95 rounded-2xl p-8">
               <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
                 {supportedLanguages.map((lang, index) => (
@@ -222,11 +222,11 @@ const MultilingualSupport = () => {
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-slate-700">Ein System für alle Sprachen und Märkte</span>
+                    <span className="text-slate-700">Ein System für alle languages und Märkte</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-green-600" />
-                    <span className="text-slate-700">Skalierbar für neue Märkte und Sprachen</span>
+                    <span className="text-slate-700">Skalierbar für neue Märkte und languages</span>
                   </li>
                 </ul>
               </div>
@@ -260,14 +260,14 @@ const MultilingualSupport = () => {
               <Button asChild size="xl" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold px-8 py-4">
                 <a href="https://apps.shopify.com/replainow-ai-support">
                   <Globe className="w-5 h-5 mr-2" />
-                  Jetzt installieren
+                  Now Install
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </Button>
               <Button asChild variant="outline" size="xl" className="border-2 border-blue-400 text-blue-100 hover:bg-blue-500 hover:text-white px-8 py-4">
                 <a href="#/pricing">
                   <Zap className="w-5 h-5 mr-2" />
-                  Preise ansehen
+                  Pricing Watch
                 </a>
               </Button>
             </div>

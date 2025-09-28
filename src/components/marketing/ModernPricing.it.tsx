@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 const baseFeatures = ["Installazione 1 clic","Dati negozio illimitati (Prodotti, Pagine, Policy, ecc.)","AI Mail & AI Live Chat","Branding personalizzabile"];
 const plans = [
-  { name: "Starter", price: "$19", period: "/ mese", quota: "Fino a 300 risposte IA / mese", trial: "14 giorni gratis", features: [...baseFeatures, "Invio email tramite indirizzo ReplAInow"], highlight: false, description: "Perfetto per test" },
-  { name: "Growth", price: "$49", period: "/ mese", quota: "Fino a 1500 risposte IA / mese", trial: "14 giorni gratis", features: [...baseFeatures, "Invio email con il tuo dominio"], highlight: true, badge: "Pi Popolare", description: "Per store in crescita" },
-  { name: "Pro", price: "$99", period: "/ mese", quota: "Fino a 3000 risposte IA / mese", trial: "14 giorni gratis", features: [...baseFeatures, "Invio email con il tuo dominio"], highlight: false, description: "Per store affermati" },
-  { name: "Scale", price: "$199", period: "/ mese", quota: "Risposte IA illimitate", trial: "14 giorni gratis", features: [...baseFeatures, "Invio email con il tuo dominio"], highlight: false, description: "Per catene di store" },
+  { name: "Starter", price: "$19", period: "/ mese", quota: "Fino a 300 risposte IA / mese", trial: "14 giorni free", features: [...baseFeatures, "Invio email tramite indirizzo ReplAInow"], highlight: false, description: "Perfetto per test" },
+  { name: "Growth", price: "$49", period: "/ mese", quota: "Fino a 1500 risposte IA / mese", trial: "14 giorni free", features: [...baseFeatures, "Invio email con il tuo dominio"], highlight: true, badge: "Pi Popolare", description: "Per store in crescita" },
+  { name: "Pro", price: "$99", period: "/ mese", quota: "Fino a 3000 risposte IA / mese", trial: "14 giorni free", features: [...baseFeatures, "Invio email con il tuo dominio"], highlight: false, description: "Per store affermati" },
+  { name: "Scale", price: "$199", period: "/ mese", quota: "Risposte IA illimitate", trial: "14 giorni free", features: [...baseFeatures, "Invio email con il tuo dominio"], highlight: false, description: "Per catene di store" },
 ];
 const ModernPricingIt = () => {
   return (

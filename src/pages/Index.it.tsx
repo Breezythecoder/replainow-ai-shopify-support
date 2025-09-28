@@ -30,7 +30,7 @@ const IndexIt = () => {
       <MultilingualSEO language="it" />
       <AdvancedSEO
         title="ReplAInow – Helpdesk AI per Shopify | Automatizza Supporto con IA"
-        description="Automatizza il supporto clienti Shopify con GPT-4 AI. ✅ 3sec tempo risposta ✅ 32+ lingue ✅ Conforme GDPR ✅ 75% più economico di Gorgias e Zendesk. Prova 14 giorni gratis!"
+        description="Automatizza il supporto clienti Shopify con GPT-4 AI. ✅ 3sec tempo risposta ✅ 32+ lingue ✅ Conforme GDPR ✅ 75% più economico di Gorgias e Zendesk. Prova 14 giorni free!"
         keywords={[
           "Helpdesk AI Shopify",
           "Supporto AI Shopify", 
@@ -60,7 +60,7 @@ const IndexIt = () => {
       />
       <SEO
         title="ReplAInow – Automatizza il Supporto Shopify con l'AI"
-        description="Rispondi alle richieste dei clienti in secondi: conforme GDPR, rispettoso del brand, dati Shopify diretti. Prova 14 giorni gratis."
+        description="Rispondi alle richieste dei clienti in secondi: conforme GDPR, rispettoso del brand, dati Shopify diretti. Prova 14 giorni free."
         image="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />

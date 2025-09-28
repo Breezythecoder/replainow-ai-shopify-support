@@ -34,7 +34,7 @@ const IndexEs = () => {
     <>
       <SEO 
         title="ReplAInow – Mesa de Ayuda IA Shopify"
-        description="ReplAInow automatiza el soporte al cliente de Shopify con GPT-4.1: respuestas en 3 segundos, más de 32 idiomas, compatible con GDPR, 75% de ahorro de costos. ¡Prueba gratis ahora!"
+        description="ReplAInow automatiza el soporte al cliente de Shopify con GPT-4.1: respuestas en 3 segundos, más de 32 idiomas, compatible con GDPR, 75% de ahorro de costos. ¡Prueba free ahora!"
         structuredData={structuredData}
       />
       

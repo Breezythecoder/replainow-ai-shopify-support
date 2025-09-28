@@ -48,7 +48,7 @@ const Footer = () => {
                 </div>
                 <blockquote className="text-slate-300 italic text-lg leading-relaxed">
                   "Als E-Commerce Unternehmer und Programmierer habe ich selbst erlebt, wie frustrierend es ist, 
-                  wenn Kundenanfragen stundenlang unbeantwortet bleiben. ReplAInow ist die Lösung, 
+                  wenn customer queries stundenlang unbeantwortet bleiben. ReplAInow ist die Lösung, 
                   die ich mir damals gewünscht hätte - intelligent, schnell und bezahlbar."
                 </blockquote>
               </div>
@@ -71,7 +71,7 @@ const Footer = () => {
               </div>
             <p className="text-slate-300 text-sm leading-relaxed mb-4">
               Der intelligenteste AI-Support für Shopify-Händler. 
-              24/7 verfügbar, 32+ Sprachen, DSGVO-konform.
+              24/7 verfügbar, 32+ languages, GDPR-konform.
             </p>
               <div className="flex gap-3">
                 <a href="#" aria-label="Twitter" className="text-slate-400 hover:text-blue-400 transition-colors p-3 min-h-[44px] min-w-[44px] flex items-center justify-center touch-manipulation" title="Twitter">
@@ -124,7 +124,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-bold mb-4">Kontakt</h4>
+            <h4 className="text-white font-bold mb-4">Contact</h4>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail className="text-blue-400 flex-shrink-0" size={20} />

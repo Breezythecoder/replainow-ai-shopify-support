@@ -27,7 +27,7 @@ const ModernLiveDemo = () => {
         "Hallo! Für dein iPhone 14 Pro empfehle ich unser Premium Clear Case (€24.99) oder das Rugged Case (€29.99). Beide sind gerade auf Lager und bieten optimalen Schutz! 🛡️",
         "Ja! Studenten bekommen 15% Rabatt mit dem Code STUDENT15. Einfach bei der Bestellung eingeben! 🎓",
         "Standard-Versand nach Deutschland dauert 2-3 Werktage (€4.99), Express-Versand 1-2 Werktage (€9.99). Kostenloser Versand ab €50! 🚚",
-        "Ja, du hast 30 Tage Rückgaberecht! Kostenlose Rücksendung, Geld-zurück-Garantie. Einfach in deinem Account die Rücksendung anmelden! ✅"
+        "Ja, du hast 30 days Rückgaberecht! Kostenlose Rücksendung, Geld-zurück-Garantie. Einfach in deinem Account die Rücksendung anmelden! ✅"
       ]
     },
     {
@@ -172,7 +172,7 @@ const ModernLiveDemo = () => {
           </h2>
             <p className="text-lg sm:text-xl text-blue-100 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
             <span className="text-cyan-400 font-bold">Echte AI-Antworten</span> in Echtzeit - 
-            <span className="text-purple-400 font-bold"> 3 Sekunden</span> von Frage zu Lösung
+            <span className="text-purple-400 font-bold"> 3 seconds</span> von Frage zu Lösung
           </p>
         </div>
         

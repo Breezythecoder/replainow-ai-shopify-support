@@ -1,11 +1,11 @@
 const ModernComparison = () => {
   const comparisonData = [
      ["AI Intelligence", "YES GPT-4.1 Latest", "NO Basic AI", "NO Limited AI", "NO Old AI"],
-     ["Antwortzeit", "YES 3 Sekunden", "NO 2-5 Minuten", "NO 5-10 Minuten", "NO 10+ Minuten"],
-     ["Sprachen", "YES 32+ Nativ", "NO 10 Basic", "NO 15 Basic", "NO 20 Basic"],
+     ["Antwortzeit", "YES 3 seconds", "NO 2-5 Minuten", "NO 5-10 Minuten", "NO 10+ Minuten"],
+     ["languages", "YES 32+ Nativ", "NO 10 Basic", "NO 15 Basic", "NO 20 Basic"],
      ["Shopify Integration", "YES Echtzeit-Sync", "NO Manual Import", "NO Basic Connect", "NO Complex Setup"],
      ["Preis/Monat", "YES EUR 19/Monat", "NO EUR 50+", "NO EUR 74+", "NO EUR 115+"],
-     ["Setup Zeit", "YES 60 Sekunden", "NO 2-3 Tage", "NO 1 Woche", "NO 2 Wochen"],
+     ["Setup Zeit", "YES 60 seconds", "NO 2-3 days", "NO 1 Woche", "NO 2 Wochen"],
      ["ROI Garantie", "YES 6x Conversion", "NO Neutral", "NO Neutral", "NO Negativ"]
   ];
 
@@ -128,7 +128,7 @@ const ModernComparison = () => {
                   </span>
                 </h3>
                 <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-                  Warum 75% weniger bezahlen und trotzdem die beste KI-Performance bekommen?
+                  Warum 75% weniger bezahlen und trotzdem die beste AI-Performance bekommen?
                 </p>
               </div>
               
@@ -138,12 +138,12 @@ const ModernComparison = () => {
                 <div className="space-y-8">
                   <div className="text-center">
                     <h4 className="text-3xl font-bold text-red-400 mb-2">Teure Konkurrenz</h4>
-                    <p className="text-slate-300">Basis-Features für Premium-Preise</p>
+                    <p className="text-slate-300">Basis-Features für Premium-Pricing</p>
                   </div>
                   
                   <div className="space-y-6">
                     {[
-                       { name: "Gorgias", price: "€50+", features: ["Basis AI", "Langsame Antworten", "Begrenzte Sprachen"] },
+                       { name: "Gorgias", price: "€50+", features: ["Basis AI", "Langsame Antworten", "Begrenzte languages"] },
                        { name: "Intercom", price: "€74+", features: ["Teure Add-ons", "Komplexe Setup", "Begrenzte Integration"] },
                        { name: "Zendesk", price: "€115+", features: ["Überteuerte Features", "Lange Einarbeitung", "Versteckte Kosten"] }
                     ].map((item, i) => (
@@ -174,7 +174,7 @@ const ModernComparison = () => {
                 <div className="space-y-8">
                   <div className="text-center">
                     <h4 className="text-3xl font-bold text-green-400 mb-2">ReplAInow Power</h4>
-                    <p className="text-slate-300">Premium-Features für faire Preise</p>
+                    <p className="text-slate-300">Premium-Features für faire Pricing</p>
                   </div>
                   
                   <div className="bg-gradient-to-br from-green-900/40 via-emerald-900/30 to-green-800/20 border-2 border-green-500/40 rounded-2xl p-8 shadow-xl">
@@ -186,10 +186,10 @@ const ModernComparison = () => {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                       {[
                         "GPT-4.1 AI Engine",
-                        "32+ Sprachen nativ", 
-                        "3 Sekunden Antwortzeit",
+                        "32+ languages nativ", 
+                        "3 seconds Antwortzeit",
                         "Unlimitierte AI-Antworten",
-                        "DSGVO-konform",
+                        "GDPR-konform",
                         "24/7 Verfügbarkeit"
                       ].map((feature, i) => (
                         <div key={i} className="flex items-center gap-3 text-sm">

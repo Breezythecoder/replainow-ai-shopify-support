@@ -1,4 +1,4 @@
-// SEO Meta Configuration für alle Sprachen und Seiten
+// SEO Meta Configuration für alle languages und Seiten
 export interface SEOConfig {
   title: string;
   description: string;
@@ -10,14 +10,14 @@ export interface LanguageSEO {
   [key: string]: SEOConfig;
 }
 
-// Basis SEO Konfiguration für die Hauptseite in allen Sprachen
+// Basis SEO Konfiguration für die Hauptseite in allen languages
 export const homeSEO: LanguageSEO = {
   de: {
-    title: "ReplAInow - AI Shopify Helpdesk | 3 Sek Antwortzeit | 14 Tage kostenlos",
-    description: "Automatisiere deinen Shopify Kundensupport mit GPT-4 AI. ✅ 3 Sek Antwortzeit ✅ 32+ Sprachen ✅ DSGVO-konform ✅ 75% günstiger als Gorgias & Zendesk. Jetzt 14 Tage kostenlos testen!",
+    title: "ReplAInow - AI Shopify Helpdesk | 3 Sek Antwortzeit | 14 days free",
+    description: "Automate deinen Shopify Customer Support mit GPT-4 AI. ✅ 3 Sek Antwortzeit ✅ 32+ languages ✅ GDPR-konform ✅ 75% günstiger als Gorgias & Zendesk. Now 14 days free test!",
     keywords: [
-      "Shopify Helpdesk", "AI Kundensupport", "GPT-4 Shopify", "Automatischer Kundenservice",
-      "DSGVO konform", "Gorgias Alternative", "Zendesk Alternative", "Intercom Alternative",
+      "Shopify Helpdesk", "AI Customer Support", "GPT-4 Shopify", "Automatischer Kundenservice",
+      "GDPR konform", "Gorgias Alternative", "Zendesk Alternative", "Intercom Alternative",
       "Shopify Chat Bot", "E-Commerce Support", "Künstliche Intelligenz", "Customer Service Automation"
     ]
   },
@@ -32,7 +32,7 @@ export const homeSEO: LanguageSEO = {
   },
   es: {
     title: "ReplAInow - Helpdesk IA Shopify | 3seg Respuesta | Prueba 14 Días Gratis",
-    description: "Automatiza tu soporte al cliente de Shopify con GPT-4 IA. ✅ 3seg tiempo respuesta ✅ 32+ idiomas ✅ Cumple RGPD ✅ 75% más barato que Gorgias y Zendesk. ¡Prueba 14 días gratis!",
+    description: "Automatiza tu soporte al cliente de Shopify con GPT-4 IA. ✅ 3seg tiempo respuesta ✅ 32+ idiomas ✅ Cumple RGPD ✅ 75% más barato que Gorgias y Zendesk. ¡Prueba 14 días free!",
     keywords: [
       "Shopify helpdesk", "soporte cliente IA", "GPT-4 Shopify", "servicio cliente automatizado",
       "cumple RGPD", "alternativa Gorgias", "alternativa Zendesk", "alternativa Intercom",
@@ -50,7 +50,7 @@ export const homeSEO: LanguageSEO = {
   },
   it: {
     title: "ReplAInow - Helpdesk IA Shopify | 3sec Risposta | Prova 14 Giorni Gratis",
-    description: "Automatizza il supporto clienti Shopify con GPT-4 AI. ✅ 3sec tempo risposta ✅ 32+ lingue ✅ Conforme GDPR ✅ 75% più economico di Gorgias e Zendesk. Prova 14 giorni gratis!",
+    description: "Automatizza il supporto clienti Shopify con GPT-4 AI. ✅ 3sec tempo risposta ✅ 32+ lingue ✅ Conforme GDPR ✅ 75% più economico di Gorgias e Zendesk. Prova 14 giorni free!",
     keywords: [
       "Shopify helpdesk", "supporto clienti IA", "GPT-4 Shopify", "servizio clienti automatizzato",
       "conforme GDPR", "alternativa Gorgias", "alternativa Zendesk", "alternativa Intercom",
@@ -59,7 +59,7 @@ export const homeSEO: LanguageSEO = {
   },
   nl: {
     title: "ReplAInow - AI Shopify Helpdesk | 3sec Reactie | 14 Dagen Gratis Proberen",
-    description: "Automatiseer je Shopify klantenservice met GPT-4 AI. ✅ 3sec reactietijd ✅ 32+ talen ✅ GDPR conform ✅ 75% goedkoper dan Gorgias en Zendesk. Probeer 14 dagen gratis!",
+    description: "Automatiseer je Shopify klantenservice met GPT-4 AI. ✅ 3sec reactietijd ✅ 32+ talen ✅ GDPR conform ✅ 75% goedkoper dan Gorgias en Zendesk. Probeer 14 dagen free!",
     keywords: [
       "Shopify helpdesk", "AI klantenservice", "GPT-4 Shopify", "geautomatiseerde klantenservice",
       "GDPR conform", "Gorgias alternatief", "Zendesk alternatief", "Intercom alternatief",
@@ -91,10 +91,10 @@ export const pagesSEO: { [pageName: string]: LanguageSEO } = {
   gorgias: {
     de: {
       title: "Gorgias Alternative - ReplAInow | 75% günstiger, 60x schneller | GPT-4 AI",
-      description: "Entdecke warum ReplAInow die überlegene Gorgias Alternative ist: ✅ 75% günstiger ✅ 60x schneller ✅ GPT-4 AI ✅ 32+ Sprachen. Direkter Vergleich + kostenloser Test.",
+      description: "Entdecke warum ReplAInow die überlegene Gorgias Alternative ist: ✅ 75% günstiger ✅ 60x schneller ✅ GPT-4 AI ✅ 32+ languages. Direkter Vergleich + freeer Test.",
       keywords: [
-        "Gorgias Alternative", "Shopify Helpdesk", "GPT-4 Kundensupport", "günstiger als Gorgias",
-        "AI Customer Service", "Shopify Chat", "Automatischer Support", "DSGVO konform"
+        "Gorgias Alternative", "Shopify Helpdesk", "GPT-4 Customer Support", "günstiger als Gorgias",
+        "AI Customer Service", "Shopify Chat", "Automatischer Support", "GDPR konform"
       ]
     },
     en: {
@@ -108,9 +108,9 @@ export const pagesSEO: { [pageName: string]: LanguageSEO } = {
   },
   privacy: {
     de: {
-      title: "Datenschutzerklärung - ReplAInow | DSGVO-konforme Datenverarbeitung",
-      description: "Erfahre, wie ReplAInow Händlerdaten sammelt, verwendet und schützt. DSGVO-konforme Datenschutzerklärung mit Shopify API Nutzung erklärt.",
-      keywords: ["Datenschutz", "DSGVO", "Privacy Policy", "Datenverarbeitung", "Shopify API", "Datensicherheit"]
+      title: "Datenschutzerklärung - ReplAInow | GDPR-konforme Datenverarbeitung",
+      description: "Erfahre, wie ReplAInow Händlerdaten sammelt, verwendet und schützt. GDPR-konforme Datenschutzerklärung mit Shopify API Nutzung erklärt.",
+      keywords: ["Datenschutz", "GDPR", "Privacy Policy", "Datenverarbeitung", "Shopify API", "Datensicherheit"]
     },
     en: {
       title: "Privacy Policy - ReplAInow | GDPR-Compliant Data Processing",
@@ -133,8 +133,8 @@ export const pagesSEO: { [pageName: string]: LanguageSEO } = {
   impressum: {
     de: {
       title: "Impressum - ReplAInow | Rechtliche Angaben PrimeVision Group LLC",
-      description: "Impressum der PrimeVision Group LLC (ReplAInow): Anschrift, Kontakt, Verantwortlicher gem. § 55 Abs. 2 RStV, Tax Registration Number.",
-      keywords: ["Impressum", "PrimeVision Group LLC", "Kontakt", "rechtliche Angaben", "Verantwortlicher"]
+      description: "Impressum der PrimeVision Group LLC (ReplAInow): Anschrift, Contact, Verantwortlicher gem. § 55 Abs. 2 RStV, Tax Registration Number.",
+      keywords: ["Impressum", "PrimeVision Group LLC", "Contact", "rechtliche Angaben", "Verantwortlicher"]
     }
   },
   security: {
@@ -152,8 +152,8 @@ export const pagesSEO: { [pageName: string]: LanguageSEO } = {
   uninstall: {
     de: {
       title: "Deinstallation - ReplAInow | App entfernen & Daten löschen",
-      description: "So deinstallierst du ReplAInow aus deinem Shopify Store. Einfache Schritte und Datenlöschung mit DSGVO-Optionen.",
-      keywords: ["Deinstallation", "App entfernen", "Daten löschen", "Shopify App", "DSGVO"]
+      description: "So deinstallierst du ReplAInow aus deinem Shopify Store. Einfache Schritte und Datenlöschung mit GDPR-Optionen.",
+      keywords: ["Deinstallation", "App entfernen", "Daten löschen", "Shopify App", "GDPR"]
     },
     en: {
       title: "Uninstall Instructions - ReplAInow | Remove App & Delete Data",

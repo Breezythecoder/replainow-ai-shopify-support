@@ -18,8 +18,8 @@ const features = [
   },
   {
     icon: ShieldCheck,
-    title: "DSGVO- & HMAC-sicher",
-    desc: "Verschlsselt, DSGVO-konform und HMAC-verifiziert  zuverlssig & vertrauenswrdig.",
+    title: "GDPR- & HMAC-sicher",
+    desc: "Verschlsselt, GDPR-konform und HMAC-verifiziert  zuverlssig & vertrauenswrdig.",
   },
   {
     icon: Bot,
@@ -28,8 +28,8 @@ const features = [
   },
   {
     icon: Globe,
-    title: "Mehrsprachig, markenkonform",
-    desc: "Antworten in vielen Sprachen im Ton deiner Marke  ideal fr globalen Support.",
+    title: "Mehrsprachig, brand-consistent",
+    desc: "Antworten in vielen languages im Ton deiner Marke  ideal fr globalen Support.",
   },
   {
     icon: BarChart3,
@@ -48,7 +48,7 @@ const Features = () => {
     <section id="features" aria-labelledby="features-heading" className="py-16 md:py-24">
       <div className="container">
         <h2 id="features-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Kernfeatures: KI-Support fr Shopify
+          Kernfeatures: AI-Support fr Shopify
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-12">
           Acht konkrete Vorteile  technisch stark und klar messbar.

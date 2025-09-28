@@ -7,37 +7,37 @@ const ShopifyCustomerService = () => {
   const faqs = [
     {
       question: "Was ist Shopify Customer Service?",
-      answer: "Shopify Customer Service umfasst alle Maßnahmen zur Kundenbetreuung in Shopify Stores. ReplAInow automatisiert diesen Service mit KI-Technologie für 24/7 Verfügbarkeit, schnelle Antwortzeiten und mehrsprachige Unterstützung."
+      answer: "Shopify Customer Service umfasst alle Maßnahmen zur Kundenbetreuung in Shopify Stores. ReplAInow automatisiert diesen Service mit AI-Technologie für 24/7 Verfügbarkeit, schnelle Antwortzeiten und mehrsprachige Unterstützung."
     },
     {
       question: "Wie verbessert ReplAInow den Shopify Customer Service?",
-      answer: "ReplAInow revolutioniert den Shopify Customer Service durch GPT-4.1 Technologie: 3-Sekunden Antwortzeiten, automatische Spracherkennung in 32+ Sprachen, 75% Kosteneinsparung und nahtlose Shopify-Integration."
+      answer: "ReplAInow revolutioniert den Shopify Customer Service durch GPT-4.1 Technologie: 3-seconds Antwortzeiten, automatische Spracherkennung in 32+ languages, 75% Kosteneinsparung und nahtlose Shopify-Integration."
     },
     {
-      question: "Welche Customer Service Funktionen bietet ReplAInow?",
-      answer: "ReplAInow bietet umfassende Customer Service Funktionen: Live-Chat, FAQ-Automation, Bestellstatus-Updates, Retouren-Handling, Produktberatung, technischer Support und Escalation zu menschlichen Agenten bei komplexen Anfragen."
+      question: "Welche Customer Service Features bietet ReplAInow?",
+      answer: "ReplAInow bietet umfassende Customer Service Features: Live-Chat, FAQ-Automation, Bestellstatus-Updates, Retouren-Handling, Produktberatung, technischer Support und Escalation zu menschlichen Agenten bei komplexen Anfragen."
     },
     {
-      question: "Ist ReplAInow DSGVO-konform für europäische Shopify Stores?",
-      answer: "Ja, ReplAInow ist vollständig DSGVO-konform und speziell für europäische Shopify Stores entwickelt. Alle Kundendaten werden sicher verarbeitet und den europäischen Datenschutzstandards entsprechend behandelt."
+      question: "Ist ReplAInow GDPR-konform für europäische Shopify Stores?",
+      answer: "Ja, ReplAInow ist vollständig GDPR-konform und speziell für europäische Shopify Stores entwickelt. Alle Kundendaten werden sicher verarbeitet und den europäischen Datenschutzstandards entsprechend behandelt."
     }
   ];
 
   const features = [
     {
       icon: <Zap className="w-8 h-8 text-blue-400" />,
-      title: "3-Sekunden Antworten",
-      description: "Sofortige Reaktion auf Kundenanfragen mit GPT-4.1 Technologie"
+      title: "3-seconds Antworten",
+      description: "Sofortige Reaktion auf customer queries mit GPT-4.1 Technologie"
     },
     {
       icon: <Globe className="w-8 h-8 text-green-400" />,
-      title: "32+ Sprachen",
+      title: "32+ languages",
       description: "Automatische Spracherkennung und mehrsprachige Antworten"
     },
     {
       icon: <Brain className="w-8 h-8 text-purple-400" />,
-      title: "KI-gestützte Antworten",
-      description: "Intelligente, kontextbezogene Lösungen für alle Kundenanfragen"
+      title: "AI-gestützte Antworten",
+      description: "Intelligente, kontextbezogene Lösungen für alle customer queries"
     },
     {
       icon: <Clock className="w-8 h-8 text-orange-400" />,
@@ -46,7 +46,7 @@ const ShopifyCustomerService = () => {
     },
     {
       icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: "DSGVO-konform",
+      title: "GDPR-konform",
       description: "Vollständige Compliance mit europäischen Datenschutzstandards"
     },
     {
@@ -59,10 +59,10 @@ const ShopifyCustomerService = () => {
   return (
     <>
       <SEOHead
-        title="Shopify Customer Service | Automatisiere Kundensupport mit KI - ReplAInow"
-        description="Revolutioniere deinen Shopify Customer Service mit ReplAInow. 3-Sekunden Antworten, 32+ Sprachen, 24/7 Verfügbarkeit, DSGVO-konform. Jetzt kostenlos testen!"
+        title="Shopify Customer Service | Automate Customer Support mit AI - ReplAInow"
+        description="Revolutioniere deinen Shopify Customer Service mit ReplAInow. 3-seconds Antworten, 32+ languages, 24/7 Verfügbarkeit, GDPR-konform. Now free test!"
         canonical="/shopify-customer-service"
-        keywords="Shopify Customer Service, Kundenservice automatisiert, KI Support, 24/7 Chat, mehrsprachig, DSGVO"
+        keywords="Shopify Customer Service, Kundenservice automatisiert, AI Support, 24/7 Chat, mehrsprachig, GDPR"
         generateOG={true}
         structuredData={[
           organizationSchema,
@@ -80,7 +80,7 @@ const ShopifyCustomerService = () => {
           <div className="bg-blue-800/30 border border-blue-600/50 rounded-2xl p-6 mb-12 shadow-xl backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-blue-200 mb-4">TL;DR: Shopify Customer Service mit ReplAInow</h2>
             <p className="text-lg text-blue-100 leading-relaxed">
-              ReplAInow automatisiert deinen kompletten Shopify Customer Service mit modernster KI-Technologie. Erlebe 3-Sekunden Antwortzeiten, 24/7 Verfügbarkeit in 32+ Sprachen und spare dabei 75% deiner Support-Kosten. Perfekt für Shopify-Händler, die professionellen Kundenservice ohne Personalaufwand bieten wollen. <a href="#/pricing" className="text-blue-400 hover:underline">Jetzt kostenlos testen!</a>
+              ReplAInow automatisiert deinen kompletten Shopify Customer Service mit modernster AI-Technologie. Erlebe 3-seconds Antwortzeiten, 24/7 Verfügbarkeit in 32+ languages und spare dabei 75% deiner Support-Kosten. Perfekt für Shopify-Händler, die professionellen Kundenservice ohne Personalaufwand bieten wollen. <a href="#/pricing" className="text-blue-400 hover:underline">Now free test!</a>
             </p>
           </div>
 
@@ -114,7 +114,7 @@ const ShopifyCustomerService = () => {
                     <MessageSquare className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">1. Intelligente Kundenanfragen</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">1. Intelligente customer queries</h3>
                     <p className="text-slate-300">ReplAInow erkennt automatisch die Art der Anfrage und leitet sie an die richtige Lösung weiter.</p>
                   </div>
                 </div>
@@ -123,7 +123,7 @@ const ShopifyCustomerService = () => {
                     <Brain className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">2. KI-gestützte Antworten</h3>
+                    <h3 className="text-xl font-bold text-white mb-2">2. AI-gestützte Antworten</h3>
                     <p className="text-slate-300">GPT-4.1 generiert präzise, hilfreiche Antworten basierend auf deinen Produktdaten.</p>
                   </div>
                 </div>
@@ -142,7 +142,7 @@ const ShopifyCustomerService = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <span className="text-slate-300">Durchschnittliche Antwortzeit</span>
-                    <span className="text-blue-400 font-bold">3 Sekunden</span>
+                    <span className="text-blue-400 font-bold">3 seconds</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-slate-300">Verfügbarkeit</span>
@@ -176,7 +176,7 @@ const ShopifyCustomerService = () => {
           <section className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Bereit für besseren Customer Service?</h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Starte noch heute mit ReplAInow und automatisiere deinen Shopify Customer Service. 14 Tage kostenlos testen, keine Kreditkarte erforderlich.
+              Starte noch heute mit ReplAInow und automatisiere deinen Shopify Customer Service. 14 days free test, keine Kreditkarte erforderlich.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -184,7 +184,7 @@ const ShopifyCustomerService = () => {
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"
               >
                 <Headphones className="w-6 h-6 mr-2" />
-                Jetzt kostenlos testen
+                Now free test
               </a>
               <a 
                 href="/contact" 

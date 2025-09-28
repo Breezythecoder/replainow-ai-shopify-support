@@ -59,10 +59,10 @@ const StoreDataFlow = () => {
             id="data-context-heading"
             className="font-display text-3xl md:text-4xl font-semibold mb-4"
           >
-            Deine KI kennt deinen Shopify-Store  bis ins Detail
+            Deine AI kennt deinen Shopify-Store  bis ins Detail
           </h2>
           <p className="text-muted-foreground">
-            ReplAInow verbindet sich direkt mit deinem Shopify-Store und zieht in Echtzeit alle relevanten Daten, um Kundenanfragen sofort und przise zu beantworten.
+            ReplAInow verbindet sich direkt mit deinem Shopify-Store und zieht in Echtzeit alle relevanten Daten, um customer queries sofort und przise zu beantworten.
           </p>
         </header>
 
@@ -85,7 +85,7 @@ const StoreDataFlow = () => {
                   <div className="flex items-center justify-between mb-3">
                     <div className="h-4 w-28 rounded bg-muted/60" />
                     <span className="inline-flex items-center gap-2 text-xs text-muted-foreground">
-                      <Bot className="h-4 w-4" /> KI aktiv
+                      <Bot className="h-4 w-4" /> AI aktiv
                     </span>
                   </div>
                   <div className="space-y-2">
@@ -132,7 +132,7 @@ const StoreDataFlow = () => {
                 />
               </div>
               <div className="absolute -top-4 right-0 w-64">
-                <Card Icon={Package} title="Produkt-Daten" desc="Titel, SKUs, Preise, Bestand" />
+                <Card Icon={Package} title="Produkt-Daten" desc="Titel, SKUs, Pricing, Bestand" />
               </div>
               <div className="absolute top-1/3 -left-2 w-64">
                 <Card Icon={User} title="Kunden-Daten" desc="Name, E-Mail, Kaufhistorie" />
@@ -144,7 +144,7 @@ const StoreDataFlow = () => {
                 <Card Icon={Truck} title="Tracking & Versand" desc="Live-Links, Lieferzeiten" />
               </div>
               <div className="absolute bottom-0 right-4 w-64">
-                <Card Icon={Languages} title="Mehrsprachig" desc="Bevorzugte Sprachen" />
+                <Card Icon={Languages} title="Mehrsprachig" desc="Bevorzugte languages" />
               </div>
             </div>
           </div>
@@ -155,7 +155,7 @@ const StoreDataFlow = () => {
               <div className="flex items-center justify-between mb-3">
                 <div className="h-4 w-24 rounded bg-muted/60" />
                 <span className="inline-flex items-center gap-2 text-xs text-muted-foreground">
-                  <Bot className="h-4 w-4" /> KI aktiv
+                  <Bot className="h-4 w-4" /> AI aktiv
                 </span>
               </div>
               <div className="space-y-2">
@@ -166,11 +166,11 @@ const StoreDataFlow = () => {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <Card Icon={ShoppingCart} title="Order-Daten" desc="Bestell-ID, Status, Artikel, Tracking" />
-              <Card Icon={Package} title="Produkt-Daten" desc="Titel, SKUs, Preise, Bestand" />
+              <Card Icon={Package} title="Produkt-Daten" desc="Titel, SKUs, Pricing, Bestand" />
               <Card Icon={User} title="Kunden-Daten" desc="Name, E-Mail, Kaufhistorie" />
               <Card Icon={FileText} title="Store-Content" desc="Seiten, FAQs, Versandregeln" />
               <Card Icon={Truck} title="Tracking & Versand" desc="Live-Links, Lieferzeiten" />
-              <Card Icon={Languages} title="Mehrsprachig" desc="Bevorzugte Sprachen" />
+              <Card Icon={Languages} title="Mehrsprachig" desc="Bevorzugte languages" />
             </div>
           </div>
         </div>
@@ -178,14 +178,14 @@ const StoreDataFlow = () => {
         {/* Caption + CTA */}
         <div className="text-center max-w-3xl mx-auto mt-10 md:mt-14">
           <p className="text-muted-foreground">
-            ReplAInow nutzt diese Daten, um in &lt;3 Sekunden markenkonforme, przise Antworten zu liefern  voll integriert in Shopify.
+            ReplAInow nutzt diese Daten, um in &lt;3 seconds brand-consistente, przise Antworten zu liefern  voll integriert in Shopify.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
-              <a href={OAUTH_URL}>Jetzt kostenlos testen</a>
+              <a href={OAUTH_URL}>Now free test</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-              <a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="cursor-pointer">Live-Demo ansehen</a>
+              <a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="cursor-pointer">Live-Demo Watch</a>
             </Button>
           </div>
         </div>

@@ -60,7 +60,7 @@ const ModernNavbar = () => {
                 <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-lg p-1.5 border border-blue-500/30 group-hover:border-blue-400/60 transition-all duration-300">
                   <img
                     src="/lovable-uploads/ReplAInow_Logo_optimized.png"
-                    alt="ReplAInow Logo - KI-gestützter Shopify Support mit GPT-4.1 Technologie für automatisierten Kundenservice"
+                    alt="ReplAInow Logo - AI-gestützter Shopify Support mit GPT-4.1 Technologie für automatisierten Kundenservice"
                     className="h-7 w-7 group-hover:scale-105 transition-transform duration-300 rounded"
                     width="28"
                     height="28"
@@ -198,7 +198,7 @@ const ModernNavbar = () => {
                 <div className="p-2 rounded-lg bg-green-500/20 group-hover:bg-green-500/40 transition-colors">
                   <Cpu className="w-5 h-5" />
                 </div>
-                <span>Preise</span>
+                <span>Pricing</span>
                 <div className="ml-auto w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
               </a>
               
@@ -210,7 +210,7 @@ const ModernNavbar = () => {
                 <div className="p-2 rounded-lg bg-indigo-500/20 group-hover:bg-indigo-500/40 transition-colors">
                   <Sparkles className="w-5 h-5" />
                 </div>
-                <span>Kontakt</span>
+                <span>Contact</span>
                 <div className="ml-auto w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></div>
               </a>
               

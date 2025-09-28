@@ -175,7 +175,7 @@ const StoreDataFlowIt = () => {
           </p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
-              <a href={OAUTH_URL}>Prova gratis ora</a>
+              <a href={OAUTH_URL}>Prova free ora</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
               <a href="#live-demo">Guarda demo live</a>

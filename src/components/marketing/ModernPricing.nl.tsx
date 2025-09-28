@@ -2,10 +2,10 @@ import { Button } from "@/components/ui/button";
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 const baseFeatures = ["1-klik installatie","Onbeperkte winkeldata (Producten, Pagina's, Policies)","AI Mail & AI Live Chat","Aanpasbare branding"];
 const plans = [
-  { name: "Starter", price: "$19", period: "/ maand", quota: "Tot 300 AI-antwoorden / maand", trial: "14 dagen gratis", features: [...baseFeatures, "E-mail via ReplAInow-adres"], highlight: false, description: "Perfect om te testen" },
-  { name: "Growth", price: "$49", period: "/ maand", quota: "Tot 1500 AI-antwoorden / maand", trial: "14 dagen gratis", features: [...baseFeatures, "E-mail met je eigen domein"], highlight: true, badge: "Meest Populair", description: "Voor groeiende winkels" },
-  { name: "Pro", price: "$99", period: "/ maand", quota: "Tot 3000 AI-antwoorden / maand", trial: "14 dagen gratis", features: [...baseFeatures, "E-mail met je eigen domein"], highlight: false, description: "Voor gevestigde winkels" },
-  { name: "Scale", price: "$199", period: "/ maand", quota: "Onbeperkte AI-antwoorden", trial: "14 dagen gratis", features: [...baseFeatures, "E-mail met je eigen domein"], highlight: false, description: "Voor winkelketens" },
+  { name: "Starter", price: "$19", period: "/ maand", quota: "Tot 300 AI-antwoorden / maand", trial: "14 dagen free", features: [...baseFeatures, "E-mail via ReplAInow-adres"], highlight: false, description: "Perfect om te test" },
+  { name: "Growth", price: "$49", period: "/ maand", quota: "Tot 1500 AI-antwoorden / maand", trial: "14 dagen free", features: [...baseFeatures, "E-mail met je eigen domein"], highlight: true, badge: "Meest Populair", description: "Voor groeiende winkels" },
+  { name: "Pro", price: "$99", period: "/ maand", quota: "Tot 3000 AI-antwoorden / maand", trial: "14 dagen free", features: [...baseFeatures, "E-mail met je eigen domein"], highlight: false, description: "Voor gevestigde winkels" },
+  { name: "Scale", price: "$199", period: "/ maand", quota: "Onbeperkte AI-antwoorden", trial: "14 dagen free", features: [...baseFeatures, "E-mail met je eigen domein"], highlight: false, description: "Voor winkelketens" },
 ];
 const ModernPricingNl = () => {
   return (

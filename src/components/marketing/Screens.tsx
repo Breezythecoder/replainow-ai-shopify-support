@@ -30,11 +30,11 @@ const Screens = () => {
             <img
               ref={chatView.ref}
               src={chat}
-              alt="Mockup: Chatfenster mit KI-Untersttzung"
+              alt="Mockup: Chatfenster mit AI-Untersttzung"
               className={`rounded-xl border bg-card w-full shadow-sm ${chatView.inView ? 'animate-fade-in hover-scale' : 'opacity-0'}`}
               loading="lazy"
             />
-            <figcaption className="sr-only">Chatfenster mit KI-Untersttzung</figcaption>
+            <figcaption className="sr-only">Chatfenster mit AI-Untersttzung</figcaption>
           </figure>
         </div>
       </div>

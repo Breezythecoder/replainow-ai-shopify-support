@@ -48,7 +48,7 @@ const ModernFinalCTAEs = () => {
         <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-xs sm:text-sm opacity-75 px-4">
           <div className="flex items-center gap-2">
             <span className="text-brand-success"></span>
-            <span>14 das gratis</span>
+            <span>14 das free</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="text-brand-success"></span>
@@ -70,7 +70,7 @@ const ModernFinalCTAEs = () => {
              Oferta limitada de incorporacin
           </p>
           <p className="text-slate-700 text-base sm:text-lg lg:text-xl leading-relaxed mb-6 sm:mb-8">
-            Solo las primeras <strong className="text-indigo-600 text-lg sm:text-xl lg:text-2xl">100 tiendas</strong> este mes obtienen configuracin gratis + 1 mes gratis
+            Solo las primeras <strong className="text-indigo-600 text-lg sm:text-xl lg:text-2xl">100 tiendas</strong> este mes obtienen configuracin free + 1 mes free
           </p>
           <div className="bg-slate-200 rounded-full h-3 sm:h-4 mb-4 overflow-hidden">
             <div className="bg-gradient-primary h-3 sm:h-4 rounded-full transition-all duration-1000 shadow-neon" style={{ width: '73%' }}></div>

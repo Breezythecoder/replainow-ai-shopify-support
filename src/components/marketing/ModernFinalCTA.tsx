@@ -109,7 +109,7 @@ const ModernFinalCTA = () => {
         <div className={`flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-sm mb-12 transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="flex items-center gap-2 bg-white/80 backdrop-blur-lg px-6 py-3 rounded-full border border-green-200 shadow-lg">
             <span className="text-green-500 text-lg">✓</span>
-            <span className="text-slate-800 font-bold">14 Tage kostenlos</span>
+            <span className="text-slate-800 font-bold">14 days free</span>
           </div>
           <div className="flex items-center gap-2 bg-white/80 backdrop-blur-lg px-6 py-3 rounded-full border border-blue-200 shadow-lg">
             <span className="text-blue-500 text-lg">⚡</span>
@@ -132,7 +132,7 @@ const ModernFinalCTA = () => {
               Warum {STORE_COUNT} Shopify-Händler auf ReplAInow setzen
             </h3>
             <p className="text-slate-600 text-lg">
-              Starte noch heute mit der 14-tägigen kostenlosen Testphase
+              Starte noch heute mit der 14-tägigen freeen Testphase
             </p>
           </div>
 

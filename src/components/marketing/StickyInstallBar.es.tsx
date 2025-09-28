@@ -28,7 +28,7 @@ const StickyInstallBarEs = () => {
       <div className="container">
         <div className="relative mx-auto flex flex-col sm:flex-row items-center gap-3 rounded-xl border bg-card/95 backdrop-blur px-4 py-3 shadow-brand">
           <p className="text-sm sm:text-base text-muted-foreground flex-1 text-center sm:text-left">
-            Listo en 2 minutos  14 das de prueba gratis.
+            Listo en 2 minutos  14 das de prueba free.
           </p>
           <div className="flex items-center gap-2">
             <Button

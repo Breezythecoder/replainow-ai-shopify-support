@@ -98,7 +98,7 @@ const MailAndChatNl = () => {
         {/* CTA */}
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
           <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
-            <a href={OAUTH_URL} aria-label="ReplAInow gratis testen">ReplAInow Gratis Testen</a>
+            <a href={OAUTH_URL} aria-label="ReplAInow free test">ReplAInow Gratis Testen</a>
           </Button>
           <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
             <a href="#live-demo" aria-label="Live-demo bekijken">Live-demo Bekijken</a>

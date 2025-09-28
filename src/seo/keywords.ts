@@ -17,7 +17,7 @@ export const keywordStrategy = {
       priority: 1
     },
     {
-      keyword: "KI Kundensupport Shopify",
+      keyword: "AI Customer Support Shopify",
       volume: "medium",
       difficulty: "low",
       intent: "commercial", 
@@ -59,7 +59,7 @@ export const keywordStrategy = {
       intent: "informational"
     },
     {
-      keyword: "Shopify Support App KI",
+      keyword: "Shopify Support App AI",
       volume: "low",
       difficulty: "low",
       intent: "commercial"
@@ -87,7 +87,7 @@ export const keywordStrategy = {
       intent: "informational"
     },
     {
-      keyword: "Vorteile automatisierter Kundensupport",
+      keyword: "Vorteile automatisierter Customer Support",
       volume: "low",
       difficulty: "low",
       intent: "informational"
@@ -143,13 +143,13 @@ export const keywordStrategy = {
       intent: "commercial"
     },
     {
-      keyword: "DSGVO konformer AI Support",
+      keyword: "GDPR konformer AI Support",
       volume: "low",
       difficulty: "low",
       intent: "commercial"
     },
     {
-      keyword: "Deutscher AI Kundensupport",
+      keyword: "Deutscher AI Customer Support",
       volume: "low",
       difficulty: "low",
       intent: "commercial"
@@ -195,8 +195,8 @@ export const contentPillars = [
 export const faqKeywords = [
   "Was kostet AI Support für Shopify?",
   "Wie installiert man AI Helpdesk in Shopify?",
-  "Ist AI Support DSGVO konform?",
-  "Welche Sprachen unterstützt AI Helpdesk?",
+  "Ist AI Support GDPR konform?",
+  "Welche languages unterstützt AI Helpdesk?",
   "Wie genau sind AI Support Antworten?",
   "Kann AI Support menschliche Mitarbeiter ersetzen?",
   "Was ist der ROI von AI Support?",

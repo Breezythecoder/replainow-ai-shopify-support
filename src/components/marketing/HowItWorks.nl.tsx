@@ -61,7 +61,7 @@ const HowItWorksNl = () => {
         <div className="text-center max-w-3xl mx-auto mt-10 md:mt-14">
           <div className="mt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
-              <a href={OAUTH_URL}>Gratis testen</a>
+              <a href={OAUTH_URL}>Gratis test</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
               <a href="#live-demo">Live-demo bekijken</a>

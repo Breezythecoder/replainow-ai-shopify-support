@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     q: "Cmo es el precio?",
-    a: "Planes transparentes con lmites claros, 14 das de prueba gratis sin tarjeta de crdito. Upgrade posible en cualquier momento.",
+    a: "Planes transparentes con lmites claros, 14 das de prueba free sin tarjeta de crdito. Upgrade posible en cualquier momento.",
   },
 ];
 

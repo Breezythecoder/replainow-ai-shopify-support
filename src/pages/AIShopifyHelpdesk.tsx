@@ -8,41 +8,41 @@ const AIShopifyHelpdesk = () => {
   const faqs = [
     {
       question: "Was ist ein AI Shopify Helpdesk?",
-      answer: "Ein AI Shopify Helpdesk ist ein automatisiertes Kundenservice-System, das mit künstlicher Intelligenz (GPT-4.1) Kundenanfragen in Echtzeit beantwortet. Es integriert sich nahtlos in Shopify Stores und bietet 24/7 Support in 32+ Sprachen."
+      answer: "Ein AI Shopify Helpdesk ist ein automatisiertes Kundenservice-System, das mit künstlicher Intelligenz (GPT-4.1) customer queries in Echtzeit beantwortet. Es integriert sich nahtlos in Shopify Stores und bietet 24/7 Support in 32+ languages."
     },
     {
       question: "Wie funktioniert ReplAInow mit Shopify?",
-      answer: "ReplAInow installiert sich mit einem Klick aus dem Shopify App Store. Nach der Installation verbindet es sich automatisch mit Ihrem Store und beginnt sofort, Kundenanfragen zu beantworten. Die Integration erfolgt über die Shopify API ohne technische Kenntnisse."
+      answer: "ReplAInow installiert sich mit einem Klick aus dem Shopify App Store. Nach der Installation verbindet es sich automatisch mit Ihrem Store und beginnt sofort, customer queries zu beantworten. Die Integration erfolgt über die Shopify API ohne technische Kenntnisse."
     },
     {
-      question: "Welche Sprachen unterstützt ReplAInow?",
-      answer: "ReplAInow unterstützt über 32 Sprachen nativ, darunter Deutsch, Englisch, Spanisch, Französisch, Portugiesisch, Italienisch, Niederländisch, Chinesisch und viele weitere. Die KI antwortet automatisch in der Sprache des Kunden."
+      question: "Welche languages unterstützt ReplAInow?",
+      answer: "ReplAInow unterstützt über 32 languages nativ, darunter Deutsch, Englisch, Spanisch, Französisch, Portugiesisch, Italienisch, Niederländisch, Chinesisch und viele weitere. Die AI antwortet automatisch in der Sprache des Kunden."
     },
     {
-      question: "Ist ReplAInow DSGVO-konform?",
-      answer: "Ja, ReplAInow ist vollständig DSGVO-konform. Alle Kundendaten werden sicher verarbeitet und gespeichert. Wir bieten detaillierte Datenschutzerklärungen und Compliance-Dokumentation."
+      question: "Ist ReplAInow GDPR-konform?",
+      answer: "Ja, ReplAInow ist vollständig GDPR-konform. Alle Kundendaten werden sicher verarbeitet und gespeichert. Wir bieten detaillierte Datenschutzerklärungen und Compliance-Dokumentation."
     },
     {
       question: "Wie schnell antwortet ReplAInow?",
-      answer: "ReplAInow antwortet in durchschnittlich 3 Sekunden auf Kundenanfragen. Dies ist deutlich schneller als menschliche Support-Mitarbeiter und bietet eine bessere Kundenerfahrung."
+      answer: "ReplAInow antwortet in durchschnittlich 3 seconds auf customer queries. Dies ist deutlich schneller als menschliche Support-Mitarbeiter und bietet eine bessere Kundenerfahrung."
     },
     {
-      question: "Kann ich ReplAInow kostenlos testen?",
-      answer: "Ja, ReplAInow bietet eine 14-tägige kostenlose Testphase für alle Pläne. Sie können alle Features ohne Einschränkungen testen und bei Gefallen einfach upgraden."
+      question: "Kann ich ReplAInow free test?",
+      answer: "Ja, ReplAInow bietet eine 14-tägige freee Testphase für alle Pläne. Sie können alle Features ohne Einschränkungen test und bei Gefallen einfach upgraden."
     }
   ];
 
   const howToSteps = [
     {
-      name: "App installieren",
-      text: "Installieren Sie ReplAInow mit einem Klick aus dem Shopify App Store in weniger als 60 Sekunden."
+      name: "App Install",
+      text: "Installieren Sie ReplAInow mit einem Klick aus dem Shopify App Store in weniger als 60 seconds."
     },
     {
       name: "Store verbinden", 
       text: "Die App verbindet sich automatisch mit Ihrem Shopify Store über die sichere API-Verbindung."
     },
     {
-      name: "KI trainieren",
+      name: "AI trainieren",
       text: "ReplAInow lernt automatisch aus Ihren Produktdaten und wird sofort einsatzbereit."
     },
     {
@@ -54,8 +54,8 @@ const AIShopifyHelpdesk = () => {
   return (
     <>
       <SEOHead
-        title="AI Shopify Helpdesk | Automatisiere Kundenservice mit GPT-4.1 - ReplAInow"
-        description="Der intelligenteste AI Shopify Helpdesk mit GPT-4.1. 24/7 Support, 32+ Sprachen, 3-Sekunden Antworten, DSGVO-konform. Jetzt kostenlos testen!"
+        title="AI Shopify Helpdesk | Automate Kundenservice mit GPT-4.1 - ReplAInow"
+        description="Der intelligenteste AI Shopify Helpdesk mit GPT-4.1. 24/7 Support, 32+ languages, 3-seconds Antworten, GDPR-konform. Now free test!"
         canonical="/ai-shopify-helpdesk"
         keywords="AI Shopify Helpdesk, Shopify AI Support, automatischer Kundenservice, GPT-4.1, 24/7 Support, mehrsprachig"
         generateOG={true}
@@ -91,17 +91,17 @@ const AIShopifyHelpdesk = () => {
             </h1>
             <p className="text-xl text-blue-100 mb-8 leading-relaxed">
               Der intelligenteste AI-gestützte Kundenservice für Shopify Stores. 
-              Automatisiere 24/7 Support mit GPT-4.1 Technologie in 32+ Sprachen.
+              Automate 24/7 Support mit GPT-4.1 Technologie in 32+ languages.
             </p>
             
             {/* TL;DR Box */}
             <div className="bg-slate-800/50 rounded-2xl p-6 mb-12 border border-blue-500/30">
               <h2 className="text-2xl font-bold text-white mb-4">🚀 TL;DR</h2>
               <p className="text-blue-100 text-lg">
-                ReplAInow ist der führende AI Shopify Helpdesk mit <strong>3-Sekunden Antwortzeiten</strong>, 
-                <strong>32+ Sprachen</strong> und <strong>75% Kosteneinsparung</strong> gegenüber traditionellen Lösungen. 
+                ReplAInow ist der führende AI Shopify Helpdesk mit <strong>3-seconds Antwortzeiten</strong>, 
+                <strong>32+ languages</strong> und <strong>75% Kosteneinsparung</strong> gegenüber traditionellen Lösungen. 
                 <a href="#pricing" className="text-blue-400 hover:text-blue-300">Starten Sie ab €19/Monat</a> mit 
-                <a href="#/pricing" className="text-blue-400 hover:text-blue-300">14 Tagen kostenlos</a>.
+                <a href="#/pricing" className="text-blue-400 hover:text-blue-300">14 daysn free</a>.
               </p>
             </div>
 
@@ -109,13 +109,13 @@ const AIShopifyHelpdesk = () => {
               <Button asChild size="xl" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold px-8 py-4">
                 <a href="https://apps.shopify.com/replainow-ai-support">
                   <Zap className="w-5 h-5 mr-2" />
-                  Jetzt installieren
+                  Now Install
                 </a>
               </Button>
               <Button asChild variant="outline" size="xl" className="border-2 border-blue-400 text-blue-100 hover:bg-blue-500 hover:text-white px-8 py-4">
                 <a href="#live-demo">
                   <Brain className="w-5 h-5 mr-2" />
-                  Live Demo ansehen
+                  Live Demo Watch
                 </a>
               </Button>
             </div>
@@ -129,12 +129,12 @@ const AIShopifyHelpdesk = () => {
             <div className="bg-white/95 rounded-2xl p-8">
               <p className="text-lg text-slate-700 mb-6">
                 Ein <strong>AI Shopify Helpdesk</strong> ist ein automatisiertes Kundenservice-System, das künstliche Intelligenz 
-                nutzt, um Kundenanfragen in Echtzeit zu beantworten. ReplAInow verwendet die neueste GPT-4.1 Technologie, 
+                nutzt, um customer queries in Echtzeit zu beantworten. ReplAInow verwendet die neueste GPT-4.1 Technologie, 
                 um intelligente, kontextbezogene Antworten zu generieren.
               </p>
               <p className="text-lg text-slate-700">
                 Im Gegensatz zu traditionellen Helpdesk-Systemen arbeitet ReplAInow vollständig autonom und kann 
-                komplexe Kundenanfragen verstehen, Produktinformationen abrufen und personalisierte Lösungen anbieten.
+                komplexe customer queries verstehen, Produktinformationen abrufen und personalisierte Lösungen anbieten.
               </p>
             </div>
           </div>
@@ -164,10 +164,10 @@ const AIShopifyHelpdesk = () => {
             <h2 className="text-4xl font-bold text-white mb-12 text-center">Warum ReplAInow?</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
-                { icon: Clock, title: "3 Sekunden Antwortzeit", desc: "Bis zu 10x schneller als menschliche Support-Mitarbeiter" },
-                { icon: Globe, title: "32+ Sprachen", desc: "Automatische Erkennung und Antwort in der Kunden-Sprache" },
-                { icon: Brain, title: "GPT-4.1 Technologie", desc: "Die neueste KI-Technologie für intelligente Antworten" },
-                { icon: Shield, title: "DSGVO-konform", desc: "Vollständige Compliance mit europäischen Datenschutzgesetzen" },
+                { icon: Clock, title: "3 seconds Antwortzeit", desc: "Bis zu 10x schneller als menschliche Support-Mitarbeiter" },
+                { icon: Globe, title: "32+ languages", desc: "Automatische Erkennung und Antwort in der Kunden-Sprache" },
+                { icon: Brain, title: "GPT-4.1 Technologie", desc: "Die neueste AI-Technologie für intelligente Antworten" },
+                { icon: Shield, title: "GDPR-konform", desc: "Vollständige Compliance mit europäischen Datenschutzgesetzen" },
                 { icon: Cpu, title: "24/7 Verfügbarkeit", desc: "Ununterbrochener Support rund um die Uhr" },
                 { icon: Zap, title: "1-Klick Installation", desc: "Schnelle Einrichtung direkt aus dem Shopify App Store" }
               ].map((feature, index) => (
@@ -200,7 +200,7 @@ const AIShopifyHelpdesk = () => {
                     </li>
                     <li className="flex items-center gap-3">
                       <CheckCircle className="w-5 h-5 text-green-600" />
-                      <span className="text-slate-700">Transparente Preise ohne versteckte Kosten</span>
+                      <span className="text-slate-700">Transparente Pricing ohne versteckte Kosten</span>
                     </li>
                   </ul>
                 </div>
@@ -246,20 +246,20 @@ const AIShopifyHelpdesk = () => {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Bereit für die AI-Revolution?</h2>
             <p className="text-xl text-blue-100 mb-8">
-              Starten Sie noch heute mit dem intelligentesten AI Shopify Helpdesk
+              Starten Sie noch heute mit dem intelligentest AI Shopify Helpdesk
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="xl" className="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold px-8 py-4">
                 <a href="https://apps.shopify.com/replainow-ai-support">
                   <Zap className="w-5 h-5 mr-2" />
-                  Jetzt installieren
+                  Now Install
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </a>
               </Button>
               <Button asChild variant="outline" size="xl" className="border-2 border-blue-400 text-blue-100 hover:bg-blue-500 hover:text-white px-8 py-4">
                 <a href="#/pricing">
                   <Brain className="w-5 h-5 mr-2" />
-                  Preise ansehen
+                  Pricing Watch
                 </a>
               </Button>
             </div>

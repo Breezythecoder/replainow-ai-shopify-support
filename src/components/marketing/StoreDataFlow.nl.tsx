@@ -149,7 +149,7 @@ const StoreDataFlowNl = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg">
-              <a href={OAUTH_URL}>Nu gratis testen</a>
+              <a href={OAUTH_URL}>Nu free test</a>
             </Button>
             <Button asChild variant="outline" size="lg">
               <a href="#live-demo">Bekijk de demo</a>

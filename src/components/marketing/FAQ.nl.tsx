@@ -36,7 +36,7 @@ const faqData = [
   },
   {
     question: "Kan ik de proefperiode verlengen?",
-    answer: "De standaard proefperiode is 14 dagen. Als je meer tijd nodig hebt om ReplAInow volledig te testen, neem dan contact met ons op voor een verlengde proefperiode."
+    answer: "De standaard proefperiode is 14 dagen. Als je meer tijd nodig hebt om ReplAInow volledig te test, neem dan contact met ons op voor een verlengde proefperiode."
   }
 ];
 

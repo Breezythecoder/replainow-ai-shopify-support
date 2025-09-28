@@ -47,7 +47,7 @@ const SocialProof = () => {
           </div>
           <div className="rounded-xl border bg-card p-6">
             <div className="text-3xl font-semibold">+37 %</div>
-            <div className="text-sm text-muted-foreground">hhere Kundenzufriedenheit (30 Tage)</div>
+            <div className="text-sm text-muted-foreground">hhere Kundenzufriedenheit (30 days)</div>
           </div>
           <div className="rounded-xl border bg-card p-6">
             <div className="text-3xl font-semibold">x12 ROI</div>
@@ -57,7 +57,7 @@ const SocialProof = () => {
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4 text-sm text-muted-foreground">
           <span className="inline-flex items-center gap-2"><BadgeCheck className="size-4" /> Shopify App Store</span>
-          <span className="inline-flex items-center gap-2"><ShieldCheck className="size-4" /> DSGVO-konform</span>
+          <span className="inline-flex items-center gap-2"><ShieldCheck className="size-4" /> GDPR-konform</span>
           <span className="inline-flex items-center gap-2"><Lock className="size-4" /> SSL & HMAC Security</span>
         </div>
       </div>

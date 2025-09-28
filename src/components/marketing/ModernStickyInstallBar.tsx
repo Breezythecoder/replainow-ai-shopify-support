@@ -8,7 +8,7 @@ const ModernStickyInstallBar = () => {
       <div className="flex items-center justify-between">
         <div className="flex-1 pr-4">
           <div className="font-black text-sm text-slate-800">ReplAInow AI Helpdesk</div>
-          <div className="text-xs text-slate-600 font-medium">19/Monat  14 Tage kostenlos  4.9</div>
+          <div className="text-xs text-slate-600 font-medium">19/Monat  14 days free  4.9</div>
         </div>
         <Button 
           asChild 

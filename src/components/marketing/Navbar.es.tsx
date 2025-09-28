@@ -20,7 +20,7 @@ const NavbarEs = () => {
         </div>
         <div className="flex items-center gap-2">
           <Button asChild variant="hero">
-            <a href={OAUTH_URL} aria-label="Probar gratis ahora">Probar gratis ahora</a>
+            <a href={OAUTH_URL} aria-label="Probar free ahora">Probar free ahora</a>
           </Button>
         </div>
       </nav>

@@ -26,7 +26,7 @@ const ModernHowItWorksNl = () => {
         </div>
         <div className="text-center px-4">
           <Button asChild variant="cta" size="xl" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 font-bold min-h-[56px] max-w-md mx-auto"><a href={OAUTH_URL} className="flex items-center justify-center gap-2"> Gratis Starten</a></Button>
-          <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed"> 14 dagen gratis   Geen setup   Altijd opzegbaar</p>
+          <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed"> 14 dagen free   Geen setup   Altijd opzegbaar</p>
         </div>
       </div>
     </section>

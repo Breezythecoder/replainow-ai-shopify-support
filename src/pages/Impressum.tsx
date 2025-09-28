@@ -9,7 +9,7 @@ const Impressum = () => {
     <div>
       <SEO
         title="Impressum | ReplAInow"
-        description="Impressum der PrimeVision Group LLC (ReplAInow): Anschrift, Kontakt, Verantwortlicher gem. § 55 Abs. 2 RStV, Tax Registration Number."
+        description="Impressum der PrimeVision Group LLC (ReplAInow): Anschrift, Contact, Verantwortlicher gem. § 55 Abs. 2 RStV, Tax Registration Number."
         path="/impressum"
       />
       <ModernNavbar />
@@ -29,7 +29,7 @@ const Impressum = () => {
             </section>
 
             <section>
-              <h2 className="text-2xl font-semibold mb-2">Kontakt</h2>
+              <h2 className="text-2xl font-semibold mb-2">Contact</h2>
               <p>E-Mail: <a className="underline" href="mailto:support@replainow.com">support@replainow.com</a></p>
             </section>
 

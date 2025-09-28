@@ -7,7 +7,7 @@ export const organizationSchema = {
   "name": "ReplAInow",
   "url": "https://replainow.com",
   "logo": "https://replainow.com/lovable-uploads/ReplAInow_Logo_optimized.png",
-  "description": "Der intelligenteste AI-Support für Shopify-Händler. 24/7 verfügbar, 32+ Sprachen, DSGVO-konform mit GPT-4.1 Technologie.",
+  "description": "Der intelligenteste AI-Support für Shopify-Händler. 24/7 verfügbar, 32+ languages, GDPR-konform mit GPT-4.1 Technologie.",
   "foundingDate": "2024",
   "founder": {
     "@type": "Person",
@@ -37,7 +37,7 @@ export const softwareApplicationSchema = {
   "name": "ReplAInow AI Support",
   "applicationCategory": "CustomerSupport",
   "operatingSystem": "Web",
-  "description": "AI-gestützter Kundensupport für Shopify Stores mit GPT-4.1 Technologie. Automatisiert 24/7 Kundenanfragen in 32+ Sprachen.",
+  "description": "AI-gestützter Customer Support für Shopify Stores mit GPT-4.1 Technologie. Automatisiert 24/7 customer queries in 32+ languages.",
   "url": "https://replainow.com",
   "author": {
     "@type": "Organization",
@@ -78,10 +78,10 @@ export const softwareApplicationSchema = {
   ],
   "featureList": [
     "GPT-4.1 AI Engine",
-    "32+ Sprachen nativ",
-    "3 Sekunden Antwortzeit", 
+    "32+ languages nativ",
+    "3 seconds Antwortzeit", 
     "Unlimitierte AI-Antworten",
-    "DSGVO-konform",
+    "GDPR-konform",
     "24/7 Verfügbarkeit",
     "Shopify Integration",
     "Live Chat Demo"

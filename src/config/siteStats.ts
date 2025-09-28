@@ -6,7 +6,7 @@ export const SITE_STATS = {
   STORE_COUNT: "280+",
   
   // Response time
-  RESPONSE_TIME: "3 Sekunden",
+  RESPONSE_TIME: "3 seconds",
   
   // Languages supported
   LANGUAGES_COUNT: "32+",
@@ -30,9 +30,9 @@ export const SITE_STATS = {
   
   // Features
   FEATURES: {
-    RESPONSE_TIME: "3 Sekunden",
-    LANGUAGES: "32+ Sprachen",
-    GDPR_COMPLIANT: "DSGVO-konform",
+    RESPONSE_TIME: "3 seconds",
+    LANGUAGES: "32+ languages",
+    GDPR_COMPLIANT: "GDPR-konform",
     COST_SAVINGS: "75% Kosteneinsparung",
     AI_TECHNOLOGY: "GPT-4.1"
   }

@@ -7,19 +7,19 @@ const ShopifyAISupport = () => {
   const faqs = [
     {
       question: "Was ist Shopify AI Support?",
-      answer: "Shopify AI Support ist ein automatisiertes Kundenservice-System, das künstliche Intelligenz nutzt, um Kundenanfragen in Shopify Stores zu beantworten. ReplAInow bietet den fortschrittlichsten AI Support mit GPT-4.1 Technologie."
+      answer: "Shopify AI Support ist ein automatisiertes Kundenservice-System, das künstliche Intelligenz nutzt, um customer queries in Shopify Stores zu beantworten. ReplAInow bietet den fortschrittlichsten AI Support mit GPT-4.1 Technologie."
     },
     {
       question: "Wie funktioniert ReplAInow als Shopify AI Support?",
-      answer: "ReplAInow integriert sich nahtlos in Shopify und nutzt GPT-4.1, um intelligente Antworten auf Kundenanfragen zu generieren. Es lernt aus deinen Produktdaten, FAQs und Kundeninteraktionen für personalisierte Unterstützung."
+      answer: "ReplAInow integriert sich nahtlos in Shopify und nutzt GPT-4.1, um intelligente Antworten auf customer queries zu generieren. Es lernt aus deinen Produktdaten, FAQs und Kundeninteraktionen für personalisierte Unterstützung."
     },
     {
       question: "Welche AI-Features bietet ReplAInow für Shopify?",
-      answer: "ReplAInow bietet umfassende AI-Features: 3-Sekunden Antwortzeiten, 32+ Sprachen, automatische Spracherkennung, Produktempfehlungen, Bestellstatus-Updates, Retouren-Handling und nahtlose Escalation zu menschlichen Agenten."
+      answer: "ReplAInow bietet umfassende AI-Features: 3-seconds Antwortzeiten, 32+ languages, automatische Spracherkennung, Produktempfehlungen, Bestellstatus-Updates, Retouren-Handling und nahtlose Escalation zu menschlichen Agenten."
     },
     {
-      question: "Ist ReplAInow DSGVO-konform für Shopify Stores?",
-      answer: "Ja, ReplAInow ist vollständig DSGVO-konform und speziell für europäische Shopify Stores entwickelt. Alle Kundendaten werden sicher verarbeitet und den europäischen Datenschutzstandards entsprechend behandelt."
+      question: "Ist ReplAInow GDPR-konform für Shopify Stores?",
+      answer: "Ja, ReplAInow ist vollständig GDPR-konform und speziell für europäische Shopify Stores entwickelt. Alle Kundendaten werden sicher verarbeitet und den europäischen Datenschutzstandards entsprechend behandelt."
     }
   ];
 
@@ -27,16 +27,16 @@ const ShopifyAISupport = () => {
     {
       icon: <Brain className="w-8 h-8 text-blue-400" />,
       title: "GPT-4.1 Technologie",
-      description: "Die neueste KI-Technologie für intelligenteste Antworten"
+      description: "Die neueste AI-Technologie für intelligenteste Antworten"
     },
     {
       icon: <Zap className="w-8 h-8 text-yellow-400" />,
-      title: "3-Sekunden Antworten",
-      description: "Blitzschnelle Reaktion auf alle Kundenanfragen"
+      title: "3-seconds Antworten",
+      description: "Blitzschnelle Reaktion auf alle customer queries"
     },
     {
       icon: <Globe className="w-8 h-8 text-green-400" />,
-      title: "32+ Sprachen",
+      title: "32+ languages",
       description: "Automatische Spracherkennung und mehrsprachige Antworten"
     },
     {
@@ -46,7 +46,7 @@ const ShopifyAISupport = () => {
     },
     {
       icon: <Shield className="w-8 h-8 text-red-400" />,
-      title: "DSGVO-konform",
+      title: "GDPR-konform",
       description: "Vollständige Compliance mit europäischen Datenschutzstandards"
     },
     {
@@ -59,10 +59,10 @@ const ShopifyAISupport = () => {
   return (
     <>
       <SEOHead
-        title="Shopify AI Support | Automatisiere Kundenservice mit GPT-4.1 - ReplAInow"
-        description="Der fortschrittlichste Shopify AI Support mit GPT-4.1. 3-Sekunden Antworten, 32+ Sprachen, 24/7 Verfügbarkeit, DSGVO-konform. Jetzt kostenlos testen!"
+        title="Shopify AI Support | Automate Kundenservice mit GPT-4.1 - ReplAInow"
+        description="Der fortschrittlichste Shopify AI Support mit GPT-4.1. 3-seconds Antworten, 32+ languages, 24/7 Verfügbarkeit, GDPR-konform. Now free test!"
         canonical="/shopify-ai-support"
-        keywords="Shopify AI Support, AI Kundenservice, GPT-4.1, automatischer Support, KI Chatbot, Shopify Automatisierung"
+        keywords="Shopify AI Support, AI Kundenservice, GPT-4.1, automatischer Support, AI Chatbot, Shopify Automatisierung"
         generateOG={true}
         structuredData={[
           organizationSchema,
@@ -80,7 +80,7 @@ const ShopifyAISupport = () => {
           <div className="bg-blue-800/30 border border-blue-600/50 rounded-2xl p-6 mb-12 shadow-xl backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-blue-200 mb-4">TL;DR: Shopify AI Support mit ReplAInow</h2>
             <p className="text-lg text-blue-100 leading-relaxed">
-              ReplAInow bietet den fortschrittlichsten Shopify AI Support mit GPT-4.1 Technologie. Erlebe 3-Sekunden Antwortzeiten, 24/7 Verfügbarkeit in 32+ Sprachen und spare dabei 75% deiner Support-Kosten. Perfekt für Shopify-Händler, die modernste KI-Technologie für ihren Kundenservice nutzen wollen. <a href="#/pricing" className="text-blue-400 hover:underline">Jetzt kostenlos testen!</a>
+              ReplAInow bietet den fortschrittlichsten Shopify AI Support mit GPT-4.1 Technologie. Erlebe 3-seconds Antwortzeiten, 24/7 Verfügbarkeit in 32+ languages und spare dabei 75% deiner Support-Kosten. Perfekt für Shopify-Händler, die modernste AI-Technologie für ihren Kundenservice nutzen wollen. <a href="#/pricing" className="text-blue-400 hover:underline">Now free test!</a>
             </p>
           </div>
 
@@ -115,7 +115,7 @@ const ShopifyAISupport = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">1. Intelligente Anfragenerkennung</h3>
-                    <p className="text-slate-300">ReplAInow analysiert automatisch Kundenanfragen und erkennt Intent, Sprache und Dringlichkeit.</p>
+                    <p className="text-slate-300">ReplAInow analysiert automatisch customer queries und erkennt Intent, Sprache und Dringlichkeit.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -124,7 +124,7 @@ const ShopifyAISupport = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-white mb-2">2. GPT-4.1 Antwortgenerierung</h3>
-                    <p className="text-slate-300">Die neueste KI-Technologie generiert präzise, hilfreiche Antworten basierend auf deinen Produktdaten.</p>
+                    <p className="text-slate-300">Die neueste AI-Technologie generiert präzise, hilfreiche Antworten basierend auf deinen Produktdaten.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
@@ -142,14 +142,14 @@ const ShopifyAISupport = () => {
                 <div className="space-y-4">
                   <div className="flex justify-between items-center">
                     <span className="text-slate-300">Durchschnittliche Antwortzeit</span>
-                    <span className="text-blue-400 font-bold">3 Sekunden</span>
+                    <span className="text-blue-400 font-bold">3 seconds</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-300">KI-Genauigkeit</span>
+                    <span className="text-slate-300">AI-Genauigkeit</span>
                     <span className="text-green-400 font-bold">94%</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-300">Sprachen unterstützt</span>
+                    <span className="text-slate-300">languages unterstützt</span>
                     <span className="text-purple-400 font-bold">32+</span>
                   </div>
                   <div className="flex justify-between items-center">
@@ -228,7 +228,7 @@ const ShopifyAISupport = () => {
           <section className="text-center">
             <h2 className="text-4xl font-bold text-white mb-6">Bereit für AI-gestützten Support?</h2>
             <p className="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Starte noch heute mit ReplAInow und erlebe die Zukunft des Shopify Kundenservices. 14 Tage kostenlos testen, keine Kreditkarte erforderlich.
+              Starte noch heute mit ReplAInow und erlebe die Zukunft des Shopify Kundenservices. 14 days free test, keine Kreditkarte erforderlich.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -236,7 +236,7 @@ const ShopifyAISupport = () => {
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 inline-flex items-center justify-center"
               >
                 <Headphones className="w-6 h-6 mr-2" />
-                AI Support testen
+                AI Support test
               </a>
               <a 
                 href="/contact" 

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { generateFAQSchema } from './StructuredData';
 
-// AI-optimierte FAQ Sektion für bessere Sichtbarkeit in KI-Suchergebnissen
+// AI-optimierte FAQ Sektion für bessere Sichtbarkeit in AI-Suchergebnissen
 const AIOptimizedFAQ = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -9,28 +9,28 @@ const AIOptimizedFAQ = () => {
   const faqs = [
     {
       question: "Was ist ReplAInow AI Helpdesk?",
-      shortAnswer: "ReplAInow ist eine AI-gestützte Kundensupport-Lösung für Shopify mit GPT-4 Technologie.",
-      detailedAnswer: "ReplAInow ist eine AI-gestützte Kundensupport-Lösung für Shopify, die automatisch auf Kundenanfragen antwortet, Produktempfehlungen gibt und in über 32 Sprachen verfügbar ist. Die Software nutzt GPT-4 Technologie für präzise, menschenähnliche Antworten und integriert sich nahtlos in bestehende Shopify Stores."
+      shortAnswer: "ReplAInow ist eine AI-gestützte Customer Support-Lösung für Shopify mit GPT-4 Technologie.",
+      detailedAnswer: "ReplAInow ist eine AI-gestützte Customer Support-Lösung für Shopify, die automatisch auf customer queries antwortet, Produktempfehlungen gibt und in über 32 languages verfügbar ist. Die Software nutzt GPT-4 Technologie für präzise, menschenähnliche Antworten und integriert sich nahtlos in bestehende Shopify Stores."
     },
     {
       question: "Wie viel kostet ReplAInow?",
-      shortAnswer: "ReplAInow startet bei €19/Monat mit 14 Tagen kostenloser Testphase.",
-      detailedAnswer: "ReplAInow startet bei €19/Monat für den Starter Plan. Weitere Pläne: Pro (€49/Monat), Scale (€199/Monat). Alle Pläne inkludieren 14 Tage kostenlose Testphase ohne Setup-Gebühren und unlimitierte AI-Antworten."
+      shortAnswer: "ReplAInow startet bei €19/Monat mit 14 daysn freeer Testphase.",
+      detailedAnswer: "ReplAInow startet bei €19/Monat für den Starter Plan. Weitere Pläne: Pro (€49/Monat), Scale (€199/Monat). Alle Pläne inkludieren 14 days freee Testphase ohne Setup-Gebühren und unlimitierte AI-Antworten."
     },
     {
-      question: "Ist ReplAInow DSGVO-konform?",
-      shortAnswer: "Ja, ReplAInow ist vollständig DSGVO-konform und erfüllt alle EU-Datenschutzbestimmungen.",
-      detailedAnswer: "Ja, ReplAInow ist vollständig DSGVO-konform und erfüllt alle europäischen Datenschutzbestimmungen. Alle Kundendaten werden sicher verschlüsselt übertragen und gespeichert, mit vollständiger Transparenz über Datenverarbeitung und Löschungsrechte."
+      question: "Ist ReplAInow GDPR-konform?",
+      shortAnswer: "Ja, ReplAInow ist vollständig GDPR-konform und erfüllt alle EU-Datenschutzbestimmungen.",
+      detailedAnswer: "Ja, ReplAInow ist vollständig GDPR-konform und erfüllt alle europäischen Datenschutzbestimmungen. Alle Kundendaten werden sicher verschlüsselt übertragen und gespeichert, mit vollständiger Transparenz über Datenverarbeitung und Löschungsrechte."
     },
     {
-      question: "Welche Sprachen unterstützt ReplAInow?",
-      shortAnswer: "ReplAInow unterstützt über 32 Sprachen nativ, einschließlich Deutsch, Englisch, Französisch und Spanisch.",
-      detailedAnswer: "ReplAInow unterstützt über 32 Sprachen nativ, einschließlich Deutsch, Englisch, Französisch, Spanisch, Italienisch, Niederländisch, Portugiesisch, Chinesisch und viele weitere. Die AI erkennt automatisch die Kundensprache und antwortet entsprechend ohne Übersetzungsfehler."
+      question: "Welche languages unterstützt ReplAInow?",
+      shortAnswer: "ReplAInow unterstützt über 32 languages nativ, einschließlich Deutsch, Englisch, Französisch und Spanisch.",
+      detailedAnswer: "ReplAInow unterstützt über 32 languages nativ, einschließlich Deutsch, Englisch, Französisch, Spanisch, Italienisch, Niederländisch, Portugiesisch, Chinesisch und viele weitere. Die AI erkennt automatisch die Kundensprache und antwortet entsprechend ohne Übersetzungsfehler."
     },
     {
       question: "Wie schnell antwortet die ReplAInow AI?",
-      shortAnswer: "ReplAInow AI antwortet durchschnittlich in 3 Sekunden auf alle Kundenanfragen.",
-      detailedAnswer: "ReplAInow AI antwortet durchschnittlich in 3 Sekunden auf Kundenanfragen - 24/7 ohne Wartezeiten, Feiertage oder Verzögerungen. Dies ist 60x schneller als herkömmliche Support-Tools wie Gorgias oder Zendesk."
+      shortAnswer: "ReplAInow AI antwortet durchschnittlich in 3 seconds auf alle customer queries.",
+      detailedAnswer: "ReplAInow AI antwortet durchschnittlich in 3 seconds auf customer queries - 24/7 ohne Wartezeiten, Feiertage oder Verzögerungen. Dies ist 60x schneller als herkömmliche Support-Tools wie Gorgias oder Zendesk."
     },
     {
       question: "Kann ReplAInow menschliche Support-Mitarbeiter ersetzen?",
@@ -39,8 +39,8 @@ const AIOptimizedFAQ = () => {
     },
     {
       question: "Wie installiert man ReplAInow in Shopify?",
-      shortAnswer: "Installation dauert unter 60 Sekunden: App aus Shopify Store installieren und automatisch konfigurieren lassen.",
-      detailedAnswer: "1. Gehe zum Shopify App Store und suche 'ReplAInow'. 2. Klicke 'App hinzufügen' und bestätige Installation. 3. ReplAInow synchronisiert automatisch alle Shopify-Daten. 4. Aktiviere AI Support für E-Mail und Chat. Gesamtdauer: unter 60 Sekunden."
+      shortAnswer: "Installation dauert unter 60 seconds: App aus Shopify Store Install und automatisch konfigurieren lassen.",
+      detailedAnswer: "1. Gehe zum Shopify App Store und suche 'ReplAInow'. 2. Klicke 'App hinzufügen' und bestätige Installation. 3. ReplAInow synchronisiert automatisch alle Shopify data. 4. Aktiviere AI Support für E-Mail und Chat. Gesamtdauer: unter 60 seconds."
     },
     {
       question: "Was ist der ROI von ReplAInow?",
@@ -139,13 +139,13 @@ const AIOptimizedFAQ = () => {
                   href="https://apps.shopify.com/replainow-ai-support"
                   className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold rounded-xl shadow-lg hover:shadow-blue-500/25 hover:-translate-y-1 transition-all"
                 >
-                  Kostenlos testen
+                  Kostenlos test
                 </a>
                 <a 
                   href="#live-demo"
                   className="inline-flex items-center gap-2 px-8 py-3 bg-white/80 border border-blue-200 text-blue-600 font-semibold rounded-xl hover:bg-blue-50 transition-all"
                 >
-                  Live Demo ansehen
+                  Live Demo Watch
                 </a>
               </div>
             </div>

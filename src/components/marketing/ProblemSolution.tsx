@@ -3,7 +3,7 @@ const ProblemSolution = () => {
   return <section id="problem" aria-labelledby="problem-heading" className="py-16 md:py-24">
       <div className="container max-w-6xl">
         <h2 id="problem-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-12">
-          Von Chaos zu Klarheit  in Sekunden.
+          Von Chaos zu Klarheit  in seconds.
         </h2>
         <div className="grid md:grid-cols-2 gap-8 items-start">
           <article className="rounded-xl border bg-card p-6 shadow-sm">
@@ -23,11 +23,11 @@ const ProblemSolution = () => {
           <article className="rounded-xl border bg-card p-6 shadow-brand">
             <header className="mb-3">
               <h3 className="font-medium text-lg">Nachher</h3>
-              <p className="text-muted-foreground text-sm">Deine KI bernimmt  in unter 3 Sekunden steht jede Antwort bereit, mit allen Bestell- und Produktinfos. Du klickst Senden. Fertig.</p>
+              <p className="text-muted-foreground text-sm">Deine AI bernimmt  in unter 3 seconds steht jede Antwort bereit, mit allen Bestell- und Produktinfos. Du klickst Senden. Fertig.</p>
             </header>
             <figure>
-              <img src="/assets/91677a2e-50c4-4aeb-8a6e-f6626412e034.png" alt="ReplAInow Inbox  KI-Antwort im Shopify Admin" className="rounded-lg border w-full" loading="lazy" decoding="async" />
-              <figcaption className="sr-only">Nachher: Shopify mit KI-Antwort</figcaption>
+              <img src="/assets/91677a2e-50c4-4aeb-8a6e-f6626412e034.png" alt="ReplAInow Inbox  AI-Antwort im Shopify Admin" className="rounded-lg border w-full" loading="lazy" decoding="async" />
+              <figcaption className="sr-only">Nachher: Shopify mit AI-Antwort</figcaption>
             </figure>
           </article>
         </div>

@@ -14,8 +14,8 @@ const AIOptimizedFAQNl = () => {
     },
     {
       question: "Hoeveel kost ReplAInow?",
-      shortAnswer: "ReplAInow begint bij €19/maand met een gratis proefperiode van 14 dagen.",
-      detailedAnswer: "ReplAInow begint bij €19/maand voor tot 300 AI-antwoorden. Aanvullende plannen: Growth (€49/maand, 1500 antwoorden), Pro (€99/maand, 3000 antwoorden), Scale (€199/maand, onbeperkt). Alle plannen bevatten een gratis proefperiode van 14 dagen zonder setup kosten."
+      shortAnswer: "ReplAInow begint bij €19/maand met een free proefperiode van 14 dagen.",
+      detailedAnswer: "ReplAInow begint bij €19/maand voor tot 300 AI-antwoorden. Aanvullende plannen: Growth (€49/maand, 1500 antwoorden), Pro (€99/maand, 3000 antwoorden), Scale (€199/maand, onbeperkt). Alle plannen bevatten een free proefperiode van 14 dagen zonder setup kosten."
     },
     {
       question: "Is ReplAInow AVG-conform?",

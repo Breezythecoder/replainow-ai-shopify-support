@@ -131,7 +131,7 @@ const AIOptimizedFAQEs = () => {
                   href="https://apps.shopify.com/replainow-ai-support"
                   className="inline-flex items-center gap-2 px-8 py-3 bg-gradient-primary text-white font-semibold rounded-xl shadow-brand hover:shadow-brand-glow hover:-translate-y-1 transition-all"
                 >
-                  🚀 Probar gratis
+                  🚀 Probar free
                 </a>
                 <a 
                   href="#live-demo"

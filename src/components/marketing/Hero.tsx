@@ -65,10 +65,10 @@ const Hero = () => {
 
               <div className="mt-5 flex flex-wrap items-center justify-center md:justify-start gap-4 text-sm text-primary-foreground/90">
                 <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-3 py-1">
-                  <ShieldCheck className="size-4" /> DSGVO-konform
+                  <ShieldCheck className="size-4" /> GDPR-konform
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-3 py-1">
-                  <Zap className="size-4" /> Antwort in Sekunden
+                  <Zap className="size-4" /> Antwort in seconds
                 </span>
                 <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/10 px-3 py-1">
                   <Plug className="size-4" /> Nahtlose Shopify Integr.
