@@ -4,7 +4,7 @@ import LanguageSwitcher from "@/components/ui/language-switcher";
 import { Menu, X, Zap, Brain, Rocket, Sparkles, Cpu, Activity } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useSwipe } from "@/hooks/useSwipe";
-import { enhancedSmoothScroll } from "@/utils/smoothScroll";
+import { smoothScrollToElement } from "@/utils/smoothScroll";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
@@ -28,10 +28,10 @@ const ModernNavbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Handle smooth scroll navigation
+  // Handle fast smooth scroll navigation
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
-    enhancedSmoothScroll(targetId);
+    smoothScrollToElement(targetId); // Use native browser smooth scroll (faster)
     setMobileMenuOpen(false); // Close mobile menu after click
   };
 

@@ -1,11 +1,11 @@
 import { Twitter, Linkedin, Mail, Phone, MapPin, Heart } from "lucide-react";
-import { enhancedSmoothScroll } from "@/utils/smoothScroll";
+import { smoothScrollToElement } from "@/utils/smoothScroll";
 
 const Footer = () => {
-  // Handle smooth scroll navigation
+  // Handle fast smooth scroll navigation
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
-    enhancedSmoothScroll(targetId);
+    smoothScrollToElement(targetId); // Use native browser smooth scroll (faster)
   };
 
   return (

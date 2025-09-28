@@ -1,4 +1,18 @@
-// Smooth scrolling utility for hash navigation
+// Instant scroll for immediate navigation
+export const instantScrollToElement = (elementId: string, offset: number = 80) => {
+  const element = document.getElementById(elementId);
+  if (!element) return;
+
+  const elementPosition = element.getBoundingClientRect().top;
+  const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: 'auto' // Instant scroll
+  });
+};
+
+// Browser-native smooth scroll (faster than custom animation)
 export const smoothScrollToElement = (elementId: string, offset: number = 80) => {
   const element = document.getElementById(elementId);
   if (!element) return;
@@ -23,7 +37,7 @@ export const handleHashNavigation = () => {
   }
 };
 
-// Enhanced smooth scroll with easing
+// Fast smooth scroll with optimal timing
 export const enhancedSmoothScroll = (elementId: string, offset: number = 80) => {
   const element = document.getElementById(elementId);
   if (!element) return;
@@ -32,7 +46,12 @@ export const enhancedSmoothScroll = (elementId: string, offset: number = 80) => 
   const elementPosition = element.getBoundingClientRect().top;
   const targetPosition = elementPosition + start - offset;
   const distance = targetPosition - start;
-  const duration = Math.min(Math.abs(distance) / 2, 1000); // Max 1 second
+  
+  // Optimized duration: Faster for better UX
+  const baseDuration = 400; // Base 400ms
+  const distanceFactor = Math.abs(distance) / 1000; // Distance influence
+  const duration = Math.max(300, Math.min(baseDuration + distanceFactor * 200, 600)); // 300-600ms range
+  
   let startTime: number | null = null;
 
   const animation = (currentTime: number) => {
@@ -40,10 +59,10 @@ export const enhancedSmoothScroll = (elementId: string, offset: number = 80) => 
     const timeElapsed = currentTime - startTime;
     const progress = Math.min(timeElapsed / duration, 1);
     
-    // Easing function (ease-out-cubic)
-    const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+    // Faster easing function (ease-out-quart)
+    const easeOutQuart = 1 - Math.pow(1 - progress, 4);
     
-    window.scrollTo(0, start + distance * easeOutCubic);
+    window.scrollTo(0, start + distance * easeOutQuart);
     
     if (timeElapsed < duration) {
       requestAnimationFrame(animation);
