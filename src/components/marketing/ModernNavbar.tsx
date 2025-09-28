@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button-variants";
-import LanguageSwitcher from "@/components/ui/language-switcher";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { Menu, X, Zap, Brain, Rocket, Sparkles, Cpu, Activity } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useSwipe } from "@/hooks/useSwipe";
