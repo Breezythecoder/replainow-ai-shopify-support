@@ -81,9 +81,9 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Produkt</h4>
             <ul className="space-y-3">
-              <li><a href="#features" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Funktionen</a></li>
-              <li><a href="#pricing" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Preise</a></li>
-              <li><a href="#live-demo" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Live Demo</a></li>
+              <li><a href="/#features" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Funktionen</a></li>
+              <li><a href="/#pricing" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Preise</a></li>
+              <li><a href="/#live-demo" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Live Demo</a></li>
               <li><a href="https://apps.shopify.com/replainow-ai-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Installieren</a></li>
             </ul>
           </div>
