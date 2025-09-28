@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Plug, Database, Bot, Settings2 } from "lucide-react";
+import { smoothScrollToElement } from "@/utils/smoothScroll";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
@@ -26,6 +27,12 @@ const Step = ({
 );
 
 const HowItWorks = () => {
+  // Handle smooth scroll navigation
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    smoothScrollToElement(targetId);
+  };
+
   return (
     <section id="how-it-works" aria-labelledby="how-heading" className="py-16 md:py-24">
       <div className="container">
@@ -64,7 +71,7 @@ const HowItWorks = () => {
               <a href={OAUTH_URL}>Kostenlos testen</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-              <a href="#live-demo">Live-Demo ansehen</a>
+              <a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="cursor-pointer">Live-Demo ansehen</a>
             </Button>
           </div>
         </div>

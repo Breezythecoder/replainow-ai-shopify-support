@@ -67,7 +67,7 @@ const plans = [
 
 const ModernPricing = () => {
   return (
-    <section id="preise" aria-labelledby="pricing-heading" className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
+    <section id="pricing" aria-labelledby="pricing-heading" className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       {/* AI-Powered background elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>

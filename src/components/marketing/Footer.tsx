@@ -128,11 +128,11 @@ const Footer = () => {
             <h4 className="text-white font-bold mb-4">Kontakt</h4>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <Mail className="text-blue-400" size={16} />
+                <Mail className="text-blue-400 flex-shrink-0" size={20} />
                 <span className="text-slate-300 text-sm">support@replainow.com</span>
               </div>
               <div className="flex items-center gap-3">
-                <MapPin className="text-blue-400" size={16} />
+                <MapPin className="text-blue-400 flex-shrink-0" size={20} />
                 <span className="text-slate-300 text-sm">Dubai, UAE</span>
               </div>
             </div>

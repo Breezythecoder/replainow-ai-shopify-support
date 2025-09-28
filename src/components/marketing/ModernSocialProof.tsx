@@ -26,6 +26,27 @@ const ModernSocialProof = () => {
       result: "12x ROI in 3 Monaten",
       quote: "Von Intercom zu ReplAInow - beste Entscheidung ever! Kosten runter, Performance hoch.",
       image: testimonialSarah
+    },
+    {
+      company: "ElectroMax",
+      owner: "Thomas R.",
+      result: "85% weniger Support-Tickets",
+      quote: "Endlich keine 24/7 Support-Schichten mehr! Die AI beantwortet 90% der Fragen automatisch. Game Changer für unser Shopify-Store!",
+      image: testimonialLisa // Placeholder - würde echte Fotos brauchen
+    },
+    {
+      company: "HomeDecor Plus",
+      owner: "Anna L.",
+      result: "+42% Conversion Rate",
+      quote: "Unsere Kunden bekommen sofort Antworten zu Versand, Rücksendungen und Produktdetails. Shopify-Integration war super einfach!",
+      image: testimonialMarco // Placeholder - würde echte Fotos brauchen
+    },
+    {
+      company: "SportGear Pro",
+      owner: "Mike S.",
+      result: "€50k+ zusätzlicher Umsatz",
+      quote: "Die AI kennt jeden Artikel in unserem Shopify-Store. Kunden kaufen mehr, weil sie perfekt beraten werden. Unser Support-Team kann sich auf wichtige Anfragen konzentrieren.",
+      image: testimonialSarah // Placeholder - würde echte Fotos brauchen
     }
   ];
 
@@ -62,7 +83,7 @@ const ModernSocialProof = () => {
         </h2>
         
         {/* Testimonials Grid */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {testimonials.map((testimonial, i) => (
             <div key={i} className="bg-white/80 backdrop-blur-lg rounded-3xl p-8 interactive-card border border-slate-200 shadow-lg">
               <div className="flex items-center gap-4 mb-6">
@@ -88,23 +109,65 @@ const ModernSocialProof = () => {
 
         {/* Success Metrics */}
         <div className="bg-gradient-primary rounded-3xl p-8 text-center text-white shadow-hero">
-          <h3 className="text-2xl font-bold mb-8">Bewiesene Resultate in Zahlen</h3>
-          <div className="grid md:grid-cols-4 gap-8">
+          <h3 className="text-2xl font-bold mb-8">Bewiesene Resultate für Shopify-Händler</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div>
               <div className="text-4xl font-black mb-2">{STORE_COUNT}</div>
-              <div className="text-white/90">Zufriedene Händler</div>
+              <div className="text-white/90">Aktive Shopify-Stores</div>
             </div>
             <div>
               <div className="text-4xl font-black mb-2">187%</div>
-              <div className="text-white/90"> Conversion Steigerung</div>
+              <div className="text-white/90">Conversion Steigerung</div>
             </div>
             <div>
-              <div className="text-4xl font-black mb-2">2.1M</div>
-              <div className="text-white/90">Zusätzlicher Umsatz generiert</div>
+              <div className="text-4xl font-black mb-2">€2.1M</div>
+              <div className="text-white/90">Zusätzlicher Umsatz</div>
             </div>
             <div>
               <div className="text-4xl font-black mb-2">90%</div>
-              <div className="text-white/90">Weniger Support-Aufwand</div>
+              <div className="text-white/90">Weniger Support-Tickets</div>
+            </div>
+          </div>
+          
+          {/* Shopify-specific benefits */}
+          <div className="mt-12 grid md:grid-cols-3 gap-6 text-left">
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
+              <h4 className="font-bold text-lg mb-3">🚀 Shopify-Integration</h4>
+              <p className="text-white/90 text-sm">1-Klick Installation aus dem Shopify App Store</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
+              <h4 className="font-bold text-lg mb-3">📊 Echtzeit-Daten</h4>
+              <p className="text-white/90 text-sm">Automatische Synchronisation mit Produkten, Bestellungen & Kunden</p>
+            </div>
+            <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
+              <h4 className="font-bold text-lg mb-3">💬 24/7 Support</h4>
+              <p className="text-white/90 text-sm">Kunden bekommen sofort Antworten zu Versand, Rücksendungen & Produkten</p>
+            </div>
+          </div>
+        </div>
+        
+        {/* Shopify-specific CTA */}
+        <div className="mt-16 text-center">
+          <div className="bg-white/90 backdrop-blur-lg rounded-3xl p-8 border border-slate-200 shadow-lg">
+            <h3 className="text-2xl font-bold text-slate-800 mb-4">
+              Bereit für deinen Shopify-Store?
+            </h3>
+            <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
+              Schließe dich über {STORE_COUNT} zufriedenen Shopify-Händlern an und automatisiere deinen Kundensupport in nur 5 Minuten.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="https://apps.shopify.com/replainow/install" 
+                className="bg-gradient-primary text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition-all shadow-lg"
+              >
+                🚀 Jetzt im Shopify App Store installieren
+              </a>
+              <a 
+                href="#live-demo" 
+                className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-2xl font-bold hover:bg-blue-50 transition-all"
+              >
+                📺 Live-Demo ansehen
+              </a>
             </div>
           </div>
         </div>

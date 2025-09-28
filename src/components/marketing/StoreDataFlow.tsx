@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Package, User, FileText, Truck, Languages, Bot } from "lucide-react";
+import { smoothScrollToElement } from "@/utils/smoothScroll";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow/install";
 
@@ -32,6 +33,12 @@ const Card = ({
 );
 
 const StoreDataFlow = () => {
+  // Handle smooth scroll navigation
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    smoothScrollToElement(targetId);
+  };
+
   return (
     <section
       id="data-context"
@@ -178,7 +185,7 @@ const StoreDataFlow = () => {
               <a href={OAUTH_URL}>Jetzt kostenlos testen</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-              <a href="#live-demo">Live-Demo ansehen</a>
+              <a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="cursor-pointer">Live-Demo ansehen</a>
             </Button>
           </div>
         </div>
