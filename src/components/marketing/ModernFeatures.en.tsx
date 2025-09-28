@@ -20,16 +20,16 @@ const ModernFeatures = () => {
     },
     {
       icon: Clock,
-      title: "3-Sekunden Antworten",
+      title: "3-seconds Antworten",
       desc: "Instant-Responses während Gorgias & Co. noch laden",
       gradient: "from-purple-500 to-pink-500",
-      story: "Kunde fragt  AI antwortet  Kunde kauft. Alles in 3 Sekunden",
+      story: "Kunde fragt  AI antwortet  Kunde kauft. Alles in 3 seconds",
       impact: "90% weniger Tickets",
       color: "purple"
     },
     {
       icon: Globe,
-      title: "32+ Sprachen Nativ",
+      title: "32+ languages Nativ",
       desc: "Perfekte Antworten in Kundensprache - keine Übersetzungsfehler",
       gradient: "from-cyan-500 to-teal-500",
       story: "Französische Kundin bekommt perfekte Antwort auf Französisch",
@@ -38,8 +38,8 @@ const ModernFeatures = () => {
     },
     {
       icon: BarChart3,
-      title: "Echtzeit Shopify-Daten",
-      desc: "AI kennt ALLE Produkte, Preise, Lagerbestände automatisch",
+      title: "Echtzeit Shopify data",
+      desc: "AI kennt ALLE Produkte, Pricing, Lagerbestände automatisch",
       gradient: "from-green-500 to-emerald-500",
       story: "AI weiß: 'iPhone Case ist auf Lager, 15% Rabatt verfügbar, Versand morgen'",
       impact: "100% Accuracy",
@@ -47,7 +47,7 @@ const ModernFeatures = () => {
     },
     {
       icon: TrendingUp,
-      title: "75% Kosteneinsparung",
+      title: "75% Cost Savings",
       desc: "Überlegen UND günstiger als teure Konkurrenz",
       gradient: "from-amber-500 to-orange-500",
       story: "Während Gorgias €200/Monat kostet, zahlst du nur €19",
@@ -57,7 +57,7 @@ const ModernFeatures = () => {
     {
       icon: Download,
       title: "1-Klick Installation",
-      desc: "Setup in unter 60 Sekunden - keine komplexe Konfiguration",
+      desc: "Setup in unter 60 seconds - keine komplexe Konfiguration",
         gradient: "from-emerald-500 to-green-500",
       story: "Klick → AI lernt deinen Store → Fertig. Keine IT-Abteilung nötig",
       impact: "60s Setup",

@@ -177,7 +177,7 @@ const WasIstAiShopifyHelpdesk = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold mb-8 text-center text-slate-800">
-                Warum ReplAInow das <span className="text-gradient-primary">beste</span> AI Shopify Helpdesk ist
+                Warum ReplAInow das <span className="text-gradient-primary">best</span> AI Shopify Helpdesk ist
               </h2>
               
               <div className="glass-card p-8 rounded-3xl mb-8">
@@ -245,7 +245,7 @@ const WasIstAiShopifyHelpdesk = () => {
         <section className="py-20 bg-gradient-primary text-white">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-4xl font-bold mb-6">
-              Bereit für das beste AI Shopify Helpdesk?
+              Bereit für das best AI Shopify Helpdesk?
             </h2>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
               Über 280+ Shopify-Händler nutzen bereits ReplAInow. 

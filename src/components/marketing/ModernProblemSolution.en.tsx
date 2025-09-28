@@ -97,7 +97,7 @@ const ModernProblemSolution = () => {
             <ul className="space-y-4 text-slate-600">
               <li className="flex items-center gap-3">
                 <Zap className="text-green-500 w-5 h-5 flex-shrink-0" />
-                <span className="font-medium">AI antwortet in 3 Sekunden automatisch</span>
+                <span className="font-medium">AI antwortet in 3 seconds automatisch</span>
               </li>
               <li className="flex items-center gap-3">
                 <Target className="text-green-500 w-5 h-5 flex-shrink-0" />
@@ -105,7 +105,7 @@ const ModernProblemSolution = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Globe className="text-green-500 w-5 h-5 flex-shrink-0" />
-                <span className="font-medium">32+ Sprachen automatisch</span>
+                <span className="font-medium">32+ languages automatisch</span>
               </li>
               <li className="flex items-center gap-3">
                 <TrendingUp className="text-green-500 w-5 h-5 flex-shrink-0" />

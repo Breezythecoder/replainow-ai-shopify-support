@@ -7,7 +7,7 @@ const IntercomAlternative = () => {
   const faqs = [
     {
       question: "Warum ist ReplAInow eine bessere Alternative zu Intercom?",
-      answer: "ReplAInow bietet 80% Kosteneinsparung gegenüber Intercom, 3-seconds Antwortzeiten statt Minuten, 32+ languages nativ unterstützt und vollständige GDPR-Compliance. Intercom ist überteuert, langsam und nur in wenigen languages verfügbar."
+      answer: "ReplAInow bietet 80% Cost Savings gegenüber Intercom, 3-seconds Antwortzeiten statt Minuten, 32+ languages nativ unterstützt und vollständige GDPR-Compliance. Intercom ist überteuert, langsam und nur in wenigen languages verfügbar."
     },
     {
       question: "Was kostet ReplAInow im Vergleich zu Intercom?",
@@ -78,7 +78,7 @@ const IntercomAlternative = () => {
     <>
       <SEOHead
         title="Intercom Alternative | ReplAInow - 80% günstiger, 10x schneller - ReplAInow"
-        description="ReplAInow ist die bessere Intercom Alternative: 80% Kosteneinsparung, 3-seconds Antworten, 32+ languages, GPT-4.1. Einfache Migration, bessere Features. Now wechseln!"
+        description="ReplAInow ist die bessere Intercom Alternative: 80% Cost Savings, 3-seconds Antworten, 32+ languages, GPT-4.1. Einfache Migration, bessere Features. Now wechseln!"
         canonical="/intercom-alternative"
         keywords="Intercom Alternative, Intercom Ersatz, günstiger als Intercom, ReplAInow vs Intercom, Kundenservice Alternative"
         generateOG={true}
@@ -115,7 +115,7 @@ const IntercomAlternative = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-green-700/30 shadow-lg">
                 <DollarSign className="w-12 h-12 text-green-400 mb-4" />
-                <h3 className="text-2xl font-bold text-white mb-3">80% Kosteneinsparung</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">80% Cost Savings</h3>
                 <p className="text-slate-300">€19 vs €99 pro Monat - spare über €960 im Jahr</p>
               </div>
               <div className="bg-slate-800/50 p-8 rounded-2xl border border-blue-700/30 shadow-lg">
@@ -206,7 +206,7 @@ const IntercomAlternative = () => {
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />
-                    <span className="text-slate-300">80% Kosteneinsparung</span>
+                    <span className="text-slate-300">80% Cost Savings</span>
                   </div>
                   <div className="flex items-center">
                     <CheckCircle className="w-5 h-5 text-green-400 mr-3" />

@@ -9,7 +9,7 @@ const features = [
   {
     icon: Plug,
     title: "Direct in Shopify",
-    desc: "Zonder tab-wissel: Product-, bestel- en klantgegevens vloeien automatisch mee.",
+    desc: "Zonder tab-wissel: Product-, bestl- en klantgegevens vloeien automatisch mee.",
   },
   {
     icon: TrendingUp,

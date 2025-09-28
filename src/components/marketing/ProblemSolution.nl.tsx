@@ -22,7 +22,7 @@ const ProblemSolutionNl = () => {
           <article className="rounded-xl border bg-card p-6 shadow-brand">
             <header className="mb-3">
               <h3 className="font-medium text-lg">Nu</h3>
-              <p className="text-muted-foreground text-sm">Je AI neemt het over  in onder 3 seconden staat elk antwoord klaar, met alle bestel- en productinfo. Je klikt "Verzenden". Klaar.</p>
+              <p className="text-muted-foreground text-sm">Je AI neemt het over  in onder 3 seconden staat elk antwoord klaar, met alle bestl- en productinfo. Je klikt "Verzenden". Klaar.</p>
             </header>
             <figure>
               <img src="/assets/91677a2e-50c4-4aeb-8a6e-f6626412e034.png" alt="ReplAInow Inbox  AI-antwoord in Shopify Admin" className="rounded-lg border w-full" loading="lazy" decoding="async" />

@@ -15,7 +15,7 @@ const plans = [
     price: "€19",
     period: "/ Monat",
     quota: "Bis zu 300 AI Antworten / Monat",
-    trial: "14 Tage kostenlos testen",
+    trial: "14 days free test",
     features: [
       ...baseFeatures,
       "E-Mail Versand über ReplAInow Adresse",
@@ -28,7 +28,7 @@ const plans = [
     price: "€49",
     period: "/ Monat",
     quota: "Bis zu 1500 AI Antworten / Monat",
-    trial: "14 Tage kostenlos testen",
+    trial: "14 days free test",
     features: [
       ...baseFeatures,
       "E-Mail Versand mit deiner Domain",
@@ -42,7 +42,7 @@ const plans = [
     price: "€99",
     period: "/ Monat",
     quota: "Bis zu 3000 AI Antworten / Monat",
-    trial: "14 Tage kostenlos testen",
+    trial: "14 days free test",
     features: [
       ...baseFeatures,
       "E-Mail Versand mit deiner Domain",
@@ -55,7 +55,7 @@ const plans = [
     price: "€199",
     period: "/ Monat",
     quota: "Unlimitierte AI Antworten",
-    trial: "14 Tage kostenlos testen",
+    trial: "14 days free test",
     features: [
       ...baseFeatures,
       "E-Mail Versand mit deiner Domain",
@@ -144,7 +144,7 @@ const ModernPricing = () => {
                     className="w-full text-sm sm:text-base"
                   >
                     <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(plan.name)}&utm_content=pricing`}>
-                      Kostenlos testen
+                      Kostenlos test
                     </a>
                   </Button>
                   <div className="flex items-center justify-center gap-2 text-xs text-slate-500">
@@ -186,7 +186,7 @@ const ModernPricing = () => {
                 KOSTENVERGLEICH
               </div>
               <h3 className="text-4xl font-bold text-white mb-4">
-                Massive Kosteneinsparung
+                Massive Cost Savings
               </h3>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
                 Während Konkurrenten <span className="text-red-400 font-bold">pro Ticket</span> abrechnen, 

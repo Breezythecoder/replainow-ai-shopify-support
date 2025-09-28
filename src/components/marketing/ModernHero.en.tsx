@@ -222,7 +222,7 @@ const ModernHero = () => {
               <span className="font-bold text-slate-800">4.9/5.0</span>
             </div>
             <span className="px-5 py-3 bg-green-100 backdrop-blur-lg text-green-800 rounded-full font-bold shadow-lg hover-lift border border-green-200">
-               DSGVO-konform
+               GDPR-konform
             </span>
             <span className="font-bold text-slate-800 bg-white/80 backdrop-blur-lg px-5 py-3 rounded-full shadow-lg hover-lift border border-slate-200"> {STORE_COUNT} Händler</span>
           </div>
@@ -238,7 +238,7 @@ const ModernHero = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
-                alt="ReplAInow AI Support Dashboard zeigt intelligente Kundensupport-Automatisierung mit GPT-4.1 Technologie für Shopify-Händler. Dashboard mit Live-Chat, E-Mail-Management und automatisierten Antworten in 3 Sekunden."
+                alt="ReplAInow AI Support Dashboard zeigt intelligente Customer Support-Automatisierung mit GPT-4.1 Technologie für Shopify-Händler. Dashboard mit Live-Chat, E-Mail-Management und automatisierten Antworten in 3 seconds."
                 className="w-full h-auto rounded-xl"
                 width="600"
                 height="400"

@@ -50,7 +50,7 @@ const MailAndChatNl = () => {
 
             <ul className="mt-5 space-y-3">
               <Bullet Icon={CheckCircle2}>Directe AIantwoorden op klantemails</Bullet>
-              <Bullet Icon={Globe}>Shopifydata automatisch ingebed (bestellingen, producten, verzending)</Bullet>
+              <Bullet Icon={Globe}>Shopifydata automatisch ingebed (bestllingen, producten, verzending)</Bullet>
               <Bullet Icon={CheckCircle2}>Meertalig en merkconforme toon  automatisch</Bullet>
             </ul>
 
@@ -83,7 +83,7 @@ const MailAndChatNl = () => {
 
             <ul className="mt-5 space-y-3">
               <Bullet Icon={Clock}>Vollautomatische chatondersteuning  AI beantwoordt vragen 24/7.</Bullet>
-              <Bullet Icon={CheckCircle2}>Shopifydata in realtime  bestel & verzendinfo, productgegevens, beleid direct beschikbaar.</Bullet>
+              <Bullet Icon={CheckCircle2}>Shopifydata in realtime  bestl & verzendinfo, productgegevens, beleid direct beschikbaar.</Bullet>
               <Bullet Icon={CheckCircle2}>Backendoverzicht van alle chats  merchants zien alle lopende gesprekken centraal.</Bullet>
             </ul>
 

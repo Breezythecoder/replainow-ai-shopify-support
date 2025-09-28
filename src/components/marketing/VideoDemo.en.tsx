@@ -14,7 +14,7 @@ const VideoDemo = () => {
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 max-w-3xl mx-auto">
             Sieh dir an, wie ReplAInow in
-            <span className="text-indigo-600 font-bold"> 3 Sekunden</span> 
+            <span className="text-indigo-600 font-bold"> 3 seconds</span> 
             komplexe Kundenfragen lst
           </p>
         </div>
@@ -30,15 +30,15 @@ const VideoDemo = () => {
                   Hier siehst du ReplAInow in Aktion:<br/>
                    Live Chat mit Kunden<br/>
                    Automatische Produktempfehlungen<br/>
-                   3-Sekunden Antwortzeit<br/>
-                   32+ Sprachen
+                   3-seconds Antwortzeit<br/>
+                   32+ languages
                 </p>
                 <button
                   onClick={() => setIsPlaying(!isPlaying)}
                   className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 transform hover:scale-105"
                 >
                   {isPlaying ? <Pause className="w-6 h-6 inline mr-2" /> : <Play className="w-6 h-6 inline mr-2" />}
-                  {isPlaying ? 'Pause' : 'Demo ansehen'}
+                  {isPlaying ? 'Pause' : 'Demo Watch'}
                 </button>
               </div>
             </div>
@@ -69,12 +69,12 @@ const VideoDemo = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
             <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 border border-slate-200 shadow-lg text-center">
               <div className="text-3xl mb-3"></div>
-              <h3 className="text-lg font-bold text-slate-800 mb-2">3 Sekunden</h3>
+              <h3 className="text-lg font-bold text-slate-800 mb-2">3 seconds</h3>
               <p className="text-slate-600 text-sm">Durchschnittliche Antwortzeit</p>
             </div>
             <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 border border-slate-200 shadow-lg text-center">
               <div className="text-3xl mb-3"></div>
-              <h3 className="text-lg font-bold text-slate-800 mb-2">32+ Sprachen</h3>
+              <h3 className="text-lg font-bold text-slate-800 mb-2">32+ languages</h3>
               <p className="text-slate-600 text-sm">Automatische bersetzung</p>
             </div>
             <div className="bg-white/80 backdrop-blur-lg rounded-2xl p-6 border border-slate-200 shadow-lg text-center">

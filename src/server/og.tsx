@@ -43,7 +43,7 @@ function template({ title, subtitle }: { title: string; subtitle?: string }) {
         </div>
         <div style="display:flex;align-items:center;color:#f59e0b;">
           <span style="margin-right:8px;">💰</span>
-          <span>75% Kosteneinsparung</span>
+          <span>75% Cost Savings</span>
         </div>
       </div>
     </div>

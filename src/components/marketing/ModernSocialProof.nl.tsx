@@ -6,7 +6,7 @@ const ModernSocialProofNl = () => {
   const testimonials = [
     { company: "BeautyStore", owner: "Lisa M.", result: "15 uur/week bespaard", quote: "ReplAInow heeft onze support getransformeerd. De AI begrijpt onze producten beter dan sommige medewerkers!", image: testimonialLisa },
     { company: "TechGadgets", owner: "Marco K.", result: "+37% klanttevredenheid", quote: "Klanten houden van de directe antwoorden. Conversie door het dak!", image: testimonialMarco },
-    { company: "FashionHub", owner: "Sarah T.", result: "12x ROI in 3 maanden", quote: "Van Intercom naar ReplAInow  beste keuze! Kosten omlaag, performance omhoog.", image: testimonialSarah },
+    { company: "FashionHub", owner: "Sarah T.", result: "12x ROI in 3 maanden", quote: "Van Intercom naar ReplAInow  best keuze! Kosten omlaag, performance omhoog.", image: testimonialSarah },
   ];
   return (
     <section className="py-24 bg-gradient-to-b from-slate-50 to-white">

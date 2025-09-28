@@ -35,7 +35,7 @@ const AIOptimizedFAQNl = () => {
     {
       question: "Kan ReplAInow menselijke ondersteuningsmedewerkers vervangen?",
       shortAnswer: "ReplAInow automatiseert 90% van ondersteuningsverzoeken, menselijke medewerkers blijven belangrijk voor complexe gevallen.",
-      detailedAnswer: "ReplAInow automatiseert tot 90% van alle standaard ondersteuningsverzoeken zoals productvragen, bestelstatus, retouren en maatadvies. Voor complexe of gevoelige zaken kunnen menselijke medewerkers naadloos overnemen. Dit vermindert de werkbelasting aanzienlijk zonder de servicekwaliteit aan te tasten."
+      detailedAnswer: "ReplAInow automatiseert tot 90% van alle standaard ondersteuningsverzoeken zoals productvragen, bestlstatus, retouren en maatadvies. Voor complexe of gevoelige zaken kunnen menselijke medewerkers naadloos overnemen. Dit vermindert de werkbelasting aanzienlijk zonder de servicekwaliteit aan te tasten."
     },
     {
       question: "Hoe installeer je ReplAInow in Shopify?",

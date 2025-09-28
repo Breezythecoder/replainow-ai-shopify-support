@@ -24,7 +24,7 @@ const ModernSocialProof = () => {
       company: "FashionHub",
       owner: "Sarah T.", 
       result: "12x ROI in 3 Monaten",
-      quote: "Von Intercom zu ReplAInow - beste Entscheidung ever! Kosten runter, Performance hoch.",
+      quote: "Von Intercom zu ReplAInow - best Entscheidung ever! Kosten runter, Performance hoch.",
       image: testimonialSarah
     },
     {
@@ -38,7 +38,7 @@ const ModernSocialProof = () => {
       company: "HomeDecor Plus",
       owner: "Anna L.",
       result: "+42% Conversion Rate",
-      quote: "Unsere Kunden bekommen sofort Antworten zu Versand, Rücksendungen und Produktdetails. Shopify-Integration war super einfach!",
+      quote: "Unsere Kunden get sofort Antworten zu Versand, Rücksendungen und Produktdetails. Shopify-Integration war super einfach!",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
     },
     {
@@ -141,7 +141,7 @@ const ModernSocialProof = () => {
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
               <h4 className="font-bold text-lg mb-3">💬 24/7 Support</h4>
-              <p className="text-white/90 text-sm">Kunden bekommen sofort Antworten zu Versand, Rücksendungen & Produkten</p>
+              <p className="text-white/90 text-sm">Kunden get sofort Antworten zu Versand, Rücksendungen & Produkten</p>
             </div>
           </div>
         </div>

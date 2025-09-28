@@ -24,7 +24,7 @@ const ModernSocialProof = () => {
       company: "FashionHub",
       owner: "Sarah T.", 
       result: "12x ROI in 3 Monaten",
-      quote: "Von Intercom zu ReplAInow - beste Entscheidung ever! Kosten runter, Performance hoch.",
+      quote: "Von Intercom zu ReplAInow - best Entscheidung ever! Kosten runter, Performance hoch.",
       image: testimonialSarah
     },
     {
@@ -38,7 +38,7 @@ const ModernSocialProof = () => {
       company: "HomeDecor Plus",
       owner: "Anna L.",
       result: "+42% Conversion Rate",
-      quote: "Unsere Kunden bekommen sofort Antworten zu Versand, Rücksendungen und Produktdetails. Shopify-Integration war super einfach!",
+      quote: "Unsere Kunden get sofort Antworten zu Versand, Rücksendungen und Produktdetails. Shopify-Integration war super einfach!",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
     },
     {
@@ -141,7 +141,7 @@ const ModernSocialProof = () => {
             </div>
             <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-6">
               <h4 className="font-bold text-lg mb-3">💬 24/7 Support</h4>
-              <p className="text-white/90 text-sm">Kunden bekommen sofort Antworten zu Versand, Rücksendungen & Produkten</p>
+              <p className="text-white/90 text-sm">Kunden get sofort Antworten zu Versand, Rücksendungen & Produkten</p>
             </div>
           </div>
         </div>
@@ -153,20 +153,20 @@ const ModernSocialProof = () => {
               Bereit für deinen Shopify-Store?
             </h3>
             <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
-              Schließe dich über {STORE_COUNT} zufriedenen Shopify-Händlern an und automatisiere deinen Kundensupport in nur 5 Minuten.
+              Schließe dich über {STORE_COUNT} zufriedenen Shopify-Händlern an und automatisiere deinen Customer Support in nur 5 Minuten.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
                 href="https://apps.shopify.com/replainow/install" 
                 className="bg-gradient-primary text-white px-8 py-4 rounded-2xl font-bold hover:scale-105 transition-all shadow-lg"
               >
-                🚀 Jetzt im Shopify App Store installieren
+                🚀 Now im Shopify App Store Install
               </a>
               <a 
                 href="#live-demo" 
                 className="border-2 border-blue-600 text-blue-600 px-8 py-4 rounded-2xl font-bold hover:bg-blue-50 transition-all"
               >
-                📺 Live-Demo ansehen
+                📺 Live-Demo Watch
               </a>
             </div>
           </div>

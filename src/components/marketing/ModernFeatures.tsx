@@ -47,7 +47,7 @@ const ModernFeatures = () => {
     },
     {
       icon: TrendingUp,
-      title: "75% Kosteneinsparung",
+      title: "75% Cost Savings",
       desc: "Überlegen UND günstiger als teure Konkurrenz",
       gradient: "from-amber-500 to-orange-500",
       story: "Während Gorgias €200/Monat kostet, zahlst du nur €19",

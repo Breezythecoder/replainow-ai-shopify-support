@@ -11,7 +11,7 @@ const ShopifyCustomerService = () => {
     },
     {
       question: "Wie verbessert ReplAInow den Shopify Customer Service?",
-      answer: "ReplAInow revolutioniert den Shopify Customer Service durch GPT-4.1 Technologie: 3-seconds Antwortzeiten, automatische Spracherkennung in 32+ languages, 75% Kosteneinsparung und nahtlose Shopify-Integration."
+      answer: "ReplAInow revolutioniert den Shopify Customer Service durch GPT-4.1 Technologie: 3-seconds Antwortzeiten, automatische Spracherkennung in 32+ languages, 75% Cost Savings und nahtlose Shopify-Integration."
     },
     {
       question: "Welche Customer Service Features bietet ReplAInow?",
@@ -51,7 +51,7 @@ const ShopifyCustomerService = () => {
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-yellow-400" />,
-      title: "75% Kosteneinsparung",
+      title: "75% Cost Savings",
       description: "Drastische Reduzierung der Customer Service Kosten"
     }
   ];
@@ -153,7 +153,7 @@ const ShopifyCustomerService = () => {
                     <span className="text-purple-400 font-bold">4.9/5</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-300">Kosteneinsparung</span>
+                    <span className="text-slate-300">Cost Savings</span>
                     <span className="text-yellow-400 font-bold">75%</span>
                   </div>
                 </div>

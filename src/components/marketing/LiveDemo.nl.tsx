@@ -12,7 +12,7 @@ const LiveDemoNl = () => {
           Zo eenvoudig werkt ReplAInow.
         </h2>
         <p className="text-center text-muted-foreground max-w-2xl mx-auto mb-10">
-          Een klant vraagt naar de leveringsstatus  ReplAInow haalt automatisch bestelgegevens uit Shopify, formuleert een perfect antwoord in de toon van je merk en verstuurt het in 3 seconden. Resultaat: klant tevreden, jij bespaart tijd  en behaalt ondertussen meer omzet.
+          Een klant vraagt naar de leveringsstatus  ReplAInow haalt automatisch bestlgegevens uit Shopify, formuleert een perfect antwoord in de toon van je merk en verstuurt het in 3 seconden. Resultaat: klant tevreden, jij bespaart tijd  en behaalt ondertussen meer omzet.
         </p>
 
         <div className="rounded-xl border bg-card p-2 shadow-brand mb-6">

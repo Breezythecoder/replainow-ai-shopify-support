@@ -62,7 +62,7 @@ const StoreDataFlow = () => {
             Deine AI kennt deinen Shopify-Store  bis ins Detail
           </h2>
           <p className="text-muted-foreground">
-            ReplAInow verbindet sich direkt mit deinem Shopify-Store und zieht in Echtzeit alle relevanten Daten, um customer queries sofort und przise zu beantworten.
+            ReplAInow connects directly mit your Shopify store und pulls in real-time all relevant data, um customer queries sofort und and precisely.
           </p>
         </header>
 

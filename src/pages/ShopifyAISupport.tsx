@@ -51,7 +51,7 @@ const ShopifyAISupport = () => {
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-orange-400" />,
-      title: "75% Kosteneinsparung",
+      title: "75% Cost Savings",
       description: "Drastische Reduzierung der Support-Kosten"
     }
   ];
@@ -157,7 +157,7 @@ const ShopifyAISupport = () => {
                     <span className="text-orange-400 font-bold">99.9%</span>
                   </div>
                   <div className="flex justify-between items-center">
-                    <span className="text-slate-300">Kosteneinsparung</span>
+                    <span className="text-slate-300">Cost Savings</span>
                     <span className="text-yellow-400 font-bold">75%</span>
                   </div>
                 </div>

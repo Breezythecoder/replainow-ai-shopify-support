@@ -25,7 +25,7 @@ const MailAndChat = () => {
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto">
             Handle every customer message instantly in any channel. ReplAInow verbindet sich mit deinem ShopifyStore und beantwortet EMails
-            und LiveChatNachrichten in unter 3 Sekunden  markenkonform, kontextbewusst und mehrsprachig.
+            und LiveChatNachrichten in unter 3 seconds  brand-consistent, kontextbewusst und mehrsprachig.
           </p>
         </header>
 
@@ -53,7 +53,7 @@ const MailAndChat = () => {
             <ul className="mt-5 space-y-3">
               <Bullet Icon={CheckCircle2}>Sofortige AIAntworten auf KundenEMails</Bullet>
               <Bullet Icon={Globe}>ShopifyDaten automatisch eingebettet (Bestellungen, Produkte, Versand)</Bullet>
-              <Bullet Icon={CheckCircle2}>Mehrsprachig und markenkonformer Ton  automatisch</Bullet>
+              <Bullet Icon={CheckCircle2}>Mehrsprachig und brand-consistenter Ton  automatisch</Bullet>
             </ul>
 
             <ul className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -100,10 +100,10 @@ const MailAndChat = () => {
         {/* CTA */}
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-3">
           <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
-            <a href={OAUTH_URL} aria-label="ReplAInow kostenlos testen">Try ReplAInow for Free</a>
+            <a href={OAUTH_URL} aria-label="ReplAInow free test">Try ReplAInow for Free</a>
           </Button>
           <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-            <a href="#live-demo" aria-label="Live-Demo ansehen">See Live Demo</a>
+            <a href="#live-demo" aria-label="Live-Demo Watch">See Live Demo</a>
           </Button>
         </div>
       </div>

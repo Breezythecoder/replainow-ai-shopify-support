@@ -67,7 +67,7 @@ const StoreDataFlowNl = () => {
             <Card
               Icon={Users}
               title="Klantgegevens"
-              desc="Profiel, bestellingshistorie en voorkeuren"
+              desc="Profiel, bestllingshistorie en voorkeuren"
               className="absolute top-1/2 right-0 -translate-y-1/2 w-56"
             />
             <Card
@@ -144,7 +144,7 @@ const StoreDataFlowNl = () => {
         <div className="text-center space-y-6">
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Met toegang tot al deze gegevens kan onze AI elke klantvraag beantwoorden - 
-            van productdetails tot bestellingsstatus, altijd accuraat en up-to-date.
+            van productdetails tot bestllingsstatus, altijd accuraat en up-to-date.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -20,7 +20,7 @@ const faqData = [
   },
   {
     question: "Welke Shopify-gegevens kan de AI gebruiken?",
-    answer: "De AI heeft toegang tot producten, bestellingen, klantgegevens, voorraad, verzendstatus en meer. Je bepaalt zelf welke data beschikbaar is voor de AI om nauwkeurige antwoorden te geven."
+    answer: "De AI heeft toegang tot producten, bestllingen, klantgegevens, voorraad, verzendstatus en meer. Je bepaalt zelf welke data beschikbaar is voor de AI om nauwkeurige antwoorden te geven."
   },
   {
     question: "Wat als de AI een vraag niet kan beantwoorden?",

@@ -33,7 +33,7 @@ export const SITE_STATS = {
     RESPONSE_TIME: "3 seconds",
     LANGUAGES: "32+ languages",
     GDPR_COMPLIANT: "GDPR-konform",
-    COST_SAVINGS: "75% Kosteneinsparung",
+    COST_SAVINGS: "75% Cost Savings",
     AI_TECHNOLOGY: "GPT-4.1"
   }
 } as const;

@@ -25,7 +25,7 @@ const ModernLiveDemo = () => {
       ],
       responses: [
         "Hallo! Für dein iPhone 14 Pro empfehle ich unser Premium Clear Case (€24.99) oder das Rugged Case (€29.99). Beide sind gerade auf Lager und bieten optimalen Schutz! 🛡️",
-        "Ja! Studenten bekommen 15% Rabatt mit dem Code STUDENT15. Einfach bei der Bestellung eingeben! 🎓",
+        "Ja! Studenten get 15% Rabatt mit dem Code STUDENT15. Einfach bei der Bestellung eingeben! 🎓",
         "Standard-Versand nach Deutschland dauert 2-3 Werktage (€4.99), Express-Versand 1-2 Werktage (€9.99). Kostenloser Versand ab €50! 🚚",
         "Ja, du hast 30 days Rückgaberecht! Kostenlose Rücksendung, Geld-zurück-Garantie. Einfach in deinem Account die Rücksendung anmelden! ✅"
       ]
@@ -36,13 +36,13 @@ const ModernLiveDemo = () => {
       messages: [
         "Welche Größe sollte ich bei diesem Kleid wählen?",
         "Ist das Material nachhaltig?",
-        "Kann ich mehrere Farben bestellen?",
+        "Kann ich mehrere Farben bestllen?",
         "Wie ist die Qualität?"
       ],
       responses: [
         "Basierend auf deinen Angaben empfehle ich Größe M. Das Kleid fällt locker und ist true-to-size. Bei Unsicherheit lieber eine Größe größer! 📏",
         "Ja! 100% Bio-Baumwolle, fair gehandelt und umweltfreundlich verpackt. 🌱 Nachhaltigkeit ist uns wichtig!",
-        "Natürlich! Du kannst alle verfügbaren Farben bestellen. Aktuell haben wir: Schwarz, Weiß, Navy und Beige auf Lager. 🎨",
+        "Natürlich! Du kannst alle verfügbaren Farben bestllen. Aktuell haben wir: Schwarz, Weiß, Navy und Beige auf Lager. 🎨",
         "Premium-Qualität! 200g/m² Bio-Baumwolle, maschinenwaschbar, bügelfrei. Unsere Kunden lieben es! ⭐⭐⭐⭐⭐"
       ]
     },
@@ -52,7 +52,7 @@ const ModernLiveDemo = () => {
       messages: [
         "Welche Hautpflege-Routine empfiehlst du für trockene Haut?",
         "Sind eure Produkte vegan?",
-        "Kann ich eine Proben-Box bestellen?",
+        "Kann ich eine Proben-Box bestllen?",
         "Wie lange halten die Produkte?"
       ],
       responses: [

@@ -10,7 +10,7 @@ const AIOptimizedFAQ = () => {
     {
       question: "Was ist ReplAInow AI Helpdesk?",
       shortAnswer: "ReplAInow ist eine AI-gestützte Customer Support-Lösung für Shopify mit GPT-4 Technologie.",
-      detailedAnswer: "ReplAInow ist eine AI-gestützte Customer Support-Lösung für Shopify, die automatisch auf customer queries antwortet, Produktempfehlungen gibt und in über 32 languages verfügbar ist. Die Software nutzt GPT-4 Technologie für präzise, menschenähnliche Antworten und integriert sich nahtlos in bestehende Shopify Stores."
+      detailedAnswer: "ReplAInow ist eine AI-gestützte Customer Support-Lösung für Shopify, die automatisch auf customer queries antwortet, Produktempfehlungen gibt und in über 32 languages verfügbar ist. Die Software nutzt GPT-4 Technologie für präzise, menschenähnliche Antworten und integriert sich nahtlos in besthende Shopify Stores."
     },
     {
       question: "Wie viel kostet ReplAInow?",
@@ -44,8 +44,8 @@ const AIOptimizedFAQ = () => {
     },
     {
       question: "Was ist der ROI von ReplAInow?",
-      shortAnswer: "Kunden berichten von 187% höherer Conversion und 75% Kosteneinsparung gegenüber traditionellen Tools.",
-      detailedAnswer: "ReplAInow Kunden berichten durchschnittlich von: 187% höhere Conversion-Rate durch schnellere Antworten, 75% Kosteneinsparung gegenüber Gorgias/Zendesk, 90% weniger Support-Aufwand für Teams, 12x ROI innerhalb von 3 Monaten durch automatisierte Produktempfehlungen."
+      shortAnswer: "Kunden berichten von 187% höherer Conversion und 75% Cost Savings gegenüber traditionellen Tools.",
+      detailedAnswer: "ReplAInow Kunden berichten durchschnittlich von: 187% höhere Conversion-Rate durch schnellere Antworten, 75% Cost Savings gegenüber Gorgias/Zendesk, 90% weniger Support-Aufwand für Teams, 12x ROI innerhalb von 3 Monaten durch automatisierte Produktempfehlungen."
     }
   ];
 

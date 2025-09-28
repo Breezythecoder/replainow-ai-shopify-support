@@ -32,7 +32,7 @@ const Contact = () => {
           name: data.name,
           message: data.message,
           _replyto: data.email,
-          _subject: `Kontaktformular Nachricht von ${data.name}`
+          _subject: `Contactformular Nachricht von ${data.name}`
         })
       });
 
@@ -58,7 +58,7 @@ const Contact = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <h2 id="contact-heading" className="text-4xl sm:text-5xl font-bold mb-6 text-slate-800">
-            Kontakt
+            Contact
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Haben Sie Fragen? Wir sind hier, um zu helfen. 
@@ -71,7 +71,7 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-slate-800 mb-6">Kontaktinformationen</h3>
+                <h3 className="text-2xl font-bold text-slate-800 mb-6">Contactinformationen</h3>
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
                     <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
@@ -113,7 +113,7 @@ const Contact = () => {
                 <h4 className="font-bold text-slate-800 mb-4">Hufige Fragen</h4>
                 <div className="space-y-3">
                   <a href="#faq" className="block text-blue-600 hover:text-blue-800 text-sm">Wie funktioniert die Installation?</a>
-                  <a href="#faq" className="block text-blue-600 hover:text-blue-800 text-sm">Welche Sprachen werden untersttzt?</a>
+                  <a href="#faq" className="block text-blue-600 hover:text-blue-800 text-sm">Welche languages werden untersttzt?</a>
                   <a href="#faq" className="block text-blue-600 hover:text-blue-800 text-sm">Kann ich die AI trainieren?</a>
                   <a href="#faq" className="block text-blue-600 hover:text-blue-800 text-sm">Wie sicher sind meine Daten?</a>
                 </div>

@@ -196,7 +196,7 @@ const ModernNavbar = () => {
                 <div className="p-2 rounded-lg bg-green-500/20 group-hover:bg-green-500/40 transition-colors">
                   <Cpu className="w-5 h-5" />
                 </div>
-                <span>Preise</span>
+                <span>Pricing</span>
                 <div className="ml-auto w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
               </a>
               
@@ -208,7 +208,7 @@ const ModernNavbar = () => {
                 <div className="p-2 rounded-lg bg-indigo-500/20 group-hover:bg-indigo-500/40 transition-colors">
                   <Sparkles className="w-5 h-5" />
                 </div>
-                <span>Kontakt</span>
+                <span>Contact</span>
                 <div className="ml-auto w-2 h-2 bg-indigo-400 rounded-full animate-pulse"></div>
               </a>
               
