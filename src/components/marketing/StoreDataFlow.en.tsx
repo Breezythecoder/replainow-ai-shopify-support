@@ -59,10 +59,10 @@ const StoreDataFlow = () => {
             id="data-context-heading"
             className="font-display text-3xl md:text-4xl font-semibold mb-4"
           >
-            Deine KI kennt deinen Shopify-Store  bis ins Detail
+            Your AI knows your Shopify store in detail
           </h2>
           <p className="text-muted-foreground">
-            ReplAInow verbindet sich direkt mit deinem Shopify-Store und zieht in Echtzeit alle relevanten Daten, um Kundenanfragen sofort und przise zu beantworten.
+            ReplAInow connects directly to your Shopify store and pulls all relevant data in real-time to answer customer queries immediately and precisely.
           </p>
         </header>
 
@@ -85,7 +85,7 @@ const StoreDataFlow = () => {
                   <div className="flex items-center justify-between mb-3">
                     <div className="h-4 w-28 rounded bg-muted/60" />
                     <span className="inline-flex items-center gap-2 text-xs text-muted-foreground">
-                      <Bot className="h-4 w-4" /> KI aktiv
+                      <Bot className="h-4 w-4" /> AI active
                     </span>
                   </div>
                   <div className="space-y-2">
@@ -155,7 +155,7 @@ const StoreDataFlow = () => {
               <div className="flex items-center justify-between mb-3">
                 <div className="h-4 w-24 rounded bg-muted/60" />
                 <span className="inline-flex items-center gap-2 text-xs text-muted-foreground">
-                  <Bot className="h-4 w-4" /> KI aktiv
+                  <Bot className="h-4 w-4" /> AI active
                 </span>
               </div>
               <div className="space-y-2">

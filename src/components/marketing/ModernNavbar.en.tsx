@@ -58,7 +58,7 @@ const ModernNavbar = () => {
                 <div className="relative bg-slate-800/50 backdrop-blur-sm rounded-lg p-1.5 border border-blue-500/30 group-hover:border-blue-400/60 transition-all duration-300">
                   <img
                     src="/lovable-uploads/ReplAInow_Logo_optimized.png"
-                    alt="ReplAInow Logo - KI-gestützter Shopify Support mit GPT-4.1 Technologie für automatisierten Kundenservice"
+                    alt="ReplAInow Logo - AI-powered Shopify Support with GPT-4.1 technology for automated customer service"
                     className="h-7 w-7 group-hover:scale-105 transition-transform duration-300 rounded"
                     width="28"
                     height="28"

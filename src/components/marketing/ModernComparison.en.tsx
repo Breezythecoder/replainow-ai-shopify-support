@@ -124,11 +124,11 @@ const ModernComparison = () => {
               <div className="text-center mb-16">
                 <h3 className="text-5xl sm:text-6xl font-black mb-6">
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400">
-                    Kosteneinsparung
+                    Cost Savings
                   </span>
                 </h3>
                 <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-                  Warum 75% weniger bezahlen und trotzdem die beste KI-Performance bekommen?
+                  Why pay 75% less and still get the best AI performance?
                 </p>
               </div>
               
