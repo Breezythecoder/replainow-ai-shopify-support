@@ -9,7 +9,7 @@
     "clean": "rimraf dist .vite",
     "typecheck": "tsc --noEmit",
     "dev": "vite",
-    "build": "npm run clean && vite build && node scripts/make-404-from-index.mjs && node scripts/generate-sitemap-index.mjs && node scripts/generate-robots.mjs && node scripts/postbuild-verify.mjs",
+    "build": "npm run clean && vite build && node scripts/make-404-from-index.mjs && node scripts/make-locale-html.mjs && node scripts/generate-sitemap-index.mjs && node scripts/generate-robots.mjs && node scripts/postbuild-verify-mpages.mjs",
     "build:seo": "node scripts/build-seo.js",
     "ping:search": "node scripts/ping-search.js",
     "og:server": "node src/server/og.tsx",

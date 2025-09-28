@@ -1,5 +1,6 @@
 // Service Worker für perfekte Performance
-const CACHE_NAME = 'replainow-v1.1.0';
+const VERSION = "v1.3.1"; // bump on each deploy
+const CACHE_NAME = `replainow-${VERSION}`;
 const urlsToCache = [
   '/',
   '/static/js/bundle.js',
@@ -10,6 +11,7 @@ const urlsToCache = [
 
 // Install Event - Cache Resources
 self.addEventListener('install', (event) => {
+  self.skipWaiting();
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then((cache) => {
@@ -32,6 +34,7 @@ self.addEventListener('fetch', (event) => {
 
 // Activate Event - Clean old caches
 self.addEventListener('activate', (event) => {
+  self.clients.claim();
   event.waitUntil(
     caches.keys().then((cacheNames) => {
       return Promise.all(
