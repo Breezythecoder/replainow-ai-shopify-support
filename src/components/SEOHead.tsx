@@ -8,7 +8,7 @@ interface SEOHeadProps {
 }
 
 export const SEOHead = ({ locale = 'de', pathname = '/' }: SEOHeadProps) => {
-  const currentLocale = locale as 'de' | 'en';
+  const currentLocale = locale as 'de' | 'en' | 'fr' | 'es';
   const stats = getLocalizedStats(currentLocale);
   
   // Generate canonical URL

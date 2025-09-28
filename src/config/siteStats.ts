@@ -49,7 +49,7 @@ export const PRICE = SITE_STATS.PRICE;
 export const CURRENCY = SITE_STATS.CURRENCY;
 
 // Helper function to get localized stats
-export const getLocalizedStats = (locale: 'de' | 'en' = 'de') => {
+export const getLocalizedStats = (locale: 'de' | 'en' | 'fr' | 'es' = 'de') => {
   if (locale === 'en') {
     return {
       ...SITE_STATS,
@@ -65,5 +65,38 @@ export const getLocalizedStats = (locale: 'de' | 'en' = 'de') => {
       }
     };
   }
+  
+  if (locale === 'fr') {
+    return {
+      ...SITE_STATS,
+      RESPONSE_TIME: "3 secondes",
+      LANGUAGES_COUNT: "32+",
+      COST_SAVINGS: "75%",
+      FEATURES: {
+        RESPONSE_TIME: "3 secondes",
+        LANGUAGES: "32+ langues",
+        GDPR_COMPLIANT: "Conforme RGPD",
+        COST_SAVINGS: "75% d'économies",
+        AI_TECHNOLOGY: "GPT-4.1"
+      }
+    };
+  }
+  
+  if (locale === 'es') {
+    return {
+      ...SITE_STATS,
+      RESPONSE_TIME: "3 segundos",
+      LANGUAGES_COUNT: "32+",
+      COST_SAVINGS: "75%",
+      FEATURES: {
+        RESPONSE_TIME: "3 segundos",
+        LANGUAGES: "32+ idiomas",
+        GDPR_COMPLIANT: "Compatible GDPR",
+        COST_SAVINGS: "75% ahorro",
+        AI_TECHNOLOGY: "GPT-4.1"
+      }
+    };
+  }
+  
   return SITE_STATS;
 };
