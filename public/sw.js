@@ -1,5 +1,5 @@
 // Service Worker für perfekte Performance
-const CACHE_NAME = 'replainow-v1.0.0';
+const CACHE_NAME = 'replainow-v1.1.0';
 const urlsToCache = [
   '/',
   '/static/js/bundle.js',

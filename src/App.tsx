@@ -12,6 +12,7 @@ import { initializeGA, trackPageView } from "@/utils/analytics";
 import { SEOHead } from "@/components/SEOHead";
 import { getLocaleFromPath } from "@/i18n";
 import { initializeAssetLoading } from "@/utils/assetLoader";
+import { SEOErrorBoundary } from "@/components/ui/ErrorBoundary";
 import { lazy, Suspense } from "react";
 
 // Lazy load main language pages for better performance
@@ -82,10 +83,12 @@ const AppContent = () => {
   }
   }, [locale]);
 
-  return (
-    <>
-      <SEOHead locale={locale} pathname={pathname} />
-      <SkipToMainContent />
+        return (
+          <>
+            <SEOErrorBoundary>
+              <SEOHead locale={locale} pathname={pathname} />
+            </SEOErrorBoundary>
+            <SkipToMainContent />
         <BrowserRouter basename="/">
           <Suspense fallback={
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
