@@ -30,15 +30,12 @@ export const t = (key: string, locale: Locale = 'de'): string => {
   return value || key;
 };
 
-// Get locale from pathname (HashRouter-based)
+// Get locale from pathname (BrowserRouter-based)
 export const getLocaleFromPath = (pathname: string): Locale => {
-  // Get hash from URL for HashRouter
-  const hash = window.location.hash;
-  
-  // Check hash path for language prefix
-  if (hash === '#/en' || hash.startsWith('#/en/')) return 'en';
-  if (hash === '#/fr' || hash.startsWith('#/fr/')) return 'fr';
-  if (hash === '#/es' || hash.startsWith('#/es/')) return 'es';
+  // Check pathname for language prefix
+  if (pathname.startsWith('/en')) return 'en';
+  if (pathname.startsWith('/fr')) return 'fr';
+  if (pathname.startsWith('/es')) return 'es';
   
   // Default to German for root path
   return 'de';

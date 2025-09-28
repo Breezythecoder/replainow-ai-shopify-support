@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { SkipToMainContent, useKeyboardNavigation } from "@/components/ui/accessibility";
 import { trackWebVitals } from "@/components/ui/performance";
@@ -80,7 +80,7 @@ const AppContent = () => {
     <>
       <SEOHead locale={locale} pathname={pathname} />
       <SkipToMainContent />
-        <HashRouter>
+        <BrowserRouter basename="/">
           <Suspense fallback={
             <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
               <div className="text-center">
@@ -119,7 +119,7 @@ const AppContent = () => {
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
-        </HashRouter>
+        </BrowserRouter>
         <SkipLinks />
         <ScrollProgress />
         {/* <ExitIntent /> */} {/* Removed - no discount popup */}

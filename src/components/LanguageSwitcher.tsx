@@ -22,11 +22,11 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className })
     setCurrentLocale(newLocale);
     setIsOpen(false);
     
-    // Navigate to the correct language URL (HashRouter)
+    // Navigate to the correct language URL (BrowserRouter)
     if (newLocale === 'de') {
-      window.location.href = '#/';
+      window.location.href = '/';
     } else {
-      window.location.href = `#/${newLocale}`;
+      window.location.href = `/${newLocale}`;
     }
   };
 
