@@ -5,13 +5,15 @@
   "type": "module",
   "homepage": "https://breezythecoder.github.io/replainow-ai-shopify-support",
   "scripts": {
+    "clean": "rimraf dist .vite",
+    "typecheck": "tsc --noEmit",
     "dev": "vite",
-    "build": "tsc && vite build && npm run build:seo",
+    "build": "npm run clean && vite build && node scripts/make-404-from-index.mjs && node scripts/postbuild-verify.mjs",
     "build:seo": "node scripts/build-seo.js",
     "ping:search": "node scripts/ping-search.js",
     "og:server": "node src/server/og.tsx",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
+    "preview": "vite preview --strictPort --port 4173",
     "test:e2e": "playwright test",
     "test:e2e:ui": "playwright test --ui",
     "lighthouse": "lhci autorun"
