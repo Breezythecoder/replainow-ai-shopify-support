@@ -43,7 +43,7 @@ const IndexEs = () => {
       {/* Advanced SEO Components */}
       <AdvancedSEO />
       <AIOptimizedFAQ />
-      <MultilingualSEO />
+      <MultilingualSEO language="es" />
       
       {/* Main Content */}
       <ModernNavbar />

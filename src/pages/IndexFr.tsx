@@ -43,7 +43,7 @@ const IndexFr = () => {
       {/* Advanced SEO Components */}
       <AdvancedSEO />
       <AIOptimizedFAQ />
-      <MultilingualSEO />
+      <MultilingualSEO language="fr" />
       
       {/* Main Content */}
       <ModernNavbar />

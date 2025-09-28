@@ -28,7 +28,7 @@ const MultilingualSEO = ({
       seoConfig = homeSEO[language];
     }
 
-    const { title, description, keywords, ogImage = defaultOGImage } = seoConfig;
+    const { title, description, keywords = [], ogImage = defaultOGImage } = seoConfig;
     
     // Helper function um Meta-Tags sicher zu erstellen/updaten
     const updateOrCreateMeta = (selector: string, attr: "name" | "property", key: string, content: string) => {

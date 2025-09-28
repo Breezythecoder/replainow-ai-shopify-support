@@ -43,7 +43,7 @@ const IndexEn = () => {
       {/* Advanced SEO Components */}
       <AdvancedSEO />
       <AIOptimizedFAQ />
-      <MultilingualSEO />
+      <MultilingualSEO language="en" />
       
       {/* Main Content */}
       <ModernNavbar />
