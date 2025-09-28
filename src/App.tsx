@@ -89,6 +89,8 @@ const AppContent = () => {
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/en" element={<Index />} />
+              <Route path="/fr" element={<Index />} />
+              <Route path="/es" element={<Index />} />
               
                 {/* SEO Pillar Pages */}
                 <Route path="/ai-shopify-helpdesk" element={<AIShopifyHelpdesk />} />

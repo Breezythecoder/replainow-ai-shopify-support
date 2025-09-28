@@ -19,6 +19,8 @@ export const SEOHead = ({ locale = 'de', pathname = '/' }: SEOHeadProps) => {
     { hreflang: 'de', href: 'https://replainow.com/' },
     { hreflang: 'x-default', href: 'https://replainow.com/' },
     { hreflang: 'en', href: 'https://replainow.com/en' },
+    { hreflang: 'fr', href: 'https://replainow.com/fr' },
+    { hreflang: 'es', href: 'https://replainow.com/es' },
   ];
 
   return (

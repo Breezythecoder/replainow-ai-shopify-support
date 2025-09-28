@@ -18,7 +18,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className })
     setCurrentLocale(locale);
   }, [location.pathname]);
 
-  const handleLanguageChange = (newLocale: 'de' | 'en') => {
+  const handleLanguageChange = (newLocale: 'de' | 'en' | 'fr' | 'es') => {
     const newPath = getPathnameForLocale(location.pathname, newLocale);
     setCurrentLocale(newLocale);
     
@@ -29,12 +29,24 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className })
     navigate(newPath);
   };
 
-  const getLanguageLabel = (locale: 'de' | 'en') => {
-    return locale === 'de' ? 'Deutsch' : 'English';
+  const getLanguageLabel = (locale: 'de' | 'en' | 'fr' | 'es') => {
+    switch (locale) {
+      case 'de': return 'Deutsch';
+      case 'en': return 'English';
+      case 'fr': return 'Français';
+      case 'es': return 'Español';
+      default: return locale;
+    }
   };
 
-  const getLanguageFlag = (locale: 'de' | 'en') => {
-    return locale === 'de' ? '🇩🇪' : '🇬🇧';
+  const getLanguageFlag = (locale: 'de' | 'en' | 'fr' | 'es') => {
+    switch (locale) {
+      case 'de': return '🇩🇪';
+      case 'en': return '🇬🇧';
+      case 'fr': return '🇫🇷';
+      case 'es': return '🇪🇸';
+      default: return '🌍';
+    }
   };
 
   return (

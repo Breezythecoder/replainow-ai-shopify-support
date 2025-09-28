@@ -1,0 +1,115 @@
+{
+  "seo": {
+    "title": "ReplAInow – Helpdesk IA Shopify | Soporte al Cliente Automatizado",
+    "description": "ReplAInow automatiza el soporte al cliente de Shopify con GPT-4.1: respuestas en 3 segundos, 32+ idiomas, compatible con GDPR, 75% de ahorro. ¡Prueba gratis!",
+    "ogTitle": "ReplAInow – Helpdesk IA Shopify | Soporte al Cliente Automatizado",
+    "ogDescription": "ReplAInow automatiza el soporte al cliente de Shopify con GPT-4.1: respuestas en 3 segundos, 32+ idiomas, compatible con GDPR, 75% de ahorro. ¡Prueba gratis!",
+    "twitterTitle": "ReplAInow – Helpdesk IA Shopify | Soporte al Cliente Automatizado",
+    "twitterDescription": "ReplAInow automatiza el soporte al cliente de Shopify con GPT-4.1: respuestas en 3 segundos, 32+ idiomas, compatible con GDPR, 75% de ahorro. ¡Prueba gratis!"
+  },
+  "schema": {
+    "organization": {
+      "name": "ReplAInow",
+      "description": "Soporte al cliente Shopify impulsado por IA: respuestas automatizadas con GPT-4.1, tiempo de respuesta de 3 segundos, 32+ idiomas, compatible con GDPR, 75% de ahorro.",
+      "url": "https://replainow.com",
+      "logo": "https://replainow.com/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png",
+      "telephone": "+49-30-123-456-789",
+      "foundingDate": "2024",
+      "founder": "Ruben Calabrese"
+    },
+    "softwareApplication": {
+      "name": "ReplAInow AI Helpdesk",
+      "description": "Soporte al cliente Shopify impulsado por IA con tecnología GPT-4",
+      "url": "https://replainow.com",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "price": "19",
+      "priceCurrency": "EUR",
+      "ratingValue": "4.9",
+      "ratingCount": "280"
+    },
+    "website": {
+      "name": "ReplAInow",
+      "url": "https://replainow.com",
+      "description": "Helpdesk IA Shopify - Soporte al Cliente Automatizado",
+      "searchUrl": "https://replainow.com/search?q={search_term_string}"
+    }
+  },
+  "ui": {
+    "navigation": {
+      "home": "Inicio",
+      "features": "Características",
+      "pricing": "Precios",
+      "demo": "Demo en Vivo",
+      "contact": "Contacto"
+    },
+    "hero": {
+      "title": "Soporte al Cliente IA para Shopify",
+      "subtitle": "Respuestas automatizadas con GPT-4.1 en 3 segundos",
+      "cta": "Probar Gratis",
+      "demo": "Ver Demo"
+    },
+    "features": {
+      "title": "¿Por Qué Elegir ReplAInow?",
+      "subtitle": "Transforma tu tienda Shopify con soporte al cliente impulsado por IA",
+      "items": [
+        {
+          "title": "Respuesta en 3 Segundos",
+          "description": "Respuestas instantáneas a consultas de clientes con tecnología GPT-4.1"
+        },
+        {
+          "title": "32+ Idiomas",
+          "description": "Atiende a tus clientes en su idioma nativo automáticamente"
+        },
+        {
+          "title": "Compatible con GDPR",
+          "description": "Cumplimiento completo de protección de datos para clientes europeos"
+        },
+        {
+          "title": "75% de Ahorro",
+          "description": "Reduce costos de soporte mientras mejoras la satisfacción del cliente"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "Lo Que Dicen los Comerciantes Reales",
+      "subtitle": "Únete a 280+ comerciantes Shopify satisfechos"
+    },
+    "pricing": {
+      "title": "Precios Simples y Transparentes",
+      "subtitle": "Comienza gratis, escala mientras creces",
+      "plans": [
+        {
+          "name": "Inicial",
+          "price": "19",
+          "currency": "EUR",
+          "period": "mes",
+          "features": [
+            "Hasta 1,000 conversaciones/mes",
+            "Tiempo de respuesta de 3 segundos",
+            "32+ idiomas",
+            "Análisis básicos"
+          ]
+        },
+        {
+          "name": "Profesional",
+          "price": "49",
+          "currency": "EUR",
+          "period": "mes",
+          "features": [
+            "Hasta 5,000 conversaciones/mes",
+            "Análisis avanzados",
+            "Marca personalizada",
+            "Soporte prioritario"
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "title": "¿Listo para Automatizar Tu Soporte?",
+      "subtitle": "Únete a 280+ comerciantes Shopify satisfechos y comienza a ahorrar hoy",
+      "button": "Prueba Gratuita",
+      "demo": "Ver Demo"
+    }
+  }
+}

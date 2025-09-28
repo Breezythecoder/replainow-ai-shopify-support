@@ -1,10 +1,10 @@
 {
   "seo": {
-    "title": "ReplAInow – AI Shopify Helpdesk",
+    "title": "ReplAInow – AI Shopify Helpdesk | Automated Customer Support",
     "description": "ReplAInow automates Shopify customer support with GPT-4.1: 3-second responses, 32+ languages, GDPR-compliant, 75% cost savings. Try free now!",
-    "ogTitle": "ReplAInow – AI Shopify Helpdesk",
+    "ogTitle": "ReplAInow – AI Shopify Helpdesk | Automated Customer Support",
     "ogDescription": "ReplAInow automates Shopify customer support with GPT-4.1: 3-second responses, 32+ languages, GDPR-compliant, 75% cost savings. Try free now!",
-    "twitterTitle": "ReplAInow – AI Shopify Helpdesk",
+    "twitterTitle": "ReplAInow – AI Shopify Helpdesk | Automated Customer Support",
     "twitterDescription": "ReplAInow automates Shopify customer support with GPT-4.1: 3-second responses, 32+ languages, GDPR-compliant, 75% cost savings. Try free now!"
   },
   "schema": {
@@ -46,8 +46,70 @@
     "hero": {
       "title": "AI-Powered Customer Support for Shopify",
       "subtitle": "Automated responses with GPT-4.1 in 3 seconds",
-      "cta": "Try free now",
+      "cta": "Try Free Now",
       "demo": "View Live Demo"
+    },
+    "features": {
+      "title": "Why Choose ReplAInow?",
+      "subtitle": "Transform your Shopify store with AI-powered customer support",
+      "items": [
+        {
+          "title": "3-Second Response Time",
+          "description": "Instant answers to customer queries with GPT-4.1 technology"
+        },
+        {
+          "title": "32+ Languages",
+          "description": "Support customers in their native language automatically"
+        },
+        {
+          "title": "GDPR Compliant",
+          "description": "Full data protection compliance for European customers"
+        },
+        {
+          "title": "75% Cost Savings",
+          "description": "Reduce support costs while improving customer satisfaction"
+        }
+      ]
+    },
+    "testimonials": {
+      "title": "What Real Merchants Say",
+      "subtitle": "Join 280+ satisfied Shopify merchants"
+    },
+    "pricing": {
+      "title": "Simple, Transparent Pricing",
+      "subtitle": "Start free, scale as you grow",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "19",
+          "currency": "EUR",
+          "period": "month",
+          "features": [
+            "Up to 1,000 conversations/month",
+            "3-second response time",
+            "32+ languages",
+            "Basic analytics"
+          ]
+        },
+        {
+          "name": "Professional",
+          "price": "49",
+          "currency": "EUR",
+          "period": "month",
+          "features": [
+            "Up to 5,000 conversations/month",
+            "Advanced analytics",
+            "Custom branding",
+            "Priority support"
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to Automate Your Support?",
+      "subtitle": "Join 280+ satisfied Shopify merchants and start saving today",
+      "button": "Start Free Trial",
+      "demo": "Watch Demo"
     }
   }
 }

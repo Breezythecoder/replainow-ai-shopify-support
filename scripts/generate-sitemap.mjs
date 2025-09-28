@@ -19,6 +19,18 @@ const urls = [
     priority: '0.9'
   },
   {
+    loc: `${baseUrl}/fr`,
+    lastmod: currentDate,
+    changefreq: 'daily',
+    priority: '0.9'
+  },
+  {
+    loc: `${baseUrl}/es`,
+    lastmod: currentDate,
+    changefreq: 'daily',
+    priority: '0.9'
+  },
+  {
     loc: `${baseUrl}/ai-shopify-helpdesk`,
     lastmod: currentDate,
     changefreq: 'weekly',
