@@ -12,7 +12,7 @@ import VideoDemo from "@/components/marketing/VideoDemo";
 import About from "@/components/marketing/About";
 import Contact from "@/components/marketing/Contact";
 import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
-import Footer from "@/components/marketing/Footer";
+import ModernFooterEn from "@/components/marketing/ModernFooterEn";
 import StoreDataFlow from "@/components/marketing/StoreDataFlow";
 import SEO from "@/components/SEO";
 import FAQ from "@/components/marketing/FAQ";
@@ -66,7 +66,7 @@ const IndexFr = () => {
         <ModernFinalCTA />
       </main>
       
-      <Footer />
+      <ModernFooterEn />
       <MailAndChat />
     </>
   );

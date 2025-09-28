@@ -22,11 +22,11 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className })
     setCurrentLocale(newLocale);
     setIsOpen(false);
     
-    // Navigate to the correct language URL
+    // Navigate to the correct language URL (HashRouter)
     if (newLocale === 'de') {
-      window.location.href = '/';
+      window.location.href = '#/';
     } else {
-      window.location.href = `/${newLocale}`;
+      window.location.href = `#/${newLocale}`;
     }
   };
 
@@ -54,14 +54,15 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className })
     <div className={`relative ${className}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-white bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
+        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-white bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200 min-w-[120px]"
       >
-        <Globe className="h-4 w-4" />
-        <span className="flex items-center gap-1">
+        <Globe className="h-4 w-4 flex-shrink-0" />
+        <span className="flex items-center gap-1 flex-1 justify-center">
           {getLanguageFlag(currentLocale)}
-          {getLanguageLabel(currentLocale)}
+          <span className="hidden sm:inline">{getLanguageLabel(currentLocale)}</span>
+          <span className="sm:hidden">{currentLocale.toUpperCase()}</span>
         </span>
-        <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+        <ChevronDown className={`h-4 w-4 transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180' : ''}`} />
       </button>
 
       {isOpen && (
