@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ShoppingCart, Package, User, FileText, Truck, Languages, Bot } from "lucide-react";
+import { smoothScrollToElement } from "@/utils/smoothScroll";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow/install";
 
@@ -31,7 +32,13 @@ const Card = ({
   </div>
 );
 
-const StoreDataFlowEn = () => {
+const StoreDataFlow = () => {
+  // Handle smooth scroll navigation
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    smoothScrollToElement(targetId);
+  };
+
   return (
     <section
       id="data-context"
@@ -52,10 +59,10 @@ const StoreDataFlowEn = () => {
             id="data-context-heading"
             className="font-display text-3xl md:text-4xl font-semibold mb-4"
           >
-            Your AI knows your Shopify store  down to the detail
+            Deine KI kennt deinen Shopify-Store  bis ins Detail
           </h2>
           <p className="text-muted-foreground">
-            ReplAInow connects directly to your Shopify store and pulls all relevant data in real-time to answer customer inquiries instantly and precisely.
+            ReplAInow verbindet sich direkt mit deinem Shopify-Store und zieht in Echtzeit alle relevanten Daten, um Kundenanfragen sofort und przise zu beantworten.
           </p>
         </header>
 
@@ -78,7 +85,7 @@ const StoreDataFlowEn = () => {
                   <div className="flex items-center justify-between mb-3">
                     <div className="h-4 w-28 rounded bg-muted/60" />
                     <span className="inline-flex items-center gap-2 text-xs text-muted-foreground">
-                      <Bot className="h-4 w-4" /> AI active
+                      <Bot className="h-4 w-4" /> KI aktiv
                     </span>
                   </div>
                   <div className="space-y-2">
@@ -120,24 +127,24 @@ const StoreDataFlowEn = () => {
               <div className="absolute -top-4 left-0 w-64">
                 <Card
                   Icon={ShoppingCart}
-                  title="Order data"
-                  desc="Order ID, status, items, tracking"
+                  title="Order-Daten"
+                  desc="Bestell-ID, Status, Artikel, Tracking"
                 />
               </div>
               <div className="absolute -top-4 right-0 w-64">
-                <Card Icon={Package} title="Product data" desc="Titles, SKUs, prices, inventory" />
+                <Card Icon={Package} title="Produkt-Daten" desc="Titel, SKUs, Preise, Bestand" />
               </div>
               <div className="absolute top-1/3 -left-2 w-64">
-                <Card Icon={User} title="Customer data" desc="Name, email, purchase history" />
+                <Card Icon={User} title="Kunden-Daten" desc="Name, E-Mail, Kaufhistorie" />
               </div>
               <div className="absolute top-1/3 -right-2 w-64">
-                <Card Icon={FileText} title="Store content" desc="Pages, FAQs, shipping rules" />
+                <Card Icon={FileText} title="Store-Content" desc="Seiten, FAQs, Versandregeln" />
               </div>
               <div className="absolute bottom-0 left-4 w-64">
-                <Card Icon={Truck} title="Tracking & shipping" desc="Live links, delivery times" />
+                <Card Icon={Truck} title="Tracking & Versand" desc="Live-Links, Lieferzeiten" />
               </div>
               <div className="absolute bottom-0 right-4 w-64">
-                <Card Icon={Languages} title="Multilingual" desc="Preferred languages" />
+                <Card Icon={Languages} title="Mehrsprachig" desc="Bevorzugte Sprachen" />
               </div>
             </div>
           </div>
@@ -148,7 +155,7 @@ const StoreDataFlowEn = () => {
               <div className="flex items-center justify-between mb-3">
                 <div className="h-4 w-24 rounded bg-muted/60" />
                 <span className="inline-flex items-center gap-2 text-xs text-muted-foreground">
-                  <Bot className="h-4 w-4" /> AI active
+                  <Bot className="h-4 w-4" /> KI aktiv
                 </span>
               </div>
               <div className="space-y-2">
@@ -158,12 +165,12 @@ const StoreDataFlowEn = () => {
               </div>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <Card Icon={ShoppingCart} title="Order data" desc="Order ID, status, items, tracking" />
-              <Card Icon={Package} title="Product data" desc="Titles, SKUs, prices, inventory" />
-              <Card Icon={User} title="Customer data" desc="Name, email, purchase history" />
-              <Card Icon={FileText} title="Store content" desc="Pages, FAQs, shipping rules" />
-              <Card Icon={Truck} title="Tracking & shipping" desc="Live links, delivery times" />
-              <Card Icon={Languages} title="Multilingual" desc="Preferred languages" />
+              <Card Icon={ShoppingCart} title="Order-Daten" desc="Bestell-ID, Status, Artikel, Tracking" />
+              <Card Icon={Package} title="Produkt-Daten" desc="Titel, SKUs, Preise, Bestand" />
+              <Card Icon={User} title="Kunden-Daten" desc="Name, E-Mail, Kaufhistorie" />
+              <Card Icon={FileText} title="Store-Content" desc="Seiten, FAQs, Versandregeln" />
+              <Card Icon={Truck} title="Tracking & Versand" desc="Live-Links, Lieferzeiten" />
+              <Card Icon={Languages} title="Mehrsprachig" desc="Bevorzugte Sprachen" />
             </div>
           </div>
         </div>
@@ -171,14 +178,14 @@ const StoreDataFlowEn = () => {
         {/* Caption + CTA */}
         <div className="text-center max-w-3xl mx-auto mt-10 md:mt-14">
           <p className="text-muted-foreground">
-            ReplAInow uses this data to deliver brand-compliant, precise responses in &lt;3 seconds  fully integrated into Shopify.
+            ReplAInow nutzt diese Daten, um in &lt;3 Sekunden markenkonforme, przise Antworten zu liefern  voll integriert in Shopify.
           </p>
           <div className="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
-              <a href={OAUTH_URL}>Try for free now</a>
+              <a href={OAUTH_URL}>Jetzt kostenlos testen</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-              <a href="#live-demo">Watch live demo</a>
+              <a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="cursor-pointer">Live-Demo ansehen</a>
             </Button>
           </div>
         </div>
@@ -187,4 +194,4 @@ const StoreDataFlowEn = () => {
   );
 };
 
-export default StoreDataFlowEn;
+export default StoreDataFlow;

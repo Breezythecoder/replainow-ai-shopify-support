@@ -1,10 +1,20 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button-variants";
+import { STORE_COUNT } from "@/config/siteStats";
+import { smoothScrollToElement } from "@/utils/smoothScroll";
+import { t, getLocaleFromPath } from "@/i18n";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
-const ModernHeroEn = () => {
+const ModernHero = () => {
   const [pos, setPos] = useState({ x: 0, y: 0 });
+  const [isVisible, setIsVisible] = useState(false);
+  const [typingText, setTypingText] = useState("");
+  const heroRef = useRef<HTMLDivElement>(null);
+  
+  // Get current locale from URL path
+  const locale = getLocaleFromPath(window.location.pathname);
 
   const onMove = useCallback((e: React.MouseEvent) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -13,117 +23,261 @@ const ModernHeroEn = () => {
     setPos({ x, y });
   }, []);
 
+  // Typing animation effect
+  useEffect(() => {
+    const text = t('ui.hero.title', locale);
+    let index = 0;
+    const timer = setInterval(() => {
+      if (index < text.length) {
+        setTypingText(text.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(timer);
+      }
+    }, 100);
+    return () => clearInterval(timer);
+  }, [locale]);
+
+  // Intersection Observer for animations
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (heroRef.current) {
+      observer.observe(heroRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  // Handle smooth scroll navigation
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    smoothScrollToElement(targetId);
+  };
+
   return (
-      <section 
-        className="relative min-h-screen flex items-center overflow-hidden bg-gradient-subtle"
-        onMouseMove={onMove}
-        style={{
-          "--x": `${pos.x}px`,
-          "--y": `${pos.y}px`,
-        } as React.CSSProperties}
-      >
-        {/* Animated Background Mesh */}
-        <div className="absolute inset-0 bg-gradient-mesh opacity-40"></div>
-        
-        {/* Enhanced Floating Elements */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-brand-primary/30 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-brand-secondary/30 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-          <div className="absolute top-3/4 left-3/4 w-32 h-32 bg-brand-accent/30 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '4s' }}></div>
-        </div>
-        
-        {/* Interactive Spotlight */}
-        <div className="absolute inset-0 opacity-20">
-          <div 
-            className="absolute w-96 h-96 rounded-full blur-3xl"
-            style={{
-              background: "radial-gradient(circle, hsl(var(--brand-primary) / 0.6) 0%, hsl(var(--brand-secondary) / 0.3) 30%, transparent 70%)",
-              left: `${pos.x - 192}px`,
-              top: `${pos.y - 192}px`,
-              transition: "all 0.3s ease-out",
-            }}
-          ></div>
+    <section
+      ref={heroRef}
+      className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 overflow-hidden"
+      onMouseMove={onMove}
+    >
+      {/* Ultra-Modern AI Background */}
+      <div className="absolute inset-0">
+        {/* Matrix Rain Effect - Reduced for Performance */}
+        <div className="absolute inset-0 opacity-5">
+          {Array.from({ length: 20 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute text-green-400 font-mono text-xs"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: '-100px',
+                animation: `matrix-rain ${5 + Math.random() * 10}s linear infinite`,
+                animationDelay: `${Math.random() * 5}s`
+              }}
+            >
+              {Array.from({ length: 20 }).map((_, j) => (
+                <div key={j} className="opacity-70">
+                  {Math.random() > 0.5 ? '1' : '0'}
+                </div>
+              ))}
+            </div>
+          ))}
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 pt-8 lg:pt-0">
-          {/* Left Column */}
-          <div className="space-y-6 lg:space-y-8">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-black text-gradient-hero leading-tight tracking-tighter">
-              AI Helpdesk for Shopify.
-              <span className="block">Responds in seconds.</span>
-            </h1>
-            
-            <p className="text-lg sm:text-xl text-slate-700 leading-relaxed">
-              Revolutionary AI with <strong className="text-gradient-primary">real-time Shopify data</strong>: 
-              Higher conversion, faster responses, 90% fewer support tickets.
-            </p>
-            
-            {/* ROI Stats Row */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-4 lg:gap-6">
-              <div className="glass-card p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-primary">+187%</div>
-                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Conversion</div>
-              </div>
-              <div className="glass-card p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-success">3 Sec</div>
-                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Response</div>
-              </div>
-              <div className="glass-card p-4 sm:p-5 lg:p-6 rounded-2xl lg:rounded-3xl text-center shadow-brand hover-lift">
-                <div className="text-2xl sm:text-3xl lg:text-4xl font-black text-brand-accent">75%</div>
-                <div className="text-sm sm:text-base text-slate-600 font-bold mt-2">Savings</div>
-              </div>
-            </div>
-            
-            {/* Dual CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 lg:gap-6">
-              <Button asChild variant="cta" size="xl" className="group flex-1 sm:flex-none">
-                <a href={OAUTH_URL} className="flex items-center justify-center gap-2 text-base lg:text-lg">
-                   Try Free Now
-                </a>
-              </Button>
-              <Button asChild variant="glass" size="xl" className="flex-1 sm:flex-none">
-                <a href="#live-demo" className="flex items-center justify-center gap-2 text-base lg:text-lg">
-                   Watch Live Demo
-                </a>
-              </Button>
-            </div>
+        {/* Holographic Grid */}
+        <div className="absolute inset-0 opacity-30">
+          <div className="grid grid-cols-20 grid-rows-20 h-full w-full">
+            {Array.from({ length: 400 }).map((_, i) => (
+              <div
+                key={i}
+                className="border border-blue-500/20 hover:border-blue-400/60 transition-all duration-500"
+                style={{
+                  animationDelay: `${i * 0.005}s`,
+                  animation: isVisible ? 'cyberpunk-glow 3s ease-in-out infinite' : 'none'
+                }}
+              />
+            ))}
+          </div>
+        </div>
 
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4 lg:gap-6 text-sm">
-              <div className="flex items-center gap-2 glass-card px-4 py-3 rounded-full shadow-brand">
-                <span className="text-brand-warning text-lg"></span>
-                <span className="font-bold text-slate-700">4.9/5</span>
-              </div>
-              <span className="px-4 py-3 glass-card text-brand-success rounded-full font-bold shadow-brand">
-                 GDPR Compliant
+        {/* Floating AI Neural Networks - Reduced for Performance */}
+        <div className="absolute inset-0">
+          {Array.from({ length: 15 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                animation: `particle-float ${4 + Math.random() * 6}s ease-in-out infinite`,
+                animationDelay: `${Math.random() * 3}s`
+              }}
+            >
+              <div className="w-3 h-3 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full animate-pulse"></div>
+              <div className="absolute -inset-2 border border-blue-400/30 rounded-full animate-ping"></div>
+            </div>
+          ))}
+        </div>
+
+        {/* Dynamic Holographic Light */}
+        <div 
+          className="absolute inset-0 opacity-40"
+          style={{
+            background: `radial-gradient(circle at ${pos.x}px ${pos.y}px, rgba(59, 130, 246, 0.4) 0%, rgba(147, 51, 234, 0.2) 30%, transparent 70%)`
+          }}
+        />
+
+        {/* AI Scan Lines */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="h-full w-full bg-gradient-to-b from-transparent via-blue-500/10 to-transparent animate-pulse"></div>
+        </div>
+
+        {/* Cyberpunk Glow Orbs */}
+        <div className="absolute top-20 left-20 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+
+        {/* Holographic Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent animate-pulse" />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center relative z-10 min-h-screen py-8 lg:py-0 hero-container">
+        {/* Left Column - Revolutionary Content */}
+        <div className={`space-y-6 lg:space-y-8 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          {/* Ultra-Modern AI Headline */}
+          <div className="space-y-6">
+            <div className="inline-block">
+              <span className="px-6 py-3 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 text-white font-black text-sm rounded-full shadow-2xl animate-pulse relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
+                <span className="relative z-10">🚀 AI REVOLUTION 2025</span>
               </span>
-              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand"> 280+ Stores</span>
+            </div>
+            
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-tight tracking-tight" role="heading" aria-level="1">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient-x">
+                {typingText}
+              </span>
+              <span className="block text-white mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                {t('ui.hero.subtitle', locale)}
+              </span>
+            </h1>
+          </div>
+          
+          {/* AI-Powered Subtitle */}
+          <p className="text-lg sm:text-xl md:text-2xl text-blue-200 leading-relaxed max-w-3xl">
+            {t('ui.hero.description', locale)}
+          </p>
+
+          {/* AI-Powered Live Stats - Mobile Optimized */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 my-8 sm:my-12">
+            <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/30 backdrop-blur-lg p-4 sm:p-6 rounded-2xl text-center border border-blue-400/30 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 touch-manipulation">
+              <div className="text-2xl sm:text-3xl font-black text-cyan-400 mb-2">{STORE_COUNT}</div>
+              <div className="text-xs sm:text-sm text-blue-200 font-semibold">{t('ui.hero.storesCount', locale)}</div>
+              <div className="w-full h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full mt-2 animate-pulse"></div>
+            </div>
+            <div className="bg-gradient-to-br from-green-500/20 to-emerald-600/30 backdrop-blur-lg p-4 sm:p-6 rounded-2xl text-center border border-green-400/30 shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-105 touch-manipulation">
+              <div className="text-2xl sm:text-3xl font-black text-green-400 mb-2">98%</div>
+              <div className="text-xs sm:text-sm text-green-200 font-semibold">{t('ui.hero.aiAccuracy', locale)}</div>
+              <div className="w-full h-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full mt-2 animate-pulse"></div>
+            </div>
+            <div className="bg-gradient-to-br from-purple-500/20 to-indigo-600/30 backdrop-blur-lg p-4 sm:p-6 rounded-2xl text-center border border-purple-400/30 shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 touch-manipulation">
+              <div className="text-2xl sm:text-3xl font-black text-purple-400 mb-2">3s</div>
+              <div className="text-xs sm:text-sm text-purple-200 font-semibold">{t('ui.hero.responseTime', locale)}</div>
+              <div className="w-full h-1 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full mt-2 animate-pulse"></div>
             </div>
           </div>
           
-          {/* Right Column */}
-          <div className="relative mt-8 lg:mt-0">
-            <div className="relative transform hover:scale-105 transition-transform duration-700 mx-auto max-w-md sm:max-w-lg lg:max-w-none">
-              <img 
-                src="/assets/193e41bc-af60-4d70-947d-659804d66b83.png" 
-                alt="ReplAInow AI Dashboard 3D Mockup" 
-                className="w-full drop-shadow-2xl hover-float" 
+          {/* Revolutionary CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-6">
+            <Button asChild variant="cta" size="xl" className={`group flex-1 sm:flex-none ${buttonVariants({ variant: "ai", size: "xl" })}`}>
+              <a href={OAUTH_URL} className="flex items-center justify-center gap-3 text-base lg:text-lg font-bold relative z-10 py-4">
+                <span className="text-xl group-hover:scale-110 transition-transform"></span>
+{t('ui.hero.installButton', locale)}
+                <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
+              </a>
+            </Button>
+            <Button asChild variant="outline" size="xl" className="flex-1 sm:flex-none border-blue-400/50 text-blue-200 hover:bg-blue-600/20 hover:text-white hover:border-blue-400 transition-all duration-300">
+              <a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="flex items-center justify-center gap-3 text-base lg:text-lg font-semibold py-4 cursor-pointer">
+                <span className="text-xl">🎥</span>
+{t('ui.hero.liveDemoButton', locale)}
+              </a>
+            </Button>
+          </div>
+
+          {/* Trust Indicators with Glow */}
+          <div className="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-4 text-sm">
+            <div className="flex items-center gap-2 bg-white/80 backdrop-blur-lg px-5 py-3 rounded-full shadow-lg hover-lift group border border-slate-200">
+              <div className="flex items-center gap-1">
+                <span className="text-yellow-500 text-lg">⭐</span>
+                <span className="text-yellow-500 text-lg">⭐</span>
+                <span className="text-yellow-500 text-lg">⭐</span>
+                <span className="text-yellow-500 text-lg">⭐</span>
+                <span className="text-yellow-500 text-lg">⭐</span>
+              </div>
+              <span className="font-bold text-slate-800">4.9/5.0</span>
+            </div>
+            <span className="px-5 py-3 bg-green-100 backdrop-blur-lg text-green-800 rounded-full font-bold shadow-lg hover-lift border border-green-200">
+               DSGVO-konform
+            </span>
+            <span className="font-bold text-slate-800 bg-white/80 backdrop-blur-lg px-5 py-3 rounded-full shadow-lg hover-lift border border-slate-200"> {STORE_COUNT} Händler</span>
+          </div>
+        </div>
+        
+        {/* Right Column - Revolutionary Visual */}
+        <div className={`relative mt-8 lg:mt-0 transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+          <div className="mx-auto max-w-md sm:max-w-lg lg:max-w-none relative">
+            {/* Holographic Frame */}
+            <div className="absolute -inset-4 bg-gradient-to-r from-cyan-500/20 via-blue-500/20 to-purple-500/20 rounded-2xl blur-xl animate-pulse"></div>
+            
+            {/* Main Product Image */}
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+              <img
+                src="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
+                alt="ReplAInow AI Support Dashboard zeigt intelligente Kundensupport-Automatisierung mit GPT-4.1 Technologie für Shopify-Händler. Dashboard mit Live-Chat, E-Mail-Management und automatisierten Antworten in 3 Sekunden."
+                className="w-full h-auto rounded-xl"
+                width="600"
+                height="400"
+                loading="lazy"
+                decoding="async"
               />
-              {/* Floating Success Badge */}
-              <div className="absolute top-2 right-2 sm:top-4 sm:right-4 lg:-top-4 lg:-right-4 glass-card px-2 py-1 sm:px-3 sm:py-2 lg:px-6 lg:py-3 rounded-full text-xs sm:text-sm font-black text-brand-success shadow-brand-glow animate-pulse max-w-[120px] sm:max-w-none">
-                <span className="block sm:hidden"> +37%</span>
-                <span className="hidden sm:block"> +37% Satisfaction</span>
+              
+              {/* Floating UI Elements */}
+              <div className="absolute top-4 right-4 bg-green-500 text-white px-3 py-1 rounded-full text-xs font-bold animate-bounce shadow-lg">
+                LIVE
               </div>
-              {/* Floating Cost Savings */}
-              <div className="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 lg:-bottom-4 lg:-left-4 glass-card px-2 py-1 sm:px-3 sm:py-2 lg:px-6 lg:py-3 rounded-full text-xs sm:text-sm font-black text-brand-warning shadow-brand-glow animate-float max-w-[140px] sm:max-w-none">
-                <span className="block sm:hidden"> $1.9k saved</span>
-                <span className="hidden sm:block"> $1,900/month saved</span>
+              <div className="absolute bottom-4 left-4 bg-cyan-500 text-black px-3 py-1 rounded-full text-xs font-bold">
+                AI ACTIVE
               </div>
+            </div>
+
+            {/* Floating Stats */}
+            <div className="absolute -top-4 -left-4 bg-slate-900/95 backdrop-blur-lg p-3 rounded-xl border border-slate-700/50 animate-float shadow-lg">
+              <div className="text-cyan-200 font-black text-lg">3s</div>
+              <div className="text-xs text-slate-200 font-semibold">Response</div>
+            </div>
+            
+            <div className="absolute -bottom-4 -right-4 bg-slate-900/95 backdrop-blur-lg p-3 rounded-xl border border-slate-700/50 animate-float shadow-lg" style={{ animationDelay: '1s' }}>
+              <div className="text-green-200 font-black text-lg">98%</div>
+              <div className="text-xs text-slate-200 font-semibold">Accuracy</div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Cyberpunk Scan Lines */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="h-full w-full bg-gradient-to-b from-transparent via-cyan-500/5 to-transparent animate-pulse"></div>
+      </div>
+    </section>
   );
 };
 
-export default ModernHeroEn;
+export default ModernHero;

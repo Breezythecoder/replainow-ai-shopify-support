@@ -1,41 +1,51 @@
 import { Button } from "@/components/ui/button";
+import { Download, Zap, Brain, TrendingUp } from "lucide-react";
+import { t, getLocaleFromPath } from "@/i18n";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
-const ModernHowItWorksEn = () => {
+const ModernHowItWorks = () => {
+  // Get current locale from URL path
+  const locale = getLocaleFromPath(window.location.pathname);
+
   const steps = [
     {
       step: "01",
-      icon: "",
-      title: "Install App",
-      desc: "1-click installation from Shopify App Store"
+      icon: <Download className="w-8 h-8" />,
+      title: t('ui.howItWorks.steps.0.title', locale),
+      desc: t('ui.howItWorks.steps.0.desc', locale)
     },
     {
       step: "02", 
-      icon: "",
-      title: "Automatic Connection",
-      desc: "AI learns ALL your products & policies automatically"
+      icon: <Zap className="w-8 h-8" />,
+      title: t('ui.howItWorks.steps.1.title', locale),
+      desc: t('ui.howItWorks.steps.1.desc', locale)
     },
     {
       step: "03",
-      icon: "",
-      title: "AI responds instantly",
-      desc: "Customers get perfect answers in 3 seconds"
+      icon: <Brain className="w-8 h-8" />,
+      title: t('ui.howItWorks.steps.2.title', locale),
+      desc: t('ui.howItWorks.steps.2.desc', locale)
     },
     {
       step: "04",
-      icon: "",
-      title: "Profits explode", 
-      desc: "+187% conversion at 75% lower costs"
+      icon: <TrendingUp className="w-8 h-8" />,
+      title: t('ui.howItWorks.steps.3.title', locale), 
+      desc: t('ui.howItWorks.steps.3.desc', locale)
     }
   ];
 
   return (
     <section className="py-24 bg-gradient-to-b from-indigo-50 to-purple-50">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8 tracking-tight px-4 text-center">
-          How you <span className="text-gradient-primary">dominate</span> customer service
-        </h2>
+        <h2 
+          className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8 tracking-tight px-4 text-center"
+          dangerouslySetInnerHTML={{ 
+            __html: t('ui.howItWorks.title', locale)
+              .replace('{highlight}', '<span class="text-gradient-primary">')
+              .replace('{/highlight}', '</span>')
+          }}
+        />
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {steps.map((step, i) => (
@@ -62,11 +72,11 @@ const ModernHowItWorksEn = () => {
         <div className="text-center px-4">
           <Button asChild variant="cta" size="xl" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 font-bold min-h-[56px] max-w-md mx-auto">
             <a href={OAUTH_URL} className="flex items-center justify-center gap-2">
-               Start Free
+              Kostenlos starten
             </a>
           </Button>
           <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed">
-             14 days free   No setup   Cancel anytime
+            14 Tage kostenlos  Setup-frei  Jederzeit kündbar
           </p>
         </div>
       </div>
@@ -74,4 +84,4 @@ const ModernHowItWorksEn = () => {
   );
 };
 
-export default ModernHowItWorksEn;
+export default ModernHowItWorks;

@@ -1,30 +1,34 @@
 import { useMemo } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { t, getLocaleFromPath } from "@/i18n";
 
-const faqs = [
-  {
-    q: "How does ReplAInow integrate into Shopify?",
-    a: "Via app installation. After connecting, ReplAInow pulls relevant data (orders, shipping status, products) GDPR-compliant directly from Shopify to generate responses.",
-  },
-  {
-    q: "Is this GDPR compliant?",
-    a: "Yes. Data is processed for specific purposes. You can restrict or revoke data access at any time. We only store what is necessary for the response.",
-  },
-  {
-    q: "How fast do I get responses?",
-    a: "In seconds. ReplAInow structures the inquiry, checks matching Shopify data and delivers a brand-compliant response  usually under 3 seconds.",
-  },
-  {
-    q: "Can I customize the brand tone?",
-    a: "Yes. You define style guidelines (e.g. formal/informal, tonality, emojis). Responses are automatically aligned to them.",
-  },
-  {
-    q: "What does the pricing look like?",
-    a: "Transparent plans with clear limits, 14 days free trial without credit card. Upgrade possible at any time.",
-  },
-];
+const FAQ = () => {
+  // Get current locale from URL path
+  const locale = getLocaleFromPath(window.location.pathname);
 
-const FAQEn = () => {
+  const faqs = [
+    {
+      q: t('ui.faq.questions.0.q', locale),
+      a: t('ui.faq.questions.0.a', locale),
+    },
+    {
+      q: t('ui.faq.questions.1.q', locale),
+      a: t('ui.faq.questions.1.a', locale),
+    },
+    {
+      q: t('ui.faq.questions.2.q', locale),
+      a: t('ui.faq.questions.2.a', locale),
+    },
+    {
+      q: t('ui.faq.questions.3.q', locale),
+      a: t('ui.faq.questions.3.a', locale),
+    },
+    {
+      q: t('ui.faq.questions.4.q', locale),
+      a: t('ui.faq.questions.4.a', locale),
+    },
+  ];
+
   const jsonLd = useMemo(
     () => ({
       "@context": "https://schema.org",
@@ -42,10 +46,10 @@ const FAQEn = () => {
     <section id="faq" aria-labelledby="faq-heading" className="py-16 md:py-24">
       <div className="container max-w-4xl">
         <h2 id="faq-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          Frequently Asked Questions
+          {t('ui.faq.title', locale)}
         </h2>
         <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-          Everything you want to know before getting started  short and clear.
+          {t('ui.faq.subtitle', locale)}
         </p>
 
         <Accordion type="single" collapsible className="w-full">
@@ -67,4 +71,4 @@ const FAQEn = () => {
   );
 };
 
-export default FAQEn;
+export default FAQ;
