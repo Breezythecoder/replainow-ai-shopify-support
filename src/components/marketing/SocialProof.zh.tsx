@@ -11,7 +11,7 @@ const SocialProofZh = () => {
     {
       name: "",
       role: "",
-      content: "5010",
+      content: "280+",
       rating: 5
     },
     {
@@ -35,7 +35,7 @@ const SocialProofZh = () => {
     },
     {
       icon: Users,
-      value: "1000+",
+      value: "280+",
       label: ""
     }
   ];
