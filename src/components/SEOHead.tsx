@@ -1,6 +1,9 @@
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { t, getLocaleFromPath } from '@/i18n';
 import { getLocalizedStats } from '@/config/siteStats';
+import { StaticHead } from './StaticHead';
+import { safeObject, validateTranslationStructure, I18nErrorBoundary } from '@/utils/safeT';
 
 interface SEOHeadProps {
   locale?: string;
@@ -10,6 +13,29 @@ interface SEOHeadProps {
 export const SEOHead = ({ locale = 'de', pathname = '/' }: SEOHeadProps) => {
   const currentLocale = locale as 'de' | 'en' | 'fr' | 'es';
   const stats = getLocalizedStats(currentLocale);
+
+  // Runtime validation of translation structure
+  React.useEffect(() => {
+    const validation = validateTranslationStructure(
+      require('../i18n/locales/' + currentLocale + '.json'),
+      currentLocale
+    );
+
+    if (!validation.isValid) {
+      console.error(`[SEO] Translation validation failed for ${currentLocale}:`, validation.errors);
+
+      // Report to Sentry in production
+      if (typeof window !== 'undefined' && (window as any).Sentry) {
+        (window as any).Sentry.captureException(
+          new I18nErrorBoundary(
+            `Translation validation failed for locale: ${currentLocale}`,
+            'seo.validation',
+            currentLocale
+          )
+        );
+      }
+    }
+  }, [currentLocale]);
   
   // Generate canonical URL
   const canonicalUrl = `https://replainow.com${pathname === '/' ? '' : pathname}`;
@@ -24,7 +50,11 @@ export const SEOHead = ({ locale = 'de', pathname = '/' }: SEOHeadProps) => {
   ];
 
   return (
-    <Helmet>
+    <>
+      {/* Static head ensures basic SEO elements are always present */}
+      <StaticHead locale={currentLocale} pathname={pathname} />
+
+      <Helmet>
       {/* Basic Meta */}
       <html lang={currentLocale} />
       <title>{t('seo.title', currentLocale)}</title>
@@ -124,6 +154,7 @@ export const SEOHead = ({ locale = 'de', pathname = '/' }: SEOHeadProps) => {
           }
         })}
       </script>
-    </Helmet>
+      </Helmet>
+    </>
   );
 };
