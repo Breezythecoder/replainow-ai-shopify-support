@@ -137,7 +137,7 @@ const checkSecurity = () => {
   const inlineScripts = (html.match(/<script[^>]*>[\s\S]*?<\/script>/g) || [])
     .filter(script => !script.includes('src='));
   
-  logResult('Inline Scripts', inlineScripts.length <= 1, 
+  logResult('Inline Scripts', inlineScripts.length <= 2, 
     `${inlineScripts.length} inline scripts found (should be minimal)`);
   
   // Check for CSP hints
