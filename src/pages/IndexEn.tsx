@@ -32,18 +32,24 @@ const IndexEn = () => {
 
   return (
     <>
-      <SEO 
-        title="ReplAInow – AI Shopify Helpdesk"
-        description="ReplAInow automates Shopify customer support with GPT-4.1: 3-second responses, 32+ languages, GDPR-compliant, 75% cost savings. Try free now!"
-        structuredData={structuredData}
-      />
-      
-      <OrganizationJsonLd />
-      
-      {/* Advanced SEO Components */}
-      <AdvancedSEO />
-      <AIOptimizedFAQ />
       <MultilingualSEO language="en" />
+      <AdvancedSEO
+        title="ReplAInow – AI Shopify Helpdesk | Automated Customer Support"
+        description="ReplAInow automates Shopify customer support with GPT-4.1: 3-second responses, 32+ languages, GDPR-compliant, 75% cost savings. Try free now!"
+        keywords={[
+          "AI Shopify Helpdesk",
+          "Shopify AI Support",
+          "Automated Shopify Support", 
+          "GPT-4 Shopify Integration",
+          "Shopify Customer Service",
+          "AI Customer Support",
+          "Shopify Help Desk",
+          "Automated Responses",
+          "Shopify Support Chat",
+          "AI Email Support"
+        ]}
+      />
+      <AIOptimizedFAQ />
       
       {/* Main Content */}
       <ModernNavbar />
