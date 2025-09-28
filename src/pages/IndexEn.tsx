@@ -1,9 +1,9 @@
 import ModernNavbarEn from "@/components/marketing/ModernNavbarEn";
 import ModernHeroEn from "@/components/marketing/ModernHeroEn";
-import ModernHowItWorks from "@/components/marketing/ModernHowItWorks";
+import ModernHowItWorksEn from "@/components/marketing/ModernHowItWorksEn";
 import ModernProblemSolution from "@/components/marketing/ModernProblemSolution";
-import ModernFeatures from "@/components/marketing/ModernFeatures";
-import ModernSocialProof from "@/components/marketing/ModernSocialProof";
+import ModernFeaturesEn from "@/components/marketing/ModernFeaturesEn";
+import ModernSocialProofEn from "@/components/marketing/ModernSocialProofEn";
 import ModernLiveDemo from "@/components/marketing/ModernLiveDemo";
 import ModernPricingEn from "@/components/marketing/ModernPricingEn";
 import ModernComparison from "@/components/marketing/ModernComparison";
@@ -12,7 +12,7 @@ import VideoDemo from "@/components/marketing/VideoDemo";
 import About from "@/components/marketing/About";
 import Contact from "@/components/marketing/Contact";
 import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
-import Footer from "@/components/marketing/Footer";
+import ModernFooterEn from "@/components/marketing/ModernFooterEn";
 import StoreDataFlow from "@/components/marketing/StoreDataFlow";
 import SEO from "@/components/SEO";
 import FAQ from "@/components/marketing/FAQ";
@@ -50,10 +50,10 @@ const IndexEn = () => {
       
       <main>
         <ModernHeroEn />
-        <ModernHowItWorks />
+        <ModernHowItWorksEn />
         <ModernProblemSolution />
-        <ModernFeatures />
-        <ModernSocialProof />
+        <ModernFeaturesEn />
+        <ModernSocialProofEn />
         <StoreDataFlow />
         <ModernLiveDemo />
         <ModernPricingEn />
@@ -66,7 +66,7 @@ const IndexEn = () => {
         <ModernFinalCTA />
       </main>
       
-      <Footer />
+      <ModernFooterEn />
       <MailAndChat />
     </>
   );
