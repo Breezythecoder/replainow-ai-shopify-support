@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { getLocaleFromPath, getPathnameForLocale, locales, Locale } from '@/i18n';
-import { Globe } from 'lucide-react';
+import { getLocaleFromPath, locales, Locale } from '@/i18n';
+import { Globe, ChevronDown } from 'lucide-react';
 
 interface LanguageSwitcherProps {
   className?: string;
@@ -11,6 +11,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className })
   const location = useLocation();
   const navigate = useNavigate();
   const [currentLocale, setCurrentLocale] = useState<Locale>('de');
+  const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
     const locale = getLocaleFromPath(location.pathname);
@@ -19,21 +20,21 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className })
 
   const handleLanguageChange = (newLocale: Locale) => {
     setCurrentLocale(newLocale);
+    setIsOpen(false);
     
     // Save preference to localStorage
     localStorage.setItem('preferred-locale', newLocale);
     
-    // For HashRouter, we just change the locale state
-    // The content will be re-rendered with the new locale
+    // Reload page to apply new language
     window.location.reload();
   };
 
   const getLanguageLabel = (locale: Locale) => {
     switch (locale) {
-      case 'de': return 'DE';
-      case 'en': return 'EN';
-      case 'fr': return 'FR';
-      case 'es': return 'ES';
+      case 'de': return 'Deutsch';
+      case 'en': return 'English';
+      case 'fr': return 'Français';
+      case 'es': return 'Español';
       default: return locale.toUpperCase();
     }
   };
@@ -49,24 +50,42 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className })
   };
 
   return (
-    <div className={`flex items-center gap-1 ${className}`}>
-      <Globe className="h-4 w-4 text-muted-foreground" />
-      <div className="flex rounded-md border border-border bg-background">
-        {locales.map((locale) => (
-          <button
-            key={locale}
-            onClick={() => handleLanguageChange(locale)}
-            className={`px-2 py-1 text-xs font-medium transition-colors duration-200 rounded-sm ${
-              currentLocale === locale
-                ? 'bg-primary text-primary-foreground'
-                : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground'
-            }`}
-            title={getLanguageLabel(locale)}
-          >
-            {getLanguageFlag(locale)}
-          </button>
-        ))}
-      </div>
+    <div className={`relative ${className}`}>
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-white bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
+      >
+        <Globe className="h-4 w-4" />
+        <span className="flex items-center gap-1">
+          {getLanguageFlag(currentLocale)}
+          {getLanguageLabel(currentLocale)}
+        </span>
+        <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
+      </button>
+
+      {isOpen && (
+        <div className="absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-lg border border-white/20 rounded-lg shadow-xl z-50">
+          <div className="py-1">
+            {locales.map((locale) => (
+              <button
+                key={locale}
+                onClick={() => handleLanguageChange(locale)}
+                className={`w-full flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors duration-200 ${
+                  currentLocale === locale
+                    ? 'bg-blue-500/20 text-blue-700'
+                    : 'text-gray-700 hover:bg-gray-100'
+                }`}
+              >
+                <span className="text-lg">{getLanguageFlag(locale)}</span>
+                <span>{getLanguageLabel(locale)}</span>
+                {currentLocale === locale && (
+                  <span className="ml-auto text-blue-500">✓</span>
+                )}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 };

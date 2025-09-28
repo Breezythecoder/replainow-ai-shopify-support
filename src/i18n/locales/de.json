@@ -38,7 +38,7 @@
   "ui": {
     "navigation": {
       "home": "Startseite",
-      "features": "Funktionen",
+      "features": "Features",
       "pricing": "Preise",
       "demo": "Live Demo",
       "contact": "Kontakt"
@@ -56,6 +56,30 @@
       "installButton": "JETZT INSTALLIEREN",
       "cta": "Jetzt kostenlos testen",
       "demo": "Live-Demo ansehen"
+    },
+    "footer": {
+      "about": {
+        "title": "Über",
+        "description": "ReplAInow wurde von Shopify-Experten entwickelt, die selbst jahrelang mit ineffizienten Support-Tools kämpften. Wir haben die Lösung geschaffen, die wir selbst gebraucht hätten.",
+        "promise": "Unser Versprechen",
+        "promiseText": "Jeder Shopify-Händler verdient einen Support, der 24/7 verfügbar ist, in der Sprache des Kunden antwortet und dabei 75% günstiger ist als die Konkurrenz."
+      },
+      "links": {
+        "features": "Features",
+        "pricing": "Preise",
+        "demo": "Live-Demo",
+        "contact": "Kontakt"
+      },
+      "legal": {
+        "privacy": "Datenschutz",
+        "terms": "AGB",
+        "impressum": "Impressum",
+        "refund": "Rückerstattung",
+        "cookies": "Cookies",
+        "security": "Sicherheit",
+        "uninstall": "Deinstallation"
+      },
+      "copyright": "© 2024 ReplAInow. Alle Rechte vorbehalten."
     }
   }
 }

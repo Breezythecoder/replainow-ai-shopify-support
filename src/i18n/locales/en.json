@@ -57,6 +57,30 @@
       "cta": "Try Free Now",
       "demo": "View Live Demo"
     },
+    "footer": {
+      "about": {
+        "title": "About",
+        "description": "ReplAInow was developed by Shopify experts who struggled for years with inefficient support tools. We created the solution we needed ourselves.",
+        "promise": "Our Promise",
+        "promiseText": "Every Shopify merchant deserves support that's available 24/7, responds in the customer's language, and is 75% cheaper than the competition."
+      },
+      "links": {
+        "features": "Features",
+        "pricing": "Pricing",
+        "demo": "Live Demo",
+        "contact": "Contact"
+      },
+      "legal": {
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "impressum": "Imprint",
+        "refund": "Refund Policy",
+        "cookies": "Cookie Policy",
+        "security": "Security Statement",
+        "uninstall": "Uninstall Instructions"
+      },
+      "copyright": "© 2024 ReplAInow. All rights reserved."
+    },
     "features": {
       "title": "Why Choose ReplAInow?",
       "subtitle": "Transform your Shopify store with AI-powered customer support",
