@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { t, getLocaleFromPath } from '@/i18n';
+import { getLocalizedStats } from '@/config/siteStats';
 
 interface SEOHeadProps {
   locale?: string;
@@ -8,6 +9,7 @@ interface SEOHeadProps {
 
 export const SEOHead = ({ locale = 'de', pathname = '/' }: SEOHeadProps) => {
   const currentLocale = locale as 'de' | 'en';
+  const stats = getLocalizedStats(currentLocale);
   
   // Generate canonical URL
   const canonicalUrl = `https://replainow.com${pathname === '/' ? '' : pathname}`;
@@ -60,18 +62,18 @@ export const SEOHead = ({ locale = 'de', pathname = '/' }: SEOHeadProps) => {
           "logo": t('schema.organization.logo', currentLocale),
           "contactPoint": {
             "@type": "ContactPoint",
-            "telephone": t('schema.organization.telephone', currentLocale),
-            "contactType": "customer service",
-            "availableLanguage": ["German", "English", "Spanish", "French", "Italian", "Portuguese", "Dutch", "Chinese"]
-          },
-          "sameAs": [
-            "https://apps.shopify.com/replainow-ai-support"
-          ],
-          "foundingDate": t('schema.organization.foundingDate', currentLocale),
-          "founder": {
-            "@type": "Person",
-            "name": t('schema.organization.founder', currentLocale)
-          }
+          "telephone": stats.TELEPHONE,
+          "contactType": "customer service",
+          "availableLanguage": stats.LANGUAGES_LIST
+        },
+        "sameAs": [
+          "https://apps.shopify.com/replainow-ai-support"
+        ],
+        "foundingDate": stats.FOUNDING_YEAR,
+        "founder": {
+          "@type": "Person",
+          "name": stats.FOUNDER
+        }
         })}
       </script>
       
@@ -86,14 +88,14 @@ export const SEOHead = ({ locale = 'de', pathname = '/' }: SEOHeadProps) => {
           "operatingSystem": t('schema.softwareApplication.operatingSystem', currentLocale),
           "offers": {
             "@type": "Offer",
-            "price": t('schema.softwareApplication.price', currentLocale),
-            "priceCurrency": t('schema.softwareApplication.priceCurrency', currentLocale),
+            "price": stats.PRICE,
+            "priceCurrency": stats.CURRENCY,
             "category": "subscription"
           },
           "aggregateRating": {
             "@type": "AggregateRating",
-            "ratingValue": t('schema.softwareApplication.ratingValue', currentLocale),
-            "ratingCount": t('schema.softwareApplication.ratingCount', currentLocale)
+            "ratingValue": stats.RATING_VALUE,
+            "ratingCount": stats.RATING_COUNT
           }
         })}
       </script>
