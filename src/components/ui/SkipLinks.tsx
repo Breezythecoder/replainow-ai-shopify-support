@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { t } from '@/i18n';
 
 const SkipLinks = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,25 +33,25 @@ const SkipLinks = () => {
           href="#main-content"
           className="block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
         >
-          Zum Hauptinhalt springen
+          {t('ui.skipToMain')}
         </a>
         <a
           href="#features"
           className="block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
         >
-          Zu den Funktionen
+          {t('ui.navigation.features')}
         </a>
         <a
           href="#live-demo"
           className="block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
         >
-          Zur Live-Demo
+          {t('ui.navigation.demo')}
         </a>
         <a
           href="#preise"
           className="block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:outline-none"
         >
-          Zu den Preisen
+          {t('ui.navigation.pricing')}
         </a>
       </div>
     </div>

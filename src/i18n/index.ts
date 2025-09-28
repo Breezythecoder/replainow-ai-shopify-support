@@ -18,8 +18,17 @@ export const translations = {
 
 export type TranslationKeys = typeof de;
 
-// Simple i18n function
+// Import force English override
+import { forceEnglishText, isEnglishRoute } from './forceEnglish';
+
+// Simple i18n function with FORCE ENGLISH override
 export const t = (key: string, locale?: Locale): string => {
+  // FORCE ENGLISH OVERRIDE for /en route
+  if (typeof window !== 'undefined' && isEnglishRoute()) {
+    const forcedText = forceEnglishText(key, '');
+    if (forcedText) return forcedText;
+  }
+  
   // Auto-detect locale from pathname if not provided
   let detectedLocale = locale;
   if (!detectedLocale && typeof window !== 'undefined') {
