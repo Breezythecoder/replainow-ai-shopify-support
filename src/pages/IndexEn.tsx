@@ -54,7 +54,7 @@ const IndexEn = () => {
       {/* Main Content */}
       <ModernNavbar />
       
-      <main>
+      <main id="main-content" className="pb-0">
         <ModernHero />
         <ModernHowItWorks />
         <ModernProblemSolution />
