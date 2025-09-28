@@ -32,21 +32,21 @@ const ModernSocialProof = () => {
       owner: "Thomas R.",
       result: "85% weniger Support-Tickets",
       quote: "Endlich keine 24/7 Support-Schichten mehr! Die AI beantwortet 90% der Fragen automatisch. Game Changer für unser Shopify-Store!",
-      image: testimonialLisa // Placeholder - würde echte Fotos brauchen
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
     },
     {
       company: "HomeDecor Plus",
       owner: "Anna L.",
       result: "+42% Conversion Rate",
       quote: "Unsere Kunden bekommen sofort Antworten zu Versand, Rücksendungen und Produktdetails. Shopify-Integration war super einfach!",
-      image: testimonialMarco // Placeholder - würde echte Fotos brauchen
+      image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
     },
     {
       company: "SportGear Pro",
       owner: "Mike S.",
       result: "€50k+ zusätzlicher Umsatz",
       quote: "Die AI kennt jeden Artikel in unserem Shopify-Store. Kunden kaufen mehr, weil sie perfekt beraten werden. Unser Support-Team kann sich auf wichtige Anfragen konzentrieren.",
-      image: testimonialSarah // Placeholder - würde echte Fotos brauchen
+      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face&auto=format&q=80"
     }
   ];
 
