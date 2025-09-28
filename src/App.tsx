@@ -9,14 +9,9 @@ import { SkipToMainContent, useKeyboardNavigation } from "@/components/ui/access
 import { trackWebVitals } from "@/components/ui/performance";
 import { initWebVitals } from "@/utils/webVitals";
 import { initializeGA, trackPageView } from "@/utils/analytics";
+import { SEOHead } from "@/components/SEOHead";
+import { getLocaleFromPath } from "@/i18n";
 import Index from "./pages/Index";
-import IndexEn from "./pages/Index.en";
-import IndexEs from "./pages/Index.es";
-import IndexFr from "./pages/Index.fr";
-import IndexPt from "./pages/Index.pt";
-import IndexIt from "./pages/Index.it";
-import IndexNl from "./pages/Index.nl";
-import IndexZh from "./pages/Index.zh";
 import { lazy, Suspense } from "react";
 
 // Lazy load legal pages for better performance
@@ -54,28 +49,33 @@ const queryClient = new QueryClient();
 const AppContent = () => {
   useKeyboardNavigation();
   
-    // Initialize performance tracking
-    useEffect(() => {
-      trackWebVitals();
-      initWebVitals();
-      initializeGA();
-    
-      // Hash routing is handled automatically by HashRouter
-    
-    // Register Service Worker for perfect performance
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/sw.js')
-        .then((registration) => {
-          console.log('SW registered: ', registration);
-        })
-        .catch((registrationError) => {
-          console.log('SW registration failed: ', registrationError);
-        });
-    }
+  // Get current locale from pathname
+  const pathname = window.location.pathname;
+  const locale = getLocaleFromPath(pathname);
+  
+  // Initialize performance tracking
+  useEffect(() => {
+    trackWebVitals();
+    initWebVitals();
+    initializeGA();
+  
+    // Hash routing is handled automatically by HashRouter
+  
+  // Register Service Worker for perfect performance
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then((registration) => {
+        console.log('SW registered: ', registration);
+      })
+      .catch((registrationError) => {
+        console.log('SW registration failed: ', registrationError);
+      });
+  }
   }, []);
 
   return (
     <>
+      <SEOHead locale={locale} pathname={pathname} />
       <SkipToMainContent />
         <HashRouter>
           <Suspense fallback={
@@ -88,13 +88,7 @@ const AppContent = () => {
           }>
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/en" element={<IndexEn />} />
-              <Route path="/es" element={<IndexEs />} />
-              <Route path="/fr" element={<IndexFr />} />
-              <Route path="/pt" element={<IndexPt />} />
-              <Route path="/it" element={<IndexIt />} />
-              <Route path="/nl" element={<IndexNl />} />
-              <Route path="/zh" element={<IndexZh />} />
+              <Route path="/en" element={<Index />} />
               
                 {/* SEO Pillar Pages */}
                 <Route path="/ai-shopify-helpdesk" element={<AIShopifyHelpdesk />} />
