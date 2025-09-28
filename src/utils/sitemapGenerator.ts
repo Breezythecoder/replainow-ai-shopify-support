@@ -135,7 +135,8 @@ export const generateSitemapXML = (): string => {
   const xmlFooter = '</urlset>';
   
   const urlEntries = urls.map(url => {
-    let xml = `\n  <url>\n    <loc>${url.loc}</loc>\n    <lastmod>${url.lastmod}</lastmod>\n    <changefreq>${url.changefreq}</changefreq>\n    <priority>${url.priority}</priority>`;
+    const lastmod = url.lastmod || getCurrentDate();
+    let xml = `\n  <url>\n    <loc>${url.loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${url.changefreq}</changefreq>\n    <priority>${url.priority}</priority>`;
     
     // Add alternate language links if present
     if (url.alternate) {
@@ -184,9 +185,10 @@ export const generateLanguageSitemap = (language: 'de' | 'en'): string => {
     ? urls.filter(url => url.loc.includes('/de') || !url.loc.match(/\/(en|es|fr|pt|it|nl|zh)/))
     : urls.filter(url => url.loc.includes(`/${language}`));
   
-  const urlEntries = languageUrls.map(url => 
-    `\n  <url>\n    <loc>${url.loc}</loc>\n    <lastmod>${url.lastmod}</lastmod>\n    <changefreq>${url.changefreq}</changefreq>\n    <priority>${url.priority}</priority>\n  </url>`
-  ).join('');
+  const urlEntries = languageUrls.map(url => {
+    const lastmod = url.lastmod || currentDate;
+    return `\n  <url>\n    <loc>${url.loc}</loc>\n    <lastmod>${lastmod}</lastmod>\n    <changefreq>${url.changefreq}</changefreq>\n    <priority>${url.priority}</priority>\n  </url>`;
+  }).join('');
   
   return xmlHeader + urlEntries + '\n' + xmlFooter;
 };
