@@ -48,13 +48,30 @@ const IndexEn = () => {
           "Shopify Support Chat",
           "AI Email Support"
         ]}
+        canonicalUrl="https://replainow.com/en/"
+        locale="en_US"
+        structuredData={structuredData}
+        hreflang={{
+          "de": "https://replainow.com/",
+          "en": "https://replainow.com/en/",
+          "es": "https://replainow.com/es/",
+          "fr": "https://replainow.com/fr/",
+          "it": "https://replainow.com/it/",
+          "nl": "https://replainow.com/nl/",
+          "pt": "https://replainow.com/pt/",
+          "zh": "https://replainow.com/zh/",
+          "x-default": "https://replainow.com/"
+        }}
       />
-      <AIOptimizedFAQ />
-      
-      {/* Main Content */}
+      <SEO
+        title="ReplAInow – Automate Shopify Support with AI"
+        description="Answer customer queries in seconds: GDPR-compliant, brand-consistent, direct Shopify data. Try free for 14 days."
+        image="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
+      />
+      <OrganizationJsonLd />
       <ModernNavbar />
       
-      <main id="main-content" className="pb-0">
+      <main id="main-content" role="main" aria-label="Main content" className="pb-0">
         <ModernHero />
         <ModernHowItWorks />
         <ModernProblemSolution />
@@ -74,6 +91,7 @@ const IndexEn = () => {
       
       <Footer />
       <MailAndChat />
+      <LanguageSwitcher />
     </>
   );
 };
