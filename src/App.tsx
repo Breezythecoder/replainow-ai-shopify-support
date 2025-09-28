@@ -15,6 +15,7 @@ import { initializeAssetLoading } from "@/utils/assetLoader";
 import { SEOErrorBoundary } from "@/components/ui/ErrorBoundary";
 import { RootErrorBoundary } from "@/components/ui/RootErrorBoundary";
 import { lazy, Suspense } from "react";
+import { LocaleProvider } from "@/contexts/LocaleContext";
 
 // Lazy load main language pages for better performance
 const Index = lazy(() => import("./pages/Index"));
@@ -91,15 +92,16 @@ const AppContent = () => {
             </SEOErrorBoundary>
             <SkipToMainContent />
         <BrowserRouter basename="/">
-          <Suspense fallback={
-            <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
-              <div className="text-center">
-                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4"></div>
-                <p className="text-blue-200">Loading...</p>
+          <LocaleProvider>
+            <Suspense fallback={
+              <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900">
+                <div className="text-center">
+                  <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4"></div>
+                  <p className="text-blue-200">Loading...</p>
+                </div>
               </div>
-            </div>
-          }>
-            <Routes>
+            }>
+              <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/en" element={<IndexEn />} />
               <Route path="/fr" element={<IndexFr />} />
@@ -127,8 +129,9 @@ const AppContent = () => {
               <Route path="/refund" element={<RefundPolicy />} />
               <Route path="/cookies" element={<CookiePolicy />} />
               <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Suspense>
+              </Routes>
+            </Suspense>
+          </LocaleProvider>
         </BrowserRouter>
         <SkipLinks />
         <ScrollProgress />

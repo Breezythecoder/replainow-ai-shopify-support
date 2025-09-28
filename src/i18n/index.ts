@@ -19,9 +19,15 @@ export const translations = {
 export type TranslationKeys = typeof de;
 
 // Simple i18n function
-export const t = (key: string, locale: Locale = 'de'): string => {
+export const t = (key: string, locale?: Locale): string => {
+  // Auto-detect locale from pathname if not provided
+  let detectedLocale = locale;
+  if (!detectedLocale && typeof window !== 'undefined') {
+    detectedLocale = getLocaleFromPath(window.location.pathname);
+  }
+  
   const keys = key.split('.');
-  let value: any = translations[locale];
+  let value: any = translations[detectedLocale || 'de'];
   
   for (const k of keys) {
     value = value?.[k];
