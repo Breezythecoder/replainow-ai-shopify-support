@@ -103,7 +103,7 @@ const MultilingualSupport = () => {
               <p className="text-blue-100 text-lg">
                 ReplAInow unterstützt <strong>32+ Sprachen nativ</strong> mit automatischer Spracherkennung 
                 und <strong>99%+ Übersetzungsgenauigkeit</strong>. Ihre Kunden erhalten Support in ihrer 
-                Muttersprache ohne zusätzliche Kosten. <a href="/pricing" className="text-blue-400 hover:text-blue-300">Ab €19/Monat</a>.
+                Muttersprache ohne zusätzliche Kosten. <a href="#/pricing" className="text-blue-400 hover:text-blue-300">Ab €19/Monat</a>.
               </p>
             </div>
 
@@ -265,7 +265,7 @@ const MultilingualSupport = () => {
                 </a>
               </Button>
               <Button asChild variant="outline" size="xl" className="border-2 border-blue-400 text-blue-100 hover:bg-blue-500 hover:text-white px-8 py-4">
-                <a href="/pricing">
+                <a href="#/pricing">
                   <Zap className="w-5 h-5 mr-2" />
                   Preise ansehen
                 </a>

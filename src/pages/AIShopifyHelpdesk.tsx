@@ -101,7 +101,7 @@ const AIShopifyHelpdesk = () => {
                 ReplAInow ist der führende AI Shopify Helpdesk mit <strong>3-Sekunden Antwortzeiten</strong>, 
                 <strong>32+ Sprachen</strong> und <strong>75% Kosteneinsparung</strong> gegenüber traditionellen Lösungen. 
                 <a href="#pricing" className="text-blue-400 hover:text-blue-300">Starten Sie ab €19/Monat</a> mit 
-                <a href="/pricing" className="text-blue-400 hover:text-blue-300">14 Tagen kostenlos</a>.
+                <a href="#/pricing" className="text-blue-400 hover:text-blue-300">14 Tagen kostenlos</a>.
               </p>
             </div>
 
@@ -257,7 +257,7 @@ const AIShopifyHelpdesk = () => {
                 </a>
               </Button>
               <Button asChild variant="outline" size="xl" className="border-2 border-blue-400 text-blue-100 hover:bg-blue-500 hover:text-white px-8 py-4">
-                <a href="/pricing">
+                <a href="#/pricing">
                   <Brain className="w-5 h-5 mr-2" />
                   Preise ansehen
                 </a>

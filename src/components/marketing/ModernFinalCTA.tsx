@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { STORE_COUNT } from "@/config/siteStats";
+import { smoothScrollToElement } from "@/utils/smoothScroll";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
@@ -25,6 +26,12 @@ const ModernFinalCTA = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  // Handle smooth scroll navigation
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    smoothScrollToElement(targetId);
+  };
 
   return (
     <section 
@@ -91,7 +98,7 @@ const ModernFinalCTA = () => {
             size="xl" 
             className="flex-1 sm:flex-none text-base lg:text-lg px-8 lg:px-12 py-6 lg:py-8 border-2 border-blue-500 text-blue-600 hover:bg-blue-500 hover:text-white font-bold min-h-[64px]"
           >
-            <a href="#live-demo" className="flex items-center gap-3 justify-center text-center">
+            <a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="flex items-center gap-3 justify-center text-center cursor-pointer">
               <span className="text-2xl">📺</span>
               <span className="whitespace-normal break-words">LIVE DEMO</span>
             </a>

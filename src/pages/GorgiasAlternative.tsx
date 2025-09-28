@@ -98,7 +98,7 @@ const GorgiasAlternative = () => {
           <div className="bg-red-800/30 border border-red-600/50 rounded-2xl p-6 mb-12 shadow-xl backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-red-200 mb-4">TL;DR: ReplAInow vs Gorgias</h2>
             <p className="text-lg text-red-100 leading-relaxed">
-              ReplAInow schlägt Gorgias in allen wichtigen Bereichen: 75% günstiger (€19 vs €60), 10x schneller (3s vs 2-5min), 32+ Sprachen vs 5 Sprachen, GPT-4.1 vs GPT-3.5, vollständige DSGVO-Compliance. Einfache Migration, bessere Features, niedrigere Kosten. <a href="/pricing" className="text-red-400 hover:underline">Jetzt wechseln und sparen!</a>
+              ReplAInow schlägt Gorgias in allen wichtigen Bereichen: 75% günstiger (€19 vs €60), 10x schneller (3s vs 2-5min), 32+ Sprachen vs 5 Sprachen, GPT-4.1 vs GPT-3.5, vollständige DSGVO-Compliance. Einfache Migration, bessere Features, niedrigere Kosten. <a href="#/pricing" className="text-red-400 hover:underline">Jetzt wechseln und sparen!</a>
             </p>
           </div>
 

@@ -98,7 +98,7 @@ const IntercomAlternative = () => {
           <div className="bg-red-800/30 border border-red-600/50 rounded-2xl p-6 mb-12 shadow-xl backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-red-200 mb-4">TL;DR: ReplAInow vs Intercom</h2>
             <p className="text-lg text-red-100 leading-relaxed">
-              ReplAInow schlägt Intercom in allen wichtigen Bereichen: 80% günstiger (€19 vs €99), 10x schneller (3s vs 5-15min), 32+ Sprachen vs 8 Sprachen, GPT-4.1 vs GPT-3.5, vollständige DSGVO-Compliance. Einfache Migration, bessere Features, drastisch niedrigere Kosten. <a href="/pricing" className="text-red-400 hover:underline">Jetzt wechseln und €960/Jahr sparen!</a>
+              ReplAInow schlägt Intercom in allen wichtigen Bereichen: 80% günstiger (€19 vs €99), 10x schneller (3s vs 5-15min), 32+ Sprachen vs 8 Sprachen, GPT-4.1 vs GPT-3.5, vollständige DSGVO-Compliance. Einfache Migration, bessere Features, drastisch niedrigere Kosten. <a href="#/pricing" className="text-red-400 hover:underline">Jetzt wechseln und €960/Jahr sparen!</a>
             </p>
           </div>
 

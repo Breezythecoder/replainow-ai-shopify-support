@@ -2,6 +2,7 @@ import { useState, useCallback, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button-variants";
 import { STORE_COUNT } from "@/config/siteStats";
+import { smoothScrollToElement } from "@/utils/smoothScroll";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
@@ -50,6 +51,12 @@ const ModernHero = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  // Handle smooth scroll navigation
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    e.preventDefault();
+    smoothScrollToElement(targetId);
+  };
 
   return (
     <section
@@ -198,7 +205,7 @@ const ModernHero = () => {
               </a>
             </Button>
             <Button asChild variant="outline" size="xl" className="flex-1 sm:flex-none border-blue-400/50 text-blue-200 hover:bg-blue-600/20 hover:text-white hover:border-blue-400 transition-all duration-300">
-              <a href="#live-demo" className="flex items-center justify-center gap-3 text-base lg:text-lg font-semibold py-4">
+              <a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="flex items-center justify-center gap-3 text-base lg:text-lg font-semibold py-4 cursor-pointer">
                 <span className="text-xl">🎥</span>
                 Live-Demo ansehen
               </a>

@@ -80,7 +80,7 @@ const ShopifyAISupport = () => {
           <div className="bg-blue-800/30 border border-blue-600/50 rounded-2xl p-6 mb-12 shadow-xl backdrop-blur-sm">
             <h2 className="text-2xl font-bold text-blue-200 mb-4">TL;DR: Shopify AI Support mit ReplAInow</h2>
             <p className="text-lg text-blue-100 leading-relaxed">
-              ReplAInow bietet den fortschrittlichsten Shopify AI Support mit GPT-4.1 Technologie. Erlebe 3-Sekunden Antwortzeiten, 24/7 Verfügbarkeit in 32+ Sprachen und spare dabei 75% deiner Support-Kosten. Perfekt für Shopify-Händler, die modernste KI-Technologie für ihren Kundenservice nutzen wollen. <a href="/pricing" className="text-blue-400 hover:underline">Jetzt kostenlos testen!</a>
+              ReplAInow bietet den fortschrittlichsten Shopify AI Support mit GPT-4.1 Technologie. Erlebe 3-Sekunden Antwortzeiten, 24/7 Verfügbarkeit in 32+ Sprachen und spare dabei 75% deiner Support-Kosten. Perfekt für Shopify-Händler, die modernste KI-Technologie für ihren Kundenservice nutzen wollen. <a href="#/pricing" className="text-blue-400 hover:underline">Jetzt kostenlos testen!</a>
             </p>
           </div>
 
