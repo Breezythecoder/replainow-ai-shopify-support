@@ -35,6 +35,18 @@ export const t = (key: string, locale?: Locale): string => {
     return value || key;
   }
   
+  // FORCE ENGLISH for any path containing '/en'
+  if (typeof window !== 'undefined' && window.location.pathname.includes('/en')) {
+    const keys = key.split('.');
+    let value: any = translations['en'];
+    
+    for (const k of keys) {
+      value = value?.[k];
+    }
+    
+    return value || key;
+  }
+  
   // Auto-detect locale from pathname if not provided
   let detectedLocale = locale;
   if (!detectedLocale && typeof window !== 'undefined') {
