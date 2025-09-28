@@ -33,6 +33,16 @@
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      // Set lang attribute immediately based on URL
+      (function() {
+        const path = window.location.pathname;
+        const lang = path.startsWith('/en') ? 'en' : 
+                    path.startsWith('/fr') ? 'fr' : 
+                    path.startsWith('/es') ? 'es' : 'de';
+        document.documentElement.lang = lang;
+      })();
+    </script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

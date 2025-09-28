@@ -74,6 +74,9 @@ const MultilingualSEO = ({
     // Document Title
     document.title = title;
 
+    // HTML Lang Attribute - CRITICAL FIX
+    document.documentElement.lang = language;
+
     // Basic Meta Tags
     updateOrCreateMeta('meta[name="description"]', 'name', 'description', description);
     updateOrCreateMeta('meta[name="keywords"]', 'name', 'keywords', keywords.join(', '));

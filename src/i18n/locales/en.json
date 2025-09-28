@@ -105,28 +105,6 @@
         }
       ]
     },
-    "features": {
-      "title": "Why Choose ReplAInow?",
-      "subtitle": "Transform your Shopify store with AI-powered customer support",
-      "items": [
-        {
-          "title": "3-Second Response Time",
-          "description": "Instant answers to customer queries with GPT-4.1 technology"
-        },
-        {
-          "title": "32+ Languages",
-          "description": "Support customers in their native language automatically"
-        },
-        {
-          "title": "GDPR Compliant",
-          "description": "Full data protection compliance for European customers"
-        },
-        {
-          "title": "75% Cost Savings",
-          "description": "Reduce support costs while improving customer satisfaction"
-        }
-      ]
-    },
     "testimonials": {
       "title": "What Real Merchants Say",
       "subtitle": "Join 280+ satisfied Shopify merchants"

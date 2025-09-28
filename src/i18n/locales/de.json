@@ -151,6 +151,79 @@
           "a": "Transparente Pläne mit klaren Limits, 14 Tage kostenlos testen ohne Kreditkarte. Upgrade jederzeit möglich."
         }
       ]
+    },
+    "testimonials": {
+      "title": "Was echte Händler sagen",
+      "subtitle": "Schließe dich 280+ zufriedenen Shopify-Händlern an"
+    },
+    "pricing": {
+      "title": "Einfache, transparente Preise",
+      "subtitle": "Starte kostenlos, skaliere mit deinem Wachstum",
+      "baseFeatures": [
+        "1-Klick Installation",
+        "Unbegrenzte Store-Daten (Produkte, Seiten, Richtlinien etc.)",
+        "AI E-Mail & AI Live Chat",
+        "Anpassbare Markenführung"
+      ],
+      "plans": [
+        {
+          "name": "Starter",
+          "price": "€19",
+          "period": "/ Monat",
+          "quota": "Bis zu 300 AI-Antworten / Monat",
+          "trial": "14 Tage kostenlos testen",
+          "features": [
+            "1-Klick Installation",
+            "Unbegrenzte Store-Daten (Produkte, Seiten, Richtlinien etc.)",
+            "AI E-Mail & AI Live Chat",
+            "Anpassbare Markenführung",
+            "E-Mail-Versand über ReplAInow-Adresse"
+          ],
+          "highlight": false,
+          "description": "Perfekt zum Testen"
+        },
+        {
+          "name": "Growth",
+          "price": "€49",
+          "period": "/ Monat",
+          "quota": "Bis zu 1500 AI-Antworten / Monat",
+          "trial": "14 Tage kostenlos testen",
+          "features": [
+            "1-Klick Installation",
+            "Unbegrenzte Store-Daten (Produkte, Seiten, Richtlinien etc.)",
+            "AI E-Mail & AI Live Chat",
+            "Anpassbare Markenführung",
+            "E-Mail-Versand mit deiner Domain"
+          ],
+          "highlight": true,
+          "badge": "Beliebtester Plan",
+          "description": "Für wachsende Stores"
+        },
+        {
+          "name": "Pro",
+          "price": "€99",
+          "period": "/ Monat",
+          "quota": "Bis zu 3000 AI-Antworten / Monat",
+          "trial": "14 Tage kostenlos testen",
+          "features": [
+            "1-Klick Installation",
+            "Unbegrenzte Store-Daten (Produkte, Seiten, Richtlinien etc.)",
+            "AI E-Mail & AI Live Chat",
+            "Anpassbare Markenführung",
+            "E-Mail-Versand mit deiner Domain"
+          ],
+          "highlight": false,
+          "description": "Für etablierte Stores"
+        }
+      ],
+      "cta": "Jetzt installieren",
+      "guarantee": "14-Tage Geld-zurück-Garantie"
+    },
+    "cta": {
+      "title": "Bereit, deinen Support zu automatisieren?",
+      "subtitle": "Schließe dich 280+ zufriedenen Shopify-Händlern an und fange heute an zu sparen",
+      "button": "Kostenlose Testversion starten",
+      "demo": "Demo ansehen"
     }
   }
 }

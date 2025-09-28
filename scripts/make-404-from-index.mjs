@@ -17,11 +17,11 @@ if (existsSync("public/.nojekyll")) {
   console.log("[OK] .nojekyll copied to dist");
 }
 
-// Create /en directory and copy index.html for GitHub Pages SPA fallback
-// Use the built index.html (with hashed assets) instead of the source
-if (existsSync("public/en/index.html")) {
-  mkdirSync("dist/en", { recursive: true });
-  // Copy the built index.html (with correct asset paths) instead of source
-  copyFileSync("dist/index.html", "dist/en/index.html");
-  console.log("[OK] /en/index.html created for GitHub Pages SPA fallback");
+// Create language-specific HTML files
+import { execSync } from 'child_process';
+try {
+  execSync('node scripts/create-language-htmls.mjs', { stdio: 'inherit' });
+  console.log("[OK] Language-specific HTML files created");
+} catch (error) {
+  console.error("[ERROR] Failed to create language-specific HTML files:", error.message);
 }
