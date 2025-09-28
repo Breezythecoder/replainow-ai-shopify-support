@@ -18,8 +18,10 @@ if (existsSync("public/.nojekyll")) {
 }
 
 // Create /en directory and copy index.html for GitHub Pages SPA fallback
+// Use the built index.html (with hashed assets) instead of the source
 if (existsSync("public/en/index.html")) {
   mkdirSync("dist/en", { recursive: true });
-  copyFileSync("public/en/index.html", "dist/en/index.html");
+  // Copy the built index.html (with correct asset paths) instead of source
+  copyFileSync("dist/index.html", "dist/en/index.html");
   console.log("[OK] /en/index.html created for GitHub Pages SPA fallback");
 }
