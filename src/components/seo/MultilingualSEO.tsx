@@ -58,7 +58,7 @@ const MultilingualSEO = ({
 
     // Basic Meta Tags
     updateOrCreateMeta('meta[name="description"]', 'name', 'description', description);
-    updateOrCreateMeta('meta[name="keywords"]', 'name', 'keywords', keywords.join(', '));
+    updateOrCreateMeta('meta[name="keywords"]', 'name', 'keywords', (keywords || []).join(', '));
     
     // Language Meta
     updateOrCreateMeta('meta[name="language"]', 'name', 'language', language);
