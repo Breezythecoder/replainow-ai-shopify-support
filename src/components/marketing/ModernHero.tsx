@@ -33,7 +33,7 @@ const ModernHero = () => {
       }
     }, 100);
     return () => clearInterval(timer);
-  }, []);
+  }, [window.location.pathname]); // Re-run when pathname changes
 
   // Intersection Observer for animations
   useEffect(() => {

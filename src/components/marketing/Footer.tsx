@@ -1,11 +1,8 @@
 import { Twitter, Linkedin, Mail, Phone, MapPin, Heart } from "lucide-react";
 import { smoothScrollToElement } from "@/utils/smoothScroll";
-import { t, getLocaleFromPath } from "@/i18n";
-
+import { t } from "@/i18n";
 const Footer = () => {
   // Get current locale
-  const locale = getLocaleFromPath(window.location.pathname);
-  
   // Handle fast smooth scroll navigation
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
@@ -21,15 +18,15 @@ const Footer = () => {
             {/* Company Story */}
             <div>
               <h3 className="text-3xl font-bold mb-6 text-white">
-                {t('footer.about.title', locale)} <span className="text-blue-400">ReplAInow</span>
+                {t('footer.about.title')} <span className="text-blue-400">ReplAInow</span>
               </h3>
               <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                {t('footer.about.description', locale)}
+                {t('footer.about.description')}
               </p>
               <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700">
-                <h4 className="text-xl font-bold mb-3 text-blue-400">{t('footer.about.promise', locale)}</h4>
+                <h4 className="text-xl font-bold mb-3 text-blue-400">{t('footer.about.promise')}</h4>
                 <p className="text-slate-300">
-                  {t('footer.about.promiseText', locale)}
+                  {t('footer.about.promiseText')}
                 </p>
               </div>
             </div>
@@ -90,9 +87,9 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Produkt</h4>
             <ul className="space-y-3">
-              <li><a href="#features" onClick={(e) => handleNavClick(e, 'features')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('footer.links.features', locale)}</a></li>
-              <li><a href="#pricing" onClick={(e) => handleNavClick(e, 'pricing')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('footer.links.pricing', locale)}</a></li>
-              <li><a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('footer.links.demo', locale)}</a></li>
+              <li><a href="#features" onClick={(e) => handleNavClick(e, 'features')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('footer.links.features')}</a></li>
+              <li><a href="#pricing" onClick={(e) => handleNavClick(e, 'pricing')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('footer.links.pricing')}</a></li>
+              <li><a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('footer.links.demo')}</a></li>
               <li><a href="https://apps.shopify.com/replainow-ai-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Installieren</a></li>
             </ul>
           </div>
@@ -114,14 +111,14 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Support</h4>
             <ul className="space-y-3">
-              <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('footer.links.contact', locale)}</a></li>
-              <li><a href="#/privacy" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.privacy', locale)}</a></li>
-              <li><a href="#/terms" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.terms', locale)}</a></li>
-              <li><a href="#/security" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.security', locale)}</a></li>
-              <li><a href="#/impressum" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.impressum', locale)}</a></li>
-              <li><a href="#/refund" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.refund', locale)}</a></li>
-              <li><a href="#/cookies" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.cookies', locale)}</a></li>
-              <li><a href="#/uninstall" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.uninstall', locale)}</a></li>
+              <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('footer.links.contact')}</a></li>
+              <li><a href="#/privacy" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.privacy')}</a></li>
+              <li><a href="#/terms" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.terms')}</a></li>
+              <li><a href="#/security" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.security')}</a></li>
+              <li><a href="#/impressum" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.impressum')}</a></li>
+              <li><a href="#/refund" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.refund')}</a></li>
+              <li><a href="#/cookies" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.cookies')}</a></li>
+              <li><a href="#/uninstall" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.uninstall')}</a></li>
             </ul>
           </div>
 
@@ -147,7 +144,7 @@ const Footer = () => {
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-slate-400 text-sm text-center md:text-left">
-              {t('footer.copyright', locale).replace('2024', new Date().getFullYear().toString())}
+              {t('footer.copyright').replace('2024', new Date().getFullYear().toString())}
             </p>
             <div className="flex items-center gap-2 text-slate-400 text-sm">
               <span>Made with</span>

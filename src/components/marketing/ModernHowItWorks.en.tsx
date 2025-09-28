@@ -1,37 +1,34 @@
 import { Button } from "@/components/ui/button";
 import { Download, Zap, Brain, TrendingUp } from "lucide-react";
-import { t, getLocaleFromPath } from "@/i18n";
-
+import { t } from "@/i18n";
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
 const ModernHowItWorks = () => {
   // Get current locale from URL path
-  const locale = getLocaleFromPath(window.location.pathname);
-
   const steps = [
     {
       step: "01",
       icon: <Download className="w-8 h-8" />,
-      title: t('ui.howItWorks.steps.0.title', locale),
-      desc: t('ui.howItWorks.steps.0.desc', locale)
+      title: t('ui.howItWorks.steps.0.title'),
+      desc: t('ui.howItWorks.steps.0.desc')
     },
     {
       step: "02", 
       icon: <Zap className="w-8 h-8" />,
-      title: t('ui.howItWorks.steps.1.title', locale),
-      desc: t('ui.howItWorks.steps.1.desc', locale)
+      title: t('ui.howItWorks.steps.1.title'),
+      desc: t('ui.howItWorks.steps.1.desc')
     },
     {
       step: "03",
       icon: <Brain className="w-8 h-8" />,
-      title: t('ui.howItWorks.steps.2.title', locale),
-      desc: t('ui.howItWorks.steps.2.desc', locale)
+      title: t('ui.howItWorks.steps.2.title'),
+      desc: t('ui.howItWorks.steps.2.desc')
     },
     {
       step: "04",
       icon: <TrendingUp className="w-8 h-8" />,
-      title: t('ui.howItWorks.steps.3.title', locale), 
-      desc: t('ui.howItWorks.steps.3.desc', locale)
+      title: t('ui.howItWorks.steps.3.title'), 
+      desc: t('ui.howItWorks.steps.3.desc')
     }
   ];
 
@@ -41,7 +38,7 @@ const ModernHowItWorks = () => {
         <h2 
           className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8 tracking-tight px-4 text-center"
           dangerouslySetInnerHTML={{ 
-            __html: t('ui.howItWorks.title', locale)
+            __html: t('ui.howItWorks.title')
               .replace('{highlight}', '<span class="text-gradient-primary">')
               .replace('{/highlight}', '</span>')
           }}

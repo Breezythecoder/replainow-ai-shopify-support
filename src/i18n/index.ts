@@ -3,7 +3,7 @@ import en from './locales/en.json';
 import fr from './locales/fr.json';
 import es from './locales/es.json';
 
-export type Locale = 'de' | 'en' | 'fr' | 'es';
+export type Locale = 'de' | 'en' | 'es' | 'fr' | 'it' | 'nl' | 'pt' | 'zh';
 
 export const locales: Locale[] = ['de', 'en', 'fr', 'es'];
 

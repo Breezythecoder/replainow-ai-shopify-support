@@ -1,31 +1,28 @@
 import { useMemo } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { t, getLocaleFromPath } from "@/i18n";
-
+import { t } from "@/i18n";
 const FAQ = () => {
   // Get current locale from URL path
-  const locale = getLocaleFromPath(window.location.pathname);
-
   const faqs = [
     {
-      q: t('ui.faq.questions.0.q', locale),
-      a: t('ui.faq.questions.0.a', locale),
+      q: t('ui.faq.questions.0.q'),
+      a: t('ui.faq.questions.0.a'),
     },
     {
-      q: t('ui.faq.questions.1.q', locale),
-      a: t('ui.faq.questions.1.a', locale),
+      q: t('ui.faq.questions.1.q'),
+      a: t('ui.faq.questions.1.a'),
     },
     {
-      q: t('ui.faq.questions.2.q', locale),
-      a: t('ui.faq.questions.2.a', locale),
+      q: t('ui.faq.questions.2.q'),
+      a: t('ui.faq.questions.2.a'),
     },
     {
-      q: t('ui.faq.questions.3.q', locale),
-      a: t('ui.faq.questions.3.a', locale),
+      q: t('ui.faq.questions.3.q'),
+      a: t('ui.faq.questions.3.a'),
     },
     {
-      q: t('ui.faq.questions.4.q', locale),
-      a: t('ui.faq.questions.4.a', locale),
+      q: t('ui.faq.questions.4.q'),
+      a: t('ui.faq.questions.4.a'),
     },
   ];
 
@@ -46,10 +43,10 @@ const FAQ = () => {
     <section id="faq" aria-labelledby="faq-heading" className="py-16 md:py-24">
       <div className="container max-w-4xl">
         <h2 id="faq-heading" className="font-display text-3xl md:text-4xl font-semibold text-center mb-4">
-          {t('ui.faq.title', locale)}
+          {t('ui.faq.title')}
         </h2>
         <p className="text-center text-muted-foreground mb-10 max-w-2xl mx-auto">
-          {t('ui.faq.subtitle', locale)}
+          {t('ui.faq.subtitle')}
         </p>
 
         <Accordion type="single" collapsible className="w-full">

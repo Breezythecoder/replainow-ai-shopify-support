@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { t, getLocaleFromPath } from "@/i18n";
-
+import { t } from "@/i18n";
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
 const baseFeatures = [

@@ -5,8 +5,7 @@ import { Menu, X, Zap, Brain, Rocket, Sparkles, Cpu, Activity } from "lucide-rea
 import { useState, useEffect } from "react";
 import { useSwipe } from "@/hooks/useSwipe";
 import { smoothScrollToElement } from "@/utils/smoothScroll";
-import { t, getLocaleFromPath } from "@/i18n";
-
+import { t } from "@/i18n";
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
 const ModernNavbar = () => {
@@ -14,8 +13,6 @@ const ModernNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   
   // Get current locale
-  const locale = getLocaleFromPath(window.location.pathname);
-
   // Swipe gestures for mobile - only on mobile devices
   useSwipe({
     onSwipeLeft: () => window.innerWidth < 768 && setMobileMenuOpen(false),
@@ -105,7 +102,7 @@ const ModernNavbar = () => {
               <div className="p-2 rounded-lg bg-green-500/20 group-hover:bg-green-500/40 transition-colors duration-300">
                 <Cpu className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </div>
-              <span className="font-semibold">{t('ui.navigation.pricing', locale)}</span>
+              <span className="font-semibold">{t('ui.navigation.pricing')}</span>
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-green-400 to-emerald-400 group-hover:w-full transition-all duration-300"></div>
             </a>
             
@@ -113,7 +110,7 @@ const ModernNavbar = () => {
               <div className="p-2 rounded-lg bg-indigo-500/20 group-hover:bg-indigo-500/40 transition-colors duration-300">
                 <Sparkles className="w-4 h-4 group-hover:scale-110 transition-transform" />
               </div>
-              <span className="font-semibold">{t('ui.navigation.contact', locale)}</span>
+              <span className="font-semibold">{t('ui.navigation.contact')}</span>
               <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-400 to-blue-400 group-hover:w-full transition-all duration-300"></div>
             </a>
             
@@ -131,7 +128,7 @@ const ModernNavbar = () => {
                 <div className="relative flex items-center gap-2">
                   <Rocket className="w-4 h-4 group-hover:animate-bounce" />
                   <span className="text-white font-black">
-                    {t('ui.hero.installButton', locale)}
+                    {t('ui.hero.installButton')}
                   </span>
                   <Sparkles className="w-4 h-4 text-yellow-300 group-hover:animate-pulse" />
                 </div>
