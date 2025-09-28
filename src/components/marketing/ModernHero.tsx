@@ -13,7 +13,7 @@ const ModernHero = () => {
   const [typingText, setTypingText] = useState("");
   const heroRef = useRef<HTMLDivElement>(null);
   
-  // Get current locale
+  // Get current locale from URL path
   const locale = getLocaleFromPath(window.location.pathname);
 
   const onMove = useCallback((e: React.MouseEvent) => {

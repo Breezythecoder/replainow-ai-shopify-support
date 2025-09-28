@@ -86,6 +86,30 @@
       "subtitle": "Transform your Shopify store with AI-powered customer support",
       "items": [
         {
+          "title": "GPT-4.1 Intelligence",
+          "description": "Latest AI technology understands context like a human expert",
+          "story": "Your AI thinks like a 10-year Shopify expert - just 1000x faster",
+          "impact": "+187% Conversion"
+        },
+        {
+          "title": "3-Second Responses",
+          "description": "Instant responses while Gorgias & Co. are still loading",
+          "story": "Customer asks  AI responds  Customer buys. Everything in 3 seconds",
+          "impact": "90% fewer tickets"
+        },
+        {
+          "title": "32+ Languages",
+          "description": "Automatic translation to customer's native language",
+          "story": "Customer writes in German, AI responds in Spanish - perfect!",
+          "impact": "75% cost savings"
+        }
+      ]
+    },
+    "features": {
+      "title": "Why Choose ReplAInow?",
+      "subtitle": "Transform your Shopify store with AI-powered customer support",
+      "items": [
+        {
           "title": "3-Second Response Time",
           "description": "Instant answers to customer queries with GPT-4.1 technology"
         },

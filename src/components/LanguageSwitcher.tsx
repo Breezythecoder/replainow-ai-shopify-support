@@ -22,11 +22,12 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className })
     setCurrentLocale(newLocale);
     setIsOpen(false);
     
-    // Save preference to localStorage
-    localStorage.setItem('preferred-locale', newLocale);
-    
-    // Reload page to apply new language
-    window.location.reload();
+    // Navigate to the correct language URL
+    if (newLocale === 'de') {
+      window.location.href = '/';
+    } else {
+      window.location.href = `/${newLocale}`;
+    }
   };
 
   const getLanguageLabel = (locale: Locale) => {

@@ -30,16 +30,15 @@ export const t = (key: string, locale: Locale = 'de'): string => {
   return value || key;
 };
 
-// Get locale from pathname (HashRouter compatible)
+// Get locale from pathname (URL-based)
 export const getLocaleFromPath = (pathname: string): Locale => {
-  // First check localStorage for saved preference
-  const savedLocale = localStorage.getItem('preferred-locale') as Locale;
-  if (savedLocale && locales.includes(savedLocale)) {
-    return savedLocale;
-  }
+  // Check URL path for language prefix
+  if (pathname.startsWith('/en')) return 'en';
+  if (pathname.startsWith('/fr')) return 'fr';
+  if (pathname.startsWith('/es')) return 'es';
   
-  // Fallback to default
-  return defaultLocale;
+  // Default to German for root path
+  return 'de';
 };
 
 // Get pathname for locale (HashRouter compatible)

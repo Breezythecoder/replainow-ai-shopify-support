@@ -1,11 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { STORE_COUNT } from "@/config/siteStats";
 import { Brain, Zap, Clock, Globe, Target, Shield, TrendingUp, Users, MessageSquare, BarChart3, CheckCircle, Download } from "lucide-react";
+import { t, getLocaleFromPath } from "@/i18n";
 
 const ModernFeatures = () => {
   const [activeFeature, setActiveFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const featuresRef = useRef<HTMLDivElement>(null);
+  
+  // Get current locale from URL path
+  const locale = getLocaleFromPath(window.location.pathname);
 
   const features = [
     {

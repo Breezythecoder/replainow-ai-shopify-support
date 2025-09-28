@@ -80,6 +80,30 @@
         "uninstall": "Deinstallation"
       },
       "copyright": "© 2024 ReplAInow. Alle Rechte vorbehalten."
+    },
+    "features": {
+      "title": "Warum ReplAInow?",
+      "subtitle": "Transformiere deinen Shopify-Store mit KI-gestütztem Kundensupport",
+      "items": [
+        {
+          "title": "GPT-4.1 Intelligence",
+          "description": "Neueste AI-Technologie versteht Kontext wie ein menschlicher Experte",
+          "story": "Deine AI denkt wie ein 10-jähriger Shopify-Experte - nur 1000x schneller",
+          "impact": "+187% Conversion"
+        },
+        {
+          "title": "3-Sekunden Antworten",
+          "description": "Instant-Responses während Gorgias & Co. noch laden",
+          "story": "Kunde fragt  AI antwortet  Kunde kauft. Alles in 3 Sekunden",
+          "impact": "90% weniger Tickets"
+        },
+        {
+          "title": "32+ Sprachen",
+          "description": "Automatische Übersetzung in die Muttersprache des Kunden",
+          "story": "Kunde schreibt auf Deutsch, AI antwortet auf Spanisch - perfekt!",
+          "impact": "75% Kosteneinsparung"
+        }
+      ]
     }
   }
 }

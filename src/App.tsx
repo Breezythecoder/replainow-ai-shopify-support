@@ -12,6 +12,9 @@ import { initializeGA, trackPageView } from "@/utils/analytics";
 import { SEOHead } from "@/components/SEOHead";
 import { getLocaleFromPath } from "@/i18n";
 import Index from "./pages/Index";
+import IndexEn from "./pages/IndexEn";
+import IndexEs from "./pages/IndexEs";
+import IndexFr from "./pages/IndexFr";
 import { lazy, Suspense } from "react";
 
 // Lazy load legal pages for better performance
@@ -88,9 +91,9 @@ const AppContent = () => {
           }>
             <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/en" element={<Index />} />
-              <Route path="/fr" element={<Index />} />
-              <Route path="/es" element={<Index />} />
+              <Route path="/en" element={<IndexEn />} />
+              <Route path="/fr" element={<IndexFr />} />
+              <Route path="/es" element={<IndexEs />} />
               
                 {/* SEO Pillar Pages */}
                 <Route path="/ai-shopify-helpdesk" element={<AIShopifyHelpdesk />} />
