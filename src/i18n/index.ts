@@ -30,27 +30,34 @@ export const t = (key: string, locale: Locale = 'de'): string => {
   return value || key;
 };
 
-// Get locale from pathname
+// Get locale from pathname (HashRouter compatible)
 export const getLocaleFromPath = (pathname: string): Locale => {
-  if (pathname.startsWith('/en')) return 'en';
-  if (pathname.startsWith('/fr')) return 'fr';
-  if (pathname.startsWith('/es')) return 'es';
-  return 'de';
+  // First check localStorage for saved preference
+  const savedLocale = localStorage.getItem('preferred-locale') as Locale;
+  if (savedLocale && locales.includes(savedLocale)) {
+    return savedLocale;
+  }
+  
+  // Fallback to default
+  return defaultLocale;
 };
 
-// Get pathname for locale
+// Get pathname for locale (HashRouter compatible)
 export const getPathnameForLocale = (pathname: string, locale: Locale): string => {
+  const currentHash = window.location.hash;
+  
   if (locale === 'de') {
-    return pathname.replace(/^\/(en|fr|es)/, '') || '/';
+    // Remove language prefix from hash
+    return currentHash.replace(/#\/(en|fr|es)/, '#/') || '#/';
   }
   if (locale === 'en') {
-    return pathname.startsWith('/en') ? pathname : `/en${pathname}`;
+    return currentHash.includes('#/en') ? currentHash : `#/en${currentHash.replace('#/', '')}`;
   }
   if (locale === 'fr') {
-    return pathname.startsWith('/fr') ? pathname : `/fr${pathname}`;
+    return currentHash.includes('#/fr') ? currentHash : `#/fr${currentHash.replace('#/', '')}`;
   }
   if (locale === 'es') {
-    return pathname.startsWith('/es') ? pathname : `/es${pathname}`;
+    return currentHash.includes('#/es') ? currentHash : `#/es${currentHash.replace('#/', '')}`;
   }
-  return pathname;
+  return currentHash;
 };

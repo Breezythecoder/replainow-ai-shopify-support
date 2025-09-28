@@ -18,7 +18,7 @@ import SEO from "@/components/SEO";
 import FAQ from "@/components/marketing/FAQ";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import MailAndChat from "@/components/marketing/MailAndChat";
-import LanguageSwitcher from "@/components/ui/language-switcher";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
 import AIOptimizedFAQ from "@/components/seo/AIOptimizedFAQ";
 import { softwareApplicationSchema, organizationSchema } from "@/components/seo/StructuredData";

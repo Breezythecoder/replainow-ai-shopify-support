@@ -44,8 +44,16 @@
       "contact": "Contact"
     },
     "hero": {
-      "title": "AI-Powered Customer Support for Shopify",
-      "subtitle": "Automated responses with GPT-4.1 in 3 seconds",
+      "title": "AI Helpdesk for Shopify.",
+      "subtitle": "Responds in 3 seconds",
+      "description": "Revolutionary GPT-4.1 AI with real-time Shopify data: Higher conversion, faster responses, 90% fewer support tickets.",
+      "storesCount": "Active Stores",
+      "responseTime": "Response Time",
+      "aiAccuracy": "AI Accuracy",
+      "languages": "{{count}} Languages",
+      "costSavings": "{{percentage}} Cost Savings",
+      "liveDemoButton": "View Live Demo",
+      "installButton": "INSTALL NOW",
       "cta": "Try Free Now",
       "demo": "View Live Demo"
     },

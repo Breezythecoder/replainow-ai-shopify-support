@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button-variants";
 import { STORE_COUNT } from "@/config/siteStats";
 import { smoothScrollToElement } from "@/utils/smoothScroll";
+import { t, getLocaleFromPath } from "@/i18n";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
@@ -11,6 +12,9 @@ const ModernHero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [typingText, setTypingText] = useState("");
   const heroRef = useRef<HTMLDivElement>(null);
+  
+  // Get current locale
+  const locale = getLocaleFromPath(window.location.pathname);
 
   const onMove = useCallback((e: React.MouseEvent) => {
     const rect = e.currentTarget.getBoundingClientRect();
@@ -21,7 +25,7 @@ const ModernHero = () => {
 
   // Typing animation effect
   useEffect(() => {
-    const text = "KI-Helpdesk für Shopify.";
+    const text = t('ui.hero.title', locale);
     let index = 0;
     const timer = setInterval(() => {
       if (index < text.length) {
@@ -32,7 +36,7 @@ const ModernHero = () => {
       }
     }, 100);
     return () => clearInterval(timer);
-  }, []);
+  }, [locale]);
 
   // Intersection Observer for animations
   useEffect(() => {
@@ -162,35 +166,31 @@ const ModernHero = () => {
                 {typingText}
               </span>
               <span className="block text-white mt-4 text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
-                Antwortet in <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500 animate-pulse">3 Sekunden</span>
+                {t('ui.hero.subtitle', locale)}
               </span>
             </h1>
           </div>
           
           {/* AI-Powered Subtitle */}
           <p className="text-lg sm:text-xl md:text-2xl text-blue-200 leading-relaxed max-w-3xl">
-            <span className="text-cyan-400 font-bold">Revolutionäre GPT-4.1 AI</span> mit
-            <span className="text-purple-400 font-bold"> Echtzeit-Shopify-Daten</span>:
-            <br />
-            Höhere Conversion, schnellere Antworten,
-            <span className="text-green-400 font-bold"> 90% weniger Support-Tickets</span>.
+            {t('ui.hero.description', locale)}
           </p>
 
           {/* AI-Powered Live Stats - Mobile Optimized */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 my-8 sm:my-12">
             <div className="bg-gradient-to-br from-blue-500/20 to-blue-600/30 backdrop-blur-lg p-4 sm:p-6 rounded-2xl text-center border border-blue-400/30 shadow-2xl hover:shadow-blue-500/25 transition-all duration-300 hover:scale-105 touch-manipulation">
               <div className="text-2xl sm:text-3xl font-black text-cyan-400 mb-2">{STORE_COUNT}</div>
-              <div className="text-xs sm:text-sm text-blue-200 font-semibold">Aktive Stores</div>
+              <div className="text-xs sm:text-sm text-blue-200 font-semibold">{t('ui.hero.storesCount', locale)}</div>
               <div className="w-full h-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full mt-2 animate-pulse"></div>
             </div>
             <div className="bg-gradient-to-br from-green-500/20 to-emerald-600/30 backdrop-blur-lg p-4 sm:p-6 rounded-2xl text-center border border-green-400/30 shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-105 touch-manipulation">
               <div className="text-2xl sm:text-3xl font-black text-green-400 mb-2">98%</div>
-              <div className="text-xs sm:text-sm text-green-200 font-semibold">AI Genauigkeit</div>
+              <div className="text-xs sm:text-sm text-green-200 font-semibold">{t('ui.hero.aiAccuracy', locale)}</div>
               <div className="w-full h-1 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full mt-2 animate-pulse"></div>
             </div>
             <div className="bg-gradient-to-br from-purple-500/20 to-indigo-600/30 backdrop-blur-lg p-4 sm:p-6 rounded-2xl text-center border border-purple-400/30 shadow-2xl hover:shadow-purple-500/25 transition-all duration-300 hover:scale-105 touch-manipulation">
               <div className="text-2xl sm:text-3xl font-black text-purple-400 mb-2">3s</div>
-              <div className="text-xs sm:text-sm text-purple-200 font-semibold">Response Time</div>
+              <div className="text-xs sm:text-sm text-purple-200 font-semibold">{t('ui.hero.responseTime', locale)}</div>
               <div className="w-full h-1 bg-gradient-to-r from-purple-400 to-indigo-400 rounded-full mt-2 animate-pulse"></div>
             </div>
           </div>
@@ -200,14 +200,14 @@ const ModernHero = () => {
             <Button asChild variant="cta" size="xl" className={`group flex-1 sm:flex-none ${buttonVariants({ variant: "ai", size: "xl" })}`}>
               <a href={OAUTH_URL} className="flex items-center justify-center gap-3 text-base lg:text-lg font-bold relative z-10 py-4">
                 <span className="text-xl group-hover:scale-110 transition-transform"></span>
-                JETZT INSTALLIEREN
+{t('ui.hero.installButton', locale)}
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
               </a>
             </Button>
             <Button asChild variant="outline" size="xl" className="flex-1 sm:flex-none border-blue-400/50 text-blue-200 hover:bg-blue-600/20 hover:text-white hover:border-blue-400 transition-all duration-300">
               <a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="flex items-center justify-center gap-3 text-base lg:text-lg font-semibold py-4 cursor-pointer">
                 <span className="text-xl">🎥</span>
-                Live-Demo ansehen
+{t('ui.hero.liveDemoButton', locale)}
               </a>
             </Button>
           </div>

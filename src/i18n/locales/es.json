@@ -44,8 +44,16 @@
       "contact": "Contacto"
     },
     "hero": {
-      "title": "Soporte al Cliente IA para Shopify",
-      "subtitle": "Respuestas automatizadas con GPT-4.1 en 3 segundos",
+      "title": "Mesa de Ayuda IA para Shopify.",
+      "subtitle": "Responde en 3 segundos",
+      "description": "IA GPT-4.1 revolucionaria con datos de Shopify en tiempo real: Mayor conversión, respuestas más rápidas, 90% menos tickets de soporte.",
+      "storesCount": "Tiendas Activas",
+      "responseTime": "Tiempo de Respuesta",
+      "aiAccuracy": "Precisión IA",
+      "languages": "{{count}} Idiomas",
+      "costSavings": "{{percentage}} Ahorro de Costos",
+      "liveDemoButton": "Ver demostración en vivo",
+      "installButton": "INSTALAR AHORA",
       "cta": "Probar Gratis",
       "demo": "Ver Demo"
     },

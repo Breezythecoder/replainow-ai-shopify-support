@@ -44,8 +44,16 @@
       "contact": "Kontakt"
     },
     "hero": {
-      "title": "KI-gestützter Kundensupport für Shopify",
-      "subtitle": "Automatisierte Antworten mit GPT-4.1 in 3 Sekunden",
+      "title": "KI-Helpdesk für Shopify.",
+      "subtitle": "Antwortet in 3 Sekunden",
+      "description": "Revolutionäre GPT-4.1 AI mit Echtzeit-Shopify-Daten: Höhere Conversion, schnellere Antworten, 90% weniger Support-Tickets.",
+      "storesCount": "Aktive Stores",
+      "responseTime": "Response Time",
+      "aiAccuracy": "AI Genauigkeit",
+      "languages": "{{count}} Sprachen",
+      "costSavings": "{{percentage}} Kosteneinsparung",
+      "liveDemoButton": "Live-Demo ansehen",
+      "installButton": "JETZT INSTALLIEREN",
       "cta": "Jetzt kostenlos testen",
       "demo": "Live-Demo ansehen"
     }

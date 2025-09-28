@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { getLocaleFromPath, getPathnameForLocale, locales } from '@/i18n';
-import { Button } from '@/components/ui/button';
+import { getLocaleFromPath, getPathnameForLocale, locales, Locale } from '@/i18n';
 import { Globe } from 'lucide-react';
 
 interface LanguageSwitcherProps {
@@ -11,35 +10,35 @@ interface LanguageSwitcherProps {
 export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className }) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const [currentLocale, setCurrentLocale] = useState<'de' | 'en'>('de');
+  const [currentLocale, setCurrentLocale] = useState<Locale>('de');
 
   useEffect(() => {
     const locale = getLocaleFromPath(location.pathname);
     setCurrentLocale(locale);
   }, [location.pathname]);
 
-  const handleLanguageChange = (newLocale: 'de' | 'en' | 'fr' | 'es') => {
-    const newPath = getPathnameForLocale(location.pathname, newLocale);
+  const handleLanguageChange = (newLocale: Locale) => {
     setCurrentLocale(newLocale);
     
     // Save preference to localStorage
     localStorage.setItem('preferred-locale', newLocale);
     
-    // Navigate to new path
-    navigate(newPath);
+    // For HashRouter, we just change the locale state
+    // The content will be re-rendered with the new locale
+    window.location.reload();
   };
 
-  const getLanguageLabel = (locale: 'de' | 'en' | 'fr' | 'es') => {
+  const getLanguageLabel = (locale: Locale) => {
     switch (locale) {
-      case 'de': return 'Deutsch';
-      case 'en': return 'English';
-      case 'fr': return 'Français';
-      case 'es': return 'Español';
-      default: return locale;
+      case 'de': return 'DE';
+      case 'en': return 'EN';
+      case 'fr': return 'FR';
+      case 'es': return 'ES';
+      default: return locale.toUpperCase();
     }
   };
 
-  const getLanguageFlag = (locale: 'de' | 'en' | 'fr' | 'es') => {
+  const getLanguageFlag = (locale: Locale) => {
     switch (locale) {
       case 'de': return '🇩🇪';
       case 'en': return '🇬🇧';
@@ -50,20 +49,22 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className })
   };
 
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
+    <div className={`flex items-center gap-1 ${className}`}>
       <Globe className="h-4 w-4 text-muted-foreground" />
-      <div className="flex rounded-lg border border-border bg-background p-1">
+      <div className="flex rounded-md border border-border bg-background">
         {locales.map((locale) => (
-          <Button
+          <button
             key={locale}
-            variant={currentLocale === locale ? 'default' : 'ghost'}
-            size="sm"
             onClick={() => handleLanguageChange(locale)}
-            className="h-8 px-3 text-sm"
+            className={`px-2 py-1 text-xs font-medium transition-colors duration-200 rounded-sm ${
+              currentLocale === locale
+                ? 'bg-primary text-primary-foreground'
+                : 'text-muted-foreground hover:bg-accent hover:text-accent-foreground'
+            }`}
+            title={getLanguageLabel(locale)}
           >
-            <span className="mr-1">{getLanguageFlag(locale)}</span>
-            {getLanguageLabel(locale)}
-          </Button>
+            {getLanguageFlag(locale)}
+          </button>
         ))}
       </div>
     </div>
