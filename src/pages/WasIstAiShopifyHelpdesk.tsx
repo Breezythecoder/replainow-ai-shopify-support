@@ -248,7 +248,7 @@ const WasIstAiShopifyHelpdesk = () => {
               Bereit für das beste AI Shopify Helpdesk?
             </h2>
             <p className="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
-              Über 5000+ Shopify-Händler nutzen bereits ReplAInow. 
+              Über 280+ Shopify-Händler nutzen bereits ReplAInow. 
               Starte jetzt deine 14-tägige kostenlose Testphase.
             </p>
             

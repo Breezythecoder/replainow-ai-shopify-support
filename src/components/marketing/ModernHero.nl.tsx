@@ -76,7 +76,7 @@ const ModernHeroNl = () => {
               <span className="px-4 py-3 glass-card text-brand-success rounded-full font-bold shadow-brand">
                  GDPR Conform
               </span>
-              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand"> 5000+ Winkels</span>
+              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand"> 280+ Winkels</span>
             </div>
           </div>
           

@@ -76,7 +76,7 @@ const ModernHeroZh = () => {
               <span className="px-4 py-3 glass-card text-brand-success rounded-full font-bold shadow-brand">
                  GDPR
               </span>
-              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand"> 5000+</span>
+              <span className="font-bold text-slate-700 glass-card px-4 py-3 rounded-full shadow-brand"> 280+</span>
             </div>
           </div>
           

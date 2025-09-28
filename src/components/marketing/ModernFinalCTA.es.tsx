@@ -18,7 +18,7 @@ const ModernFinalCTAEs = () => {
           Listo para la revolucin IA?
         </h2>
         <p className="text-lg sm:text-xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed px-4">
-          Ms de <strong className="text-brand-warning">5000+ comerciantes de Shopify</strong> ya usan ReplAInow. 
+          Ms de <strong className="text-brand-warning">280+ comerciantes de Shopify</strong> ya usan ReplAInow. 
           nete a la lite y <strong className="text-brand-warning">aplasta a tu competencia</strong> con tecnologa IA superior.
         </p>
         

@@ -52,7 +52,7 @@ const ModernSocialProof = () => {
             GDPR Compliant
           </span>
           <span className="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-bold border border-blue-200">
-            5000+ Stores
+            280+ Stores
           </span>
         </div>
         
@@ -90,7 +90,7 @@ const ModernSocialProof = () => {
           <h3 className="text-2xl font-bold mb-8">Bewiesene Resultate in Zahlen</h3>
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <div className="text-4xl font-black mb-2">5000+</div>
+              <div className="text-4xl font-black mb-2">280+</div>
               <div className="text-white/90">Zufriedene Händler</div>
             </div>
             <div>

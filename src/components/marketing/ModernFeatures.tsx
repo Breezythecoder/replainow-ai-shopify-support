@@ -193,7 +193,7 @@ const ModernFeatures = () => {
             </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-black text-blue-600 mb-2">5000+</div>
+                <div className="text-3xl font-black text-blue-600 mb-2">280+</div>
                 <div className="text-sm text-slate-600">Aktive Stores</div>
               </div>
               <div className="text-center">

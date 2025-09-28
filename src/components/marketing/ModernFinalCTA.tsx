@@ -65,7 +65,7 @@ const ModernFinalCTA = () => {
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-4xl mx-auto leading-relaxed px-4">
-            Über <span className="text-blue-600 font-bold">5000+ Shopify-Händler</span> nutzen bereits ReplAInow. 
+            Über <span className="text-blue-600 font-bold">280+ Shopify-Händler</span> nutzen bereits ReplAInow. 
             Werde Teil der Elite und <span className="text-indigo-600 font-bold">zerstöre deine Konkurrenz</span> mit überlegener AI-Technologie.
           </p>
         </div>
@@ -121,7 +121,7 @@ const ModernFinalCTA = () => {
         <div className={`bg-white/80 backdrop-blur-lg p-8 rounded-3xl max-w-4xl mx-auto border border-slate-200 shadow-xl transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="text-center mb-6">
             <h3 className="text-2xl font-bold text-slate-800 mb-4">
-              Warum 5000+ Shopify-Händler auf ReplAInow setzen
+              Warum 280+ Shopify-Händler auf ReplAInow setzen
             </h3>
             <p className="text-slate-600 text-lg">
               Starte noch heute mit der 14-tägigen kostenlosen Testphase
@@ -131,7 +131,7 @@ const ModernFinalCTA = () => {
           {/* Social Proof Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
             <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-200">
-              <div className="text-green-600 font-bold text-3xl mb-2">5000+</div>
+              <div className="text-green-600 font-bold text-3xl mb-2">280+</div>
               <div className="text-slate-600 font-semibold">Zufriedene Händler</div>
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-200">

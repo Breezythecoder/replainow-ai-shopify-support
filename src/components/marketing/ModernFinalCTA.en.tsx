@@ -18,7 +18,7 @@ const ModernFinalCTAEn = () => {
           Ready for the AI revolution?
         </h2>
         <p className="text-lg sm:text-xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed px-4">
-          Over <strong className="text-brand-warning">5000+ Shopify merchants</strong> already use ReplAInow. 
+          Over <strong className="text-brand-warning">280+ Shopify merchants</strong> already use ReplAInow. 
           Join the elite and <strong className="text-brand-warning">crush your competition</strong> with superior AI technology.
         </p>
         
