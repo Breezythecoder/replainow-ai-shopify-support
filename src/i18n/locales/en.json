@@ -134,32 +134,65 @@
     "pricing": {
       "title": "Simple, Transparent Pricing",
       "subtitle": "Start free, scale as you grow",
+      "baseFeatures": [
+        "1-Click Installation",
+        "Unlimited Store Data (Products, Pages, Policies etc.)",
+        "AI Email & AI Live Chat",
+        "Customizable Branding"
+      ],
       "plans": [
         {
           "name": "Starter",
-          "price": "19",
-          "currency": "EUR",
-          "period": "month",
+          "price": "€19",
+          "period": "/ Month",
+          "quota": "Up to 300 AI responses / Month",
+          "trial": "14 days free trial",
           "features": [
-            "Up to 1,000 conversations/month",
-            "3-second response time",
-            "32+ languages",
-            "Basic analytics"
-          ]
+            "1-Click Installation",
+            "Unlimited Store Data (Products, Pages, Policies etc.)",
+            "AI Email & AI Live Chat",
+            "Customizable Branding",
+            "Email sending via ReplAInow address"
+          ],
+          "highlight": false,
+          "description": "Perfect for testing"
         },
         {
-          "name": "Professional",
-          "price": "49",
-          "currency": "EUR",
-          "period": "month",
+          "name": "Growth",
+          "price": "€49",
+          "period": "/ Month",
+          "quota": "Up to 1500 AI responses / Month",
+          "trial": "14 days free trial",
           "features": [
-            "Up to 5,000 conversations/month",
-            "Advanced analytics",
-            "Custom branding",
-            "Priority support"
-          ]
+            "1-Click Installation",
+            "Unlimited Store Data (Products, Pages, Policies etc.)",
+            "AI Email & AI Live Chat",
+            "Customizable Branding",
+            "Email sending with your domain"
+          ],
+          "highlight": true,
+          "badge": "Most Popular Plan",
+          "description": "For growing stores"
+        },
+        {
+          "name": "Pro",
+          "price": "€99",
+          "period": "/ Month",
+          "quota": "Up to 3000 AI responses / Month",
+          "trial": "14 days free trial",
+          "features": [
+            "1-Click Installation",
+            "Unlimited Store Data (Products, Pages, Policies etc.)",
+            "AI Email & AI Live Chat",
+            "Customizable Branding",
+            "Email sending with your domain"
+          ],
+          "highlight": false,
+          "description": "For established stores"
         }
-      ]
+      ],
+      "cta": "Install Now",
+      "guarantee": "14-day money-back guarantee"
     },
     "cta": {
       "title": "Ready to Automate Your Support?",

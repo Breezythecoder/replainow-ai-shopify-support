@@ -1,11 +1,11 @@
-import ModernNavbar from "@/components/marketing/ModernNavbar";
-import ModernHero from "@/components/marketing/ModernHero";
+import ModernNavbarEn from "@/components/marketing/ModernNavbarEn";
+import ModernHeroEn from "@/components/marketing/ModernHeroEn";
 import ModernHowItWorks from "@/components/marketing/ModernHowItWorks";
 import ModernProblemSolution from "@/components/marketing/ModernProblemSolution";
 import ModernFeatures from "@/components/marketing/ModernFeatures";
 import ModernSocialProof from "@/components/marketing/ModernSocialProof";
 import ModernLiveDemo from "@/components/marketing/ModernLiveDemo";
-import ModernPricing from "@/components/marketing/ModernPricing";
+import ModernPricingEn from "@/components/marketing/ModernPricingEn";
 import ModernComparison from "@/components/marketing/ModernComparison";
 import IndustryExamples from "@/components/marketing/IndustryExamples";
 import VideoDemo from "@/components/marketing/VideoDemo";
@@ -46,17 +46,17 @@ const IndexEn = () => {
       <MultilingualSEO />
       
       {/* Main Content */}
-      <ModernNavbar />
+      <ModernNavbarEn />
       
       <main>
-        <ModernHero />
+        <ModernHeroEn />
         <ModernHowItWorks />
         <ModernProblemSolution />
         <ModernFeatures />
         <ModernSocialProof />
         <StoreDataFlow />
         <ModernLiveDemo />
-        <ModernPricing />
+        <ModernPricingEn />
         <ModernComparison />
         <IndustryExamples />
         <VideoDemo />
