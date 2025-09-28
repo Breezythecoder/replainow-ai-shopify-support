@@ -1,5 +1,4 @@
-import { readFileSync, writeFileSync, copyFileSync } from "node:fs";
-import { existsSync } from "node:fs";
+import { readFileSync, writeFileSync, copyFileSync, existsSync, mkdirSync } from "node:fs";
 
 // Create 404.html for SPA fallback
 const html = readFileSync("dist/index.html", "utf8");
@@ -16,4 +15,11 @@ if (existsSync("robots.txt")) {
 if (existsSync("public/.nojekyll")) {
   copyFileSync("public/.nojekyll", "dist/.nojekyll");
   console.log("[OK] .nojekyll copied to dist");
+}
+
+// Create /en directory and copy index.html for GitHub Pages SPA fallback
+if (existsSync("public/en/index.html")) {
+  mkdirSync("dist/en", { recursive: true });
+  copyFileSync("public/en/index.html", "dist/en/index.html");
+  console.log("[OK] /en/index.html created for GitHub Pages SPA fallback");
 }
