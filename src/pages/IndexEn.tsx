@@ -1,18 +1,18 @@
-import ModernNavbarEn from "@/components/marketing/ModernNavbarEn";
-import ModernHeroEn from "@/components/marketing/ModernHeroEn";
-import ModernHowItWorksEn from "@/components/marketing/ModernHowItWorksEn";
+import ModernNavbar from "@/components/marketing/ModernNavbar";
+import ModernHero from "@/components/marketing/ModernHero";
+import ModernHowItWorks from "@/components/marketing/ModernHowItWorks";
 import ModernProblemSolution from "@/components/marketing/ModernProblemSolution";
-import ModernFeaturesEn from "@/components/marketing/ModernFeaturesEn";
-import ModernSocialProofEn from "@/components/marketing/ModernSocialProofEn";
+import ModernFeatures from "@/components/marketing/ModernFeatures";
+import ModernSocialProof from "@/components/marketing/ModernSocialProof";
 import ModernLiveDemo from "@/components/marketing/ModernLiveDemo";
-import ModernPricingEn from "@/components/marketing/ModernPricingEn";
+import ModernPricing from "@/components/marketing/ModernPricing";
 import ModernComparison from "@/components/marketing/ModernComparison";
 import IndustryExamples from "@/components/marketing/IndustryExamples";
 import VideoDemo from "@/components/marketing/VideoDemo";
 import About from "@/components/marketing/About";
 import Contact from "@/components/marketing/Contact";
 import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
-import ModernFooterEn from "@/components/marketing/ModernFooterEn";
+import Footer from "@/components/marketing/Footer";
 import StoreDataFlow from "@/components/marketing/StoreDataFlow";
 import SEO from "@/components/SEO";
 import FAQ from "@/components/marketing/FAQ";
@@ -46,17 +46,17 @@ const IndexEn = () => {
       <MultilingualSEO />
       
       {/* Main Content */}
-      <ModernNavbarEn />
+      <ModernNavbar />
       
       <main>
-        <ModernHeroEn />
-        <ModernHowItWorksEn />
+        <ModernHero />
+        <ModernHowItWorks />
         <ModernProblemSolution />
-        <ModernFeaturesEn />
-        <ModernSocialProofEn />
+        <ModernFeatures />
+        <ModernSocialProof />
         <StoreDataFlow />
         <ModernLiveDemo />
-        <ModernPricingEn />
+        <ModernPricing />
         <ModernComparison />
         <IndustryExamples />
         <VideoDemo />
@@ -66,7 +66,7 @@ const IndexEn = () => {
         <ModernFinalCTA />
       </main>
       
-      <ModernFooterEn />
+      <Footer />
       <MailAndChat />
     </>
   );
