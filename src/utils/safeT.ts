@@ -5,7 +5,9 @@ import { t, type TranslationKeys } from '../i18n';
 // Base schema for common UI patterns
 export const FeaturesItemSchema = z.object({
   title: z.string().min(1),
-  desc: z.string().min(1)
+  desc: z.string().min(1),
+  story: z.string().min(1),
+  impact: z.string().min(1)
 });
 
 export const FeaturesArraySchema = z.array(FeaturesItemSchema);
