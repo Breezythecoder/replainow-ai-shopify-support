@@ -82,26 +82,50 @@
       "copyright": "© 2024 ReplAInow. All rights reserved."
     },
     "features": {
-      "title": "Why Choose ReplAInow?",
-      "subtitle": "Transform your Shopify store with AI-powered customer support",
+      "title": {
+        "primary": "Why ReplAInow",
+        "secondary": "outperforms every competitor"
+      },
+      "subtitle": {
+        "highlight": "Revolutionary GPT-4.1 technology",
+        "continuation": "meets perfect Shopify integration"
+      },
       "items": [
         {
-          "title": "GPT-4.1 Intelligence",
-          "description": "Latest AI technology understands context like a human expert",
-          "story": "Your AI thinks like a 10-year Shopify expert - just 1000x faster",
-          "impact": "+187% Conversion"
+          "title": "GPT-4.1 intelligence",
+          "desc": "Latest AI technology understands context like a human expert",
+          "story": "Your AI thinks like a 10-year Shopify expert – just 1000× faster",
+          "impact": "+187% conversion"
         },
         {
-          "title": "3-Second Responses",
-          "description": "Instant responses while Gorgias & Co. are still loading",
-          "story": "Customer asks  AI responds  Customer buys. Everything in 3 seconds",
+          "title": "3-second responses",
+          "desc": "Instant answers while Gorgias & co. are still loading",
+          "story": "Customer asks → AI responds → Customer buys. All within 3 seconds",
           "impact": "90% fewer tickets"
         },
         {
-          "title": "32+ Languages",
-          "description": "Automatic translation to customer's native language",
-          "story": "Customer writes in German, AI responds in Spanish - perfect!",
-          "impact": "75% cost savings"
+          "title": "32+ languages native",
+          "desc": "Perfect answers in the customer's language – no translation mistakes",
+          "story": "French shopper receives a flawless response in French",
+          "impact": "+45% international revenue"
+        },
+        {
+          "title": "Real-time Shopify data",
+          "desc": "AI knows ALL products, pricing, and stock automatically",
+          "story": "AI knows: ‘iPhone case in stock, 15% discount active, ships tomorrow’",
+          "impact": "100% accuracy"
+        },
+        {
+          "title": "75% cost savings",
+          "desc": "Superior AND cheaper than costly competitors",
+          "story": "While Gorgias costs €200/month, you only pay €19",
+          "impact": "€1,368 saved per year"
+        },
+        {
+          "title": "1-click installation",
+          "desc": "Setup in under 60 seconds – zero complex configuration",
+          "story": "Click → AI learns your store → Done. No IT team needed",
+          "impact": "60s setup"
         }
       ]
     },
@@ -112,6 +136,12 @@
     "pricing": {
       "title": "Simple, Transparent Pricing",
       "subtitle": "Start free, scale as you grow",
+      "headline": {
+        "primary": "More support power",
+        "secondary": "for less money",
+        "tagline": "A traditional support agent easily costs €2,000 per month.",
+        "detail": "ReplAInow starts at just €19/month and works 24/7 without breaks."
+      },
       "baseFeatures": [
         "1-Click Installation",
         "Unlimited Store Data (Products, Pages, Policies etc.)",
@@ -133,7 +163,8 @@
             "Email sending via ReplAInow address"
           ],
           "highlight": false,
-          "description": "Perfect for testing"
+          "description": "Perfect for testing",
+          "cta": "Start with Starter"
         },
         {
           "name": "Growth",
@@ -150,7 +181,8 @@
           ],
           "highlight": true,
           "badge": "Most Popular Plan",
-          "description": "For growing stores"
+          "description": "For growing stores",
+          "cta": "Scale with Growth"
         },
         {
           "name": "Pro",
@@ -166,11 +198,69 @@
             "Email sending with your domain"
           ],
           "highlight": false,
-          "description": "For established stores"
+          "description": "For established stores",
+          "cta": "Upgrade to Pro"
+        },
+        {
+          "name": "Scale",
+          "price": "€199",
+          "period": "/ Month",
+          "quota": "Unlimited AI responses",
+          "trial": "14 days free trial",
+          "features": [
+            "1-Click Installation",
+            "Unlimited Store Data (Products, Pages, Policies etc.)",
+            "AI Email & AI Live Chat",
+            "Customizable Branding",
+            "Email sending with your domain"
+          ],
+          "highlight": false,
+          "description": "For enterprise teams",
+          "cta": "Go all-in with Scale"
         }
       ],
       "cta": "Install Now",
-      "guarantee": "14-day money-back guarantee"
+      "ctaButton": "Install {0}",
+      "guarantee": "14-day money-back guarantee",
+      "savings": {
+        "badge": "COST COMPARISON",
+        "title": "Massive Cost Savings",
+        "description": "While competitors charge per ticket, you get unlimited responses with ReplAInow.",
+        "competitors": [
+          {
+            "name": "Gorgias",
+            "price": "€50+/month",
+            "surcharge": "+ €2-5 per ticket",
+            "savings": "€372+ saved/year"
+          },
+          {
+            "name": "Intercom",
+            "price": "€74+/month",
+            "surcharge": "+ €1-3 per ticket",
+            "savings": "€660+ saved/year"
+          },
+          {
+            "name": "Zendesk",
+            "price": "€115+/month",
+            "surcharge": "+ €0.50-2 per ticket",
+            "savings": "€1,152+ saved/year"
+          }
+        ],
+        "ownPlan": {
+          "name": "ReplAInow Scale",
+          "price": "€199/month",
+          "tagline": "Everything included",
+          "bullets": [
+            "Unlimited AI responses",
+            "No per-ticket fees",
+            "No hidden costs"
+          ]
+        },
+        "bottomCallout": {
+          "title": "With 1,000 tickets/month Gorgias adds €3,000+ in fees!",
+          "subtitle": "With ReplAInow you pay €0 extra — whether it's 100 or 10,000 tickets."
+        }
+      }
     },
     "cta": {
       "title": "Ready to Automate Your Support?",
@@ -237,6 +327,181 @@
         "role": "CEO & Founder",
         "quote": "As an e-commerce entrepreneur and programmer, I've experienced firsthand how frustrating it is when customer queries go unanswered for hours. ReplAInow is the solution I wished for back then - intelligent, fast, and affordable."
       }
+    },
+    "comparison": {
+      "table": {
+        "titlePrimary": "Why ReplAInow",
+        "titleHighlight": "wins every comparison",
+        "subtitle": "Direct comparison with Gorgias, Intercom & Zendesk",
+        "legend": {
+          "feature": "Feature",
+          "aiComparison": "⚔ AI Comparison",
+          "hero": "ReplAInow",
+          "poweredBy": "Powered by GPT-4.1",
+          "gorgias": "Gorgias",
+          "intercom": "Intercom",
+          "zendesk": "Zendesk"
+        },
+        "rows": [
+          {
+            "label": "AI intelligence",
+            "replAInow": "YES · GPT-4.1 latest",
+            "gorgias": "NO · Basic macros",
+            "intercom": "NO · Limited AI",
+            "zendesk": "NO · Legacy AI"
+          },
+          {
+            "label": "Response time",
+            "replAInow": "YES · 3 seconds",
+            "gorgias": "NO · 2-5 minutes",
+            "intercom": "NO · 5-10 minutes",
+            "zendesk": "NO · 10+ minutes"
+          },
+          {
+            "label": "Languages",
+            "replAInow": "YES · 32+ native",
+            "gorgias": "NO · 10 basic",
+            "intercom": "NO · 15 basic",
+            "zendesk": "NO · 20 basic"
+          },
+          {
+            "label": "Shopify integration",
+            "replAInow": "YES · Real-time sync",
+            "gorgias": "NO · Manual import",
+            "intercom": "NO · Basic connect",
+            "zendesk": "NO · Complex setup"
+          },
+          {
+            "label": "Price / month",
+            "replAInow": "YES · €19 flat",
+            "gorgias": "NO · €50+",
+            "intercom": "NO · €74+",
+            "zendesk": "NO · €115+"
+          },
+          {
+            "label": "Setup time",
+            "replAInow": "YES · 60 seconds",
+            "gorgias": "NO · 2-3 days",
+            "intercom": "NO · 1 week",
+            "zendesk": "NO · 2 weeks"
+          },
+          {
+            "label": "ROI",
+            "replAInow": "YES · 6× conversion",
+            "gorgias": "NO · Neutral",
+            "intercom": "NO · Neutral",
+            "zendesk": "NO · Negative"
+          }
+        ]
+      },
+      "savings": {
+        "headings": {
+          "competitors": "Expensive competitors",
+          "competitorsSubtitle": "Basic features for premium pricing",
+          "ownPlan": "ReplAInow power",
+          "ownPlanSubtitle": "Premium features at fair pricing"
+        },
+        "intro": {
+          "badge": "COST COMPARISON",
+          "title": "Massive Cost Savings",
+          "description": "While competitors charge per ticket, ReplAInow gives you unlimited responses with real-time Shopify data."
+        },
+        "competitors": [
+          {
+            "name": "Gorgias",
+            "price": "€50+/month",
+            "bulletPoints": [
+              "Basic macros",
+              "Slow support",
+              "Limited languages"
+            ],
+            "summary": "€372+ extra per year for basic automation"
+          },
+          {
+            "name": "Intercom",
+            "price": "€74+/month",
+            "bulletPoints": [
+              "Expensive add-ons",
+              "Complex setup",
+              "Limited Shopify context"
+            ],
+            "summary": "€660+ extra per year for partial coverage"
+          },
+          {
+            "name": "Zendesk",
+            "price": "€115+/month",
+            "bulletPoints": [
+              "Legacy workflows",
+              "Long onboarding",
+              "Hidden ticket fees"
+            ],
+            "summary": "€1,152+ extra per year for outdated tooling"
+          }
+        ],
+        "ownPlan": {
+          "price": "€19/month",
+          "tagline": "All premium features included",
+          "features": [
+            "GPT-4.1 AI engine",
+            "32+ languages native",
+            "3-second response time",
+            "Unlimited AI answers",
+            "GDPR-compliant",
+            "24/7 availability"
+          ]
+        },
+        "totals": {
+          "competitorTotal": "€1,800+/year",
+          "competitorNote": "…for basic automation and per-ticket fees",
+          "ownBenefits": [
+            "Pay 75% less",
+            "Automate 90% of tickets",
+            "Boost conversion by 187%"
+          ],
+          "calloutTitle": "1,000 tickets/month = €3,000+ extra with Gorgias",
+          "calloutSubtitle": "With ReplAInow you pay €0 extra – whether 100 or 10,000 tickets."
+        }
+      }
+    },
+    "mailAndChat": {
+      "meta": {
+        "titleMain": "AI-powered mail & live chat",
+        "titleHighlight": "24/7 fully integrated",
+        "subtitle": "Handle every customer request instantly in any channel. ReplAInow connects to your Shopify store and answers emails and live-chat messages in seconds – brand-consistent, context-aware and multilingual.",
+        "mailTitle": "Mail · AI Inbox",
+        "mailAlt": "ReplAInow Mail Inbox with AI-powered replies using Shopify data",
+        "chatTitle": "Live chat · Real-time",
+        "chatAlt": "ReplAInow live chat interface answering in real time on desktop and mobile"
+      },
+      "features": {
+        "mailPrimary": [
+          "AI replies to customer emails instantly",
+          "Shopify data embedded automatically",
+          "Answers stay on brand and multilingual"
+        ],
+        "mailSecondary": [
+          "Inbox zero every day",
+          "Precise, Shopify-aware responses",
+          "Save 15+ hours every week"
+        ],
+        "chatPrimary": [
+          "Fully automated chat coverage 24/7",
+          "Real-time Shopify data for every reply",
+          "Unified view of every active conversation"
+        ],
+        "chatSecondary": [
+          "AI auto-mode – take over or hand back to AI anytime",
+          "Categorise, tag and prioritise effortlessly",
+          "Multilingual responses in the customer’s language"
+        ]
+      },
+      "cta": {
+        "install": "Try ReplAInow for free",
+        "installAria": "Try ReplAInow for free",
+        "demo": "See live demo",
+        "demoAria": "Watch live demo"
+      },
+      "fallbackSubtitle": "AI mail and chat automation for Shopify merchants."
     }
   }
 }

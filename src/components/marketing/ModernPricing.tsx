@@ -1,71 +1,54 @@
 import { Button } from "@/components/ui/button";
 import { t } from "@/i18n";
+import { safeArray, safeObject } from "@/utils/safeT";
+import { z } from "zod";
+
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
-const baseFeatures = [
-  "1-Klick-Installation",
-  "Unlimitierte Shopdaten (Produkte, Seiten, Richtlinien etc.)",
-  "AI Mail & AI Live Chat",
-  "Personalisierbares Branding",
-];
+const BaseFeaturesSchema = z.array(z.string().min(1));
 
-const plans = [
-  {
-    name: "Starter",
-    price: "€19",
-    period: "/ Monat",
-    quota: "Bis zu 300 AI Antworten / Monat",
-    trial: "14 days free test",
-    features: [
-      ...baseFeatures,
-      "E-Mail Versand über ReplAInow Adresse",
-    ],
-    highlight: false,
-    description: "Perfekt zum Testen"
-  },
-  {
-    name: "Growth",
-    price: "€49",
-    period: "/ Monat",
-    quota: "Bis zu 1500 AI Antworten / Monat",
-    trial: "14 days free test",
-    features: [
-      ...baseFeatures,
-      "E-Mail Versand mit deiner Domain",
-    ],
-    highlight: true,
-    badge: "Beliebtester Plan",
-    description: "Für wachsende Stores"
-  },
-  {
-    name: "Pro",
-    price: "€99",
-    period: "/ Monat",
-    quota: "Bis zu 3000 AI Antworten / Monat",
-    trial: "14 days free test",
-    features: [
-      ...baseFeatures,
-      "E-Mail Versand mit deiner Domain",
-    ],
-    highlight: false,
-    description: "Für etablierte Stores"
-  },
-  {
-    name: "Scale",
-    price: "€199",
-    period: "/ Monat",
-    quota: "Unlimitierte AI Antworten",
-    trial: "14 days free test",
-    features: [
-      ...baseFeatures,
-      "E-Mail Versand mit deiner Domain",
-    ],
-    highlight: false,
-    description: "Für Store-Ketten"
-  }
-];
+const PlanSchema = z.object({
+  name: z.string().min(1),
+  price: z.string().min(1),
+  period: z.string().min(1),
+  quota: z.string().min(1),
+  trial: z.string().min(1),
+  features: z.array(z.string().min(1)),
+  highlight: z.boolean().optional(),
+  badge: z.string().optional(),
+  description: z.string().optional(),
+  cta: z.string().optional()
+});
+
+const SavingsSchema = z.object({
+  badge: z.string().min(1),
+  title: z.string().min(1),
+  description: z.string().min(1),
+  competitors: z.array(
+    z.object({
+      name: z.string().min(1),
+      price: z.string().min(1),
+      surcharge: z.string().min(1),
+      savings: z.string().min(1)
+    })
+  ),
+  ownPlan: z.object({
+    name: z.string().min(1),
+    price: z.string().min(1),
+    tagline: z.string().min(1),
+    bullets: z.array(z.string().min(1))
+  }),
+  bottomCallout: z.object({
+    title: z.string().min(1),
+    subtitle: z.string().min(1)
+  })
+});
 
 const ModernPricing = () => {
+  const baseFeatures = safeArray(BaseFeaturesSchema, "ui.pricing.baseFeatures");
+  const pricingPlans = safeArray(z.array(PlanSchema), "ui.pricing.plans");
+  const savingsSection = safeObject(SavingsSchema, "ui.pricing.savings");
+
   return (
     <section id="pricing" aria-labelledby="pricing-heading" className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       {/* AI-Powered background elements */}
@@ -100,17 +83,30 @@ const ModernPricing = () => {
         </div>
         
         <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-center mb-4 tracking-tight px-4">
-          <span className="text-white">Mehr Support-Power für</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">weniger Geld</span>
+          <span className="text-white">{t("ui.pricing.headline.primary")}</span> <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-500">{t("ui.pricing.headline.secondary")}</span>
         </h2>
         <p className="text-center text-blue-100 max-w-3xl mx-auto mb-2 text-lg">
-          Ein Support-Agent kostet im Schnitt €2.000 pro Monat.
+          {t("ui.pricing.headline.tagline")}
         </p>
         <p className="text-center text-blue-100 max-w-3xl mx-auto mb-16 text-lg">
-          ReplAInow startet bei <strong className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">€19/Monat</strong> und arbeitet 24/7, ohne Pause.
+          {t("ui.pricing.headline.detail")}
         </p>
+
+        {baseFeatures.length > 0 && (
+          <div className="max-w-4xl mx-auto mb-12">
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-blue-100 text-sm sm:text-base">
+              {baseFeatures.map((feature) => (
+                <li key={feature} className="flex items-center gap-2">
+                  <span className="inline-block h-2 w-2 rounded-full bg-cyan-400"></span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-7xl mx-auto mb-12 sm:mb-16">
-          {plans.map((plan, i) => {
+          {pricingPlans.map((plan) => {
             const Card = (
               <div className={`bg-slate-800/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 h-full flex flex-col border ${plan.highlight ? 'border-blue-400/60 shadow-blue-500/25 bg-slate-800/70' : 'border-blue-500/30 shadow-2xl'} relative overflow-hidden hover:border-blue-400/50 transition-all duration-300`}>
                 <div className="text-center mb-6 sm:mb-8">
@@ -128,8 +124,8 @@ const ModernPricing = () => {
                     <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span>
                     <span className="text-blue-100 font-bold text-xs sm:text-sm leading-relaxed">{plan.quota}</span>
                   </li>
-                  {plan.features.map((feature, j) => (
-                    <li key={j} className="flex items-start gap-2 sm:gap-3">
+                  {plan.features?.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2 sm:gap-3">
                       <span className="text-brand-success text-base sm:text-lg mt-0.5 flex-shrink-0"></span>
                       <span className="text-blue-100 font-medium leading-relaxed text-xs sm:text-sm">{feature}</span>
                     </li>
@@ -144,7 +140,7 @@ const ModernPricing = () => {
                     className="w-full text-sm sm:text-base"
                   >
                     <a href={`${OAUTH_URL}?utm_source=site&utm_campaign=${encodeURIComponent(plan.name)}&utm_content=pricing`}>
-                      Kostenlos test
+                      {plan.cta ?? t("ui.pricing.cta")}
                     </a>
                   </Button>
                   <div className="flex items-center justify-center gap-2 text-xs text-slate-500">
@@ -183,49 +179,38 @@ const ModernPricing = () => {
             <div className="text-center mb-8">
               <div className="inline-flex items-center gap-2 bg-green-500/20 text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-4">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                KOSTENVERGLEICH
+                {savingsSection?.badge ?? ""}
               </div>
               <h3 className="text-4xl font-bold text-white mb-4">
-                Massive Cost Savings
+                {savingsSection?.title ?? ""}
               </h3>
               <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-                Während Konkurrenten <span className="text-red-400 font-bold">pro Ticket</span> abrechnen, 
-                ist bei uns <span className="text-green-400 font-bold">ALLES UNLIMITIERT</span>
+                {savingsSection?.description ?? ""}
               </p>
             </div>
-            
+
             <div className="grid lg:grid-cols-4 gap-6 mb-8">
               {/* Competitors */}
               <div className="lg:col-span-3 grid md:grid-cols-3 gap-6">
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-red-500/20 hover:border-red-500/40 transition-all">
-                  <div className="text-red-400 font-bold text-lg mb-3">Gorgias</div>
-                  <div className="text-white font-semibold mb-2">€50+/Monat</div>
-                  <div className="text-sm text-red-300 mb-4">+ €2-5 pro Ticket</div>
-                  <div className="text-green-400 font-bold text-lg">€372+ gespart/Jahr</div>
-                </div>
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-red-500/20 hover:border-red-500/40 transition-all">
-                  <div className="text-red-400 font-bold text-lg mb-3">Intercom</div>
-                  <div className="text-white font-semibold mb-2">€74+/Monat</div>
-                  <div className="text-sm text-red-300 mb-4">+ €1-3 pro Ticket</div>
-                  <div className="text-green-400 font-bold text-lg">€660+ gespart/Jahr</div>
-                </div>
-                <div className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-red-500/20 hover:border-red-500/40 transition-all">
-                  <div className="text-red-400 font-bold text-lg mb-3">Zendesk</div>
-                  <div className="text-white font-semibold mb-2">€115+/Monat</div>
-                  <div className="text-sm text-red-300 mb-4">+ €0.50-2 pro Ticket</div>
-                  <div className="text-green-400 font-bold text-lg">€1.152+ gespart/Jahr</div>
-                </div>
+                {savingsSection?.competitors?.map((competitor) => (
+                  <div key={competitor.name} className="bg-slate-800/50 backdrop-blur-sm rounded-2xl p-6 border border-red-500/20 hover:border-red-500/40 transition-all">
+                    <div className="text-red-400 font-bold text-lg mb-3">{competitor.name}</div>
+                    <div className="text-white font-semibold mb-2">{competitor.price}</div>
+                    <div className="text-sm text-red-300 mb-4">{competitor.surcharge}</div>
+                    <div className="text-green-400 font-bold text-lg">{competitor.savings}</div>
+                  </div>
+                ))}
               </div>
               
               {/* ReplAInow */}
               <div className="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-6 border border-blue-500/30 shadow-lg">
-                <div className="text-white font-bold text-lg mb-3">ReplAInow Scale</div>
-                <div className="text-white font-bold text-2xl mb-2">€199/Monat</div>
-                <div className="text-blue-100 text-sm mb-4">Alles inklusive</div>
+                <div className="text-white font-bold text-lg mb-3">{savingsSection?.ownPlan?.name}</div>
+                <div className="text-white font-bold text-2xl mb-2">{savingsSection?.ownPlan?.price}</div>
+                <div className="text-blue-100 text-sm mb-4">{savingsSection?.ownPlan?.tagline}</div>
                 <div className="space-y-2">
-                  <div className="text-green-300 text-sm font-semibold">✓ UNLIMITIERTE AI-Antworten</div>
-                  <div className="text-green-300 text-sm font-semibold">✓ Keine Per-Ticket-Gebühren</div>
-                  <div className="text-green-300 text-sm font-semibold">✓ Keine versteckten Kosten</div>
+                  {savingsSection?.ownPlan?.bullets?.map((bullet) => (
+                    <div key={bullet} className="text-green-300 text-sm font-semibold">{bullet}</div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -233,10 +218,10 @@ const ModernPricing = () => {
             <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-2xl p-6 border border-green-500/20">
               <div className="text-center">
                 <p className="text-green-400 font-bold text-lg mb-2">
-                  Bei 1.000 Tickets/Monat: Gorgias kostet €3.000+ extra!
+                  {savingsSection?.bottomCallout?.title}
                 </p>
                 <p className="text-white font-semibold">
-                  Mit ReplAInow: 0 extra - egal ob 100 oder 10.000 Tickets!
+                  {savingsSection?.bottomCallout?.subtitle}
                 </p>
               </div>
             </div>

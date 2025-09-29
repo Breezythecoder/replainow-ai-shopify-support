@@ -7,6 +7,7 @@ export default defineConfig({
   build: {
     outDir: "dist",
     emptyOutDir: true,       // Dist vor Build leeren
+    sourcemap: true,         // Enable source maps for audit
     rollupOptions: {
       output: {
         manualChunks: {

@@ -14,8 +14,8 @@ interface StaticHeadProps {
  * and ensures search engines can crawl essential metadata even if JavaScript fails.
  */
 export const StaticHead: React.FC<StaticHeadProps> = ({ locale, pathname }) => {
-  const isEnglishRoute = pathname.startsWith('/en');
-  const currentLocale = isEnglishRoute ? 'en' : 'de';
+  const normalizedPath = pathname.endsWith('/') && pathname !== '/' ? pathname.slice(0, -1) : pathname;
+  const currentLocale = locale || (normalizedPath.startsWith('/en') ? 'en' : 'de');
 
   // Get translations for current locale
   const title = t('seo.title', currentLocale);
@@ -26,9 +26,10 @@ export const StaticHead: React.FC<StaticHeadProps> = ({ locale, pathname }) => {
   // Canonical URL
   const canonicalUrl = `https://replainow.com${pathname}`;
 
-  // Hreflang URLs
-  const germanUrl = 'https://replainow.com/';
-  const englishUrl = 'https://replainow.com/en';
+  const hreflangMap: Record<string, string> = {
+    de: 'https://replainow.com/',
+    en: 'https://replainow.com/en'
+  };
 
   // Structured data (schema.org)
   const organizationSchema = {
@@ -92,9 +93,9 @@ export const StaticHead: React.FC<StaticHeadProps> = ({ locale, pathname }) => {
       <link rel="canonical" href={canonicalUrl} />
 
       {/* Hreflang tags for internationalization */}
-      <link rel="alternate" hreflang="de" href={germanUrl} />
-      <link rel="alternate" hreflang="en" href={englishUrl} />
-      <link rel="alternate" hreflang="x-default" href={germanUrl} />
+      <link rel="alternate" hreflang="de" href={hreflangMap.de} />
+      <link rel="alternate" hreflang="en" href={hreflangMap.en} />
+      <link rel="alternate" hreflang="x-default" href={hreflangMap.de} />
 
       {/* Open Graph tags */}
       <meta property="og:title" content={ogTitle} />

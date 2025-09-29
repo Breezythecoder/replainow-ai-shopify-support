@@ -1,69 +1,31 @@
 import { useState, useEffect, useRef } from "react";
 import { STORE_COUNT } from "@/config/siteStats";
-import { Brain, Zap, Clock, Globe, Target, Shield, TrendingUp, Users, MessageSquare, BarChart3, CheckCircle, Download } from "lucide-react";
+import { Brain, Clock, Globe, BarChart3, TrendingUp, Download } from "lucide-react";
 import { t } from "@/i18n";
+import { safeArray, FeaturesArraySchema } from "@/utils/safeT";
 const ModernFeatures = () => {
   const [activeFeature, setActiveFeature] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const featuresRef = useRef<HTMLDivElement>(null);
   
   // Get current locale from URL path
-  const features = [
-    {
-      icon: Brain,
-      title: "GPT-4.1 Intelligence",
-      desc: "Neueste AI-Technologie versteht Kontext wie ein menschlicher Experte",
-      gradient: "from-indigo-500 to-blue-500",
-      story: "Deine AI denkt wie ein 10-jähriger Shopify-Experte - nur 1000x schneller",
-      impact: "+187% Conversion",
-      color: "cyan"
-    },
-    {
-      icon: Clock,
-      title: "3-seconds Antworten",
-      desc: "Instant-Responses während Gorgias & Co. noch laden",
-      gradient: "from-purple-500 to-pink-500",
-      story: "Kunde fragt  AI antwortet  Kunde kauft. Alles in 3 seconds",
-      impact: "90% weniger Tickets",
-      color: "purple"
-    },
-    {
-      icon: Globe,
-      title: "32+ languages Nativ",
-      desc: "Perfekte Antworten in Kundensprache - keine Übersetzungsfehler",
-      gradient: "from-cyan-500 to-teal-500",
-      story: "Französische Kundin bekommt perfekte Antwort auf Französisch",
-      impact: "+45% International",
-      color: "blue"
-    },
-    {
-      icon: BarChart3,
-      title: "Echtzeit Shopify data",
-      desc: "AI kennt ALLE Produkte, Pricing, Lagerbestände automatisch",
-      gradient: "from-green-500 to-emerald-500",
-      story: "AI weiß: 'iPhone Case ist auf Lager, 15% Rabatt verfügbar, Versand morgen'",
-      impact: "100% Accuracy",
-      color: "green"
-    },
-    {
-      icon: TrendingUp,
-      title: "75% Cost Savings",
-      desc: "Überlegen UND günstiger als teure Konkurrenz",
-      gradient: "from-amber-500 to-orange-500",
-      story: "Während Gorgias €200/Monat kostet, zahlst du nur €19",
-      impact: "€1.368/Jahr gespart",
-      color: "yellow"
-    },
-    {
-      icon: Download,
-      title: "1-Klick Installation",
-      desc: "Setup in unter 60 seconds - keine komplexe Konfiguration",
-        gradient: "from-emerald-500 to-green-500",
-      story: "Klick → AI lernt deinen Store → Fertig. Keine IT-Abteilung nötig",
-      impact: "60s Setup",
-      color: "red"
-    }
+  const featureItems = safeArray(FeaturesArraySchema, "ui.features.items");
+  const iconMap = [Brain, Clock, Globe, BarChart3, TrendingUp, Download];
+  const gradientMap = [
+    "from-indigo-500 to-blue-500",
+    "from-purple-500 to-pink-500",
+    "from-cyan-500 to-teal-500",
+    "from-green-500 to-emerald-500",
+    "from-amber-500 to-orange-500",
+    "from-emerald-500 to-green-500"
   ];
+  const colorMap = ["cyan", "purple", "blue", "green", "yellow", "red"];
+  const features = featureItems.map((item, index) => ({
+    ...item,
+    icon: iconMap[index] ?? Brain,
+    gradient: gradientMap[index] ?? gradientMap[0],
+    color: colorMap[index] ?? colorMap[0]
+  }));
 
   // Intersection Observer
   useEffect(() => {
@@ -134,13 +96,12 @@ const ModernFeatures = () => {
           
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-center mb-6 sm:mb-8 tracking-tight px-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient-x">
-              Warum ReplAInow
+              {t("ui.features.title.primary")}
             </span>
-            <span className="block text-white mt-2">die Konkurrenz zerstört</span>
+            <span className="block text-white mt-2">{t("ui.features.title.secondary")}</span>
           </h2>
             <p className="text-lg sm:text-xl text-blue-100 text-center mb-12 sm:mb-16 max-w-4xl mx-auto px-4">
-            <span className="text-cyan-400 font-bold">Revolutionäre GPT-4.1 Technologie</span> trifft auf
-            <span className="text-purple-400 font-bold"> perfekte Shopify-Integration</span>
+            <span className="text-cyan-400 font-bold">{t("ui.features.subtitle.highlight")}</span> {t("ui.features.subtitle.continuation")}
           </p>
         </div>
         
