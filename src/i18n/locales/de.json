@@ -129,27 +129,6 @@
         }
       ]
     },
-    "howItWorks": {
-      "title": "So einfach {highlight}dominierst{/highlight} du den Kundenservice",
-      "steps": [
-        {
-          "title": "App installieren",
-          "desc": "1-Klick Installation aus dem Shopify App Store"
-        },
-        {
-          "title": "Automatische Verbindung",
-          "desc": "AI lernt ALLE deine Produkte & Policies automatisch"
-        },
-        {
-          "title": "AI antwortet sofort",
-          "desc": "Kunden bekommen perfekte Antworten in 3 Sekunden"
-        },
-        {
-          "title": "Profits explodieren",
-          "desc": "+187% Conversion bei 75% niedrigeren Kosten"
-        }
-      ]
-    },
     "faq": {
       "title": "Häufig gestellte Fragen",
       "subtitle": "Alles, was du vor dem Start wissen musst - kurz und klar.",
@@ -524,7 +503,9 @@
           "title": "KI beginnt zu antworten",
           "description": "Dein KI-Assistent beginnt sofort mit der Bearbeitung von Kundenanfragen mit menschlicher Präzision."
         }
-      ]
+      ],
+      "ctaInstall": "Kostenlos testen",
+      "ctaDemo": "Live-Demo ansehen"
     },
     "liveDemo": {
       "badge": "⚡ INTERAKTIVE DEMO",
