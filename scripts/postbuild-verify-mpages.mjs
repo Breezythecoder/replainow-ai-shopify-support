@@ -65,11 +65,10 @@ validateHtml(deHtml, "de", "https://replainow.com/");
 const enHtml = fs.readFileSync("dist/en/index.html", "utf8");
 validateHtml(enHtml, "en", "https://replainow.com/en");
 
-// Service Worker validation
+// Service Worker validation (disabled - SW is now empty stub)
 const swContent = fs.readFileSync("dist/sw.js", "utf8");
-if (!/VERSION/.test(swContent)) fail("Service Worker: VERSION constant missing");
-if (!/skipWaiting/.test(swContent)) fail("Service Worker: skipWaiting() missing");
-if (!/clients\.claim/.test(swContent)) fail("Service Worker: clients.claim() missing");
+// SW is now intentionally empty/minimal - no validation needed
+console.log("✅ Service Worker: Empty stub (intentionally disabled)");
 
 // Sitemap validation
 const sitemapContent = fs.readFileSync("dist/sitemap.xml", "utf8");

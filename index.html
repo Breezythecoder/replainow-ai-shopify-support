@@ -20,18 +20,7 @@
     
     <!-- SEO Meta Tags will be handled by SEOHead component -->
 
-    <!-- SW NEUTRALIZER - Temporary registration to clear caches -->
-    <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/sw.js?v=KILL-1')
-          .then((registration) => {
-            console.log('SW neutralizer registered: ', registration);
-          })
-          .catch((registrationError) => {
-            console.log('SW neutralizer registration failed: ', registrationError);
-          });
-      }
-    </script>
+    <!-- SW-Registrierung endgültig entfernt -->
   </head>
   <body>
     <div id="root"></div>
