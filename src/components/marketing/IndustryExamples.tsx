@@ -1,44 +1,37 @@
 import { ShoppingBag, Smartphone, Heart, Home, Sparkles } from "lucide-react";
+import { t } from "@/i18n";
+import { safeArray } from "@/utils/safeT";
+import { z } from "zod";
+
+// Schema for Industry Examples
+const IndustrySchema = z.object({
+  name: z.string(),
+  example: z.string(),
+  challenges: z.array(z.string()),
+  solution: z.string(),
+  results: z.string()
+});
+
+const IndustriesArraySchema = z.array(IndustrySchema);
 
 const IndustryExamples = () => {
-  const industries = [
-    {
-      name: "Fashion & Mode",
-      icon: ShoppingBag,
-      example: "ModeStore",
-      challenge: "Größenberatung, Rückgabe, Styling-Tipps",
-      solution: "AI erkennt Produktmerkmale und gibt personalisierte Empfehlungen",
-      result: "+45% Conversion, -60% Support-Tickets",
-      gradient: "from-pink-500 to-rose-500"
-    },
-    {
-      name: "Elektronik & Tech",
-      icon: Smartphone,
-      example: "TechGadgets",
-      challenge: "Technische Fragen, Kompatibilität, Setup-Hilfe",
-      solution: "AI kennt alle Produktspezifikationen und löst 90% der Fragen",
-      result: "+67% Kundenzufriedenheit, -80% Wartezeiten",
-      gradient: "from-blue-500 to-indigo-500"
-    },
-    {
-      name: "Beauty & Kosmetik",
-      icon: Heart,
-      example: "BeautyStore",
-      challenge: "Produktberatung, Hauttyp-Analyse, Anwendungstipps",
-      solution: "AI analysiert Hauttyp und empfiehlt passende Produkte",
-      result: "+52% Upselling, -70% Retouren",
-      gradient: "from-purple-500 to-pink-500"
-    },
-    {
-      name: "Home & Garten",
-      icon: Home,
-      example: "HomeGarden",
-      challenge: "Montageanleitungen, Pflegetipps, Kompatibilität",
-      solution: "AI liefert detaillierte Anleitungen und Pflegehinweise",
-      result: "+38% Kundenzufriedenheit, -55% Support-Aufwand",
-      gradient: "from-green-500 to-emerald-500"
-    }
+  // Get industries from i18n
+  const industriesData = safeArray(IndustriesArraySchema, "ui.industryExamples.industries");
+  
+  // Map with static icons and gradients
+  const iconMap = [ShoppingBag, Smartphone, Heart, Home];
+  const gradientMap = [
+    "from-pink-500 to-rose-500",
+    "from-blue-500 to-indigo-500", 
+    "from-purple-500 to-pink-500",
+    "from-green-500 to-emerald-500"
   ];
+  
+  const industries = industriesData.map((industry, index) => ({
+    ...industry,
+    icon: iconMap[index] || ShoppingBag,
+    gradient: gradientMap[index] || gradientMap[0]
+  }));
 
   return (
     <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
@@ -70,20 +63,18 @@ const IndustryExamples = () => {
         <div className="inline-block mb-6">
           <span className="px-6 py-3 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 text-white font-black text-sm rounded-full shadow-2xl animate-pulse relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
-            <span className="relative z-10">🏭 BRANCHENLÖSUNGEN</span>
+            <span className="relative z-10">{t("ui.industryExamples.badge")}</span>
           </span>
         </div>
         
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tight">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient-x">
-              Branchenspezifische
+              {t("ui.industryExamples.title")}
             </span>
-            <span className="block text-white mt-2">AI-Lösungen</span>
           </h2>
           <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto">
-            ReplAInow passt sich perfekt an deine Branche an und löst 
-            <span className="text-cyan-400 font-bold"> branchenspezifische Kundenfragen</span>
+            {t("ui.industryExamples.subtitle")}
           </p>
         </div>
 
@@ -107,7 +98,7 @@ const IndustryExamples = () => {
                 </div>
                 <div className="flex flex-col">
                   <span className="font-semibold text-red-400">Herausforderung:</span>
-                  <span className="text-blue-100 break-words">{industry.challenge}</span>
+                  <span className="text-blue-100 break-words">{industry.challenges.join(", ")}</span>
                 </div>
                 <div className="flex flex-col flex-1">
                   <span className="font-semibold text-green-400">AI-Lösung:</span>
@@ -115,7 +106,7 @@ const IndustryExamples = () => {
                 </div>
                 <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 rounded-lg p-3 border border-green-400/30 mt-auto">
                   <span className="font-semibold text-green-400">Ergebnis:</span>
-                  <span className="text-green-300 ml-1 font-semibold break-words">{industry.result}</span>
+                  <span className="text-green-300 ml-1 font-semibold break-words">{industry.results}</span>
                 </div>
               </div>
             </div>
