@@ -33,8 +33,8 @@ const createRedirectHTML = (route) => `<!doctype html>
     <title>ReplAInow - Wird geladen...</title>
     <meta name="robots" content="noindex, nofollow" />
     <script>
-      // Immediate redirect to main SPA with hash routing (GitHub Pages compatible)
-      window.location.replace('/#${route}');
+      // Immediate redirect to clean URL (GitHub Pages SPA routing)
+      window.location.replace('/${route}');
     </script>
   </head>
   <body>
