@@ -1,21 +1,19 @@
-# GitHub Pages redirects for React Router
-# This file ensures all routes work properly on GitHub Pages
+# Netlify/GitHub Pages SPA redirects
+# Redirect all .html routes to the main SPA
+/*.html /index.html 200
+/security.html /index.html 200
+/privacy.html /index.html 200
+/terms.html /index.html 200
+/refund.html /index.html 200
+/cookies.html /index.html 200
+/impressum.html /index.html 200
+/uninstall.html /index.html 200
+/gorgias-alternative.html /index.html 200
+/intercom-alternative.html /index.html 200
+/multilingual-support.html /index.html 200
+/shopify-ai-support.html /index.html 200
+/shopify-customer-service.html /index.html 200
+/ai-shopify-helpdesk.html /index.html 200
 
-# Redirect all routes to index.html for React Router to handle
-/*    /index.html   200
-
-# Specific redirects for legal pages (backup)
-/privacy    /index.html   200
-/terms      /index.html   200
-/security   /index.html   200
-/impressum  /index.html   200
-/uninstall  /index.html   200
-
-# Language redirects
-/en    /index.html   200
-/es    /index.html   200
-/fr    /index.html   200
-/pt    /index.html   200
-/it    /index.html   200
-/nl    /index.html   200
-/zh    /index.html   200
+# Fallback for all other routes
+/* /index.html 200

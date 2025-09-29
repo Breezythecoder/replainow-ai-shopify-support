@@ -46,21 +46,7 @@ import SkipLinks from "@/components/ui/SkipLinks";
 
 const queryClient = new QueryClient();
 
-// Handle initial route from static HTML pages
-const InitialRouteHandler = () => {
-  const navigate = useNavigate();
-  const location = useLocation();
-  
-  useEffect(() => {
-    // Check if we have an initial route set by static HTML
-    const initialRoute = (window as any).__INITIAL_ROUTE__;
-    if (initialRoute && location.pathname === '/') {
-      navigate(initialRoute, { replace: true });
-    }
-  }, [navigate, location]);
-
-  return null;
-};
+// Removed InitialRouteHandler - not needed with proper routing
 
 const AppShell = () => {
   useKeyboardNavigation();
@@ -79,7 +65,6 @@ const AppShell = () => {
 
   return (
     <>
-      <InitialRouteHandler />
       <SEOErrorBoundary>
         <SEOHead locale={locale} pathname={location.pathname} />
       </SEOErrorBoundary>
@@ -98,21 +83,34 @@ const AppShell = () => {
           <Route path="/fr" element={<Index />} />
           <Route path="/es" element={<Index />} />
           <Route path="/ai-shopify-helpdesk" element={<AIShopifyHelpdesk />} />
+          <Route path="/ai-shopify-helpdesk.html" element={<AIShopifyHelpdesk />} />
           <Route path="/multilingual-support" element={<MultilingualSupport />} />
+          <Route path="/multilingual-support.html" element={<MultilingualSupport />} />
           <Route path="/shopify-customer-service" element={<ShopifyCustomerService />} />
+          <Route path="/shopify-customer-service.html" element={<ShopifyCustomerService />} />
           <Route path="/gorgias-alternative" element={<GorgiasAlternative />} />
+          <Route path="/gorgias-alternative.html" element={<GorgiasAlternative />} />
           <Route path="/intercom-alternative" element={<IntercomAlternative />} />
+          <Route path="/intercom-alternative.html" element={<IntercomAlternative />} />
           <Route path="/shopify-ai-support" element={<ShopifyAISupport />} />
+          <Route path="/shopify-ai-support.html" element={<ShopifyAISupport />} />
           <Route path="/sitemap.xml" element={<SitemapXML />} />
           <Route path="/robots.txt" element={<RobotsTXT />} />
           <Route path="/.well-known/llm-facts.json" element={<LLMFactsJSON />} />
           <Route path="/privacy" element={<PrivacyPolicy />} />
+          <Route path="/privacy.html" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
+          <Route path="/terms.html" element={<TermsOfService />} />
           <Route path="/uninstall" element={<UninstallInstructions />} />
+          <Route path="/uninstall.html" element={<UninstallInstructions />} />
           <Route path="/security" element={<SecurityStatement />} />
+          <Route path="/security.html" element={<SecurityStatement />} />
           <Route path="/impressum" element={<Impressum />} />
+          <Route path="/impressum.html" element={<Impressum />} />
           <Route path="/refund" element={<RefundPolicy />} />
+          <Route path="/refund.html" element={<RefundPolicy />} />
           <Route path="/cookies" element={<CookiePolicy />} />
+          <Route path="/cookies.html" element={<CookiePolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
