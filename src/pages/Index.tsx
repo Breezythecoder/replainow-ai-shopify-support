@@ -23,8 +23,18 @@ import AdvancedSEO from "@/components/seo/AdvancedSEO";
 import AIOptimizedFAQ from "@/components/seo/AIOptimizedFAQ";
 import { softwareApplicationSchema, organizationSchema } from "@/components/seo/StructuredData";
 import MultilingualSEO from "@/components/seo/MultilingualSEO";
+import { getLocaleFromPath } from "@/i18n";
+import { useEffect, useState } from "react";
 
 const Index = () => {
+  // Auto-detect locale from URL
+  const [currentLocale, setCurrentLocale] = useState<'de' | 'en' | 'fr' | 'es'>('de');
+
+  useEffect(() => {
+    const locale = getLocaleFromPath(window.location.pathname);
+    setCurrentLocale(locale as 'de' | 'en' | 'fr' | 'es');
+  }, []);
+
   const structuredData = [
     organizationSchema,
     softwareApplicationSchema
@@ -32,13 +42,27 @@ const Index = () => {
 
   return (
     <>
-      <MultilingualSEO language="de" />
+      <MultilingualSEO language={currentLocale} />
       <AdvancedSEO
-        title="ReplAInow – AI Shopify Helpdesk | Automate Support mit AI"
-        description="Automate deinen Shopify Customer Support mit GPT-4 AI. ✅ 3 Sek Antwortzeit ✅ 32+ languages ✅ GDPR-konform ✅ 75% günstiger als Gorgias & Zendesk. Now 14 days free test!"
-        keywords={[
+        title={currentLocale === 'en' ? "ReplAInow – AI Shopify Helpdesk | Automated Customer Support" : "ReplAInow – AI Shopify Helpdesk | Automatisiere Support mit AI"}
+        description={currentLocale === 'en'
+          ? "ReplAInow automates Shopify customer support with GPT-4.1: 3-second responses, 32+ languages, GDPR-compliant, 75% cost savings. Try free now!"
+          : "Automatisiere deinen Shopify Customer Support mit GPT-4 AI. ✅ 3 Sek Antwortzeit ✅ 32+ Sprachen ✅ DSGVO-konform ✅ 75% günstiger als Gorgias & Zendesk. Jetzt 14 Tage kostenlos testen!"
+        }
+        keywords={currentLocale === 'en' ? [
           "AI Shopify Helpdesk",
-          "Shopify AI Support", 
+          "Shopify AI Support",
+          "Automated Shopify Support",
+          "GPT-4 Shopify Integration",
+          "Shopify Customer Service",
+          "AI Customer Support",
+          "Shopify Help Desk",
+          "Automated Responses",
+          "Shopify Support Chat",
+          "AI Email Support"
+        ] : [
+          "AI Shopify Helpdesk",
+          "Shopify AI Support",
           "AI Customer Support Shopify",
           "Automatisierter Shopify Support",
           "GPT-4 Shopify Integration",
@@ -48,29 +72,26 @@ const Index = () => {
           "Intercom Alternative",
           "Zendesk Alternative"
         ]}
-        canonicalUrl="https://replainow.com/"
-        locale="de_DE"
+        canonicalUrl={`https://replainow.com/${currentLocale === 'en' ? 'en' : ''}`}
+        locale={currentLocale === 'en' ? 'en_US' : 'de_DE'}
         structuredData={structuredData}
         hreflang={{
           "de": "https://replainow.com/",
-          "en": "https://replainow.com/en/",
-          "es": "https://replainow.com/es/",
-          "fr": "https://replainow.com/fr/",
-          "it": "https://replainow.com/it/",
-          "nl": "https://replainow.com/nl/",
-          "pt": "https://replainow.com/pt/",
-          "zh": "https://replainow.com/zh/",
+          "en": "https://replainow.com/en",
           "x-default": "https://replainow.com/"
         }}
       />
       <SEO
-        title="ReplAInow – Shopify Support automatisieren mit AI"
-        description="Answer customer queries in seconds: GDPR‑konform, brand-consistent, direct Shopify‑Daten. 14 days free test."
+        title={currentLocale === 'en' ? "ReplAInow – AI Shopify Helpdesk | Automated Customer Support" : "ReplAInow – Shopify Support automatisieren mit AI"}
+        description={currentLocale === 'en'
+          ? "ReplAInow automates Shopify customer support with GPT-4.1: 3-second responses, 32+ languages, GDPR-compliant, 75% cost savings. Try free now!"
+          : "Automatisiere deinen Shopify Customer Support mit GPT-4 AI. ✅ 3 Sek Antwortzeit ✅ 32+ Sprachen ✅ DSGVO-konform ✅ 75% günstiger als Gorgias & Zendesk. Jetzt 14 Tage kostenlos testen!"
+        }
         image="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
       <ModernNavbar />
-      <main id="main-content" role="main" aria-label="Hauptinhalt" className="pb-0">
+      <main id="main-content" role="main" aria-label={currentLocale === 'en' ? "Main content" : "Hauptinhalt"} className="pb-0">
         <ModernHero />
         <ModernHowItWorks />
         <ModernProblemSolution />

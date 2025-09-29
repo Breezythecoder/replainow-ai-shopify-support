@@ -22,9 +22,6 @@ import { LocaleProvider } from "@/i18n/LocaleContext";
 
 // Lazy load main language pages for better performance
 const Index = lazy(() => import("./pages/Index"));
-const IndexEn = lazy(() => import("./pages/IndexEn"));
-const IndexEs = lazy(() => import("./pages/IndexEs"));
-const IndexFr = lazy(() => import("./pages/IndexFr"));
 
 // Lazy load legal pages for better performance
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -115,9 +112,9 @@ const AppContent = () => {
             }>
               <Routes>
               <Route path="/" element={<Index />} />
-              <Route path="/en" element={<IndexEn />} />
-              <Route path="/fr" element={<IndexFr />} />
-              <Route path="/es" element={<IndexEs />} />
+              <Route path="/en" element={<Index />} />
+              <Route path="/fr" element={<Index />} />
+              <Route path="/es" element={<Index />} />
               
                 {/* SEO Pillar Pages */}
                 <Route path="/ai-shopify-helpdesk" element={<AIShopifyHelpdesk />} />

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { t, getLocaleFromPath } from '@/i18n';
+import { t, getLocaleFromPath, translations } from '@/i18n';
 import { getLocalizedStats } from '@/config/siteStats';
 import { StaticHead } from './StaticHead';
 import { safeObject, validateTranslationStructure, I18nErrorBoundary } from '@/utils/safeT';
@@ -17,7 +17,7 @@ export const SEOHead = ({ locale = 'de', pathname = '/' }: SEOHeadProps) => {
   // Runtime validation of translation structure
   React.useEffect(() => {
     const validation = validateTranslationStructure(
-      require('../i18n/locales/' + currentLocale + '.json'),
+      translations[currentLocale as keyof typeof translations],
       currentLocale
     );
 
