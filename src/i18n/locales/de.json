@@ -600,9 +600,10 @@
       "cta": "🎯 JETZT 30% SPAREN",
       "dismiss": "Nein, danke"
     },
-    "faq": {
-      "title": "Häufig gestellte Fragen",
-      "items": [
+      "faq": {
+        "title": "Häufig gestellte Fragen",
+        "subtitle": "Alles was du über ReplAInow wissen musst",
+        "items": [
         {
           "question": "Was ist ReplAInow AI Helpdesk?",
           "shortAnswer": "ReplAInow ist eine KI-gestützte Customer Support-Lösung für Shopify mit GPT-4 Technologie.",

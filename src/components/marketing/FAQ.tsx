@@ -1,42 +1,33 @@
 import { useMemo } from "react";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { t } from "@/i18n";
+import { safeArray } from "@/utils/safeT";
+import { z } from "zod";
+
+// Schema for FAQ items
+const FAQItemSchema = z.object({
+  question: z.string(),
+  shortAnswer: z.string(),
+  detailedAnswer: z.string()
+});
+
+const FAQArraySchema = z.array(FAQItemSchema);
+
 const FAQ = () => {
-  // Get current locale from URL path
-  const faqs = [
-    {
-      q: t('ui.faq.questions.0.q'),
-      a: t('ui.faq.questions.0.a'),
-    },
-    {
-      q: t('ui.faq.questions.1.q'),
-      a: t('ui.faq.questions.1.a'),
-    },
-    {
-      q: t('ui.faq.questions.2.q'),
-      a: t('ui.faq.questions.2.a'),
-    },
-    {
-      q: t('ui.faq.questions.3.q'),
-      a: t('ui.faq.questions.3.a'),
-    },
-    {
-      q: t('ui.faq.questions.4.q'),
-      a: t('ui.faq.questions.4.a'),
-    },
-  ];
+  // Get FAQ items from i18n
+  const faqItems = safeArray(FAQArraySchema, "ui.faq.items");
 
   const jsonLd = useMemo(
     () => ({
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: faqs.map((f) => ({
+      mainEntity: faqItems.map((item) => ({
         "@type": "Question",
-        name: f.q,
-        acceptedAnswer: { "@type": "Answer", text: f.a },
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.detailedAnswer },
       })),
     }),
-    []
+    [faqItems]
   );
 
   return (
@@ -50,10 +41,10 @@ const FAQ = () => {
         </p>
 
         <Accordion type="single" collapsible className="w-full">
-          {faqs.map((f, i) => (
+          {faqItems.map((item, i) => (
             <AccordionItem key={i} value={`item-${i}`}>
-              <AccordionTrigger className="text-left">{f.q}</AccordionTrigger>
-              <AccordionContent>{f.a}</AccordionContent>
+              <AccordionTrigger className="text-left">{item.question}</AccordionTrigger>
+              <AccordionContent>{item.detailedAnswer}</AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>

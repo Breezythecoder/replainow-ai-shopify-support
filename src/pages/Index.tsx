@@ -13,7 +13,6 @@ import About from "@/components/marketing/About";
 import Contact from "@/components/marketing/Contact";
 import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
 import Footer from "@/components/marketing/Footer";
-import StoreDataFlow from "@/components/marketing/StoreDataFlow";
 import SEO from "@/components/SEO";
 import FAQ from "@/components/marketing/FAQ";
 import OrganizationJsonLd from "@/components/SEOOrganization";
@@ -97,7 +96,6 @@ const Index = () => {
         <ModernProblemSolution />
         <ModernFeatures />
         <ModernSocialProof />
-        <StoreDataFlow />
         <ModernLiveDemo />
         <ModernPricing />
         <ModernComparison />
