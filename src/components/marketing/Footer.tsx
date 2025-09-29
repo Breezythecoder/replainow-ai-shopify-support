@@ -18,15 +18,15 @@ const Footer = () => {
             {/* Company Story */}
             <div>
               <h3 className="text-3xl font-bold mb-6 text-white">
-                {t('footer.about.title')} <span className="text-blue-400">ReplAInow</span>
+                {t('ui.footer.about.title')} <span className="text-blue-400">ReplAInow</span>
               </h3>
               <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                {t('footer.about.description')}
+                {t('ui.footer.about.description')}
               </p>
               <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700">
-                <h4 className="text-xl font-bold mb-3 text-blue-400">{t('footer.about.promise')}</h4>
+                <h4 className="text-xl font-bold mb-3 text-blue-400">{t('ui.footer.about.promise')}</h4>
                 <p className="text-slate-300">
-                  {t('footer.about.promiseText')}
+                  {t('ui.footer.about.promiseText')}
                 </p>
               </div>
             </div>
@@ -34,7 +34,7 @@ const Footer = () => {
             {/* CEO Story */}
             <div>
               <h3 className="text-3xl font-bold mb-6 text-white">
-                {t('footer.ceo.title')} <span className="text-blue-400">Ruben Calabrese</span>, CEO
+                {t('ui.footer.ceo.title')} <span className="text-blue-400">Ruben Calabrese</span>, CEO
               </h3>
               <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-2xl p-6 border border-blue-700/30">
                 <div className="flex items-start gap-4 mb-4">
@@ -43,11 +43,11 @@ const Footer = () => {
                   </div>
                   <div>
                     <h4 className="text-xl font-bold text-white">Ruben Calabrese</h4>
-                    <p className="text-blue-300 font-semibold">{t('footer.ceo.role')}</p>
+                    <p className="text-blue-300 font-semibold">{t('ui.footer.ceo.role')}</p>
                   </div>
                 </div>
                 <blockquote className="text-slate-300 italic text-lg leading-relaxed">
-                  "{t('footer.ceo.quote')}"
+                  "{t('ui.footer.ceo.quote')}"
                 </blockquote>
               </div>
             </div>
@@ -68,7 +68,7 @@ const Footer = () => {
                 />
               </div>
             <p className="text-slate-300 text-sm leading-relaxed mb-4">
-              {t('footer.company.description')}
+              {t('ui.footer.company.description')}
             </p>
               <div className="flex gap-3">
                 <a href="#" aria-label="Twitter" className="text-slate-400 hover:text-blue-400 transition-colors p-3 min-h-[44px] min-w-[44px] flex items-center justify-center touch-manipulation" title="Twitter">
@@ -84,9 +84,9 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Produkt</h4>
             <ul className="space-y-3">
-              <li><a href="#features" onClick={(e) => handleNavClick(e, 'features')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('footer.links.features')}</a></li>
-              <li><a href="#pricing" onClick={(e) => handleNavClick(e, 'pricing')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('footer.links.pricing')}</a></li>
-              <li><a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('footer.links.demo')}</a></li>
+              <li><a href="#features" onClick={(e) => handleNavClick(e, 'features')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('ui.footer.links.features')}</a></li>
+              <li><a href="#pricing" onClick={(e) => handleNavClick(e, 'pricing')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('ui.footer.links.pricing')}</a></li>
+              <li><a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('ui.footer.links.demo')}</a></li>
               <li><a href="https://apps.shopify.com/replainow-ai-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Installieren</a></li>
             </ul>
           </div>
@@ -108,14 +108,14 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Support</h4>
             <ul className="space-y-3">
-              <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('footer.links.contact')}</a></li>
-              <li><a href="#/privacy" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.privacy')}</a></li>
-              <li><a href="#/terms" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.terms')}</a></li>
-              <li><a href="#/security" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.security')}</a></li>
-              <li><a href="#/impressum" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.impressum')}</a></li>
-              <li><a href="#/refund" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.refund')}</a></li>
-              <li><a href="#/cookies" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.cookies')}</a></li>
-              <li><a href="#/uninstall" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('footer.legal.uninstall')}</a></li>
+              <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('ui.footer.links.contact')}</a></li>
+              <li><a href="#/privacy" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.privacy')}</a></li>
+              <li><a href="#/terms" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.terms')}</a></li>
+              <li><a href="#/security" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.security')}</a></li>
+              <li><a href="#/impressum" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.impressum')}</a></li>
+              <li><a href="#/refund" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.refund')}</a></li>
+              <li><a href="#/cookies" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.cookies')}</a></li>
+              <li><a href="#/uninstall" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.uninstall')}</a></li>
             </ul>
           </div>
 
@@ -125,11 +125,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail className="text-blue-400 flex-shrink-0" size={20} />
-                <span className="text-slate-300 text-sm">{t('footer.contact.email')}</span>
+                <span className="text-slate-300 text-sm">{t('ui.footer.contact.email')}</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="text-blue-400 flex-shrink-0" size={20} />
-                <span className="text-slate-300 text-sm">{t('footer.contact.location')}</span>
+                <span className="text-slate-300 text-sm">{t('ui.footer.contact.location')}</span>
               </div>
             </div>
           </div>
@@ -141,12 +141,12 @@ const Footer = () => {
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-slate-400 text-sm text-center md:text-left">
-              {t('footer.copyright').replace('2024', new Date().getFullYear().toString())}
+              {t('ui.footer.copyright').replace('2024', new Date().getFullYear().toString())}
             </p>
             <div className="flex items-center gap-2 text-slate-400 text-sm">
-              <span>{t('footer.company.madeWith')}</span>
+              <span>{t('ui.footer.company.madeWith')}</span>
               <Heart className="text-red-500" size={16} />
-              <span>{t('footer.company.location')}</span>
+              <span>{t('ui.footer.company.location')}</span>
             </div>
           </div>
         </div>
