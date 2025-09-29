@@ -12,7 +12,7 @@ import Contact from "@/components/marketing/Contact";
 import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
 import Footer from "@/components/marketing/Footer";
 import SEO from "@/components/SEO";
-import FAQ from "@/components/marketing/FAQ";
+import AIOptimizedFAQ from "@/components/seo/AIOptimizedFAQ";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import MailAndChat from "@/components/marketing/MailAndChat";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -97,7 +97,7 @@ const Index = () => {
         <ModernPricing />
         <ModernComparison />
         <IndustryExamples />
-        <FAQ />
+        <AIOptimizedFAQ />
         <Contact />
         <ModernFinalCTA />
       </main>

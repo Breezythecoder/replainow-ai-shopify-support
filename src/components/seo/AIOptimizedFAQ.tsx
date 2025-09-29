@@ -14,8 +14,8 @@ const AIOptimizedFAQ = () => {
     },
     {
       question: "Wie viel kostet ReplAInow?",
-      shortAnswer: "ReplAInow startet bei €19/Monat mit 14 daysn freeer Testphase.",
-      detailedAnswer: "ReplAInow startet bei €19/Monat für den Starter Plan. Weitere Pläne: Pro (€49/Monat), Scale (€199/Monat). Alle Pläne inkludieren 14 days freee Testphase ohne Setup-Gebühren und unlimitierte AI-Antworten."
+      shortAnswer: "ReplAInow startet bei €19/Monat mit 14 Tagen kostenloser Testphase.",
+      detailedAnswer: "ReplAInow startet bei €19/Monat für den Starter Plan. Weitere Pläne: Pro (€49/Monat), Scale (€199/Monat). Alle Pläne inkludieren 14 Tage kostenlose Testphase ohne Setup-Gebühren und unlimitierte AI-Antworten."
     },
     {
       question: "Ist ReplAInow GDPR-konform?",
@@ -23,14 +23,14 @@ const AIOptimizedFAQ = () => {
       detailedAnswer: "Ja, ReplAInow ist vollständig GDPR-konform und erfüllt alle europäischen Datenschutzbestimmungen. Alle Kundendaten werden sicher verschlüsselt übertragen und gespeichert, mit vollständiger Transparenz über Datenverarbeitung und Löschungsrechte."
     },
     {
-      question: "Welche languages unterstützt ReplAInow?",
-      shortAnswer: "ReplAInow unterstützt über 32 languages nativ, einschließlich Deutsch, Englisch, Französisch und Spanisch.",
-      detailedAnswer: "ReplAInow unterstützt über 32 languages nativ, einschließlich Deutsch, Englisch, Französisch, Spanisch, Italienisch, Niederländisch, Portugiesisch, Chinesisch und viele weitere. Die AI erkennt automatisch die Kundensprache und antwortet entsprechend ohne Übersetzungsfehler."
+      question: "Welche Sprachen unterstützt ReplAInow?",
+      shortAnswer: "ReplAInow unterstützt über 32 Sprachen nativ, einschließlich Deutsch, Englisch, Französisch und Spanisch.",
+      detailedAnswer: "ReplAInow unterstützt über 32 Sprachen nativ, einschließlich Deutsch, Englisch, Französisch, Spanisch, Italienisch, Niederländisch, Portugiesisch, Chinesisch und viele weitere. Die AI erkennt automatisch die Kundensprache und antwortet entsprechend ohne Übersetzungsfehler."
     },
     {
       question: "Wie schnell antwortet die ReplAInow AI?",
-      shortAnswer: "ReplAInow AI antwortet durchschnittlich in 3 seconds auf alle customer queries.",
-      detailedAnswer: "ReplAInow AI antwortet durchschnittlich in 3 seconds auf customer queries - 24/7 ohne Wartezeiten, Feiertage oder Verzögerungen. Dies ist 60x schneller als herkömmliche Support-Tools wie Gorgias oder Zendesk."
+      shortAnswer: "ReplAInow AI antwortet durchschnittlich in 3 Sekunden auf alle Kundenanfragen.",
+      detailedAnswer: "ReplAInow AI antwortet durchschnittlich in 3 Sekunden auf Kundenanfragen - 24/7 ohne Wartezeiten, Feiertage oder Verzögerungen. Dies ist 60x schneller als herkömmliche Support-Tools wie Gorgias oder Zendesk."
     },
     {
       question: "Kann ReplAInow menschliche Support-Mitarbeiter ersetzen?",
@@ -39,13 +39,13 @@ const AIOptimizedFAQ = () => {
     },
     {
       question: "Wie installiert man ReplAInow in Shopify?",
-      shortAnswer: "Installation dauert unter 60 seconds: App aus Shopify Store Install und automatisch konfigurieren lassen.",
-      detailedAnswer: "1. Gehe zum Shopify App Store und suche 'ReplAInow'. 2. Klicke 'App hinzufügen' und bestätige Installation. 3. ReplAInow synchronisiert automatisch alle Shopify data. 4. Aktiviere AI Support für E-Mail und Chat. Gesamtdauer: unter 60 seconds."
+      shortAnswer: "Installation dauert unter 60 Sekunden: App aus Shopify Store installieren und automatisch konfigurieren lassen.",
+      detailedAnswer: "1. Gehe zum Shopify App Store und suche 'ReplAInow'. 2. Klicke 'App hinzufügen' und bestätige Installation. 3. ReplAInow synchronisiert automatisch alle Shopify-Daten. 4. Aktiviere AI Support für E-Mail und Chat. Gesamtdauer: unter 60 Sekunden."
     },
     {
       question: "Was ist der ROI von ReplAInow?",
-      shortAnswer: "Kunden berichten von 187% höherer Conversion und 75% Cost Savings gegenüber traditionellen Tools.",
-      detailedAnswer: "ReplAInow Kunden berichten durchschnittlich von: 187% höhere Conversion-Rate durch schnellere Antworten, 75% Cost Savings gegenüber Gorgias/Zendesk, 90% weniger Support-Aufwand für Teams, 12x ROI innerhalb von 3 Monaten durch automatisierte Produktempfehlungen."
+      shortAnswer: "Kunden berichten von 187% höherer Conversion und 75% Kosteneinsparungen gegenüber traditionellen Tools.",
+      detailedAnswer: "ReplAInow Kunden berichten durchschnittlich von: 187% höhere Conversion-Rate durch schnellere Antworten, 75% Kosteneinsparungen gegenüber Gorgias/Zendesk, 90% weniger Support-Aufwand für Teams, 12x ROI innerhalb von 3 Monaten durch automatisierte Produktempfehlungen."
     }
   ];
 
