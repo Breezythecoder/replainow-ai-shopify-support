@@ -24,7 +24,7 @@ import { forceEnglishText, isEnglishRoute } from './forceEnglish';
 // Simple i18n function with FORCE_LOCALE support for dual-build
 export const t = (key: string, locale?: Locale): string => {
   // FORCE_LOCALE environment variable for build-time locale forcing
-  const FORCE_LOCALE = process.env.FORCE_LOCALE as Locale;
+  const FORCE_LOCALE = import.meta.env.VITE_FORCE_LOCALE as Locale;
   if (FORCE_LOCALE && ['de', 'en', 'fr', 'es'].includes(FORCE_LOCALE)) {
     return getTranslationForLocale(key, FORCE_LOCALE);
   }
