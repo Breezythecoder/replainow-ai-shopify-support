@@ -41,23 +41,23 @@ const ModernHowItWorks = () => {
           }}
         />
         
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-12 sm:mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 max-w-5xl mx-auto">
           {steps.map((step, i) => (
-            <div key={i} className="text-center group px-4">
+            <div key={i} className="text-center group px-4 lg:px-6">
               <div className="relative mb-6">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-gradient-primary rounded-full flex items-center justify-center text-3xl sm:text-4xl text-white shadow-hero group-hover:shadow-brand-mega group-hover:scale-110 transition-all duration-300 touch-target-comfortable">
-                  <step.icon className="w-8 h-8" />
+                <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white shadow-xl group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300">
+                  <step.icon className="w-8 h-8 sm:w-10 sm:h-10" />
                 </div>
                 <div className="absolute -top-2 -right-2 bg-white text-indigo-600 font-black text-xs sm:text-sm px-2 py-1 sm:px-3 sm:py-2 rounded-full border-2 border-indigo-200 shadow-lg">
                   {step.step}
                 </div>
                 {/* Connection Line - Desktop only */}
                 {i < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 sm:top-12 left-full w-full h-0.5 bg-gradient-to-r from-indigo-300 to-purple-300 -z-10"></div>
+                  <div className="hidden lg:block absolute top-10 sm:top-12 left-full w-8 h-0.5 bg-gradient-to-r from-indigo-300 to-purple-300 -z-10 transform translate-x-4"></div>
                 )}
               </div>
-              <h3 className="text-base sm:text-lg font-bold mb-3 text-slate-800 px-2">{step.title}</h3>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed px-2">{step.desc}</p>
+              <h3 className="text-lg sm:text-xl font-bold mb-4 text-slate-800 leading-tight">{step.title}</h3>
+              <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xs mx-auto">{step.desc}</p>
             </div>
           ))}
         </div>
