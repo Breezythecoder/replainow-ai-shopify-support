@@ -807,6 +807,63 @@
         "location": "Dubai, UAE"
       },
       "copyright": "© 2024 ReplAInow. All rights reserved."
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Have questions? We're here to help.",
+      "subtitleHighlight": "Responses within 24 hours.",
+      "info": {
+        "title": "Contact Information",
+        "email": {
+          "title": "Email Support",
+          "value": "support@replainow.com",
+          "note": "Responses within 24h"
+        },
+        "hours": {
+          "title": "Support Hours",
+          "value": "Mon-Fri: 9:00 - 18:00 CET",
+          "note": "24/7 AI Support available"
+        },
+        "chat": {
+          "title": "Live Chat",
+          "value": "Directly on the website",
+          "note": "AI responds instantly"
+        }
+      },
+      "faq": {
+        "title": "Frequent Questions",
+        "links": [
+          "How does the installation work?",
+          "Which languages are supported?",
+          "Can I train the AI?",
+          "How secure is my data?"
+        ]
+      },
+      "form": {
+        "title": "Send Message",
+        "fields": {
+          "name": "Name",
+          "email": "Email",
+          "message": "Message"
+        },
+        "placeholders": {
+          "name": "John Doe",
+          "email": "you@shop.com",
+          "message": "Describe your inquiry..."
+        },
+        "submit": "Send Message",
+        "submitting": "Sending..."
+      },
+      "toast": {
+        "success": {
+          "title": "Thank you!",
+          "description": "We'll get back to you shortly."
+        },
+        "error": {
+          "title": "Error",
+          "description": "Message could not be sent. Please try again or write directly to support@replainow.com"
+        }
+      }
     }
   }
 }
