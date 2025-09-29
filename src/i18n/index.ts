@@ -25,26 +25,12 @@ import { forceEnglishText, isEnglishRoute } from './forceEnglish';
 export const t = (key: string, locale?: Locale): string => {
   // FORCE ENGLISH for /en route - ALWAYS use English translations
   if (typeof window !== 'undefined' && isEnglishRoute()) {
-    const keys = key.split('.');
-    let value: any = translations['en'];
-    
-    for (const k of keys) {
-      value = value?.[k];
-    }
-    
-    return value || key;
+    return getTranslationForLocale(key, 'en');
   }
-  
+
   // FORCE ENGLISH for any path containing '/en'
   if (typeof window !== 'undefined' && window.location.pathname.includes('/en')) {
-    const keys = key.split('.');
-    let value: any = translations['en'];
-    
-    for (const k of keys) {
-      value = value?.[k];
-    }
-    
-    return value || key;
+    return getTranslationForLocale(key, 'en');
   }
   
   // Auto-detect locale from pathname if not provided
@@ -60,6 +46,18 @@ export const t = (key: string, locale?: Locale): string => {
     value = value?.[k];
   }
   
+  return value || key;
+};
+
+// Helper function to get translation for specific locale
+const getTranslationForLocale = (key: string, locale: Locale): string => {
+  const keys = key.split('.');
+  let value: any = translations[locale];
+
+  for (const k of keys) {
+    value = value?.[k];
+  }
+
   return value || key;
 };
 

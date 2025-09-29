@@ -1,6 +1,6 @@
 import React from 'react';
 import { z } from 'zod';
-import { safeArray, safeObject, type FeaturesArraySchema, type TestimonialsArraySchema } from '@/utils/safeT';
+import { safeArray, safeObject, type FeaturesArraySchema, type TestimonialsArraySchema, type KillSwitchComponent } from '@/utils/safeT';
 
 interface SectionKillSwitchProps {
   children: React.ReactNode;
@@ -132,7 +132,7 @@ export const StatsSection: React.FC<{
   </SectionKillSwitch>
 );
 
-// Hook for programmatic section checking
+  // Hook for programmatic section checking
 export const useSectionData = <T,>(
   translationKey: string,
   schema: z.ZodType<T>,
@@ -146,3 +146,26 @@ export const useSectionData = <T,>(
     return safeObject(schema, translationKey, locale);
   }
 };
+
+// Kill switch HOC - renders fallback when data is missing
+export function withKillSwitch<T>(
+  Component: React.ComponentType<{ data: T }>,
+  fallbackComponent?: React.ComponentType,
+  fallbackText?: string
+) {
+  return function SafeComponent({ data, ...props }: { data: T | null } & any) {
+    if (!data) {
+      if (fallbackComponent) {
+        return React.createElement(fallbackComponent, props);
+      }
+
+      return fallbackText ? (
+        <div className="p-4 border border-yellow-200 bg-yellow-50 rounded-lg">
+          <p className="text-yellow-800">{fallbackText}</p>
+        </div>
+      ) : null;
+    }
+
+    return React.createElement(Component, { data, ...props });
+  };
+}

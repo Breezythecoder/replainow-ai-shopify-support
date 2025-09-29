@@ -27,12 +27,19 @@ requiredFiles.forEach(file => {
 function validateHtml(html, locale, expectedCanonical) {
   // HTML lang attribute
   if (!/<html[^>]*lang="[^"]*"/i.test(html)) fail(`${locale}: html lang attribute missing`);
-  if (!/<html[^>]*lang="[^"]*${locale}[^"]*"/i.test(html)) fail(`${locale}: html lang should be '${locale}'`);
+  if (!/<html[^>]*lang="[^"]*${locale}[^"]*"/i.test(html)) {
+    // More flexible check for exact locale match
+    const langMatch = html.match(/<html[^>]*lang="([^"]*)"/i);
+    if (langMatch && !langMatch[1].includes(locale)) {
+      fail(`${locale}: html lang should contain '${locale}', got '${langMatch[1]}'`);
+    }
+  }
 
   // Canonical URL
   if (!/rel="canonical"[^>]+href="[^"]*"/i.test(html)) fail(`${locale}: canonical link missing`);
-  if (!/rel="canonical"[^>]+href="[^"]*${expectedCanonical}[^"]*"/i.test(html)) {
-    fail(`${locale}: canonical should be '${expectedCanonical}'`);
+  const canonicalMatch = html.match(/rel="canonical"[^>]+href="([^"]*)"/i);
+  if (!canonicalMatch || !canonicalMatch[1].includes(expectedCanonical.replace(/\/$/, ''))) {
+    fail(`${locale}: canonical should contain '${expectedCanonical}', got '${canonicalMatch?.[1] || 'none'}'`);
   }
 
   // Hreflang validation
@@ -122,17 +129,14 @@ checkBundleSize();
 
 // Cross-page consistency check
 function validateCrossPageConsistency() {
-  const deDoc = new DOMParser().parseFromString(deHtml, 'text/html');
-  const enDoc = new DOMParser().parseFromString(enHtml, 'text/html');
+  // Count major sections using regex
+  const deSections = (deHtml.match(/<(section|main|header|footer)[^>]*>/gi) || []).length;
+  const enSections = (enHtml.match(/<(section|main|header|footer)[^>]*>/gi) || []).length;
 
-  // Both should have same number of major sections
-  const deSections = deDoc.querySelectorAll('section, main, header, footer');
-  const enSections = enDoc.querySelectorAll('section, main, header, footer');
-
-  if (deSections.length !== enSections.length) {
-    warn(`Section count mismatch: DE=${deSections.length}, EN=${enSections.length}`);
+  if (deSections !== enSections) {
+    warn(`Section count mismatch: DE=${deSections}, EN=${enSections}`);
   } else {
-    ok(`Section count match: ${deSections.length} sections`);
+    ok(`Section count match: ${deSections} sections`);
   }
 
   // Both should have same meta description length (roughly)

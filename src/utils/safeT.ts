@@ -119,28 +119,8 @@ export function safeObject<T>(
   return safeT(schema, translationKey, locale);
 }
 
-// Kill switch component - renders fallback when data is missing
-export function withKillSwitch<T>(
-  Component: React.ComponentType<{ data: T }>,
-  fallbackComponent?: React.ComponentType,
-  fallbackText?: string
-) {
-  return function SafeComponent({ data, ...props }: { data: T | null } & any) {
-    if (!data) {
-      if (fallbackComponent) {
-        return React.createElement(fallbackComponent, props);
-      }
-
-      return fallbackText ? (
-        <div className="p-4 border border-yellow-200 bg-yellow-50 rounded-lg">
-          <p className="text-yellow-800">{fallbackText}</p>
-        </div>
-      ) : null;
-    }
-
-    return React.createElement(Component, { data, ...props });
-  };
-}
+// Kill switch HOC type definition
+export type KillSwitchComponent<T> = React.ComponentType<{ data: T | null }>;
 
 // Translation key type guard
 export function isValidTranslationKey(

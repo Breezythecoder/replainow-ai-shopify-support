@@ -14,6 +14,9 @@ import { getLocaleFromPath } from "@/i18n";
 import { initializeAssetLoading } from "@/utils/assetLoader";
 import { SEOErrorBoundary } from "@/components/ui/ErrorBoundary";
 import { RootErrorBoundary } from "@/components/ui/RootErrorBoundary";
+import { initSentry, initWebVitals } from "@/monitoring/sentry";
+import { I18nOverlay } from "@/debug/I18nOverlay";
+import { scanner } from "@/debug/LanguageScanner";
 import { lazy, Suspense } from "react";
 import { LocaleProvider } from "@/i18n/LocaleContext";
 
@@ -62,27 +65,32 @@ const AppContent = () => {
   const pathname = window.location.pathname;
   const locale = getLocaleFromPath(pathname);
   
-  // Initialize performance tracking
+  // Initialize monitoring and performance tracking
   useEffect(() => {
+    // Initialize Sentry monitoring
+    initSentry();
+
+    // Initialize Web Vitals tracking
     trackWebVitals();
     initWebVitals();
     initializeGA();
-    
+
     // Initialize locale-aware asset loading
     initializeAssetLoading(locale);
-  
-    // Hash routing is handled automatically by HashRouter
-  
-  // Register Service Worker for perfect performance
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-      .then((registration) => {
-        console.log('SW registered: ', registration);
-      })
-      .catch((registrationError) => {
-        console.log('SW registration failed: ', registrationError);
-      });
-  }
+
+    // Make language scanner available globally for debugging
+    (window as any).__LANG_SCANNER__ = scanner;
+
+    // Register Service Worker for perfect performance
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then((registration) => {
+          console.log('SW registered: ', registration);
+        })
+        .catch((registrationError) => {
+          console.log('SW registration failed: ', registrationError);
+        });
+    }
   }, [locale]);
 
         return (
@@ -142,6 +150,7 @@ const AppContent = () => {
             <DesignAuditor />
           </>
         )}
+        <I18nOverlay />
     </>
   );
 };
