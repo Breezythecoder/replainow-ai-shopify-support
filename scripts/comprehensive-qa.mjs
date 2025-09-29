@@ -133,12 +133,14 @@ const checkSecurity = () => {
   logResult('HTTPS Scripts', secureScripts.length === externalScripts.length, 
     `${secureScripts.length}/${externalScripts.length} scripts use HTTPS`);
   
-  // Check for inline scripts (potential XSS)
-  const inlineScripts = (html.match(/<script[^>]*>[\s\S]*?<\/script>/g) || [])
+  // Check for inline scripts (potential XSS) - allow JSON-LD
+  const allInlineScripts = (html.match(/<script[^>]*>[\s\S]*?<\/script>/g) || [])
     .filter(script => !script.includes('src='));
-  
-  logResult('Inline Scripts', inlineScripts.length <= 2, 
-    `${inlineScripts.length} inline scripts found (should be minimal)`);
+  const jsonLdScripts = allInlineScripts.filter(script => script.includes('application/ld+json'));
+  const problematicScripts = allInlineScripts.filter(script => !script.includes('application/ld+json'));
+
+  logResult('Inline Scripts', problematicScripts.length === 0,
+    `${allInlineScripts.length} total inline scripts (${jsonLdScripts.length} JSON-LD allowed, ${problematicScripts.length} problematic)`);
   
   // Check for CSP hints
   const hasCSP = html.includes('Content-Security-Policy') || html.includes('csp');

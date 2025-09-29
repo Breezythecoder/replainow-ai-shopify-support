@@ -67,6 +67,13 @@ const AppContent = () => {
   
   // Initialize monitoring and performance tracking
   useEffect(() => {
+    // Set lang attribute immediately based on URL (moved from index.html)
+    const path = window.location.pathname;
+    const lang = path.startsWith('/en') ? 'en' :
+                path.startsWith('/fr') ? 'fr' :
+                path.startsWith('/es') ? 'es' : 'de';
+    document.documentElement.lang = lang;
+
     // Initialize Web Vitals tracking
     trackWebVitals();
     initWebVitals();
