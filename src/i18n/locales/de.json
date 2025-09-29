@@ -224,6 +224,19 @@
       "subtitle": "Schließe dich 280+ zufriedenen Shopify-Händlern an und fange heute an zu sparen",
       "button": "Kostenlose Testversion starten",
       "demo": "Demo ansehen"
+    },
+    "footer": {
+      "about": {
+        "title": "Über uns",
+        "description": "ReplAInow wurde von Shopify-Experten entwickelt, die jahrelang mit ineffizienten Support-Tools zu kämpfen hatten. Wir haben die Lösung geschaffen, die wir selbst brauchten.",
+        "promise": "Unser Versprechen",
+        "promiseText": "Jeder Shopify-Händler verdient Support, der 24/7 verfügbar ist, in der Sprache des Kunden antwortet und 75% günstiger ist als die Konkurrenz."
+      },
+      "ceo": {
+        "title": "Von",
+        "role": "CEO & Gründer",
+        "quote": "Als E-Commerce Unternehmer und Programmierer habe ich selbst erlebt, wie frustrierend es ist, wenn Kundenanfragen stundenlang unbeantwortet bleiben. ReplAInow ist die Lösung, die ich mir damals gewünscht hätte - intelligent, schnell und bezahlbar."
+      }
     }
   }
 }

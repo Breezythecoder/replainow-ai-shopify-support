@@ -224,6 +224,19 @@
           "a": "Transparent plans with clear limits, 14 days free trial without credit card. Upgrade possible anytime."
         }
       ]
+    },
+    "footer": {
+      "about": {
+        "title": "About",
+        "description": "ReplAInow was developed by Shopify experts who struggled for years with inefficient support tools. We created the solution we needed ourselves.",
+        "promise": "Our promise",
+        "promiseText": "Every Shopify merchant deserves support that's available 24/7, responds in the customer's language, and is 75% cheaper than the competition."
+      },
+      "ceo": {
+        "title": "From",
+        "role": "CEO & Founder",
+        "quote": "As an e-commerce entrepreneur and programmer, I've experienced firsthand how frustrating it is when customer queries go unanswered for hours. ReplAInow is the solution I wished for back then - intelligent, fast, and affordable."
+      }
     }
   }
 }

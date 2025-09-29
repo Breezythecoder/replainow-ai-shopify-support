@@ -34,7 +34,7 @@ const Footer = () => {
             {/* CEO Story */}
             <div>
               <h3 className="text-3xl font-bold mb-6 text-white">
-                Von <span className="text-blue-400">Ruben Calabrese</span>, CEO
+                {t('footer.ceo.title')} <span className="text-blue-400">Ruben Calabrese</span>, CEO
               </h3>
               <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-2xl p-6 border border-blue-700/30">
                 <div className="flex items-start gap-4 mb-4">
@@ -43,13 +43,11 @@ const Footer = () => {
                   </div>
                   <div>
                     <h4 className="text-xl font-bold text-white">Ruben Calabrese</h4>
-                    <p className="text-blue-300 font-semibold">CEO & Gründer</p>
+                    <p className="text-blue-300 font-semibold">{t('footer.ceo.role')}</p>
                   </div>
                 </div>
                 <blockquote className="text-slate-300 italic text-lg leading-relaxed">
-                  "Als E-Commerce Unternehmer und Programmierer habe ich selbst erlebt, wie frustrierend es ist, 
-                  wenn customer queries stundenlang unbeantwortet bleiben. ReplAInow ist die Lösung, 
-                  die ich mir damals gewünscht hätte - intelligent, schnell und bezahlbar."
+                  "{t('footer.ceo.quote')}"
                 </blockquote>
               </div>
             </div>
