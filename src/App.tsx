@@ -14,7 +14,7 @@ import { getLocaleFromPath } from "@/i18n";
 import { initializeAssetLoading } from "@/utils/assetLoader";
 import { SEOErrorBoundary } from "@/components/ui/ErrorBoundary";
 import { RootErrorBoundary } from "@/components/ui/RootErrorBoundary";
-import { initSentry, initWebVitals } from "@/monitoring/sentry";
+import { initWebVitals } from "@/monitoring/webVitals";
 import { I18nOverlay } from "@/debug/I18nOverlay";
 import { scanner } from "@/debug/LanguageScanner";
 import { lazy, Suspense } from "react";
@@ -67,9 +67,6 @@ const AppContent = () => {
   
   // Initialize monitoring and performance tracking
   useEffect(() => {
-    // Initialize Sentry monitoring
-    initSentry();
-
     // Initialize Web Vitals tracking
     trackWebVitals();
     initWebVitals();
