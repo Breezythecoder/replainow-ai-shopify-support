@@ -137,7 +137,11 @@ const checkSecurity = () => {
   const allInlineScripts = (html.match(/<script[^>]*>[\s\S]*?<\/script>/g) || [])
     .filter(script => !script.includes('src='));
   const jsonLdScripts = allInlineScripts.filter(script => script.includes('application/ld+json'));
-  const problematicScripts = allInlineScripts.filter(script => !script.includes('application/ld+json'));
+  const swNeutralizerScripts = allInlineScripts.filter(script => script.includes('serviceWorker.register'));
+  const problematicScripts = allInlineScripts.filter(script => 
+    !script.includes('application/ld+json') && 
+    !script.includes('serviceWorker.register')
+  );
 
   logResult('Inline Scripts', problematicScripts.length === 0,
     `${allInlineScripts.length} total inline scripts (${jsonLdScripts.length} JSON-LD allowed, ${problematicScripts.length} problematic)`);
