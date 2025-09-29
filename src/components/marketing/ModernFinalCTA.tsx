@@ -2,12 +2,28 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { STORE_COUNT } from "@/config/siteStats";
 import { smoothScrollToElement } from "@/utils/smoothScroll";
+import { t } from "@/i18n";
+import { safeArray, safeObject } from "@/utils/safeT";
+import { z } from "zod";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
+
+// Schemas for Final CTA
+const StatsItemSchema = z.object({
+  value: z.string(),
+  label: z.string()
+});
+
+const StatsArraySchema = z.array(StatsItemSchema);
+const FeaturesArraySchema = z.array(z.string());
 
 const ModernFinalCTA = () => {
   const [isVisible, setIsVisible] = useState(false);
   const ctaRef = useRef<HTMLDivElement>(null);
+  
+  // Get data from i18n
+  const stats = safeArray(StatsArraySchema, "ui.finalCta.stats.items");
+  const features = safeArray(FeaturesArraySchema, "ui.finalCta.features");
 
   // Intersection Observer
   useEffect(() => {
@@ -63,18 +79,17 @@ const ModernFinalCTA = () => {
         <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="inline-block mb-6">
             <span className="px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-semibold text-sm rounded-full shadow-lg animate-pulse">
-               STARTE JETZT
+              {t("ui.finalCta.badge")}
             </span>
           </div>
           
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 tracking-tighter px-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 animate-gradient-x">
-              Bereit für die AI-Revolution?
+              {t("ui.finalCta.title")}
             </span>
           </h2>
           <p className="text-lg sm:text-xl text-slate-600 mb-8 max-w-4xl mx-auto leading-relaxed px-4">
-            Über <span className="text-blue-600 font-bold">{STORE_COUNT} Shopify-Händler</span> nutzen bereits ReplAInow. 
-            Werde Teil der Elite und <span className="text-indigo-600 font-bold">zerstöre deine Konkurrenz</span> mit überlegener AI-Technologie.
+            {t("ui.finalCta.subtitle")}
           </p>
         </div>
         
@@ -88,7 +103,7 @@ const ModernFinalCTA = () => {
           >
             <a href={OAUTH_URL} className="flex items-center gap-3 justify-center text-center relative z-10">
               <span className="text-2xl group-hover:scale-110 transition-transform">→</span>
-              <span className="whitespace-normal break-words">JETZT INSTALLIEREN</span>
+              <span className="whitespace-normal break-words">{t("ui.finalCta.cta")}</span>
               <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/30 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700 ease-out"></div>
             </a>
           </Button>
@@ -100,56 +115,57 @@ const ModernFinalCTA = () => {
           >
             <a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="flex items-center gap-3 justify-center text-center cursor-pointer">
               <span className="text-2xl">📺</span>
-              <span className="whitespace-normal break-words">LIVE DEMO</span>
+              <span className="whitespace-normal break-words">{t("ui.finalCta.demo")}</span>
             </a>
           </Button>
         </div>
         
         {/* Trust Indicators */}
         <div className={`flex flex-wrap justify-center items-center gap-4 sm:gap-6 text-sm mb-12 transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="flex items-center gap-2 bg-white/80 backdrop-blur-lg px-6 py-3 rounded-full border border-green-200 shadow-lg">
-            <span className="text-green-500 text-lg">✓</span>
-            <span className="text-slate-800 font-bold">14 days free</span>
-          </div>
-          <div className="flex items-center gap-2 bg-white/80 backdrop-blur-lg px-6 py-3 rounded-full border border-blue-200 shadow-lg">
-            <span className="text-blue-500 text-lg">⚡</span>
-            <span className="text-slate-800 font-bold">Setup-frei</span>
-          </div>
-          <div className="flex items-center gap-2 bg-white/80 backdrop-blur-lg px-6 py-3 rounded-full border border-purple-200 shadow-lg">
-            <span className="text-purple-500 text-lg">🔄</span>
-            <span className="text-slate-800 font-bold">Jederzeit kündbar</span>
-          </div>
-          <div className="flex items-center gap-2 bg-white/80 backdrop-blur-lg px-6 py-3 rounded-full border border-yellow-200 shadow-lg">
-            <span className="text-yellow-500 text-lg">💰</span>
-            <span className="text-slate-800 font-bold">Geld-zurück</span>
-          </div>
+          {features.map((feature, index) => {
+            const icons = ["✓", "⚡", "🔄", "💰"];
+            const colors = ["green", "blue", "purple", "yellow"];
+            const icon = icons[index] || "✓";
+            const color = colors[index] || "green";
+            
+            return (
+              <div key={index} className={`flex items-center gap-2 bg-white/80 backdrop-blur-lg px-6 py-3 rounded-full border border-${color}-200 shadow-lg`}>
+                <span className={`text-${color}-500 text-lg`}>{icon}</span>
+                <span className="text-slate-800 font-bold">{feature}</span>
+              </div>
+            );
+          })}
         </div>
 
         {/* Professional Social Proof */}
         <div className={`bg-white/80 backdrop-blur-lg p-8 rounded-3xl max-w-4xl mx-auto border border-slate-200 shadow-xl transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
           <div className="text-center mb-6">
             <h3 className="text-2xl font-bold text-slate-800 mb-4">
-              Warum {STORE_COUNT} Shopify-Händler auf ReplAInow setzen
+              {t("ui.finalCta.stats.title")}
             </h3>
             <p className="text-slate-600 text-lg">
-              Starte noch heute mit der 14-tägigen freeen Testphase
+              {t("ui.finalCta.stats.subtitle")}
             </p>
           </div>
 
           {/* Social Proof Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-            <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl border border-green-200">
-              <div className="text-green-600 font-bold text-3xl mb-2">{STORE_COUNT}</div>
-              <div className="text-slate-600 font-semibold">Zufriedene Händler</div>
-            </div>
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-6 rounded-2xl border border-blue-200">
-              <div className="text-blue-600 font-bold text-3xl mb-2">€2.1M</div>
-              <div className="text-slate-600 font-semibold">Umsatz generiert</div>
-            </div>
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl border border-purple-200">
-              <div className="text-purple-600 font-bold text-3xl mb-2">187%</div>
-              <div className="text-slate-600 font-semibold">Conversion Boost</div>
-            </div>
+            {stats.map((stat, index) => {
+              const gradients = [
+                "from-green-50 to-emerald-50",
+                "from-blue-50 to-indigo-50", 
+                "from-purple-50 to-pink-50"
+              ];
+              const textColors = ["text-green-600", "text-blue-600", "text-purple-600"];
+              const borderColors = ["border-green-200", "border-blue-200", "border-purple-200"];
+              
+              return (
+                <div key={index} className={`bg-gradient-to-br ${gradients[index]} p-6 rounded-2xl border ${borderColors[index]}`}>
+                  <div className={`${textColors[index]} font-bold text-3xl mb-2`}>{stat.value}</div>
+                  <div className="text-slate-600 font-semibold">{stat.label}</div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
