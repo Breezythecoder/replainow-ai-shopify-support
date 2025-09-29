@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Button } from './button';
 import { X } from 'lucide-react';
+import { t } from '@/i18n';
 
 const ExitIntent = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -31,11 +32,10 @@ const ExitIntent = () => {
         <div className="text-center">
           <div className="text-6xl mb-4">🚀</div>
           <h3 className="text-2xl font-bold text-slate-800 mb-2">
-            Warte! Verpasse nicht deine Chance!
+            {t("ui.exitIntent.title")}
           </h3>
           <p className="text-slate-600 mb-6">
-            Sichere dir jetzt 30% Rabatt auf alle Pläne. 
-            Nur noch heute verfügbar!
+            {t("ui.exitIntent.subtitle")}
           </p>
           
           <div className="space-y-3">
@@ -44,7 +44,7 @@ const ExitIntent = () => {
               className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold py-3"
             >
               <a href="https://apps.shopify.com/replainow-ai-support">
-                🎯 JETZT 30% SPAREN
+                {t("ui.exitIntent.cta")}
               </a>
             </Button>
             <Button 
@@ -52,7 +52,7 @@ const ExitIntent = () => {
               className="w-full"
               onClick={() => setShowPopup(false)}
             >
-              Nein, danke
+              {t("ui.exitIntent.dismiss")}
             </Button>
           </div>
         </div>

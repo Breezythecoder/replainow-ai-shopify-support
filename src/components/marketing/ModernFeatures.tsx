@@ -10,6 +10,12 @@ const ModernFeatures = () => {
   
   // Get current locale from URL path
   const featureItems = safeArray(FeaturesArraySchema, "ui.features.items");
+  
+  // Debug: Log feature items to see what we're getting
+  console.log("🔍 ModernFeatures Debug:", { 
+    featureItemsLength: featureItems.length, 
+    featureItems: featureItems.slice(0, 2) 
+  });
   const iconMap = [Brain, Clock, Globe, BarChart3, TrendingUp, Download];
   const gradientMap = [
     "from-indigo-500 to-blue-500",

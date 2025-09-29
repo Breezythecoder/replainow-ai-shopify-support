@@ -2,6 +2,19 @@ import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button-variants";
 import { Play, Pause, RotateCcw, Zap, Brain, Clock } from "lucide-react";
+import { t } from "@/i18n";
+import { safeArray, safeObject } from "@/utils/safeT";
+import { z } from "zod";
+
+// Zod schemas for Live Demo
+const ScenarioSchema = z.object({
+  name: z.string(),
+  icon: z.string(),
+  messages: z.array(z.string()),
+  responses: z.array(z.string())
+});
+
+const ScenariosArraySchema = z.array(ScenarioSchema);
 
 const ModernLiveDemo = () => {
   const [isTyping, setIsTyping] = useState(false);
@@ -13,56 +26,8 @@ const ModernLiveDemo = () => {
   const [selectedScenario, setSelectedScenario] = useState(0);
   const demoRef = useRef<HTMLDivElement>(null);
 
-  const scenarios = [
-    {
-      name: "Tech Store",
-      icon: "📱",
-      messages: [
-        "Hallo! Ich suche ein iPhone Case für mein iPhone 14 Pro. Was könnt ihr empfehlen?",
-        "Gibt es Rabatte für Studenten?",
-        "Wie lange dauert der Versand nach Deutschland?",
-        "Kann ich das Produkt zurückgeben, wenn es mir nicht gefällt?"
-      ],
-      responses: [
-        "Hallo! Für dein iPhone 14 Pro empfehle ich unser Premium Clear Case (€24.99) oder das Rugged Case (€29.99). Beide sind gerade auf Lager und bieten optimalen Schutz! 🛡️",
-        "Ja! Studenten get 15% Rabatt mit dem Code STUDENT15. Einfach bei der Bestellung eingeben! 🎓",
-        "Standard-Versand nach Deutschland dauert 2-3 Werktage (€4.99), Express-Versand 1-2 Werktage (€9.99). Kostenloser Versand ab €50! 🚚",
-        "Ja, du hast 30 days Rückgaberecht! Kostenlose Rücksendung, Geld-zurück-Garantie. Einfach in deinem Account die Rücksendung anmelden! ✅"
-      ]
-    },
-    {
-      name: "Fashion Store",
-      icon: "👗",
-      messages: [
-        "Welche Größe sollte ich bei diesem Kleid wählen?",
-        "Ist das Material nachhaltig?",
-        "Kann ich mehrere Farben bestllen?",
-        "Wie ist die Qualität?"
-      ],
-      responses: [
-        "Basierend auf deinen Angaben empfehle ich Größe M. Das Kleid fällt locker und ist true-to-size. Bei Unsicherheit lieber eine Größe größer! 📏",
-        "Ja! 100% Bio-Baumwolle, fair gehandelt und umweltfreundlich verpackt. 🌱 Nachhaltigkeit ist uns wichtig!",
-        "Natürlich! Du kannst alle verfügbaren Farben bestllen. Aktuell haben wir: Schwarz, Weiß, Navy und Beige auf Lager. 🎨",
-        "Premium-Qualität! 200g/m² Bio-Baumwolle, maschinenwaschbar, bügelfrei. Unsere Kunden lieben es! ⭐⭐⭐⭐⭐"
-      ]
-    },
-    {
-      name: "Beauty Store",
-      icon: "💄",
-      messages: [
-        "Welche Hautpflege-Routine empfiehlst du für trockene Haut?",
-        "Sind eure Produkte vegan?",
-        "Kann ich eine Proben-Box bestllen?",
-        "Wie lange halten die Produkte?"
-      ],
-      responses: [
-        "Für trockene Haut empfehle ich: Morgens unser Hydrating Serum (€29.99) + Moisturizer (€24.99), abends das Repair Night Cream (€34.99). Perfekt für deinen Hauttyp! ✨",
-        "Ja! Alle unsere Produkte sind 100% vegan, cruelty-free und dermatologisch getestet. 🌿 Keine tierischen Inhaltsstoffe!",
-        "Ja! Unsere Discovery Box (€19.99) enthält 5 Mini-Produkte zum Testen. Ideal zum Kennenlernen unserer Marke! 📦",
-        "Ungeöffnet 3 Jahre, nach Öffnung 12 Monate. Alle Produkte haben das PAO-Symbol (Period After Opening) auf der Verpackung! ⏰"
-      ]
-    }
-  ];
+  // Get scenarios from i18n
+  const scenarios = safeArray(ScenariosArraySchema, "ui.liveDemo.scenarios");
 
   // Intersection Observer
   useEffect(() => {
@@ -161,17 +126,17 @@ const ModernLiveDemo = () => {
           <div className="inline-block mb-6">
             <span className="px-6 py-3 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 text-white font-black text-sm rounded-full shadow-2xl animate-pulse relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
-              <span className="relative z-10">⚡ INTERAKTIVE DEMO</span>
+              <span className="relative z-10">{t("ui.liveDemo.badge")}</span>
             </span>
           </div>
           
           <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 sm:mb-8 tracking-tight text-center px-4">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient-x">
-              Live AI in Aktion
+              {t("ui.liveDemo.title.primary")} {t("ui.liveDemo.title.secondary")}
             </span>
           </h2>
             <p className="text-lg sm:text-xl text-blue-100 mb-8 sm:mb-12 max-w-3xl mx-auto px-4">
-            <span className="text-cyan-400 font-bold">Echte AI-Antworten</span> in Echtzeit - 
+            {t("ui.liveDemo.subtitle")} 
             <span className="text-purple-400 font-bold"> 3 seconds</span> von Frage zu Lösung
           </p>
         </div>
