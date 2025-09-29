@@ -11,7 +11,7 @@
     "dev": "vite",
     "build:de": "cross-env FORCE_LOCALE=de vite build",
     "build:en": "cross-env FORCE_LOCALE=en vite build",
-    "build:mpages": "npm run clean && npm run build:de && node scripts/make-locale-html.mjs && node scripts/fix-asset-references.mjs && node scripts/generate-sitemap-index.mjs && node scripts/generate-robots.mjs && node scripts/postbuild-verify-mpages.mjs",
+    "build:mpages": "npm run clean && npm run build:de && node scripts/make-locale-html.mjs && node scripts/fix-asset-references.mjs && node scripts/create-spa-redirects.mjs && node scripts/generate-sitemap-index.mjs && node scripts/generate-robots.mjs && node scripts/postbuild-verify-mpages.mjs",
     "build": "npm run build:mpages",
     "verify:src": "echo 'Source verification placeholder - implement scan-hardcoded.mjs if needed'",
     "verify:en": "node scripts/verify-no-de.mjs",
