@@ -68,8 +68,7 @@ const Footer = () => {
                 />
               </div>
             <p className="text-slate-300 text-sm leading-relaxed mb-4">
-              Der intelligenteste AI-Support für Shopify-Händler. 
-              24/7 verfügbar, 32+ languages, GDPR-konform.
+              {t('footer.company.description')}
             </p>
               <div className="flex gap-3">
                 <a href="#" aria-label="Twitter" className="text-slate-400 hover:text-blue-400 transition-colors p-3 min-h-[44px] min-w-[44px] flex items-center justify-center touch-manipulation" title="Twitter">
@@ -126,11 +125,11 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail className="text-blue-400 flex-shrink-0" size={20} />
-                <span className="text-slate-300 text-sm">support@replainow.com</span>
+                <span className="text-slate-300 text-sm">{t('footer.contact.email')}</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="text-blue-400 flex-shrink-0" size={20} />
-                <span className="text-slate-300 text-sm">Dubai, UAE</span>
+                <span className="text-slate-300 text-sm">{t('footer.contact.location')}</span>
               </div>
             </div>
           </div>
@@ -145,9 +144,9 @@ const Footer = () => {
               {t('footer.copyright').replace('2024', new Date().getFullYear().toString())}
             </p>
             <div className="flex items-center gap-2 text-slate-400 text-sm">
-              <span>Made with</span>
+              <span>{t('footer.company.madeWith')}</span>
               <Heart className="text-red-500" size={16} />
-              <span>in Dubai</span>
+              <span>{t('footer.company.location')}</span>
             </div>
           </div>
         </div>
