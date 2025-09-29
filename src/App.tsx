@@ -52,6 +52,7 @@ const AppShell = () => {
   useKeyboardNavigation();
   const { locale } = useLocale();
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.documentElement.lang = locale;
@@ -61,7 +62,14 @@ const AppShell = () => {
     initializeGA();
     initializeAssetLoading(locale);
     (window as any).__LANG_SCANNER__ = scanner;
-  }, [locale]);
+
+    // Handle route parameter from redirect pages
+    const urlParams = new URLSearchParams(location.search);
+    const routeParam = urlParams.get('route');
+    if (routeParam && location.pathname === '/') {
+      navigate(`/${routeParam}`, { replace: true });
+    }
+  }, [locale, location, navigate]);
 
   return (
     <>
