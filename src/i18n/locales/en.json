@@ -629,6 +629,150 @@
           "detailedAnswer": "ReplAInow responds in under 3 seconds with accurate, contextual answers. The AI analyzes customer queries, accesses real-time Shopify data, and provides personalized responses faster than any human agent."
         }
       ]
+    },
+    "problemSolution": {
+      "title": "From chaos to clarity in seconds.",
+      "before": {
+        "title": "Before",
+        "subtitle": "Daily 50+ emails, endless copy-paste routines, hours of data searching. You're a support agent instead of an entrepreneur.",
+        "description": "Daily 50+ inquiries, repeated responses and data searching slow your growth.",
+        "imageAlt": "Shopify inbox screenshot before ReplAInow"
+      },
+      "after": {
+        "title": "After",
+        "subtitle": "AI responds in 3 seconds with perfect product knowledge, order status, and personalized recommendations. You focus on growth.",
+        "description": "AI handles 90% of inquiries automatically. You focus on what matters: growing your business.",
+        "imageAlt": "ReplAInow AI responses screenshot"
+      }
+    },
+    "socialProof": {
+      "title": "What real merchants say",
+      "subtitle": "Join 280+ happy Shopify merchants",
+      "trustBadges": {
+        "shopifyPartner": "Shopify Plus Partner",
+        "rating": "4.9/5 stars",
+        "merchants": "280+ merchants",
+        "gdprCompliant": "GDPR compliant"
+      },
+      "testimonials": [
+        {
+          "company": "BeautyStore",
+          "owner": "Lisa M.",
+          "result": "15 hours/week saved",
+          "quote": "ReplAInow revolutionized our support. The AI understands our products better than some employees!"
+        },
+        {
+          "company": "TechGadgets",
+          "owner": "Marco K.",
+          "result": "+37% customer satisfaction",
+          "quote": "Customers love the instant responses. Conversion has gone through the roof!"
+        },
+        {
+          "company": "FashionHub",
+          "owner": "Sarah T.",
+          "result": "12x ROI in 3 months",
+          "quote": "From Intercom to ReplAInow - best decision ever! Costs down, performance up."
+        },
+        {
+          "company": "ElectroMax",
+          "owner": "Thomas R.",
+          "result": "85% fewer support tickets",
+          "quote": "Finally no more 24/7 support shifts! The AI answers 90% of questions automatically. Game changer for our Shopify store!"
+        },
+        {
+          "company": "HomeDecor Plus",
+          "owner": "Anna L.",
+          "result": "+42% conversion rate",
+          "quote": "Our customers get instant answers about shipping, returns and product details. Shopify integration was super easy!"
+        },
+        {
+          "company": "SportGear Pro",
+          "owner": "Mike S.",
+          "result": "€50k+ additional revenue",
+          "quote": "The AI knows every item in our Shopify store. Customers buy more because they get perfect advice. Our support team can focus on important inquiries."
+        }
+      ]
+    },
+    "industryExamples": {
+      "badge": "🏭 INDUSTRY SOLUTIONS",
+      "title": "Industry-specific AI solutions",
+      "subtitle": "ReplAInow perfectly adapts to your industry and solves industry-specific customer questions",
+      "industries": [
+        {
+          "name": "Fashion & Mode",
+          "example": "ModeStore",
+          "challenges": ["Size consulting", "Returns", "Styling tips"],
+          "solution": "AI recognizes product features and gives personalized recommendations",
+          "results": "+45% conversion, -60% support tickets"
+        },
+        {
+          "name": "Electronics & Tech",
+          "example": "TechGadgets",
+          "challenges": ["Technical questions", "Compatibility", "Setup help"],
+          "solution": "AI knows all product specifications and solves 90% of questions",
+          "results": "+67% customer satisfaction, -80% wait times"
+        },
+        {
+          "name": "Beauty & Cosmetics",
+          "example": "BeautyStore",
+          "challenges": ["Product consulting", "Skin type analysis", "Application tips"],
+          "solution": "AI analyzes skin type and recommends suitable products",
+          "results": "+52% upselling, -70% returns"
+        },
+        {
+          "name": "Home & Garden",
+          "example": "HomeGarden",
+          "challenges": ["Assembly instructions", "Care tips", "Compatibility"],
+          "solution": "AI provides detailed instructions and care tips",
+          "results": "+38% customer satisfaction, -55% support effort"
+        }
+      ]
+    },
+    "liveExamples": {
+      "title": "Live from real Shopify stores",
+      "examples": [
+        {
+          "store": "TechGadgets24",
+          "message": "AI just gave a product recommendation for iPhone cases - customer bought 3 immediately!",
+          "revenue": "+EUR 89.97 revenue"
+        },
+        {
+          "store": "BeautyStore",
+          "message": "French customer gets perfect answer in French about skincare routine",
+          "conversion": "+37% conversion"
+        },
+        {
+          "store": "FashionHub",
+          "message": "AI explains size chart and recommends perfect size - return rate drops by 60%",
+          "returns": "-60% returns"
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "START NOW",
+      "title": "Ready for the AI revolution?",
+      "subtitle": "Over 280+ Shopify merchants already use ReplAInow. Become part of the elite and destroy your competition with superior AI technology.",
+      "cta": "INSTALL NOW",
+      "demo": "LIVE DEMO",
+      "features": ["14 days free", "Setup-free", "Cancel anytime", "Money-back"],
+      "stats": {
+        "title": "Why 280+ Shopify merchants rely on ReplAInow",
+        "subtitle": "Start today with the 14-day free trial",
+        "items": [
+          {
+            "value": "280+",
+            "label": "Satisfied merchants"
+          },
+          {
+            "value": "€2.1M",
+            "label": "Revenue generated"
+          },
+          {
+            "value": "187%",
+            "label": "Conversion boost"
+          }
+        ]
+      }
     }
   }
 }

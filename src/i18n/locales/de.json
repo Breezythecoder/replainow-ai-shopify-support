@@ -629,6 +629,150 @@
           "detailedAnswer": "ReplAInow antwortet in unter 3 Sekunden mit präzisen, kontextuellen Antworten. Die KI analysiert Kundenanfragen, greift auf Echtzeit-Shopify-Daten zu und liefert personalisierte Antworten schneller als jeder menschliche Agent."
         }
       ]
+    },
+    "problemSolution": {
+      "title": "Von Chaos zu Klarheit in Sekunden.",
+      "before": {
+        "title": "Vorher",
+        "subtitle": "Jeden Tag 50+ Mails, endlose Copy-Paste-Routinen, stundenlange Datensuche. Du bist Support-Agent statt Unternehmer.",
+        "description": "Täglich 50+ Anfragen, wiederholte Antworten und Datensuche bremsen dein Wachstum.",
+        "imageAlt": "Shopify-Postfach Screenshot vor ReplAInow"
+      },
+      "after": {
+        "title": "Nachher",
+        "subtitle": "KI antwortet in 3 Sekunden mit perfektem Produktwissen, Bestellstatus und personalisierten Empfehlungen. Du fokussierst dich aufs Wachstum.",
+        "description": "KI bearbeitet 90% der Anfragen automatisch. Du fokussierst dich auf das Wichtige: dein Business wachsen lassen.",
+        "imageAlt": "ReplAInow KI-Antworten Screenshot"
+      }
+    },
+    "socialProof": {
+      "title": "Das sagen echte Händler",
+      "subtitle": "Schließe dich 280+ zufriedenen Shopify-Händlern an",
+      "trustBadges": {
+        "shopifyPartner": "Shopify Plus Partner",
+        "rating": "4,9/5 Sterne",
+        "merchants": "280+ Händler",
+        "gdprCompliant": "DSGVO-konform"
+      },
+      "testimonials": [
+        {
+          "company": "BeautyStore",
+          "owner": "Lisa M.",
+          "result": "15 Stunden/Woche gespart",
+          "quote": "ReplAInow hat unseren Support revolutioniert. Die KI versteht unsere Produkte besser als manche Mitarbeiter!"
+        },
+        {
+          "company": "TechGadgets",
+          "owner": "Marco K.",
+          "result": "+37% Kundenzufriedenheit",
+          "quote": "Kunden lieben die instant Antworten. Conversion ist durch die Decke gegangen!"
+        },
+        {
+          "company": "FashionHub",
+          "owner": "Sarah T.",
+          "result": "12x ROI in 3 Monaten",
+          "quote": "Von Intercom zu ReplAInow - beste Entscheidung ever! Kosten runter, Performance hoch."
+        },
+        {
+          "company": "ElectroMax",
+          "owner": "Thomas R.",
+          "result": "85% weniger Support-Tickets",
+          "quote": "Endlich keine 24/7 Support-Schichten mehr! Die KI beantwortet 90% der Fragen automatisch. Game Changer für unser Shopify-Store!"
+        },
+        {
+          "company": "HomeDecor Plus",
+          "owner": "Anna L.",
+          "result": "+42% Conversion Rate",
+          "quote": "Unsere Kunden bekommen sofort Antworten zu Versand, Rücksendungen und Produktdetails. Shopify-Integration war super einfach!"
+        },
+        {
+          "company": "SportGear Pro",
+          "owner": "Mike S.",
+          "result": "€50k+ zusätzlicher Umsatz",
+          "quote": "Die KI kennt jeden Artikel in unserem Shopify-Store. Kunden kaufen mehr, weil sie perfekt beraten werden. Unser Support-Team kann sich auf wichtige Anfragen konzentrieren."
+        }
+      ]
+    },
+    "industryExamples": {
+      "badge": "🏭 BRANCHENLÖSUNGEN",
+      "title": "Branchenspezifische KI-Lösungen",
+      "subtitle": "ReplAInow passt sich perfekt an deine Branche an und löst branchenspezifische Kundenfragen",
+      "industries": [
+        {
+          "name": "Fashion & Mode",
+          "example": "ModeStore",
+          "challenges": ["Größenberatung", "Rückgabe", "Styling-Tipps"],
+          "solution": "KI erkennt Produktmerkmale und gibt personalisierte Empfehlungen",
+          "results": "+45% Conversion, -60% Support-Tickets"
+        },
+        {
+          "name": "Elektronik & Tech",
+          "example": "TechGadgets",
+          "challenges": ["Technische Fragen", "Kompatibilität", "Setup-Hilfe"],
+          "solution": "KI kennt alle Produktspezifikationen und löst 90% der Fragen",
+          "results": "+67% Kundenzufriedenheit, -80% Wartezeiten"
+        },
+        {
+          "name": "Beauty & Kosmetik",
+          "example": "BeautyStore",
+          "challenges": ["Produktberatung", "Hauttyp-Analyse", "Anwendungstipps"],
+          "solution": "KI analysiert Hauttyp und empfiehlt passende Produkte",
+          "results": "+52% Upselling, -70% Retouren"
+        },
+        {
+          "name": "Home & Garden",
+          "example": "HomeGarden",
+          "challenges": ["Montageanleitungen", "Pflegetipps", "Kompatibilität"],
+          "solution": "KI liefert detaillierte Anleitungen und Pflegehinweise",
+          "results": "+38% Kundenzufriedenheit, -55% Support-Aufwand"
+        }
+      ]
+    },
+    "liveExamples": {
+      "title": "Live aus echten Shopify Stores",
+      "examples": [
+        {
+          "store": "TechGadgets24",
+          "message": "KI hat gerade eine Produktempfehlung zu iPhone Cases gegeben - Kunde kauft sofort 3 Stück!",
+          "revenue": "+EUR 89,97 Umsatz"
+        },
+        {
+          "store": "BeautyStore",
+          "message": "Französische Kundin bekommt perfekte Antwort auf Französisch über Hautpflege-Routine",
+          "conversion": "+37% Conversion"
+        },
+        {
+          "store": "FashionHub",
+          "message": "KI erklärt Größentabelle und empfiehlt passende Größe - Return Rate sinkt um 60%",
+          "returns": "-60% Returns"
+        }
+      ]
+    },
+    "finalCta": {
+      "badge": "STARTE JETZT",
+      "title": "Bereit für die KI-Revolution?",
+      "subtitle": "Über 280+ Shopify-Händler nutzen bereits ReplAInow. Werde Teil der Elite und zerstöre deine Konkurrenz mit überlegener KI-Technologie.",
+      "cta": "JETZT INSTALLIEREN",
+      "demo": "LIVE DEMO",
+      "features": ["14 Tage kostenlos", "Setup-frei", "Jederzeit kündbar", "Geld-zurück"],
+      "stats": {
+        "title": "Warum 280+ Shopify-Händler auf ReplAInow setzen",
+        "subtitle": "Starte noch heute mit der 14-tägigen kostenlosen Testphase",
+        "items": [
+          {
+            "value": "280+",
+            "label": "Zufriedene Händler"
+          },
+          {
+            "value": "€2,1M",
+            "label": "Umsatz generiert"
+          },
+          {
+            "value": "187%",
+            "label": "Conversion Boost"
+          }
+        ]
+      }
     }
   }
 }
