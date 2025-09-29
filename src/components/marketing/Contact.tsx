@@ -41,7 +41,7 @@ const Contact = () => {
           name: data.name,
           message: data.message,
           _replyto: data.email,
-          _subject: `Contactformular Nachricht von ${data.name}`
+          _subject: `${t("contact.form.emailSubject")} ${data.name}`
         })
       });
 

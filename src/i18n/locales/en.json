@@ -852,7 +852,8 @@
           "message": "Describe your inquiry..."
         },
         "submit": "Send Message",
-        "submitting": "Sending..."
+        "submitting": "Sending...",
+        "emailSubject": "Contact Form Message from"
       },
       "toast": {
         "success": {
