@@ -24,6 +24,11 @@ jobs:
           cache: "npm"
 
       - run: npm ci
+      
+      # Guard against SW registration regressions
+      - name: Verify No SW Registration
+        run: node scripts/verify-no-sw-register.mjs
+      
       - run: npm run build
       
       # Run comprehensive QA checks
