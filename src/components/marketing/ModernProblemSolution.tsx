@@ -1,4 +1,5 @@
 import { AlertTriangle, CheckCircle, Clock, Users, TrendingDown, TrendingUp, Zap, Brain, Globe, Target } from "lucide-react";
+import { t } from "@/i18n";
 
 const ModernProblemSolution = () => {
   return (
@@ -25,7 +26,7 @@ const ModernProblemSolution = () => {
           ))}
         </div>
       </div>
-
+      
       <div className="container mx-auto px-6 relative z-10">
         {/* AI Badge */}
         <div className="inline-block mb-6">
@@ -45,11 +46,11 @@ const ModernProblemSolution = () => {
           {/* Before Card - Problem */}
           <div className="bg-white/95 backdrop-blur-lg border border-red-500/30 rounded-3xl p-8 relative shadow-2xl hover:shadow-red-500/25 transition-all duration-300 hover:scale-102">
             <div className="absolute -top-3 left-6 bg-gradient-to-r from-red-600 to-red-700 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-              ⚠️ OHNE REPLAINOW
+              ⚠️ {t("ui.problemSolution.before.title").toUpperCase()}
             </div>
             <img 
               src="/assets/1d082320-2e70-4359-aaed-382d72ddacb7.png" 
-              alt="Chaotisches überfülltes E-Mail Postfach" 
+              alt={t("ui.problemSolution.before.imageAlt")}
               className="w-full h-auto mb-6 rounded-xl shadow-md" 
               width="600"
               height="400"
@@ -83,11 +84,11 @@ const ModernProblemSolution = () => {
           {/* After Card - Solution */}
           <div className="bg-white/95 backdrop-blur-lg border border-green-500/30 rounded-3xl p-8 relative shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-102">
             <div className="absolute -top-3 left-6 bg-gradient-to-r from-green-600 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-              🚀 MIT REPLAINOW
+              🚀 {t("ui.problemSolution.after.title").toUpperCase()}
             </div>
             <img 
               src="/assets/91677a2e-50c4-4aeb-8a6e-f6626412e034.png" 
-              alt="ReplAInow AI Dashboard mit perfekter Antwort" 
+              alt={t("ui.problemSolution.after.imageAlt")}
               className="w-full h-auto mb-6 rounded-xl shadow-md" 
               width="600"
               height="400"
