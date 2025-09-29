@@ -1,36 +1,33 @@
 import { Button } from "@/components/ui/button";
-import { Download, Zap, Brain, TrendingUp } from "lucide-react";
+import { Download, Zap, Brain } from "lucide-react";
 import { t } from "@/i18n";
+import { safeArray } from "@/utils/safeT";
+import { z } from "zod";
+
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
+// Schema for step validation
+const StepSchema = z.object({
+  title: z.string(),
+  description: z.string()
+});
+
+const StepsArraySchema = z.array(StepSchema);
+
 const ModernHowItWorks = () => {
-  // Get current locale from URL path
-  const steps = [
-    {
-      step: "01",
-      icon: <Download className="w-8 h-8" />,
-      title: t('ui.howItWorks.steps.0.title'),
-      desc: t('ui.howItWorks.steps.0.desc')
-    },
-    {
-      step: "02", 
-      icon: <Zap className="w-8 h-8" />,
-      title: t('ui.howItWorks.steps.1.title'),
-      desc: t('ui.howItWorks.steps.1.desc')
-    },
-    {
-      step: "03",
-      icon: <Brain className="w-8 h-8" />,
-      title: t('ui.howItWorks.steps.2.title'),
-      desc: t('ui.howItWorks.steps.2.desc')
-    },
-    {
-      step: "04",
-      icon: <TrendingUp className="w-8 h-8" />,
-      title: t('ui.howItWorks.steps.3.title'), 
-      desc: t('ui.howItWorks.steps.3.desc')
-    }
-  ];
+  // Get steps from i18n using safeArray
+  const stepsData = safeArray(StepsArraySchema, "ui.howItWorks.steps");
+  
+  // Icons for the steps
+  const icons = [Download, Zap, Brain];
+  
+  // Build steps array with proper data
+  const steps = stepsData.map((stepData, index) => ({
+    step: String(index + 1).padStart(2, '0'),
+    icon: icons[index] || Download,
+    title: stepData.title,
+    desc: stepData.description
+  }));
 
   return (
     <section className="py-24 bg-gradient-to-b from-indigo-50 to-purple-50">
@@ -49,7 +46,7 @@ const ModernHowItWorks = () => {
             <div key={i} className="text-center group px-4">
               <div className="relative mb-6">
                 <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-gradient-primary rounded-full flex items-center justify-center text-3xl sm:text-4xl text-white shadow-hero group-hover:shadow-brand-mega group-hover:scale-110 transition-all duration-300 touch-target-comfortable">
-                  {step.icon}
+                  <step.icon className="w-8 h-8" />
                 </div>
                 <div className="absolute -top-2 -right-2 bg-white text-indigo-600 font-black text-xs sm:text-sm px-2 py-1 sm:px-3 sm:py-2 rounded-full border-2 border-indigo-200 shadow-lg">
                   {step.step}
