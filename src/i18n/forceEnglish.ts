@@ -19,8 +19,7 @@ export const forceEnglishTranslations = {
   "ui.hero.installButton": "Install Now",
   "ui.hero.liveDemoButton": "Watch Demo",
   "ui.skipToMain": "Skip to main content",
-  "ui.howItWorks.title": "How It Works",
-  "ui.howItWorks.subtitle": "3 Simple Steps to AI-Powered Support",
+  // Removed duplicate keys - using newer versions below
   "ui.features.title.primary": "Why ReplAInow",
   "ui.features.title.secondary": "outperforms every competitor",
   "ui.features.subtitle.highlight": "Revolutionary GPT-4.1 technology",
