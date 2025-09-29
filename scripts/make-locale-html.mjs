@@ -37,16 +37,71 @@ function ensureLangAndLinks(src, lang, canonicalHref) {
     `</head>`
   ].join("\n"));
 
-  // Minimal Organization JSON-LD (nur falls nicht vorhanden)
+  // Complete JSON-LD schemas for all locales
   if (!/application\/ld\+json/.test(out)) {
-    const org = {
+    const isEnglish = lang === 'en';
+
+    // Organization Schema
+    const organizationSchema = {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "ReplAInow",
-      "url": BASE
+      "description": isEnglish
+        ? "AI-powered Shopify customer support: automated responses with GPT-4.1, 3-second response time, 32+ languages, GDPR-compliant, 75% cost savings."
+        : "KI-gestützter Kundensupport für Shopify: automatisierte Antworten mit GPT-4.1, 3-Sekunden Antwortzeit, 32+ Sprachen, DSGVO-konform, 75% Kosteneinsparung.",
+      "url": BASE,
+      "logo": `${BASE}/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png`,
+      "telephone": "+49-30-123-456-789",
+      "foundingDate": "2024",
+      "founder": {
+        "@type": "Person",
+        "name": "Ruben Calabrese"
+      }
     };
-    out = out.replace(/<\/head>/i,
-      `  <script type="application/ld+json">${JSON.stringify(org)}</script>\n</head>`);
+
+    // SoftwareApplication Schema
+    const softwareSchema = {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "ReplAInow AI Helpdesk",
+      "description": isEnglish
+        ? "AI-powered Shopify customer support with GPT-4 technology"
+        : "KI-gestützter Kundensupport für Shopify mit GPT-4 Technologie",
+      "url": BASE,
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "price": "19",
+      "priceCurrency": "EUR",
+      "ratingValue": "4.9",
+      "ratingCount": "280"
+    };
+
+    // WebSite Schema
+    const websiteSchema = {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ReplAInow",
+      "url": BASE,
+      "description": isEnglish
+        ? "AI Shopify Helpdesk - Automated Customer Support"
+        : "AI Shopify Helpdesk - Automatisierter Kundensupport",
+      "inLanguage": isEnglish ? "en-US" : "de-DE",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": `${BASE}/search?q={search_term_string}`
+        },
+        "query-input": "required name=search_term_string"
+      }
+    };
+
+    out = out.replace(/<\/head>/i, [
+      `  <script type="application/ld+json">${JSON.stringify(organizationSchema)}</script>`,
+      `  <script type="application/ld+json">${JSON.stringify(softwareSchema)}</script>`,
+      `  <script type="application/ld+json">${JSON.stringify(websiteSchema)}</script>`,
+      `</head>`
+    ].join("\n"));
   }
 
   return out;

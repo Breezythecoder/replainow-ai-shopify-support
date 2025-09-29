@@ -12,7 +12,7 @@ test.describe('EN Parity Tests', () => {
     await expect(page.locator('html')).toHaveAttribute('lang', 'de');
     
     // Check for German content in hero section
-    await expect(page.locator('h1')).toContainText(/Shopify/);
+    await expect(page.locator('h1')).toContainText(/KI-Help/);
     
     // Check for JSON-LD scripts
     await expect(page.locator('script[type="application/ld+json"]')).toHaveCount({ min: 1 });
@@ -48,7 +48,7 @@ test.describe('EN Parity Tests', () => {
     await expect(page.locator('html')).toHaveAttribute('lang', 'en');
     
     // Check for English content in hero section
-    await expect(page.locator('h1')).toContainText(/Shopify/);
+    await expect(page.locator('h1')).toContainText(/AI Help/);
     
     // Check for JSON-LD scripts
     await expect(page.locator('script[type="application/ld+json"]')).toHaveCount({ min: 1 });
