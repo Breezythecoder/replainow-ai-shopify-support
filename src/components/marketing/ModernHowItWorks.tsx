@@ -73,7 +73,7 @@ const ModernHowItWorks = () => {
             </a>
           </Button>
           <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed">
-            14 days free  Setup-frei  Jederzeit kündbar
+            14 Tage kostenlos • Setup-frei • Jederzeit kündbar
           </p>
         </div>
       </div>

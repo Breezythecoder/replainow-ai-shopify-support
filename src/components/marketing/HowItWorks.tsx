@@ -44,18 +44,18 @@ const HowItWorks = () => {
   };
 
   // Get steps from i18n
-  const steps = safeArray(StepsArraySchema, "ui.howItWorks.steps");
-  const icons = [Plug, Database, Bot]; // Only 3 icons for 3 steps
+  const steps = safeArray(StepsArraySchema, "howItWorks.steps");
+  const icons = [Plug, Database, Bot]; // 3 icons for 3 steps
 
   return (
     <section id="how-it-works" aria-labelledby="how-heading" className="py-16 md:py-24">
       <div className="container">
         <header className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
           <h2 id="how-heading" className="font-display text-3xl md:text-4xl font-semibold mb-4">
-            {t("ui.howItWorks.title")}
+            {t("howItWorks.title")}
           </h2>
           <p className="text-muted-foreground">
-            {t("ui.howItWorks.subtitle")}
+            {t("howItWorks.subtitle")}
           </p>
         </header>
 
@@ -86,10 +86,10 @@ const HowItWorks = () => {
         <div className="text-center max-w-3xl mx-auto mt-10 md:mt-14">
           <div className="mt-2 flex flex-col sm:flex-row items-center justify-center gap-3">
             <Button asChild size="lg" variant="hero" className="w-full sm:w-auto">
-              <a href={OAUTH_URL}>{t("ui.howItWorks.ctaInstall")}</a>
+              <a href={OAUTH_URL}>{t("howItWorks.ctaInstall")}</a>
             </Button>
             <Button asChild size="lg" variant="outline" className="w-full sm:w-auto">
-              <a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="cursor-pointer">{t("ui.howItWorks.ctaDemo")}</a>
+              <a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="cursor-pointer">{t("howItWorks.ctaDemo")}</a>
             </Button>
           </div>
         </div>
