@@ -95,12 +95,12 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-bold mb-4">Ressourcen</h4>
             <ul className="space-y-3">
-              <li><a href="#/ai-shopify-helpdesk" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">AI Shopify Helpdesk</a></li>
-              <li><a href="#/multilingual-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Multilingual Support</a></li>
-              <li><a href="#/shopify-customer-service" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Shopify Customer Service</a></li>
-              <li><a href="#/shopify-ai-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Shopify AI Support</a></li>
-              <li><a href="#/gorgias-alternative" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Gorgias Alternative</a></li>
-              <li><a href="#/intercom-alternative" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Intercom Alternative</a></li>
+              <li><a href="/ai-shopify-helpdesk" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">AI Shopify Helpdesk</a></li>
+              <li><a href="/multilingual-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Multilingual Support</a></li>
+              <li><a href="/shopify-customer-service" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Shopify Customer Service</a></li>
+              <li><a href="/shopify-ai-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Shopify AI Support</a></li>
+              <li><a href="/gorgias-alternative" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Gorgias Alternative</a></li>
+              <li><a href="/intercom-alternative" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Intercom Alternative</a></li>
             </ul>
           </div>
 
@@ -109,13 +109,13 @@ const Footer = () => {
             <h4 className="text-white font-bold mb-4">Support</h4>
             <ul className="space-y-3">
               <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('ui.footer.links.contact')}</a></li>
-              <li><a href="/privacy.html" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.privacy')}</a></li>
-              <li><a href="/terms.html" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.terms')}</a></li>
-              <li><a href="/security.html" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.security')}</a></li>
-              <li><a href="/impressum.html" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.impressum')}</a></li>
-              <li><a href="/refund.html" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.refund')}</a></li>
-              <li><a href="/cookies.html" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.cookies')}</a></li>
-              <li><a href="/uninstall.html" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.uninstall')}</a></li>
+              <li><a href="/privacy" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.privacy')}</a></li>
+              <li><a href="/terms" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.terms')}</a></li>
+              <li><a href="/security" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.security')}</a></li>
+              <li><a href="/impressum" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.impressum')}</a></li>
+              <li><a href="/refund" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.refund')}</a></li>
+              <li><a href="/cookies" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.cookies')}</a></li>
+              <li><a href="/uninstall" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.uninstall')}</a></li>
             </ul>
           </div>
 
