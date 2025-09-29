@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation, useNavigate } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { SkipToMainContent, useKeyboardNavigation } from "@/components/ui/accessibility";
 import { trackWebVitals } from "@/components/ui/performance";
@@ -46,6 +46,22 @@ import SkipLinks from "@/components/ui/SkipLinks";
 
 const queryClient = new QueryClient();
 
+// Handle initial route from static HTML pages
+const InitialRouteHandler = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  
+  useEffect(() => {
+    // Check if we have an initial route set by static HTML
+    const initialRoute = (window as any).__INITIAL_ROUTE__;
+    if (initialRoute && location.pathname === '/') {
+      navigate(initialRoute, { replace: true });
+    }
+  }, [navigate, location]);
+
+  return null;
+};
+
 const AppShell = () => {
   useKeyboardNavigation();
   const { locale } = useLocale();
@@ -63,6 +79,7 @@ const AppShell = () => {
 
   return (
     <>
+      <InitialRouteHandler />
       <SEOErrorBoundary>
         <SEOHead locale={locale} pathname={location.pathname} />
       </SEOErrorBoundary>
