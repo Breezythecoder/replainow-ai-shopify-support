@@ -631,18 +631,32 @@
       ]
     },
     "problemSolution": {
-      "title": "Von Chaos zu Klarheit in Sekunden.",
+      "badge": "⚡ PROBLEM VS LÖSUNG",
+      "problemTitle": "Das Problem:",
+      "problemSubtitle": "Überforderter Support",
+      "solutionTitle": "Die Lösung:",
+      "solutionSubtitle": "Intelligente AI",
       "before": {
-        "title": "Vorher",
-        "subtitle": "Jeden Tag 50+ Mails, endlose Copy-Paste-Routinen, stundenlange Datensuche. Du bist Support-Agent statt Unternehmer.",
-        "description": "Täglich 50+ Anfragen, wiederholte Antworten und Datensuche bremsen dein Wachstum.",
-        "imageAlt": "Shopify-Postfach Screenshot vor ReplAInow"
+        "title": "Ohne ReplAInow",
+        "imageAlt": "Chaotisches überfülltes E-Mail Postfach",
+        "points": [
+          "50+ E-Mails täglich bearbeiten",
+          "Endlose Copy-Paste Antworten",
+          "Kunden warten stundenlang",
+          "Verlorene Verkäufe durch schlechten Service",
+          "Überarbeitetes, gestresstes Team"
+        ]
       },
       "after": {
-        "title": "Nachher",
-        "subtitle": "KI antwortet in 3 Sekunden mit perfektem Produktwissen, Bestellstatus und personalisierten Empfehlungen. Du fokussierst dich aufs Wachstum.",
-        "description": "KI bearbeitet 90% der Anfragen automatisch. Du fokussierst dich auf das Wichtige: dein Business wachsen lassen.",
-        "imageAlt": "ReplAInow KI-Antworten Screenshot"
+        "title": "Mit ReplAInow",
+        "imageAlt": "ReplAInow AI Dashboard mit perfekter Antwort",
+        "points": [
+          "AI antwortet in 3 seconds automatisch",
+          "Perfekte Produktempfehlungen",
+          "32+ languages automatisch",
+          "+187% höhere Conversion Rate",
+          "90% weniger Support-Aufwand"
+        ]
       }
     },
     "socialProof": {

@@ -1,7 +1,16 @@
 import { AlertTriangle, CheckCircle, Clock, Users, TrendingDown, TrendingUp, Zap, Brain, Globe, Target } from "lucide-react";
 import { t } from "@/i18n";
+import { safeArray } from "@/utils/safeT";
+import { z } from "zod";
+
+// Schema for problem/solution points
+const PointsArraySchema = z.array(z.string());
 
 const ModernProblemSolution = () => {
+  // Get points from i18n
+  const beforePoints = safeArray(PointsArraySchema, "ui.problemSolution.before.points");
+  const afterPoints = safeArray(PointsArraySchema, "ui.problemSolution.after.points");
+
   return (
     <section className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden">
       {/* AI-Powered Background Effects */}
@@ -32,14 +41,14 @@ const ModernProblemSolution = () => {
         <div className="inline-block mb-6">
           <span className="px-6 py-3 bg-gradient-to-r from-red-500 via-orange-500 to-green-500 text-white font-black text-sm rounded-full shadow-2xl animate-pulse relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
-            <span className="relative z-10">⚡ PROBLEM VS LÖSUNG</span>
+            <span className="relative z-10">{t("ui.problemSolution.badge")}</span>
           </span>
         </div>
         
         <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-center mb-16 tracking-tight">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-500">Das Problem:</span> <span className="text-white">Überforderter Support</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-500">{t("ui.problemSolution.problemTitle")}</span> <span className="text-white">{t("ui.problemSolution.problemSubtitle")}</span>
           <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-500">Die Lösung:</span> <span className="text-white">Intelligente AI</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-cyan-500">{t("ui.problemSolution.solutionTitle")}</span> <span className="text-white">{t("ui.problemSolution.solutionSubtitle")}</span>
         </h2>
         
         <div className="grid lg:grid-cols-2 gap-12">
@@ -58,26 +67,16 @@ const ModernProblemSolution = () => {
               decoding="async"
             />
             <ul className="space-y-4 text-slate-600">
-              <li className="flex items-center gap-3">
-                <AlertTriangle className="text-red-500 w-5 h-5 flex-shrink-0" />
-                <span className="font-medium">50+ E-Mails täglich bearbeiten</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <AlertTriangle className="text-red-500 w-5 h-5 flex-shrink-0" />
-                <span className="font-medium">Endlose Copy-Paste Antworten</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Clock className="text-red-500 w-5 h-5 flex-shrink-0" />
-                <span className="font-medium">Kunden warten stundenlang</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <TrendingDown className="text-red-500 w-5 h-5 flex-shrink-0" />
-                <span className="font-medium">Verlorene Verkäufe durch schlechten Service</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Users className="text-red-500 w-5 h-5 flex-shrink-0" />
-                <span className="font-medium">Überarbeitetes, gestresstes Team</span>
-              </li>
+              {beforePoints.map((point, index) => (
+                <li key={index} className="flex items-center gap-3">
+                  {index === 0 && <AlertTriangle className="text-red-500 w-5 h-5 flex-shrink-0" />}
+                  {index === 1 && <AlertTriangle className="text-red-500 w-5 h-5 flex-shrink-0" />}
+                  {index === 2 && <Clock className="text-red-500 w-5 h-5 flex-shrink-0" />}
+                  {index === 3 && <TrendingDown className="text-red-500 w-5 h-5 flex-shrink-0" />}
+                  {index === 4 && <Users className="text-red-500 w-5 h-5 flex-shrink-0" />}
+                  <span className="font-medium">{point}</span>
+                </li>
+              ))}
             </ul>
           </div>
           
@@ -96,26 +95,16 @@ const ModernProblemSolution = () => {
               decoding="async"
             />
             <ul className="space-y-4 text-slate-600">
-              <li className="flex items-center gap-3">
-                <Zap className="text-green-500 w-5 h-5 flex-shrink-0" />
-                <span className="font-medium">AI antwortet in 3 seconds automatisch</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Target className="text-green-500 w-5 h-5 flex-shrink-0" />
-                <span className="font-medium">Perfekte Produktempfehlungen</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Globe className="text-green-500 w-5 h-5 flex-shrink-0" />
-                <span className="font-medium">32+ languages automatisch</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <TrendingUp className="text-green-500 w-5 h-5 flex-shrink-0" />
-                <span className="font-medium">+187% höhere Conversion Rate</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Brain className="text-green-500 w-5 h-5 flex-shrink-0" />
-                <span className="font-medium">90% weniger Support-Aufwand</span>
-              </li>
+              {afterPoints.map((point, index) => (
+                <li key={index} className="flex items-center gap-3">
+                  {index === 0 && <Zap className="text-green-500 w-5 h-5 flex-shrink-0" />}
+                  {index === 1 && <Target className="text-green-500 w-5 h-5 flex-shrink-0" />}
+                  {index === 2 && <Globe className="text-green-500 w-5 h-5 flex-shrink-0" />}
+                  {index === 3 && <TrendingUp className="text-green-500 w-5 h-5 flex-shrink-0" />}
+                  {index === 4 && <Brain className="text-green-500 w-5 h-5 flex-shrink-0" />}
+                  <span className="font-medium">{point}</span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

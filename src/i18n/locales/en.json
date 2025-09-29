@@ -631,18 +631,32 @@
       ]
     },
     "problemSolution": {
-      "title": "From chaos to clarity in seconds.",
+      "badge": "⚡ PROBLEM VS SOLUTION",
+      "problemTitle": "The Problem:",
+      "problemSubtitle": "Overwhelmed Support",
+      "solutionTitle": "The Solution:",
+      "solutionSubtitle": "Intelligent AI",
       "before": {
-        "title": "Before",
-        "subtitle": "Daily 50+ emails, endless copy-paste routines, hours of data searching. You're a support agent instead of an entrepreneur.",
-        "description": "Daily 50+ inquiries, repeated responses and data searching slow your growth.",
-        "imageAlt": "Shopify inbox screenshot before ReplAInow"
+        "title": "Without ReplAInow",
+        "imageAlt": "Chaotic overflowing email inbox",
+        "points": [
+          "Process 50+ emails daily",
+          "Endless copy-paste responses",
+          "Customers wait for hours",
+          "Lost sales due to poor service",
+          "Overworked, stressed team"
+        ]
       },
       "after": {
-        "title": "After",
-        "subtitle": "AI responds in 3 seconds with perfect product knowledge, order status, and personalized recommendations. You focus on growth.",
-        "description": "AI handles 90% of inquiries automatically. You focus on what matters: growing your business.",
-        "imageAlt": "ReplAInow AI responses screenshot"
+        "title": "With ReplAInow",
+        "imageAlt": "ReplAInow AI dashboard with perfect response",
+        "points": [
+          "AI responds automatically in 3 seconds",
+          "Perfect product recommendations",
+          "32+ languages automatically",
+          "+187% higher conversion rate",
+          "90% less support effort"
+        ]
       }
     },
     "socialProof": {
