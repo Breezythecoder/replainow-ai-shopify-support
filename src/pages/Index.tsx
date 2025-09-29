@@ -98,11 +98,11 @@ const Index = () => {
         <ModernComparison />
         <IndustryExamples />
         <AIOptimizedFAQ />
+        <MailAndChat />
         <Contact />
         <ModernFinalCTA />
       </main>
       <Footer />
-      <MailAndChat />
       <LanguageSwitcher />
     </>
   );
