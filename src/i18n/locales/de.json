@@ -190,7 +190,7 @@
           ],
           "highlight": false,
           "description": "Perfekt zum Testen",
-          "cta": "Starte mit Starter"
+          "cta": "Jetzt kostenlos testen"
         },
         {
           "name": "Growth",
@@ -208,7 +208,7 @@
           "highlight": true,
           "badge": "Beliebtester Plan",
           "description": "Für wachsende Stores",
-          "cta": "Wachse mit Growth"
+          "cta": "Jetzt kostenlos testen"
         },
         {
           "name": "Pro",
@@ -225,7 +225,7 @@
           ],
           "highlight": false,
           "description": "Für etablierte Stores",
-          "cta": "Upgrade auf Pro"
+          "cta": "Jetzt kostenlos testen"
         },
         {
           "name": "Scale",
@@ -242,7 +242,7 @@
           ],
           "highlight": false,
           "description": "Für Enterprise-Teams",
-          "cta": "Alles-in mit Scale"
+          "cta": "Jetzt kostenlos testen"
         }
       ],
       "cta": "Jetzt installieren",

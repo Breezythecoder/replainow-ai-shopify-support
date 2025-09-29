@@ -109,6 +109,14 @@ const ModernPricing = () => {
           {pricingPlans.map((plan) => {
             const Card = (
               <div className={`bg-slate-800/50 backdrop-blur-lg rounded-3xl p-6 sm:p-8 h-full flex flex-col border ${plan.highlight ? 'border-blue-400/60 shadow-blue-500/25 bg-slate-800/70' : 'border-blue-500/30 shadow-2xl'} relative overflow-hidden hover:border-blue-400/50 transition-all duration-300`}>
+                {/* Badge for popular plan */}
+                {plan.badge && (
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-20">
+                    <div className="bg-gradient-to-r from-blue-500 to-indigo-600 text-white px-4 py-2 rounded-full text-xs font-bold shadow-lg border-2 border-white">
+                      {plan.badge}
+                    </div>
+                  </div>
+                )}
                 <div className="text-center mb-6 sm:mb-8">
                   <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white">{plan.name}</h3>
                   <p className="text-xs sm:text-sm text-blue-100 mb-3 sm:mb-4">{plan.description}</p>
