@@ -324,52 +324,52 @@
         "rows": [
           {
             "label": "AI Intelligenz",
-            "replAInow": "YES · GPT-4.1 neueste Generation",
-            "gorgias": "NO · Basis-Automation",
-            "intercom": "NO · Limitierte AI",
-            "zendesk": "NO · Veraltete AI"
+            "replAInow": "GPT-4.1 neueste Generation",
+            "gorgias": "Basis-Automation",
+            "intercom": "Limitierte AI",
+            "zendesk": "Veraltete AI"
           },
           {
             "label": "Antwortzeit",
-            "replAInow": "YES · 3 Sekunden",
-            "gorgias": "NO · 2-5 Minuten",
-            "intercom": "NO · 5-10 Minuten",
-            "zendesk": "NO · 10+ Minuten"
+            "replAInow": "3 Sekunden",
+            "gorgias": "2-5 Minuten",
+            "intercom": "5-10 Minuten",
+            "zendesk": "10+ Minuten"
           },
           {
             "label": "Sprachen",
-            "replAInow": "YES · 32+ nativ",
-            "gorgias": "NO · 10 basic",
-            "intercom": "NO · 15 basic",
-            "zendesk": "NO · 20 basic"
+            "replAInow": "32+ nativ unterstützt",
+            "gorgias": "10 Sprachen basic",
+            "intercom": "15 Sprachen basic",
+            "zendesk": "20 Sprachen basic"
           },
           {
             "label": "Shopify Integration",
-            "replAInow": "YES · Echtzeit Sync",
-            "gorgias": "NO · Manueller Import",
-            "intercom": "NO · Basis-Anbindung",
-            "zendesk": "NO · Komplexes Setup"
+            "replAInow": "Echtzeit Sync",
+            "gorgias": "Manueller Import",
+            "intercom": "Basis-Anbindung",
+            "zendesk": "Komplexes Setup"
           },
           {
             "label": "Preis / Monat",
-            "replAInow": "YES · 19 € pauschal",
-            "gorgias": "NO · 50 €+",
-            "intercom": "NO · 74 €+",
-            "zendesk": "NO · 115 €+"
+            "replAInow": "€19 pauschal",
+            "gorgias": "€50+ pro Agent",
+            "intercom": "€74+ pro Seat",
+            "zendesk": "€115+ pro Agent"
           },
           {
             "label": "Setup Zeit",
-            "replAInow": "YES · 60 Sekunden",
-            "gorgias": "NO · 2-3 Tage",
-            "intercom": "NO · 1 Woche",
-            "zendesk": "NO · 2 Wochen"
+            "replAInow": "60 Sekunden",
+            "gorgias": "2-3 Tage",
+            "intercom": "1 Woche",
+            "zendesk": "2 Wochen"
           },
           {
-            "label": "ROI",
-            "replAInow": "YES · 6× Conversion",
-            "gorgias": "NO · Neutral",
-            "intercom": "NO · Neutral",
-            "zendesk": "NO · Negativ"
+            "label": "ROI Steigerung",
+            "replAInow": "6× Conversion Rate",
+            "gorgias": "Neutral bis leicht",
+            "intercom": "Minimal",
+            "zendesk": "Oft negativ"
           }
         ]
       },
