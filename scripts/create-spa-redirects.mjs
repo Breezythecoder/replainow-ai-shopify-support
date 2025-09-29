@@ -33,8 +33,8 @@ const createRedirectHTML = (route) => `<!doctype html>
     <title>ReplAInow - Wird geladen...</title>
     <meta name="robots" content="noindex, nofollow" />
     <script>
-      // Immediate redirect to main SPA WITHOUT hash
-      window.location.replace('/?route=${route}');
+      // Immediate redirect to clean URL WITHOUT hash
+      window.location.replace('/${route}');
     </script>
   </head>
   <body>

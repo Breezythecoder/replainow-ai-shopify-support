@@ -63,12 +63,7 @@ const AppShell = () => {
     initializeAssetLoading(locale);
     (window as any).__LANG_SCANNER__ = scanner;
 
-    // Handle route parameter from redirect pages
-    const urlParams = new URLSearchParams(location.search);
-    const routeParam = urlParams.get('route');
-    if (routeParam && location.pathname === '/') {
-      navigate(`/${routeParam}`, { replace: true });
-    }
+    // No need for URL parameter handling anymore - direct navigation
   }, [locale, location, navigate]);
 
   return (
