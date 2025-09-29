@@ -61,12 +61,41 @@ export const forceEnglishTranslations = {
   "ui.mailAndChat.fallbackSubtitle": "AI mail and chat automation for Shopify merchants.",
   "ui.socialProof.title": "What real merchants say",
   "ui.socialProof.subtitle": "Join 280+ happy Shopify merchants",
-  "ui.liveDemo.title": "See ReplAInow in Action",
-  "ui.liveDemo.subtitle": "Watch how our AI handles real customer queries",
-  "ui.comparison.title": "ReplAInow vs Traditional Support",
-  "ui.comparison.subtitle": "See why merchants choose AI-powered support",
-  "ui.contact.title": "Get in Touch",
-  "ui.contact.subtitle": "Questions? We're here to help",
+  
+  // Sticky Install Bar
+  "ui.stickyInstallBar.title": "ReplAInow AI Helpdesk",
+  "ui.stickyInstallBar.subtitle": "$19/month • 14 days free • 4.9★",
+  "ui.stickyInstallBar.cta": "Install Now",
+  
+  // How It Works
+  "ui.howItWorks.title": "Get started in minutes",
+  "ui.howItWorks.subtitle": "Install, connect, send responses and automate with rules.",
+  "ui.howItWorks.steps.0.title": "Install from Shopify App Store",
+  "ui.howItWorks.steps.0.description": "One-click installation directly from the Shopify App Store. No technical setup required.",
+  "ui.howItWorks.steps.1.title": "Connect your store data",
+  "ui.howItWorks.steps.1.description": "ReplAInow automatically syncs your products, orders, and customer data for intelligent responses.",
+  "ui.howItWorks.steps.2.title": "AI starts responding",
+  "ui.howItWorks.steps.2.description": "Your AI assistant immediately begins handling customer inquiries with human-like precision.",
+  
+  // Live Demo
+  "ui.liveDemo.badge": "⚡ INTERACTIVE DEMO",
+  "ui.liveDemo.title.primary": "See",
+  "ui.liveDemo.title.secondary": "ReplAInow in action",
+  "ui.liveDemo.subtitle": "Watch how our AI handles real customer conversations with perfect accuracy and lightning speed.",
+  "ui.liveDemo.controls.play": "Play",
+  "ui.liveDemo.controls.pause": "Pause",
+  "ui.liveDemo.controls.restart": "Restart",
+  "ui.liveDemo.stats.responseTime": "Response Time",
+  "ui.liveDemo.stats.accuracy": "Accuracy",
+  "ui.liveDemo.stats.languages": "Languages",
+  
+  // Exit Intent
+  "ui.exitIntent.title": "Wait! Don't miss your chance!",
+  "ui.exitIntent.subtitle": "Get 30% off all plans now. Only available today!",
+  "ui.exitIntent.cta": "🎯 SAVE 30% NOW",
+  "ui.exitIntent.dismiss": "No, thanks",
+  
+  // FAQ
   "ui.faq.title": "Frequently Asked Questions",
   "ui.faq.subtitle": "Everything you need to know about ReplAInow",
   "ui.finalCta.title": "Ready to automate your support?",

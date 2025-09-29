@@ -502,6 +502,133 @@
         "demoAria": "Watch live demo"
       },
       "fallbackSubtitle": "AI mail and chat automation for Shopify merchants."
+    },
+    "stickyInstallBar": {
+      "title": "ReplAInow AI Helpdesk",
+      "subtitle": "$19/month • 14 days free • 4.9★",
+      "cta": "Install Now"
+    },
+    "howItWorks": {
+      "title": "Get started in minutes",
+      "subtitle": "Install, connect, send responses and automate with rules.",
+      "steps": [
+        {
+          "title": "Install from Shopify App Store",
+          "description": "One-click installation directly from the Shopify App Store. No technical setup required."
+        },
+        {
+          "title": "Connect your store data",
+          "description": "ReplAInow automatically syncs your products, orders, and customer data for intelligent responses."
+        },
+        {
+          "title": "AI starts responding",
+          "description": "Your AI assistant immediately begins handling customer inquiries with human-like precision."
+        }
+      ]
+    },
+    "liveDemo": {
+      "badge": "⚡ INTERACTIVE DEMO",
+      "title": {
+        "primary": "See",
+        "secondary": "ReplAInow in action"
+      },
+      "subtitle": "Watch how our AI handles real customer conversations with perfect accuracy and lightning speed.",
+      "scenarios": [
+        {
+          "name": "Tech Store",
+          "icon": "📱",
+          "messages": [
+            "Hello! I'm looking for an iPhone case for my iPhone 14 Pro. What do you recommend?",
+            "Are there student discounts available?",
+            "How long does shipping to Germany take?",
+            "Can I return the product if I don't like it?"
+          ],
+          "responses": [
+            "Hello! For your iPhone 14 Pro I recommend our Premium Clear Case ($24.99) or the Rugged Case ($29.99). Both are in stock and offer optimal protection! 🛡️",
+            "Yes! Students get 15% off with code STUDENT15. Just enter it at checkout! 🎓",
+            "Standard shipping to Germany takes 2-3 business days ($4.99), Express shipping 1-2 business days ($9.99). Free shipping over $50! 🚚",
+            "Yes, you have a 30-day return policy! Free returns, money-back guarantee. Simply request a return in your account! ✅"
+          ]
+        },
+        {
+          "name": "Fashion Store",
+          "icon": "👗",
+          "messages": [
+            "What size should I choose for this dress?",
+            "Is the material sustainable?",
+            "Can I order multiple colors?",
+            "How's the quality?"
+          ],
+          "responses": [
+            "Based on your measurements I recommend size M. The dress fits loosely and is true-to-size. When in doubt, go one size up! 📏",
+            "Yes! 100% organic cotton, fair trade and eco-friendly packaging. 🌱 Sustainability is important to us!",
+            "Absolutely! Available in 5 colors: Black, White, Navy, Beige, and Rose. Mix & match for free shipping over $75! 🎨",
+            "Excellent quality! Premium materials, reinforced seams, pre-washed. 4.8/5 stars from 2,847 customers. 30-day guarantee! ⭐"
+          ]
+        },
+        {
+          "name": "Home & Garden",
+          "icon": "🏡",
+          "messages": [
+            "Is this plant suitable for beginners?",
+            "What care does it need?",
+            "Does it come with a pot?",
+            "Shipping to apartments possible?"
+          ],
+          "responses": [
+            "Perfect for beginners! This Monstera is very forgiving and grows quickly. Ideal first plant! 🌱",
+            "Water weekly, bright indirect light, monthly fertilizer. We include a detailed care guide! 💚",
+            "Yes! Comes with a matching ceramic pot (worth $15) and drainage tray. Ready to display! 🪴",
+            "Yes! We deliver to apartments. Our delivery team brings it directly to your door. Elevator access preferred! 🚚"
+          ]
+        }
+      ],
+      "controls": {
+        "play": "Play",
+        "pause": "Pause",
+        "restart": "Restart"
+      },
+      "stats": {
+        "responseTime": "Response Time",
+        "accuracy": "Accuracy",
+        "languages": "Languages"
+      }
+    },
+    "exitIntent": {
+      "title": "Wait! Don't miss your chance!",
+      "subtitle": "Get 30% off all plans now. Only available today!",
+      "cta": "🎯 SAVE 30% NOW",
+      "dismiss": "No, thanks"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "items": [
+        {
+          "question": "What is ReplAInow AI Helpdesk?",
+          "shortAnswer": "ReplAInow is an AI-powered customer support solution for Shopify with GPT-4 technology.",
+          "detailedAnswer": "ReplAInow is an AI-powered customer support solution for Shopify that automatically responds to customer queries, provides product recommendations, and is available in 32+ languages. The software uses GPT-4 technology for precise, human-like responses and integrates seamlessly into existing Shopify stores."
+        },
+        {
+          "question": "How much does ReplAInow cost?",
+          "shortAnswer": "ReplAInow starts at $19/month with a 14-day free trial.",
+          "detailedAnswer": "ReplAInow starts at $19/month for the Starter plan. Other plans: Pro ($49/month), Scale ($199/month). All plans include a 14-day free trial with no setup fees and unlimited AI responses."
+        },
+        {
+          "question": "Is ReplAInow GDPR compliant?",
+          "shortAnswer": "Yes, ReplAInow is fully GDPR compliant and meets all EU data protection requirements.",
+          "detailedAnswer": "Yes, ReplAInow is fully GDPR compliant and meets all European data protection requirements. All customer data is securely encrypted during transmission and storage, with full transparency about data processing and deletion rights."
+        },
+        {
+          "question": "Which languages does ReplAInow support?",
+          "shortAnswer": "ReplAInow natively supports 32+ languages including English, German, Spanish, French.",
+          "detailedAnswer": "ReplAInow natively supports 32+ languages including English, German, Spanish, Italian, Dutch, Portuguese, French, and more. The AI automatically detects customer language and responds accordingly, with no translation errors."
+        },
+        {
+          "question": "How fast does ReplAInow AI respond?",
+          "shortAnswer": "ReplAInow responds in under 3 seconds with accurate, contextual answers.",
+          "detailedAnswer": "ReplAInow responds in under 3 seconds with accurate, contextual answers. The AI analyzes customer queries, accesses real-time Shopify data, and provides personalized responses faster than any human agent."
+        }
+      ]
     }
   }
 }

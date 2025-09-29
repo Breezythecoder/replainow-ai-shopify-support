@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { t } from "@/i18n";
 
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
@@ -7,8 +8,8 @@ const ModernStickyInstallBar = () => {
     <div className="fixed bottom-0 left-0 right-0 glass-strong border-t border-white/30 p-3 z-40 md:hidden backdrop-blur-lg">
       <div className="flex items-center justify-between">
         <div className="flex-1 pr-4">
-          <div className="font-black text-sm text-slate-800">ReplAInow AI Helpdesk</div>
-          <div className="text-xs text-slate-600 font-medium">19/Monat  14 days free  4.9</div>
+          <div className="font-black text-sm text-slate-800">{t("ui.stickyInstallBar.title")}</div>
+          <div className="text-xs text-slate-600 font-medium">{t("ui.stickyInstallBar.subtitle")}</div>
         </div>
         <Button 
           asChild 
@@ -17,7 +18,7 @@ const ModernStickyInstallBar = () => {
           className="px-4 py-2 font-bold shadow-neon whitespace-nowrap"
         >
           <a href={OAUTH_URL}>
-            Installieren
+            {t("ui.stickyInstallBar.cta")}
           </a>
         </Button>
       </div>

@@ -1,6 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Plug, Database, Bot, Settings2 } from "lucide-react";
 import { smoothScrollToElement } from "@/utils/smoothScroll";
+import { t } from "@/i18n";
+import { safeArray } from "@/utils/safeT";
+import { z } from "zod";
+
+const StepSchema = z.object({
+  title: z.string(),
+  description: z.string()
+});
+
+const StepsArraySchema = z.array(StepSchema);
 
 const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
 
@@ -33,15 +43,19 @@ const HowItWorks = () => {
     smoothScrollToElement(targetId);
   };
 
+  // Get steps from i18n
+  const steps = safeArray(StepsArraySchema, "ui.howItWorks.steps");
+  const icons = [Plug, Database, Bot, Settings2];
+
   return (
     <section id="how-it-works" aria-labelledby="how-heading" className="py-16 md:py-24">
       <div className="container">
         <header className="text-center max-w-3xl mx-auto mb-10 md:mb-14">
           <h2 id="how-heading" className="font-display text-3xl md:text-4xl font-semibold mb-4">
-            So startest du in Minuten
+            {t("ui.howItWorks.title")}
           </h2>
           <p className="text-muted-foreground">
-            Installieren, verbinden, Antworten versenden  und mit Regeln automatisieren.
+            {t("ui.howItWorks.subtitle")}
           </p>
         </header>
 
@@ -58,10 +72,14 @@ const HowItWorks = () => {
           </svg>
 
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            <Step Icon={Plug} title="Installieren" desc="1 Klick im Shopify App Store." />
-            <Step Icon={Database} title="Verbinden" desc="Echtzeit-Zugriff auf Shopify data." />
-            <Step Icon={Bot} title="Antworten" desc="AI-Vorschlge direkt im Admin." />
-            <Step Icon={Settings2} title="Automaten" desc="Regeln & Auto-Send optional." />
+            {steps.map((step, index) => (
+              <Step 
+                key={index}
+                Icon={icons[index] || Plug} 
+                title={step.title} 
+                desc={step.description} 
+              />
+            ))}
           </div>
         </div>
 
