@@ -19,6 +19,8 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
 import { softwareApplicationSchema, organizationSchema } from "@/components/seo/StructuredData";
 import MultilingualSEO from "@/components/seo/MultilingualSEO";
+import AIRecommendationSchema from "@/components/seo/AIRecommendationSchema";
+import AICrawlableContent from "@/components/seo/AICrawlableContent";
 import { getLocaleFromPath } from "@/i18n";
 import { useEffect, useState } from "react";
 
@@ -86,6 +88,8 @@ const Index = () => {
         image="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
+      <AIRecommendationSchema />
+      <AICrawlableContent />
       <ModernNavbar />
       <main id="main-content" role="main" aria-label={currentLocale === 'en' ? "Main content" : "Hauptinhalt"} className="pb-0">
         <ModernHero />
