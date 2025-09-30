@@ -1,4 +1,44 @@
-User-agent: *
-Disallow: /
+# Robots.txt for ReplAInow
+# Generated automatically - do not edit manually
 
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Disallow sensitive directories
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /scripts/
+Disallow: /tests/
+Disallow: /.git/
+Disallow: /.github/
+
+# Disallow development files
+Disallow: /*.env*
+Disallow: /*.config.*
+Disallow: /*.lock
+Disallow: /*.log
+
+# Allow important assets
+Allow: /assets/
+Allow: /images/
+Allow: /fonts/
+Allow: /favicon.ico
+Allow: /robots.txt
+Allow: /sitemap*.xml
+
+# Sitemap references
 Sitemap: https://replainow.com/sitemap.xml
+Sitemap: https://replainow.com/sitemap-index.xml
+
+# Additional sitemaps
+Sitemap: https://replainow.com/sitemaps/main.xml
+Sitemap: https://replainow.com/sitemaps/languages.xml
+Sitemap: https://replainow.com/sitemaps/pillars.xml
+Sitemap: https://replainow.com/sitemaps/legal.xml
+
+# Crawl delay (optional - be respectful)
+Crawl-delay: 1
