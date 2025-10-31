@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplAInow - Integration Banner</title>
+    <style>
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }
+        .banner { 
+            width: 1200px; 
+            height: 600px; 
+            background: linear-gradient(170deg, #fafbfc 0%, #e9ecef 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            max-width: 1000px;
+            z-index: 2;
+        }
+        .left-visual {
+            flex: 1;
+            position: relative;
+        }
+        .right-content {
+            flex: 1;
+            max-width: 400px;
+        }
+        h1 {
+            color: #0f172a;
+            font-size: 48px;
+            font-weight: 800;
+            margin: 0 0 20px;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+        }
+        .highlight {
+            background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            color: #475569;
+            font-size: 18px;
+            margin: 0 0 30px;
+            line-height: 1.6;
+        }
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .feature-text {
+            color: #334155;
+            font-size: 16px;
+        }
+        .cta {
+            background: #0f172a;
+            color: white;
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-block;
+            text-decoration: none;
+            transition: all 0.2s;
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+        }
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.3);
+        }
+        /* Integration Visual */
+        .integration-visual {
+            width: 400px;
+            height: 400px;
+            position: relative;
+        }
+        .shopify-card {
+            position: absolute;
+            width: 180px;
+            height: 80px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            color: #333;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+        }
+        .shopify-logo {
+            width: 30px;
+            height: 30px;
+            background: #7ab55c;
+            border-radius: 8px;
+            margin-right: 10px;
+        }
+        .app-card {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 600;
+            gap: 10px;
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .app-card:nth-child(2) {
+            top: 20px;
+            left: 20px;
+            animation-delay: 0s;
+        }
+        .app-card:nth-child(3) {
+            top: 20px;
+            right: 20px;
+            animation-delay: 0.5s;
+        }
+        .app-card:nth-child(4) {
+            bottom: 20px;
+            left: 20px;
+            animation-delay: 1s;
+        }
+        .app-card:nth-child(5) {
+            bottom: 20px;
+            right: 20px;
+            animation-delay: 1.5s;
+        }
+        .app-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+        .connection-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #3b82f6 50%, transparent 100%);
+            transform-origin: left center;
+            opacity: 0.3;
+        }
+        .line-1 {
+            width: 120px;
+            top: 50%;
+            left: 100px;
+            transform: rotate(-35deg);
+        }
+        .line-2 {
+            width: 120px;
+            top: 50%;
+            right: 100px;
+            transform: rotate(35deg);
+        }
+        .line-3 {
+            width: 120px;
+            bottom: 140px;
+            left: 100px;
+            transform: rotate(35deg);
+        }
+        .line-4 {
+            width: 120px;
+            bottom: 140px;
+            right: 100px;
+            transform: rotate(-35deg);
+        }
+        .pulse-dot {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: #3b82f6;
+            border-radius: 50%;
+            animation: pulse-move 2s linear infinite;
+        }
+        @keyframes pulse-move {
+            0% { opacity: 0; transform: translateX(0); }
+            50% { opacity: 1; }
+            100% { opacity: 0; transform: translateX(120px); }
+        }
+        .badge {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            background: #fef3c7;
+            color: #d97706;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .badge-icon {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="badge">
+            <span class="badge-icon">⚡</span>
+            <span>2-Click Setup</span>
+        </div>
+        
+        <div class="content-wrapper">
+            <div class="left-visual">
+                <div class="integration-visual">
+                    <div class="connection-line line-1"><div class="pulse-dot"></div></div>
+                    <div class="connection-line line-2"><div class="pulse-dot"></div></div>
+                    <div class="connection-line line-3"><div class="pulse-dot"></div></div>
+                    <div class="connection-line line-4"><div class="pulse-dot"></div></div>
+                    
+                    <div class="app-card">
+                        <div class="app-icon">💬</div>
+                        <span>Chat AI</span>
+                    </div>
+                    <div class="app-card" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%);">
+                        <div class="app-icon">📧</div>
+                        <span>Email AI</span>
+                    </div>
+                    <div class="app-card" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);">
+                        <div class="app-icon">🎯</div>
+                        <span>Analytics</span>
+                    </div>
+                    <div class="app-card" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);">
+                        <div class="app-icon">🚀</div>
+                        <span>Automation</span>
+                    </div>
+                    
+                    <div class="shopify-card">
+                        <div class="shopify-logo"></div>
+                        <span>Shopify Store</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-content">
+                <h1>Seamless <span class="highlight">Integration</span></h1>
+                <p class="subtitle">Connect your entire support ecosystem in minutes. One AI, all channels.</p>
+                
+                <div class="feature-list">
+                    <div class="feature">
+                        <div class="check-icon">✓</div>
+                        <span class="feature-text">Works with your existing Shopify setup</span>
+                    </div>
+                    <div class="feature">
+                        <div class="check-icon">✓</div>
+                        <span class="feature-text">Syncs with all major email providers</span>
+                    </div>
+                    <div class="feature">
+                        <div class="check-icon">✓</div>
+                        <span class="feature-text">No coding required - ever</span>
+                    </div>
+                </div>
+                
+                <a href="#" class="cta">Start Integration</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

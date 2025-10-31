@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplAInow - Dashboard Banner</title>
+    <style>
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }
+        .banner { 
+            width: 1200px; 
+            height: 600px; 
+            background: linear-gradient(135deg, #0c0e1a 0%, #1a1d35 100%);
+            display: flex;
+            align-items: center;
+            padding: 60px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        .left-content {
+            flex: 1;
+            max-width: 450px;
+            z-index: 2;
+        }
+        .right-content {
+            flex: 1.2;
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        h1 {
+            color: white;
+            font-size: 52px;
+            font-weight: 700;
+            margin: 0 0 20px;
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 50%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            color: #94a3b8;
+            font-size: 18px;
+            margin: 0 0 40px;
+            line-height: 1.6;
+        }
+        .stats-row {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .stat {
+            flex: 1;
+        }
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            margin: 0;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #64748b;
+            margin: 4px 0 0;
+        }
+        .cta {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 15px 35px rgba(59, 130, 246, 0.3);
+        }
+        /* Dashboard UI */
+        .dashboard {
+            width: 480px;
+            height: 420px;
+            background: rgba(26, 29, 53, 0.9);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+            backdrop-filter: blur(20px);
+            transform: perspective(1000px) rotateY(-15deg);
+        }
+        .dash-header {
+            background: rgba(30, 41, 59, 0.6);
+            padding: 20px 24px;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .dash-title {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+        }
+        .dash-status {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+        }
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: #10b981;
+            border-radius: 50%;
+        }
+        .dash-content {
+            padding: 24px;
+        }
+        .metric-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .metric-card {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 12px;
+            padding: 16px;
+        }
+        .metric-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #3b82f6;
+            margin: 0 0 4px;
+        }
+        .metric-label {
+            font-size: 12px;
+            color: #94a3b8;
+            margin: 0;
+        }
+        .activity-feed {
+            background: rgba(30, 41, 59, 0.3);
+            border-radius: 12px;
+            padding: 16px;
+        }
+        .activity-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            opacity: 0;
+            animation: slideIn 0.5s forwards;
+        }
+        .activity-item:nth-child(1) { animation-delay: 0.1s; }
+        .activity-item:nth-child(2) { animation-delay: 0.2s; }
+        .activity-item:nth-child(3) { animation-delay: 0.3s; }
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        .activity-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(59, 130, 246, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        .activity-text {
+            flex: 1;
+            font-size: 13px;
+            color: #e2e8f0;
+            line-height: 1.4;
+        }
+        .activity-time {
+            font-size: 11px;
+            color: #64748b;
+        }
+        /* Background decoration */
+        .grid-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .glow-orb {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            top: 50%;
+            right: -100px;
+            transform: translateY(-50%);
+            filter: blur(40px);
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="grid-bg"></div>
+        <div class="glow-orb"></div>
+        
+        <div class="left-content">
+            <div class="badge">
+                <div class="badge-dot"></div>
+                <span>Live Now</span>
+            </div>
+            <h1>Real-Time<br><span class="gradient-text">AI Dashboard</span></h1>
+            <p class="subtitle">Monitor your AI assistant's performance. Track conversations, response times, and customer satisfaction in real-time.</p>
+            <div class="stats-row">
+                <div class="stat">
+                    <p class="stat-value">14.2K</p>
+                    <p class="stat-label">Tickets Resolved</p>
+                </div>
+                <div class="stat">
+                    <p class="stat-value">1.8s</p>
+                    <p class="stat-label">Avg Response</p>
+                </div>
+            </div>
+            <a href="#" class="cta">See It In Action</a>
+        </div>
+        
+        <div class="right-content">
+            <div class="dashboard">
+                <div class="dash-header">
+                    <h3 class="dash-title">AI Performance Dashboard</h3>
+                    <div class="dash-status">
+                        <div class="status-dot"></div>
+                        <span>Active</span>
+                    </div>
+                </div>
+                <div class="dash-content">
+                    <div class="metric-grid">
+                        <div class="metric-card">
+                            <p class="metric-value">2,847</p>
+                            <p class="metric-label">Conversations Today</p>
+                        </div>
+                        <div class="metric-card">
+                            <p class="metric-value">98.4%</p>
+                            <p class="metric-label">Resolution Rate</p>
+                        </div>
+                        <div class="metric-card">
+                            <p class="metric-value">4.9/5</p>
+                            <p class="metric-label">Customer Rating</p>
+                        </div>
+                        <div class="metric-card">
+                            <p class="metric-value">€3.2K</p>
+                            <p class="metric-label">Saved This Month</p>
+                        </div>
+                    </div>
+                    <div class="activity-feed">
+                        <div class="activity-item">
+                            <div class="activity-icon">💬</div>
+                            <div class="activity-text">
+                                <strong>Order inquiry</strong> resolved automatically
+                                <div class="activity-time">2 min ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-text">
+                                <strong>Return request</strong> processed by AI
+                                <div class="activity-time">5 min ago</div>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">⭐</div>
+                            <div class="activity-text">
+                                <strong>5-star rating</strong> from customer
+                                <div class="activity-time">8 min ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
