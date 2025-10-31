@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplAInow - Exported Banner Gallery</title>
+    <style>
+        body { 
+            margin: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: #0f172a;
+            color: white;
+            padding: 40px;
+        }
+        h1 {
+            font-size: 36px;
+            margin: 0 0 10px;
+            background: linear-gradient(90deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            color: #64748b;
+            font-size: 18px;
+            margin: 0 0 40px;
+        }
+        .gallery {
+            display: grid;
+            gap: 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .banner-wrapper {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .banner-wrapper:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .banner-footer {
+            padding: 20px;
+            background: rgba(30, 41, 59, 0.8);
+            border-top: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .banner-name {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 0 0 8px;
+            color: #e2e8f0;
+        }
+        .banner-info {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+        .download-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .download-link:hover {
+            color: #93c5fd;
+        }
+        .stats {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 16px;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 36px;
+            font-weight: 700;
+            color: #60a5fa;
+            margin: 0;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #94a3b8;
+            margin: 4px 0 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exported PNG Banners</h1>
+    <p class="subtitle">All banners exported at 1200×600px - Ready for Shopify App Store</p>
+    
+    <div class="stats">
+        <div class="stat">
+            <p class="stat-value">9</p>
+            <p class="stat-label">Total Banners</p>
+        </div>
+        <div class="stat">
+            <p class="stat-value">1200×600</p>
+            <p class="stat-label">Resolution</p>
+        </div>
+        <div class="stat">
+            <p class="stat-value">PNG</p>
+            <p class="stat-label">Format</p>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <div class="banner-wrapper">
+            <img src="banner-1-hero.png" alt="Hero Banner" class="banner-img">
+            <div class="banner-footer">
+                <h3 class="banner-name">Hero Banner - Gradient Style</h3>
+                <div class="banner-info">
+                    <span>🎨 Purple gradient</span>
+                    <span>✨ Animated particles</span>
+                </div>
+                <a href="banner-1-hero.png" download class="download-link">⬇ Download PNG</a>
+            </div>
+        </div>
+
+        <div class="banner-wrapper">
+            <img src="banner-2-stats.png" alt="Stats Banner" class="banner-img">
+            <div class="banner-footer">
+                <h3 class="banner-name">Stats Banner - Data Driven</h3>
+                <div class="banner-info">
+                    <span>📊 ROI focused</span>
+                    <span>💡 Light theme</span>
+                </div>
+                <a href="banner-2-stats.png" download class="download-link">⬇ Download PNG</a>
+            </div>
+        </div>
+
+        <div class="banner-wrapper">
+            <img src="banner-3-minimal.png" alt="Minimal Banner" class="banner-img">
+            <div class="banner-footer">
+                <h3 class="banner-name">Minimal Banner - Dark Elegance</h3>
+                <div class="banner-info">
+                    <span>⚫ Pure black</span>
+                    <span>🎯 Ultra minimal</span>
+                </div>
+                <a href="banner-3-minimal.png" download class="download-link">⬇ Download PNG</a>
+            </div>
+        </div>
+
+        <div class="banner-wrapper">
+            <img src="banner-4-testimonial.png" alt="Testimonial Banner" class="banner-img">
+            <div class="banner-footer">
+                <h3 class="banner-name">Testimonial Banner - Social Proof</h3>
+                <div class="banner-info">
+                    <span>⭐ 5-star rating</span>
+                    <span>🟡 Yellow theme</span>
+                </div>
+                <a href="banner-4-testimonial.png" download class="download-link">⬇ Download PNG</a>
+            </div>
+        </div>
+
+        <div class="banner-wrapper">
+            <img src="banner-5-features.png" alt="Features Banner" class="banner-img">
+            <div class="banner-footer">
+                <h3 class="banner-name">Features Banner - Tech Forward</h3>
+                <div class="banner-info">
+                    <span>💻 UI mockup</span>
+                    <span>🌌 Dark gradient</span>
+                </div>
+                <a href="banner-5-features.png" download class="download-link">⬇ Download PNG</a>
+            </div>
+        </div>
+
+        <div class="banner-wrapper">
+            <img src="banner-6-dashboard.png" alt="Dashboard Banner" class="banner-img">
+            <div class="banner-footer">
+                <h3 class="banner-name">Dashboard Banner - Real-Time Analytics</h3>
+                <div class="banner-info">
+                    <span>📊 Live metrics</span>
+                    <span>🔷 3D perspective</span>
+                </div>
+                <a href="banner-6-dashboard.png" download class="download-link">⬇ Download PNG</a>
+            </div>
+        </div>
+
+        <div class="banner-wrapper">
+            <img src="banner-7-integration.png" alt="Integration Banner" class="banner-img">
+            <div class="banner-footer">
+                <h3 class="banner-name">Integration Banner - Seamless Connection</h3>
+                <div class="banner-info">
+                    <span>🔗 App ecosystem</span>
+                    <span>☁️ Light design</span>
+                </div>
+                <a href="banner-7-integration.png" download class="download-link">⬇ Download PNG</a>
+            </div>
+        </div>
+
+        <div class="banner-wrapper">
+            <img src="banner-8-mobile.png" alt="Mobile Banner" class="banner-img">
+            <div class="banner-footer">
+                <h3 class="banner-name">Mobile Banner - Support On The Go</h3>
+                <div class="banner-info">
+                    <span>📱 Dual phones</span>
+                    <span>🎨 Vibrant gradient</span>
+                </div>
+                <a href="banner-8-mobile.png" download class="download-link">⬇ Download PNG</a>
+            </div>
+        </div>
+
+        <div class="banner-wrapper">
+            <img src="banner-9-analytics.png" alt="Analytics Banner" class="banner-img">
+            <div class="banner-footer">
+                <h3 class="banner-name">Analytics Banner - Data Intelligence</h3>
+                <div class="banner-info">
+                    <span>📈 Animated charts</span>
+                    <span>🌟 Premium feel</span>
+                </div>
+                <a href="banner-9-analytics.png" download class="download-link">⬇ Download PNG</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

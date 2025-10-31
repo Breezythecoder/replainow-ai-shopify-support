@@ -4,12 +4,17 @@
  * Banner Export Script
  * Konvertiert HTML Banner zu PNG Bildern
  * 
- * Verwendung: node export-banners.js
+ * Verwendung: node export-banners.mjs
  */
 
-const puppeteer = require('puppeteer');
-const path = require('path');
-const fs = require('fs');
+import puppeteer from 'puppeteer';
+import path from 'path';
+import fs from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 async function exportBanners() {
   console.log('🚀 Starting banner export...\n');
@@ -25,11 +30,15 @@ async function exportBanners() {
     { name: 'banner-2-stats', title: 'Stats Banner' },
     { name: 'banner-3-minimal', title: 'Minimal Banner' },
     { name: 'banner-4-testimonial', title: 'Testimonial Banner' },
-    { name: 'banner-5-features', title: 'Features Banner' }
+    { name: 'banner-5-features', title: 'Features Banner' },
+    { name: 'banner-6-dashboard', title: 'Dashboard Banner' },
+    { name: 'banner-7-integration', title: 'Integration Banner' },
+    { name: 'banner-8-mobile', title: 'Mobile Banner' },
+    { name: 'banner-9-analytics', title: 'Analytics Banner' }
   ];
 
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: "new",
     args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
 
@@ -45,7 +54,7 @@ async function exportBanners() {
       await page.goto(filePath, { waitUntil: 'networkidle0' });
       
       // Wait a bit for animations to settle
-      await page.waitForTimeout(1000);
+      await new Promise(resolve => setTimeout(resolve, 1000));
       
       // Take screenshot
       const outputPath = path.join(exportDir, `${banner.name}.png`);
@@ -67,12 +76,5 @@ async function exportBanners() {
   console.log(`📁 Images saved to: ${exportDir}`);
 }
 
-// Check if puppeteer is installed
-try {
-  require.resolve('puppeteer');
-  exportBanners();
-} catch (e) {
-  console.log('⚠️  Puppeteer not installed!');
-  console.log('Run: npm install puppeteer');
-  console.log('Then try again: node export-banners.js\n');
-}
+// Run the export
+exportBanners().catch(console.error);
