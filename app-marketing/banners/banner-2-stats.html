@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplAInow - Stats Banner</title>
+    <style>
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; }
+        .banner { 
+            width: 1200px; 
+            height: 600px; 
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .left-section {
+            flex: 1;
+            padding: 80px;
+        }
+        .right-section {
+            flex: 1;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 60px;
+            position: relative;
+        }
+        h1 {
+            font-size: 48px;
+            font-weight: 800;
+            color: #111827;
+            margin: 0 0 20px;
+            line-height: 1.1;
+        }
+        .highlight {
+            background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle {
+            color: #6b7280;
+            font-size: 20px;
+            margin: 0 0 40px;
+            line-height: 1.5;
+        }
+        .stat-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .stat {
+            text-align: center;
+            padding: 20px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+        .stat-number {
+            font-size: 36px;
+            font-weight: 800;
+            color: #3b82f6;
+            margin: 0;
+        }
+        .stat-label {
+            font-size: 14px;
+            color: #6b7280;
+            margin: 5px 0 0;
+        }
+        .cta {
+            background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+            transition: transform 0.2s;
+        }
+        .cta:hover {
+            transform: translateY(-2px);
+        }
+        .badge {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            background: #fef3c7;
+            color: #d97706;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .decorative-circle {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            top: -150px;
+            right: -150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="badge">🎯 Proven Results</div>
+        <div class="left-section">
+            <h1>Cut Support Costs by <span class="highlight">87%</span></h1>
+            <p class="subtitle">Join 10,000+ Shopify stores using AI to handle customer support automatically</p>
+            <a href="#" class="cta">Start Free Trial →</a>
+        </div>
+        <div class="right-section">
+            <div class="decorative-circle"></div>
+            <div class="stat-grid">
+                <div class="stat">
+                    <p class="stat-number">2.4s</p>
+                    <p class="stat-label">Avg Response Time</p>
+                </div>
+                <div class="stat">
+                    <p class="stat-number">98%</p>
+                    <p class="stat-label">Customer Satisfaction</p>
+                </div>
+                <div class="stat">
+                    <p class="stat-number">24/7</p>
+                    <p class="stat-label">Always Available</p>
+                </div>
+                <div class="stat">
+                    <p class="stat-number">$2.8k</p>
+                    <p class="stat-label">Monthly Savings</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

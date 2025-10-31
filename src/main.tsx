@@ -7,6 +7,7 @@ if (import.meta.env.MODE === 'development') {
   Promise.all([
     import('react'),
     import('react-dom'),
+    // @ts-ignore - optional dev dependency
     import('@axe-core/react'),
   ]).then(([React, ReactDOM, axe]) => {
     // @ts-ignore - axe type expects default export
