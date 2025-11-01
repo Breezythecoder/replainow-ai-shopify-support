@@ -147,7 +147,7 @@ All colors MUST be HSL.
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: hsl(var(--border));
   }
 
   html {
@@ -168,7 +168,9 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
   }
 }
 
@@ -285,20 +287,23 @@ All colors MUST be HSL.
   }
 
   /* Enhanced focus states for better accessibility */
-  .focus-ring-enhanced {
-    @apply focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:outline-none;
+  .focus-ring-enhanced:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(34, 211, 238);
   }
 
   /* Button focus states */
   button:focus-visible,
   a:focus-visible {
-    @apply ring-2 ring-cyan-400 ring-offset-2 outline-none;
+    outline: none;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(34, 211, 238);
   }
 
   /* Interactive element focus */
   [role="button"]:focus-visible,
   [tabindex]:focus-visible {
-    @apply ring-2 ring-cyan-400 ring-offset-2 outline-none;
+    outline: none;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px rgb(34, 211, 238);
   }
 }
 
@@ -332,40 +337,45 @@ All colors MUST be HSL.
   .shadow-button-hover { box-shadow: var(--shadow-button-hover) !important; }
 
   /* High-Contrast Glass Effects */
-  .glass { @apply backdrop-blur-md bg-white/85 border border-white/50 !important; }
-  .glass-card { @apply backdrop-blur-lg bg-gradient-glass border border-white/40 !important; box-shadow: var(--shadow-card) !important; }
-  .glass-strong { @apply backdrop-blur-xl bg-white/90 border border-white/60 !important; }
-  .glass-premium { @apply backdrop-blur-xl bg-gradient-card border border-white/50 !important; box-shadow: var(--shadow-glass) !important; }
-  .glass-world-class { @apply backdrop-blur-2xl bg-white/95 border border-white/40 !important; box-shadow: var(--shadow-glass-lg) !important; }
-  .glass-hero { @apply backdrop-blur-xl bg-white/95 border border-white/60 !important; box-shadow: var(--shadow-card) !important; }
+  .glass { backdrop-filter: blur(12px); background-color: rgba(255, 255, 255, 0.85); border: 1px solid rgba(255, 255, 255, 0.5); }
+  .glass-card { backdrop-filter: blur(16px); background: var(--gradient-glass); border: 1px solid rgba(255, 255, 255, 0.4); box-shadow: var(--shadow-card) !important; }
+  .glass-strong { backdrop-filter: blur(24px); background-color: rgba(255, 255, 255, 0.9); border: 1px solid rgba(255, 255, 255, 0.6); }
+  .glass-premium { backdrop-filter: blur(24px); background: var(--gradient-card); border: 1px solid rgba(255, 255, 255, 0.5); box-shadow: var(--shadow-glass) !important; }
+  .glass-world-class { backdrop-filter: blur(40px); background-color: rgba(255, 255, 255, 0.95); border: 1px solid rgba(255, 255, 255, 0.4); box-shadow: var(--shadow-glass-lg) !important; }
+  .glass-hero { backdrop-filter: blur(24px); background-color: rgba(255, 255, 255, 0.95); border: 1px solid rgba(255, 255, 255, 0.6); box-shadow: var(--shadow-card) !important; }
 
   /* World-Class Animation System */
-  .hover-scale { @apply transition-premium active:scale-95; }
-  .hover-lift { @apply transition-premium; }
-  .hover-glow { @apply transition-smooth; }
-  .hover-float { @apply transition-premium; }
-  .interactive-card { @apply transition-premium; }
-  .premium-button { @apply transition-premium transform; }
-  .premium-card { @apply transition-premium transform; }
-  .world-class-card { @apply transition-premium transform will-change-transform; }
+  .hover-scale { transition: var(--transition-premium); }
+  .hover-scale:active { transform: scale(0.95); }
+  .hover-lift { transition: var(--transition-premium); }
+  .hover-glow { transition: var(--transition-smooth); }
+  .hover-float { transition: var(--transition-premium); }
+  .interactive-card { transition: var(--transition-premium); }
+  .premium-button { transition: var(--transition-premium); transform: translateZ(0); }
+  .premium-card { transition: var(--transition-premium); transform: translateZ(0); }
+  .world-class-card { transition: var(--transition-premium); transform: translateZ(0); will-change: transform; }
 
   /* World-Class hover effects */
   @media (hover: hover) and (pointer: fine) {
-    .hover-scale { @apply hover:scale-[1.02]; }
-    .hover-lift { @apply hover:-translate-y-1 hover:shadow-float; }
-    .hover-glow { @apply hover:shadow-brand-glow; }
-    .hover-float { @apply hover:-translate-y-1 hover:shadow-glass-lg; }
-    .interactive-card { @apply hover:-translate-y-1 hover:shadow-card-hover hover:scale-[1.01]; }
-    .premium-button { @apply hover:scale-[1.02] hover:shadow-button-hover hover:-translate-y-0.5; }
-    .premium-card { @apply hover:-translate-y-2 hover:shadow-float hover:scale-[1.008]; }
-    .world-class-card { @apply hover:-translate-y-3 hover:shadow-hero hover:scale-[1.01]; }
+    .hover-scale:hover { transform: scale(1.02); }
+    .hover-lift:hover { transform: translateY(-4px); box-shadow: var(--shadow-float); }
+    .hover-glow:hover { box-shadow: var(--shadow-brand-glow); }
+    .hover-float:hover { transform: translateY(-4px); box-shadow: var(--shadow-glass-lg); }
+    .interactive-card:hover { transform: translateY(-4px) scale(1.01); box-shadow: var(--shadow-card-hover); }
+    .premium-button:hover { transform: scale(1.02) translateY(-2px); box-shadow: var(--shadow-button-hover); }
+    .premium-card:hover { transform: translateY(-8px) scale(1.008); box-shadow: var(--shadow-float); }
+    .world-class-card:hover { transform: translateY(-12px) scale(1.01); box-shadow: var(--shadow-hero); }
   }
 
   /* Mobile Touch-Friendly Links */
-  .story-link { @apply relative inline-block min-h-[44px] flex items-center; }
+  .story-link { position: relative; display: inline-flex; min-height: 44px; align-items: center; }
   .story-link::after { 
     content: ""; 
-    @apply absolute w-full h-0.5 left-0 bottom-0; 
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    bottom: 0;
     background: hsl(var(--brand-primary)); 
     transform-origin: bottom right; 
     transform: scaleX(0); 
@@ -415,8 +425,11 @@ All colors MUST be HSL.
 
   /* Mobile-First Accessibility */
   .focus-ring { 
-    @apply focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2 focus-visible:outline-none;
     min-height: var(--touch-target-minimum);
+  }
+  .focus-ring:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px white, 0 0 0 4px hsl(var(--brand-primary));
   }
   
   .touch-target {
@@ -435,8 +448,21 @@ All colors MUST be HSL.
   
   /* Mobile Container Padding */
   .container-mobile {
-    @apply px-4 sm:px-6 lg:px-8;
+    padding-left: 1rem;
+    padding-right: 1rem;
     max-width: 100%;
+  }
+  @media (min-width: 640px) {
+    .container-mobile {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  @media (min-width: 1024px) {
+    .container-mobile {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
   }
 }
 
