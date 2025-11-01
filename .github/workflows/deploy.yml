@@ -25,19 +25,11 @@ jobs:
 
       - run: npm ci
       
-      # Guard against SW registration regressions
-      - name: Verify No SW Registration
-        run: node scripts/verify-no-sw-register.mjs
-      
       - run: npm run build
       
-      # Run comprehensive QA checks
+      # Run comprehensive QA checks (includes all verifications)
       - name: Run QA Verification
-        run: node scripts/comprehensive-qa.mjs
-      
-      # Run performance audit
-      - name: Run Performance Audit
-        run: node scripts/performance-audit.mjs
+        run: npm run qa:all
 
       # Upload only ./dist (einzige Quelle der Wahrheit)
       - uses: actions/upload-pages-artifact@v3
