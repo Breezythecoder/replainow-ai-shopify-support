@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "title": "Helpdesk IA pour Shopify.",
+    "subtitle": "Répond en 3 secondes",
+    "description": "IA GPT-4.1 révolutionnaire avec données Shopify en temps réel : Conversion plus élevée, réponses plus rapides, 90% moins de tickets de support.",
+    "storesCount": "Boutiques Actives",
+    "responseTime": "Temps de Réponse",
+    "aiAccuracy": "Précision IA",
+    "languages": "{{count}} Langues",
+    "costSavings": "{{percentage}} Économies",
+    "liveDemoButton": "Voir la démo en direct",
+    "installButton": "INSTALLER MAINTENANT",
+    "cta": "Essayer Gratuitement",
+    "demo": "Voir la Démo"
+  },
+  "features": {
+    "title": "Pourquoi Choisir ReplAInow ?",
+    "subtitle": "Transformez votre boutique Shopify avec le support client IA"
+  },
+  "testimonials": {
+    "title": "Ce Que Disent les Vrais Commerçants",
+    "subtitle": "Rejoignez 280+ commerçants Shopify satisfaits"
+  },
+  "pricing": {
+    "title": "Tarification Simple et Transparente",
+    "subtitle": "Commencez gratuitement, évoluez avec votre croissance"
+  },
+  "cta": {
+    "title": "Prêt à Automatiser Votre Support ?",
+    "subtitle": "Rejoignez 280+ commerçants Shopify satisfaits et commencez à économiser aujourd'hui",
+    "button": "Commencer l'Essai Gratuit",
+    "demo": "Voir la Démo"
+  }
+}
+

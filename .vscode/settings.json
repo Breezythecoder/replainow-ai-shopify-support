@@ -1,0 +1,99 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  
+  // Editor settings
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  
+  // File associations
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  
+  // i18n Ally settings for translation management
+  "i18n-ally.localesPaths": [
+    "src/i18n/locales"
+  ],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.enabledFrameworks": ["react"],
+  "i18n-ally.namespace": true,
+  "i18n-ally.pathMatcher": "{locale}/{namespace}.json",
+  "i18n-ally.sourceLanguage": "de",
+  "i18n-ally.displayLanguage": "en",
+  "i18n-ally.enabledParsers": ["json"],
+  
+  // Tailwind CSS IntelliSense
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  
+  // File nesting for cleaner explorer
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.test.ts, ${capture}.spec.ts",
+    "*.tsx": "${capture}.test.tsx, ${capture}.spec.tsx",
+    "package.json": "package-lock.json, .npmrc, .nvmrc"
+  },
+  
+  // Search exclusions
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/.vite": true,
+    "**/playwright-report": true,
+    "**/test-results": true
+  },
+  
+  // File watcher exclusions (performance)
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/**": true,
+    "**/dist/**": true,
+    "**/build/**": true
+  },
+  
+  // ESLint
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  
+  // Git
+  "git.ignoreLimitWarning": true,
+  
+  // Auto-save
+  "files.autoSave": "onFocusChange",
+  
+  // Breadcrumbs
+  "breadcrumbs.enabled": true,
+  
+  // Terminal
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  
+  // Color customization for better readability
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#FFD700",
+    "editorBracketHighlight.foreground2": "#DA70D6",
+    "editorBracketHighlight.foreground3": "#87CEEB"
+  },
+  
+  // Emmet for JSX
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact"
+  },
+  
+  // Path IntelliSense
+  "path-intellisense.mappings": {
+    "@": "${workspaceRoot}/src"
+  }
+}

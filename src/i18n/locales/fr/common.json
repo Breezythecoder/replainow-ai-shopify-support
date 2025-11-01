@@ -1,0 +1,32 @@
+{
+  "navigation": {
+    "home": "Accueil",
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "demo": "Démo en Direct",
+    "contact": "Contact"
+  },
+  "footer": {
+    "links": {
+      "features": "Fonctionnalités",
+      "pricing": "Tarifs",
+      "demo": "Démo",
+      "contact": "Contact"
+    },
+    "legal": {
+      "privacy": "Politique de Confidentialité",
+      "terms": "Conditions de Service",
+      "security": "Sécurité",
+      "impressum": "Mentions Légales",
+      "refund": "Politique de Remboursement",
+      "cookies": "Politique des Cookies",
+      "uninstall": "Guide de Désinstallation"
+    },
+    "contact": {
+      "email": "support@replainow.com",
+      "location": "Dubaï, EAU"
+    },
+    "copyright": "© 2024 ReplAInow. Tous droits réservés."
+  }
+}
+

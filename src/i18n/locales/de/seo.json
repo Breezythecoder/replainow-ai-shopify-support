@@ -1,0 +1,37 @@
+{
+  "title": "ReplAInow – AI Shopify Helpdesk",
+  "description": "ReplAInow automatisiert Kundensupport in Shopify mit GPT-4.1: 3-Sekunden Antworten, 32+ Sprachen, DSGVO-konform, 75% Kosteneinsparung. Jetzt kostenlos testen!",
+  "ogTitle": "ReplAInow – AI Shopify Helpdesk",
+  "ogDescription": "ReplAInow automatisiert Kundensupport in Shopify mit GPT-4.1: 3-Sekunden Antworten, 32+ Sprachen, DSGVO-konform, 75% Kosteneinsparung. Jetzt kostenlos testen!",
+  "twitterTitle": "ReplAInow – AI Shopify Helpdesk",
+  "twitterDescription": "ReplAInow automatisiert Kundensupport in Shopify mit GPT-4.1: 3-Sekunden Antworten, 32+ Sprachen, DSGVO-konform, 75% Kosteneinsparung. Jetzt kostenlos testen!",
+  "schema": {
+    "organization": {
+      "name": "ReplAInow",
+      "description": "KI-gestützter Kundensupport für Shopify: automatisierte Antworten mit GPT-4.1, 3-Sekunden Antwortzeit, 32+ Sprachen, DSGVO-konform, 75% Kosteneinsparung.",
+      "url": "https://replainow.com",
+      "logo": "https://replainow.com/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png",
+      "telephone": "+49-30-123-456-789",
+      "foundingDate": "2024",
+      "founder": "Ruben Calabrese"
+    },
+    "softwareApplication": {
+      "name": "ReplAInow AI Helpdesk",
+      "description": "KI-gestützter Kundensupport für Shopify mit GPT-4 Technologie",
+      "url": "https://replainow.com",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "price": "19",
+      "priceCurrency": "EUR",
+      "ratingValue": "4.9",
+      "ratingCount": "280"
+    },
+    "website": {
+      "name": "ReplAInow",
+      "url": "https://replainow.com",
+      "description": "AI Shopify Helpdesk - Automatisierter Kundensupport",
+      "searchUrl": "https://replainow.com/search?q={search_term_string}"
+    }
+  }
+}
+

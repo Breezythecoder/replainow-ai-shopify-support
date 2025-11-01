@@ -1,31 +1,80 @@
-import de from './locales/de.json';
-import en from './locales/en.json';
-import fr from './locales/fr.json';
-import es from './locales/es.json';
+/**
+ * Main i18n module
+ * Enterprise-grade internationalization system for 30+ languages
+ */
 
-export type Locale = 'de' | 'en' | 'es' | 'fr' | 'it' | 'nl' | 'pt' | 'zh';
+import { SUPPORTED_LOCALES, DEFAULT_LOCALE, isSupportedLocale, type SupportedLocale } from './config';
+import type { LocaleTranslations } from './types';
 
-export const locales: Locale[] = ['de', 'en', 'fr', 'es'];
+// Import locale files for all supported languages
+import deCommon from './locales/de/common.json';
+import deMarketing from './locales/de/marketing.json';
+import deSEO from './locales/de/seo.json';
+import deLegal from './locales/de/legal.json';
 
-export const defaultLocale: Locale = 'de';
+import enCommon from './locales/en/common.json';
+import enMarketing from './locales/en/marketing.json';
+import enSEO from './locales/en/seo.json';
+import enLegal from './locales/en/legal.json';
 
-export const translations = {
-  de,
-  en,
-  fr,
-  es,
-} as const;
+import esCommon from './locales/es/common.json';
+import esMarketing from './locales/es/marketing.json';
+import esSEO from './locales/es/seo.json';
+import esLegal from './locales/es/legal.json';
 
-export type TranslationKeys = typeof de;
+import frCommon from './locales/fr/common.json';
+import frMarketing from './locales/fr/marketing.json';
+import frSEO from './locales/fr/seo.json';
+import frLegal from './locales/fr/legal.json';
+
+/**
+ * Consolidated translations by locale
+ */
+export const translations: Record<SupportedLocale, LocaleTranslations> = {
+  de: {
+    common: deCommon,
+    marketing: deMarketing,
+    seo: deSEO,
+    legal: deLegal,
+  },
+  en: {
+    common: enCommon,
+    marketing: enMarketing,
+    seo: enSEO,
+    legal: enLegal,
+  },
+  es: {
+    common: esCommon,
+    marketing: esMarketing,
+    seo: esSEO,
+    legal: esLegal,
+  },
+  fr: {
+    common: frCommon,
+    marketing: frMarketing,
+    seo: frSEO,
+    legal: frLegal,
+  },
+};
+
+// Legacy exports for backward compatibility
+export type Locale = SupportedLocale;
+export const locales = SUPPORTED_LOCALES;
+export const defaultLocale = DEFAULT_LOCALE;
 
 // Import force English override
 import { forceEnglishText, isEnglishRoute } from './forceEnglish';
 
-// Simple i18n function with FORCE_LOCALE support for dual-build
+/**
+ * Translation function with support for nested keys
+ * @param key - Translation key in format 'namespace.path.to.key' (e.g., 'common.navigation.home')
+ * @param locale - Optional locale override
+ * @returns Translated string or key if not found
+ */
 export const t = (key: string, locale?: Locale): string => {
   // FORCE_LOCALE environment variable for build-time locale forcing
   const FORCE_LOCALE = import.meta.env.VITE_FORCE_LOCALE as Locale;
-  if (FORCE_LOCALE && ['de', 'en', 'fr', 'es'].includes(FORCE_LOCALE)) {
+  if (FORCE_LOCALE && isSupportedLocale(FORCE_LOCALE)) {
     return getTranslationForLocale(key, FORCE_LOCALE);
   }
 
@@ -45,36 +94,54 @@ export const t = (key: string, locale?: Locale): string => {
     detectedLocale = getLocaleFromPath(window.location.pathname);
   }
   
-  const keys = key.split('.');
-  let value: any = translations[detectedLocale || 'de'];
-  
-  for (const k of keys) {
-    value = value?.[k];
-  }
-  
-  return value || key;
+  return getTranslationForLocale(key, detectedLocale || DEFAULT_LOCALE);
 };
 
-// Helper function to get translation for specific locale
+/**
+ * Helper function to get translation for specific locale
+ * Supports both old format (ui.hero.title) and new format (common.navigation.home)
+ */
 const getTranslationForLocale = (key: string, locale: Locale): string => {
-  const keys = key.split('.');
-  let value: any = translations[locale];
-
-  for (const k of keys) {
-    value = value?.[k];
+  const parts = key.split('.');
+  
+  // Handle legacy "ui." prefix by mapping to appropriate namespace
+  if (parts[0] === 'ui') {
+    parts[0] = 'common'; // Most UI strings are in common now
   }
-
-  return value || key;
+  
+  // Handle legacy "seo." and "schema." prefixes
+  if (parts[0] === 'seo' || parts[0] === 'schema') {
+    parts[0] = 'seo';
+  }
+  
+  let value: any = translations[locale];
+  
+  for (const part of parts) {
+    if (value && typeof value === 'object') {
+      value = value[part];
+    } else {
+      return key; // Return key if path doesn't exist
+    }
+  }
+  
+  return typeof value === 'string' ? value : key;
 };
 
-// Hook for using translations with React context
+/**
+ * Hook for using translations with React context
+ */
 export const useTranslation = () => {
   const tWithLocale = (key: string, locale?: Locale) => t(key, locale);
   return { t: tWithLocale };
 };
 
 // Import robust locale detection
-import { getLocaleFromPath as getLocaleFromPathRobust, getPathnameForLocale as getPathnameForLocaleRobust, getStoredLocaleHint, storeLocaleHint } from './locale';
+import { 
+  getLocaleFromPath as getLocaleFromPathRobust, 
+  getPathnameForLocale as getPathnameForLocaleRobust, 
+  getStoredLocaleHint, 
+  storeLocaleHint 
+} from './locale';
 
 // Re-export robust locale detection
 export const getLocaleFromPath = getLocaleFromPathRobust;
@@ -82,3 +149,7 @@ export const getPathnameForLocale = getPathnameForLocaleRobust;
 
 // Re-export storage helpers
 export { getStoredLocaleHint, storeLocaleHint };
+
+// Re-export config
+export { SUPPORTED_LOCALES, DEFAULT_LOCALE, isSupportedLocale } from './config';
+export type { SupportedLocale } from './config';

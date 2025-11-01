@@ -1,0 +1,28 @@
+{
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: 2024"
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: 2024"
+  },
+  "refund": {
+    "title": "Refund Policy",
+    "lastUpdated": "Last updated: 2024"
+  },
+  "cookies": {
+    "title": "Cookie Policy",
+    "lastUpdated": "Last updated: 2024"
+  },
+  "security": {
+    "title": "Security Statement",
+    "lastUpdated": "Last updated: 2024"
+  },
+  "impressum": {
+    "title": "Impressum",
+    "company": "ReplAInow",
+    "location": "Dubai, UAE"
+  }
+}
+

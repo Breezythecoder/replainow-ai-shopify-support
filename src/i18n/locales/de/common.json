@@ -1,0 +1,91 @@
+{
+  "navigation": {
+    "home": "Startseite",
+    "features": "Features",
+    "pricing": "Preise",
+    "demo": "Live Demo",
+    "contact": "Kontakt"
+  },
+  "footer": {
+    "links": {
+      "features": "Features",
+      "pricing": "Preise",
+      "demo": "Demo",
+      "contact": "Kontakt"
+    },
+    "legal": {
+      "privacy": "Datenschutz",
+      "terms": "AGB",
+      "security": "Sicherheit",
+      "impressum": "Impressum",
+      "refund": "Rückerstattung",
+      "cookies": "Cookie-Richtlinie",
+      "uninstall": "Deinstallation"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "email": "support@replainow.com",
+      "location": "Dubai, VAE"
+    },
+    "copyright": "© 2024 ReplAInow. Alle Rechte vorbehalten."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Haben Sie Fragen? Wir sind hier, um zu helfen.",
+    "subtitleHighlight": "Antworten innerhalb von 24 Stunden.",
+    "info": {
+      "title": "Kontaktinformationen",
+      "email": {
+        "title": "E-Mail Support",
+        "value": "support@replainow.com",
+        "note": "Antworten innerhalb von 24h"
+      },
+      "hours": {
+        "title": "Support Zeiten",
+        "value": "Mo-Fr: 9:00 - 18:00 CET",
+        "note": "24/7 AI Support verfügbar"
+      },
+      "chat": {
+        "title": "Live Chat",
+        "value": "Direkt auf der Website",
+        "note": "AI antwortet sofort"
+      }
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "links": [
+        "Wie funktioniert die Installation?",
+        "Welche Sprachen werden unterstützt?",
+        "Kann ich die AI trainieren?",
+        "Wie sicher sind meine Daten?"
+      ]
+    },
+    "form": {
+      "title": "Nachricht senden",
+      "fields": {
+        "name": "Name",
+        "email": "E-Mail",
+        "message": "Nachricht"
+      },
+      "placeholders": {
+        "name": "Max Mustermann",
+        "email": "you@shop.de",
+        "message": "Beschreiben Sie Ihr Anliegen..."
+      },
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet...",
+      "emailSubject": "Kontaktformular Nachricht von"
+    },
+    "toast": {
+      "success": {
+        "title": "Danke!",
+        "description": "Wir melden uns zeitnah bei dir."
+      },
+      "error": {
+        "title": "Fehler",
+        "description": "Nachricht konnte nicht gesendet werden. Bitte versuche es erneut oder schreibe direkt an support@replainow.com"
+      }
+    }
+  }
+}
+

@@ -1,0 +1,191 @@
+{
+  "hero": {
+    "title": "AI Helpdesk for Shopify.",
+    "subtitle": "Responds in 3 seconds",
+    "description": "Revolutionary GPT-4.1 AI with real-time Shopify data: Higher conversion, faster responses, 90% fewer support tickets.",
+    "storesCount": "Active Stores",
+    "responseTime": "Response Time",
+    "aiAccuracy": "AI Accuracy",
+    "languages": "{{count}} Languages",
+    "costSavings": "{{percentage}} Cost Savings",
+    "liveDemoButton": "View Live Demo",
+    "installButton": "INSTALL NOW",
+    "cta": "Try Free Now",
+    "demo": "View Live Demo"
+  },
+  "features": {
+    "title": {
+      "primary": "Why ReplAInow",
+      "secondary": "outperforms every competitor"
+    },
+    "subtitle": {
+      "highlight": "Revolutionary GPT-4.1 technology",
+      "continuation": "meets perfect Shopify integration"
+    },
+    "items": [
+      {
+        "title": "GPT-4.1 intelligence",
+        "desc": "Latest AI technology understands context like a human expert",
+        "story": "Your AI thinks like a 10-year Shopify expert – just 1000× faster",
+        "impact": "+187% conversion"
+      },
+      {
+        "title": "3-second responses",
+        "desc": "Instant answers while Gorgias & co. are still loading",
+        "story": "Customer asks → AI responds → Customer buys. All within 3 seconds",
+        "impact": "90% fewer tickets"
+      },
+      {
+        "title": "32+ languages native",
+        "desc": "Perfect answers in the customer's language – no translation mistakes",
+        "story": "French shopper receives a flawless response in French",
+        "impact": "+45% international revenue"
+      },
+      {
+        "title": "Real-time Shopify data",
+        "desc": "AI knows ALL products, pricing, and stock automatically",
+        "story": "AI knows: 'iPhone case in stock, 15% discount active, ships tomorrow'",
+        "impact": "100% accuracy"
+      },
+      {
+        "title": "75% cost savings",
+        "desc": "Superior AND cheaper than costly competitors",
+        "story": "While Gorgias costs €200/month, you only pay €19",
+        "impact": "€1,368 saved per year"
+      },
+      {
+        "title": "1-click installation",
+        "desc": "Setup in under 60 seconds – zero complex configuration",
+        "story": "Click → AI learns your store → Done. No IT team needed",
+        "impact": "60s setup"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "What Real Merchants Say",
+    "subtitle": "Join 280+ satisfied Shopify merchants"
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Start free, scale as you grow",
+    "headline": {
+      "primary": "More support power",
+      "secondary": "for less money",
+      "tagline": "A traditional support agent easily costs €2,000 per month.",
+      "detail": "ReplAInow starts at just €19/month and works 24/7 without breaks."
+    },
+    "baseFeatures": [
+      "1-Click Installation",
+      "Unlimited Store Data (Products, Pages, Policies etc.)",
+      "AI Email & AI Live Chat",
+      "Customizable Branding"
+    ],
+    "plans": [
+      {
+        "name": "Starter",
+        "price": "€19",
+        "period": "/ Month",
+        "quota": "Up to 300 AI responses / Month",
+        "trial": "14 days free trial",
+        "features": [
+          "1-Click Installation",
+          "Unlimited Store Data (Products, Pages, Policies etc.)",
+          "AI Email & AI Live Chat",
+          "Customizable Branding",
+          "Email sending via ReplAInow address"
+        ],
+        "highlight": false,
+        "description": "Perfect for testing",
+        "cta": "Start with Starter"
+      },
+      {
+        "name": "Growth",
+        "price": "€49",
+        "period": "/ Month",
+        "quota": "Up to 1500 AI responses / Month",
+        "trial": "14 days free trial",
+        "features": [
+          "1-Click Installation",
+          "Unlimited Store Data (Products, Pages, Policies etc.)",
+          "AI Email & AI Live Chat",
+          "Customizable Branding",
+          "Email sending with your domain"
+        ],
+        "highlight": true,
+        "badge": "Most Popular Plan",
+        "description": "For growing stores",
+        "cta": "Scale with Growth"
+      },
+      {
+        "name": "Pro",
+        "price": "€99",
+        "period": "/ Month",
+        "quota": "Up to 3000 AI responses / Month",
+        "trial": "14 days free trial",
+        "features": [
+          "1-Click Installation",
+          "Unlimited Store Data (Products, Pages, Policies etc.)",
+          "AI Email & AI Live Chat",
+          "Customizable Branding",
+          "Email sending with your domain"
+        ],
+        "highlight": false,
+        "description": "For established stores",
+        "cta": "Upgrade to Pro"
+      },
+      {
+        "name": "Scale",
+        "price": "€199",
+        "period": "/ Month",
+        "quota": "Unlimited AI responses",
+        "trial": "14 days free trial",
+        "features": [
+          "1-Click Installation",
+          "Unlimited Store Data (Products, Pages, Policies etc.)",
+          "AI Email & AI Live Chat",
+          "Customizable Branding",
+          "Email sending with your domain"
+        ],
+        "highlight": false,
+        "description": "For enterprise teams",
+        "cta": "Go all-in with Scale"
+      }
+    ],
+    "cta": "Install Now",
+    "ctaButton": "Install {0}",
+    "guarantee": "14-day money-back guarantee"
+  },
+  "cta": {
+    "title": "Ready to Automate Your Support?",
+    "subtitle": "Join 280+ satisfied Shopify merchants and start saving today",
+    "button": "Start Free Trial",
+    "demo": "Watch Demo"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know before getting started - short and clear.",
+    "questions": [
+      {
+        "q": "How does ReplAInow integrate with Shopify?",
+        "a": "Via app installation. After connecting, ReplAInow pulls relevant data (orders, shipping status, products) GDPR-compliant directly from Shopify to generate responses."
+      },
+      {
+        "q": "Is it GDPR compliant?",
+        "a": "Yes. Data is processed for specific purposes. You can restrict or withdraw data access at any time. We only store what's necessary for responses."
+      },
+      {
+        "q": "How fast do I get responses?",
+        "a": "In seconds. ReplAInow structures the request, checks relevant Shopify data and delivers a brand-compliant response - usually under 3 seconds."
+      },
+      {
+        "q": "Can I customize the brand tone?",
+        "a": "Yes. You define style guidelines (e.g., formal/informal tone, emojis). Responses are automatically aligned to this."
+      },
+      {
+        "q": "What does the pricing look like?",
+        "a": "Transparent plans with clear limits, 14 days free trial without credit card. Upgrade possible anytime."
+      }
+    ]
+  }
+}
+

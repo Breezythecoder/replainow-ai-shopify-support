@@ -1,0 +1,37 @@
+{
+  "title": "ReplAInow – AI Shopify Helpdesk | Automated Customer Support",
+  "description": "ReplAInow automates Shopify customer support with GPT-4.1: 3-second responses, 32+ languages, GDPR-compliant, 75% cost savings. Try free now!",
+  "ogTitle": "ReplAInow – AI Shopify Helpdesk | Automated Customer Support",
+  "ogDescription": "ReplAInow automates Shopify customer support with GPT-4.1: 3-second responses, 32+ languages, GDPR-compliant, 75% cost savings. Try free now!",
+  "twitterTitle": "ReplAInow – AI Shopify Helpdesk | Automated Customer Support",
+  "twitterDescription": "ReplAInow automates Shopify customer support with GPT-4.1: 3-second responses, 32+ languages, GDPR-compliant, 75% cost savings. Try free now!",
+  "schema": {
+    "organization": {
+      "name": "ReplAInow",
+      "description": "AI-powered Shopify customer support: automated responses with GPT-4.1, 3-second response time, 32+ languages, GDPR-compliant, 75% cost savings.",
+      "url": "https://replainow.com",
+      "logo": "https://replainow.com/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png",
+      "telephone": "+49-30-123-456-789",
+      "foundingDate": "2024",
+      "founder": "Ruben Calabrese"
+    },
+    "softwareApplication": {
+      "name": "ReplAInow AI Helpdesk",
+      "description": "AI-powered Shopify customer support with GPT-4 technology",
+      "url": "https://replainow.com",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "price": "19",
+      "priceCurrency": "EUR",
+      "ratingValue": "4.9",
+      "ratingCount": "280"
+    },
+    "website": {
+      "name": "ReplAInow",
+      "url": "https://replainow.com",
+      "description": "AI Shopify Helpdesk - Automated Customer Support",
+      "searchUrl": "https://replainow.com/search?q={search_term_string}"
+    }
+  }
+}
+

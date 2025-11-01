@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "bradlc.vscode-tailwindcss",
+    "lokalise.i18n-ally",
+    "formulahendry.auto-rename-tag",
+    "zignd.html-css-class-completion",
+    "christian-kohler.path-intellisense",
+    "ms-playwright.playwright",
+    "streetsidesoftware.code-spell-checker"
+  ],
+  "unwantedRecommendations": []
+}
+
