@@ -29,6 +29,8 @@ function patchHTML(src, lang, canonical) {
   out = out.replace(/<\/head>/i, [
     `  <link rel="alternate" hreflang="de" href="${BASE}/">`,
     `  <link rel="alternate" hreflang="en" href="${BASE}/en">`,
+    `  <link rel="alternate" hreflang="es" href="${BASE}/es">`,
+    `  <link rel="alternate" hreflang="fr" href="${BASE}/fr">`,
     `  <link rel="alternate" hreflang="x-default" href="${BASE}/">`,
     `  <!-- Structured Data -->`,
     `  <script type="application/ld+json">${JSON.stringify(jsonLD.organization)}</script>`,
@@ -106,15 +108,34 @@ function generateJSONLD(lang, canonical) {
   };
 }
 
-// DE
-const deFile = path.join(dist, "index.html");
-const deHTML = fs.readFileSync(deFile, "utf8");
-fs.writeFileSync(deFile, patchHTML(deHTML, "de", `${BASE}/`), "utf8");
+// Read the base HTML (built with German)
+const baseFile = path.join(dist, "index.html");
+const baseHTML = fs.readFileSync(baseFile, "utf8");
 
-// EN
-const enDir = path.join(dist, "en");
-fs.mkdirSync(enDir, { recursive: true });
-const enFile = path.join(enDir, "index.html");
-fs.writeFileSync(enFile, patchHTML(deHTML, "en", `${BASE}/en`), "utf8");
+// Generate locale-specific HTML for all supported languages
+const locales = [
+  { code: 'de', path: '', canonical: `${BASE}/` },
+  { code: 'en', path: 'en', canonical: `${BASE}/en` },
+  { code: 'es', path: 'es', canonical: `${BASE}/es` },
+  { code: 'fr', path: 'fr', canonical: `${BASE}/fr` }
+];
 
-console.log("✅ Multi-page HTML generated: /index.html and /en/index.html");
+for (const locale of locales) {
+  if (locale.path === '') {
+    // German (default) - update index.html in place
+    const deFile = path.join(dist, "index.html");
+    fs.writeFileSync(deFile, patchHTML(baseHTML, locale.code, locale.canonical), "utf8");
+  } else {
+    // Other languages - create subdirectory
+    const localeDir = path.join(dist, locale.path);
+    fs.mkdirSync(localeDir, { recursive: true });
+    const localeFile = path.join(localeDir, "index.html");
+    fs.writeFileSync(localeFile, patchHTML(baseHTML, locale.code, locale.canonical), "utf8");
+  }
+}
+
+console.log("✅ Multi-page HTML generated for all 4 languages:");
+console.log("   - /index.html (de)");
+console.log("   - /en/index.html");
+console.log("   - /es/index.html");
+console.log("   - /fr/index.html");
