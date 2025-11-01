@@ -154,7 +154,8 @@ const getTranslationForLocale = (key: string, locale: Locale): string => {
     }
   }
   
-  return typeof value === 'string' ? value : key;
+  // Return the value (string, array, or object) if found, otherwise return the key
+  return value !== undefined ? value : key;
 };
 
 /**
