@@ -100,13 +100,43 @@ export const t = (key: string, locale?: Locale): string => {
 /**
  * Helper function to get translation for specific locale
  * Supports both old format (ui.hero.title) and new format (common.navigation.home)
+ * 
+ * BACKWARD COMPATIBILITY: Maps old "ui.*" keys to new namespaced structure
  */
 const getTranslationForLocale = (key: string, locale: Locale): string => {
   const parts = key.split('.');
   
   // Handle legacy "ui." prefix by mapping to appropriate namespace
   if (parts[0] === 'ui') {
-    parts[0] = 'common'; // Most UI strings are in common now
+    // Map ui.* to the correct namespace based on second part
+    const section = parts[1];
+    
+    // Mapping table: ui.{section} → {namespace}.{section}
+    const uiToNamespaceMap: Record<string, string> = {
+      'navigation': 'common',
+      'footer': 'common',
+      'contact': 'common',
+      'hero': 'marketing',
+      'features': 'marketing',
+      'pricing': 'marketing',
+      'testimonials': 'marketing',
+      'faq': 'marketing',
+      'cta': 'marketing',
+      'howItWorks': 'marketing',
+      'liveDemo': 'marketing',
+      'comparison': 'marketing',
+      'mailAndChat': 'marketing',
+      'problemSolution': 'marketing',
+      'socialProof': 'marketing',
+      'industryExamples': 'marketing',
+      'liveExamples': 'marketing',
+      'finalCta': 'marketing',
+      'stickyInstallBar': 'marketing',
+      'exitIntent': 'marketing',
+    };
+    
+    const newNamespace = uiToNamespaceMap[section] || 'common';
+    parts[0] = newNamespace;
   }
   
   // Handle legacy "seo." and "schema." prefixes
