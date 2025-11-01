@@ -45,27 +45,28 @@ console.log(`✅ Twitter Cards: ${twitterSupport ? 'YES' : 'NO'}`);
 console.log('\n📊 Locale Files Analysis:');
 console.log('------------------------');
 
-// Check if all locale files exist and have SEO content
+// Check if all locale files exist and have SEO content (NEW STRUCTURE)
 const locales = ['de', 'en', 'fr', 'es'];
 let allSeoComplete = true;
 
 for (const locale of locales) {
   try {
-    const localePath = `src/i18n/locales/${locale}.json`;
-    const localeContent = readFileSync(localePath, 'utf8');
-    const localeData = JSON.parse(localeContent);
+    // New structure: src/i18n/locales/{locale}/seo.json
+    const seoPath = `src/i18n/locales/${locale}/seo.json`;
+    const seoContent = readFileSync(seoPath, 'utf8');
+    const seoData = JSON.parse(seoContent);
     
-    const hasSeo = localeData.seo && localeData.schema;
-    const seoKeys = hasSeo ? Object.keys(localeData.seo).length : 0;
-    const schemaKeys = hasSeo ? Object.keys(localeData.schema).length : 0;
+    const hasSeo = seoData.title && seoData.description && seoData.schema;
+    const seoKeys = Object.keys(seoData).length;
+    const schemaKeys = seoData.schema ? Object.keys(seoData.schema).length : 0;
     
-    console.log(`✅ ${locale.toUpperCase()}: ${seoKeys} SEO keys, ${schemaKeys} schema keys`);
+    console.log(`✅ ${locale.toUpperCase()}: ${seoKeys} SEO keys, ${schemaKeys} schema sections`);
     
     if (!hasSeo) {
       allSeoComplete = false;
     }
   } catch (error) {
-    console.log(`❌ ${locale.toUpperCase()}: Missing or invalid locale file`);
+    console.log(`❌ ${locale.toUpperCase()}: Missing or invalid seo.json file`);
     allSeoComplete = false;
   }
 }
