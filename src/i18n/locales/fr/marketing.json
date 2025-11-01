@@ -15,21 +15,76 @@
   },
   "features": {
     "title": "Pourquoi Choisir ReplAInow ?",
-    "subtitle": "Transformez votre boutique Shopify avec le support client IA"
+    "subtitle": "Transformez votre boutique Shopify avec le support client IA",
+    "items": [
+      {
+        "title": "Réponse en 3 Secondes",
+        "description": "Réponses instantanées aux questions clients avec la technologie GPT-4.1"
+      },
+      {
+        "title": "32+ Langues",
+        "description": "Supportez vos clients dans leur langue maternelle automatiquement"
+      },
+      {
+        "title": "Conforme RGPD",
+        "description": "Conformité complète à la protection des données pour les clients européens"
+      },
+      {
+        "title": "75% d'Économies",
+        "description": "Réduisez les coûts de support tout en améliorant la satisfaction client"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Tarification Simple et Transparente",
+    "subtitle": "Commencez gratuitement, évoluez avec votre croissance",
+    "plans": [
+      {
+        "name": "Débutant",
+        "price": "19",
+        "currency": "EUR",
+        "period": "mois",
+        "features": [
+          "Jusqu'à 1 000 conversations/mois",
+          "Temps de réponse de 3 secondes",
+          "32+ langues",
+          "Analyses de base"
+        ]
+      },
+      {
+        "name": "Professionnel",
+        "price": "49",
+        "currency": "EUR",
+        "period": "mois",
+        "features": [
+          "Jusqu'à 5 000 conversations/mois",
+          "Analyses avancées",
+          "Marque personnalisée",
+          "Support prioritaire"
+        ]
+      }
+    ]
   },
   "testimonials": {
     "title": "Ce Que Disent les Vrais Commerçants",
     "subtitle": "Rejoignez 280+ commerçants Shopify satisfaits"
   },
-  "pricing": {
-    "title": "Tarification Simple et Transparente",
-    "subtitle": "Commencez gratuitement, évoluez avec votre croissance"
-  },
+  "faq": {},
   "cta": {
     "title": "Prêt à Automatiser Votre Support ?",
-    "subtitle": "Rejoignez 280+ commerçants Shopify satisfaits et commencez à économiser aujourd'hui",
-    "button": "Commencer l'Essai Gratuit",
+    "subtitle": "Rejoignez 280+ commerçants Shopify satisfaits et commencez à économiser dès aujourd'hui",
+    "button": "Essai Gratuit",
     "demo": "Voir la Démo"
-  }
+  },
+  "howItWorks": {},
+  "liveDemo": {},
+  "comparison": {},
+  "mailAndChat": {},
+  "problemSolution": {},
+  "socialProof": {},
+  "industryExamples": {},
+  "liveExamples": {},
+  "finalCta": {},
+  "stickyInstallBar": {},
+  "exitIntent": {}
 }
-

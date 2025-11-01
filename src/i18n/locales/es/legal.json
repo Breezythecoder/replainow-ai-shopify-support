@@ -1,28 +1,27 @@
 {
   "privacy": {
-    "title": "Política de Privacidad",
-    "lastUpdated": "Última actualización: 2024"
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: 2024"
   },
   "terms": {
-    "title": "Términos de Servicio",
-    "lastUpdated": "Última actualización: 2024"
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: 2024"
   },
   "refund": {
-    "title": "Política de Reembolso",
-    "lastUpdated": "Última actualización: 2024"
+    "title": "Refund Policy",
+    "lastUpdated": "Last updated: 2024"
   },
   "cookies": {
-    "title": "Política de Cookies",
-    "lastUpdated": "Última actualización: 2024"
+    "title": "Cookie Policy",
+    "lastUpdated": "Last updated: 2024"
   },
   "security": {
-    "title": "Declaración de Seguridad",
-    "lastUpdated": "Última actualización: 2024"
+    "title": "Security Statement",
+    "lastUpdated": "Last updated: 2024"
   },
   "impressum": {
-    "title": "Aviso Legal",
+    "title": "Impressum",
     "company": "ReplAInow",
-    "location": "Dubái, EAU"
+    "location": "Dubai, UAE"
   }
 }
-

@@ -7,6 +7,22 @@
     "contact": "Kontakt"
   },
   "footer": {
+    "about": {
+      "title": "Über",
+      "description": "ReplAInow revolutioniert Shopify Customer Support mit KI-gestützter Automatisierung. Unsere GPT-4.1 Technologie liefert sofortige, präzise Antworten in 32+ Sprachen und hilft Händlern Zeit zu sparen und die Kundenzufriedenheit zu steigern.",
+      "promise": "Unser Versprechen",
+      "promiseText": "Wir sind verpflichtet, KI-Customer-Support für jeden Shopify-Händler zugänglich, zuverlässig und profitabel zu machen. Dein Erfolg ist unsere Mission."
+    },
+    "ceo": {
+      "title": "Von",
+      "role": "Gründer & CEO",
+      "quote": "Jeder Händler verdient KI-gestützten Support, der einwandfrei funktioniert. Wir haben ReplAInow entwickelt, um die intelligenteste, zuverlässigste und kosteneffektivste Lösung auf dem Markt zu sein."
+    },
+    "company": {
+      "description": "Der intelligenteste AI-Support für Shopify-Händler. 24/7 verfügbar, 32+ Sprachen, DSGVO-konform.",
+      "madeWith": "Made with",
+      "location": "in Dubai"
+    },
     "links": {
       "features": "Features",
       "pricing": "Preise",
@@ -88,4 +104,3 @@
     }
   }
 }
-

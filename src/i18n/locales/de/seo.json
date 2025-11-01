@@ -11,9 +11,9 @@
       "description": "KI-gestützter Kundensupport für Shopify: automatisierte Antworten mit GPT-4.1, 3-Sekunden Antwortzeit, 32+ Sprachen, DSGVO-konform, 75% Kosteneinsparung.",
       "url": "https://replainow.com",
       "logo": "https://replainow.com/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png",
-      "telephone": "+49-30-123-456-789",
-      "foundingDate": "2024",
-      "founder": "Ruben Calabrese"
+      "telephone": "{{stats.telephone}}",
+      "foundingDate": "{{stats.foundingYear}}",
+      "founder": "{{stats.founder}}"
     },
     "softwareApplication": {
       "name": "ReplAInow AI Helpdesk",
@@ -21,10 +21,10 @@
       "url": "https://replainow.com",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
-      "price": "19",
-      "priceCurrency": "EUR",
-      "ratingValue": "4.9",
-      "ratingCount": "280"
+      "price": "{{stats.price}}",
+      "priceCurrency": "{{stats.currency}}",
+      "ratingValue": "{{stats.ratingValue}}",
+      "ratingCount": "{{stats.ratingCount}}"
     },
     "website": {
       "name": "ReplAInow",
@@ -34,4 +34,3 @@
     }
   }
 }
-

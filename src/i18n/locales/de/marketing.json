@@ -44,7 +44,7 @@
       {
         "title": "Echtzeit Shopify Daten",
         "desc": "AI kennt ALLE Produkte, Preise, Lagerbestände automatisch",
-        "story": "AI weiß: 'iPhone Case auf Lager, 15% Rabatt aktiv, Versand morgen'",
+        "story": "AI weiß: ‘iPhone Case auf Lager, 15% Rabatt aktiv, Versand morgen’",
         "impact": "100% Genauigkeit"
       },
       {
@@ -60,10 +60,6 @@
         "impact": "60 Sekunden Setup"
       }
     ]
-  },
-  "testimonials": {
-    "title": "Was echte Händler sagen",
-    "subtitle": "Schließe dich 280+ zufriedenen Shopify-Händlern an"
   },
   "pricing": {
     "title": "Einfache, transparente Preise",
@@ -153,7 +149,81 @@
     ],
     "cta": "Jetzt installieren",
     "ctaButton": "Installiere {0}",
-    "guarantee": "14-Tage Geld-zurück-Garantie"
+    "guarantee": "14-Tage Geld-zurück-Garantie",
+    "savings": {
+      "badge": "KOSTENVERGLEICH",
+      "title": "Massive Kosteneinsparungen",
+      "description": "Während Wettbewerber pro Ticket abrechnen, bekommst du mit ReplAInow unbegrenzte Antworten.",
+      "competitors": [
+        {
+          "name": "Gorgias",
+          "price": "€50+/Monat",
+          "surcharge": "+ €2-5 pro Ticket",
+          "savings": "372 €+ gespart/Jahr"
+        },
+        {
+          "name": "Intercom",
+          "price": "€74+/Monat",
+          "surcharge": "+ €1-3 pro Ticket",
+          "savings": "660 €+ gespart/Jahr"
+        },
+        {
+          "name": "Zendesk",
+          "price": "€115+/Monat",
+          "surcharge": "+ €0,50-2 pro Ticket",
+          "savings": "1.152 €+ gespart/Jahr"
+        }
+      ],
+      "ownPlan": {
+        "name": "ReplAInow Scale",
+        "price": "€199/Monat",
+        "tagline": "Alles inklusive",
+        "bullets": [
+          "Unlimitierte AI-Antworten",
+          "Keine Per-Ticket-Gebühren",
+          "Keine versteckten Kosten"
+        ]
+      },
+      "bottomCallout": {
+        "title": "Bei 1.000 Tickets/Monat verlangt Gorgias 3.000 €+ extra!",
+        "subtitle": "Mit ReplAInow zahlst du 0 € Aufpreis – egal ob 100 oder 10.000 Tickets."
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Was echte Händler sagen",
+    "subtitle": "Schließe dich 280+ zufriedenen Shopify-Händlern an"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Alles was du über ReplAInow wissen musst",
+    "items": [
+      {
+        "question": "Was ist ReplAInow AI Helpdesk?",
+        "shortAnswer": "ReplAInow ist eine KI-gestützte Customer Support-Lösung für Shopify mit GPT-4 Technologie.",
+        "detailedAnswer": "ReplAInow ist eine KI-gestützte Customer Support-Lösung für Shopify, die automatisch auf Kundenanfragen antwortet, Produktempfehlungen gibt und in über 32 Sprachen verfügbar ist. Die Software nutzt GPT-4 Technologie für präzise, menschenähnliche Antworten und integriert sich nahtlos in bestehende Shopify Stores."
+      },
+      {
+        "question": "Wie viel kostet ReplAInow?",
+        "shortAnswer": "ReplAInow startet bei 19€/Monat mit 14 Tagen kostenloser Testphase.",
+        "detailedAnswer": "ReplAInow startet bei 19€/Monat für den Starter Plan. Weitere Pläne: Pro (49€/Monat), Scale (199€/Monat). Alle Pläne beinhalten 14 Tage kostenlose Testphase ohne Setup-Gebühren und unbegrenzte KI-Antworten."
+      },
+      {
+        "question": "Ist ReplAInow DSGVO-konform?",
+        "shortAnswer": "Ja, ReplAInow ist vollständig DSGVO-konform und erfüllt alle EU-Datenschutzbestimmungen.",
+        "detailedAnswer": "Ja, ReplAInow ist vollständig DSGVO-konform und erfüllt alle europäischen Datenschutzbestimmungen. Alle Kundendaten werden sicher verschlüsselt übertragen und gespeichert, mit vollständiger Transparenz über Datenverarbeitung und Löschungsrechte."
+      },
+      {
+        "question": "Welche Sprachen unterstützt ReplAInow?",
+        "shortAnswer": "ReplAInow unterstützt nativ 32+ Sprachen inklusive Deutsch, Englisch, Spanisch, Französisch.",
+        "detailedAnswer": "ReplAInow unterstützt nativ 32+ Sprachen inklusive Deutsch, Englisch, Spanisch, Italienisch, Niederländisch, Portugiesisch, Französisch und mehr. Die KI erkennt automatisch die Kundensprache und antwortet entsprechend, ohne Übersetzungsfehler."
+      },
+      {
+        "question": "Wie schnell antwortet ReplAInow KI?",
+        "shortAnswer": "ReplAInow antwortet in unter 3 Sekunden mit präzisen, kontextuellen Antworten.",
+        "detailedAnswer": "ReplAInow antwortet in unter 3 Sekunden mit präzisen, kontextuellen Antworten. Die KI analysiert Kundenanfragen, greift auf Echtzeit-Shopify-Daten zu und liefert personalisierte Antworten schneller als jeder menschliche Agent."
+      }
+    ]
   },
   "cta": {
     "title": "Bereit, deinen Support zu automatisieren?",
@@ -161,31 +231,457 @@
     "button": "Kostenlose Testversion starten",
     "demo": "Demo ansehen"
   },
-  "faq": {
-    "title": "Häufig gestellte Fragen",
-    "subtitle": "Alles, was du vor dem Start wissen musst - kurz und klar.",
-    "questions": [
+  "howItWorks": {
+    "title": "So startest du in Minuten",
+    "subtitle": "Installieren, verbinden, Antworten versenden und mit Regeln automatisieren.",
+    "steps": [
       {
-        "q": "Wie integriert sich ReplAInow in Shopify?",
-        "a": "Per App-Installation. Nach dem Verbinden zieht ReplAInow relevante Daten (Bestellungen, Versandstatus, Produkte) DSGVO-konform direkt aus Shopify, um Antworten zu generieren."
+        "title": "Aus dem Shopify App Store installieren",
+        "description": "Ein-Klick-Installation direkt aus dem Shopify App Store. Keine technische Einrichtung erforderlich."
       },
       {
-        "q": "Ist das DSGVO-konform?",
-        "a": "Ja. Daten werden zweckgebunden verarbeitet. Du kannst jederzeit Datenzugriffe einschränken oder entziehen. Wir speichern nur, was für die Antwort nötig ist."
+        "title": "Shop-Daten verbinden",
+        "description": "ReplAInow synchronisiert automatisch deine Produkte, Bestellungen und Kundendaten für intelligente Antworten."
       },
       {
-        "q": "Wie schnell bekomme ich Antworten?",
-        "a": "In Sekunden. ReplAInow strukturiert die Anfrage, prüft passende Shopify-Daten und liefert eine markenkonforme Antwort - meist unter 3 Sekunden."
+        "title": "KI beginnt zu antworten",
+        "description": "Dein KI-Assistent beginnt sofort mit der Bearbeitung von Kundenanfragen mit menschlicher Präzision."
+      }
+    ],
+    "ctaInstall": "Kostenlos testen",
+    "ctaDemo": "Live-Demo ansehen"
+  },
+  "liveDemo": {
+    "badge": "⚡ INTERAKTIVE DEMO",
+    "title": {
+      "primary": "Sieh",
+      "secondary": "ReplAInow in Aktion"
+    },
+    "subtitle": "Schau zu, wie unsere KI echte Kundengespräche mit perfekter Genauigkeit und Blitzgeschwindigkeit abwickelt.",
+    "scenarios": [
+      {
+        "name": "Tech Store",
+        "icon": "📱",
+        "messages": [
+          "Hallo! Ich suche ein iPhone Case für mein iPhone 14 Pro. Was könnt ihr empfehlen?",
+          "Gibt es Rabatte für Studenten?",
+          "Wie lange dauert der Versand nach Deutschland?",
+          "Kann ich das Produkt zurückgeben, wenn es mir nicht gefällt?"
+        ],
+        "responses": [
+          "Hallo! Für dein iPhone 14 Pro empfehle ich unser Premium Clear Case (24,99€) oder das Rugged Case (29,99€). Beide sind gerade auf Lager und bieten optimalen Schutz! 🛡️",
+          "Ja! Studenten bekommen 15% Rabatt mit dem Code STUDENT15. Einfach bei der Bestellung eingeben! 🎓",
+          "Standard-Versand nach Deutschland dauert 2-3 Werktage (4,99€), Express-Versand 1-2 Werktage (9,99€). Kostenloser Versand ab 50€! 🚚",
+          "Ja, du hast 30 Tage Rückgaberecht! Kostenlose Rücksendung, Geld-zurück-Garantie. Einfach in deinem Account die Rücksendung anmelden! ✅"
+        ]
       },
       {
-        "q": "Kann ich den Ton der Marke anpassen?",
-        "a": "Ja. Du definierst Stilrichtlinien (z. B. Du/Sie, Tonalität, Emojis). Antworten werden automatisch daran ausgerichtet."
+        "name": "Fashion Store",
+        "icon": "👗",
+        "messages": [
+          "Welche Größe sollte ich bei diesem Kleid wählen?",
+          "Ist das Material nachhaltig?",
+          "Kann ich mehrere Farben bestellen?",
+          "Wie ist die Qualität?"
+        ],
+        "responses": [
+          "Basierend auf deinen Angaben empfehle ich Größe M. Das Kleid fällt locker und ist größengetreu. Bei Unsicherheit lieber eine Größe größer! 📏",
+          "Ja! 100% Bio-Baumwolle, fair gehandelt und umweltfreundlich verpackt. 🌱 Nachhaltigkeit ist uns wichtig!",
+          "Absolut! Verfügbar in 5 Farben: Schwarz, Weiß, Navy, Beige und Rose. Mix & Match für kostenlosen Versand ab 75€! 🎨",
+          "Ausgezeichnete Qualität! Premium-Materialien, verstärkte Nähte, vorgewaschen. 4,8/5 Sterne von 2.847 Kunden. 30 Tage Garantie! ⭐"
+        ]
       },
       {
-        "q": "Wie sieht die Preisgestaltung aus?",
-        "a": "Transparente Pläne mit klaren Limits, 14 Tage kostenlos testen ohne Kreditkarte. Upgrade jederzeit möglich."
+        "name": "Home & Garden",
+        "icon": "🏡",
+        "messages": [
+          "Ist diese Pflanze für Anfänger geeignet?",
+          "Welche Pflege braucht sie?",
+          "Kommt sie mit Topf?",
+          "Versand in Wohnungen möglich?"
+        ],
+        "responses": [
+          "Perfekt für Anfänger! Diese Monstera ist sehr pflegeleicht und wächst schnell. Ideale erste Pflanze! 🌱",
+          "Wöchentlich gießen, helles indirektes Licht, monatlich düngen. Wir legen eine detaillierte Pflegeanleitung bei! 💚",
+          "Ja! Kommt mit passendem Keramiktopf (Wert 15€) und Drainageschale. Sofort dekorierbar! 🪴",
+          "Ja! Wir liefern in Wohnungen. Unser Lieferteam bringt sie direkt an deine Tür. Aufzug bevorzugt! 🚚"
+        ]
+      }
+    ],
+    "controls": {
+      "play": "Abspielen",
+      "pause": "Pausieren",
+      "restart": "Neustart"
+    },
+    "stats": {
+      "responseTime": "Antwortzeit",
+      "accuracy": "Genauigkeit",
+      "languages": "Sprachen"
+    }
+  },
+  "comparison": {
+    "table": {
+      "titlePrimary": "Warum ReplAInow",
+      "titleHighlight": "die Konkurrenz zerstört",
+      "subtitle": "Direkter Vergleich mit Gorgias, Intercom & Zendesk",
+      "legend": {
+        "feature": "Feature",
+        "aiComparison": "⚔ AI VERGLEICH",
+        "hero": "ReplAInow",
+        "poweredBy": "Powered by GPT-4.1",
+        "gorgias": "Gorgias",
+        "intercom": "Intercom",
+        "zendesk": "Zendesk"
+      },
+      "rows": [
+        {
+          "label": "AI Intelligenz",
+          "replAInow": "GPT-4.1 neueste Generation",
+          "gorgias": "Basis-Automation",
+          "intercom": "Limitierte AI",
+          "zendesk": "Veraltete AI"
+        },
+        {
+          "label": "Antwortzeit",
+          "replAInow": "3 Sekunden",
+          "gorgias": "2-5 Minuten",
+          "intercom": "5-10 Minuten",
+          "zendesk": "10+ Minuten"
+        },
+        {
+          "label": "Sprachen",
+          "replAInow": "32+ nativ unterstützt",
+          "gorgias": "10 Sprachen basic",
+          "intercom": "15 Sprachen basic",
+          "zendesk": "20 Sprachen basic"
+        },
+        {
+          "label": "Shopify Integration",
+          "replAInow": "Echtzeit Sync",
+          "gorgias": "Manueller Import",
+          "intercom": "Basis-Anbindung",
+          "zendesk": "Komplexes Setup"
+        },
+        {
+          "label": "Preis / Monat",
+          "replAInow": "€19 pauschal",
+          "gorgias": "€50+ pro Agent",
+          "intercom": "€74+ pro Seat",
+          "zendesk": "€115+ pro Agent"
+        },
+        {
+          "label": "Setup Zeit",
+          "replAInow": "60 Sekunden",
+          "gorgias": "2-3 Tage",
+          "intercom": "1 Woche",
+          "zendesk": "2 Wochen"
+        },
+        {
+          "label": "ROI Steigerung",
+          "replAInow": "6× Conversion Rate",
+          "gorgias": "Neutral bis leicht",
+          "intercom": "Minimal",
+          "zendesk": "Oft negativ"
+        }
+      ]
+    },
+    "savings": {
+      "headings": {
+        "competitors": "Teure Konkurrenz",
+        "competitorsSubtitle": "Basis-Features zum Premium-Preis",
+        "ownPlan": "ReplAInow Power",
+        "ownPlanSubtitle": "Premium-Features zum fairen Preis"
+      },
+      "intro": {
+        "badge": "KOSTENVERGLEICH",
+        "title": "Massive Kosteneinsparungen",
+        "description": "Während Wettbewerber pro Ticket kassieren, erhältst du mit ReplAInow unbegrenzte Antworten inklusive Echtzeit-Shopify-Daten."
+      },
+      "competitors": [
+        {
+          "name": "Gorgias",
+          "price": "50 €+/Monat",
+          "bulletPoints": [
+            "Basis-Automation",
+            "Langsame Antworten",
+            "Limitierte Sprachen"
+          ],
+          "summary": "372 €+ Extra pro Jahr für einfache Automatisierung"
+        },
+        {
+          "name": "Intercom",
+          "price": "74 €+/Monat",
+          "bulletPoints": [
+            "Teure Add-ons",
+            "Komplexes Setup",
+            "Eingeschränkter Shopify-Kontext"
+          ],
+          "summary": "660 €+ Extra pro Jahr für Teilfunktionen"
+        },
+        {
+          "name": "Zendesk",
+          "price": "115 €+/Monat",
+          "bulletPoints": [
+            "Legacy-Workflows",
+            "Lange Einarbeitung",
+            "Versteckte Ticket-Gebühren"
+          ],
+          "summary": "1.152 €+ Extra pro Jahr für veraltete Tools"
+        }
+      ],
+      "ownPlan": {
+        "price": "19 €/Monat",
+        "tagline": "Alle Premium-Features inklusive",
+        "features": [
+          "GPT-4.1 AI Engine",
+          "32+ Sprachen nativ",
+          "3 Sekunden Antwortzeit",
+          "Unlimitierte AI-Antworten",
+          "DSGVO-konform",
+          "24/7 verfügbar"
+        ]
+      },
+      "totals": {
+        "competitorTotal": "1.800 €+/Jahr",
+        "competitorNote": "…für Basis-Automation und Ticket-Gebühren",
+        "ownBenefits": [
+          "Spare 75 % Kosten",
+          "Automatisiere 90 % der Tickets",
+          "+187 % Conversion"
+        ],
+        "calloutTitle": "1.000 Tickets/Monat = 3.000 €+ Extra bei Gorgias",
+        "calloutSubtitle": "Mit ReplAInow zahlst du 0 € extra – egal ob 100 oder 10.000 Tickets."
+      }
+    }
+  },
+  "mailAndChat": {
+    "meta": {
+      "titleMain": "AI Mail & Live Chat",
+      "titleHighlight": "24/7 vollständig integriert",
+      "subtitle": "Bearbeite jede Kundenanfrage sofort – in jedem Kanal. ReplAInow verbindet sich mit deinem Shopify-Store und beantwortet Mails und Live-Chats in Sekunden – markenkonform, kontextbewusst und mehrsprachig.",
+      "mailTitle": "Mail · AI Inbox",
+      "mailAlt": "ReplAInow Mail-Inbox mit AI-Antworten basierend auf Shopify-Daten",
+      "chatTitle": "Live Chat · Echtzeit",
+      "chatAlt": "ReplAInow Live-Chat Oberfläche mit Echtzeitantworten auf Desktop und Mobile"
+    },
+    "features": {
+      "mailPrimary": [
+        "AI beantwortet Kunden-E-Mails sofort",
+        "Shopify-Daten automatisch eingebettet",
+        "Markenkonsistenter Ton in jeder Sprache"
+      ],
+      "mailSecondary": [
+        "Inbox Zero – jeden Tag",
+        "Präzise Shopify-antworten",
+        "Spare 15+ Stunden pro Woche"
+      ],
+      "chatPrimary": [
+        "Vollautomatische Chatbetreuung rund um die Uhr",
+        "Echtzeit-Shopify-Daten bei jeder Antwort",
+        "Zentrale Übersicht aller Gespräche"
+      ],
+      "chatSecondary": [
+        "AI Auto-Mode – jederzeit übernehmen oder zurückgeben",
+        "Chats organisieren, taggen und priorisieren",
+        "Mehrsprachiger Support in Kundensprache"
+      ]
+    },
+    "cta": {
+      "install": "Jetzt ReplAInow testen",
+      "installAria": "Kostenlos ReplAInow testen",
+      "demo": "Live-Demo ansehen",
+      "demoAria": "Live-Demo ansehen"
+    },
+    "fallbackSubtitle": "AI Mail- und Chat-Automatisierung für Shopify-Händler."
+  },
+  "problemSolution": {
+    "badge": "⚡ PROBLEM VS LÖSUNG",
+    "problemTitle": "Das Problem:",
+    "problemSubtitle": "Überforderter Support",
+    "solutionTitle": "Die Lösung:",
+    "solutionSubtitle": "Intelligente AI",
+    "before": {
+      "title": "Ohne ReplAInow",
+      "imageAlt": "Chaotisches überfülltes E-Mail Postfach",
+      "points": [
+        "50+ E-Mails täglich bearbeiten",
+        "Endlose Copy-Paste Antworten",
+        "Kunden warten stundenlang",
+        "Verlorene Verkäufe durch schlechten Service",
+        "Überarbeitetes, gestresstes Team"
+      ]
+    },
+    "after": {
+      "title": "Mit ReplAInow",
+      "imageAlt": "ReplAInow AI Dashboard mit perfekter Antwort",
+      "points": [
+        "AI antwortet in 3 seconds automatisch",
+        "Perfekte Produktempfehlungen",
+        "32+ languages automatisch",
+        "+187% höhere Conversion Rate",
+        "90% weniger Support-Aufwand"
+      ]
+    }
+  },
+  "socialProof": {
+    "title": "Das sagen echte Händler",
+    "subtitle": "Schließe dich 280+ zufriedenen Shopify-Händlern an",
+    "trustBadges": {
+      "shopifyPartner": "Shopify Plus Partner",
+      "rating": "4,9/5 Sterne",
+      "merchants": "280+ Händler",
+      "gdprCompliant": "DSGVO-konform"
+    },
+    "testimonials": [
+      {
+        "company": "BeautyStore",
+        "owner": "Lisa M.",
+        "result": "15 Stunden/Woche gespart",
+        "quote": "ReplAInow hat unseren Support revolutioniert. Die KI versteht unsere Produkte besser als manche Mitarbeiter!"
+      },
+      {
+        "company": "TechGadgets",
+        "owner": "Marco K.",
+        "result": "+37% Kundenzufriedenheit",
+        "quote": "Kunden lieben die instant Antworten. Conversion ist durch die Decke gegangen!"
+      },
+      {
+        "company": "FashionHub",
+        "owner": "Sarah T.",
+        "result": "12x ROI in 3 Monaten",
+        "quote": "Von Intercom zu ReplAInow - beste Entscheidung ever! Kosten runter, Performance hoch."
+      },
+      {
+        "company": "ElectroMax",
+        "owner": "Thomas R.",
+        "result": "85% weniger Support-Tickets",
+        "quote": "Endlich keine 24/7 Support-Schichten mehr! Die KI beantwortet 90% der Fragen automatisch. Game Changer für unser Shopify-Store!"
+      },
+      {
+        "company": "HomeDecor Plus",
+        "owner": "Anna L.",
+        "result": "+42% Conversion Rate",
+        "quote": "Unsere Kunden bekommen sofort Antworten zu Versand, Rücksendungen und Produktdetails. Shopify-Integration war super einfach!"
+      },
+      {
+        "company": "SportGear Pro",
+        "owner": "Mike S.",
+        "result": "€50k+ zusätzlicher Umsatz",
+        "quote": "Die KI kennt jeden Artikel in unserem Shopify-Store. Kunden kaufen mehr, weil sie perfekt beraten werden. Unser Support-Team kann sich auf wichtige Anfragen konzentrieren."
       }
     ]
+  },
+  "industryExamples": {
+    "badge": "🏭 BRANCHENLÖSUNGEN",
+    "title": "Branchenspezifische KI-Lösungen",
+    "subtitle": "ReplAInow passt sich perfekt an deine Branche an und löst branchenspezifische Kundenfragen",
+    "industries": [
+      {
+        "name": "Fashion & Mode",
+        "example": "ModeStore",
+        "challenges": [
+          "Größenberatung",
+          "Rückgabe",
+          "Styling-Tipps"
+        ],
+        "solution": "KI erkennt Produktmerkmale und gibt personalisierte Empfehlungen",
+        "results": "+45% Conversion, -60% Support-Tickets"
+      },
+      {
+        "name": "Elektronik & Tech",
+        "example": "TechGadgets",
+        "challenges": [
+          "Technische Fragen",
+          "Kompatibilität",
+          "Setup-Hilfe"
+        ],
+        "solution": "KI kennt alle Produktspezifikationen und löst 90% der Fragen",
+        "results": "+67% Kundenzufriedenheit, -80% Wartezeiten"
+      },
+      {
+        "name": "Beauty & Kosmetik",
+        "example": "BeautyStore",
+        "challenges": [
+          "Produktberatung",
+          "Hauttyp-Analyse",
+          "Anwendungstipps"
+        ],
+        "solution": "KI analysiert Hauttyp und empfiehlt passende Produkte",
+        "results": "+52% Upselling, -70% Retouren"
+      },
+      {
+        "name": "Home & Garden",
+        "example": "HomeGarden",
+        "challenges": [
+          "Montageanleitungen",
+          "Pflegetipps",
+          "Kompatibilität"
+        ],
+        "solution": "KI liefert detaillierte Anleitungen und Pflegehinweise",
+        "results": "+38% Kundenzufriedenheit, -55% Support-Aufwand"
+      }
+    ]
+  },
+  "liveExamples": {
+    "title": "Live aus echten Shopify Stores",
+    "examples": [
+      {
+        "store": "TechGadgets24",
+        "message": "KI hat gerade eine Produktempfehlung zu iPhone Cases gegeben - Kunde kauft sofort 3 Stück!",
+        "revenue": "+EUR 89,97 Umsatz"
+      },
+      {
+        "store": "BeautyStore",
+        "message": "Französische Kundin bekommt perfekte Antwort auf Französisch über Hautpflege-Routine",
+        "conversion": "+37% Conversion"
+      },
+      {
+        "store": "FashionHub",
+        "message": "KI erklärt Größentabelle und empfiehlt passende Größe - Return Rate sinkt um 60%",
+        "returns": "-60% Returns"
+      }
+    ]
+  },
+  "finalCta": {
+    "badge": "STARTE JETZT",
+    "title": "Bereit für die KI-Revolution?",
+    "subtitle": "Über 280+ Shopify-Händler nutzen bereits ReplAInow. Werde Teil der Elite und zerstöre deine Konkurrenz mit überlegener KI-Technologie.",
+    "cta": "JETZT INSTALLIEREN",
+    "demo": "LIVE DEMO",
+    "features": [
+      "14 Tage kostenlos",
+      "Setup-frei",
+      "Jederzeit kündbar",
+      "Geld-zurück"
+    ],
+    "stats": {
+      "title": "Warum 280+ Shopify-Händler auf ReplAInow setzen",
+      "subtitle": "Starte noch heute mit der 14-tägigen kostenlosen Testphase",
+      "items": [
+        {
+          "value": "280+",
+          "label": "Zufriedene Händler"
+        },
+        {
+          "value": "€2,1M",
+          "label": "Umsatz generiert"
+        },
+        {
+          "value": "187%",
+          "label": "Conversion Boost"
+        }
+      ]
+    }
+  },
+  "stickyInstallBar": {
+    "title": "ReplAInow AI Helpdesk",
+    "subtitle": "19€/Monat • 14 Tage kostenlos • 4,9★",
+    "cta": "Installieren"
+  },
+  "exitIntent": {
+    "title": "Warte! Verpasse nicht deine Chance!",
+    "subtitle": "Sichere dir jetzt 30% Rabatt auf alle Pläne. Nur noch heute verfügbar!",
+    "cta": "🎯 JETZT 30% SPAREN",
+    "dismiss": "Nein, danke"
   }
 }
-

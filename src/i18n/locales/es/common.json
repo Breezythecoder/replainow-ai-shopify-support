@@ -6,27 +6,6 @@
     "demo": "Demo en Vivo",
     "contact": "Contacto"
   },
-  "footer": {
-    "links": {
-      "features": "Características",
-      "pricing": "Precios",
-      "demo": "Demo",
-      "contact": "Contacto"
-    },
-    "legal": {
-      "privacy": "Política de Privacidad",
-      "terms": "Términos de Servicio",
-      "security": "Seguridad",
-      "impressum": "Aviso Legal",
-      "refund": "Política de Reembolso",
-      "cookies": "Política de Cookies",
-      "uninstall": "Guía de Desinstalación"
-    },
-    "contact": {
-      "email": "support@replainow.com",
-      "location": "Dubái, EAU"
-    },
-    "copyright": "© 2024 ReplAInow. Todos los derechos reservados."
-  }
+  "footer": {},
+  "contact": {}
 }
-

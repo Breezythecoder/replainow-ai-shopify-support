@@ -15,21 +15,76 @@
   },
   "features": {
     "title": "¿Por Qué Elegir ReplAInow?",
-    "subtitle": "Transforma tu tienda Shopify con soporte al cliente impulsado por IA"
+    "subtitle": "Transforma tu tienda Shopify con soporte al cliente impulsado por IA",
+    "items": [
+      {
+        "title": "Respuesta en 3 Segundos",
+        "description": "Respuestas instantáneas a consultas de clientes con tecnología GPT-4.1"
+      },
+      {
+        "title": "32+ Idiomas",
+        "description": "Atiende a tus clientes en su idioma nativo automáticamente"
+      },
+      {
+        "title": "Compatible con GDPR",
+        "description": "Cumplimiento completo de protección de datos para clientes europeos"
+      },
+      {
+        "title": "75% de Ahorro",
+        "description": "Reduce costos de soporte mientras mejoras la satisfacción del cliente"
+      }
+    ]
+  },
+  "pricing": {
+    "title": "Precios Simples y Transparentes",
+    "subtitle": "Comienza gratis, escala mientras creces",
+    "plans": [
+      {
+        "name": "Inicial",
+        "price": "19",
+        "currency": "EUR",
+        "period": "mes",
+        "features": [
+          "Hasta 1,000 conversaciones/mes",
+          "Tiempo de respuesta de 3 segundos",
+          "32+ idiomas",
+          "Análisis básicos"
+        ]
+      },
+      {
+        "name": "Profesional",
+        "price": "49",
+        "currency": "EUR",
+        "period": "mes",
+        "features": [
+          "Hasta 5,000 conversaciones/mes",
+          "Análisis avanzados",
+          "Marca personalizada",
+          "Soporte prioritario"
+        ]
+      }
+    ]
   },
   "testimonials": {
     "title": "Lo Que Dicen los Comerciantes Reales",
     "subtitle": "Únete a 280+ comerciantes Shopify satisfechos"
   },
-  "pricing": {
-    "title": "Precios Simples y Transparentes",
-    "subtitle": "Comienza gratis, escala mientras creces"
-  },
+  "faq": {},
   "cta": {
-    "title": "¿Listo para Automatizar tu Soporte?",
+    "title": "¿Listo para Automatizar Tu Soporte?",
     "subtitle": "Únete a 280+ comerciantes Shopify satisfechos y comienza a ahorrar hoy",
-    "button": "Iniciar Prueba Gratuita",
+    "button": "Prueba Gratuita",
     "demo": "Ver Demo"
-  }
+  },
+  "howItWorks": {},
+  "liveDemo": {},
+  "comparison": {},
+  "mailAndChat": {},
+  "problemSolution": {},
+  "socialProof": {},
+  "industryExamples": {},
+  "liveExamples": {},
+  "finalCta": {},
+  "stickyInstallBar": {},
+  "exitIntent": {}
 }
-
