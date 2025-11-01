@@ -2,7 +2,7 @@
 
 **Live Website**: https://replainow.com  
 **Status**: ✅ Production Ready & Enterprise-Grade  
-**Tech Stack**: React 18 + TypeScript + Vite + TailwindCSS  
+**Tech Stack**: React 19 + TypeScript + Vite 7 + TailwindCSS 4  
 **Languages**: 🇩🇪 DE | 🇬🇧 EN | 🇪🇸 ES | 🇫🇷 FR (ready for 30+)
 
 ---
@@ -24,11 +24,12 @@ ReplAInow is an **enterprise-grade, multi-language AI-powered Shopify helpdesk**
 
 ### Frontend Stack:
 ```typescript
-React 18.3.1           // ✅ Latest stable
-TypeScript 5.6.2       // ✅ Strong typing
-Vite 5.4.20           // ✅ Fast build tool
-TailwindCSS 3.4.15    // ✅ Utility-first CSS
-Radix UI              // ✅ Headless components
+React 19.2.0          // ✅ Latest stable (Nov 2025)
+TypeScript 5.9.3      // ✅ Strong typing
+Vite 7.1.12          // ✅ Lightning-fast build
+TailwindCSS 4.1.16   // ✅ Oxide engine
+React Router 7.9.5   // ✅ Remix integration
+Radix UI             // ✅ Headless components
 ```
 
 ### Project Structure (Enterprise-Grade):
@@ -89,8 +90,8 @@ replainow-ai-shopify-support/
 
 ### Prerequisites:
 ```bash
-Node.js 18+
-npm 8+
+Node.js 22+ (LTS recommended)
+npm 10+
 ```
 
 ### Installation:

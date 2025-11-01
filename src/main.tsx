@@ -7,10 +7,10 @@ if (import.meta.env.MODE === 'development') {
   Promise.all([
     import('react'),
     import('react-dom'),
-    // @ts-ignore - optional dev dependency
+    // @ts-expect-error - optional dev dependency
     import('@axe-core/react'),
   ]).then(([React, ReactDOM, axe]) => {
-    // @ts-ignore - axe type expects default export
+    // @ts-expect-error - axe type expects default export
     axe.default(React, ReactDOM, 1000);
     console.log('%c[axe] Accessibility auditing enabled', 'color: #10b981');
   }).catch(() => {});
