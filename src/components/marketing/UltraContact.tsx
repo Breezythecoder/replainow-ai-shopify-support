@@ -23,7 +23,7 @@ const UltraContact = () => {
         >
           <h2 className="text-5xl lg:text-6xl font-black text-ultra-black mb-6">
             Lass uns <span style={{
-              background: 'linear-gradient(135deg, #6B46C1 0%, #8B5CF6 100%)',
+              background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'

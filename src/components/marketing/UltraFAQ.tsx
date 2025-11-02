@@ -52,7 +52,7 @@ const UltraFAQ = () => {
                   className={`w-6 h-6 flex-shrink-0 transition-transform ${
                     openIndex === i ? 'rotate-180' : ''
                   }`}
-                  style={{ color: '#6B46C1' }}
+                  style={{ color: '#9333EA' }}
                 />
               </button>
               {openIndex === i && (

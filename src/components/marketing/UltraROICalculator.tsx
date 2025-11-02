@@ -11,7 +11,7 @@ const UltraROICalculator = () => {
   const roi = Math.round((additionalRevenue / 49) * 100);
 
   return (
-    <section className="py-32 bg-white">
+    <section className="py-32" style={{ background: '#111218' }}>
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -19,20 +19,27 @@ const UltraROICalculator = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl lg:text-6xl font-black text-ultra-black mb-6">
-            Dein <span style={{
-              background: 'linear-gradient(135deg, #6B46C1 0%, #8B5CF6 100%)',
+          <h2 className="text-5xl lg:text-6xl font-black mb-6" style={{ color: '#FFFFFF' }}>
+            Dein <span className="ultra-text-neon-purple" style={{
+              background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
+              WebkitTextFillColor: 'transparent',
+              filter: 'drop-shadow(0 0 20px rgba(147, 51, 234, 0.5))'
             }}>ROI</span>
           </h2>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
           <div className="rounded-3xl overflow-hidden" style={{
-            background: 'linear-gradient(135deg, #6B46C1 0%, #8B5CF6 100%)',
-            boxShadow: '0 40px 100px rgba(107, 70, 193, 0.3)'
+            background: 'linear-gradient(135deg, rgba(147, 51, 234, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%)',
+            backdropFilter: 'blur(40px) saturate(180%)',
+            WebkitBackdropFilter: 'blur(40px) saturate(180%)',
+            border: '2px solid rgba(147, 51, 234, 0.3)',
+            boxShadow: `
+              0 40px 120px rgba(147, 51, 234, 0.4),
+              0 0 80px rgba(147, 51, 234, 0.3)
+            `
           }}>
             <div className="p-12">
               {/* Sliders */}
@@ -65,26 +72,44 @@ const UltraROICalculator = () => {
                 </div>
               </div>
 
-              {/* Results */}
+              {/* Results - NEON GLASS */}
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="text-center p-8 rounded-2xl" style={{ background: 'rgba(255, 255, 255, 0.1)' }}>
+                <div className="text-center p-8 rounded-2xl" style={{ 
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  backdropFilter: 'blur(20px)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  boxShadow: '0 0 30px rgba(147, 51, 234, 0.2)'
+                }}>
                   <div className="text-5xl font-black text-white mb-2">€{additionalRevenue.toLocaleString('de-DE')}</div>
-                  <div className="text-purple-200">Zusätzlicher Umsatz/Monat</div>
+                  <div style={{ color: '#E9D5FF' }}>Zusätzlicher Umsatz/Monat</div>
                 </div>
-                <div className="text-center p-8 rounded-2xl" style={{ background: 'rgba(255, 255, 255, 0.1)' }}>
+                <div className="text-center p-8 rounded-2xl" style={{ 
+                  background: 'rgba(255, 255, 255, 0.1)',
+                  backdropFilter: 'blur(20px)',
+                  border: '1px solid rgba(255, 255, 255, 0.2)',
+                  boxShadow: '0 0 30px rgba(6, 182, 212, 0.2)'
+                }}>
                   <div className="text-5xl font-black text-white mb-2">{roi}%</div>
-                  <div className="text-purple-200">ROI</div>
+                  <div style={{ color: '#CFFAFE' }}>ROI</div>
                 </div>
               </div>
 
               <div className="text-center mt-8">
                 <a
                   href={OAUTH_URL}
-                  className="inline-block px-10 py-4 font-bold rounded-xl"
+                  className="inline-block px-10 py-4 font-bold rounded-xl transition-all"
                   style={{
-                    background: 'white',
-                    color: '#6B46C1',
-                    boxShadow: '0 8px 20px rgba(255, 255, 255, 0.2)'
+                    background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
+                    color: 'white',
+                    boxShadow: '0 10px 30px rgba(16, 185, 129, 0.4), 0 0 40px rgba(16, 185, 129, 0.2)'
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translateY(-4px) scale(1.05)';
+                    e.currentTarget.style.boxShadow = '0 20px 50px rgba(16, 185, 129, 0.5), 0 0 80px rgba(16, 185, 129, 0.3)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                    e.currentTarget.style.boxShadow = '0 10px 30px rgba(16, 185, 129, 0.4), 0 0 40px rgba(16, 185, 129, 0.2)';
                   }}
                 >
                   Jetzt kostenlos starten

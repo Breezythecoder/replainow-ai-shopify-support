@@ -18,7 +18,7 @@ const UltraProblemSolution = () => {
             Dein Shop schläft nie.
             <br />
             <span style={{
-              background: 'linear-gradient(135deg, #6B46C1 0%, #8B5CF6 100%)',
+              background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
@@ -62,7 +62,7 @@ const UltraProblemSolution = () => {
           <motion.div
             className="rounded-3xl p-10 relative"
             style={{
-              background: 'linear-gradient(135deg, #6B46C1 0%, #8B5CF6 100%)',
+              background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
               border: '2px solid rgba(107, 70, 193, 0.2)',
               boxShadow: '0 20px 60px rgba(107, 70, 193, 0.3)'
             }}
@@ -75,7 +75,7 @@ const UltraProblemSolution = () => {
                 className="px-6 py-2 rounded-full font-bold text-sm"
                 style={{
                   background: 'white',
-                  color: '#6B46C1',
+                  color: '#9333EA',
                   boxShadow: '0 4px 14px rgba(255, 255, 255, 0.3)'
                 }}
               >

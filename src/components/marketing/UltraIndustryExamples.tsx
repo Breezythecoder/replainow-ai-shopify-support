@@ -10,7 +10,7 @@ const UltraIndustryExamples = () => {
   ];
 
   return (
-    <section className="py-32" style={{ background: '#F5F3FF' }}>
+    <section className="py-32" style={{ background: '#111218' }}>
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -18,12 +18,13 @@ const UltraIndustryExamples = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl lg:text-6xl font-black text-ultra-black mb-6">
-            Perfekt für <span style={{
-              background: 'linear-gradient(135deg, #6B46C1 0%, #8B5CF6 100%)',
+          <h2 className="text-5xl lg:text-6xl font-black mb-6" style={{ color: '#FFFFFF' }}>
+            Perfekt für <span className="ultra-text-neon-purple" style={{
+              background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent'
+              WebkitTextFillColor: 'transparent',
+              filter: 'drop-shadow(0 0 20px rgba(147, 51, 234, 0.5))'
             }}>deine Branche</span>
           </h2>
         </motion.div>
@@ -36,9 +37,15 @@ const UltraIndustryExamples = () => {
                 key={i}
                 className="rounded-2xl p-8 text-center"
                 style={{
-                  background: 'white',
-                  border: '2px solid rgba(107, 70, 193, 0.1)',
-                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.05)',
+                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)',
+                  backdropFilter: 'blur(40px) saturate(180%)',
+                  WebkitBackdropFilter: 'blur(40px) saturate(180%)',
+                  border: '1px solid rgba(147, 51, 234, 0.2)',
+                  boxShadow: `
+                    0 20px 60px rgba(0, 0, 0, 0.4),
+                    0 0 40px rgba(147, 51, 234, 0.1),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.05)
+                  `,
                   transition: 'all 0.3s ease'
                 }}
                 initial={{ opacity: 0, y: 20 }}
@@ -47,23 +54,39 @@ const UltraIndustryExamples = () => {
                 transition={{ delay: i * 0.1 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = 'translateY(-8px)';
-                  e.currentTarget.style.boxShadow = '0 20px 60px rgba(107, 70, 193, 0.15)';
+                  e.currentTarget.style.boxShadow = `
+                    0 40px 100px rgba(0, 0, 0, 0.5),
+                    0 0 80px rgba(147, 51, 234, 0.3)
+                  `;
+                  e.currentTarget.style.borderColor = 'rgba(147, 51, 234, 0.5)';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.05)';
+                  e.currentTarget.style.boxShadow = `
+                    0 20px 60px rgba(0, 0, 0, 0.4),
+                    0 0 40px rgba(147, 51, 234, 0.1),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.05)
+                  `;
+                  e.currentTarget.style.borderColor = 'rgba(147, 51, 234, 0.2)';
                 }}
               >
                 <div 
                   className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
-                  style={{ background: 'linear-gradient(135deg, #6B46C1 0%, #8B5CF6 100%)' }}
+                  style={{ 
+                    background: 'linear-gradient(135deg, #9333EA 0%, #C084FC 100%)',
+                    boxShadow: '0 0 40px rgba(147, 51, 234, 0.5)'
+                  }}
                 >
                   <Icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-ultra-black mb-3">{industry.title}</h3>
+                <h3 className="text-xl font-bold mb-3" style={{ color: '#FFFFFF' }}>{industry.title}</h3>
                 <div 
                   className="px-4 py-2 rounded-lg font-bold text-sm"
-                  style={{ background: 'rgba(107, 70, 193, 0.1)', color: '#6B46C1' }}
+                  style={{ 
+                    background: 'rgba(147, 51, 234, 0.2)', 
+                    color: '#E879F9',
+                    border: '1px solid rgba(147, 51, 234, 0.3)'
+                  }}
                 >
                   {industry.result}
                 </div>

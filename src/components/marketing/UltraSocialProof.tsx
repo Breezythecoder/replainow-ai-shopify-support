@@ -40,7 +40,7 @@ const UltraSocialProof = () => {
           <h2 className="text-5xl lg:text-6xl font-black text-ultra-black mb-6">
             Echte Händler.
             <span style={{
-              background: 'linear-gradient(135deg, #6B46C1 0%, #8B5CF6 100%)',
+              background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
@@ -75,7 +75,7 @@ const UltraSocialProof = () => {
               {/* Stars */}
               <div className="flex gap-1 mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 fill-current" style={{ color: '#6B46C1' }} viewBox="0 0 20 20">
+                  <svg key={i} className="w-5 h-5 fill-current" style={{ color: '#9333EA' }} viewBox="0 0 20 20">
                     <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                   </svg>
                 ))}
@@ -89,7 +89,7 @@ const UltraSocialProof = () => {
                 className="inline-block px-4 py-2 rounded-lg mb-6 font-bold text-sm"
                 style={{
                   background: 'rgba(107, 70, 193, 0.1)',
-                  color: '#6B46C1'
+                  color: '#9333EA'
                 }}
               >
                 {t.metric}

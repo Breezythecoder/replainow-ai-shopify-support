@@ -27,11 +27,11 @@ const UltraHowItWorks = () => {
   ];
 
   return (
-    <section className="py-32 relative overflow-hidden" style={{ background: '#F5F3FF' }}>
-      {/* Subtle Purple Mesh */}
-      <div className="absolute inset-0 opacity-30">
+    <section className="py-32 relative overflow-hidden" style={{ background: '#111218' }}>
+      {/* NEON Purple Mesh */}
+      <div className="absolute inset-0">
         <div style={{
-          background: `radial-gradient(at 50% 50%, rgba(107, 70, 193, 0.08) 0%, transparent 50%)`
+          background: `radial-gradient(at 50% 50%, rgba(147, 51, 234, 0.1) 0%, transparent 50%)`
         }}></div>
       </div>
 
@@ -42,10 +42,17 @@ const UltraHowItWorks = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl lg:text-6xl font-black text-ultra-black mb-4">
-            So einfach geht's
+          <h2 className="text-5xl lg:text-6xl font-black mb-4" style={{ color: '#FFFFFF' }}>
+            So einfach 
+            <span className="ultra-text-neon-purple" style={{
+              background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
+              backgroundClip: 'text',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              filter: 'drop-shadow(0 0 20px rgba(147, 51, 234, 0.5))'
+            }}> geht's</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-xl max-w-2xl mx-auto" style={{ color: '#94A3B8' }}>
             In 3 Schritten zu automatisiertem Support
           </p>
         </motion.div>
@@ -64,51 +71,70 @@ const UltraHowItWorks = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15 }}
               >
-                {/* Glass Card */}
+                {/* DARK GLASS CARD */}
                 <div 
-                  className="ultra-glass-card p-10 text-center group cursor-pointer"
+                  className="p-10 text-center group cursor-pointer"
                   style={{
-                    background: 'rgba(255, 255, 255, 0.8)',
-                    backdropFilter: 'blur(30px)',
+                    background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)',
+                    backdropFilter: 'blur(40px) saturate(180%)',
+                    WebkitBackdropFilter: 'blur(40px) saturate(180%)',
                     borderRadius: '24px',
-                    border: '2px solid rgba(107, 70, 193, 0.1)',
-                    boxShadow: '0 20px 60px rgba(107, 70, 193, 0.1)',
+                    border: '1px solid rgba(147, 51, 234, 0.2)',
+                    boxShadow: `
+                      0 20px 60px rgba(0, 0, 0, 0.4),
+                      0 0 40px rgba(147, 51, 234, 0.1),
+                      inset 0 1px 0 rgba(255, 255, 255, 0.05)
+                    `,
                     transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-8px)';
-                    e.currentTarget.style.boxShadow = '0 40px 100px rgba(107, 70, 193, 0.2)';
-                    e.currentTarget.style.borderColor = 'rgba(107, 70, 193, 0.3)';
+                    e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
+                    e.currentTarget.style.boxShadow = `
+                      0 40px 100px rgba(0, 0, 0, 0.5),
+                      0 0 80px rgba(147, 51, 234, 0.3),
+                      inset 0 1px 0 rgba(255, 255, 255, 0.1)
+                    `;
+                    e.currentTarget.style.borderColor = 'rgba(147, 51, 234, 0.5)';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0)';
-                    e.currentTarget.style.boxShadow = '0 20px 60px rgba(107, 70, 193, 0.1)';
-                    e.currentTarget.style.borderColor = 'rgba(107, 70, 193, 0.1)';
+                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
+                    e.currentTarget.style.boxShadow = `
+                      0 20px 60px rgba(0, 0, 0, 0.4),
+                      0 0 40px rgba(147, 51, 234, 0.1),
+                      inset 0 1px 0 rgba(255, 255, 255, 0.05)
+                    `;
+                    e.currentTarget.style.borderColor = 'rgba(147, 51, 234, 0.2)';
                   }}
                 >
-                  {/* Step Number */}
-                  <div className="text-6xl font-black mb-6" style={{ color: '#6B46C1', opacity: 0.2 }}>
+                  {/* Step Number - NEON */}
+                  <div className="text-6xl font-black mb-6" style={{ color: '#9333EA', opacity: 0.3 }}>
                     {step.number}
                   </div>
 
-                  {/* Icon */}
+                  {/* Icon - NEON GLOW */}
                   <div 
                     className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center"
                     style={{
-                      background: 'linear-gradient(135deg, #6B46C1 0%, #8B5CF6 100%)'
+                      background: 'linear-gradient(135deg, #9333EA 0%, #C084FC 100%)',
+                      boxShadow: '0 0 40px rgba(147, 51, 234, 0.5)'
                     }}
                   >
                     <Icon className="w-10 h-10 text-white" />
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold text-ultra-black mb-3">
+                  <h3 className="text-2xl font-bold mb-3" style={{ color: '#FFFFFF' }}>
                     {step.title}
                   </h3>
-                  <p className="text-lg font-semibold mb-2" style={{ color: '#6B46C1' }}>
+                  <p className="text-lg font-semibold mb-2 ultra-text-neon-purple" style={{
+                    background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
+                    backgroundClip: 'text',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent'
+                  }}>
                     {step.description}
                   </p>
-                  <p className="text-gray-600">
+                  <p style={{ color: '#94A3B8' }}>
                     {step.detail}
                   </p>
                 </div>

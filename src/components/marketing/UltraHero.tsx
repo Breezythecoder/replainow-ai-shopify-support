@@ -13,83 +13,91 @@ const UltraHero = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-white">
-      {/* ULTRA Purple Mesh Background */}
-      <div className="absolute inset-0 opacity-40">
+    <section 
+      className="relative min-h-screen flex items-center overflow-hidden"
+      style={{
+        background: 'linear-gradient(135deg, #0A0B0D 0%, #111218 100%)'
+      }}
+    >
+      {/* NEON Purple-Cyan Mesh Background */}
+      <div className="absolute inset-0 z-0">
         <div 
           className="absolute inset-0"
           style={{
             background: `
-              radial-gradient(at 0% 0%, rgba(107, 70, 193, 0.15) 0%, transparent 50%),
-              radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-              radial-gradient(at 100% 100%, rgba(167, 139, 250, 0.15) 0%, transparent 50%),
-              radial-gradient(at 0% 100%, rgba(107, 70, 193, 0.15) 0%, transparent 50%)
+              radial-gradient(circle at 20% 50%, rgba(147, 51, 234, 0.15), transparent 50%),
+              radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.1), transparent 50%)
             `
           }}
         />
       </div>
 
-      {/* Floating Purple Orbs */}
-      <div className="absolute top-20 left-20 w-96 h-96 bg-purple-400/20 rounded-full blur-3xl animate-pulse" style={{ animation: 'float-orb 20s ease-in-out infinite' }}></div>
-      <div className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-purple-300/15 rounded-full blur-3xl" style={{ animation: 'float-orb 25s ease-in-out infinite', animationDelay: '5s' }}></div>
+      {/* Floating NEON Orbs */}
+      <div className="ultra-orb ultra-orb-purple-neon top-20 left-20"></div>
+      <div className="ultra-orb ultra-orb-cyan bottom-20 right-20" style={{ animationDelay: '5s' }}></div>
+      <div className="ultra-orb ultra-orb-purple-glow top-1/2 right-1/4" style={{ animationDelay: '10s', width: '400px', height: '400px' }}></div>
       
       <div className="container mx-auto px-6 py-24 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Main Content - Centered */}
           <div className="text-center mb-16">
-            {/* Badge */}
+            {/* NEON Badge */}
             <motion.div
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 }}
               style={{
-                background: 'rgba(107, 70, 193, 0.1)',
-                border: '1px solid rgba(107, 70, 193, 0.2)'
+                background: 'rgba(147, 51, 234, 0.15)',
+                border: '1px solid rgba(147, 51, 234, 0.3)',
+                boxShadow: '0 0 30px rgba(147, 51, 234, 0.2)'
               }}
             >
-              <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-              <span className="text-purple-900 font-semibold text-sm">
+              <div className="w-2 h-2 rounded-full pulse-glow-purple" style={{ background: '#9333EA' }}></div>
+              <span className="ultra-text-neon-purple font-bold text-sm">
                 #1 AI Helpdesk für Shopify
               </span>
             </motion.div>
 
-            {/* ULTRA Bold Headline */}
+            {/* MASSIVE NEON Headline */}
             <motion.h1
-              className="text-6xl lg:text-7xl xl:text-8xl font-black leading-[1.1] tracking-tight mb-8"
+              className="font-black leading-[1.05] tracking-tight mb-8"
+              style={{ fontSize: 'clamp(56px, 8vw, 96px)' }}
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
             >
-              <span className="text-ultra-black">
+              <span style={{ color: '#FFFFFF' }}>
                 Verwandle Besucher in
               </span>
               <br />
               <span
                 className="ultra-text-shimmer inline-block"
                 style={{
-                  background: 'linear-gradient(90deg, #6B46C1 0%, #A78BFA 50%, #6B46C1 100%)',
+                  background: 'linear-gradient(90deg, #9333EA 0%, #E879F9 50%, #9333EA 100%)',
                   backgroundSize: '200% auto',
                   backgroundClip: 'text',
                   WebkitBackgroundClip: 'text',
                   WebkitTextFillColor: 'transparent',
-                  animation: 'shimmer 3s linear infinite'
+                  animation: 'shimmer 3s linear infinite',
+                  filter: 'drop-shadow(0 0 40px rgba(147, 51, 234, 0.5))'
                 }}
               >
                 Käufer.
               </span>{" "}
-              <span className="text-ultra-black">Sofort.</span>
+              <span style={{ color: '#FFFFFF' }}>Sofort.</span>
             </motion.h1>
 
-            {/* Subheadline */}
+            {/* Subheadline - GLOW */}
             <motion.p
-              className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-12"
+              className="text-2xl max-w-4xl mx-auto leading-relaxed mb-12"
+              style={{ color: '#94A3B8' }}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
             >
               Die intelligenteste AI für Shopify. Antwortet in &lt;1 Sekunde. 
-              <span className="font-bold text-ultra-black"> 24/7. In 95+ Sprachen.</span>
+              <span className="font-bold" style={{ color: '#E2E8F0' }}> 24/7. In 95+ Sprachen.</span>
             </motion.p>
 
             {/* CTA - Single, Bold */}
@@ -108,7 +116,7 @@ const UltraHero = () => {
               </a>
             </motion.div>
 
-            {/* Trust Line - Minimal */}
+            {/* Trust Line - NEON */}
             <motion.div
               className="flex flex-wrap items-center justify-center gap-8 text-sm"
               initial={{ opacity: 0 }}
@@ -118,25 +126,25 @@ const UltraHero = () => {
               <div className="flex items-center gap-2">
                 <div className="flex">
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 text-purple-500 fill-current" viewBox="0 0 20 20">
+                    <svg key={i} className="w-5 h-5 fill-current" style={{ color: '#9333EA' }} viewBox="0 0 20 20">
                       <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                     </svg>
                   ))}
                 </div>
-                <span className="font-bold text-ultra-black">4.9/5</span>
-                <span className="text-gray-600">Shopify Rating</span>
+                <span className="font-bold" style={{ color: '#FFFFFF' }}>4.9/5</span>
+                <span style={{ color: '#94A3B8' }}>Shopify Rating</span>
               </div>
-              <span className="text-gray-400">•</span>
-              <span className="text-gray-700 font-semibold">{STORE_COUNT}+ Händler weltweit</span>
-              <span className="text-gray-400">•</span>
+              <span style={{ color: '#475569' }}>•</span>
+              <span className="font-semibold" style={{ color: '#E2E8F0' }}>{STORE_COUNT}+ Händler weltweit</span>
+              <span style={{ color: '#475569' }}>•</span>
               <div className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                <span className="text-gray-700">DSGVO-konform</span>
+                <div className="w-2 h-2 rounded-full pulse-glow-cyan" style={{ background: '#06B6D4' }}></div>
+                <span style={{ color: '#E2E8F0' }}>DSGVO-konform</span>
               </div>
             </motion.div>
           </div>
 
-          {/* Dashboard Visual - Glass Card */}
+          {/* Dashboard Visual - DARK GLASS NEON */}
           <motion.div
             className="max-w-5xl mx-auto"
             initial={{ opacity: 0, y: 40 }}
@@ -144,66 +152,84 @@ const UltraHero = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
           >
             <div className="relative">
-              {/* Purple Glow Behind */}
+              {/* NEON GLOW Behind - Multi-Layer */}
               <div 
                 className="absolute inset-0 rounded-3xl blur-3xl"
                 style={{
-                  background: 'radial-gradient(circle, rgba(107, 70, 193, 0.2) 0%, transparent 70%)'
+                  background: `
+                    radial-gradient(circle at 30% 30%, rgba(147, 51, 234, 0.3) 0%, transparent 50%),
+                    radial-gradient(circle at 70% 70%, rgba(6, 182, 212, 0.2) 0%, transparent 50%)
+                  `
                 }}
               ></div>
 
-              {/* Glass Card Container */}
+              {/* DARK GLASS Container */}
               <div 
-                className="relative rounded-3xl p-4"
+                className="relative rounded-3xl p-2"
                 style={{
-                  background: 'rgba(255, 255, 255, 0.8)',
-                  backdropFilter: 'blur(20px)',
-                  border: '2px solid rgba(107, 70, 193, 0.15)',
-                  boxShadow: '0 40px 100px rgba(107, 70, 193, 0.2)'
+                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)',
+                  backdropFilter: 'blur(40px) saturate(180%)',
+                  WebkitBackdropFilter: 'blur(40px) saturate(180%)',
+                  border: '2px solid rgba(147, 51, 234, 0.3)',
+                  boxShadow: `
+                    0 40px 120px rgba(147, 51, 234, 0.3),
+                    0 0 80px rgba(6, 182, 212, 0.2),
+                    inset 0 1px 0 rgba(255, 255, 255, 0.05)
+                  `
                 }}
               >
                 <img
                   src="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
                   alt="ReplAInow AI Dashboard"
                   className="w-full h-auto rounded-2xl"
+                  style={{
+                    border: '1px solid rgba(255, 255, 255, 0.05)'
+                  }}
                   loading="eager"
                 />
 
-                {/* Floating Stats - Purple Glass */}
+                {/* NEON Floating Badge: 91% - Purple */}
                 <motion.div
                   className="absolute -bottom-6 -left-6 px-8 py-4 rounded-2xl"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.2 }}
                   style={{
-                    background: 'rgba(107, 70, 193, 0.95)',
+                    background: 'linear-gradient(135deg, #9333EA 0%, #7C3AED 100%)',
                     backdropFilter: 'blur(20px)',
-                    boxShadow: '0 20px 60px rgba(107, 70, 193, 0.4)'
+                    boxShadow: `
+                      0 20px 60px rgba(147, 51, 234, 0.5),
+                      0 0 40px rgba(147, 51, 234, 0.4)
+                    `
                   }}
                 >
                   <div className="text-4xl font-black text-white mb-1">91%</div>
-                  <div className="text-sm text-purple-100 font-medium">Automatisiert</div>
+                  <div className="text-sm font-medium" style={{ color: '#E9D5FF' }}>Automatisiert</div>
                 </motion.div>
 
+                {/* NEON Floating Badge: <1s - Cyan */}
                 <motion.div
                   className="absolute -top-6 -right-6 px-8 py-4 rounded-2xl"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 1.4 }}
                   style={{
-                    background: 'rgba(16, 185, 129, 0.95)',
+                    background: 'linear-gradient(135deg, #06B6D4 0%, #0891B2 100%)',
                     backdropFilter: 'blur(20px)',
-                    boxShadow: '0 20px 60px rgba(16, 185, 129, 0.4)'
+                    boxShadow: `
+                      0 20px 60px rgba(6, 182, 212, 0.5),
+                      0 0 40px rgba(6, 182, 212, 0.4)
+                    `
                   }}
                 >
                   <div className="text-4xl font-black text-white mb-1">&lt;1s</div>
-                  <div className="text-sm text-green-50 font-medium">Antwortzeit</div>
+                  <div className="text-sm font-medium" style={{ color: '#CFFAFE' }}>Antwortzeit</div>
                 </motion.div>
               </div>
             </div>
           </motion.div>
 
-          {/* Stats Bar - Purple Minimal */}
+          {/* Stats Bar - DARK GLASS NEON */}
           <motion.div
             className="mt-24 max-w-5xl mx-auto"
             initial={{ opacity: 0, y: 30 }}
@@ -211,73 +237,40 @@ const UltraHero = () => {
             transition={{ delay: 0.8 }}
           >
             <div 
-              className="grid grid-cols-4 gap-8 rounded-2xl p-8"
+              className="grid grid-cols-2 md:grid-cols-4 gap-8 rounded-2xl p-8"
               style={{
-                background: 'rgba(107, 70, 193, 0.05)',
-                border: '1px solid rgba(107, 70, 193, 0.1)'
+                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)',
+                backdropFilter: 'blur(40px) saturate(180%)',
+                WebkitBackdropFilter: 'blur(40px) saturate(180%)',
+                border: '1px solid rgba(147, 51, 234, 0.2)',
+                boxShadow: `
+                  0 20px 60px rgba(0, 0, 0, 0.4),
+                  0 0 40px rgba(147, 51, 234, 0.1),
+                  inset 0 1px 0 rgba(255, 255, 255, 0.05)
+                `
               }}
             >
               <div className="text-center">
-                <div className="text-5xl font-black text-purple-600 mb-2">{STORE_COUNT}+</div>
-                <div className="text-sm text-gray-600 font-medium">Stores</div>
+                <div className="text-5xl font-black mb-2 ultra-text-neon-purple">{STORE_COUNT}+</div>
+                <div className="text-sm font-medium" style={{ color: '#94A3B8' }}>Stores</div>
               </div>
-              <div className="text-center border-l border-purple-200">
-                <div className="text-5xl font-black text-purple-600 mb-2">95+</div>
-                <div className="text-sm text-gray-600 font-medium">Sprachen</div>
+              <div className="text-center md:border-l" style={{ borderColor: 'rgba(147, 51, 234, 0.2)' }}>
+                <div className="text-5xl font-black mb-2 ultra-text-cyan">95+</div>
+                <div className="text-sm font-medium" style={{ color: '#94A3B8' }}>Sprachen</div>
               </div>
-              <div className="text-center border-l border-purple-200">
-                <div className="text-5xl font-black text-purple-600 mb-2">24/7</div>
-                <div className="text-sm text-gray-600 font-medium">Support</div>
+              <div className="text-center md:border-l" style={{ borderColor: 'rgba(147, 51, 234, 0.2)' }}>
+                <div className="text-5xl font-black mb-2 ultra-text-neon-purple">24/7</div>
+                <div className="text-sm font-medium" style={{ color: '#94A3B8' }}>Support</div>
               </div>
-              <div className="text-center border-l border-purple-200">
-                <div className="text-5xl font-black text-purple-600 mb-2">4.9★</div>
-                <div className="text-sm text-gray-600 font-medium">Rating</div>
+              <div className="text-center md:border-l" style={{ borderColor: 'rgba(147, 51, 234, 0.2)' }}>
+                <div className="text-5xl font-black mb-2 ultra-text-fusion">4.9★</div>
+                <div className="text-sm font-medium" style={{ color: '#94A3B8' }}>Rating</div>
               </div>
             </div>
           </motion.div>
         </div>
       </div>
 
-      <style>{`
-        @keyframes float-orb {
-          0%, 100% {
-            transform: translate(0, 0) scale(1);
-          }
-          33% {
-            transform: translate(30px, -30px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-        }
-
-        @keyframes shimmer {
-          0% { background-position: -200% center; }
-          100% { background-position: 200% center; }
-        }
-
-        .ultra-btn-primary {
-          background: linear-gradient(135deg, #10B981 0%, #059669 100%);
-          padding: 20px 48px;
-          border-radius: 16px;
-          font-size: 18px;
-          font-weight: 700;
-          color: white;
-          box-shadow: 
-            0 10px 30px rgba(16, 185, 129, 0.3),
-            0 0 60px rgba(16, 185, 129, 0.2);
-          transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-          border: none;
-          cursor: pointer;
-        }
-
-        .ultra-btn-primary:hover {
-          transform: translateY(-4px) scale(1.02);
-          box-shadow: 
-            0 20px 40px rgba(16, 185, 129, 0.4),
-            0 0 80px rgba(16, 185, 129, 0.3);
-        }
-      `}</style>
     </section>
   );
 };
