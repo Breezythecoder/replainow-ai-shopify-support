@@ -4,19 +4,19 @@ import ModernHowItWorks from "@/components/marketing/ModernHowItWorks";
 import ModernProblemSolution from "@/components/marketing/ModernProblemSolution";
 import ModernFeatures from "@/components/marketing/ModernFeatures";
 import ModernSocialProof from "@/components/marketing/ModernSocialProof";
+import LiveDemo2025 from "@/components/marketing/LiveDemo2025";
 import ModernPricing from "@/components/marketing/ModernPricing";
+import Comparison2025 from "@/components/marketing/Comparison2025";
+import ROICalculator2025 from "@/components/marketing/ROICalculator2025";
+import IndustryExamples2025 from "@/components/marketing/IndustryExamples2025";
+import FAQ2025 from "@/components/marketing/FAQ2025";
+import TrustSecurity2025 from "@/components/marketing/TrustSecurity2025";
+import Contact2025 from "@/components/marketing/Contact2025";
 import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
 import Footer from "@/components/marketing/Footer";
 import SEO from "@/components/SEO";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-// OLD SECTIONS REMOVED - Will be rebuilt with new 2025 design
-// import ModernLiveDemo from "@/components/marketing/ModernLiveDemo";
-// import ModernComparison from "@/components/marketing/ModernComparison";
-// import IndustryExamples from "@/components/marketing/IndustryExamples";
-// import AIOptimizedFAQ from "@/components/seo/AIOptimizedFAQ";
-// import MailAndChat from "@/components/marketing/MailAndChat";
-// import Contact from "@/components/marketing/Contact";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
 import { softwareApplicationSchema, organizationSchema } from "@/components/seo/StructuredData";
 import MultilingualSEO from "@/components/seo/MultilingualSEO";
@@ -97,7 +97,14 @@ const Index = () => {
         <ModernProblemSolution />
         <ModernFeatures />
         <ModernSocialProof />
+        <LiveDemo2025 />
         <ModernPricing />
+        <Comparison2025 />
+        <ROICalculator2025 />
+        <IndustryExamples2025 />
+        <FAQ2025 />
+        <TrustSecurity2025 />
+        <Contact2025 />
         <ModernFinalCTA />
       </main>
       <Footer />
