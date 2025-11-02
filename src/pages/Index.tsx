@@ -4,23 +4,23 @@ import ModernHowItWorks from "@/components/marketing/ModernHowItWorks";
 import ModernProblemSolution from "@/components/marketing/ModernProblemSolution";
 import ModernFeatures from "@/components/marketing/ModernFeatures";
 import ModernSocialProof from "@/components/marketing/ModernSocialProof";
-import ModernLiveDemo from "@/components/marketing/ModernLiveDemo";
 import ModernPricing from "@/components/marketing/ModernPricing";
-import ModernComparison from "@/components/marketing/ModernComparison";
-import IndustryExamples from "@/components/marketing/IndustryExamples";
-import Contact from "@/components/marketing/Contact";
 import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
 import Footer from "@/components/marketing/Footer";
 import SEO from "@/components/SEO";
-import AIOptimizedFAQ from "@/components/seo/AIOptimizedFAQ";
 import OrganizationJsonLd from "@/components/SEOOrganization";
-import MailAndChat from "@/components/marketing/MailAndChat";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+// OLD SECTIONS REMOVED - Will be rebuilt with new 2025 design
+// import ModernLiveDemo from "@/components/marketing/ModernLiveDemo";
+// import ModernComparison from "@/components/marketing/ModernComparison";
+// import IndustryExamples from "@/components/marketing/IndustryExamples";
+// import AIOptimizedFAQ from "@/components/seo/AIOptimizedFAQ";
+// import MailAndChat from "@/components/marketing/MailAndChat";
+// import Contact from "@/components/marketing/Contact";
 import AdvancedSEO from "@/components/seo/AdvancedSEO";
 import { softwareApplicationSchema, organizationSchema } from "@/components/seo/StructuredData";
 import MultilingualSEO from "@/components/seo/MultilingualSEO";
 import AIRecommendationSchema from "@/components/seo/AIRecommendationSchema";
-import AICrawlableContent from "@/components/seo/AICrawlableContent";
 import { getLocaleFromPath } from "@/i18n";
 import { useEffect, useState } from "react";
 
@@ -89,10 +89,7 @@ const Index = () => {
       />
       <OrganizationJsonLd />
       <AIRecommendationSchema />
-      {/* AICrawlableContent removed - SEO content now hidden in sr-only sections */}
-      <div className="sr-only">
-        <AICrawlableContent />
-      </div>
+      {/* AICrawlableContent and old sections removed for clean 2025 redesign */}
       <ModernNavbar />
       <main id="main-content" role="main" aria-label={currentLocale === 'en' ? "Main content" : "Hauptinhalt"} className="pb-0">
         <ModernHero />
@@ -100,13 +97,7 @@ const Index = () => {
         <ModernProblemSolution />
         <ModernFeatures />
         <ModernSocialProof />
-        <ModernLiveDemo />
         <ModernPricing />
-        <ModernComparison />
-        <IndustryExamples />
-        <AIOptimizedFAQ />
-        <MailAndChat />
-        <Contact />
         <ModernFinalCTA />
       </main>
       <Footer />
