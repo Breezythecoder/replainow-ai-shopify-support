@@ -36,16 +36,16 @@ const UltraNavbar = () => {
       className="sticky top-0 z-50 transition-all duration-500"
       style={{
         background: isScrolled 
-          ? 'rgba(10, 11, 13, 0.6)'
-          : 'transparent',
-        backdropFilter: isScrolled ? 'blur(24px) saturate(200%)' : 'blur(12px)',
-        WebkitBackdropFilter: isScrolled ? 'blur(24px) saturate(200%)' : 'blur(12px)',
+          ? 'rgba(10, 11, 13, 0.85)'
+          : 'rgba(10, 11, 13, 0.5)',
+        backdropFilter: 'blur(24px) saturate(200%)',
+        WebkitBackdropFilter: 'blur(24px) saturate(200%)',
         borderBottom: isScrolled 
           ? '1px solid rgba(147, 51, 234, 0.2)' 
-          : '1px solid rgba(147, 51, 234, 0.0)',
+          : '1px solid rgba(147, 51, 234, 0.08)',
         boxShadow: isScrolled 
-          ? '0 8px 32px rgba(0, 0, 0, 0.3), 0 0 40px rgba(147, 51, 234, 0.1)'
-          : 'none'
+          ? '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 40px rgba(147, 51, 234, 0.15)'
+          : '0 4px 16px rgba(0, 0, 0, 0.2)'
       }}
     >
       <nav className="container mx-auto flex items-center justify-between h-20 px-6">
@@ -88,18 +88,20 @@ const UltraNavbar = () => {
               key={item.href}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href.substring(1))}
-              className="font-semibold transition-all duration-200 cursor-pointer relative group"
+              className="font-bold transition-all duration-300 cursor-pointer relative group"
               style={{ 
-                color: '#E2E8F0',
-                textShadow: '0 0 0 rgba(147, 51, 234, 0)'
+                color: '#FFFFFF',
+                textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
+                fontSize: '15px',
+                letterSpacing: '0.01em'
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.color = '#9333EA';
-                e.currentTarget.style.textShadow = '0 0 20px rgba(147, 51, 234, 0.5)';
+                e.currentTarget.style.textShadow = '0 0 20px rgba(147, 51, 234, 0.8), 0 2px 8px rgba(0, 0, 0, 0.3)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.color = '#E2E8F0';
-                e.currentTarget.style.textShadow = '0 0 0 rgba(147, 51, 234, 0)';
+                e.currentTarget.style.color = '#FFFFFF';
+                e.currentTarget.style.textShadow = '0 2px 8px rgba(0, 0, 0, 0.3)';
               }}
             >
               {item.label}
@@ -107,7 +109,7 @@ const UltraNavbar = () => {
                 className="absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
                 style={{
                   background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
-                  boxShadow: '0 0 10px rgba(147, 51, 234, 0.5)'
+                  boxShadow: '0 0 20px rgba(147, 51, 234, 0.6)'
                 }}
               ></div>
             </a>
