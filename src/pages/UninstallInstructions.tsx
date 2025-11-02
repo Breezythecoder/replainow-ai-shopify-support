@@ -1,5 +1,5 @@
-import ModernNavbar from "@/components/marketing/ModernNavbar";
-import Footer from "@/components/marketing/Footer";
+import ModernNavbar from "@/components/marketing/UltraNavbar";
+import Footer from "@/components/marketing/UltraFooter";
 import SEO from "@/components/SEO";
 
 const lastUpdated = "2025-08-11";
@@ -12,7 +12,7 @@ const UninstallInstructions = () => {
         description="How to uninstall ReplAInow from your Shopify store. Simple steps and data deletion policy with GDPR options."
         path="/uninstall"
       />
-      <ModernNavbar />
+      <UltraNavbar />
       <main>
         <section className="container mx-auto max-w-[800px] px-4 py-12 md:py-16">
           <article className="space-y-6 leading-relaxed">
@@ -50,7 +50,7 @@ const UninstallInstructions = () => {
           </article>
         </section>
       </main>
-      <Footer />
+      <UltraFooter />
     </div>
   );
 };

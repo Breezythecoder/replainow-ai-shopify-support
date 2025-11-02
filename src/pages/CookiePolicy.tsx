@@ -1,13 +1,13 @@
 import React from "react";
-import ModernNavbar from "@/components/marketing/ModernNavbar";
-import Footer from "@/components/marketing/Footer";
+import ModernNavbar from "@/components/marketing/UltraNavbar";
+import Footer from "@/components/marketing/UltraFooter";
 
 const CookiePolicy = () => {
   const lastUpdated = "September 27, 2025";
 
   return (
     <>
-      <ModernNavbar />
+      <UltraNavbar />
       <main>
         <section className="container mx-auto max-w-[800px] px-4 py-12 md:py-16">
           <article className="space-y-6 leading-relaxed">
@@ -91,7 +91,7 @@ const CookiePolicy = () => {
           </article>
         </section>
       </main>
-      <Footer />
+      <UltraFooter />
     </>
   );
 };

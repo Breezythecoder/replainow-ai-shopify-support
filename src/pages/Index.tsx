@@ -1,19 +1,19 @@
-import ModernNavbar from "@/components/marketing/ModernNavbar";
-import ModernHero from "@/components/marketing/ModernHero";
-import ModernHowItWorks from "@/components/marketing/ModernHowItWorks";
-import ModernProblemSolution from "@/components/marketing/ModernProblemSolution";
-import ModernFeatures from "@/components/marketing/ModernFeatures";
-import ModernSocialProof from "@/components/marketing/ModernSocialProof";
-import LiveDemo2025 from "@/components/marketing/LiveDemo2025";
-import ModernPricing from "@/components/marketing/ModernPricing";
-import Comparison2025 from "@/components/marketing/Comparison2025";
-import ROICalculator2025 from "@/components/marketing/ROICalculator2025";
-import IndustryExamples2025 from "@/components/marketing/IndustryExamples2025";
-import FAQ2025 from "@/components/marketing/FAQ2025";
-import TrustSecurity2025 from "@/components/marketing/TrustSecurity2025";
-import Contact2025 from "@/components/marketing/Contact2025";
-import ModernFinalCTA from "@/components/marketing/ModernFinalCTA";
-import Footer from "@/components/marketing/Footer";
+import UltraNavbar from "@/components/marketing/UltraNavbar";
+import UltraHero from "@/components/marketing/UltraHero";
+import UltraHowItWorks from "@/components/marketing/UltraHowItWorks";
+import UltraProblemSolution from "@/components/marketing/UltraProblemSolution";
+import UltraFeatures from "@/components/marketing/UltraFeatures";
+import UltraSocialProof from "@/components/marketing/UltraSocialProof";
+import UltraLiveDemo from "@/components/marketing/UltraLiveDemo";
+import UltraPricing from "@/components/marketing/UltraPricing";
+import UltraComparison from "@/components/marketing/UltraComparison";
+import UltraROICalculator from "@/components/marketing/UltraROICalculator";
+import UltraIndustryExamples from "@/components/marketing/UltraIndustryExamples";
+import UltraFAQ from "@/components/marketing/UltraFAQ";
+import UltraTrustSecurity from "@/components/marketing/UltraTrustSecurity";
+import UltraContact from "@/components/marketing/UltraContact";
+import UltraFinalCTA from "@/components/marketing/UltraFinalCTA";
+import UltraFooter from "@/components/marketing/UltraFooter";
 import SEO from "@/components/SEO";
 import OrganizationJsonLd from "@/components/SEOOrganization";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -23,9 +23,9 @@ import MultilingualSEO from "@/components/seo/MultilingualSEO";
 import AIRecommendationSchema from "@/components/seo/AIRecommendationSchema";
 import { getLocaleFromPath } from "@/i18n";
 import { useEffect, useState } from "react";
+import "../styles/ultra-design.css";
 
 const Index = () => {
-  // Auto-detect locale from URL
   const [currentLocale, setCurrentLocale] = useState<'de' | 'en' | 'fr' | 'es'>('de');
 
   useEffect(() => {
@@ -42,33 +42,14 @@ const Index = () => {
     <>
       <MultilingualSEO language={currentLocale} />
       <AdvancedSEO
-        title={currentLocale === 'en' ? "ReplAInow – AI Shopify Helpdesk | Automated Customer Support" : "ReplAInow – AI Shopify Helpdesk | Automatisiere Support mit AI"}
-        description={currentLocale === 'en'
-          ? "ReplAInow automates Shopify customer support with GPT-4.1: 3-second responses, 32+ languages, GDPR-compliant, 75% cost savings. Try free now!"
-          : "Automatisiere deinen Shopify Customer Support mit GPT-4 AI. ✅ 3 Sek Antwortzeit ✅ 32+ Sprachen ✅ DSGVO-konform ✅ 75% günstiger als Gorgias & Zendesk. Jetzt 14 Tage kostenlos testen!"
-        }
-        keywords={currentLocale === 'en' ? [
+        title="ReplAInow – Die #1 AI Helpdesk für Shopify | Ultra Premium"
+        description="Verwandle Besucher in Käufer. Sofort. ReplAInow AI antwortet in <1 Sekunde, 95+ Sprachen, 91% automatisiert. Die intelligenteste AI-Helpdesk für Shopify."
+        keywords={[
           "AI Shopify Helpdesk",
           "Shopify AI Support",
-          "Automated Shopify Support",
-          "GPT-4 Shopify Integration",
-          "Shopify Customer Service",
-          "AI Customer Support",
-          "Shopify Help Desk",
-          "Automated Responses",
-          "Shopify Support Chat",
-          "AI Email Support"
-        ] : [
-          "AI Shopify Helpdesk",
-          "Shopify AI Support",
-          "AI Customer Support Shopify",
-          "Automatisierter Shopify Support",
-          "GPT-4 Shopify Integration",
-          "Shopify Support Automatisierung",
-          "AI Chatbot Shopify",
-          "Gorgias Alternative",
-          "Intercom Alternative",
-          "Zendesk Alternative"
+          "AI Customer Service",
+          "ReplAInow",
+          "Shopify Automation"
         ]}
         canonicalUrl={`https://replainow.com/${currentLocale === 'en' ? 'en' : ''}`}
         locale={currentLocale === 'en' ? 'en_US' : 'de_DE'}
@@ -80,37 +61,35 @@ const Index = () => {
         }}
       />
       <SEO
-        title={currentLocale === 'en' ? "ReplAInow – AI Shopify Helpdesk | Automated Customer Support" : "ReplAInow – Shopify Support automatisieren mit AI"}
-        description={currentLocale === 'en'
-          ? "ReplAInow automates Shopify customer support with GPT-4.1: 3-second responses, 32+ languages, GDPR-compliant, 75% cost savings. Try free now!"
-          : "Automatisiere deinen Shopify Customer Support mit GPT-4 AI. ✅ 3 Sek Antwortzeit ✅ 32+ Sprachen ✅ DSGVO-konform ✅ 75% günstiger als Gorgias & Zendesk. Jetzt 14 Tage kostenlos testen!"
-        }
+        title="ReplAInow – Die #1 AI Helpdesk für Shopify"
+        description="Verwandle Besucher in Käufer. Sofort. 91% automatisiert, <1s Antwortzeit, 95+ Sprachen."
         image="/assets/193e41bc-af60-4d70-947d-659804d66b83.png"
       />
       <OrganizationJsonLd />
       <AIRecommendationSchema />
-      {/* AICrawlableContent and old sections removed for clean 2025 redesign */}
-      <ModernNavbar />
-      <main id="main-content" role="main" aria-label={currentLocale === 'en' ? "Main content" : "Hauptinhalt"} className="pb-0">
-        <ModernHero />
-        <ModernHowItWorks />
-        <ModernProblemSolution />
-        <ModernFeatures />
-        <ModernSocialProof />
-        <LiveDemo2025 />
-        <ModernPricing />
-        <Comparison2025 />
-        <ROICalculator2025 />
-        <IndustryExamples2025 />
-        <FAQ2025 />
-        <TrustSecurity2025 />
-        <Contact2025 />
-        <ModernFinalCTA />
+      
+      <UltraNavbar />
+      <main id="main-content" role="main" className="pb-0">
+        <UltraHero />
+        <UltraHowItWorks />
+        <UltraProblemSolution />
+        <UltraFeatures />
+        <UltraSocialProof />
+        <UltraLiveDemo />
+        <UltraPricing />
+        <UltraComparison />
+        <UltraROICalculator />
+        <UltraIndustryExamples />
+        <UltraFAQ />
+        <UltraTrustSecurity />
+        <UltraContact />
+        <UltraFinalCTA />
       </main>
-      <Footer />
+      <UltraFooter />
       <LanguageSwitcher />
     </>
   );
 };
 
 export default Index;
+
