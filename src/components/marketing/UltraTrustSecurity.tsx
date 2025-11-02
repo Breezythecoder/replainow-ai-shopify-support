@@ -10,7 +10,7 @@ const UltraTrustSecurity = () => {
   ];
 
   return (
-    <section className="py-20" style={{ background: '#111218' }}>
+    <section className="py-16" style={{ background: '#FFFFFF' }}>
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {badges.map((badge, i) => {
@@ -18,24 +18,19 @@ const UltraTrustSecurity = () => {
             return (
               <motion.div
                 key={i}
-                className="text-center p-6 rounded-2xl"
+                className="text-center p-6 rounded-xl"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)',
-                  backdropFilter: 'blur(40px) saturate(180%)',
-                  WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-                  border: '1px solid rgba(147, 51, 234, 0.2)',
-                  boxShadow: `
-                    0 10px 30px rgba(0, 0, 0, 0.3),
-                    0 0 20px rgba(147, 51, 234, 0.1)
-                  `
+                  background: '#F9FAFB',
+                  border: '1px solid #E5E7EB',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)'
                 }}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
               >
-                <Icon className="w-8 h-8 mx-auto mb-3" style={{ color: '#9333EA' }} />
-                <div className="font-bold text-sm" style={{ color: '#E2E8F0' }}>{badge.title}</div>
+                <Icon className="w-8 h-8 mx-auto mb-3" style={{ color: '#8B5CF6' }} />
+                <div className="font-semibold text-sm" style={{ color: '#111827' }}>{badge.title}</div>
               </motion.div>
             );
           })}

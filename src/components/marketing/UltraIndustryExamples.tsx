@@ -10,7 +10,7 @@ const UltraIndustryExamples = () => {
   ];
 
   return (
-    <section className="py-32" style={{ background: '#111218' }}>
+    <section className="py-24" style={{ background: '#F9FAFB' }}>
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -18,13 +18,12 @@ const UltraIndustryExamples = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl lg:text-6xl font-black mb-6" style={{ color: '#FFFFFF' }}>
-            Perfekt für <span className="ultra-text-neon-purple" style={{
-              background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ color: '#111827' }}>
+            Perfekt für <span style={{
+              background: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              filter: 'drop-shadow(0 0 20px rgba(147, 51, 234, 0.5))'
+              WebkitTextFillColor: 'transparent'
             }}>deine Branche</span>
           </h2>
         </motion.div>
@@ -35,17 +34,11 @@ const UltraIndustryExamples = () => {
             return (
               <motion.div
                 key={i}
-                className="rounded-2xl p-8 text-center"
+                className="rounded-xl p-8 text-center"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)',
-                  backdropFilter: 'blur(40px) saturate(180%)',
-                  WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-                  border: '1px solid rgba(147, 51, 234, 0.2)',
-                  boxShadow: `
-                    0 20px 60px rgba(0, 0, 0, 0.4),
-                    0 0 40px rgba(147, 51, 234, 0.1),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.05)
-                  `,
+                  background: '#FFFFFF',
+                  border: '1px solid #E5E7EB',
+                  boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
                   transition: 'all 0.3s ease'
                 }}
                 initial={{ opacity: 0, y: 20 }}
@@ -53,39 +46,31 @@ const UltraIndustryExamples = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translateY(-8px)';
-                  e.currentTarget.style.boxShadow = `
-                    0 40px 100px rgba(0, 0, 0, 0.5),
-                    0 0 80px rgba(147, 51, 234, 0.3)
-                  `;
-                  e.currentTarget.style.borderColor = 'rgba(147, 51, 234, 0.5)';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                  e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.08)';
+                  e.currentTarget.style.borderColor = '#8B5CF6';
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = `
-                    0 20px 60px rgba(0, 0, 0, 0.4),
-                    0 0 40px rgba(147, 51, 234, 0.1),
-                    inset 0 1px 0 rgba(255, 255, 255, 0.05)
-                  `;
-                  e.currentTarget.style.borderColor = 'rgba(147, 51, 234, 0.2)';
+                  e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
+                  e.currentTarget.style.borderColor = '#E5E7EB';
                 }}
               >
                 <div 
-                  className="w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4"
+                  className="w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4"
                   style={{ 
-                    background: 'linear-gradient(135deg, #9333EA 0%, #C084FC 100%)',
-                    boxShadow: '0 0 40px rgba(147, 51, 234, 0.5)'
+                    background: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)'
                   }}
                 >
-                  <Icon className="w-8 h-8 text-white" />
+                  <Icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-3" style={{ color: '#FFFFFF' }}>{industry.title}</h3>
+                <h3 className="text-lg font-bold mb-3" style={{ color: '#111827' }}>{industry.title}</h3>
                 <div 
-                  className="px-4 py-2 rounded-lg font-bold text-sm"
+                  className="px-4 py-2 rounded-lg font-semibold text-sm"
                   style={{ 
-                    background: 'rgba(147, 51, 234, 0.2)', 
-                    color: '#E879F9',
-                    border: '1px solid rgba(147, 51, 234, 0.3)'
+                    background: '#F5F3FF', 
+                    color: '#8B5CF6',
+                    border: '1px solid #E5E7EB'
                   }}
                 >
                   {industry.result}

@@ -15,7 +15,7 @@ const UltraFAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-32 bg-white">
+    <section id="faq" className="py-24" style={{ background: '#FFFFFF' }}>
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -23,7 +23,7 @@ const UltraFAQ = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl lg:text-6xl font-black text-ultra-black mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ color: '#111827' }}>
             Häufige Fragen
           </h2>
         </motion.div>
@@ -32,11 +32,11 @@ const UltraFAQ = () => {
           {faqs.map((faq, i) => (
             <motion.div
               key={i}
-              className="rounded-2xl overflow-hidden"
+              className="rounded-xl overflow-hidden"
               style={{
-                background: 'white',
-                border: '2px solid rgba(107, 70, 193, 0.1)',
-                boxShadow: '0 4px 12px rgba(0, 0, 0, 0.05)'
+                background: '#F9FAFB',
+                border: '1px solid #E5E7EB',
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)'
               }}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -45,19 +45,28 @@ const UltraFAQ = () => {
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full px-8 py-6 flex items-center justify-between text-left hover:bg-gray-50 transition-colors"
+                className="w-full px-8 py-6 flex items-center justify-between text-left transition-colors"
+                style={{
+                  background: openIndex === i ? '#FFFFFF' : 'transparent'
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = '#FFFFFF';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = openIndex === i ? '#FFFFFF' : 'transparent';
+                }}
               >
-                <h3 className="text-lg font-bold text-ultra-black pr-4">{faq.q}</h3>
+                <h3 className="text-base font-bold pr-4" style={{ color: '#111827' }}>{faq.q}</h3>
                 <ChevronDown 
-                  className={`w-6 h-6 flex-shrink-0 transition-transform ${
+                  className={`w-5 h-5 flex-shrink-0 transition-transform ${
                     openIndex === i ? 'rotate-180' : ''
                   }`}
-                  style={{ color: '#9333EA' }}
+                  style={{ color: '#8B5CF6' }}
                 />
               </button>
               {openIndex === i && (
-                <div className="px-8 pb-6">
-                  <p className="text-gray-600 leading-relaxed">{faq.a}</p>
+                <div className="px-8 pb-6 bg-white">
+                  <p className="leading-relaxed" style={{ color: '#6B7280' }}>{faq.a}</p>
                 </div>
               )}
             </motion.div>

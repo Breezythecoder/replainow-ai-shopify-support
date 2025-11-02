@@ -26,25 +26,24 @@ const UltraPricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-32" style={{ background: '#111218' }}>
+    <section id="pricing" className="py-24" style={{ background: '#F9FAFB' }}>
       <div className="container mx-auto px-6">
         <motion.div
-          className="text-center mb-20"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl lg:text-6xl font-black mb-6" style={{ color: '#FFFFFF' }}>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ color: '#111827' }}>
             Transparente 
-            <span className="ultra-text-neon-purple" style={{
-              background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
+            <span style={{
+              background: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              filter: 'drop-shadow(0 0 20px rgba(147, 51, 234, 0.5))'
+              WebkitTextFillColor: 'transparent'
             }}> Preise</span>
           </h2>
-          <p className="text-xl" style={{ color: '#94A3B8' }}>
+          <p className="text-lg" style={{ color: '#6B7280' }}>
             7 Tage kostenlos • Keine Kreditkarte • Jederzeit kündbar
           </p>
         </motion.div>
@@ -53,30 +52,18 @@ const UltraPricing = () => {
           {tiers.map((tier, index) => (
             <motion.div
               key={index}
-              className="rounded-3xl p-10"
+              className="rounded-2xl p-10"
               style={{
-                background: tier.popular 
-                  ? 'linear-gradient(135deg, rgba(147, 51, 234, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%)'
-                  : 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)',
-                backdropFilter: 'blur(40px) saturate(180%)',
-                WebkitBackdropFilter: 'blur(40px) saturate(180%)',
+                background: '#FFFFFF',
                 border: tier.popular 
-                  ? '2px solid #9333EA'
-                  : '1px solid rgba(147, 51, 234, 0.2)',
+                  ? '2px solid #8B5CF6'
+                  : '1px solid #E5E7EB',
                 boxShadow: tier.popular
-                  ? `
-                      0 40px 120px rgba(147, 51, 234, 0.4),
-                      0 0 80px rgba(147, 51, 234, 0.3),
-                      inset 0 1px 0 rgba(255, 255, 255, 0.1)
-                    `
-                  : `
-                      0 20px 60px rgba(0, 0, 0, 0.4),
-                      0 0 40px rgba(147, 51, 234, 0.1),
-                      inset 0 1px 0 rgba(255, 255, 255, 0.05)
-                    `,
+                  ? '0 8px 24px rgba(139, 92, 246, 0.15)'
+                  : '0 2px 8px rgba(0, 0, 0, 0.04)',
                 transform: tier.popular ? 'scale(1.05)' : 'scale(1)',
                 position: 'relative',
-                transition: 'all 0.4s ease'
+                transition: 'all 0.3s ease'
               }}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -86,11 +73,11 @@ const UltraPricing = () => {
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span 
-                    className="px-6 py-2 rounded-full font-bold text-sm"
+                    className="px-6 py-2 rounded-full font-semibold text-sm"
                     style={{
-                      background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
+                      background: '#8B5CF6',
                       color: 'white',
-                      boxShadow: '0 0 30px rgba(147, 51, 234, 0.6)'
+                      boxShadow: '0 4px 12px rgba(139, 92, 246, 0.3)'
                     }}
                   >
                     ⭐ Beliebteste
@@ -98,23 +85,23 @@ const UltraPricing = () => {
                 </div>
               )}
 
-              <h3 className="text-2xl font-bold mb-4" style={{ color: '#FFFFFF' }}>
+              <h3 className="text-xl font-bold mb-4" style={{ color: '#111827' }}>
                 {tier.name}
               </h3>
-              <div className="text-6xl font-black mb-8" style={{ 
-                color: tier.popular ? '#FFFFFF' : '#E2E8F0'
+              <div className="text-5xl font-black mb-8" style={{ 
+                color: '#111827'
               }}>
                 {tier.price}
-                {tier.price !== "Custom" && <span className="text-2xl font-medium">/mo</span>}
+                {tier.price !== "Custom" && <span className="text-xl font-medium">/mo</span>}
               </div>
 
               <ul className="space-y-4 mb-10">
                 {tier.features.map((feature, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <Check className="w-6 h-6 flex-shrink-0" style={{
-                      color: tier.popular ? '#10B981' : '#9333EA'
+                    <Check className="w-5 h-5 flex-shrink-0" style={{
+                      color: '#8B5CF6'
                     }} />
-                    <span style={{ color: '#94A3B8' }}>
+                    <span style={{ color: '#6B7280' }}>
                       {feature}
                     </span>
                   </li>

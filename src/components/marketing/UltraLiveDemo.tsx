@@ -22,10 +22,7 @@ const UltraLiveDemo = () => {
   }, [isPlaying]);
 
   return (
-    <section id="live-demo" className="py-32 relative overflow-hidden" style={{ background: '#111218' }}>
-      {/* CYAN GLOW Orb */}
-      <div className="ultra-orb ultra-orb-cyan top-20 left-1/4"></div>
-
+    <section id="live-demo" className="py-24 relative overflow-hidden" style={{ background: '#F5F3FF' }}>
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-16"
@@ -33,45 +30,38 @@ const UltraLiveDemo = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl lg:text-6xl font-black mb-6" style={{ color: '#FFFFFF' }}>
-            Sieh <span className="ultra-text-cyan" style={{
-              background: 'linear-gradient(135deg, #06B6D4 0%, #67E8F9 100%)',
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ color: '#111827' }}>
+            Sieh <span style={{
+              background: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              filter: 'drop-shadow(0 0 20px rgba(6, 182, 212, 0.5))'
+              WebkitTextFillColor: 'transparent'
             }}>AI</span> in Aktion
           </h2>
         </motion.div>
 
         <motion.div
-          className="max-w-3xl mx-auto rounded-3xl overflow-hidden"
+          className="max-w-3xl mx-auto rounded-2xl overflow-hidden"
           style={{
-            background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)',
-            backdropFilter: 'blur(40px) saturate(180%)',
-            WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-            border: '2px solid rgba(6, 182, 212, 0.3)',
-            boxShadow: `
-              0 40px 120px rgba(0, 0, 0, 0.5),
-              0 0 80px rgba(6, 182, 212, 0.3),
-              inset 0 1px 0 rgba(255, 255, 255, 0.05)
-            `
+            background: '#FFFFFF',
+            border: '1px solid #E5E7EB',
+            boxShadow: '0 8px 24px rgba(0, 0, 0, 0.08)'
           }}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          {/* Header - CYAN GRADIENT */}
+          {/* Header - Clean Purple */}
           <div 
             className="p-4 flex items-center justify-between"
             style={{
-              background: 'linear-gradient(135deg, #06B6D4 0%, #22D3EE 100%)',
+              background: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
               borderBottom: '1px solid rgba(255, 255, 255, 0.2)'
             }}
           >
             <div className="flex items-center gap-3">
-              <div className="w-3 h-3 rounded-full pulse-glow-cyan" style={{ background: '#10B981' }}></div>
-              <span className="text-white font-bold">ReplAInow AI - Live</span>
+              <div className="w-3 h-3 rounded-full" style={{ background: '#10B981' }}></div>
+              <span className="text-white font-semibold">ReplAInow AI - Live</span>
             </div>
             <button
               onClick={() => setIsPlaying(!isPlaying)}
@@ -81,8 +71,8 @@ const UltraLiveDemo = () => {
             </button>
           </div>
 
-          {/* Chat - DARK */}
-          <div className="p-8 space-y-4 min-h-[400px]" style={{ background: '#16171D' }}>
+          {/* Chat - Light */}
+          <div className="p-8 space-y-4 min-h-[400px]" style={{ background: '#F9FAFB' }}>
             {messages.slice(0, currentStep + 1).map((msg, i) => (
               <motion.div
                 key={i}
@@ -94,17 +84,15 @@ const UltraLiveDemo = () => {
                   className={`max-w-[80%] px-6 py-4 rounded-2xl`}
                   style={{
                     background: msg.type === 'ai'
-                      ? 'linear-gradient(135deg, #06B6D4 0%, #22D3EE 100%)'
-                      : 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)',
-                    backdropFilter: msg.type === 'customer' ? 'blur(20px)' : undefined,
-                    WebkitBackdropFilter: msg.type === 'customer' ? 'blur(20px)' : undefined,
-                    border: msg.type === 'customer' ? '1px solid rgba(147, 51, 234, 0.2)' : 'none',
-                    color: msg.type === 'ai' ? '#FFFFFF' : '#E2E8F0',
-                    boxShadow: msg.type === 'ai' ? '0 0 30px rgba(6, 182, 212, 0.3)' : undefined
+                      ? 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)'
+                      : '#FFFFFF',
+                    border: msg.type === 'customer' ? '1px solid #E5E7EB' : 'none',
+                    color: msg.type === 'ai' ? '#FFFFFF' : '#111827',
+                    boxShadow: msg.type === 'customer' ? '0 2px 8px rgba(0, 0, 0, 0.04)' : undefined
                   }}
                 >
                   {msg.type === 'ai' && (
-                    <div className="text-xs font-semibold mb-1" style={{ color: '#CFFAFE' }}>AI • &lt;1s</div>
+                    <div className="text-xs font-semibold mb-1" style={{ color: '#EDE9FE' }}>AI • &lt;1s</div>
                   )}
                   <p>{msg.text}</p>
                 </div>

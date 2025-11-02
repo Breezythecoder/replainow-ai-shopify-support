@@ -11,7 +11,7 @@ const UltraROICalculator = () => {
   const roi = Math.round((additionalRevenue / 49) * 100);
 
   return (
-    <section className="py-32" style={{ background: '#111218' }}>
+    <section className="py-24" style={{ background: '#FFFFFF' }}>
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -19,33 +19,27 @@ const UltraROICalculator = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl lg:text-6xl font-black mb-6" style={{ color: '#FFFFFF' }}>
-            Dein <span className="ultra-text-neon-purple" style={{
-              background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ color: '#111827' }}>
+            Dein <span style={{
+              background: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              filter: 'drop-shadow(0 0 20px rgba(147, 51, 234, 0.5))'
+              WebkitTextFillColor: 'transparent'
             }}>ROI</span>
           </h2>
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="rounded-3xl overflow-hidden" style={{
-            background: 'linear-gradient(135deg, rgba(147, 51, 234, 0.15) 0%, rgba(6, 182, 212, 0.1) 100%)',
-            backdropFilter: 'blur(40px) saturate(180%)',
-            WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-            border: '2px solid rgba(147, 51, 234, 0.3)',
-            boxShadow: `
-              0 40px 120px rgba(147, 51, 234, 0.4),
-              0 0 80px rgba(147, 51, 234, 0.3)
-            `
+          <div className="rounded-2xl overflow-hidden" style={{
+            background: '#F9FAFB',
+            border: '1px solid #E5E7EB',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.06)'
           }}>
             <div className="p-12">
               {/* Sliders */}
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 <div>
-                  <label className="block text-white font-semibold mb-4">Besucher/Monat</label>
+                  <label className="block font-semibold mb-4" style={{ color: '#111827' }}>Besucher/Monat</label>
                   <input
                     type="range"
                     min="1000"
@@ -55,10 +49,10 @@ const UltraROICalculator = () => {
                     onChange={(e) => setVisitors(Number(e.target.value))}
                     className="w-full"
                   />
-                  <div className="text-4xl font-black text-white mt-4">{visitors.toLocaleString('de-DE')}</div>
+                  <div className="text-4xl font-black mt-4" style={{ color: '#111827' }}>{visitors.toLocaleString('de-DE')}</div>
                 </div>
                 <div>
-                  <label className="block text-white font-semibold mb-4">Ø Bestellwert</label>
+                  <label className="block font-semibold mb-4" style={{ color: '#111827' }}>Ø Bestellwert</label>
                   <input
                     type="range"
                     min="25"
@@ -68,29 +62,27 @@ const UltraROICalculator = () => {
                     onChange={(e) => setAvgOrder(Number(e.target.value))}
                     className="w-full"
                   />
-                  <div className="text-4xl font-black text-white mt-4">€{avgOrder}</div>
+                  <div className="text-4xl font-black mt-4" style={{ color: '#111827' }}>€{avgOrder}</div>
                 </div>
               </div>
 
-              {/* Results - NEON GLASS */}
+              {/* Results - Clean */}
               <div className="grid md:grid-cols-2 gap-6">
-                <div className="text-center p-8 rounded-2xl" style={{ 
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  backdropFilter: 'blur(20px)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                  boxShadow: '0 0 30px rgba(147, 51, 234, 0.2)'
+                <div className="text-center p-8 rounded-xl" style={{ 
+                  background: '#FFFFFF',
+                  border: '2px solid #8B5CF6',
+                  boxShadow: '0 4px 12px rgba(139, 92, 246, 0.15)'
                 }}>
-                  <div className="text-5xl font-black text-white mb-2">€{additionalRevenue.toLocaleString('de-DE')}</div>
-                  <div style={{ color: '#E9D5FF' }}>Zusätzlicher Umsatz/Monat</div>
+                  <div className="text-5xl font-black mb-2" style={{ color: '#111827' }}>€{additionalRevenue.toLocaleString('de-DE')}</div>
+                  <div style={{ color: '#6B7280' }}>Zusätzlicher Umsatz/Monat</div>
                 </div>
-                <div className="text-center p-8 rounded-2xl" style={{ 
-                  background: 'rgba(255, 255, 255, 0.1)',
-                  backdropFilter: 'blur(20px)',
-                  border: '1px solid rgba(255, 255, 255, 0.2)',
-                  boxShadow: '0 0 30px rgba(6, 182, 212, 0.2)'
+                <div className="text-center p-8 rounded-xl" style={{ 
+                  background: '#FFFFFF',
+                  border: '2px solid #8B5CF6',
+                  boxShadow: '0 4px 12px rgba(139, 92, 246, 0.15)'
                 }}>
-                  <div className="text-5xl font-black text-white mb-2">{roi}%</div>
-                  <div style={{ color: '#CFFAFE' }}>ROI</div>
+                  <div className="text-5xl font-black mb-2" style={{ color: '#111827' }}>{roi}%</div>
+                  <div style={{ color: '#6B7280' }}>ROI</div>
                 </div>
               </div>
 

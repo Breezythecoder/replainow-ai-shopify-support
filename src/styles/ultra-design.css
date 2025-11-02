@@ -1,141 +1,107 @@
 /**
- * ReplAInow ULTRA PREMIUM Design System 2025
- * Dark Dramatic | Neon Purple-Cyan | AI Cyber Aesthetics
+ * ReplAInow CLEAN MODERN Design System 2025
+ * Light & Professional | Minimal & Clean | B2B SaaS Aesthetics
+ * Inspired by: Intercom, Linear, Stripe, Zipchat AI
  */
 
 :root {
   /* ============================================
-   * DARK BASE COLORS - Revolution!
+   * LIGHT BASE COLORS - Clean & Professional
    * ============================================ */
-  --ultra-black: #0A0B0D;              /* Deepest black - Main bg */
-  --ultra-dark: #111218;               /* Secondary dark bg */
-  --ultra-dark-card: #16171D;          /* Card backgrounds */
-  --ultra-dark-lighter: #1E1F26;       /* Lighter dark elements */
+  --clean-white: #FFFFFF;              /* Main background */
+  --clean-gray-50: #F9FAFB;           /* Subtle sections */
+  --clean-gray-100: #F3F4F6;          /* Card backgrounds */
+  --clean-gray-200: #E5E7EB;          /* Borders */
+  --clean-gray-300: #D1D5DB;          /* Dividers */
   
   /* ============================================
-   * PURPLE NEON - Intensified Brand
+   * BRAND PURPLE - Dezent & Professionell
    * ============================================ */
-  --ultra-purple-neon: #9333EA;        /* NEON Purple - Main Brand */
-  --ultra-purple-bright: #A855F7;      /* Bright Highlights */
-  --ultra-purple-glow: #C084FC;        /* Glow Effects */
-  --ultra-purple-electric: #E879F9;    /* Electric Accents */
-  --ultra-purple-deep: #7C3AED;        /* Deep Purple */
-  
-  /* Legacy Purple (für Light Sections) */
-  --ultra-purple-soft: #A78BFA;
-  --ultra-purple-light: #DDD6FE;
-  --ultra-purple-ultra-light: #F5F3FF;
+  --brand-purple-50: #F5F3FF;         /* Light backgrounds */
+  --brand-purple-100: #EDE9FE;        /* Hover backgrounds */
+  --brand-purple-200: #DDD6FE;        /* Light accents */
+  --brand-purple-500: #8B5CF6;        /* Main Brand */
+  --brand-purple-600: #7C3AED;        /* Hover states */
+  --brand-purple-700: #6D28D9;        /* Dark purple */
   
   /* ============================================
-   * CYAN AI - The Cyber Touch
+   * ACCENT COLORS - Minimal
    * ============================================ */
-  --ultra-cyan: #06B6D4;               /* AI Technology Color */
-  --ultra-cyan-bright: #22D3EE;        /* Bright Cyan */
-  --ultra-cyan-glow: #67E8F9;          /* Cyan Glow */
-  --ultra-cyan-dark: #0891B2;          /* Dark Cyan */
+  --accent-blue: #3B82F6;             /* Links & Info */
+  --accent-green: #10B981;            /* Success & CTAs */
+  --accent-green-dark: #059669;       /* CTA Hover */
+  --accent-orange: #F59E0B;           /* Warning */
+  --accent-red: #EF4444;              /* Errors */
   
   /* ============================================
-   * TEXT COLORS - Perfect Contrast
+   * TEXT COLORS - Perfect Readability
    * ============================================ */
-  --ultra-white: #FFFFFF;              /* Primary text on dark */
-  --ultra-gray-light: #E2E8F0;         /* Secondary text */
-  --ultra-gray: #94A3B8;               /* Muted text */
-  --ultra-gray-dark: #64748B;          /* Disabled text */
-  --ultra-gray-darker: #475569;        /* Very muted */
-  
-  /* Light Section Colors */
-  --ultra-bg-light: #F8FAFC;
-  --ultra-gray-ultra-light: #F1F5F9;
+  --text-primary: #111827;            /* Main text (almost black) */
+  --text-secondary: #6B7280;          /* Secondary text */
+  --text-muted: #9CA3AF;              /* Muted text */
+  --text-disabled: #D1D5DB;           /* Disabled text */
   
   /* ============================================
-   * ACCENT COLORS
+   * GRADIENTS - Subtle & Professional
    * ============================================ */
-  --ultra-green: #10B981;              /* Success & CTAs */
-  --ultra-green-dark: #059669;         /* CTA Hover */
-  --ultra-green-bright: #34D399;       /* Bright Green */
   
-  --ultra-red: #EF4444;                /* Errors Only */
-  --ultra-red-dark: #DC2626;
+  /* Hero Gradient - Light & Subtle */
+  --gradient-hero: linear-gradient(135deg, #FFFFFF 0%, #F9FAFB 50%, #F5F3FF 100%);
+  
+  /* Section Gradient - Barely Visible */
+  --gradient-section: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
+  
+  /* Card Gradient - Very Subtle */
+  --gradient-card: linear-gradient(145deg, #FFFFFF 0%, #FAFBFC 100%);
+  
+  /* Purple Gradient - For Highlights */
+  --gradient-purple: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+  
+  /* CTA Gradient - Green */
+  --gradient-cta: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  
+  /* Purple Background Gradient - For Special Sections */
+  --gradient-purple-bg: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+  
+  /* CTA Section Gradient - Only Dark Section */
+  --gradient-cta-dark: linear-gradient(135deg, #7C3AED 0%, #6D28D9 100%);
   
   /* ============================================
-   * GRADIENTS - The Magic!
+   * SHADOWS - Subtle & Sophisticated
    * ============================================ */
   
-  /* Hero & CTA Gradients */
-  --gradient-dark-hero: linear-gradient(135deg, #0A0B0D 0%, #111218 100%);
-  --gradient-purple-neon: linear-gradient(135deg, #9333EA 0%, #C084FC 50%, #E879F9 100%);
-  --gradient-cyan-ai: linear-gradient(135deg, #06B6D4 0%, #22D3EE 50%, #67E8F9 100%);
+  /* Card Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-2xl: 0 12px 32px rgba(0, 0, 0, 0.1);
   
-  /* SIGNATURE: Purple-Cyan Fusion */
-  --gradient-purple-cyan: linear-gradient(135deg, #9333EA 0%, #7C3AED 25%, #06B6D4 75%, #22D3EE 100%);
+  /* Hover Shadows */
+  --shadow-card-hover: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-button: 0 4px 12px rgba(16, 185, 129, 0.2);
+  --shadow-button-hover: 0 6px 20px rgba(16, 185, 129, 0.3);
   
-  /* Glass Card Gradients */
-  --gradient-glass-dark: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%);
-  --gradient-glass-light: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.95) 100%);
+  /* Hero Shadow (for dashboard image) */
+  --shadow-hero: 0 24px 48px rgba(0, 0, 0, 0.12);
   
-  /* Green CTA */
-  --gradient-green-cta: linear-gradient(135deg, #10B981 0%, #059669 100%);
-  
-  /* Mesh Backgrounds */
-  --gradient-purple-mesh: 
-    radial-gradient(circle at 20% 50%, rgba(147, 51, 234, 0.15), transparent 50%),
-    radial-gradient(circle at 80% 50%, rgba(6, 182, 212, 0.1), transparent 50%);
-  
-  --gradient-purple-mesh-intense: 
-    radial-gradient(circle at 20% 30%, rgba(147, 51, 234, 0.2), transparent 50%),
-    radial-gradient(circle at 80% 70%, rgba(6, 182, 212, 0.15), transparent 50%);
-  
-  /* ============================================
-   * SHADOWS & GLOWS - Premium Effects
-   * ============================================ */
-  
-  /* Dark Shadows */
-  --shadow-dark-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-dark-md: 0 8px 24px rgba(0, 0, 0, 0.4);
-  --shadow-dark-lg: 0 20px 60px rgba(0, 0, 0, 0.4);
-  --shadow-dark-xl: 0 40px 100px rgba(0, 0, 0, 0.5);
-  
-  /* Light Shadows (for light sections) */
-  --shadow-light-sm: 0 4px 12px rgba(107, 70, 193, 0.08);
-  --shadow-light-md: 0 8px 24px rgba(107, 70, 193, 0.12);
-  --shadow-light-lg: 0 20px 60px rgba(107, 70, 193, 0.15);
-  --shadow-light-xl: 0 40px 100px rgba(107, 70, 193, 0.2);
-  
-  /* Neon Glows */
-  --glow-purple-sm: 0 0 20px rgba(147, 51, 234, 0.3);
-  --glow-purple-md: 0 0 40px rgba(147, 51, 234, 0.4);
-  --glow-purple-lg: 0 0 60px rgba(147, 51, 234, 0.5);
-  --glow-purple-xl: 
-    0 0 20px rgba(147, 51, 234, 0.4),
-    0 0 40px rgba(147, 51, 234, 0.3),
-    0 0 60px rgba(147, 51, 234, 0.2);
-  
-  --glow-cyan-sm: 0 0 20px rgba(6, 182, 212, 0.3);
-  --glow-cyan-md: 0 0 40px rgba(6, 182, 212, 0.4);
-  --glow-cyan-lg: 
-    0 0 20px rgba(6, 182, 212, 0.3),
-    0 0 40px rgba(6, 182, 212, 0.2);
-  
-  --glow-green: 
-    0 10px 30px rgba(16, 185, 129, 0.4),
-    0 0 60px rgba(16, 185, 129, 0.2);
-  
-  --glow-green-intense: 
-    0 20px 50px rgba(16, 185, 129, 0.5),
-    0 0 80px rgba(16, 185, 129, 0.3);
+  /* Purple Shadows (sehr dezent!) */
+  --shadow-purple: 0 4px 12px rgba(139, 92, 246, 0.1);
+  --shadow-purple-lg: 0 8px 24px rgba(139, 92, 246, 0.12);
   
   /* ============================================
    * TYPOGRAPHY SCALE
    * ============================================ */
-  --text-hero: 96px;
-  --text-hero-mobile: 56px;
-  --text-section: 64px;
-  --text-section-mobile: 40px;
-  --text-subsection: 48px;
-  --text-subsection-mobile: 32px;
-  --text-body-lg: 22px;
-  --text-body: 20px;
-  --text-body-sm: 18px;
+  --text-hero: 72px;
+  --text-hero-mobile: 48px;
+  --text-section: 48px;
+  --text-section-mobile: 32px;
+  --text-subsection: 32px;
+  --text-subsection-mobile: 24px;
+  --text-body-lg: 20px;
+  --text-body: 18px;
+  --text-body-sm: 16px;
   --text-caption: 14px;
   --text-micro: 12px;
   
@@ -143,394 +109,389 @@
    * SPACING SCALE
    * ============================================ */
   --space-xs: 8px;
-  --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 32px;
-  --space-xl: 48px;
-  --space-2xl: 64px;
-  --space-3xl: 96px;
-  --space-4xl: 128px;
-  --space-5xl: 192px;
+  --space-sm: 12px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --space-4xl: 96px;
+  --space-5xl: 128px;
+  
+  /* ============================================
+   * BORDER RADIUS
+   * ============================================ */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-2xl: 24px;
+  --radius-full: 9999px;
 }
 
 /* ============================================
- * GLASSMORPHISM 2.0 - Dark Premium
+ * CARD STYLES - Clean & Modern (NO Glassmorphism!)
  * ============================================ */
 
-/* DARK GLASS CARDS (Main Pattern) */
-.ultra-glass-dark {
-  background: var(--gradient-glass-dark);
-  backdrop-filter: blur(40px) saturate(180%);
-  -webkit-backdrop-filter: blur(40px) saturate(180%);
-  border-radius: 24px;
-  border: 1px solid rgba(147, 51, 234, 0.2);
-  box-shadow: 
-    var(--shadow-dark-lg),
-    var(--glow-purple-sm),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+/* STANDARD CARD (Main Pattern) */
+.clean-card {
+  background: var(--clean-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--clean-gray-200);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
 }
 
-.ultra-glass-dark:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 
-    var(--shadow-dark-xl),
-    var(--glow-purple-md),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  border-color: rgba(147, 51, 234, 0.5);
+.clean-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--brand-purple-500);
 }
 
-/* LIGHT GLASS CARDS (for Light Sections) */
-.ultra-glass-light {
-  background: var(--gradient-glass-light);
-  backdrop-filter: blur(30px);
-  -webkit-backdrop-filter: blur(30px);
-  border-radius: 24px;
-  border: 1px solid rgba(147, 51, 234, 0.1);
-  box-shadow: var(--shadow-light-lg);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+/* FEATURE CARD (with subtle gradient) */
+.clean-card-feature {
+  background: var(--gradient-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--clean-gray-200);
+  padding: var(--space-xl);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
 }
 
-.ultra-glass-light:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-light-xl);
-  border-color: rgba(147, 51, 234, 0.3);
+.clean-card-feature:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--brand-purple-500);
 }
 
-/* NAVBAR GLASS */
-.ultra-glass-navbar {
-  background: rgba(10, 11, 13, 0.8);
-  backdrop-filter: blur(20px) saturate(180%);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(147, 51, 234, 0.1);
-  box-shadow: var(--shadow-dark-md);
+/* HIGHLIGHTED CARD (with purple accent) */
+.clean-card-highlight {
+  background: var(--clean-white);
+  border-radius: var(--radius-lg);
+  border: 2px solid var(--brand-purple-500);
+  box-shadow: var(--shadow-purple-lg);
+  transition: all 0.3s ease;
 }
 
-/* PURPLE GRADIENT GLASS (for highlighted cards) */
-.ultra-glass-purple-gradient {
-  background: linear-gradient(135deg, 
-    rgba(147, 51, 234, 0.1) 0%, 
-    rgba(6, 182, 212, 0.05) 100%
-  );
-  backdrop-filter: blur(40px) saturate(180%);
-  -webkit-backdrop-filter: blur(40px) saturate(180%);
-  border-radius: 24px;
-  border: 2px solid var(--ultra-purple-neon);
-  box-shadow: 
-    var(--shadow-dark-xl),
-    var(--glow-purple-lg);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+.clean-card-highlight:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.16);
+}
+
+/* PRICING CARD */
+.clean-card-pricing {
+  background: var(--clean-white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--clean-gray-200);
+  padding: var(--space-2xl);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.clean-card-pricing:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-2xl);
 }
 
 /* ============================================
- * TEXT EFFECTS - Neon & Glow
+ * TEXT STYLES - No Glow!
  * ============================================ */
 
-/* Neon Purple Gradient Text */
-.ultra-text-neon-purple {
-  background: var(--gradient-purple-neon);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(var(--glow-purple-sm));
-}
-
-/* Cyan AI Gradient Text */
-.ultra-text-cyan {
-  background: var(--gradient-cyan-ai);
+/* Gradient Text (only for highlights) */
+.clean-text-gradient {
+  background: var(--gradient-purple);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Purple-Cyan Fusion Text */
-.ultra-text-fusion {
-  background: var(--gradient-purple-cyan);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(var(--glow-purple-sm));
+/* Primary Text */
+.clean-text-primary {
+  color: var(--text-primary);
 }
 
-/* Glow Text (White with Shadow) */
-.ultra-text-glow-white {
-  color: var(--ultra-white);
-  text-shadow: var(--glow-purple-xl);
+/* Secondary Text */
+.clean-text-secondary {
+  color: var(--text-secondary);
 }
 
-/* Shimmer Animation */
-.ultra-text-shimmer {
-  background: linear-gradient(
-    90deg,
-    #9333EA 0%,
-    #E879F9 50%,
-    #9333EA 100%
-  );
-  background-size: 200% auto;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 3s linear infinite;
+/* Muted Text */
+.clean-text-muted {
+  color: var(--text-muted);
+}
+
+/* Brand Purple Text */
+.clean-text-purple {
+  color: var(--brand-purple-500);
 }
 
 /* ============================================
  * BACKGROUND UTILITIES
  * ============================================ */
 
-/* Dark Backgrounds */
-.ultra-bg-black {
-  background: var(--ultra-black);
+/* White Background */
+.clean-bg-white {
+  background: var(--clean-white);
 }
 
-.ultra-bg-dark {
-  background: var(--ultra-dark);
+/* Gray 50 Background */
+.clean-bg-gray-50 {
+  background: var(--clean-gray-50);
 }
 
-.ultra-bg-dark-card {
-  background: var(--ultra-dark-card);
+/* Gray 100 Background */
+.clean-bg-gray-100 {
+  background: var(--clean-gray-100);
 }
 
-/* Gradient Backgrounds */
-.ultra-bg-gradient-dark-hero {
-  background: var(--gradient-dark-hero);
+/* Purple 50 Background */
+.clean-bg-purple-50 {
+  background: var(--brand-purple-50);
 }
 
-.ultra-bg-purple-mesh {
-  position: relative;
-  background: var(--ultra-dark);
+/* Purple 100 Background */
+.clean-bg-purple-100 {
+  background: var(--brand-purple-100);
 }
 
-.ultra-bg-purple-mesh::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--gradient-purple-mesh);
-  pointer-events: none;
-  z-index: 0;
+/* Hero Gradient Background */
+.clean-bg-hero {
+  background: var(--gradient-hero);
 }
 
-.ultra-bg-purple-mesh-intense {
-  position: relative;
-  background: var(--ultra-black);
+/* Section Gradient Background */
+.clean-bg-section {
+  background: var(--gradient-section);
 }
 
-.ultra-bg-purple-mesh-intense::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: var(--gradient-purple-mesh-intense);
-  pointer-events: none;
-  z-index: 0;
+/* Purple Gradient Background */
+.clean-bg-purple-gradient {
+  background: var(--gradient-purple-bg);
 }
 
-/* ============================================
- * ULTRA ANIMATIONS
- * ============================================ */
- 
-@keyframes gradient-shift {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-}
-
-@keyframes shimmer {
-  0% { background-position: -200% center; }
-  100% { background-position: 200% center; }
-}
-
-@keyframes float-orb {
-  0%, 100% {
-    transform: translate(0, 0) scale(1);
-  }
-  33% {
-    transform: translate(30px, -30px) scale(1.1);
-  }
-  66% {
-    transform: translate(-20px, 20px) scale(0.9);
-  }
-}
-
-@keyframes pulse-glow-purple {
-  0%, 100% {
-    box-shadow: var(--glow-purple-md);
-  }
-  50% {
-    box-shadow: var(--glow-purple-lg);
-  }
-}
-
-@keyframes pulse-glow-cyan {
-  0%, 100% {
-    box-shadow: var(--glow-cyan-md);
-  }
-  50% {
-    box-shadow: var(--glow-cyan-lg);
-  }
+/* CTA Dark Gradient (only for final CTA) */
+.clean-bg-cta-dark {
+  background: var(--gradient-cta-dark);
 }
 
 /* ============================================
- * BUTTON SYSTEM - Premium CTAs
+ * BUTTON SYSTEM - Professional CTAs
  * ============================================ */
 
-/* PRIMARY CTA (Green Neon) */
-.ultra-btn-primary {
-  background: var(--gradient-green-cta);
-  padding: 20px 48px;
-  border-radius: 16px;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--ultra-white);
+/* PRIMARY CTA (Green - Trust & Action) */
+.clean-btn-primary {
+  background: var(--gradient-cta);
+  padding: 16px 32px;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--clean-white);
   border: none;
-  box-shadow: var(--glow-green);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-button);
+  transition: all 0.3s ease;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.ultra-btn-primary:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: var(--glow-green-intense);
+.clean-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-button-hover);
+}
+
+.clean-btn-primary:active {
+  transform: translateY(0);
 }
 
 /* SECONDARY CTA (Purple Outline) */
-.ultra-btn-secondary {
-  background: transparent;
-  padding: 20px 48px;
-  border-radius: 16px;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--ultra-purple-neon);
-  border: 2px solid var(--ultra-purple-neon);
-  box-shadow: var(--glow-purple-sm);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.clean-btn-secondary {
+  background: var(--clean-white);
+  padding: 16px 32px;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brand-purple-500);
+  border: 2px solid var(--brand-purple-500);
+  transition: all 0.3s ease;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.ultra-btn-secondary:hover {
-  background: rgba(147, 51, 234, 0.1);
-  box-shadow: var(--glow-purple-md);
+.clean-btn-secondary:hover {
+  background: var(--brand-purple-50);
+  border-color: var(--brand-purple-600);
+  color: var(--brand-purple-600);
 }
 
-/* WHITE CTA (for Dark Backgrounds) */
-.ultra-btn-white {
-  background: var(--ultra-white);
-  padding: 20px 48px;
-  border-radius: 16px;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--ultra-purple-neon);
+/* WHITE CTA (for dark backgrounds) */
+.clean-btn-white {
+  background: var(--clean-white);
+  padding: 16px 32px;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--brand-purple-600);
   border: none;
-  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.ultra-btn-white:hover {
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 20px 50px rgba(255, 255, 255, 0.3);
-}
-
-/* ============================================
- * GLOW EFFECTS - Interactive Elements
- * ============================================ */
-
-.glow-purple {
-  box-shadow: var(--glow-purple-md);
-}
-
-.glow-purple:hover {
-  box-shadow: var(--glow-purple-lg);
-}
-
-.glow-cyan {
-  box-shadow: var(--glow-cyan-md);
-}
-
-.glow-cyan:hover {
-  box-shadow: var(--glow-cyan-lg);
-}
-
-.glow-green {
-  box-shadow: var(--glow-green);
-}
-
-.glow-green:hover {
-  box-shadow: var(--glow-green-intense);
-}
-
-/* Pulse Glow Animation */
-.pulse-glow-purple {
-  animation: pulse-glow-purple 2s ease-in-out infinite;
-}
-
-.pulse-glow-cyan {
-  animation: pulse-glow-cyan 2s ease-in-out infinite;
-}
-
-/* ============================================
- * MESH & ORB EFFECTS
- * ============================================ */
-
-.ultra-orb {
-  position: absolute;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.5;
-  animation: float-orb 20s ease-in-out infinite;
-  pointer-events: none;
-}
-
-.ultra-orb-purple-neon {
-  background: radial-gradient(circle, rgba(147, 51, 234, 0.4) 0%, transparent 70%);
-}
-
-.ultra-orb-cyan {
-  background: radial-gradient(circle, rgba(6, 182, 212, 0.3) 0%, transparent 70%);
-}
-
-.ultra-orb-purple-glow {
-  background: radial-gradient(circle, rgba(192, 132, 252, 0.3) 0%, transparent 70%);
+.clean-btn-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* ============================================
  * ICON STYLES
  * ============================================ */
 
-/* Neon Icon Container */
-.ultra-icon-neon {
+/* Clean Icon Container */
+.clean-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 64px;
   height: 64px;
-  border-radius: 16px;
-  background: var(--gradient-purple-neon);
-  box-shadow: var(--glow-purple-md);
+  border-radius: var(--radius-md);
+  background: var(--gradient-purple);
   transition: all 0.3s ease;
 }
 
-.ultra-icon-neon:hover {
-  box-shadow: var(--glow-purple-lg);
-  transform: scale(1.1);
+.clean-icon:hover {
+  transform: scale(1.05);
 }
 
-/* Cyan Icon Container */
-.ultra-icon-cyan {
+/* Icon with white background */
+.clean-icon-white {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 64px;
   height: 64px;
-  border-radius: 16px;
-  background: var(--gradient-cyan-ai);
-  box-shadow: var(--glow-cyan-md);
+  border-radius: var(--radius-md);
+  background: var(--clean-white);
+  border: 1px solid var(--clean-gray-200);
   transition: all 0.3s ease;
 }
 
-.ultra-icon-cyan:hover {
-  box-shadow: var(--glow-cyan-lg);
-  transform: scale(1.1);
+.clean-icon-white:hover {
+  border-color: var(--brand-purple-500);
+  box-shadow: var(--shadow-lg);
 }
+
+/* ============================================
+ * NAVBAR - Clean & Minimal
+ * ============================================ */
+
+.clean-navbar {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--clean-gray-200);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* ============================================
+ * BADGE STYLES
+ * ============================================ */
+
+/* Purple Badge */
+.clean-badge-purple {
+  background: var(--brand-purple-500);
+  color: var(--clean-white);
+  border-radius: var(--radius-full);
+  padding: 4px 12px;
+  font-size: var(--text-caption);
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Light Purple Badge */
+.clean-badge-purple-light {
+  background: var(--brand-purple-100);
+  color: var(--brand-purple-700);
+  border-radius: var(--radius-full);
+  padding: 4px 12px;
+  font-size: var(--text-caption);
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Green Badge */
+.clean-badge-green {
+  background: var(--accent-green);
+  color: var(--clean-white);
+  border-radius: var(--radius-full);
+  padding: 4px 12px;
+  font-size: var(--text-caption);
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* ============================================
+ * ANIMATIONS - Minimal & Subtle
+ * ============================================ */
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.4s ease-out both;
+}
+
+.animate-scale-in {
+  animation: scale-in 0.4s ease-out both;
+}
+
+/* Stagger Delays */
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
 
 /* ============================================
  * RESPONSIVE - Mobile Optimization
@@ -538,31 +499,25 @@
  
 @media (max-width: 768px) {
   /* Buttons */
-  .ultra-btn-primary,
-  .ultra-btn-secondary,
-  .ultra-btn-white {
-    padding: 16px 32px;
-    font-size: 16px;
+  .clean-btn-primary,
+  .clean-btn-secondary,
+  .clean-btn-white {
+    padding: 14px 24px;
+    font-size: 15px;
   }
   
-  /* Glass Cards */
-  .ultra-glass-dark,
-  .ultra-glass-light,
-  .ultra-glass-purple-gradient {
-    border-radius: 20px;
-    padding: 24px;
-  }
-  
-  /* Orbs */
-  .ultra-orb {
-    width: 300px;
-    height: 300px;
-    filter: blur(60px);
+  /* Cards */
+  .clean-card,
+  .clean-card-feature,
+  .clean-card-highlight,
+  .clean-card-pricing {
+    border-radius: var(--radius-md);
+    padding: var(--space-lg);
   }
   
   /* Icons */
-  .ultra-icon-neon,
-  .ultra-icon-cyan {
+  .clean-icon,
+  .clean-icon-white {
     width: 48px;
     height: 48px;
   }
@@ -572,7 +527,7 @@
  * UTILITY: Z-INDEX LAYERS
  * ============================================ */
  
-.z-mesh {
+.z-base {
   z-index: 0;
 }
 
@@ -590,7 +545,7 @@
 }
 
 /* ============================================
- * SCROLLBAR STYLING (Dark Theme)
+ * SCROLLBAR STYLING - Clean Theme
  * ============================================ */
  
 ::-webkit-scrollbar {
@@ -598,21 +553,63 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--ultra-dark);
+  background: var(--clean-gray-100);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--ultra-purple-neon);
+  background: var(--brand-purple-500);
   border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--ultra-purple-bright);
+  background: var(--brand-purple-600);
 }
 
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: var(--ultra-purple-neon) var(--ultra-dark);
+  scrollbar-color: var(--brand-purple-500) var(--clean-gray-100);
 }
 
+/* ============================================
+ * DIVIDER
+ * ============================================ */
+
+.clean-divider {
+  height: 1px;
+  background: var(--clean-gray-200);
+  border: none;
+}
+
+/* ============================================
+ * FOCUS STATES - Accessibility
+ * ============================================ */
+
+.clean-focus:focus-visible {
+  outline: 2px solid var(--brand-purple-500);
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--brand-purple-500);
+  outline-offset: 2px;
+}
+
+/* ============================================
+ * FOOTER - Dark (only dark section except CTA)
+ * ============================================ */
+
+.clean-footer {
+  background: #111827;
+  color: var(--clean-gray-300);
+}
+
+.clean-footer a {
+  color: var(--clean-gray-300);
+  transition: color 0.2s ease;
+}
+
+.clean-footer a:hover {
+  color: var(--clean-white);
+}

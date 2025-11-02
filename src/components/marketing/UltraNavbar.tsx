@@ -33,32 +33,29 @@ const UltraNavbar = () => {
 
   return (
     <header 
-      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
         background: isScrolled 
-          ? 'rgba(10, 11, 13, 0.9)'
-          : 'linear-gradient(180deg, rgba(10, 11, 13, 0.8) 0%, rgba(10, 11, 13, 0) 100%)',
-        backdropFilter: isScrolled ? 'blur(20px) saturate(180%)' : 'none',
-        WebkitBackdropFilter: isScrolled ? 'blur(20px) saturate(180%)' : 'none',
+          ? 'rgba(255, 255, 255, 0.95)'
+          : 'rgba(255, 255, 255, 0.7)',
+        backdropFilter: isScrolled ? 'blur(12px)' : 'blur(8px)',
+        WebkitBackdropFilter: isScrolled ? 'blur(12px)' : 'blur(8px)',
         borderBottom: isScrolled 
-          ? '1px solid rgba(147, 51, 234, 0.2)' 
+          ? '1px solid #E5E7EB' 
           : 'none',
         boxShadow: isScrolled 
-          ? '0 8px 32px rgba(0, 0, 0, 0.5), 0 0 40px rgba(147, 51, 234, 0.2)'
+          ? '0 1px 3px rgba(0, 0, 0, 0.05)'
           : 'none'
       }}
     >
       <nav className="container mx-auto flex items-center justify-between h-20 px-6">
-        {/* Logo - NEON Purple Brand */}
+        {/* Logo - Clean */}
         <a href="/" aria-label="ReplAInow Home" className="flex items-center group">
           <div className="relative">
             <img
               src="/lovable-uploads/ReplAInow_Logo_optimized.png"
               alt="ReplAInow Logo"
-              className="h-10 w-10 group-hover:scale-110 transition-transform duration-300"
-              style={{
-                filter: 'drop-shadow(0 0 10px rgba(147, 51, 234, 0.3))'
-              }}
+              className="h-10 w-10 group-hover:scale-105 transition-transform duration-200"
               width="40"
               height="40"
               loading="eager"
@@ -66,52 +63,39 @@ const UltraNavbar = () => {
           </div>
           
           <div className="ml-3">
-            <div className="text-xl font-black" style={{ color: '#FFFFFF' }}>
+            <div className="text-xl font-bold" style={{ color: '#111827' }}>
               Repl<span 
-                className="ultra-text-neon-purple"
                 style={{
-                  background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
+                  background: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
                   backgroundClip: 'text',
                   WebkitBackgroundClip: 'text',
-                  WebkitTextFillColor: 'transparent',
-                  filter: 'drop-shadow(0 0 10px rgba(147, 51, 234, 0.5))'
+                  WebkitTextFillColor: 'transparent'
                 }}
               >AI</span>now
             </div>
           </div>
         </a>
         
-        {/* Desktop Navigation - NEON */}
+        {/* Desktop Navigation - Clean */}
         <div className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href.substring(1))}
-              className="font-bold transition-all duration-300 cursor-pointer relative group"
+              className="font-medium transition-colors duration-200 cursor-pointer"
               style={{ 
-                color: '#FFFFFF',
-                textShadow: '0 2px 8px rgba(0, 0, 0, 0.3)',
-                fontSize: '15px',
-                letterSpacing: '0.01em'
+                color: '#6B7280',
+                fontSize: '15px'
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.color = '#9333EA';
-                e.currentTarget.style.textShadow = '0 0 20px rgba(147, 51, 234, 0.8), 0 2px 8px rgba(0, 0, 0, 0.3)';
+                e.currentTarget.style.color = '#8B5CF6';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.color = '#FFFFFF';
-                e.currentTarget.style.textShadow = '0 2px 8px rgba(0, 0, 0, 0.3)';
+                e.currentTarget.style.color = '#6B7280';
               }}
             >
               {item.label}
-              <div 
-                className="absolute -bottom-1 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
-                style={{
-                  background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
-                  boxShadow: '0 0 20px rgba(147, 51, 234, 0.6)'
-                }}
-              ></div>
             </a>
           ))}
           
@@ -139,17 +123,15 @@ const UltraNavbar = () => {
             Kostenlos starten
           </a>
           
-          {/* Mobile Menu Button - NEON */}
+          {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 min-h-[48px] min-w-[48px] flex items-center justify-center transition-all"
-            style={{ color: '#E2E8F0' }}
+            className="md:hidden p-2 min-h-[48px] min-w-[48px] flex items-center justify-center transition-colors duration-200"
+            style={{ color: '#6B7280' }}
             onMouseEnter={(e) => {
-              e.currentTarget.style.color = '#9333EA';
-              e.currentTarget.style.textShadow = '0 0 20px rgba(147, 51, 234, 0.5)';
+              e.currentTarget.style.color = '#8B5CF6';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.color = '#E2E8F0';
-              e.currentTarget.style.textShadow = '0 0 0 rgba(147, 51, 234, 0)';
+              e.currentTarget.style.color = '#6B7280';
             }}
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
@@ -159,16 +141,16 @@ const UltraNavbar = () => {
         </div>
       </nav>
       
-      {/* Mobile Menu - DARK GLASS */}
+      {/* Mobile Menu - Clean */}
       {mobileMenuOpen && (
         <div 
           className="md:hidden"
           style={{
-            background: 'rgba(10, 11, 13, 0.95)',
-            backdropFilter: 'blur(20px) saturate(180%)',
-            WebkitBackdropFilter: 'blur(20px) saturate(180%)',
-            borderTop: '1px solid rgba(147, 51, 234, 0.2)',
-            boxShadow: '0 10px 40px rgba(0, 0, 0, 0.4)'
+            background: 'rgba(255, 255, 255, 0.98)',
+            backdropFilter: 'blur(12px)',
+            WebkitBackdropFilter: 'blur(12px)',
+            borderTop: '1px solid #E5E7EB',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.08)'
           }}
         >
           <div className="container px-6 py-6 space-y-4">
@@ -176,15 +158,13 @@ const UltraNavbar = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="block py-3 text-lg font-semibold transition-all"
-                style={{ color: '#E2E8F0' }}
+                className="block py-3 text-lg font-medium transition-colors duration-200"
+                style={{ color: '#6B7280' }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.color = '#9333EA';
-                  e.currentTarget.style.textShadow = '0 0 20px rgba(147, 51, 234, 0.5)';
+                  e.currentTarget.style.color = '#8B5CF6';
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.color = '#E2E8F0';
-                  e.currentTarget.style.textShadow = '0 0 0 rgba(147, 51, 234, 0)';
+                  e.currentTarget.style.color = '#6B7280';
                 }}
                 onClick={(e) => handleNavClick(e, item.href.substring(1))}
               >
@@ -194,7 +174,7 @@ const UltraNavbar = () => {
             
             <a
               href={OAUTH_URL}
-              className="block w-full text-center px-6 py-4 font-bold text-white rounded-xl mt-4"
+              className="block w-full text-center px-6 py-4 font-semibold text-white rounded-xl mt-4"
               style={{
                 background: 'linear-gradient(135deg, #10B981 0%, #059669 100%)',
                 boxShadow: '0 4px 14px rgba(16, 185, 129, 0.3)'

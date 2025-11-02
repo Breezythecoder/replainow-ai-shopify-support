@@ -27,32 +27,25 @@ const UltraHowItWorks = () => {
   ];
 
   return (
-    <section className="py-32 relative overflow-hidden" style={{ background: '#111218' }}>
-      {/* NEON Purple Mesh */}
-      <div className="absolute inset-0">
-        <div style={{
-          background: `radial-gradient(at 50% 50%, rgba(147, 51, 234, 0.1) 0%, transparent 50%)`
-        }}></div>
-      </div>
+    <section className="py-24 relative overflow-hidden" style={{ background: '#F9FAFB' }}>
 
       <div className="container mx-auto px-6 relative z-10">
         <motion.div
-          className="text-center mb-20"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl lg:text-6xl font-black mb-4" style={{ color: '#FFFFFF' }}>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-4" style={{ color: '#111827' }}>
             So einfach 
-            <span className="ultra-text-neon-purple" style={{
-              background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
+            <span style={{
+              background: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              filter: 'drop-shadow(0 0 20px rgba(147, 51, 234, 0.5))'
+              WebkitTextFillColor: 'transparent'
             }}> geht's</span>
           </h2>
-          <p className="text-xl max-w-2xl mx-auto" style={{ color: '#94A3B8' }}>
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#6B7280' }}>
             In 3 Schritten zu automatisiertem Support
           </p>
         </motion.div>
@@ -71,70 +64,55 @@ const UltraHowItWorks = () => {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15 }}
               >
-                {/* DARK GLASS CARD */}
+                {/* CLEAN CARD */}
                 <div 
                   className="p-10 text-center group cursor-pointer"
                   style={{
-                    background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.02) 100%)',
-                    backdropFilter: 'blur(40px) saturate(180%)',
-                    WebkitBackdropFilter: 'blur(40px) saturate(180%)',
-                    borderRadius: '24px',
-                    border: '1px solid rgba(147, 51, 234, 0.2)',
-                    boxShadow: `
-                      0 20px 60px rgba(0, 0, 0, 0.4),
-                      0 0 40px rgba(147, 51, 234, 0.1),
-                      inset 0 1px 0 rgba(255, 255, 255, 0.05)
-                    `,
-                    transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)'
+                    background: '#FFFFFF',
+                    borderRadius: '16px',
+                    border: '1px solid #E5E7EB',
+                    boxShadow: '0 2px 8px rgba(0, 0, 0, 0.04)',
+                    transition: 'all 0.3s ease'
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = 'translateY(-8px) scale(1.02)';
-                    e.currentTarget.style.boxShadow = `
-                      0 40px 100px rgba(0, 0, 0, 0.5),
-                      0 0 80px rgba(147, 51, 234, 0.3),
-                      inset 0 1px 0 rgba(255, 255, 255, 0.1)
-                    `;
-                    e.currentTarget.style.borderColor = 'rgba(147, 51, 234, 0.5)';
+                    e.currentTarget.style.transform = 'translateY(-4px)';
+                    e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.08)';
+                    e.currentTarget.style.borderColor = '#8B5CF6';
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = 'translateY(0) scale(1)';
-                    e.currentTarget.style.boxShadow = `
-                      0 20px 60px rgba(0, 0, 0, 0.4),
-                      0 0 40px rgba(147, 51, 234, 0.1),
-                      inset 0 1px 0 rgba(255, 255, 255, 0.05)
-                    `;
-                    e.currentTarget.style.borderColor = 'rgba(147, 51, 234, 0.2)';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                    e.currentTarget.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.04)';
+                    e.currentTarget.style.borderColor = '#E5E7EB';
                   }}
                 >
-                  {/* Step Number - NEON */}
-                  <div className="text-6xl font-black mb-6" style={{ color: '#9333EA', opacity: 0.3 }}>
+                  {/* Step Number */}
+                  <div className="text-5xl font-black mb-6" style={{ color: '#8B5CF6', opacity: 0.2 }}>
                     {step.number}
                   </div>
 
-                  {/* Icon - NEON GLOW */}
+                  {/* Icon */}
                   <div 
-                    className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center"
+                    className="w-16 h-16 mx-auto mb-6 rounded-xl flex items-center justify-center"
                     style={{
-                      background: 'linear-gradient(135deg, #9333EA 0%, #C084FC 100%)',
-                      boxShadow: '0 0 40px rgba(147, 51, 234, 0.5)'
+                      background: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)'
                     }}
                   >
-                    <Icon className="w-10 h-10 text-white" />
+                    <Icon className="w-8 h-8 text-white" />
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-2xl font-bold mb-3" style={{ color: '#FFFFFF' }}>
+                  <h3 className="text-xl font-bold mb-3" style={{ color: '#111827' }}>
                     {step.title}
                   </h3>
-                  <p className="text-lg font-semibold mb-2 ultra-text-neon-purple" style={{
-                    background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
+                  <p className="text-base font-semibold mb-2" style={{
+                    background: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
                     backgroundClip: 'text',
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent'
                   }}>
                     {step.description}
                   </p>
-                  <p style={{ color: '#94A3B8' }}>
+                  <p style={{ color: '#6B7280' }}>
                     {step.detail}
                   </p>
                 </div>

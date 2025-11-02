@@ -11,7 +11,7 @@ const UltraComparison = () => {
   ];
 
   return (
-    <section className="py-32" style={{ background: '#FFFFFF' }}>
+    <section className="py-24" style={{ background: '#F9FAFB' }}>
       <div className="container mx-auto px-6">
         <motion.div
           className="text-center mb-16"
@@ -19,9 +19,9 @@ const UltraComparison = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-5xl lg:text-6xl font-black text-ultra-black mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6" style={{ color: '#111827' }}>
             Warum <span style={{
-              background: 'linear-gradient(135deg, #9333EA 0%, #E879F9 100%)',
+              background: 'linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%)',
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent'
@@ -30,29 +30,29 @@ const UltraComparison = () => {
         </motion.div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="rounded-3xl overflow-hidden" style={{
-            background: 'white',
-            border: '2px solid rgba(107, 70, 193, 0.1)',
-            boxShadow: '0 40px 100px rgba(0, 0, 0, 0.05)'
+          <div className="rounded-2xl overflow-hidden" style={{
+            background: '#FFFFFF',
+            border: '1px solid #E5E7EB',
+            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.06)'
           }}>
             {/* Header */}
-            <div className="grid grid-cols-3 gap-4 p-6" style={{ background: 'rgba(107, 70, 193, 0.05)' }}>
-              <div className="font-bold text-ultra-black">Feature</div>
-              <div className="text-center font-bold" style={{ color: '#9333EA' }}>ReplAInow ✨</div>
-              <div className="text-center font-bold text-gray-500">Andere</div>
+            <div className="grid grid-cols-3 gap-4 p-6" style={{ background: '#F5F3FF' }}>
+              <div className="font-semibold" style={{ color: '#111827' }}>Feature</div>
+              <div className="text-center font-semibold" style={{ color: '#8B5CF6' }}>ReplAInow ✨</div>
+              <div className="text-center font-semibold" style={{ color: '#6B7280' }}>Andere</div>
             </div>
 
             {/* Rows */}
             {rows.map((row, i) => (
-              <div key={i} className="grid grid-cols-3 gap-4 p-6 border-t border-gray-100">
-                <div className="font-semibold text-gray-700">{row.feature}</div>
+              <div key={i} className="grid grid-cols-3 gap-4 p-6 border-t" style={{ borderColor: '#E5E7EB' }}>
+                <div className="font-medium" style={{ color: '#111827' }}>{row.feature}</div>
                 <div className="text-center flex items-center justify-center gap-2">
                   <Check className="w-5 h-5" style={{ color: '#10B981' }} />
-                  <span className="font-bold" style={{ color: '#9333EA' }}>{row.us}</span>
+                  <span className="font-semibold" style={{ color: '#8B5CF6' }}>{row.us}</span>
                 </div>
                 <div className="text-center flex items-center justify-center gap-2">
-                  <X className="w-5 h-5 text-gray-400" />
-                  <span className="text-gray-500">{row.others}</span>
+                  <X className="w-5 h-5" style={{ color: '#D1D5DB' }} />
+                  <span style={{ color: '#6B7280' }}>{row.others}</span>
                 </div>
               </div>
             ))}
