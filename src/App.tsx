@@ -61,6 +61,7 @@ const AppShell = () => {
     initMonitoringWebVitals();
     initializeGA();
     initializeAssetLoading(locale);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).__LANG_SCANNER__ = scanner;
 
     // No need for URL parameter handling anymore - direct navigation

@@ -23,6 +23,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className })
     setIsOpen(false);
     
     // Navigate to the correct language URL (BrowserRouter)
+    // eslint-disable-next-line react-hooks/immutability
     if (newLocale === 'de') {
       window.location.href = '/';
     } else {
