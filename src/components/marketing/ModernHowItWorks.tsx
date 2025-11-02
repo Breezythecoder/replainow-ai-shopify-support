@@ -43,7 +43,7 @@ const ModernHowItWorks = () => {
           {...fadeInUp}
         >
           <h2 className="text-4xl lg:text-section font-bold text-gray-900 mb-4">
-            {t("ui.howItWorks.title") || "So einfach geht's"}
+            So einfach geht's
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             In 3 einfachen Schritten zu automatisiertem Support

@@ -73,7 +73,7 @@ const ModernPricing = () => {
           {...fadeInUp}
         >
           <h2 className="text-4xl lg:text-section font-bold text-gray-900 mb-4">
-            {t("ui.pricing.title") || "Einfache, transparente Preise"}
+            {t("pricing.title") || "Einfache, transparente Preise"}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Starte kostenlos. Keine Kreditkarte erforderlich. Jederzeit kündbar.

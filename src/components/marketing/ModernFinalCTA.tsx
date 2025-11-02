@@ -14,7 +14,7 @@ const ModernFinalCTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          {t("ui.finalCta.title") || "Bereit, deine Customer Experience zu 10x-en?"}
+          Bereit, deine Customer Experience zu 10x-en?
         </motion.h2>
         
         <motion.p
@@ -24,7 +24,7 @@ const ModernFinalCTA = () => {
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
         >
-          {t("ui.finalCta.subtitle") || "Schließe dich über 50.000 Shopify-Händlern an, die AI nutzen, um Kunden zu begeistern und Umsätze zu steigern"}
+          Schließe dich über 50.000 Shopify-Händlern an, die AI nutzen, um Kunden zu begeistern und Umsätze zu steigern
         </motion.p>
         
         <motion.div
@@ -38,14 +38,14 @@ const ModernFinalCTA = () => {
             href={OAUTH_URL}
             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-primary-purple bg-white rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
           >
-            {t("ui.finalCta.cta") || "7 Tage kostenlos testen"}
+            7 Tage kostenlos testen
             <ArrowRight className="ml-2 w-5 h-5" />
           </a>
           <a
             href="#live-demo"
             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white rounded-lg hover:bg-white hover:text-primary-purple transition-all duration-200"
           >
-            {t("ui.finalCta.demo") || "Demo ansehen"}
+            Demo ansehen
           </a>
         </motion.div>
         

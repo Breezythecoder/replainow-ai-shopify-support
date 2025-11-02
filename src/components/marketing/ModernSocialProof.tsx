@@ -53,7 +53,7 @@ const ModernSocialProof = () => {
           {...fadeInUp}
         >
           <h2 className="text-4xl lg:text-section font-bold text-gray-900 mb-4">
-            {t("ui.socialProof.title") || "Echte Händler. Echte Ergebnisse."}
+            Echte Händler. Echte Ergebnisse.
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Über {STORE_COUNT} Shopify-Händler vertrauen auf ReplAInow

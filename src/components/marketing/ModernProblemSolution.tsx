@@ -19,10 +19,10 @@ const ModernProblemSolution = () => {
           {...fadeInUp}
         >
           <h2 className="text-4xl lg:text-section font-bold text-gray-900 mb-4">
-            {t("ui.problemSolution.title") || "Dein Shop schläft nie. Dein Verkaufsteam auch nicht."}
+            Dein Shop schläft nie. Dein Verkaufsteam auch nicht.
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            {t("ui.problemSolution.subtitle") || "Sieh den Unterschied zwischen traditionellem Support und AI-Power"}
+            Sieh den Unterschied zwischen traditionellem Support und AI-Power
           </p>
         </motion.div>
         
@@ -39,7 +39,7 @@ const ModernProblemSolution = () => {
             <div className="flex items-center gap-3 mb-6">
               <div className="text-4xl">😴</div>
               <h3 className="text-2xl font-bold text-red-900">
-                {t("ui.problemSolution.problemTitle") || "Während Du schläfst"}
+                Während Du schläfst
               </h3>
             </div>
             
@@ -85,7 +85,7 @@ const ModernProblemSolution = () => {
             <div className="flex items-center gap-3 mb-6">
               <div className="text-4xl">🚀</div>
               <h3 className="text-2xl font-bold text-green-900">
-                {t("ui.problemSolution.solutionTitle") || "ReplAInow arbeitet"}
+                ReplAInow arbeitet
               </h3>
             </div>
             
