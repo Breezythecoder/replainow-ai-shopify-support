@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import Design System 2025 */
+@import './styles/design-system.css';
+
 /* Font optimization - using system fonts for better performance */
 @layer utilities {
   .font-inter {

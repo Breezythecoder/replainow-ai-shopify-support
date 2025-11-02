@@ -1,179 +1,172 @@
-import { useState, useEffect, useRef } from "react";
-import { STORE_COUNT } from "@/config/siteStats";
-import { Brain, Clock, Globe, BarChart3, TrendingUp, Download } from "lucide-react";
+import { motion } from "framer-motion";
+import { Brain, MessageSquare, Globe2, BarChart3, Zap, ShoppingCart } from "lucide-react";
 import { t } from "@/i18n";
-import { safeArray, FeaturesArraySchema } from "@/utils/safeT";
+
 const ModernFeatures = () => {
-  const [activeFeature, setActiveFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
-  const featuresRef = useRef<HTMLDivElement>(null);
-  
-  // Get current locale from URL path
-  const featureItems = safeArray(FeaturesArraySchema, "ui.features.items");
-  const iconMap = [Brain, Clock, Globe, BarChart3, TrendingUp, Download];
-  const gradientMap = [
-    "from-indigo-500 to-blue-500",
-    "from-purple-500 to-pink-500",
-    "from-cyan-500 to-teal-500",
-    "from-green-500 to-emerald-500",
-    "from-amber-500 to-orange-500",
-    "from-emerald-500 to-green-500"
-  ];
-  const colorMap = ["cyan", "purple", "blue", "green", "yellow", "red"];
-  const features = featureItems.map((item, index) => ({
-    ...item,
-    icon: iconMap[index] ?? Brain,
-    gradient: gradientMap[index] ?? gradientMap[0],
-    color: colorMap[index] ?? colorMap[0]
-  }));
-
-  // Intersection Observer
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (featuresRef.current) {
-      observer.observe(featuresRef.current);
+  const features = [
+    {
+      icon: Brain,
+      title: "Intelligente Produktempfehlungen",
+      benefits: [
+        "Versteht den Kontext",
+        "Cross-Selling automatisch",
+        "23% höherer Warenkorbwert"
+      ],
+      quote: "Wie dein bester Verkäufer - rund um die Uhr online",
+      image: "/assets/193e41bc-af60-4d70-947d-659804d66b83.png",
+      imageAlt: "ReplAInow AI zeigt intelligente Produktempfehlungen"
+    },
+    {
+      icon: MessageSquare,
+      title: "Sofortige Support-Lösung",
+      benefits: [
+        "91% Erstlösungsrate",
+        "Bestellungen, Retouren, FAQ",
+        "Integration in dein Helpdesk"
+      ],
+      quote: "70% weniger Support-Kosten",
+      image: "/assets/193e41bc-af60-4d70-947d-659804d66b83.png",
+      imageAlt: "Support-Chat zeigt Bestellverfolgung und automatische Antworten"
+    },
+    {
+      icon: Globe2,
+      title: "WhatsApp Integration",
+      benefits: [
+        "90% Öffnungsrate",
+        "Warenkorb-Rückgewinnung",
+        "Persönlicher Shopping-Assistent"
+      ],
+      quote: "Wo 3 Milliarden Menschen shoppen möchten",
+      image: "/assets/193e41bc-af60-4d70-947d-659804d66b83.png",
+      imageAlt: "WhatsApp Chat-Demo mit ReplAInow"
+    },
+    {
+      icon: BarChart3,
+      title: "Umsatz-Analytics",
+      benefits: [
+        "Echtzeit-Insights",
+        "Conversion-Tracking",
+        "KI-gestützte Optimierung"
+      ],
+      quote: "Datenbasierte Entscheidungen treffen",
+      image: "/assets/193e41bc-af60-4d70-947d-659804d66b83.png",
+      imageAlt: "Analytics Dashboard zeigt Conversion-Metriken"
     }
+  ];
 
-    return () => observer.disconnect();
-  }, []);
-
-  // Auto-rotate features
-  useEffect(() => {
-    if (!isVisible) return;
-    
-    const interval = setInterval(() => {
-      setActiveFeature(prev => (prev + 1) % features.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [isVisible]);
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6 }
+  };
 
   return (
-    <section
-      ref={featuresRef}
-      id="features"
-      className="py-24 bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 relative overflow-hidden"
-    >
-      {/* AI-Powered Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 via-transparent to-purple-500/5 animate-pulse"></div>
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-400 to-transparent animate-pulse"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse"></div>
-        
-        {/* Floating AI Particles */}
-        <div className="absolute inset-0">
-          {Array.from({ length: 15 }).map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-1 h-1 bg-blue-400 rounded-full opacity-40"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 2}s`
-              }}
-            />
-          ))}
-        </div>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 relative z-10">
-        <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="inline-block mb-6">
-            <span className="px-6 py-3 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 text-white font-black text-sm rounded-full shadow-2xl animate-pulse relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse"></div>
-              <span className="relative z-10">🚀 AI FEATURES</span>
-            </span>
-          </div>
-          
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-center mb-6 sm:mb-8 tracking-tight px-4">
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 animate-gradient-x">
-              {t("ui.features.title.primary")}
-            </span>
-            <span className="block text-white mt-2">{t("ui.features.title.secondary")}</span>
+    <section id="features" className="py-24 bg-white">
+      <div className="container mx-auto px-6">
+        {/* Section Header */}
+        <motion.div 
+          className="text-center mb-20"
+          {...fadeInUp}
+        >
+          <h2 className="text-4xl lg:text-section font-bold text-gray-900 mb-4">
+            Alles, was du brauchst
           </h2>
-            <p className="text-lg sm:text-xl text-blue-100 text-center mb-12 sm:mb-16 max-w-4xl mx-auto px-4">
-            <span className="text-cyan-400 font-bold">{t("ui.features.subtitle.highlight")}</span> {t("ui.features.subtitle.continuation")}
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Leistungsstarke Features, die deinen Shop transformieren
           </p>
-        </div>
-        
-        {/* Revolutionary Features Grid */}
-        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 transition-all duration-1000 delay-300 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          {features.map((feature, i) => (
-            <div 
-              key={i} 
-                className={`group bg-white/95 backdrop-blur-lg rounded-3xl p-6 sm:p-8 border border-blue-500/30 shadow-2xl h-full relative overflow-hidden cursor-pointer transition-all duration-500 ${
-                  activeFeature === i ? 'scale-105 shadow-blue-500/25 border-blue-400/50 bg-white' : 'hover:scale-102 hover:border-blue-400/40'
+        </motion.div>
+
+        {/* Features - Alternating Layout */}
+        <div className="space-y-32">
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
+            const isEven = index % 2 === 0;
+
+            return (
+              <motion.div
+                key={index}
+                className={`grid lg:grid-cols-2 gap-12 items-center ${
+                  !isEven ? 'lg:grid-flow-dense' : ''
                 }`}
-              onClick={() => setActiveFeature(i)}
-            >
-              {/* AI Glow Effect */}
-              <div className={`absolute inset-0 bg-gradient-to-r ${feature.gradient} opacity-0 group-hover:opacity-20 transition-opacity rounded-3xl`}></div>
-              
-              {/* Feature Icon with Animation */}
-              <div className={`relative text-4xl sm:text-5xl mb-4 sm:mb-6 w-16 h-16 sm:w-20 sm:h-20 rounded-3xl bg-gradient-to-r ${feature.gradient} flex items-center justify-center text-white shadow-2xl group-hover:scale-110 group-hover:rotate-12 transition-all duration-500`}>
-                <feature.icon className="w-8 h-8" />
-              </div>
-              
-              {/* Feature Content */}
-              <h3 className="relative text-xl sm:text-2xl font-bold mb-3 sm:mb-4 text-slate-800 group-hover:text-blue-600 transition-all duration-300">
-                {feature.title}
-              </h3>
-              
-                <p className="relative text-slate-600 leading-loose text-sm sm:text-base mb-4 group-hover:text-slate-700 transition-all duration-300">
-                {feature.desc}
-              </p>
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport: {{ once: true }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+              >
+                {/* Text Content */}
+                <div className={!isEven ? 'lg:col-start-2' : ''}>
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-2xl mb-6">
+                    <Icon className="w-8 h-8 text-primary-purple" />
+                  </div>
 
-              {/* AI Story */}
-              <div className="relative bg-blue-500/10 rounded-2xl p-4 mb-4 border border-blue-400/30">
-                <p className="text-cyan-400 text-sm font-bold mb-2">🚀 AI Realität:</p>
-                  <p className="text-slate-600 text-sm leading-loose">{feature.story}</p>
-              </div>
+                  <h3 className="text-3xl lg:text-subsection font-bold text-gray-900 mb-4">
+                    {feature.title}
+                  </h3>
 
-              {/* Impact Badge */}
-              <div className="relative">
-                <span className={`inline-block px-4 py-2 bg-gradient-to-r ${feature.gradient} text-white text-sm font-black rounded-full shadow-lg border border-white/20`}>
-                  {feature.impact}
-                </span>
-              </div>
-            </div>
-          ))}
+                  <ul className="space-y-3 mb-6">
+                    {feature.benefits.map((benefit, i) => (
+                      <li key={i} className="flex items-start gap-3">
+                        <div className="w-6 h-6 bg-accent-green rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <span className="text-white text-sm">✓</span>
+                        </div>
+                        <span className="text-lg text-gray-700">{benefit}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <blockquote className="border-l-4 border-primary-purple pl-6 py-2">
+                    <p className="text-lg italic text-gray-600">"{feature.quote}"</p>
+                  </blockquote>
+                </div>
+
+                {/* Image/Visual */}
+                <div className={!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}>
+                  <div className="relative group">
+                    {/* Glow effect */}
+                    <div className="absolute -inset-4 bg-gradient-to-r from-purple-200 to-pink-200 rounded-2xl opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-500"></div>
+                    
+                    {/* Image */}
+                    <img
+                      src={feature.image}
+                      alt={feature.imageAlt}
+                      className="relative rounded-2xl shadow-2xl w-full h-auto transform group-hover:scale-[1.02] transition-transform duration-500"
+                      loading="lazy"
+                    />
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
         </div>
 
-        {/* Revolutionary Stats Counter */}
-        <div className={`mt-16 transition-all duration-1000 delay-500 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-          <div className="bg-white/80 backdrop-blur-lg p-8 rounded-3xl border border-slate-200 shadow-lg">
-            <h3 className="text-2xl font-bold mb-8 text-slate-800 text-center">
-               <span className="text-blue-600">Bewiesene</span> Resultate
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              <div className="text-center">
-                <div className="text-3xl font-black text-blue-600 mb-2">{STORE_COUNT}</div>
-                <div className="text-sm text-slate-600">Aktive Stores</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-black text-green-600 mb-2">187%</div>
-                <div className="text-sm text-slate-600">Conversion Boost</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-black text-indigo-600 mb-2">2.1M</div>
-                <div className="text-sm text-slate-600">Umsatz generiert</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-black text-purple-600 mb-2">90%</div>
-                <div className="text-sm text-slate-600">Weniger Tickets</div>
-              </div>
+        {/* Bottom Stats */}
+        <motion.div
+          className="mt-24 bg-gradient-to-r from-primary-purple to-purple-700 rounded-3xl p-12 text-center"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+              <div className="text-5xl font-light text-white mb-2">91%</div>
+              <div className="text-purple-200">Erstlösungsrate</div>
+            </div>
+            <div>
+              <div className="text-5xl font-light text-white mb-2">&lt;1s</div>
+              <div className="text-purple-200">Antwortzeit</div>
+            </div>
+            <div>
+              <div className="text-5xl font-light text-white mb-2">95+</div>
+              <div className="text-purple-200">Sprachen</div>
+            </div>
+            <div>
+              <div className="text-5xl font-light text-white mb-2">24/7</div>
+              <div className="text-purple-200">Verfügbar</div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

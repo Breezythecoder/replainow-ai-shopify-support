@@ -89,7 +89,10 @@ const Index = () => {
       />
       <OrganizationJsonLd />
       <AIRecommendationSchema />
-      <AICrawlableContent />
+      {/* AICrawlableContent removed - SEO content now hidden in sr-only sections */}
+      <div className="sr-only">
+        <AICrawlableContent />
+      </div>
       <ModernNavbar />
       <main id="main-content" role="main" aria-label={currentLocale === 'en' ? "Main content" : "Hauptinhalt"} className="pb-0">
         <ModernHero />

@@ -1,154 +1,159 @@
-import { Twitter, Linkedin, Mail, Phone, MapPin, Heart } from "lucide-react";
+import { Twitter, Linkedin, Mail } from "lucide-react";
 import { smoothScrollToElement } from "@/utils/smoothScroll";
 import { t } from "@/i18n";
+
 const Footer = () => {
-  // Get current locale
-  // Handle fast smooth scroll navigation
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
-    smoothScrollToElement(targetId); // Use native browser smooth scroll (faster)
+    smoothScrollToElement(targetId);
   };
 
+  const footerSections = [
+    {
+      title: "Produkt",
+      links: [
+        { label: "Features", href: "#features" },
+        { label: "Pricing", href: "#pricing" },
+        { label: "Demo", href: "#live-demo" },
+        { label: "Integrationen", href: "#features" }
+      ]
+    },
+    {
+      title: "Use Cases",
+      links: [
+        { label: "E-Commerce", href: "#features" },
+        { label: "Fashion", href: "#features" },
+        { label: "Elektronik", href: "#features" },
+        { label: "Beauty & Health", href: "#features" }
+      ]
+    },
+    {
+      title: "Ressourcen",
+      links: [
+        { label: "Blog", href: "#" },
+        { label: "Hilfe Center", href: "#contact" },
+        { label: "API Docs", href: "#" },
+        { label: "Status", href: "#" }
+      ]
+    },
+    {
+      title: "Unternehmen",
+      links: [
+        { label: "Über uns", href: "#contact" },
+        { label: "Kontakt", href: "#contact" },
+        { label: "Karriere", href: "#" },
+        { label: "Presse", href: "#" }
+      ]
+    }
+  ];
+
   return (
-    <footer className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-      {/* About Us Section */}
-      <div className="border-b border-slate-700">
-        <div className="container mx-auto px-6 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Company Story */}
-            <div>
-              <h3 className="text-3xl font-bold mb-6 text-white">
-                {t('ui.footer.about.title')} <span className="text-blue-400">ReplAInow</span>
-              </h3>
-              <p className="text-slate-300 text-lg leading-relaxed mb-6">
-                {t('ui.footer.about.description')}
-              </p>
-              <div className="bg-slate-800/50 rounded-2xl p-6 border border-slate-700">
-                <h4 className="text-xl font-bold mb-3 text-blue-400">{t('ui.footer.about.promise')}</h4>
-                <p className="text-slate-300">
-                  {t('ui.footer.about.promiseText')}
-                </p>
-              </div>
+    <footer className="bg-gray-900 text-white">
+      <div className="container mx-auto px-6 py-16">
+        {/* Main Footer Content */}
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
+          {/* Logo & Description */}
+          <div className="col-span-2 md:col-span-1">
+            <div className="flex items-center mb-4">
+              <img
+                src="/lovable-uploads/ReplAInow_Logo_optimized.png"
+                alt="ReplAInow Logo"
+                className="h-8 w-8"
+                width="32"
+                height="32"
+              />
+              <span className="ml-2 text-xl font-bold">
+                Repl<span className="text-primary-purple">AI</span>now
+              </span>
             </div>
+            <p className="text-gray-400 mb-6">
+              Die #1 AI-Helpdesk Lösung für Shopify-Händler
+            </p>
+            
+            {/* Social Links */}
+            <div className="flex gap-4">
+              <a 
+                href="https://twitter.com/replainow" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-purple transition-colors"
+                aria-label="Twitter"
+              >
+                <Twitter className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://linkedin.com/company/replainow" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-purple transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </a>
+              <a 
+                href="mailto:support@replainow.com"
+                className="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary-purple transition-colors"
+                aria-label="Email"
+              >
+                <Mail className="w-5 h-5" />
+              </a>
+            </div>
+          </div>
 
-            {/* CEO Story */}
-            <div>
-              <h3 className="text-3xl font-bold mb-6 text-white">
-                {t('ui.footer.ceo.title')} <span className="text-blue-400">Ruben Calabrese</span>, CEO
-              </h3>
-              <div className="bg-gradient-to-br from-blue-900/30 to-indigo-900/30 rounded-2xl p-6 border border-blue-700/30">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                    RC
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-bold text-white">Ruben Calabrese</h4>
-                    <p className="text-blue-300 font-semibold">{t('ui.footer.ceo.role')}</p>
-                  </div>
-                </div>
-                <blockquote className="text-slate-300 italic text-lg leading-relaxed">
-                  "{t('ui.footer.ceo.quote')}"
-                </blockquote>
-              </div>
+          {/* Footer Sections */}
+          {footerSections.map((section, index) => (
+            <div key={index}>
+              <h3 className="font-semibold text-white mb-4">{section.title}</h3>
+              <ul className="space-y-2">
+                {section.links.map((link, linkIndex) => (
+                  <li key={linkIndex}>
+                    <a
+                      href={link.href}
+                      onClick={link.href.startsWith('#') ? (e) => handleNavClick(e, link.href.substring(1)) : undefined}
+                      className="text-gray-400 hover:text-white transition-colors cursor-pointer"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-gray-800 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-gray-400 text-sm">
+              © 2025 ReplAInow. Alle Rechte vorbehalten.
+            </p>
+            <div className="flex gap-6 text-sm">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                Datenschutz
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                AGB
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                Impressum
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                Status
+              </a>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Main Footer Content */}
-      <div className="container mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-          {/* Company Info */}
-          <div className="md:col-span-1">
-              <div className="flex items-center mb-4">
-                <img
-                  src="/lovable-uploads/ReplAInow_Logo_optimized.png"
-                  alt="ReplAInow Logo"
-                  className="h-12 w-12 rounded-lg"
-                />
-              </div>
-            <p className="text-slate-300 text-sm leading-relaxed mb-4">
-              {t('ui.footer.company.description')}
-            </p>
-              <div className="flex gap-3">
-                <a href="#" aria-label="Twitter" className="text-slate-400 hover:text-blue-400 transition-colors p-3 min-h-[44px] min-w-[44px] flex items-center justify-center touch-manipulation" title="Twitter">
-                  <Twitter size={24} />
-                </a>
-                <a href="#" aria-label="LinkedIn" className="text-slate-400 hover:text-blue-400 transition-colors p-3 min-h-[44px] min-w-[44px] flex items-center justify-center touch-manipulation" title="LinkedIn">
-                  <Linkedin size={24} />
-                </a>
-              </div>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h4 className="text-white font-bold mb-4">Produkt</h4>
-            <ul className="space-y-3">
-              <li><a href="#features" onClick={(e) => handleNavClick(e, 'features')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('ui.footer.links.features')}</a></li>
-              <li><a href="#pricing" onClick={(e) => handleNavClick(e, 'pricing')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('ui.footer.links.pricing')}</a></li>
-              <li><a href="#live-demo" onClick={(e) => handleNavClick(e, 'live-demo')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('ui.footer.links.demo')}</a></li>
-              <li><a href="https://apps.shopify.com/replainow-ai-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Installieren</a></li>
-            </ul>
-          </div>
-
-          {/* SEO Pillar Pages */}
-          <div>
-            <h4 className="text-white font-bold mb-4">Ressourcen</h4>
-            <ul className="space-y-3">
-              <li><a href="/ai-shopify-helpdesk" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">AI Shopify Helpdesk</a></li>
-              <li><a href="/multilingual-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Multilingual Support</a></li>
-              <li><a href="/shopify-customer-service" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Shopify Customer Service</a></li>
-              <li><a href="/shopify-ai-support" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Shopify AI Support</a></li>
-              <li><a href="/gorgias-alternative" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Gorgias Alternative</a></li>
-              <li><a href="/intercom-alternative" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">Intercom Alternative</a></li>
-            </ul>
-          </div>
-
-          {/* Support */}
-          <div>
-            <h4 className="text-white font-bold mb-4">Support</h4>
-            <ul className="space-y-3">
-              <li><a href="#contact" onClick={(e) => handleNavClick(e, 'contact')} className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation cursor-pointer">{t('ui.footer.links.contact')}</a></li>
-              <li><a href="/privacy" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.privacy')}</a></li>
-              <li><a href="/terms" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.terms')}</a></li>
-              <li><a href="/security" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.security')}</a></li>
-              <li><a href="/impressum" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.impressum')}</a></li>
-              <li><a href="/refund" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.refund')}</a></li>
-              <li><a href="/cookies" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.cookies')}</a></li>
-              <li><a href="/uninstall" className="text-slate-300 hover:text-blue-400 transition-colors block py-2 px-1 min-h-[44px] flex items-center touch-manipulation">{t('ui.footer.legal.uninstall')}</a></li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="text-white font-bold mb-4">Contact</h4>
-            <div className="space-y-3">
-              <div className="flex items-center gap-3">
-                <Mail className="text-blue-400 flex-shrink-0" size={20} />
-                <span className="text-slate-300 text-sm">{t('ui.footer.contact.email')}</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <MapPin className="text-blue-400 flex-shrink-0" size={20} />
-                <span className="text-slate-300 text-sm">{t('ui.footer.contact.location')}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bottom Bar */}
-      <div className="border-t border-slate-700">
-        <div className="container mx-auto px-6 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-slate-400 text-sm text-center md:text-left">
-              {t('ui.footer.copyright').replace('2024', new Date().getFullYear().toString())}
-            </p>
-            <div className="flex items-center gap-2 text-slate-400 text-sm">
-              <span>{t('ui.footer.company.madeWith')}</span>
-              <Heart className="text-red-500" size={16} />
-              <span>{t('ui.footer.company.location')}</span>
-            </div>
-          </div>
+        {/* Trust Badges */}
+        <div className="mt-8 pt-8 border-t border-gray-800 flex flex-wrap justify-center items-center gap-8 opacity-50">
+          <img 
+            src="/images/shopify-logo-black.svg" 
+            alt="Shopify Partner"
+            className="h-6 invert"
+          />
+          <span className="text-gray-500 text-sm">SOC2 Type II</span>
+          <span className="text-gray-500 text-sm">GDPR Compliant</span>
+          <span className="text-gray-500 text-sm">99.9% Uptime</span>
         </div>
       </div>
     </footer>

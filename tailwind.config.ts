@@ -36,7 +36,9 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					purple: '#6B46C1',
+					dark: '#1F2937',
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -52,7 +54,10 @@ export default {
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
+					foreground: 'hsl(var(--accent-foreground))',
+					green: '#10B981',
+					blue: '#3B82F6',
+					orange: '#F59E0B',
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -111,6 +116,11 @@ export default {
 			fontFamily: {
 				sans: ["Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"],
 				display: ["Plus Jakarta Sans", "Inter", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", "Noto Sans"]
+			},
+			fontSize: {
+				'hero': ['56px', { lineHeight: '64px', letterSpacing: '-0.02em' }],
+				'section': ['48px', { lineHeight: '56px', letterSpacing: '-0.02em' }],
+				'subsection': ['36px', { lineHeight: '44px', letterSpacing: '-0.01em' }],
 			},
 			keyframes: {
 				'accordion-down': {

@@ -1,78 +1,113 @@
-import { Button } from "@/components/ui/button";
-import { Download, Zap, Brain } from "lucide-react";
+import { motion } from "framer-motion";
+import { Download, Settings, TrendingUp } from "lucide-react";
 import { t } from "@/i18n";
-import { safeArray } from "@/utils/safeT";
-import { z } from "zod";
-
-const OAUTH_URL = "https://apps.shopify.com/replainow-ai-support";
-
-// Schema for step validation
-const StepSchema = z.object({
-  title: z.string(),
-  description: z.string()
-});
-
-const StepsArraySchema = z.array(StepSchema);
 
 const ModernHowItWorks = () => {
-  // Get steps from i18n using safeArray
-  const stepsData = safeArray(StepsArraySchema, "ui.howItWorks.steps");
-  
-  // Icons for the steps
-  const icons = [Download, Zap, Brain];
-  
-  // Build steps array with proper data
-  const steps = stepsData.map((stepData, index) => ({
-    step: String(index + 1).padStart(2, '0'),
-    icon: icons[index] || Download,
-    title: stepData.title,
-    desc: stepData.description
-  }));
+  const steps = [
+    {
+      number: "1",
+      icon: Download,
+      title: "Installation",
+      description: "5-Minuten Shopify Setup",
+      detail: "Einfache 1-Klick Installation aus dem Shopify App Store"
+    },
+    {
+      number: "2",
+      icon: Settings,
+      title: "Anpassen",
+      description: "Deine Marke lehren",
+      detail: "AI lernt deine Produkte und deinen Tone of Voice"
+    },
+    {
+      number: "3",
+      icon: TrendingUp,
+      title: "Wachsen",
+      description: "Mehr Verkäufe beobachten",
+      detail: "AI arbeitet 24/7, während du dich auf das Wachstum konzentrierst"
+    }
+  ];
+
+  const fadeInUp = {
+    initial: { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { duration: 0.6 }
+  };
 
   return (
-    <section className="py-24 bg-gradient-to-b from-indigo-50 to-purple-50">
+    <section className="py-24 bg-white">
       <div className="container mx-auto px-6">
-        <h2 
-          className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6 sm:mb-8 tracking-tight px-4 text-center"
-          dangerouslySetInnerHTML={{ 
-            __html: t('ui.howItWorks.title')
-              .replace('{highlight}', '<span class="text-gradient-primary">')
-              .replace('{/highlight}', '</span>')
-          }}
-        />
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16 max-w-5xl mx-auto">
-          {steps.map((step, i) => (
-            <div key={i} className="text-center group px-4 lg:px-6">
-              <div className="relative mb-6">
-                <div className="w-20 h-20 sm:w-24 sm:h-24 mx-auto bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white shadow-xl group-hover:shadow-2xl group-hover:scale-110 transition-all duration-300">
-                  <step.icon className="w-8 h-8 sm:w-10 sm:h-10" />
-                </div>
-                <div className="absolute -top-2 -right-2 bg-white text-indigo-600 font-black text-xs sm:text-sm px-2 py-1 sm:px-3 sm:py-2 rounded-full border-2 border-indigo-200 shadow-lg">
-                  {step.step}
-                </div>
-                {/* Connection Line - Desktop only */}
-                {i < steps.length - 1 && (
-                  <div className="hidden lg:block absolute top-10 sm:top-12 left-full w-8 h-0.5 bg-gradient-to-r from-indigo-300 to-purple-300 -z-10 transform translate-x-4"></div>
-                )}
-              </div>
-              <h3 className="text-lg sm:text-xl font-bold mb-4 text-slate-800 leading-tight">{step.title}</h3>
-              <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xs mx-auto">{step.desc}</p>
-            </div>
-          ))}
-        </div>
-        
-        {/* Mobile-Optimized CTA */}
-        <div className="text-center px-4">
-          <Button asChild variant="cta" size="xl" className="w-full sm:w-auto text-base sm:text-lg px-8 sm:px-12 py-5 sm:py-6 font-bold min-h-[56px] max-w-md mx-auto">
-            <a href={OAUTH_URL} className="flex items-center justify-center gap-2">
-              Kostenlos starten
-            </a>
-          </Button>
-          <p className="text-xs sm:text-sm text-slate-500 mt-4 leading-relaxed">
-            14 Tage kostenlos • Setup-frei • Jederzeit kündbar
+        {/* Section Header */}
+        <motion.div 
+          className="text-center mb-16"
+          {...fadeInUp}
+        >
+          <h2 className="text-4xl lg:text-section font-bold text-gray-900 mb-4">
+            {t("ui.howItWorks.title") || "So einfach geht's"}
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            In 3 einfachen Schritten zu automatisiertem Support
           </p>
+        </motion.div>
+
+        {/* Steps Grid */}
+        <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          {steps.map((step, index) => {
+            const Icon = step.icon;
+            
+            return (
+              <motion.div
+                key={index}
+                className="text-center relative"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.15 }}
+              >
+                {/* Connection Line (Desktop only) */}
+                {index < steps.length - 1 && (
+                  <div className="hidden md:block absolute top-16 left-1/2 w-full h-0.5 bg-gradient-to-r from-primary-purple to-purple-300 z-0"></div>
+                )}
+
+                {/* Step Number */}
+                <div className="relative inline-flex items-center justify-center w-32 h-32 mx-auto mb-6 z-10">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary-purple to-purple-400 rounded-full opacity-10"></div>
+                  <div className="absolute inset-4 bg-white rounded-full shadow-lg"></div>
+                  <div className="relative w-20 h-20 bg-gradient-to-br from-primary-purple to-purple-600 rounded-full flex items-center justify-center">
+                    <Icon className="w-10 h-10 text-white" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-8 h-8 bg-accent-green rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">
+                    {step.number}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-lg text-primary-purple font-semibold mb-3">
+                  {step.description}
+                </p>
+                <p className="text-gray-600">
+                  {step.detail}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+        >
+          <p className="text-lg text-gray-600">
+            Durchschnittliche Setup-Zeit: <span className="font-bold text-primary-purple">4 Minuten 37 Sekunden</span>
+          </p>
+        </motion.div>
       </div>
     </section>
   );
