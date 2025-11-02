@@ -33,19 +33,19 @@ const UltraNavbar = () => {
 
   return (
     <header 
-      className="sticky top-0 z-50 transition-all duration-500"
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
       style={{
         background: isScrolled 
-          ? 'rgba(10, 11, 13, 0.85)'
-          : 'rgba(10, 11, 13, 0.5)',
-        backdropFilter: 'blur(24px) saturate(200%)',
-        WebkitBackdropFilter: 'blur(24px) saturate(200%)',
+          ? 'rgba(10, 11, 13, 0.9)'
+          : 'linear-gradient(180deg, rgba(10, 11, 13, 0.8) 0%, rgba(10, 11, 13, 0) 100%)',
+        backdropFilter: isScrolled ? 'blur(20px) saturate(180%)' : 'none',
+        WebkitBackdropFilter: isScrolled ? 'blur(20px) saturate(180%)' : 'none',
         borderBottom: isScrolled 
           ? '1px solid rgba(147, 51, 234, 0.2)' 
-          : '1px solid rgba(147, 51, 234, 0.08)',
+          : 'none',
         boxShadow: isScrolled 
-          ? '0 8px 32px rgba(0, 0, 0, 0.4), 0 0 40px rgba(147, 51, 234, 0.15)'
-          : '0 4px 16px rgba(0, 0, 0, 0.2)'
+          ? '0 8px 32px rgba(0, 0, 0, 0.5), 0 0 40px rgba(147, 51, 234, 0.2)'
+          : 'none'
       }}
     >
       <nav className="container mx-auto flex items-center justify-between h-20 px-6">
