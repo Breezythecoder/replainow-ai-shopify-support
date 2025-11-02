@@ -21,6 +21,7 @@ import { LocaleProvider, useLocale } from "@/i18n/LocaleContext";
 
 // Lazy load routes
 const Index = lazy(() => import("./pages/Index"));
+const IndexUltra = lazy(() => import("./pages/IndexUltra"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
 const TermsOfService = lazy(() => import("./pages/TermsOfService"));
 const UninstallInstructions = lazy(() => import("./pages/UninstallInstructions"));
@@ -83,6 +84,7 @@ const AppShell = () => {
       }>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/ultra" element={<IndexUltra />} />
           <Route path="/en" element={<Index />} />
           <Route path="/fr" element={<Index />} />
           <Route path="/es" element={<Index />} />

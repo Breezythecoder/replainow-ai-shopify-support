@@ -1,0 +1,250 @@
+/**
+ * ReplAInow ULTRA Design System 2025
+ * Premium Purple Brand Identity
+ */
+
+:root {
+  /* ============================================
+   * ULTRA COLOR SYSTEM - Purple Brand Only
+   * ============================================ */
+  --ultra-purple-deep: #6B46C1;
+  --ultra-purple-electric: #8B5CF6;
+  --ultra-purple-soft: #A78BFA;
+  --ultra-purple-light: #DDD6FE;
+  --ultra-purple-ultra-light: #F5F3FF;
+  
+  --ultra-black: #0F172A;
+  --ultra-gray-dark: #1E293B;
+  --ultra-gray: #64748B;
+  --ultra-gray-light: #CBD5E1;
+  --ultra-gray-ultra-light: #F1F5F9;
+  --ultra-white: #FFFFFF;
+  --ultra-bg: #F8FAFC;
+  
+  /* Success Green - ONLY for CTAs */
+  --ultra-green: #10B981;
+  --ultra-green-dark: #059669;
+  
+  /* ============================================
+   * ULTRA GRADIENTS
+   * ============================================ */
+  --gradient-ultra-purple: linear-gradient(135deg, #6B46C1 0%, #8B5CF6 50%, #A78BFA 100%);
+  --gradient-ultra-mesh: 
+    radial-gradient(at 0% 0%, rgba(107, 70, 193, 0.3) 0%, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(167, 139, 250, 0.3) 0%, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(107, 70, 193, 0.3) 0%, transparent 50%);
+  
+  /* ============================================
+   * ULTRA EFFECTS
+   * ============================================ */
+  --ultra-shadow-sm: 0 4px 12px rgba(107, 70, 193, 0.08);
+  --ultra-shadow-md: 0 8px 24px rgba(107, 70, 193, 0.12);
+  --ultra-shadow-lg: 0 20px 60px rgba(107, 70, 193, 0.15);
+  --ultra-shadow-xl: 0 40px 100px rgba(107, 70, 193, 0.2);
+  
+  --ultra-glow-purple: 0 0 60px rgba(107, 70, 193, 0.4),
+                       0 0 120px rgba(139, 92, 246, 0.2);
+  
+  --ultra-glow-green: 0 10px 30px rgba(16, 185, 129, 0.3),
+                      0 0 60px rgba(16, 185, 129, 0.2);
+}
+
+/* ============================================
+ * ULTRA GLASS EFFECTS
+ * ============================================ */
+ 
+.ultra-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: var(--ultra-shadow-md);
+}
+
+.ultra-glass-strong {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: var(--ultra-shadow-lg);
+}
+
+.ultra-glass-purple {
+  background: linear-gradient(
+    135deg,
+    rgba(107, 70, 193, 0.95),
+    rgba(139, 92, 246, 0.9)
+  );
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--ultra-glow-purple);
+}
+
+.ultra-glass-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(30px);
+  -webkit-backdrop-filter: blur(30px);
+  border-radius: 24px;
+  border: 2px solid rgba(107, 70, 193, 0.1);
+  box-shadow: var(--ultra-shadow-lg);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ultra-glass-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--ultra-shadow-xl);
+  border-color: rgba(107, 70, 193, 0.3);
+}
+
+/* ============================================
+ * ULTRA GRADIENTS
+ * ============================================ */
+ 
+.ultra-gradient-purple {
+  background: var(--gradient-ultra-purple);
+  background-size: 200% 200%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+.ultra-gradient-mesh {
+  background: var(--gradient-ultra-mesh);
+}
+
+.ultra-text-gradient {
+  background: linear-gradient(135deg, #6B46C1 0%, #8B5CF6 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ultra-text-shimmer {
+  background: linear-gradient(
+    90deg,
+    #6B46C1 0%,
+    #A78BFA 50%,
+    #6B46C1 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+}
+
+/* ============================================
+ * ULTRA ANIMATIONS
+ * ============================================ */
+ 
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes float-orb {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+@keyframes pulse-glow-purple {
+  0%, 100% {
+    box-shadow: var(--ultra-glow-purple);
+  }
+  50% {
+    box-shadow: 
+      0 0 80px rgba(107, 70, 193, 0.6),
+      0 0 160px rgba(139, 92, 246, 0.3);
+  }
+}
+
+/* ============================================
+ * UTILITY CLASSES
+ * ============================================ */
+ 
+.ultra-btn-primary {
+  background: linear-gradient(135deg, var(--ultra-green) 0%, var(--ultra-green-dark) 100%);
+  padding: 20px 48px;
+  border-radius: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  box-shadow: var(--ultra-glow-green);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: none;
+  cursor: pointer;
+}
+
+.ultra-btn-primary:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 
+    0 20px 40px rgba(16, 185, 129, 0.4),
+    0 0 80px rgba(16, 185, 129, 0.3);
+}
+
+.ultra-card {
+  background: white;
+  border-radius: 24px;
+  padding: 48px;
+  border: 2px solid rgba(107, 70, 193, 0.1);
+  box-shadow: var(--ultra-shadow-md);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.ultra-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--ultra-shadow-xl);
+  border-color: rgba(107, 70, 193, 0.3);
+}
+
+.ultra-orb {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.6;
+  animation: float-orb 20s ease-in-out infinite;
+}
+
+.ultra-orb-purple {
+  background: radial-gradient(circle, rgba(107, 70, 193, 0.4) 0%, transparent 70%);
+}
+
+.ultra-orb-purple-light {
+  background: radial-gradient(circle, rgba(167, 139, 250, 0.3) 0%, transparent 70%);
+}
+
+/* ============================================
+ * RESPONSIVE
+ * ============================================ */
+ 
+@media (max-width: 768px) {
+  .ultra-btn-primary {
+    padding: 16px 32px;
+    font-size: 16px;
+  }
+  
+  .ultra-card {
+    padding: 32px;
+    border-radius: 20px;
+  }
+  
+  .ultra-orb {
+    width: 300px;
+    height: 300px;
+  }
+}
+
