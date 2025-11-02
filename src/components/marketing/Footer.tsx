@@ -49,23 +49,23 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-6 py-16">
-        {/* Main Footer Content */}
+        <div className="container mx-auto px-6 py-16">
+      {/* Main Footer Content */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Logo & Description */}
           <div className="col-span-2 md:col-span-1">
-            <div className="flex items-center mb-4">
-              <img
-                src="/lovable-uploads/ReplAInow_Logo_optimized.png"
-                alt="ReplAInow Logo"
+              <div className="flex items-center mb-4">
+                <img
+                  src="/lovable-uploads/ReplAInow_Logo_optimized.png"
+                  alt="ReplAInow Logo"
                 className="h-8 w-8"
                 width="32"
                 height="32"
-              />
+                />
               <span className="ml-2 text-xl font-bold">
                 Repl<span className="text-primary-purple">AI</span>now
               </span>
-            </div>
+              </div>
             <p className="text-gray-400 mb-6">
               Die #1 AI-Helpdesk Lösung für Shopify-Händler
             </p>
@@ -80,7 +80,7 @@ const Footer = () => {
                 aria-label="Twitter"
               >
                 <Twitter className="w-5 h-5" />
-              </a>
+                </a>
               <a 
                 href="https://linkedin.com/company/replainow" 
                 target="_blank" 
@@ -96,8 +96,8 @@ const Footer = () => {
                 aria-label="Email"
               >
                 <Mail className="w-5 h-5" />
-              </a>
-            </div>
+                </a>
+              </div>
           </div>
 
           {/* Footer Sections */}
@@ -116,12 +116,12 @@ const Footer = () => {
                     </a>
                   </li>
                 ))}
-              </ul>
+            </ul>
             </div>
           ))}
-        </div>
+      </div>
 
-        {/* Bottom Bar */}
+      {/* Bottom Bar */}
         <div className="border-t border-gray-800 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-sm">

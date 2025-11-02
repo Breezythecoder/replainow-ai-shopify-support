@@ -37,16 +37,16 @@ const ModernHero = () => {
             
             {/* Headline - Clean & Premium */}
             <h1 className="text-5xl lg:text-6xl xl:text-hero font-bold text-gray-900 leading-tight">
-              {t('hero.title')}
+              {t('marketing.hero.title')}
               <br />
               <span className="text-primary-purple">
-                {t('hero.subtitle')}
+                {t('marketing.hero.subtitle')}
               </span>
             </h1>
             
             {/* Subheadline - Benefits Focused */}
             <p className="text-xl text-gray-600 leading-relaxed max-w-xl">
-              {t('hero.description')}
+              {t('marketing.hero.description')}
             </p>
             
             {/* CTAs - Green Gradient Primary */}
@@ -55,7 +55,7 @@ const ModernHero = () => {
                 href={OAUTH_URL}
                 className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white bg-gradient-to-r from-accent-green to-emerald-600 rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
               >
-                {t('hero.installButton')}
+                {t('marketing.hero.installButton')}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a

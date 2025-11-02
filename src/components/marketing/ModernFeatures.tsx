@@ -76,7 +76,7 @@ const ModernFeatures = () => {
             Leistungsstarke Features, die deinen Shop transformieren
           </p>
         </motion.div>
-
+        
         {/* Features - Alternating Layout */}
         <div className="space-y-32">
           {features.map((feature, index) => {
@@ -98,12 +98,12 @@ const ModernFeatures = () => {
                 <div className={!isEven ? 'lg:col-start-2' : ''}>
                   <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-2xl mb-6">
                     <Icon className="w-8 h-8 text-primary-purple" />
-                  </div>
-
+              </div>
+              
                   <h3 className="text-3xl lg:text-subsection font-bold text-gray-900 mb-4">
-                    {feature.title}
-                  </h3>
-
+                {feature.title}
+              </h3>
+              
                   <ul className="space-y-3 mb-6">
                     {feature.benefits.map((benefit, i) => (
                       <li key={i} className="flex items-start gap-3">
@@ -118,7 +118,7 @@ const ModernFeatures = () => {
                   <blockquote className="border-l-4 border-primary-purple pl-6 py-2">
                     <p className="text-lg italic text-gray-600">"{feature.quote}"</p>
                   </blockquote>
-                </div>
+              </div>
 
                 {/* Image/Visual */}
                 <div className={!isEven ? 'lg:col-start-1 lg:row-start-1' : ''}>
@@ -133,8 +133,8 @@ const ModernFeatures = () => {
                       className="relative rounded-2xl shadow-2xl w-full h-auto transform group-hover:scale-[1.02] transition-transform duration-500"
                       loading="lazy"
                     />
-                  </div>
-                </div>
+              </div>
+            </div>
               </motion.div>
             );
           })}
@@ -152,15 +152,15 @@ const ModernFeatures = () => {
             <div>
               <div className="text-5xl font-light text-white mb-2">91%</div>
               <div className="text-purple-200">Erstlösungsrate</div>
-            </div>
+              </div>
             <div>
               <div className="text-5xl font-light text-white mb-2">&lt;1s</div>
               <div className="text-purple-200">Antwortzeit</div>
-            </div>
+              </div>
             <div>
               <div className="text-5xl font-light text-white mb-2">95+</div>
               <div className="text-purple-200">Sprachen</div>
-            </div>
+              </div>
             <div>
               <div className="text-5xl font-light text-white mb-2">24/7</div>
               <div className="text-purple-200">Verfügbar</div>

@@ -119,12 +119,12 @@ const ModernSocialProof = () => {
 
               {/* Author */}
               <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                <img
-                  src={testimonial.image}
+                  <img 
+                    src={testimonial.image} 
                   alt={testimonial.author}
                   className="w-12 h-12 rounded-full object-cover"
-                />
-                <div>
+                  />
+                  <div>
                   <div className="font-semibold text-gray-900">{testimonial.author}</div>
                   <div className="text-sm text-gray-600">
                     {testimonial.role}, {testimonial.company}

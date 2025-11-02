@@ -33,7 +33,7 @@ const ModernFinalCTA = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
-        >
+          >
           <a
             href={OAUTH_URL}
             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-primary-purple bg-white rounded-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200"
@@ -46,7 +46,7 @@ const ModernFinalCTA = () => {
             className="inline-flex items-center justify-center px-8 py-4 text-lg font-semibold text-white border-2 border-white rounded-lg hover:bg-white hover:text-primary-purple transition-all duration-200"
           >
             Demo ansehen
-          </a>
+            </a>
         </motion.div>
         
         <motion.div

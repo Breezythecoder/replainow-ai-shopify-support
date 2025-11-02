@@ -20,7 +20,7 @@ const ModernProblemSolution = () => {
         >
           <h2 className="text-4xl lg:text-section font-bold text-gray-900 mb-4">
             Dein Shop schläft nie. Dein Verkaufsteam auch nicht.
-          </h2>
+        </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Sieh den Unterschied zwischen traditionellem Support und AI-Power
           </p>
@@ -63,7 +63,7 @@ const ModernProblemSolution = () => {
               <li className="flex items-start gap-3">
                 <X className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" />
                 <span className="text-gray-700">Hohe Support-Kosten</span>
-              </li>
+                </li>
             </ul>
           </motion.div>
           
@@ -109,7 +109,7 @@ const ModernProblemSolution = () => {
               <li className="flex items-start gap-3">
                 <Check className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
                 <span className="text-gray-700">75% Kostenersparnis</span>
-              </li>
+                </li>
             </ul>
           </motion.div>
         </div>

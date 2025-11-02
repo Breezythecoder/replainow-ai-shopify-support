@@ -86,7 +86,7 @@ const ModernNavbar = () => {
               href={OAUTH_URL}
               className="hidden sm:inline-flex items-center px-6 py-3 text-base font-semibold text-white bg-gradient-to-r from-accent-green to-emerald-600 rounded-lg shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200"
             >
-              {t('hero.installButton')}
+              {t('marketing.hero.installButton')}
             </a>
             
             {/* Mobile Menu Button */}
@@ -124,7 +124,7 @@ const ModernNavbar = () => {
                 href={OAUTH_URL}
                 className="block w-full text-center px-6 py-4 text-lg font-semibold text-white bg-gradient-to-r from-accent-green to-emerald-600 rounded-lg shadow-md mt-4"
               >
-                {t('hero.installButton')}
+                {t('marketing.hero.installButton')}
               </a>
               
               {/* Mobile Language Switcher */}

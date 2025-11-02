@@ -73,13 +73,13 @@ const ModernPricing = () => {
           {...fadeInUp}
         >
           <h2 className="text-4xl lg:text-section font-bold text-gray-900 mb-4">
-            {t("pricing.title") || "Einfache, transparente Preise"}
+            {t("marketing.pricing.title") || "Einfache, transparente Preise"}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Starte kostenlos. Keine Kreditkarte erforderlich. Jederzeit kündbar.
           </p>
         </motion.div>
-
+        
         {/* Pricing Cards */}
         <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
           {pricingTiers.map((tier, index) => (
@@ -101,7 +101,7 @@ const ModernPricing = () => {
                   <span className="bg-accent-green text-white px-4 py-1 rounded-full text-sm font-semibold shadow-lg">
                     ⭐ Beliebteste Wahl
                   </span>
-                </div>
+        </div>
               )}
 
               {/* Tier Name */}
@@ -122,9 +122,9 @@ const ModernPricing = () => {
                   tier.popular ? 'text-purple-100' : 'text-gray-600'
                 }`}>
                   {tier.period}
-                </span>
-              </div>
-
+          </span>
+        </div>
+        
               {/* Description */}
               <p className={`mb-6 ${
                 tier.popular ? 'text-purple-100' : 'text-gray-600'
@@ -142,12 +142,12 @@ const ModernPricing = () => {
                     <span className={
                       tier.popular ? 'text-purple-50' : 'text-gray-700'
                     }>
-                      {feature}
+                  {feature}
                     </span>
-                  </li>
-                ))}
-              </ul>
-
+                    </li>
+                  ))}
+                </ul>
+                
               {/* CTA Button */}
               <a
                 href={tier.popular || tier.name === "Starter" ? OAUTH_URL : "#contact"}
@@ -165,7 +165,7 @@ const ModernPricing = () => {
             </motion.div>
           ))}
         </div>
-
+        
         {/* Trust Elements */}
         <motion.div
           className="text-center space-y-4"
@@ -181,7 +181,7 @@ const ModernPricing = () => {
             Alle Pläne beinhalten: DSGVO-Konformität, SSL-Verschlüsselung, 99.9% Uptime
           </p>
         </motion.div>
-
+              
         {/* Comparison Note */}
         <motion.div
           className="mt-16 bg-gradient-to-r from-gray-50 to-purple-50 rounded-2xl p-8 text-center border border-purple-100"
