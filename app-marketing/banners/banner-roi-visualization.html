@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReplAInow - ROI Visualization Banner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    
+    .banner-container {
+      max-width: 1000px;
+      width: 100%;
+      background: white;
+      border-radius: 24px;
+      padding: 60px;
+      box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.04),
+        0 8px 16px rgba(0, 0, 0, 0.06),
+        0 16px 32px rgba(0, 0, 0, 0.08);
+    }
+    
+    .banner-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+    
+    .banner-subtitle {
+      text-align: center;
+      font-size: 20px;
+      color: #6B7280;
+      margin-bottom: 60px;
+    }
+    
+    .comparison-section {
+      margin-bottom: 60px;
+    }
+    
+    .section-label {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: #8B5CF6;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 32px;
+    }
+    
+    .bars-container {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    
+    .bar-row {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    
+    .bar-label {
+      width: 180px;
+      flex-shrink: 0;
+    }
+    
+    .label-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+    
+    .label-subtitle {
+      font-size: 13px;
+      color: #6B7280;
+    }
+    
+    .bar-track {
+      flex: 1;
+      height: 60px;
+      background: #F3F4F6;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .bar-fill {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 20px;
+      border-radius: 12px;
+      transition: width 1s ease;
+      position: relative;
+    }
+    
+    .bar-fill.before {
+      background: linear-gradient(90deg, #EF4444 0%, #DC2626 100%);
+      width: 100%;
+    }
+    
+    .bar-fill.after-manual {
+      background: linear-gradient(90deg, #F59E0B 0%, #D97706 100%);
+      width: 20%;
+    }
+    
+    .bar-fill.after-auto {
+      background: linear-gradient(90deg, #8B5CF6 0%, #7C3AED 100%);
+      width: 80%;
+    }
+    
+    .bar-value {
+      font-size: 20px;
+      font-weight: 900;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    .bar-annotation {
+      position: absolute;
+      top: -30px;
+      right: 20px;
+      background: white;
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .bar-annotation.red {
+      color: #DC2626;
+      border: 1px solid #EF4444;
+    }
+    
+    .bar-annotation.green {
+      color: #059669;
+      border: 1px solid #10B981;
+    }
+    
+    .stacked-bar {
+      display: flex;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+    
+    .stat-card {
+      background: linear-gradient(145deg, #FFFFFF 0%, #FAFBFC 100%);
+      border: 2px solid #E5E7EB;
+      border-radius: 16px;
+      padding: 32px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-4px);
+      border-color: #8B5CF6;
+      box-shadow: 0 8px 24px rgba(139, 92, 246, 0.15);
+    }
+    
+    .stat-icon {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+    
+    .stat-value {
+      font-size: 48px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+    
+    .stat-label {
+      font-size: 16px;
+      font-weight: 600;
+      color: #6B7280;
+      margin-bottom: 8px;
+    }
+    
+    .stat-description {
+      font-size: 13px;
+      color: #9CA3AF;
+    }
+    
+    .divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent 0%, #E5E7EB 50%, transparent 100%);
+      margin: 60px 0;
+    }
+    
+    @media (max-width: 768px) {
+      .banner-container {
+        padding: 32px 24px;
+      }
+      
+      .banner-title {
+        font-size: 28px;
+      }
+      
+      .banner-subtitle {
+        font-size: 16px;
+      }
+      
+      .bar-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .bar-label {
+        width: 100%;
+      }
+      
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner-container">
+    <h1 class="banner-title">ROI-Visualisierung</h1>
+    <p class="banner-subtitle">Konkrete Zahlen. Messbare Ersparnisse. Klarer Return on Investment.</p>
+    
+    <!-- Before/After Comparison -->
+    <div class="comparison-section">
+      <div class="section-label">📊 Vorher vs. Nachher</div>
+      
+      <div class="bars-container">
+        <!-- Before ReplAInow -->
+        <div class="bar-row">
+          <div class="bar-label">
+            <div class="label-title">❌ Ohne ReplAInow</div>
+            <div class="label-subtitle">Alle Tickets manuell</div>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill before">
+              <div class="bar-value">200 Tickets/Tag</div>
+            </div>
+            <div class="bar-annotation red">Volle Arbeitslast</div>
+          </div>
+        </div>
+        
+        <!-- After ReplAInow -->
+        <div class="bar-row">
+          <div class="bar-label">
+            <div class="label-title">✅ Mit ReplAInow</div>
+            <div class="label-subtitle">60-80% automatisiert</div>
+          </div>
+          <div class="bar-track">
+            <div class="stacked-bar">
+              <div class="bar-fill after-manual" style="justify-content: center;">
+                <div class="bar-value">40</div>
+              </div>
+              <div class="bar-fill after-auto">
+                <div class="bar-value">160 AI ✨</div>
+              </div>
+            </div>
+            <div class="bar-annotation green">-80% manuelle Arbeit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="divider"></div>
+    
+    <!-- Savings Stats -->
+    <div class="section-label">💰 Deine Ersparnisse</div>
+    
+    <div class="stats-grid">
+      <!-- Time Saved -->
+      <div class="stat-card">
+        <div class="stat-icon">⏱️</div>
+        <div class="stat-value">120h</div>
+        <div class="stat-label">Zeit gespart</div>
+        <div class="stat-description">Pro Monat</div>
+      </div>
+      
+      <!-- Cost Saved -->
+      <div class="stat-card">
+        <div class="stat-icon">💵</div>
+        <div class="stat-value">€4,800</div>
+        <div class="stat-label">Kosten gespart</div>
+        <div class="stat-description">Bei €40/Stunde</div>
+      </div>
+      
+      <!-- ROI -->
+      <div class="stat-card">
+        <div class="stat-icon">📈</div>
+        <div class="stat-value">450%</div>
+        <div class="stat-label">ROI</div>
+        <div class="stat-description">Nach 6 Monaten</div>
+      </div>
+    </div>
+    
+    <div class="divider"></div>
+    
+    <!-- Additional Benefits -->
+    <div class="section-label">✨ Zusätzliche Vorteile</div>
+    
+    <div class="stats-grid">
+      <!-- Faster Response -->
+      <div class="stat-card">
+        <div class="stat-icon">⚡</div>
+        <div class="stat-value">&lt;1s</div>
+        <div class="stat-label">Antwortzeit</div>
+        <div class="stat-description">vs. 2-4 Stunden vorher</div>
+      </div>
+      
+      <!-- Customer Satisfaction -->
+      <div class="stat-card">
+        <div class="stat-icon">😊</div>
+        <div class="stat-value">+35%</div>
+        <div class="stat-label">CSAT-Score</div>
+        <div class="stat-description">Zufriedenere Kunden</div>
+      </div>
+      
+      <!-- AOV Increase -->
+      <div class="stat-card">
+        <div class="stat-icon">🛍️</div>
+        <div class="stat-value">+23%</div>
+        <div class="stat-label">AOV-Steigerung</div>
+        <div class="stat-description">Durch besseren Support</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

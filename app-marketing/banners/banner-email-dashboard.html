@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReplAInow - Email Dashboard Banner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    
+    .banner-container {
+      max-width: 1600px;
+      width: 100%;
+      background: white;
+      border-radius: 24px;
+      padding: 60px;
+      box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.04),
+        0 8px 16px rgba(0, 0, 0, 0.06),
+        0 16px 32px rgba(0, 0, 0, 0.08);
+    }
+    
+    .banner-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+    
+    .banner-subtitle {
+      text-align: center;
+      font-size: 20px;
+      color: #6B7280;
+      margin-bottom: 60px;
+    }
+    
+    .dashboard-mockup {
+      background: #F9FAFB;
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid #E5E7EB;
+    }
+    
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr 320px;
+      gap: 20px;
+      min-height: 500px;
+    }
+    
+    /* Inbox List */
+    .inbox-list {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid #E5E7EB;
+    }
+    
+    .inbox-header {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .inbox-count {
+      background: #8B5CF6;
+      color: white;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    
+    .email-item {
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .email-item:hover {
+      background: #F9FAFB;
+    }
+    
+    .email-item.active {
+      background: #F5F3FF;
+      border-left-color: #8B5CF6;
+    }
+    
+    .email-subject {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+    
+    .email-preview {
+      font-size: 12px;
+      color: #6B7280;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    /* Email Thread */
+    .email-thread {
+      background: white;
+      border-radius: 12px;
+      padding: 24px;
+      border: 1px solid #E5E7EB;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .thread-header {
+      margin-bottom: 24px;
+    }
+    
+    .thread-subject {
+      font-size: 20px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 8px;
+    }
+    
+    .thread-from {
+      font-size: 14px;
+      color: #6B7280;
+    }
+    
+    .thread-message {
+      background: #F9FAFB;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      color: #4B5563;
+      line-height: 1.6;
+    }
+    
+    .ai-draft {
+      background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+      border: 2px solid #8B5CF6;
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: auto;
+    }
+    
+    .draft-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #8B5CF6;
+      margin-bottom: 12px;
+    }
+    
+    .draft-text {
+      font-size: 14px;
+      color: #111827;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    
+    .draft-actions {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      color: white;
+    }
+    
+    .btn-secondary {
+      background: white;
+      color: #8B5CF6;
+      border: 1px solid #8B5CF6;
+    }
+    
+    /* Quality Panel */
+    .quality-panel {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid #E5E7EB;
+    }
+    
+    .quality-header {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 20px;
+    }
+    
+    .quality-score {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+    
+    .score-circle {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+    }
+    
+    .score-value {
+      font-size: 36px;
+      font-weight: 900;
+      color: white;
+    }
+    
+    .score-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: #059669;
+    }
+    
+    .quality-metrics {
+      list-style: none;
+    }
+    
+    .metric-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0;
+      border-bottom: 1px solid #F3F4F6;
+    }
+    
+    .metric-item:last-child {
+      border-bottom: none;
+    }
+    
+    .metric-name {
+      font-size: 13px;
+      color: #6B7280;
+    }
+    
+    .metric-score {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111827;
+    }
+    
+    .auto-send-badge {
+      background: #ECFDF5;
+      border: 1px solid #10B981;
+      color: #059669;
+      padding: 12px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 600;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    
+    @media (max-width: 1024px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .inbox-list {
+        order: 1;
+      }
+      
+      .email-thread {
+        order: 3;
+      }
+      
+      .quality-panel {
+        order: 2;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .banner-container {
+        padding: 32px 24px;
+      }
+      
+      .banner-title {
+        font-size: 28px;
+      }
+      
+      .banner-subtitle {
+        font-size: 16px;
+      }
+      
+      .dashboard-mockup {
+        padding: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner-container">
+    <h1 class="banner-title">E-Mail-Support. KI-powered.</h1>
+    <p class="banner-subtitle">Thread-basiert wie Gmail. Auto-Send bei hoher Qualität.</p>
+    
+    <div class="dashboard-mockup">
+      <div class="dashboard-grid">
+        <!-- Inbox List -->
+        <div class="inbox-list">
+          <div class="inbox-header">
+            <span>📥 Posteingang</span>
+            <span class="inbox-count">12</span>
+          </div>
+          
+          <div class="email-item active">
+            <div class="email-subject">Rückerstattung anfragen</div>
+            <div class="email-preview">Hallo, ich möchte gerne meine Bestellung #1234...</div>
+          </div>
+          
+          <div class="email-item">
+            <div class="email-subject">Produktverfügbarkeit</div>
+            <div class="email-preview">Habt ihr das Kleid in Größe M auf Lager?</div>
+          </div>
+          
+          <div class="email-item">
+            <div class="email-subject">Versandfrage</div>
+            <div class="email-preview">Wann wird meine Bestellung versendet?</div>
+          </div>
+        </div>
+        
+        <!-- Email Thread -->
+        <div class="email-thread">
+          <div class="thread-header">
+            <div class="thread-subject">Rückerstattung anfragen</div>
+            <div class="thread-from">Von: kunde@email.de</div>
+          </div>
+          
+          <div class="thread-message">
+            Hallo,<br><br>
+            ich möchte gerne meine Bestellung #1234 zurückerstatten. Das Produkt entspricht nicht meinen Erwartungen.
+            <br><br>
+            Vielen Dank!
+          </div>
+          
+          <!-- AI Draft -->
+          <div class="ai-draft">
+            <div class="draft-label">
+              <span>🤖</span>
+              <span>KI-ENTWURF BEREIT</span>
+            </div>
+            <div class="draft-text">
+              Hallo!<br><br>
+              Gerne helfe ich dir mit der Rückerstattung für Bestellung #1234. Ich habe gesehen, dass die Bestellung am 12.10.2025 geliefert wurde - damit bist du innerhalb unserer 30-Tage-Rückgabefrist.<br><br>
+              Ich habe die Rückerstattung von €89.99 veranlasst. Das Geld sollte in 3-5 Werktagen auf deinem Konto sein.<br><br>
+              Beste Grüße,<br>
+              ReplAInow Support
+            </div>
+            <div class="draft-actions">
+              <button class="btn btn-primary">✓ Senden</button>
+              <button class="btn btn-secondary">✏️ Bearbeiten</button>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Quality Panel -->
+        <div class="quality-panel">
+          <div class="quality-header">📊 KI-Qualität</div>
+          
+          <div class="quality-score">
+            <div class="score-circle">
+              <div class="score-value">92</div>
+            </div>
+            <div class="score-label">Exzellent</div>
+          </div>
+          
+          <ul class="quality-metrics">
+            <li class="metric-item">
+              <span class="metric-name">Antwort-Qualität</span>
+              <span class="metric-score">95/100</span>
+            </li>
+            <li class="metric-item">
+              <span class="metric-name">Kontext-Abdeckung</span>
+              <span class="metric-score">90/100</span>
+            </li>
+            <li class="metric-item">
+              <span class="metric-name">Informations-Genauigkeit</span>
+              <span class="metric-score">98/100</span>
+            </li>
+            <li class="metric-item">
+              <span class="metric-name">Sprachfluss</span>
+              <span class="metric-score">88/100</span>
+            </li>
+            <li class="metric-item">
+              <span class="metric-name">Gesamt-Konfidenz</span>
+              <span class="metric-score">92/100</span>
+            </li>
+          </ul>
+          
+          <div class="auto-send-badge">
+            <span>✓</span>
+            <span>Auto-Send aktiviert (Score >90)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

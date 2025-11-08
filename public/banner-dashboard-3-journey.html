@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Journey Intelligence</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #000;
+            overflow: hidden;
+        }
+        
+        .banner {
+            width: 1600px;
+            height: 900px;
+            position: relative;
+            background: linear-gradient(135deg, #0a0f1c 0%, #1a0f2e 100%);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            background-image: 
+                linear-gradient(rgba(168, 85, 247, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(168, 85, 247, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        .glow-1 {
+            position: absolute;
+            width: 900px;
+            height: 900px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(168, 85, 247, 0.25) 0%, transparent 70%);
+            top: -450px;
+            left: 50%;
+            transform: translateX(-50%);
+            filter: blur(120px);
+            opacity: 0.4;
+        }
+        
+        .glow-2 {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.2) 0%, transparent 70%);
+            bottom: -300px;
+            right: -150px;
+            filter: blur(120px);
+            opacity: 0.3;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(168, 85, 247, 0.15);
+            border: 1px solid rgba(168, 85, 247, 0.3);
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .badge-text {
+            color: #c4b5fd;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .title {
+            font-size: 60px;
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+        
+        .title-gradient {
+            background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #94a3b8;
+            font-weight: 400;
+        }
+        
+        /* Main Layout */
+        .main-content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 560px;
+            gap: 24px;
+        }
+        
+        /* Left: Journey Timeline */
+        .journey-panel {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(71, 85, 105, 0.4);
+            border-radius: 20px;
+            padding: 32px;
+        }
+        
+        .panel-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .journey-timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .journey-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            position: relative;
+        }
+        
+        .journey-step::after {
+            content: '';
+            position: absolute;
+            left: 22px;
+            top: 48px;
+            width: 2px;
+            height: 32px;
+            background: linear-gradient(180deg, rgba(168, 85, 247, 0.5) 0%, transparent 100%);
+        }
+        
+        .journey-step:last-child::after {
+            display: none;
+        }
+        
+        .step-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(168, 85, 247, 0.3);
+        }
+        
+        .step-content {
+            flex: 1;
+            background: rgba(51, 65, 85, 0.3);
+            border: 1px solid rgba(71, 85, 105, 0.3);
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+        
+        .step-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 6px;
+        }
+        
+        .step-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+        
+        .step-time {
+            font-weight: 600;
+            color: #60a5fa;
+        }
+        
+        /* Right: Customer Intel */
+        .intel-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .intel-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(71, 85, 105, 0.4);
+            border-radius: 16px;
+            padding: 24px;
+        }
+        
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        
+        .card-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: white;
+        }
+        
+        .vip-badge {
+            background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+            color: white;
+            font-size: 10px;
+            font-weight: 800;
+            padding: 6px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+        
+        .stat-box {
+            background: rgba(51, 65, 85, 0.3);
+            border: 1px solid rgba(71, 85, 105, 0.3);
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 22px;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 4px;
+        }
+        
+        .stat-label {
+            font-size: 10px;
+            color: #94a3b8;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+        
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(51, 65, 85, 0.3);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        
+        .cart-thumb {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+        
+        .cart-details {
+            flex: 1;
+        }
+        
+        .cart-name {
+            font-size: 12px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .cart-quantity {
+            font-size: 10px;
+            color: #94a3b8;
+        }
+        
+        .cart-price {
+            font-size: 13px;
+            font-weight: 700;
+            color: #c4b5fd;
+        }
+        
+        .cart-total {
+            text-align: right;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px solid rgba(71, 85, 105, 0.3);
+        }
+        
+        .cart-total-label {
+            font-size: 11px;
+            color: #94a3b8;
+            margin-bottom: 4px;
+        }
+        
+        .cart-total-value {
+            font-size: 20px;
+            font-weight: 800;
+            color: white;
+        }
+        
+        .metrics {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: rgba(71, 85, 105, 0.2);
+        }
+        
+        .metric {
+            background: rgba(10, 15, 28, 0.9);
+            backdrop-filter: blur(10px);
+            padding: 28px 40px;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+        
+        .metric-label {
+            font-size: 13px;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="pattern"></div>
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+        
+        <div class="content">
+            <!-- Header -->
+            <div class="header">
+                <div class="badge">
+                    <span class="badge-text">🔍 Customer Intelligence</span>
+                </div>
+                <h1 class="title">
+                    <span class="title-gradient">Kompletter</span> Kunden-Kontext
+                </h1>
+                <p class="subtitle">Journey • Warenkorb • Order History - AI + Agent wissen alles</p>
+            </div>
+            
+            <!-- Main Content -->
+            <div class="main-content">
+                
+                <!-- Journey Timeline -->
+                <div class="journey-panel">
+                    <div class="panel-title">
+                        🗺️ Customer Journey
+                    </div>
+                    
+                    <div class="journey-timeline">
+                        <div class="journey-step">
+                            <div class="step-icon">🏠</div>
+                            <div class="step-content">
+                                <div class="step-title">Homepage</div>
+                                <div class="step-meta">
+                                    <span class="step-time">⏱ 45s</span>
+                                    <span>• 60% scrolled</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="journey-step">
+                            <div class="step-icon">👗</div>
+                            <div class="step-content">
+                                <div class="step-title">Product: Summer Dress Collection</div>
+                                <div class="step-meta">
+                                    <span class="step-time">⏱ 2m 30s</span>
+                                    <span>• 85% scrolled</span>
+                                    <span>• €89,99</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="journey-step">
+                            <div class="step-icon">👠</div>
+                            <div class="step-content">
+                                <div class="step-title">Product: Premium Heels</div>
+                                <div class="step-meta">
+                                    <span class="step-time">⏱ 1m 15s</span>
+                                    <span>• Clicked size guide</span>
+                                    <span>• €129,99</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="journey-step">
+                            <div class="step-icon">🛒</div>
+                            <div class="step-content">
+                                <div class="step-title">Shopping Cart</div>
+                                <div class="step-meta">
+                                    <span class="step-time">⏱ 30s</span>
+                                    <span>• 2 items</span>
+                                    <span>• €219,98 total</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="journey-step">
+                            <div class="step-icon">💬</div>
+                            <div class="step-content" style="background: rgba(168, 85, 247, 0.2); border-color: rgba(168, 85, 247, 0.5);">
+                                <div class="step-title" style="color: #e9d5ff;">Chat Opened - NOW</div>
+                                <div class="step-meta">
+                                    <span style="color: #c4b5fd;">✨ Ready to help</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Intel Cards -->
+                <div class="intel-panel">
+                    
+                    <!-- Customer Stats -->
+                    <div class="intel-card">
+                        <div class="card-header">
+                            <div class="card-title">Sarah Miller</div>
+                            <div class="vip-badge">VIP</div>
+                        </div>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <div class="stat-value">12</div>
+                                <div class="stat-label">Orders</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">€1,247</div>
+                                <div class="stat-label">Total Spent</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">8m 34s</div>
+                                <div class="stat-label">Session</div>
+                            </div>
+                            <div class="stat-box">
+                                <div class="stat-value">5 Pages</div>
+                                <div class="stat-label">Visited</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Current Cart -->
+                    <div class="intel-card">
+                        <div class="card-title" style="margin-bottom: 16px;">🛒 Aktueller Warenkorb</div>
+                        
+                        <div class="cart-items">
+                            <div class="cart-item">
+                                <div class="cart-thumb">👗</div>
+                                <div class="cart-details">
+                                    <div class="cart-name">Summer Dress</div>
+                                    <div class="cart-quantity">1 × €89,99</div>
+                                </div>
+                                <div class="cart-price">€89,99</div>
+                            </div>
+                            
+                            <div class="cart-item">
+                                <div class="cart-thumb">👠</div>
+                                <div class="cart-details">
+                                    <div class="cart-name">Premium Heels</div>
+                                    <div class="cart-quantity">1 × €129,99</div>
+                                </div>
+                                <div class="cart-price">€129,99</div>
+                            </div>
+                        </div>
+                        
+                        <div class="cart-total">
+                            <div class="cart-total-label">Gesamtsumme</div>
+                            <div class="cart-total-value">€219,98</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Traffic Source -->
+                    <div class="intel-card" style="padding: 20px;">
+                        <div style="display: flex; align-items: center; gap: 12px;">
+                            <div style="width: 40px; height: 40px; background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                                🔍
+                            </div>
+                            <div>
+                                <div style="font-size: 11px; color: #94a3b8; margin-bottom: 2px;">Traffic Source</div>
+                                <div style="font-size: 14px; font-weight: 700; color: white;">Google / Organic</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Metrics -->
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-value">Volle Journey</div>
+                <div class="metric-label">Jede Page • Zeit • Scrolltiefe</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">Live Cart</div>
+                <div class="metric-label">Was Kunde gerade kaufen will</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">+187% Conv.</div>
+                <div class="metric-label">Mit vollem Kontext</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -25,16 +25,33 @@ async function exportBanners() {
     fs.mkdirSync(exportDir);
   }
 
+  // CSS to inject for removing padding/margins/border-radius
+  const exportCSS = `
+    body { 
+      padding: 0 !important; 
+      margin: 0 !important; 
+      min-height: 900px !important;
+      height: 900px !important;
+    }
+    .banner { 
+      width: 1600px !important; 
+      height: 900px !important; 
+      border-radius: 0 !important;
+    }
+    .banner-container {
+      max-width: 1600px !important;
+      width: 1600px !important;
+      height: 900px !important;
+      border-radius: 0 !important;
+      padding: 80px !important;
+      margin: 0 !important;
+      box-sizing: border-box !important;
+    }
+  `;
+
   const banners = [
-    { name: 'banner-1-hero', title: 'Hero Banner' },
-    { name: 'banner-2-stats', title: 'Stats Banner' },
-    { name: 'banner-3-minimal', title: 'Minimal Banner' },
-    { name: 'banner-4-testimonial', title: 'Testimonial Banner' },
-    { name: 'banner-5-features', title: 'Features Banner' },
-    { name: 'banner-6-dashboard', title: 'Dashboard Banner' },
-    { name: 'banner-7-integration', title: 'Integration Banner' },
-    { name: 'banner-8-mobile', title: 'Mobile Banner' },
-    { name: 'banner-9-analytics', title: 'Analytics Banner' }
+    // Main Banner
+    { name: 'shopify-hauptbanner-v2-de', title: 'HAUPT V2: Deine KI löst bis zu 80%' }
   ];
 
   const browser = await puppeteer.launch({
@@ -47,20 +64,32 @@ async function exportBanners() {
       console.log(`📸 Exporting ${banner.title}...`);
       
       const page = await browser.newPage();
-      await page.setViewport({ width: 1200, height: 600 });
+      
+      // HIGH QUALITY: Use deviceScaleFactor 2 for Retina/High-DPI
+      await page.setViewport({ 
+        width: 1600, 
+        height: 900,
+        deviceScaleFactor: 2  // 2x resolution for crisp quality
+      });
       
       // Load the HTML file
       const filePath = `file://${path.join(__dirname, 'banners', `${banner.name}.html`)}`;
       await page.goto(filePath, { waitUntil: 'networkidle0' });
       
-      // Wait a bit for animations to settle
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Inject export CSS to remove padding/margins/border-radius
+      await page.addStyleTag({ content: exportCSS });
       
-      // Take screenshot
+      // Wait for fonts to load and animations to settle
+      await page.evaluateHandle('document.fonts.ready');
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      // Take HIGH QUALITY screenshot
       const outputPath = path.join(exportDir, `${banner.name}.png`);
       await page.screenshot({
         path: outputPath,
-        clip: { x: 0, y: 0, width: 1200, height: 600 }
+        type: 'png',
+        omitBackground: false,
+        fullPage: false
       });
       
       console.log(`✅ Exported: ${outputPath}\n`);

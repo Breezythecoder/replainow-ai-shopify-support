@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReplAInow - Chat Widget Banner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    
+    .banner-container {
+      max-width: 1000px;
+      width: 100%;
+      background: white;
+      border-radius: 24px;
+      padding: 60px;
+      box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.04),
+        0 8px 16px rgba(0, 0, 0, 0.06),
+        0 16px 32px rgba(0, 0, 0, 0.08);
+    }
+    
+    .banner-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+    
+    .banner-subtitle {
+      text-align: center;
+      font-size: 20px;
+      color: #6B7280;
+      margin-bottom: 60px;
+    }
+    
+    .phone-mockup {
+      max-width: 380px;
+      margin: 0 auto;
+      background: #1F2937;
+      border-radius: 40px;
+      padding: 16px;
+      box-shadow: 
+        0 8px 16px rgba(0, 0, 0, 0.1),
+        0 16px 32px rgba(0, 0, 0, 0.15);
+    }
+    
+    .phone-screen {
+      background: #F9FAFB;
+      border-radius: 32px;
+      overflow: hidden;
+    }
+    
+    .chat-widget {
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    
+    .widget-header {
+      background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .widget-logo {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    
+    .widget-title {
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    
+    .widget-tabs {
+      display: flex;
+      background: #F3F4F6;
+      padding: 8px;
+      gap: 4px;
+    }
+    
+    .tab {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 600;
+      color: #6B7280;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .tab.active {
+      background: white;
+      color: #8B5CF6;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .chat-content {
+      padding: 20px;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .message {
+      display: flex;
+      gap: 12px;
+    }
+    
+    .message-avatar {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+      border-radius: 50%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 16px;
+    }
+    
+    .message-bubble {
+      background: #F3F4F6;
+      padding: 12px 16px;
+      border-radius: 16px;
+      border-top-left-radius: 4px;
+      max-width: 80%;
+      font-size: 14px;
+      color: #111827;
+      line-height: 1.5;
+    }
+    
+    .product-card {
+      background: white;
+      border: 1px solid #E5E7EB;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 8px;
+      display: flex;
+      gap: 16px;
+    }
+    
+    .product-image {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      flex-shrink: 0;
+    }
+    
+    .product-info {
+      flex: 1;
+    }
+    
+    .product-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 4px;
+    }
+    
+    .product-price {
+      font-size: 18px;
+      font-weight: 800;
+      background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+    
+    .product-button {
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      width: 100%;
+      transition: all 0.2s ease;
+    }
+    
+    .product-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+    
+    .annotations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin-top: 40px;
+    }
+    
+    .annotation {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #F5F3FF;
+      border: 1px solid #8B5CF6;
+      padding: 8px 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #7C3AED;
+    }
+    
+    @media (max-width: 768px) {
+      .banner-container {
+        padding: 32px 24px;
+      }
+      
+      .banner-title {
+        font-size: 28px;
+      }
+      
+      .banner-subtitle {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner-container">
+    <h1 class="banner-title">Modernes Chat-Widget</h1>
+    <p class="banner-subtitle">Multi-Tab Interface. Produktkarten. 95+ Sprachen.</p>
+    
+    <div class="phone-mockup">
+      <div class="phone-screen">
+        <div class="chat-widget">
+          <!-- Header -->
+          <div class="widget-header">
+            <div class="widget-logo">🤖</div>
+            <div class="widget-title">ReplAInow Support</div>
+          </div>
+          
+          <!-- Tabs -->
+          <div class="widget-tabs">
+            <div class="tab">🏠 Home</div>
+            <div class="tab active">💬 Nachrichten</div>
+            <div class="tab">📝 Chats</div>
+          </div>
+          
+          <!-- Chat Content -->
+          <div class="chat-content">
+            <!-- AI Message -->
+            <div class="message">
+              <div class="message-avatar">🤖</div>
+              <div>
+                <div class="message-bubble">
+                  Natürlich! Dieses Produkt ist verfügbar in Größe M. Hier sind die Details:
+                </div>
+                
+                <!-- Product Card -->
+                <div class="product-card">
+                  <div class="product-image">👗</div>
+                  <div class="product-info">
+                    <div class="product-name">Sommerkleid Elegant</div>
+                    <div class="product-price">€89.99</div>
+                    <button class="product-button">Produkt ansehen →</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Annotations -->
+    <div class="annotations">
+      <div class="annotation">
+        <span>📱</span>
+        <span>3 Tabs für bessere UX</span>
+      </div>
+      <div class="annotation">
+        <span>🎴</span>
+        <span>Visuelle Produktkarten</span>
+      </div>
+      <div class="annotation">
+        <span>🌍</span>
+        <span>95+ Sprachen</span>
+      </div>
+      <div class="annotation">
+        <span>⚡</span>
+        <span>Instant Checkout-Links</span>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

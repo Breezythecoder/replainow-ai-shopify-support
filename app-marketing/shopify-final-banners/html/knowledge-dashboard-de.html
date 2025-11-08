@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplAInow - Knowledge Dashboard Banner DE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            margin: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            overflow: hidden;
+        }
+        
+        .banner { 
+            width: 1600px; 
+            height: 900px; 
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 60px 80px 50px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Subtle grid pattern */
+        .grid-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.015) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        /* Header Section */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            z-index: 2;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            padding: 10px 24px;
+            border-radius: 24px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        
+        .sync-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: syncPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes syncPulse {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        h1 {
+            color: white;
+            font-size: 68px;
+            font-weight: 900;
+            margin: 0 0 20px;
+            line-height: 0.95;
+            letter-spacing: -2px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+        
+        .subtitle {
+            color: #94a3b8;
+            font-size: 24px;
+            margin: 0;
+            font-weight: 400;
+        }
+        
+        .highlight {
+            color: #60a5fa;
+            font-weight: 600;
+        }
+        
+        /* Dashboard Section */
+        .dashboard-container {
+            flex: 1;
+            width: 100%;
+            max-width: 1400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .control-panel {
+            background: rgba(30, 41, 59, 0.3);
+            border: 1px solid rgba(96, 165, 250, 0.2);
+            border-radius: 24px;
+            padding: 40px;
+            backdrop-filter: blur(20px);
+            width: 100%;
+            position: relative;
+        }
+        
+        /* Live Indicator */
+        .live-indicator {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(15, 23, 42, 0.9);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 10px 24px;
+            border-radius: 20px;
+            color: #10b981;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        /* Data Grid */
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 24px;
+        }
+        
+        .data-widget {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(96, 165, 250, 0.15);
+            border-radius: 16px;
+            padding: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .data-widget:hover {
+            transform: translateY(-4px);
+            border-color: rgba(96, 165, 250, 0.3);
+            background: rgba(15, 23, 42, 0.8);
+        }
+        
+        .widget-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 12px;
+        }
+        
+        .widget-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(96, 165, 250, 0.1);
+            border: 1px solid rgba(96, 165, 250, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #60a5fa;
+            position: relative;
+        }
+        
+        /* Abstract Icons */
+        .widget-icon::after {
+            content: '';
+            position: absolute;
+        }
+        
+        /* Products - Box */
+        .widget-icon-1::after {
+            width: 20px;
+            height: 20px;
+            border: 2px solid currentColor;
+            border-radius: 4px;
+        }
+        
+        /* Orders - Shopping Bag */
+        .widget-icon-2::after {
+            width: 18px;
+            height: 20px;
+            border: 2px solid currentColor;
+            border-radius: 0 0 4px 4px;
+            border-top: none;
+        }
+        .widget-icon-2::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 8px;
+            border: 2px solid currentColor;
+            border-bottom: none;
+            border-radius: 8px 8px 0 0;
+            top: 8px;
+        }
+        
+        /* Customers - User Circle */
+        .widget-icon-3::after {
+            width: 8px;
+            height: 8px;
+            background: currentColor;
+            border-radius: 50%;
+            top: 10px;
+        }
+        .widget-icon-3::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 10px;
+            border: 2px solid currentColor;
+            border-top: none;
+            border-radius: 0 0 16px 16px;
+            bottom: 8px;
+        }
+        
+        /* Collections - Folder */
+        .widget-icon-4::after {
+            width: 22px;
+            height: 16px;
+            border: 2px solid currentColor;
+            border-radius: 3px;
+            bottom: 10px;
+        }
+        .widget-icon-4::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 4px;
+            background: currentColor;
+            top: 12px;
+            left: 10px;
+            border-radius: 2px 2px 0 0;
+        }
+        
+        /* Pages - Document */
+        .widget-icon-5::after {
+            width: 16px;
+            height: 20px;
+            border: 2px solid currentColor;
+            border-radius: 2px;
+        }
+        .widget-icon-5::before {
+            content: '';
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            border-right: 2px solid currentColor;
+            border-bottom: 2px solid currentColor;
+            top: 8px;
+            right: 10px;
+            transform: rotate(45deg);
+        }
+        
+        /* Policies - Shield */
+        .widget-icon-6::after {
+            width: 18px;
+            height: 22px;
+            border: 2px solid currentColor;
+            border-radius: 2px 2px 10px 10px;
+        }
+        
+        /* Blog - Lines */
+        .widget-icon-7::after {
+            width: 20px;
+            height: 2px;
+            background: currentColor;
+            box-shadow: 0 -6px 0 currentColor, 0 6px 0 currentColor;
+        }
+        
+        /* Metadata - Gear */
+        .widget-icon-8::after {
+            width: 20px;
+            height: 20px;
+            border: 3px solid currentColor;
+            border-radius: 50%;
+        }
+        .widget-icon-8::before {
+            content: '';
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: currentColor;
+            border-radius: 50%;
+        }
+        
+        .widget-title {
+            color: #e2e8f0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .widget-count {
+            font-size: 28px;
+            font-weight: 800;
+            color: #60a5fa;
+            margin-bottom: 4px;
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .widget-status {
+            color: #64748b;
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: statusPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes statusPulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
+        
+        /* Animated Lines */
+        .flow-lines {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            opacity: 0.4;
+        }
+        
+        .flow-line {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent 0%, 
+                rgba(96, 165, 250, 0.4) 20%,
+                rgba(139, 92, 246, 0.4) 80%,
+                transparent 100%
+            );
+            transform-origin: left center;
+        }
+        
+        .flow-line-1 {
+            top: 25%;
+            left: 10%;
+            right: 10%;
+            animation: flowPulse 4s ease-in-out infinite;
+        }
+        
+        .flow-line-2 {
+            bottom: 25%;
+            left: 15%;
+            right: 15%;
+            animation: flowPulse 4s ease-in-out infinite 1s;
+        }
+        
+        @keyframes flowPulse {
+            0%, 100% { opacity: 0; transform: scaleX(0.8); }
+            50% { opacity: 0.6; transform: scaleX(1); }
+        }
+        
+        /* Widget specific colors */
+        .widget-1 .widget-icon { background: rgba(16, 185, 129, 0.1); border-color: rgba(16, 185, 129, 0.2); color: #10b981; }
+        .widget-1 .widget-count { color: #10b981; }
+        
+        .widget-2 .widget-icon { background: rgba(245, 158, 11, 0.1); border-color: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+        .widget-2 .widget-count { color: #f59e0b; }
+        
+        .widget-3 .widget-icon { background: rgba(139, 92, 246, 0.1); border-color: rgba(139, 92, 246, 0.2); color: #8b5cf6; }
+        .widget-3 .widget-count { color: #8b5cf6; }
+        
+        .widget-4 .widget-icon { background: rgba(236, 72, 153, 0.1); border-color: rgba(236, 72, 153, 0.2); color: #ec4899; }
+        .widget-4 .widget-count { color: #ec4899; }
+        
+        .widget-5 .widget-icon { background: rgba(14, 165, 233, 0.1); border-color: rgba(14, 165, 233, 0.2); color: #0ea5e9; }
+        .widget-5 .widget-count { color: #0ea5e9; }
+        
+        .widget-6 .widget-icon { background: rgba(168, 85, 247, 0.1); border-color: rgba(168, 85, 247, 0.2); color: #a855f7; }
+        .widget-6 .widget-count { color: #a855f7; }
+        
+        .widget-7 .widget-icon { background: rgba(34, 197, 94, 0.1); border-color: rgba(34, 197, 94, 0.2); color: #22c55e; }
+        .widget-7 .widget-count { color: #22c55e; }
+        
+        .widget-8 .widget-icon { background: rgba(251, 146, 60, 0.1); border-color: rgba(251, 146, 60, 0.2); color: #fb923c; }
+        .widget-8 .widget-count { color: #fb923c; }
+        
+        /* Central AI Badge */
+        .ai-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 120px;
+            height: 120px;
+            background: rgba(15, 23, 42, 0.95);
+            border: 2px solid rgba(96, 165, 250, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            backdrop-filter: blur(20px);
+        }
+        
+        .ai-center::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 150%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+            animation: aiGlow 3s ease-in-out infinite;
+        }
+        
+        @keyframes aiGlow {
+            0%, 100% { transform: scale(0.8); opacity: 0.4; }
+            50% { transform: scale(1); opacity: 0.8; }
+        }
+        
+        .ai-center-text {
+            font-size: 36px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Benefits Section */
+        .benefits {
+            display: flex;
+            gap: 60px;
+            justify-content: center;
+            margin-top: 50px;
+            z-index: 2;
+        }
+        
+        .benefit {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            color: #94a3b8;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .benefit-icon {
+            width: 32px;
+            height: 32px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 2px solid rgba(16, 185, 129, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        
+        .benefit-icon::after {
+            content: '';
+            width: 16px;
+            height: 10px;
+            border-left: 3px solid #10b981;
+            border-bottom: 3px solid #10b981;
+            transform: rotate(-45deg) translateY(-2px);
+        }
+        
+        .benefit-text strong {
+            color: #e2e8f0;
+            font-weight: 700;
+        }
+        
+        /* Floating particles */
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(96, 165, 250, 0.5);
+            border-radius: 50%;
+            opacity: 0;
+            animation: particleFloat 12s ease-in-out infinite;
+        }
+        
+        @keyframes particleFloat {
+            0%, 100% { 
+                opacity: 0;
+                transform: translate(0, 0);
+            }
+            25% {
+                opacity: 0.6;
+            }
+            50% { 
+                opacity: 0.8;
+                transform: translate(var(--x), var(--y));
+            }
+            75% {
+                opacity: 0.6;
+            }
+        }
+        
+        .particle-1 { top: 20%; left: 10%; --x: 100px; --y: -50px; animation-delay: 0s; }
+        .particle-2 { top: 30%; right: 15%; --x: -80px; --y: 60px; animation-delay: 2s; }
+        .particle-3 { bottom: 25%; left: 20%; --x: 120px; --y: -40px; animation-delay: 4s; }
+        .particle-4 { bottom: 35%; right: 10%; --x: -90px; --y: 80px; animation-delay: 6s; }
+        .particle-5 { top: 50%; left: 5%; --x: 150px; --y: 0; animation-delay: 8s; }
+        .particle-6 { top: 60%; right: 8%; --x: -100px; --y: -60px; animation-delay: 10s; }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="grid-pattern"></div>
+        
+        <!-- Header -->
+        <div class="header">
+            <div class="badge">
+                <div class="sync-dot"></div>
+                <span>Live-Synchronisation aktiv</span>
+            </div>
+            <h1>Dein Shop-Wissen. <span class="gradient-text">Vollautomatisch erfasst.</span></h1>
+            <p class="subtitle">
+                <span class="highlight">8 Datenquellen</span> · 
+                <span class="highlight">Echtzeit-Sync</span> · 
+                <span class="highlight">Zero Setup</span>
+            </p>
+        </div>
+        
+        <!-- Dashboard -->
+        <div class="dashboard-container">
+            <div class="control-panel">
+                <div class="live-indicator">
+                    <div class="sync-dot"></div>
+                    <span>Shopify → AI Sync</span>
+                </div>
+                
+                <div class="flow-lines">
+                    <div class="flow-line flow-line-1"></div>
+                    <div class="flow-line flow-line-2"></div>
+                </div>
+                
+                <div class="data-grid">
+                    <!-- Products -->
+                    <div class="data-widget widget-1">
+                        <div class="widget-header">
+                            <div class="widget-icon widget-icon-1"></div>
+                            <div class="widget-title">Produkte</div>
+                        </div>
+                        <div class="widget-count">2,847</div>
+                        <div class="widget-status">
+                            <div class="status-dot"></div>
+                            <span>Vollständig synchronisiert</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Orders -->
+                    <div class="data-widget widget-2">
+                        <div class="widget-header">
+                            <div class="widget-icon widget-icon-2"></div>
+                            <div class="widget-title">Bestellungen</div>
+                        </div>
+                        <div class="widget-count">15,423</div>
+                        <div class="widget-status">
+                            <div class="status-dot"></div>
+                            <span>Letzte 60 Tage</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Customers -->
+                    <div class="data-widget widget-3">
+                        <div class="widget-header">
+                            <div class="widget-icon widget-icon-3"></div>
+                            <div class="widget-title">Kunden</div>
+                        </div>
+                        <div class="widget-count">8,192</div>
+                        <div class="widget-status">
+                            <div class="status-dot"></div>
+                            <span>Mit Kaufhistorie</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Collections -->
+                    <div class="data-widget widget-4">
+                        <div class="widget-header">
+                            <div class="widget-icon widget-icon-4"></div>
+                            <div class="widget-title">Kollektionen</div>
+                        </div>
+                        <div class="widget-count">47</div>
+                        <div class="widget-status">
+                            <div class="status-dot"></div>
+                            <span>Kategorisiert</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Pages -->
+                    <div class="data-widget widget-5">
+                        <div class="widget-header">
+                            <div class="widget-icon widget-icon-5"></div>
+                            <div class="widget-title">Seiten</div>
+                        </div>
+                        <div class="widget-count">23</div>
+                        <div class="widget-status">
+                            <div class="status-dot"></div>
+                            <span>FAQ, Guides, etc.</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Policies -->
+                    <div class="data-widget widget-6">
+                        <div class="widget-header">
+                            <div class="widget-icon widget-icon-6"></div>
+                            <div class="widget-title">Richtlinien</div>
+                        </div>
+                        <div class="widget-count">6</div>
+                        <div class="widget-status">
+                            <div class="status-dot"></div>
+                            <span>Rechtliches</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Blog -->
+                    <div class="data-widget widget-7">
+                        <div class="widget-header">
+                            <div class="widget-icon widget-icon-7"></div>
+                            <div class="widget-title">Blog-Artikel</div>
+                        </div>
+                        <div class="widget-count">134</div>
+                        <div class="widget-status">
+                            <div class="status-dot"></div>
+                            <span>Content Marketing</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Metadata -->
+                    <div class="data-widget widget-8">
+                        <div class="widget-header">
+                            <div class="widget-icon widget-icon-8"></div>
+                            <div class="widget-title">Shop-Metadaten</div>
+                        </div>
+                        <div class="widget-count">100%</div>
+                        <div class="widget-status">
+                            <div class="status-dot"></div>
+                            <span>Konfiguration</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Central AI -->
+                <div class="ai-center">
+                    <div class="ai-center-text">AI</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Benefits -->
+        <div class="benefits">
+            <div class="benefit">
+                <div class="benefit-icon"></div>
+                <div class="benefit-text"><strong>Installation = Fertig</strong> Alles automatisch importiert</div>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon"></div>
+                <div class="benefit-text"><strong>Webhooks aktiv</strong> Jede Änderung sofort synchronisiert</div>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon"></div>
+                <div class="benefit-text"><strong>AI-Ready</strong> 3.072-dimensionale Vektoren</div>
+            </div>
+        </div>
+        
+        <!-- Particles -->
+        <div class="particles">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+            <div class="particle particle-5"></div>
+            <div class="particle particle-6"></div>
+        </div>
+    </div>
+</body>
+</html>

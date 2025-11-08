@@ -1,5 +1,5 @@
 import React from "react";
-import ModernNavbar from "@/components/marketing/UltraNavbar";
+import ModernNavbar from "@/components/marketing/PremiumNavbar";
 import Footer from "@/components/marketing/UltraFooter";
 
 const CookiePolicy = () => {
@@ -7,7 +7,7 @@ const CookiePolicy = () => {
 
   return (
     <>
-      <UltraNavbar />
+      <PremiumNavbar />
       <main>
         <section className="container mx-auto max-w-[800px] px-4 py-12 md:py-16">
           <article className="space-y-6 leading-relaxed">

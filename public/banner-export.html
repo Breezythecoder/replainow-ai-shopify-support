@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1600, initial-scale=1.0">
+  <title>Banner Export</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 1600px; height: 900px; overflow: hidden; }
+    #banner-container { width: 1600px; height: 900px; }
+  </style>
+</head>
+<body>
+  <div id="banner-container"></div>
+  
+  <script type="module">
+    // Get banner ID from URL
+    const params = new URLSearchParams(window.location.search);
+    const bannerId = params.get('id') || 'h1';
+    
+    // Import and render the banner
+    const module = await import(`/src/components/marketing/shopify-banners/${getBannerComponent(bannerId)}.tsx`);
+    const Banner = module.default;
+    
+    // Render to container
+    const container = document.getElementById('banner-container');
+    // This won't work with TSX... we need a different approach
+    
+    function getBannerComponent(id) {
+      const map = {
+        'h1': 'Hero1_ZeroSetup',
+        'h2': 'Hero2_Automation',
+        'h3': 'Hero3_DualChannel',
+        'h4': 'Hero4_GlobalLanguages',
+        'h5': 'Hero5_RealtimeSync',
+        'h6': 'Hero6_QualityScores',
+        'h7': 'Hero7_VisualCommerce',
+        'h8': 'Hero8_HumanAITeam',
+        'f1': 'Feature1_ShopifyImport',
+        'f2': 'Feature2_Dashboard',
+        'f3': 'Feature3_ChatWidget',
+        'f4': 'Feature4_ProactiveTriggers',
+        'f5': 'Feature5_ThreadEmail',
+      };
+      return map[id] || map['h1'];
+    }
+  </script>
+</body>
+</html>
+
+
+

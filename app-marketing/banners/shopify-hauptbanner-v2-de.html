@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplAInow - Hauptbanner V2 DE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            margin: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            overflow: hidden;
+        }
+        
+        .banner { 
+            width: 1600px; 
+            height: 900px; 
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            display: flex;
+            align-items: center;
+            padding: 60px 80px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Grid Pattern */
+        .grid-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.6;
+        }
+        
+        /* Content */
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 100px;
+            width: 100%;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .left-content {
+            flex: 0 0 700px;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+        }
+        
+        h1 {
+            color: white;
+            font-size: 68px;
+            font-weight: 900;
+            margin: 0 0 28px;
+            line-height: 1;
+            letter-spacing: -2.5px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+        
+        .subtitle {
+            color: #cbd5e1;
+            font-size: 24px;
+            margin: 0 0 48px;
+            line-height: 1.4;
+            font-weight: 500;
+            max-width: 600px;
+        }
+        
+        .stats-row {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 48px;
+        }
+        
+        .stat-box {
+            background: rgba(30, 41, 59, 0.5);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 16px;
+            padding: 20px 28px;
+            backdrop-filter: blur(10px);
+            flex: 1;
+        }
+        
+        .stat-number {
+            font-size: 42px;
+            font-weight: 900;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+        
+        .stat-1 {
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-2 {
+            background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-3 {
+            background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stat-label {
+            font-size: 15px;
+            color: #94a3b8;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+        
+        .proof-points {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            color: #cbd5e1;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .proof-point {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .divider {
+            width: 1px;
+            height: 20px;
+            background: rgba(148, 163, 184, 0.3);
+        }
+        
+        /* Right Visual */
+        .right-visual {
+            flex: 1;
+            position: relative;
+            height: 600px;
+        }
+        
+        /* AI Brain Visualization */
+        .ai-visualization {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        /* Central AI Core */
+        .ai-core {
+            width: 280px;
+            height: 280px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border: 2px solid rgba(59, 130, 246, 0.3);
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: corePulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes corePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .ai-center {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+            border: 2px solid rgba(96, 165, 250, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 80px;
+            font-weight: 900;
+            color: #60a5fa;
+            text-shadow: 0 0 40px rgba(96, 165, 250, 0.5);
+        }
+        
+        /* Orbiting elements */
+        .orbit {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            animation: orbit 20s linear infinite;
+        }
+        
+        @keyframes orbit {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        .orbit-item {
+            position: absolute;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(148, 163, 184, 0.3);
+            border-radius: 12px;
+            padding: 16px 20px;
+            backdrop-filter: blur(10px);
+            font-size: 14px;
+            color: #e2e8f0;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        }
+        
+        .orbit-1 {
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .orbit-2 {
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation-delay: -5s;
+        }
+        
+        .orbit-3 {
+            left: -80px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation-delay: -10s;
+        }
+        
+        .orbit-4 {
+            right: -80px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation-delay: -15s;
+        }
+        
+        /* Connection lines */
+        .connection {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        }
+        
+        .connection-line {
+            position: absolute;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(96, 165, 250, 0.3), transparent);
+            transform-origin: left center;
+            animation: connectionPulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes connectionPulse {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+        
+        .line-1 {
+            width: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        
+        .line-2 {
+            width: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(90deg);
+            animation-delay: 0.75s;
+        }
+        
+        .line-3 {
+            width: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            animation-delay: 1.5s;
+        }
+        
+        .line-4 {
+            width: 400px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            animation-delay: 2.25s;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="grid-pattern"></div>
+        
+        <div class="content-wrapper">
+            <div class="left-content">
+                <div class="badge">Deutschlands KI-Helpdesk #1 für Shopify</div>
+                
+                <h1>
+                    Deine KI löst<br>
+                    <span class="gradient-text">bis zu 80%</span><br>
+                    aller Anfragen
+                </h1>
+                
+                <p class="subtitle">
+                    Perfekte Antworten. Sofort. In jeder Sprache.
+                    Während du schläfst, verkauft, oder Urlaub machst.
+                </p>
+                
+                <div class="stats-row">
+                    <div class="stat-box">
+                        <div class="stat-number stat-1">24/7</div>
+                        <div class="stat-label">Immer online<br>Nie müde</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number stat-2">100+</div>
+                        <div class="stat-label">Sprachen<br>Automatisch</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-number stat-3">60s</div>
+                        <div class="stat-label">Von null<br>auf live</div>
+                    </div>
+                </div>
+                
+                <div class="proof-points">
+                    <div class="proof-point">Live Chat & E-Mail</div>
+                    <div class="divider"></div>
+                    <div class="proof-point">Kennt deinen ganzen Shop</div>
+                    <div class="divider"></div>
+                    <div class="proof-point">Zero Setup</div>
+                </div>
+            </div>
+            
+            <div class="right-visual">
+                <div class="ai-visualization">
+                    <div class="connection">
+                        <div class="connection-line line-1"></div>
+                        <div class="connection-line line-2"></div>
+                        <div class="connection-line line-3"></div>
+                        <div class="connection-line line-4"></div>
+                    </div>
+                    
+                    <div class="ai-core">
+                        <div class="orbit">
+                            <div class="orbit-item orbit-1">Produkte</div>
+                            <div class="orbit-item orbit-2">Bestellungen</div>
+                            <div class="orbit-item orbit-3">Policies</div>
+                            <div class="orbit-item orbit-4">Kunden</div>
+                        </div>
+                        <div class="ai-center">AI</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplAInow - Cards in Action</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            margin: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            overflow: hidden;
+        }
+        
+        .banner { 
+            width: 1600px; 
+            height: 900px; 
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 80px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Subtle grid pattern */
+        .grid-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.015) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        /* Background glow effects */
+        .glow-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.2;
+        }
+        
+        .glow-orb-1 {
+            width: 800px;
+            height: 800px;
+            background: #8b5cf6;
+            top: -400px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .glow-orb-2 {
+            width: 600px;
+            height: 600px;
+            background: #3b82f6;
+            bottom: -300px;
+            right: -200px;
+        }
+        
+        .glow-orb-3 {
+            width: 600px;
+            height: 600px;
+            background: #10b981;
+            bottom: -300px;
+            left: -200px;
+        }
+        
+        /* Main content */
+        .content-wrapper {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            gap: 120px;
+            align-items: center;
+            width: 100%;
+        }
+        
+        /* Left side - Headlines and Stats */
+        .left-content {
+            flex: 0 0 520px;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            padding: 10px 24px;
+            border-radius: 24px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+        }
+        
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.3; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+        
+        h1 {
+            color: white;
+            font-size: 72px;
+            font-weight: 900;
+            margin: 0 0 24px;
+            line-height: 0.95;
+            letter-spacing: -3px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+        
+        .subtitle {
+            color: #94a3b8;
+            font-size: 26px;
+            margin: 0 0 48px;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+        
+        /* Feature list */
+        .features {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            margin-bottom: 40px;
+        }
+        
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-icon::before {
+            content: '';
+            position: absolute;
+            inset: -50%;
+            background: conic-gradient(from 180deg at 50% 50%, transparent 0deg, rgba(139, 92, 246, 0.3) 180deg, transparent 360deg);
+            animation: iconSpin 4s linear infinite;
+        }
+        
+        @keyframes iconSpin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .feature-icon svg {
+            width: 28px;
+            height: 28px;
+            fill: #a78bfa;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .feature-text {
+            flex: 1;
+        }
+        
+        .feature-title {
+            color: white;
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 6px;
+        }
+        
+        .feature-desc {
+            color: #64748b;
+            font-size: 15px;
+            margin: 0;
+        }
+        
+        /* Stats */
+        .stats-row {
+            display: flex;
+            gap: 40px;
+        }
+        
+        .stat-item {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+        }
+        
+        .stat-value {
+            font-size: 36px;
+            font-weight: 900;
+            color: #8b5cf6;
+            letter-spacing: -1px;
+        }
+        
+        .stat-unit {
+            color: #64748b;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        /* Right side - Widget mockup */
+        .widget-container {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Floating particles */
+        .particles {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(139, 92, 246, 0.6);
+            border-radius: 50%;
+            animation: float 20s linear infinite;
+        }
+        
+        @keyframes float {
+            from {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+        
+        .particle:nth-child(1) { left: 10%; animation-delay: 0s; animation-duration: 15s; }
+        .particle:nth-child(2) { left: 20%; animation-delay: 2s; animation-duration: 18s; }
+        .particle:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 20s; }
+        .particle:nth-child(4) { left: 40%; animation-delay: 6s; animation-duration: 16s; }
+        .particle:nth-child(5) { left: 50%; animation-delay: 8s; animation-duration: 22s; }
+        .particle:nth-child(6) { left: 60%; animation-delay: 10s; animation-duration: 19s; }
+        .particle:nth-child(7) { left: 70%; animation-delay: 12s; animation-duration: 17s; }
+        .particle:nth-child(8) { left: 80%; animation-delay: 14s; animation-duration: 21s; }
+        .particle:nth-child(9) { left: 90%; animation-delay: 16s; animation-duration: 15s; }
+        
+        /* Widget mockup */
+        .widget-mockup {
+            width: 420px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 
+                0 30px 60px rgba(0, 0, 0, 0.3),
+                0 0 100px rgba(139, 92, 246, 0.1);
+            overflow: hidden;
+            position: relative;
+            transform: perspective(1000px) rotateY(-5deg);
+        }
+        
+        .widget-header {
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .widget-header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: headerShine 4s ease-in-out infinite;
+        }
+        
+        @keyframes headerShine {
+            0%, 100% { transform: translate(50%, 50%); }
+            50% { transform: translate(-50%, -50%); }
+        }
+        
+        .widget-header-content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .widget-title {
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .widget-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: statusPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes statusPulse {
+            0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            50% { transform: scale(1.1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+        }
+        
+        /* Chat content */
+        .widget-content {
+            height: 500px;
+            overflow-y: auto;
+            padding: 24px;
+            background: #fafbfc;
+            position: relative;
+        }
+        
+        /* Messages */
+        .message {
+            margin-bottom: 16px;
+            opacity: 0;
+            animation: messageIn 0.5s ease-out forwards;
+        }
+        
+        @keyframes messageIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .message:nth-child(1) { animation-delay: 0.5s; }
+        .message:nth-child(2) { animation-delay: 1s; }
+        .message:nth-child(3) { animation-delay: 1.5s; }
+        .message:nth-child(4) { animation-delay: 2s; }
+        .message:nth-child(5) { animation-delay: 2.5s; }
+        
+        .message-customer {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .message-bubble {
+            background: #e2e8f0;
+            padding: 12px 18px;
+            border-radius: 18px 18px 4px 18px;
+            max-width: 70%;
+            color: #334155;
+            font-size: 14px;
+        }
+        
+        .message-customer .message-bubble {
+            background: #8b5cf6;
+            color: white;
+            border-radius: 18px 18px 18px 4px;
+        }
+        
+        .message-agent {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        
+        .agent-avatar {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+        
+        .message-agent-content {
+            flex: 1;
+        }
+        
+        /* Interactive cards */
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-top: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transform: scale(0);
+            animation: cardIn 0.5s ease-out forwards;
+        }
+        
+        @keyframes cardIn {
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        /* Product card */
+        .card-product {
+            animation-delay: 1.5s;
+        }
+        
+        .card-product-image {
+            height: 150px;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-product-image::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+            animation: productShine 3s ease-in-out infinite;
+        }
+        
+        @keyframes productShine {
+            0%, 100% { transform: translate(-50%, -50%) rotate(0deg); }
+            50% { transform: translate(50%, 50%) rotate(180deg); }
+        }
+        
+        .card-product-content {
+            padding: 16px;
+        }
+        
+        .card-product-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0 0 8px;
+        }
+        
+        .card-product-price {
+            font-size: 28px;
+            font-weight: 900;
+            color: #8b5cf6;
+            margin: 0 0 4px;
+        }
+        
+        .card-product-stock {
+            font-size: 13px;
+            color: #ef4444;
+            font-weight: 600;
+            margin: 0 0 16px;
+        }
+        
+        .card-product-btn {
+            width: 100%;
+            padding: 12px;
+            background: #1e293b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .card-product-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(30, 41, 59, 0.3);
+        }
+        
+        /* Discount card */
+        .card-discount {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 20px;
+            text-align: center;
+            animation-delay: 2s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-discount::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(251, 191, 36, 0.1) 10px,
+                rgba(251, 191, 36, 0.1) 20px
+            );
+            animation: stripeMove 20s linear infinite;
+        }
+        
+        @keyframes stripeMove {
+            to { transform: translate(50%, 50%); }
+        }
+        
+        .card-discount-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .card-discount-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+        
+        .card-discount-code {
+            font-size: 32px;
+            font-weight: 900;
+            color: #92400e;
+            margin: 12px 0;
+            font-family: 'Courier New', monospace;
+            letter-spacing: 2px;
+        }
+        
+        .card-discount-value {
+            display: inline-block;
+            background: #dc2626;
+            color: white;
+            padding: 6px 20px;
+            border-radius: 24px;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .card-discount-buttons {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .card-discount-btn {
+            flex: 1;
+            padding: 10px;
+            border: 2px solid #92400e;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        
+        .card-discount-btn.primary {
+            background: #92400e;
+            color: white;
+        }
+        
+        .card-discount-btn.secondary {
+            background: transparent;
+            color: #92400e;
+        }
+        
+        /* Checkout card */
+        .card-checkout {
+            animation-delay: 2.5s;
+            background: #f0fdf4;
+            border: 2px solid #10b981;
+        }
+        
+        .card-checkout-header {
+            background: #10b981;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .card-checkout-content {
+            padding: 20px;
+        }
+        
+        .card-checkout-items {
+            margin-bottom: 16px;
+        }
+        
+        .checkout-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .checkout-item-thumb {
+            width: 40px;
+            height: 40px;
+            background: #e2e8f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #64748b;
+            font-size: 10px;
+            font-weight: 700;
+        }
+        
+        .checkout-item-info {
+            flex: 1;
+        }
+        
+        .checkout-item-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e293b;
+            margin: 0;
+        }
+        
+        .checkout-item-qty {
+            font-size: 12px;
+            color: #64748b;
+            margin: 0;
+        }
+        
+        .card-checkout-total {
+            padding: 16px;
+            background: white;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .checkout-total-label {
+            font-size: 14px;
+            color: #64748b;
+            margin: 0 0 8px;
+        }
+        
+        .checkout-total-value {
+            font-size: 36px;
+            font-weight: 900;
+            color: #10b981;
+            margin: 0;
+        }
+        
+        .card-checkout-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .card-checkout-btn::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 70%);
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.5s ease;
+        }
+        
+        .card-checkout-btn:hover::after {
+            transform: translate(-50%, -50%) scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="grid-pattern"></div>
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+        <div class="glow-orb glow-orb-3"></div>
+        
+        <div class="content-wrapper">
+            <!-- Left content -->
+            <div class="left-content">
+                <div class="badge">
+                    <div class="badge-dot"></div>
+                    <span>Commerce Cards Live</span>
+                </div>
+                
+                <h1>Verkaufen statt<br><span class="gradient-text">nur Chatten</span></h1>
+                <p class="subtitle">Interaktive Cards die Kunden<br>zum Kaufen bewegen</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M20 6h-2.18c.11-.31.18-.65.18-1a2.996 2.996 0 0 0-5.5-1.65l-.5.67-.5-.68C10.96 2.54 10.05 2 9 2 7.34 2 6 3.34 6 5c0 .35.07.69.18 1H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-5-2c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1zM9 4c.55 0 1 .45 1 1s-.45 1-1 1-1-.45-1-1 .45-1 1-1z"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3 class="feature-title">Produkt Karten</h3>
+                            <p class="feature-desc">Mit Bildern, Preisen & direktem Link</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4c-1.1 0-2 .9-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42zM5.5 7C4.67 7 4 6.33 4 5.5S4.67 4 5.5 4 7 4.67 7 5.5 6.33 7 5.5 7z"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3 class="feature-title">Rabatt Codes</h3>
+                            <p class="feature-desc">1-Klick Code-Anwendung im Warenkorb</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M18 6h-2c0-2.21-1.79-4-4-4S8 3.79 8 6H6c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6-2c1.1 0 2 .9 2 2h-4c0-1.1.9-2 2-2zm6 16H6V8h2v2c0 .55.45 1 1 1s1-.45 1-1V8h4v2c0 .55.45 1 1 1s1-.45 1-1V8h2v12z"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3 class="feature-title">Tracking Karten</h3>
+                            <p class="feature-desc">Sendungsverfolgung mit Live-Updates</p>
+                        </div>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                            </svg>
+                        </div>
+                        <div class="feature-text">
+                            <h3 class="feature-title">Checkout Links</h3>
+                            <p class="feature-desc">Vorgefüllter Warenkorb mit Rabatt</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stats-row">
+                    <div class="stat-item">
+                        <div class="stat-value">87%</div>
+                        <div class="stat-unit">mehr Klicks</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">3.2x</div>
+                        <div class="stat-unit">höhere Conv.</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right content - Widget -->
+            <div class="widget-container">
+                <div class="particles">
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                    <div class="particle"></div>
+                </div>
+                
+                <div class="widget-mockup">
+                    <div class="widget-header">
+                        <div class="widget-header-content">
+                            <h3 class="widget-title">ReplAInow Support</h3>
+                            <div class="widget-status">
+                                <div class="status-dot"></div>
+                                <span>Sarah ist online</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="widget-content">
+                        <!-- Customer message -->
+                        <div class="message message-customer">
+                            <div class="message-bubble">
+                                Haben Sie etwas in Blau?
+                            </div>
+                        </div>
+                        
+                        <!-- Agent response -->
+                        <div class="message message-agent">
+                            <div class="agent-avatar">S</div>
+                            <div class="message-agent-content">
+                                <div class="message-bubble">
+                                    Ja! Ich zeige Ihnen unsere besten Produkte in Blau:
+                                </div>
+                                
+                                <!-- Product card -->
+                                <div class="card card-product">
+                                    <div class="card-product-image">
+                                        Premium Sneaker
+                                    </div>
+                                    <div class="card-product-content">
+                                        <h4 class="card-product-title">Air Max Premium - Ocean Blue</h4>
+                                        <div class="card-product-price">€149,99</div>
+                                        <div class="card-product-stock">Nur noch 3 auf Lager!</div>
+                                        <button class="card-product-btn">Produkt ansehen</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Customer message -->
+                        <div class="message message-customer">
+                            <div class="message-bubble">
+                                Perfekt! Gibt es einen Rabatt?
+                            </div>
+                        </div>
+                        
+                        <!-- Agent response with discount -->
+                        <div class="message message-agent">
+                            <div class="agent-avatar">S</div>
+                            <div class="message-agent-content">
+                                <div class="message-bubble">
+                                    Natürlich! Hier ist ein exklusiver Code für Sie:
+                                </div>
+                                
+                                <!-- Discount card -->
+                                <div class="card card-discount">
+                                    <div class="card-discount-content">
+                                        <div class="card-discount-icon">🎁</div>
+                                        <div class="card-discount-code">BLUE20</div>
+                                        <div class="card-discount-value">20% RABATT</div>
+                                        <div class="card-discount-buttons">
+                                            <button class="card-discount-btn secondary">Kopieren</button>
+                                            <button class="card-discount-btn primary">Anwenden</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Checkout link -->
+                        <div class="message message-agent">
+                            <div class="agent-avatar">S</div>
+                            <div class="message-agent-content">
+                                <div class="message-bubble">
+                                    Ich habe alles für Sie vorbereitet:
+                                </div>
+                                
+                                <!-- Checkout card -->
+                                <div class="card card-checkout">
+                                    <div class="card-checkout-header">
+                                        Bereit zum Checkout
+                                    </div>
+                                    <div class="card-checkout-content">
+                                        <div class="card-checkout-items">
+                                            <div class="checkout-item">
+                                                <div class="checkout-item-thumb">IMG</div>
+                                                <div class="checkout-item-info">
+                                                    <p class="checkout-item-name">Air Max Premium</p>
+                                                    <p class="checkout-item-qty">1 × €149,99</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card-checkout-total">
+                                            <p class="checkout-total-label">Mit 20% Rabatt</p>
+                                            <p class="checkout-total-value">€119,99</p>
+                                        </div>
+                                        <button class="card-checkout-btn">
+                                            Jetzt bezahlen
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

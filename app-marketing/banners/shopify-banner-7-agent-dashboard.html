@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReplAInow - Agent Dashboard Banner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 900px;
+      height: 900px;
+    }
+    
+    .banner {
+      width: 1600px;
+      height: 900px;
+      background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 50%, #FCA5A5 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle, rgba(220, 38, 38, 0.03) 2px, transparent 2px);
+      background-size: 32px 32px;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 1400px;
+      width: 100%;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+    }
+
+    h1 {
+      font-size: 68px;
+      font-weight: 900;
+      color: #1F2937;
+      margin-bottom: 24px;
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
+
+    h1 .highlight {
+      background: linear-gradient(135deg, #DC2626 0%, #B91C1C 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 26px;
+      color: #4B5563;
+      margin-bottom: 60px;
+      font-weight: 500;
+    }
+
+    /* Tools Grid */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 40px;
+    }
+
+    .tool-card {
+      background: white;
+      border-radius: 20px;
+      padding: 40px 32px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      border: 3px solid transparent;
+      transition: all 0.3s ease;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .tool-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #DC2626 0%, #EF4444 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .tool-card:hover::before {
+      opacity: 1;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-8px);
+      border-color: #FECACA;
+      box-shadow: 0 12px 28px rgba(220, 38, 38, 0.2);
+    }
+
+    .tool-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 24px;
+      background: linear-gradient(135deg, #FEE2E2 0%, #FECACA 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+      box-shadow: 0 4px 12px rgba(220, 38, 38, 0.15);
+    }
+
+    .tool-title {
+      font-size: 22px;
+      font-weight: 800;
+      color: #1F2937;
+      margin-bottom: 12px;
+    }
+
+    .tool-description {
+      font-size: 15px;
+      color: #6B7280;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .tool-features {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .tool-feature {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13px;
+      color: #4B5563;
+      font-weight: 600;
+    }
+
+    .feature-dot {
+      width: 8px;
+      height: 8px;
+      background: #DC2626;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* Bottom Stats */
+    .stats-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+
+    .stat-box {
+      background: white;
+      border: 3px solid #FECACA;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .stat-icon {
+      font-size: 36px;
+      margin-bottom: 12px;
+    }
+
+    .stat-value {
+      font-size: 20px;
+      font-weight: 800;
+      color: #DC2626;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 13px;
+      color: #6B7280;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="content">
+      <div class="badge">
+        <span>🛠️</span>
+        <span>AGENT TOOLS</span>
+      </div>
+
+      <h1>
+        Dein Team wird<br>
+        <span class="highlight">zum Verkaufsteam</span>
+      </h1>
+
+      <p class="subtitle">
+        Produkt-Picker, Rabatt-Creator, Checkout-Links & Kunden-Intelligenz in einem Dashboard.
+      </p>
+
+      <div class="tools-grid">
+        <!-- Tool 1: Product Picker -->
+        <div class="tool-card">
+          <div class="tool-icon">🛍️</div>
+          <div class="tool-title">Produkt-Picker</div>
+          <div class="tool-description">
+            Katalog durchsuchen, Produkte mit Varianten auswählen, als Karte senden
+          </div>
+          <div class="tool-features">
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Produkt mit Größe/Farbe</span>
+            </div>
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Visuelle Produktkarte</span>
+            </div>
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Direkter "Ansehen" Link</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tool 2: Discount Creator -->
+        <div class="tool-card">
+          <div class="tool-icon">🎁</div>
+          <div class="tool-title">Rabatt-Creator</div>
+          <div class="tool-description">
+            Shopify-Rabattcodes sofort erstellen und an Kunden senden
+          </div>
+          <div class="tool-features">
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>10%, 15%, 20% oder Betrag</span>
+            </div>
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Ein-Klick-Kopieren</span>
+            </div>
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Auto-Anwendung im Cart</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tool 3: Checkout Link Builder -->
+        <div class="tool-card">
+          <div class="tool-icon">🛒</div>
+          <div class="tool-title">Checkout-Link</div>
+          <div class="tool-description">
+            Mehrere Produkte in Warenkorb, mit Rabatt, sofort kaufen
+          </div>
+          <div class="tool-features">
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Multi-Produkt Warenkorb</span>
+            </div>
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Optionaler Rabatt</span>
+            </div>
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Ein-Klick-Checkout</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tool 4: Customer Intelligence -->
+        <div class="tool-card">
+          <div class="tool-icon">👥</div>
+          <div class="tool-title">Kunden-Intelligenz</div>
+          <div class="tool-description">
+            Bestellhistorie, Lifetime-Value, VIP-Status, Sentiment
+          </div>
+          <div class="tool-features">
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Bestellungen & LTV</span>
+            </div>
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>VIP-Badges</span>
+            </div>
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Sentiment-Analyse</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tool 5: Order Management -->
+        <div class="tool-card">
+          <div class="tool-icon">📦</div>
+          <div class="tool-title">Bestellverwaltung</div>
+          <div class="tool-description">
+            Rückerstattungen, Stornierungen, Tracking - alles im Dashboard
+          </div>
+          <div class="tool-features">
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Refunds verarbeiten</span>
+            </div>
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Bestellungen stornieren</span>
+            </div>
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Tracking-Informationen</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tool 6: AI Collaboration -->
+        <div class="tool-card">
+          <div class="tool-icon">🤝</div>
+          <div class="tool-title">KI-Zusammenarbeit</div>
+          <div class="tool-description">
+            Nahtlose Übergaben zwischen KI und menschlichen Agenten
+          </div>
+          <div class="tool-features">
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Übernehmen von KI</span>
+            </div>
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Zurückgeben an KI</span>
+            </div>
+            <div class="tool-feature">
+              <div class="feature-dot"></div>
+              <span>Weiterleiten an Team</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-bar">
+        <div class="stat-box">
+          <div class="stat-icon">⚡</div>
+          <div class="stat-value">3-Spalten</div>
+          <div class="stat-label">Dashboard Layout</div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-icon">🎯</div>
+          <div class="stat-value">Echtzeit</div>
+          <div class="stat-label">Team-Synchronisation</div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-icon">📊</div>
+          <div class="stat-value">Filter & Suche</div>
+          <div class="stat-label">Kategorien, Status, Tags</div>
+        </div>
+
+        <div class="stat-box">
+          <div class="stat-icon">💬</div>
+          <div class="stat-value">Multi-Kanal</div>
+          <div class="stat-label">Chat & E-Mail vereint</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+

@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplAInow - Dashboard to Customer Flow</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            margin: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            overflow: hidden;
+        }
+        
+        .banner { 
+            width: 1600px; 
+            height: 900px; 
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            display: flex;
+            align-items: center;
+            padding: 60px 80px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Subtle grid pattern */
+        .grid-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.015) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+        
+        /* Background glow effects */
+        .glow-1, .glow-2 {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.15;
+        }
+        
+        .glow-1 {
+            background: #8b5cf6;
+            top: -300px;
+            left: -200px;
+        }
+        
+        .glow-2 {
+            background: #3b82f6;
+            bottom: -300px;
+            right: -200px;
+        }
+        
+        /* Content wrapper */
+        .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            z-index: 2;
+            position: relative;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            padding: 10px 24px;
+            border-radius: 24px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        
+        .flow-icon {
+            width: 18px;
+            height: 18px;
+            position: relative;
+        }
+        
+        .flow-icon::before,
+        .flow-icon::after {
+            content: '';
+            position: absolute;
+            background: #60a5fa;
+            border-radius: 50%;
+        }
+        
+        .flow-icon::before {
+            width: 8px;
+            height: 8px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        
+        .flow-icon::after {
+            width: 8px;
+            height: 8px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: flowPulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes flowPulse {
+            0%, 100% { opacity: 0.3; transform: translateY(-50%) scale(0.8); }
+            50% { opacity: 1; transform: translateY(-50%) scale(1.2); }
+        }
+        
+        h1 {
+            color: white;
+            font-size: 72px;
+            font-weight: 900;
+            margin: 0 0 20px;
+            line-height: 0.95;
+            letter-spacing: -3px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+        
+        .subtitle {
+            color: #94a3b8;
+            font-size: 26px;
+            margin: 0;
+            font-weight: 500;
+        }
+        
+        /* Flow visualization */
+        .flow-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+            position: relative;
+        }
+        
+        /* Dashboard mockup */
+        .dashboard-section {
+            flex: 0 0 500px;
+            position: relative;
+        }
+        
+        .dashboard-mockup {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 16px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+        
+        .dashboard-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        
+        .dashboard-title {
+            color: white;
+            font-size: 16px;
+            font-weight: 700;
+        }
+        
+        .dashboard-actions {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .action-btn {
+            width: 32px;
+            height: 32px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .action-btn::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .action-btn:hover::before {
+            opacity: 1;
+        }
+        
+        /* Product picker icon */
+        .product-icon {
+            width: 18px;
+            height: 18px;
+            background: #8b5cf6;
+            border-radius: 4px;
+            position: relative;
+        }
+        
+        .product-icon::after {
+            content: '';
+            position: absolute;
+            inset: 4px;
+            border: 2px solid rgba(15, 23, 42, 0.8);
+            border-radius: 2px;
+        }
+        
+        /* Discount icon */
+        .discount-icon {
+            width: 20px;
+            height: 20px;
+            position: relative;
+        }
+        
+        .discount-icon::before {
+            content: '%';
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8b5cf6;
+            font-weight: 700;
+            font-size: 12px;
+        }
+        
+        /* Checkout icon */
+        .checkout-icon {
+            width: 18px;
+            height: 18px;
+            background: #8b5cf6;
+            border-radius: 50%;
+            position: relative;
+        }
+        
+        .checkout-icon::after {
+            content: '€';
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(15, 23, 42, 0.8);
+            font-weight: 700;
+            font-size: 10px;
+        }
+        
+        /* Chat preview */
+        .chat-preview {
+            background: rgba(30, 41, 59, 0.5);
+            border-radius: 12px;
+            padding: 16px;
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .message {
+            margin-bottom: 12px;
+            animation: messageSlide 0.5s ease-out;
+        }
+        
+        @keyframes messageSlide {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .message-agent {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+        }
+        
+        .agent-avatar {
+            width: 28px;
+            height: 28px;
+            background: rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a78bfa;
+            font-size: 11px;
+            font-weight: 700;
+        }
+        
+        .message-content {
+            background: rgba(51, 65, 85, 0.5);
+            padding: 10px 14px;
+            border-radius: 12px 12px 12px 4px;
+            color: #e2e8f0;
+            font-size: 14px;
+            max-width: 200px;
+        }
+        
+        /* Flow arrows */
+        .flow-arrows {
+            position: absolute;
+            left: 520px;
+            right: 520px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 300px;
+            pointer-events: none;
+        }
+        
+        .flow-path {
+            stroke: #8b5cf6;
+            stroke-width: 3;
+            fill: none;
+            stroke-dasharray: 8 4;
+            animation: flowDash 20s linear infinite;
+            opacity: 0.5;
+        }
+        
+        @keyframes flowDash {
+            to {
+                stroke-dashoffset: -200;
+            }
+        }
+        
+        /* Customer section */
+        .customer-section {
+            flex: 0 0 500px;
+            position: relative;
+        }
+        
+        .widget-mockup {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+            width: 380px;
+            margin: 0 auto;
+        }
+        
+        .widget-header {
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            padding: 16px 20px;
+            color: white;
+        }
+        
+        .widget-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .widget-content {
+            padding: 20px;
+            height: 350px;
+            overflow: hidden;
+        }
+        
+        /* Product card in widget */
+        .card-product {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 16px;
+            transform: scale(0);
+            animation: cardPop 0.5s ease-out 1s forwards;
+        }
+        
+        @keyframes cardPop {
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        .card-product-image {
+            height: 120px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+        }
+        
+        .card-product-details {
+            padding: 16px;
+        }
+        
+        .card-product-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e293b;
+            margin: 0 0 8px;
+        }
+        
+        .card-product-price {
+            font-size: 24px;
+            font-weight: 800;
+            color: #8b5cf6;
+            margin: 0 0 12px;
+        }
+        
+        .card-product-btn {
+            width: 100%;
+            padding: 12px;
+            background: #1e293b;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        
+        /* Discount card */
+        .card-discount {
+            background: white;
+            border: 2px solid #10b981;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transform: scale(0);
+            animation: cardPop 0.5s ease-out 2s forwards;
+        }
+        
+        .card-discount-code {
+            font-size: 28px;
+            font-weight: 800;
+            color: #10b981;
+            margin: 12px 0;
+            font-family: monospace;
+        }
+        
+        .card-discount-label {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+        
+        /* Action pulse */
+        .action-pulse {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(139, 92, 246, 0.4);
+            border-radius: 50%;
+            animation: actionPulse 2s ease-out infinite;
+        }
+        
+        @keyframes actionPulse {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(3);
+                opacity: 0;
+            }
+        }
+        
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 42px;
+            font-weight: 900;
+            color: #8b5cf6;
+            margin: 0 0 8px;
+            letter-spacing: -1px;
+        }
+        
+        .stat-label {
+            color: #94a3b8;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="grid-pattern"></div>
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+        
+        <div class="content">
+            <div class="header">
+                <div class="badge">
+                    <div class="flow-icon"></div>
+                    <span>Instant Commerce Flow</span>
+                </div>
+                <h1>Agent klickt - <span class="gradient-text">Kunde kauft</span></h1>
+                <p class="subtitle">Von Dashboard zu Verkauf in Sekunden</p>
+            </div>
+            
+            <div class="flow-container">
+                <!-- Dashboard Section -->
+                <div class="dashboard-section">
+                    <div class="dashboard-mockup">
+                        <div class="dashboard-header">
+                            <h3 class="dashboard-title">Live Chat Dashboard</h3>
+                            <div class="dashboard-actions">
+                                <div class="action-btn">
+                                    <div class="product-icon"></div>
+                                    <div class="action-pulse"></div>
+                                </div>
+                                <div class="action-btn">
+                                    <div class="discount-icon"></div>
+                                </div>
+                                <div class="action-btn">
+                                    <div class="checkout-icon"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-preview">
+                            <div class="message message-agent">
+                                <div class="agent-avatar">S</div>
+                                <div class="message-content">
+                                    Ich sende Ihnen unsere Top-Produkte...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Flow visualization -->
+                <svg class="flow-arrows" viewBox="0 0 560 300" preserveAspectRatio="none">
+                    <path class="flow-path" d="M 0 150 L 560 150" />
+                    <path class="flow-path" d="M 0 80 Q 280 50 560 80" style="animation-delay: 0.5s" />
+                    <path class="flow-path" d="M 0 220 Q 280 250 560 220" style="animation-delay: 1s" />
+                </svg>
+                
+                <!-- Customer Section -->
+                <div class="customer-section">
+                    <div class="widget-mockup">
+                        <div class="widget-header">
+                            <h3 class="widget-title">Live Support</h3>
+                        </div>
+                        <div class="widget-content">
+                            <div class="card-product">
+                                <div class="card-product-image">Premium Produkt</div>
+                                <div class="card-product-details">
+                                    <h4 class="card-product-title">Bestseller 2024</h4>
+                                    <p class="card-product-price">€89,99</p>
+                                    <button class="card-product-btn">Produkt ansehen</button>
+                                </div>
+                            </div>
+                            
+                            <div class="card-discount">
+                                <div class="card-discount-label">20% RABATT</div>
+                                <div class="card-discount-code">AGENT20</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-value">1-Klick</div>
+                    <div class="stat-label">Card Erstellung</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">&lt; 2 Sek</div>
+                    <div class="stat-label">Bis zum Kunden</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">3x</div>
+                    <div class="stat-label">Höhere Conversion</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

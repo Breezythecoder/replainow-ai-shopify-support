@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReplAInow - Multi-Language Banner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 900px;
+      height: 900px;
+    }
+    
+    .banner {
+      width: 1600px;
+      height: 900px;
+      background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 50%, #BFDBFE 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background Decoration */
+    .banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        radial-gradient(circle, rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+      background-size: 32px 32px;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 1300px;
+      width: 100%;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    }
+
+    h1 {
+      font-size: 68px;
+      font-weight: 900;
+      color: #1F2937;
+      margin-bottom: 24px;
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
+
+    h1 .highlight {
+      background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 28px;
+      color: #6B7280;
+      margin-bottom: 60px;
+      font-weight: 500;
+    }
+
+    /* Globe Visualization */
+    .globe-container {
+      position: relative;
+      margin: 40px auto;
+      width: 500px;
+      height: 500px;
+    }
+
+    .globe-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 240px;
+      height: 240px;
+      background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 40px rgba(59, 130, 246, 0.4);
+      border: 8px solid white;
+      z-index: 10;
+    }
+
+    .globe-icon {
+      font-size: 72px;
+      margin-bottom: 12px;
+    }
+
+    .globe-count {
+      font-size: 52px;
+      font-weight: 900;
+      color: white;
+      line-height: 1;
+    }
+
+    .globe-label {
+      font-size: 18px;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    /* Floating Language Bubbles */
+    .language-bubble {
+      position: absolute;
+      background: white;
+      border-radius: 20px;
+      padding: 20px 28px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+      border: 3px solid #DBEAFE;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.3s ease;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .language-bubble:hover {
+      transform: scale(1.05);
+      border-color: #3B82F6;
+      box-shadow: 0 8px 24px rgba(59, 130, 246, 0.3);
+    }
+
+    .language-flag {
+      font-size: 40px;
+    }
+
+    .language-text {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1F2937;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .language-name {
+      font-size: 12px;
+      color: #6B7280;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+    }
+
+    /* Bubble Positions */
+    .bubble-1 {
+      top: 10%;
+      left: 15%;
+      animation-delay: 0s;
+    }
+
+    .bubble-2 {
+      top: 12%;
+      right: 18%;
+      animation-delay: 0.5s;
+    }
+
+    .bubble-3 {
+      top: 45%;
+      left: 5%;
+      animation-delay: 1s;
+    }
+
+    .bubble-4 {
+      top: 45%;
+      right: 8%;
+      animation-delay: 1.5s;
+    }
+
+    .bubble-5 {
+      bottom: 18%;
+      left: 20%;
+      animation-delay: 2s;
+    }
+
+    .bubble-6 {
+      bottom: 15%;
+      right: 22%;
+      animation-delay: 2.5s;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    /* Features List */
+    .features-list {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 60px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: white;
+      padding: 20px 32px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      border: 2px solid #DBEAFE;
+    }
+
+    .feature-icon {
+      font-size: 32px;
+    }
+
+    .feature-text {
+      text-align: left;
+    }
+
+    .feature-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: #1F2937;
+      margin-bottom: 4px;
+    }
+
+    .feature-subtitle {
+      font-size: 14px;
+      color: #6B7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="content">
+      <div class="badge">
+        <span>🌍</span>
+        <span>GLOBALER SUPPORT</span>
+      </div>
+
+      <h1>
+        Eine KI.<br>
+        <span class="highlight">100+ Sprachen.</span>
+      </h1>
+
+      <p class="subtitle">
+        Automatische Spracherkennung. Fließende Antworten. Weltweiter Verkauf ohne Grenzen.
+      </p>
+
+      <div class="globe-container">
+        <!-- Center Globe -->
+        <div class="globe-center">
+          <div class="globe-icon">🌍</div>
+          <div class="globe-count">100+</div>
+          <div class="globe-label">Sprachen</div>
+        </div>
+
+        <!-- Floating Language Bubbles -->
+        <div class="language-bubble bubble-1">
+          <div class="language-flag">🇩🇪</div>
+          <div class="language-text">Wie kann ich helfen?</div>
+          <div class="language-name">Deutsch</div>
+        </div>
+
+        <div class="language-bubble bubble-2">
+          <div class="language-flag">🇬🇧</div>
+          <div class="language-text">How can I help?</div>
+          <div class="language-name">English</div>
+        </div>
+
+        <div class="language-bubble bubble-3">
+          <div class="language-flag">🇸🇦</div>
+          <div class="language-text">كيف يمكنني المساعدة؟</div>
+          <div class="language-name">العربية</div>
+        </div>
+
+        <div class="language-bubble bubble-4">
+          <div class="language-flag">🇯🇵</div>
+          <div class="language-text">お手伝いできますか？</div>
+          <div class="language-name">日本語</div>
+        </div>
+
+        <div class="language-bubble bubble-5">
+          <div class="language-flag">🇫🇷</div>
+          <div class="language-text">Comment puis-je aider?</div>
+          <div class="language-name">Français</div>
+        </div>
+
+        <div class="language-bubble bubble-6">
+          <div class="language-flag">🇪🇸</div>
+          <div class="language-text">¿Cómo puedo ayudar?</div>
+          <div class="language-name">Español</div>
+        </div>
+      </div>
+
+      <div class="features-list">
+        <div class="feature-item">
+          <div class="feature-icon">🎯</div>
+          <div class="feature-text">
+            <div class="feature-title">Auto-Erkennung</div>
+            <div class="feature-subtitle">KI erkennt Sprache automatisch</div>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">💬</div>
+          <div class="feature-text">
+            <div class="feature-title">Fließend</div>
+            <div class="feature-subtitle">Natürliche, fehlerfreie Antworten</div>
+          </div>
+        </div>
+
+        <div class="feature-item">
+          <div class="feature-icon">🌐</div>
+          <div class="feature-text">
+            <div class="feature-title">Weltweit verkaufen</div>
+            <div class="feature-subtitle">Keine Sprachbarrieren mehr</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReplAInow - Proactive Triggers Banner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    
+    .banner-container {
+      max-width: 1600px;
+      width: 100%;
+      background: white;
+      border-radius: 24px;
+      padding: 60px;
+      box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.04),
+        0 8px 16px rgba(0, 0, 0, 0.06),
+        0 16px 32px rgba(0, 0, 0, 0.08);
+    }
+    
+    .banner-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+    
+    .banner-subtitle {
+      text-align: center;
+      font-size: 20px;
+      color: #6B7280;
+      margin-bottom: 60px;
+    }
+    
+    .scenarios-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+    }
+    
+    .scenario-card {
+      background: linear-gradient(145deg, #FFFFFF 0%, #FAFBFC 100%);
+      border: 1px solid #E5E7EB;
+      border-radius: 16px;
+      padding: 24px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .scenario-card:hover {
+      transform: translateY(-4px);
+      border-color: #8B5CF6;
+      box-shadow: 0 8px 24px rgba(139, 92, 246, 0.15);
+    }
+    
+    .scenario-label {
+      display: inline-block;
+      background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    
+    .scenario-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+    
+    .page-mockup {
+      background: #F9FAFB;
+      border: 1px solid #E5E7EB;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 16px;
+      min-height: 200px;
+      position: relative;
+    }
+    
+    .page-header {
+      font-size: 14px;
+      font-weight: 600;
+      color: #6B7280;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #E5E7EB;
+    }
+    
+    .page-content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    
+    .content-block {
+      height: 12px;
+      background: #E5E7EB;
+      border-radius: 4px;
+    }
+    
+    .content-block.short {
+      width: 60%;
+    }
+    
+    .chat-popup {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+      max-width: 280px;
+      animation: slideUp 0.3s ease;
+    }
+    
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .popup-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    
+    .popup-avatar {
+      width: 32px;
+      height: 32px;
+      background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+    
+    .popup-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111827;
+    }
+    
+    .popup-message {
+      font-size: 13px;
+      color: #4B5563;
+      line-height: 1.4;
+      margin-bottom: 12px;
+    }
+    
+    .popup-badge {
+      display: inline-block;
+      background: #FEF3C7;
+      color: #92400E;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    
+    .scenario-trigger {
+      font-size: 13px;
+      color: #6B7280;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .trigger-icon {
+      width: 20px;
+      height: 20px;
+      background: #F5F3FF;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+    
+    .stats-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 60px;
+      padding: 32px;
+      background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+      border-radius: 16px;
+    }
+    
+    .stat-item {
+      text-align: center;
+    }
+    
+    .stat-value {
+      font-size: 48px;
+      font-weight: 900;
+      background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+    
+    .stat-label {
+      font-size: 14px;
+      color: #6B7280;
+      font-weight: 600;
+    }
+    
+    @media (max-width: 768px) {
+      .banner-container {
+        padding: 32px 24px;
+      }
+      
+      .banner-title {
+        font-size: 28px;
+      }
+      
+      .banner-subtitle {
+        font-size: 16px;
+      }
+      
+      .scenarios-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .stats-row {
+        flex-direction: column;
+        gap: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner-container">
+    <h1 class="banner-title">Proaktiver Chat</h1>
+    <p class="banner-subtitle">Sprich Kunden an, bevor sie fragen. Mehr Conversions. Weniger Abbrüche.</p>
+    
+    <div class="scenarios-grid">
+      <!-- Homepage Scenario -->
+      <div class="scenario-card">
+        <div class="scenario-label">🏠 Homepage</div>
+        <div class="scenario-title">Willkommens-Nachricht</div>
+        
+        <div class="page-mockup">
+          <div class="page-header">Dein Online-Shop</div>
+          <div class="page-content">
+            <div class="content-block"></div>
+            <div class="content-block short"></div>
+            <div class="content-block"></div>
+          </div>
+          
+          <div class="chat-popup">
+            <div class="popup-header">
+              <div class="popup-avatar">🤖</div>
+              <div class="popup-name">ReplAI</div>
+            </div>
+            <div class="popup-message">
+              Willkommen! 👋 Kann ich dir bei etwas helfen?
+            </div>
+          </div>
+        </div>
+        
+        <div class="scenario-trigger">
+          <div class="trigger-icon">⏱️</div>
+          <span>Trigger: Nach 3 Sekunden auf Homepage</span>
+        </div>
+      </div>
+      
+      <!-- Product Page Scenario -->
+      <div class="scenario-card">
+        <div class="scenario-label">🛍️ Produktseite</div>
+        <div class="scenario-title">Produkt-Hilfe</div>
+        
+        <div class="page-mockup">
+          <div class="page-header">Sommerkleid Elegant - €89.99</div>
+          <div class="page-content">
+            <div class="content-block"></div>
+            <div class="content-block short"></div>
+            <div class="content-block"></div>
+          </div>
+          
+          <div class="chat-popup">
+            <div class="popup-header">
+              <div class="popup-avatar">🤖</div>
+              <div class="popup-name">ReplAI</div>
+            </div>
+            <div class="popup-message">
+              Fragen zu diesem Produkt? Ich bin für dich da! 💬
+            </div>
+          </div>
+        </div>
+        
+        <div class="scenario-trigger">
+          <div class="trigger-icon">⏱️</div>
+          <span>Trigger: Nach 30s auf Produktseite</span>
+        </div>
+      </div>
+      
+      <!-- Cart Abandonment Scenario -->
+      <div class="scenario-card">
+        <div class="scenario-label">🛒 Warenkorb</div>
+        <div class="scenario-title">Warenkorb-Abbruch</div>
+        
+        <div class="page-mockup">
+          <div class="page-header">Warenkorb (2 Artikel)</div>
+          <div class="page-content">
+            <div class="content-block"></div>
+            <div class="content-block"></div>
+          </div>
+          
+          <div class="chat-popup">
+            <div class="popup-header">
+              <div class="popup-avatar">🤖</div>
+              <div class="popup-name">ReplAI</div>
+            </div>
+            <div class="popup-message">
+              Noch unentschlossen? Hier ist ein kleines Geschenk:
+            </div>
+            <div class="popup-badge">🎉 10% RABATT: SAVE10</div>
+          </div>
+        </div>
+        
+        <div class="scenario-trigger">
+          <div class="trigger-icon">🚪</div>
+          <span>Trigger: Exit-Intent bei gefülltem Warenkorb</span>
+        </div>
+      </div>
+      
+      <!-- Checkout Scenario -->
+      <div class="scenario-card">
+        <div class="scenario-label">💳 Checkout</div>
+        <div class="scenario-title">Checkout-Hilfe</div>
+        
+        <div class="page-mockup">
+          <div class="page-header">Checkout - Schritt 2/3</div>
+          <div class="page-content">
+            <div class="content-block"></div>
+            <div class="content-block short"></div>
+            <div class="content-block"></div>
+          </div>
+          
+          <div class="chat-popup">
+            <div class="popup-header">
+              <div class="popup-avatar">🤖</div>
+              <div class="popup-name">ReplAI</div>
+            </div>
+            <div class="popup-message">
+              Probleme beim Checkout? Ich helfe dir gerne! 🚀
+            </div>
+          </div>
+        </div>
+        
+        <div class="scenario-trigger">
+          <div class="trigger-icon">⏱️</div>
+          <span>Trigger: >60s auf Checkout-Seite</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Stats -->
+    <div class="stats-row">
+      <div class="stat-item">
+        <div class="stat-value">+25%</div>
+        <div class="stat-label">Conversion-Rate</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">-40%</div>
+        <div class="stat-label">Warenkorb-Abbrüche</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-value">+15%</div>
+        <div class="stat-label">Durchschn. Bestellwert</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

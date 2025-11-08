@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banner 1 - Zero Setup</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { overflow: hidden; }
+  </style>
+</head>
+<body>
+  <div style="width: 1600px; height: 900px; background: linear-gradient(135deg, rgb(147, 51, 234) 0%, rgb(139, 92, 246) 50%, rgb(147, 51, 234) 100%); display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden;">
+    
+    <!-- Decorative gradient orbs -->
+    <div style="position: absolute; top: 0; left: 25%; width: 700px; height: 700px; background: rgba(255,255,255,0.1); border-radius: 50%; filter: blur(80px);"></div>
+    <div style="position: absolute; bottom: 0; right: 25%; width: 700px; height: 700px; background: rgba(192,132,252,0.2); border-radius: 50%; filter: blur(80px);"></div>
+    
+    <div style="position: relative; text-align: center; color: white; padding: 0 80px; max-width: 1200px;">
+      
+      <!-- Top Badge -->
+      <div style="display: inline-flex; align-items: center; gap: 12px; background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 9999px; padding: 12px 32px; margin-bottom: 48px;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        <span style="font-size: 18px; font-weight: 700;">AI Helpdesk for Shopify</span>
+      </div>
+
+      <!-- Giant Time Display -->
+      <div style="margin-bottom: 48px;">
+        <div style="display: flex; align-items: center; justify-content: center; gap: 32px; margin-bottom: 32px;">
+          <svg width="128" height="128" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="opacity: 0.9;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          <div style="text-align: left;">
+            <div style="font-size: 160px; font-weight: 300; line-height: 1; margin-bottom: 8px;">60</div>
+            <div style="font-size: 48px; font-weight: 600; letter-spacing: 2px;">SECONDS</div>
+          </div>
+        </div>
+        
+        <div style="width: 256px; height: 8px; background: rgba(255,255,255,0.3); border-radius: 9999px; margin: 0 auto 32px;"></div>
+        
+        <div style="font-size: 36px; font-weight: 700; letter-spacing: 1px;">
+          From Installation to Live Support
+        </div>
+      </div>
+
+      <!-- Value Proposition -->
+      <div style="font-size: 24px; opacity: 0.9; margin-bottom: 56px; font-weight: 300; line-height: 1.6;">
+        <span style="font-weight: 700;">Zero configuration.</span> Zero knowledge base.<br/>
+        <span style="font-weight: 700;">Zero training.</span> Just install – AI instantly knows your complete shop.
+      </div>
+
+      <!-- 3-Step Visual -->
+      <div style="display: flex; align-items: center; justify-content: center; gap: 24px;">
+        <!-- Step 1 -->
+        <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 24px 32px; min-width: 280px;">
+          <div style="font-size: 64px; font-weight: 300; margin-bottom: 12px;">1.</div>
+          <div style="font-size: 18px; font-weight: 600;">Install</div>
+          <div style="font-size: 14px; opacity: 0.8; margin-top: 8px;">Shopify App Store</div>
+        </div>
+
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity: 0.6;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+
+        <!-- Step 2 -->
+        <div style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2); border-radius: 16px; padding: 24px 32px; min-width: 280px;">
+          <div style="font-size: 64px; font-weight: 300; margin-bottom: 12px;">2.</div>
+          <div style="font-size: 18px; font-weight: 600;">Activate Widget</div>
+          <div style="font-size: 14px; opacity: 0.8; margin-top: 8px;">One Click</div>
+        </div>
+
+        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity: 0.6;"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+
+        <!-- Step 3 -->
+        <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.4); border-radius: 16px; padding: 24px 32px; min-width: 280px;">
+          <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin: 0 auto 8px;"><polyline points="20 6 9 17 4 12"/></svg>
+          <div style="font-size: 18px; font-weight: 700;">Live!</div>
+          <div style="font-size: 14px; opacity: 0.9; margin-top: 8px;">AI responds immediately</div>
+        </div>
+      </div>
+
+      <!-- Bottom Trust Line -->
+      <div style="margin-top: 56px; font-size: 18px; opacity: 0.8; font-weight: 300;">
+        Automatic Import: Products • Orders • Policies • Customers
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+

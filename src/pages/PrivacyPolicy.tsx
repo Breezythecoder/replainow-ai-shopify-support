@@ -1,4 +1,4 @@
-import ModernNavbar from "@/components/marketing/UltraNavbar";
+import ModernNavbar from "@/components/marketing/PremiumNavbar";
 import Footer from "@/components/marketing/UltraFooter";
 import SEO from "@/components/SEO";
 
@@ -12,7 +12,7 @@ const PrivacyPolicy = () => {
         description="Learn how ReplAInow collects, uses, stores, and protects merchant data. GDPR-compliant privacy policy with Shopify API usage explained."
         path="/privacy"
       />
-      <UltraNavbar />
+      <PremiumNavbar />
       <main>
         <section className="container mx-auto max-w-[800px] px-4 py-12 md:py-16">
           <article className="space-y-6 leading-relaxed">

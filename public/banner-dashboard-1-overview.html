@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Overview - 3-Column Professional Interface</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #000;
+            overflow: hidden;
+        }
+        
+        .banner {
+            width: 1600px;
+            height: 900px;
+            position: relative;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        /* Background Pattern */
+        .pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        /* Glow Effects */
+        .glow-1, .glow-2 {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.2;
+            pointer-events: none;
+        }
+        
+        .glow-1 {
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.4) 0%, transparent 70%);
+            top: -300px;
+            left: 200px;
+        }
+        
+        .glow-2 {
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.3) 0%, transparent 70%);
+            bottom: -300px;
+            right: 200px;
+        }
+        
+        /* Content */
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: #3b82f6;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .badge-text {
+            color: #60a5fa;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .title {
+            font-size: 56px;
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+        
+        .title-gradient {
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #94a3b8;
+            font-weight: 400;
+        }
+        
+        /* Dashboard Mockup */
+        .dashboard-container {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 340px 1fr 360px;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+        
+        /* Column 1: Conversation List */
+        .column-1 {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(71, 85, 105, 0.5);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .column-header {
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .live-badge {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+        }
+        
+        .filter-chips {
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-bottom: 12px;
+        }
+        
+        .chip {
+            background: rgba(100, 116, 139, 0.3);
+            color: #cbd5e1;
+            font-size: 11px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        
+        .chip-active {
+            background: rgba(139, 92, 246, 0.3);
+            color: #c4b5fd;
+            border: 1px solid rgba(139, 92, 246, 0.5);
+        }
+        
+        .conversation-item {
+            background: rgba(51, 65, 85, 0.4);
+            border: 1px solid rgba(71, 85, 105, 0.3);
+            border-radius: 12px;
+            padding: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .conversation-item:hover {
+            background: rgba(71, 85, 105, 0.5);
+            border-color: rgba(139, 92, 246, 0.5);
+        }
+        
+        .conversation-item-active {
+            background: rgba(139, 92, 246, 0.2);
+            border-color: rgba(139, 92, 246, 0.6);
+        }
+        
+        .customer-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 6px;
+        }
+        
+        .avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .customer-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: white;
+        }
+        
+        .customer-email {
+            font-size: 11px;
+            color: #94a3b8;
+        }
+        
+        .message-preview {
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 4px;
+        }
+        
+        .category-badge {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.2);
+            color: #60a5fa;
+            font-size: 9px;
+            padding: 3px 8px;
+            border-radius: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-top: 6px;
+        }
+        
+        /* Column 2: Chat Window */
+        .column-2 {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(71, 85, 105, 0.5);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+            margin-bottom: 16px;
+        }
+        
+        .chat-customer {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .online-dot {
+            width: 10px;
+            height: 10px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        .action-buttons {
+            display: flex;
+            gap: 8px;
+        }
+        
+        .btn {
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+        
+        .btn-blue {
+            background: #3b82f6;
+            color: white;
+        }
+        
+        .btn-green {
+            background: #22c55e;
+            color: white;
+        }
+        
+        .messages-area {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            overflow: hidden;
+        }
+        
+        .message {
+            max-width: 70%;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        
+        .message-customer {
+            align-self: flex-end;
+            background: rgba(100, 116, 139, 0.4);
+            color: white;
+        }
+        
+        .message-agent {
+            align-self: flex-start;
+            background: white;
+            color: #1e293b;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            width: 280px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 140px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }
+        
+        .product-info {
+            padding: 12px;
+        }
+        
+        .product-name {
+            font-size: 13px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 4px;
+        }
+        
+        .product-price {
+            font-size: 16px;
+            font-weight: 800;
+            color: #8b5cf6;
+            margin-bottom: 8px;
+        }
+        
+        .product-btn {
+            width: 100%;
+            background: #1e293b;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        /* Column 3: Customer Info */
+        .column-3 {
+            background: rgba(30, 41, 59, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(71, 85, 105, 0.5);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .customer-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 16px;
+            border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+        }
+        
+        .avatar-large {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 12px;
+        }
+        
+        .vip-badge {
+            background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+            color: white;
+            font-size: 10px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 12px;
+            text-transform: uppercase;
+            margin-top: 6px;
+        }
+        
+        .info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(71, 85, 105, 0.2);
+        }
+        
+        .info-label {
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+        
+        .info-value {
+            font-size: 12px;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .order-card {
+            background: rgba(51, 65, 85, 0.4);
+            border: 1px solid rgba(71, 85, 105, 0.3);
+            border-radius: 10px;
+            padding: 12px;
+        }
+        
+        .order-header {
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+        
+        .order-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 6px;
+        }
+        
+        .order-thumb {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            border-radius: 6px;
+        }
+        
+        .order-details {
+            flex: 1;
+        }
+        
+        .order-name {
+            font-size: 11px;
+            color: white;
+            font-weight: 500;
+        }
+        
+        .order-price {
+            font-size: 10px;
+            color: #94a3b8;
+        }
+        
+        /* Footer Metrics */
+        .metrics {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: rgba(71, 85, 105, 0.2);
+        }
+        
+        .metric {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 28px 40px;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+        
+        .metric-label {
+            font-size: 13px;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="pattern"></div>
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+        
+        <div class="content">
+            <!-- Header -->
+            <div class="header">
+                <div class="badge">
+                    <div class="badge-dot"></div>
+                    <span class="badge-text">Professional Agent Interface</span>
+                </div>
+                <h1 class="title">
+                    <span class="title-gradient">3-Spalten</span> Profi-Dashboard
+                </h1>
+                <p class="subtitle">Gespräche • Chat • Kunden-Intel - Alles in einem Interface</p>
+            </div>
+            
+            <!-- 3-Column Dashboard -->
+            <div class="dashboard-container">
+                
+                <!-- Column 1: Conversations -->
+                <div class="column-1">
+                    <div class="column-header">
+                        Live Chats
+                        <span class="live-badge">LIVE</span>
+                    </div>
+                    
+                    <div class="filter-chips">
+                        <span class="chip chip-active">All (24)</span>
+                        <span class="chip">Product (8)</span>
+                        <span class="chip">Support (12)</span>
+                        <span class="chip">Delivery (4)</span>
+                    </div>
+                    
+                    <div class="conversation-item conversation-item-active">
+                        <div class="customer-info">
+                            <div class="avatar">SM</div>
+                            <div>
+                                <div class="customer-name">Sarah Miller</div>
+                                <div class="customer-email">sarah@example.com</div>
+                            </div>
+                        </div>
+                        <div class="message-preview">Looking for blue summer dress...</div>
+                        <span class="category-badge">Product</span>
+                    </div>
+                    
+                    <div class="conversation-item">
+                        <div class="customer-info">
+                            <div class="avatar">JD</div>
+                            <div>
+                                <div class="customer-name">John Doe</div>
+                                <div class="customer-email">john@example.com</div>
+                            </div>
+                        </div>
+                        <div class="message-preview">Where is my order #1234?</div>
+                        <span class="category-badge" style="background: rgba(34, 197, 94, 0.2); color: #4ade80;">Delivery</span>
+                    </div>
+                    
+                    <div class="conversation-item">
+                        <div class="customer-info">
+                            <div class="avatar">LK</div>
+                            <div>
+                                <div class="customer-name">Lisa Klein</div>
+                                <div class="customer-email">lisa@example.com</div>
+                            </div>
+                        </div>
+                        <div class="message-preview">Do you have student discounts?</div>
+                        <span class="category-badge" style="background: rgba(168, 85, 247, 0.2); color: #c084fc;">Presale</span>
+                    </div>
+                </div>
+                
+                <!-- Column 2: Chat -->
+                <div class="column-2">
+                    <div class="chat-header">
+                        <div class="chat-customer">
+                            <div class="avatar">SM</div>
+                            <div>
+                                <div class="customer-name">Sarah Miller</div>
+                                <div class="online-dot"></div>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-blue">Take Over</button>
+                            <button class="btn btn-green">Give to AI</button>
+                        </div>
+                    </div>
+                    
+                    <div class="messages-area">
+                        <div class="message message-customer">
+                            I'm looking for a blue summer dress for a wedding
+                        </div>
+                        
+                        <div class="message message-agent">
+                            Perfect! Let me show you our best options 👗
+                        </div>
+                        
+                        <!-- Product Card -->
+                        <div class="product-card">
+                            <div class="product-image">👗</div>
+                            <div class="product-info">
+                                <div class="product-name">Azure Summer Dress</div>
+                                <div class="product-price">€89,99</div>
+                                <div style="font-size: 10px; color: #22c55e; font-weight: 600; margin-bottom: 8px;">✓ 3 auf Lager</div>
+                                <div class="product-btn">Produkt ansehen</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Column 3: Customer Info -->
+                <div class="column-3">
+                    <div class="customer-header">
+                        <div class="avatar-large">SM</div>
+                        <div class="customer-name" style="font-size: 16px;">Sarah Miller</div>
+                        <div class="customer-email">sarah@example.com</div>
+                        <div class="vip-badge">VIP Customer</div>
+                    </div>
+                    
+                    <div class="info-row">
+                        <span class="info-label">Total Orders</span>
+                        <span class="info-value">12</span>
+                    </div>
+                    
+                    <div class="info-row">
+                        <span class="info-label">Total Spent</span>
+                        <span class="info-value">€1,247</span>
+                    </div>
+                    
+                    <div class="info-row">
+                        <span class="info-label">Session</span>
+                        <span class="info-value">8m 34s</span>
+                    </div>
+                    
+                    <div class="order-card">
+                        <div class="order-header">🛒 Warenkorb</div>
+                        <div class="order-item">
+                            <div class="order-thumb"></div>
+                            <div class="order-details">
+                                <div class="order-name">Summer Sandals</div>
+                                <div class="order-price">1 × €49,99</div>
+                            </div>
+                        </div>
+                        <div style="text-align: right; margin-top: 8px; font-size: 14px; font-weight: 700; color: white;">
+                            Total: €49,99
+                        </div>
+                    </div>
+                    
+                    <div style="font-size: 10px; color: #64748b; font-weight: 500; margin-top: 8px;">
+                        📍 Pages: Home → Dresses → Cart
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Metrics -->
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-value">3 Spalten</div>
+                <div class="metric-label">Liste • Chat • Kontext</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">Real-time</div>
+                <div class="metric-label">Instant Sync über Agents</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">Multi-Agent</div>
+                <div class="metric-label">Perfekte Zusammenarbeit</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

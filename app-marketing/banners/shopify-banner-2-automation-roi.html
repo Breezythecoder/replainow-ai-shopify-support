@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReplAInow - Automation & ROI Banner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 900px;
+      height: 900px;
+    }
+    
+    .banner {
+      width: 1600px;
+      height: 900px;
+      background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Animated Background Circles */
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      opacity: 0.05;
+      border: 2px solid #8B5CF6;
+    }
+
+    .circle-1 {
+      width: 400px;
+      height: 400px;
+      top: -100px;
+      right: -100px;
+    }
+
+    .circle-2 {
+      width: 600px;
+      height: 600px;
+      bottom: -200px;
+      left: -200px;
+    }
+
+    .circle-3 {
+      width: 300px;
+      height: 300px;
+      top: 50%;
+      left: 10%;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 1400px;
+      width: 100%;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(139, 92, 246, 0.2);
+      color: #A78BFA;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      border: 2px solid rgba(139, 92, 246, 0.3);
+    }
+
+    h1 {
+      font-size: 68px;
+      font-weight: 900;
+      color: white;
+      margin-bottom: 24px;
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
+
+    h1 .highlight {
+      background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 28px;
+      color: #9CA3AF;
+      margin-bottom: 60px;
+      font-weight: 500;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 2px solid rgba(139, 92, 246, 0.2);
+      border-radius: 24px;
+      padding: 48px 32px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #8B5CF6 0%, #A78BFA 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .stat-card:hover::before {
+      opacity: 1;
+    }
+
+    .stat-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(139, 92, 246, 0.5);
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .stat-icon {
+      font-size: 56px;
+      margin-bottom: 24px;
+      filter: grayscale(0);
+    }
+
+    .stat-number {
+      font-size: 72px;
+      font-weight: 900;
+      margin-bottom: 16px;
+      line-height: 1;
+    }
+
+    .stat-number.purple {
+      background: linear-gradient(135deg, #8B5CF6 0%, #A78BFA 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-number.green {
+      background: linear-gradient(135deg, #10B981 0%, #34D399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-number.orange {
+      background: linear-gradient(135deg, #F59E0B 0%, #FBBF24 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 20px;
+      color: #D1D5DB;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .stat-description {
+      font-size: 15px;
+      color: #9CA3AF;
+      line-height: 1.5;
+    }
+
+    /* Bottom CTA */
+    .cta-section {
+      margin-top: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .cta-box {
+      background: rgba(139, 92, 246, 0.1);
+      border: 2px solid rgba(139, 92, 246, 0.3);
+      border-radius: 16px;
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .cta-icon {
+      font-size: 32px;
+    }
+
+    .cta-text {
+      text-align: left;
+    }
+
+    .cta-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 4px;
+    }
+
+    .cta-subtitle {
+      font-size: 14px;
+      color: #9CA3AF;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="circle circle-1"></div>
+    <div class="circle circle-2"></div>
+    <div class="circle circle-3"></div>
+
+    <div class="content">
+      <div class="badge">
+        <span>📊</span>
+        <span>KI-POWERED AUTOMATION</span>
+      </div>
+
+      <h1>
+        <span class="highlight">60-80%</span> deines Supports<br>
+        läuft auf Autopilot
+      </h1>
+
+      <p class="subtitle">
+        Während die KI Routine-Anfragen bearbeitet, fokussiert sich dein Team auf komplexe Fälle.
+      </p>
+
+      <div class="stats-grid">
+        <!-- Stat 1: Automation Rate -->
+        <div class="stat-card">
+          <div class="stat-icon">🤖</div>
+          <div class="stat-number purple">60-80%</div>
+          <div class="stat-label">Automatisierung</div>
+          <div class="stat-description">
+            Tickets werden vollautomatisch von der KI gelöst
+          </div>
+        </div>
+
+        <!-- Stat 2: Time Saved -->
+        <div class="stat-card">
+          <div class="stat-icon">⏱️</div>
+          <div class="stat-number green">120h+</div>
+          <div class="stat-label">Zeit gespart</div>
+          <div class="stat-description">
+            Pro Monat für dein Team bei 200 Tickets/Tag
+          </div>
+        </div>
+
+        <!-- Stat 3: ROI -->
+        <div class="stat-card">
+          <div class="stat-icon">📈</div>
+          <div class="stat-number orange">450%</div>
+          <div class="stat-label">ROI nach 6 Monaten</div>
+          <div class="stat-description">
+            Kosten gespart vs. manueller Support
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <div class="cta-box">
+          <div class="cta-icon">💡</div>
+          <div class="cta-text">
+            <div class="cta-title">Sofortige Antworten</div>
+            <div class="cta-subtitle">24/7 in 100+ Sprachen</div>
+          </div>
+        </div>
+
+        <div class="cta-box">
+          <div class="cta-icon">🎯</div>
+          <div class="cta-text">
+            <div class="cta-title">Höhere Zufriedenheit</div>
+            <div class="cta-subtitle">Schnellere Response-Times</div>
+          </div>
+        </div>
+
+        <div class="cta-box">
+          <div class="cta-icon">💰</div>
+          <div class="cta-text">
+            <div class="cta-title">Kosten reduzieren</div>
+            <div class="cta-subtitle">Weniger Support-Agents nötig</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+

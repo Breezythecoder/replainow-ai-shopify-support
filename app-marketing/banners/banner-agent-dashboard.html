@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReplAInow - Agent Dashboard Banner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    
+    .banner-container {
+      max-width: 1400px;
+      width: 100%;
+      background: white;
+      border-radius: 24px;
+      padding: 60px;
+      box-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.04),
+        0 8px 16px rgba(0, 0, 0, 0.06),
+        0 16px 32px rgba(0, 0, 0, 0.08);
+    }
+    
+    .banner-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 800;
+      color: #111827;
+      margin-bottom: 16px;
+    }
+    
+    .banner-subtitle {
+      text-align: center;
+      font-size: 20px;
+      color: #6B7280;
+      margin-bottom: 60px;
+    }
+    
+    .dashboard-wrapper {
+      background: #F9FAFB;
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid #E5E7EB;
+    }
+    
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: 320px 1fr 360px;
+      gap: 16px;
+      min-height: 900px;
+    }
+    
+    /* Left Column - Conversations */
+    .conversations-panel {
+      background: white;
+      border-radius: 12px;
+      padding: 16px;
+      border: 1px solid #E5E7EB;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .panel-header {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .filter-tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 16px;
+      padding: 4px;
+      background: #F3F4F6;
+      border-radius: 8px;
+    }
+    
+    .filter-tab {
+      flex: 1;
+      padding: 6px 8px;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      color: #6B7280;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .filter-tab.active {
+      background: white;
+      color: #8B5CF6;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    
+    .conversation-list {
+      flex: 1;
+      overflow-y: auto;
+    }
+    
+    .conversation-item {
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border-left: 3px solid transparent;
+    }
+    
+    .conversation-item:hover {
+      background: #F9FAFB;
+    }
+    
+    .conversation-item.active {
+      background: #F5F3FF;
+      border-left-color: #8B5CF6;
+    }
+    
+    .conv-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 4px;
+    }
+    
+    .conv-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #111827;
+    }
+    
+    .conv-time {
+      font-size: 11px;
+      color: #9CA3AF;
+    }
+    
+    .conv-preview {
+      font-size: 12px;
+      color: #6B7280;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 6px;
+    }
+    
+    .conv-badges {
+      display: flex;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    
+    .badge {
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 10px;
+      font-weight: 600;
+    }
+    
+    .badge-vip {
+      background: #FEF3C7;
+      color: #92400E;
+    }
+    
+    .badge-ai {
+      background: #EDE9FE;
+      color: #7C3AED;
+    }
+    
+    /* Middle Column - Chat */
+    .chat-panel {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid #E5E7EB;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .chat-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #F3F4F6;
+      margin-bottom: 20px;
+    }
+    
+    .chat-customer {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .customer-avatar {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+    }
+    
+    .customer-info {
+      flex: 1;
+    }
+    
+    .customer-name {
+      font-size: 16px;
+      font-weight: 700;
+      color: #111827;
+    }
+    
+    .customer-status {
+      font-size: 12px;
+      color: #10B981;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    
+    .status-dot {
+      width: 6px;
+      height: 6px;
+      background: #10B981;
+      border-radius: 50%;
+    }
+    
+    .chat-actions {
+      display: flex;
+      gap: 8px;
+    }
+    
+    .action-btn {
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    
+    .btn-takeover {
+      background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+      color: white;
+    }
+    
+    .btn-transfer {
+      background: white;
+      color: #6B7280;
+      border: 1px solid #E5E7EB;
+    }
+    
+    .chat-messages {
+      flex: 1;
+      overflow-y: auto;
+      margin-bottom: 16px;
+    }
+    
+    .message-group {
+      margin-bottom: 20px;
+    }
+    
+    .message-sender {
+      font-size: 12px;
+      font-weight: 600;
+      color: #6B7280;
+      margin-bottom: 8px;
+    }
+    
+    .message-bubble {
+      background: #F9FAFB;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      color: #111827;
+      line-height: 1.5;
+      max-width: 80%;
+    }
+    
+    .message-bubble.ai {
+      background: linear-gradient(135deg, #F5F3FF 0%, #EDE9FE 100%);
+      border: 1px solid #DDD6FE;
+    }
+    
+    .chat-tools {
+      display: flex;
+      gap: 8px;
+      padding: 16px;
+      background: #F9FAFB;
+      border-radius: 12px;
+      margin-bottom: 16px;
+    }
+    
+    .tool-btn {
+      flex: 1;
+      padding: 10px;
+      border-radius: 8px;
+      background: white;
+      border: 1px solid #E5E7EB;
+      font-size: 12px;
+      font-weight: 600;
+      color: #6B7280;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    
+    .tool-btn:hover {
+      border-color: #8B5CF6;
+      color: #8B5CF6;
+    }
+    
+    /* Right Column - Customer Info */
+    .customer-panel {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid #E5E7EB;
+      overflow-y: auto;
+    }
+    
+    .info-section {
+      margin-bottom: 24px;
+    }
+    
+    .section-title {
+      font-size: 14px;
+      font-weight: 700;
+      color: #111827;
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 0;
+      border-bottom: 1px solid #F3F4F6;
+      font-size: 13px;
+    }
+    
+    .info-row:last-child {
+      border-bottom: none;
+    }
+    
+    .info-label {
+      color: #6B7280;
+    }
+    
+    .info-value {
+      color: #111827;
+      font-weight: 600;
+    }
+    
+    .ltv-badge {
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      color: white;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      margin-top: 8px;
+    }
+    
+    .order-card {
+      background: #F9FAFB;
+      border-radius: 8px;
+      padding: 12px;
+      margin-bottom: 8px;
+    }
+    
+    .order-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+    
+    .order-number {
+      font-size: 13px;
+      font-weight: 600;
+      color: #111827;
+    }
+    
+    .order-amount {
+      font-size: 13px;
+      font-weight: 700;
+      color: #8B5CF6;
+    }
+    
+    .order-status {
+      font-size: 12px;
+      color: #6B7280;
+    }
+    
+    @media (max-width: 1600px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .conversations-panel,
+      .chat-panel,
+      .customer-panel {
+        max-height: none;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .banner-container {
+        padding: 32px 24px;
+      }
+      
+      .banner-title {
+        font-size: 28px;
+      }
+      
+      .banner-subtitle {
+        font-size: 16px;
+      }
+      
+      .dashboard-wrapper {
+        padding: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="banner-container">
+    <h1 class="banner-title">Professionelles Agent-Dashboard</h1>
+    <p class="banner-subtitle">3-Spalten-Layout. Produkt-Picker. VIP-Badges. Alles an einem Ort.</p>
+    
+    <div class="dashboard-wrapper">
+      <div class="dashboard-grid">
+        <!-- Left: Conversations -->
+        <div class="conversations-panel">
+          <div class="panel-header">
+            <span>💬 Gespräche</span>
+            <span style="background: #8B5CF6; color: white; padding: 2px 8px; border-radius: 12px; font-size: 12px;">8</span>
+          </div>
+          
+          <div class="filter-tabs">
+            <div class="filter-tab active">Alle</div>
+            <div class="filter-tab">Aktiv</div>
+            <div class="filter-tab">AI</div>
+          </div>
+          
+          <div class="conversation-list">
+            <div class="conversation-item active">
+              <div class="conv-header">
+                <div class="conv-name">Anna Schmidt</div>
+                <div class="conv-time">vor 2 Min.</div>
+              </div>
+              <div class="conv-preview">Kann ich das Kleid in Blau bestellen?</div>
+              <div class="conv-badges">
+                <span class="badge badge-vip">⭐ VIP</span>
+                <span class="badge badge-ai">🤖 AI</span>
+              </div>
+            </div>
+            
+            <div class="conversation-item">
+              <div class="conv-header">
+                <div class="conv-name">Max Müller</div>
+                <div class="conv-time">vor 5 Min.</div>
+              </div>
+              <div class="conv-preview">Wo ist meine Bestellung #1234?</div>
+              <div class="conv-badges">
+                <span class="badge badge-ai">🤖 AI</span>
+              </div>
+            </div>
+            
+            <div class="conversation-item">
+              <div class="conv-header">
+                <div class="conv-name">Lisa Weber</div>
+                <div class="conv-time">vor 12 Min.</div>
+              </div>
+              <div class="conv-preview">Rückerstattung anfragen</div>
+              <div class="conv-badges">
+                <span class="badge badge-vip">⭐ VIP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Middle: Chat -->
+        <div class="chat-panel">
+          <div class="chat-header">
+            <div class="chat-customer">
+              <div class="customer-avatar">AS</div>
+              <div class="customer-info">
+                <div class="customer-name">Anna Schmidt</div>
+                <div class="customer-status">
+                  <div class="status-dot"></div>
+                  <span>Online</span>
+                </div>
+              </div>
+            </div>
+            <div class="chat-actions">
+              <button class="action-btn btn-takeover">🤖 Übernehmen</button>
+              <button class="action-btn btn-transfer">↗️ Übergeben</button>
+            </div>
+          </div>
+          
+          <div class="chat-messages">
+            <div class="message-group">
+              <div class="message-sender">Anna Schmidt</div>
+              <div class="message-bubble">
+                Hallo! Kann ich das Sommerkleid in Blau bestellen?
+              </div>
+            </div>
+            
+            <div class="message-group">
+              <div class="message-sender">🤖 ReplAI (AI)</div>
+              <div class="message-bubble ai">
+                Natürlich! Das Sommerkleid ist in Blau verfügbar. Ich zeige dir gleich die Details...
+              </div>
+            </div>
+          </div>
+          
+          <!-- Agent Tools -->
+          <div class="chat-tools">
+            <button class="tool-btn">🛍️ Produkt</button>
+            <button class="tool-btn">🎟️ Rabatt</button>
+            <button class="tool-btn">🛒 Checkout</button>
+            <button class="tool-btn">📦 Tracking</button>
+          </div>
+        </div>
+        
+        <!-- Right: Customer Info -->
+        <div class="customer-panel">
+          <div class="info-section">
+            <div class="section-title">👤 Kunde</div>
+            <div class="info-row">
+              <span class="info-label">E-Mail</span>
+              <span class="info-value">anna@email.de</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Telefon</span>
+              <span class="info-value">+49 123 456</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Standort</span>
+              <span class="info-value">Berlin, DE</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Status</span>
+              <span class="info-value">⭐ VIP</span>
+            </div>
+          </div>
+          
+          <div class="info-section">
+            <div class="section-title">💰 Lifetime Value</div>
+            <div class="ltv-badge">€1,245.00</div>
+          </div>
+          
+          <div class="info-section">
+            <div class="section-title">📦 Letzte Bestellungen</div>
+            
+            <div class="order-card">
+              <div class="order-header">
+                <span class="order-number">#1234</span>
+                <span class="order-amount">€89.99</span>
+              </div>
+              <div class="order-status">✓ Geliefert am 12.10.2025</div>
+            </div>
+            
+            <div class="order-card">
+              <div class="order-header">
+                <span class="order-number">#1189</span>
+                <span class="order-amount">€124.50</span>
+              </div>
+              <div class="order-status">✓ Geliefert am 05.09.2025</div>
+            </div>
+          </div>
+          
+          <div class="info-section">
+            <div class="section-title">🎯 AI-Konfidenz</div>
+            <div class="info-row">
+              <span class="info-label">Score</span>
+              <span class="info-value" style="color: #10B981;">92/100</span>
+            </div>
+            <div class="info-row">
+              <span class="info-label">Sentiment</span>
+              <span class="info-value" style="color: #10B981;">😊 Positiv</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

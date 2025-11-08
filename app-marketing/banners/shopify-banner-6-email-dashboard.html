@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReplAInow - E-Mail Dashboard Banner</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 900px;
+      height: 900px;
+    }
+    
+    .banner {
+      width: 1600px;
+      height: 900px;
+      background: linear-gradient(135deg, #F0FDF4 0%, #DCFCE7 50%, #BBF7D0 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Background Pattern */
+    .banner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(rgba(16, 185, 129, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(16, 185, 129, 0.02) 1px, transparent 1px);
+      background-size: 48px 48px;
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 1400px;
+      width: 100%;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+    }
+
+    h1 {
+      font-size: 68px;
+      font-weight: 900;
+      color: #1F2937;
+      margin-bottom: 24px;
+      line-height: 1.1;
+      letter-spacing: -2px;
+    }
+
+    h1 .highlight {
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .subtitle {
+      font-size: 26px;
+      color: #6B7280;
+      margin-bottom: 60px;
+      font-weight: 500;
+    }
+
+    /* Dashboard Mockup */
+    .dashboard-mockup {
+      background: white;
+      border-radius: 24px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+      overflow: hidden;
+      border: 1px solid #E5E7EB;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .dashboard-header {
+      background: #F9FAFB;
+      padding: 20px 32px;
+      border-bottom: 2px solid #E5E7EB;
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .header-tab {
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      color: #6B7280;
+      background: transparent;
+      transition: all 0.2s ease;
+    }
+
+    .header-tab.active {
+      background: white;
+      color: #10B981;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    }
+
+    .dashboard-content {
+      display: grid;
+      grid-template-columns: 340px 1fr 320px;
+      height: 520px;
+    }
+
+    /* Column 1: Email List */
+    .email-list {
+      background: #F9FAFB;
+      border-right: 2px solid #E5E7EB;
+      overflow: hidden;
+    }
+
+    .email-list-header {
+      padding: 20px;
+      border-bottom: 2px solid #E5E7EB;
+      background: white;
+    }
+
+    .email-list-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1F2937;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .email-badge {
+      background: #10B981;
+      color: white;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 12px;
+    }
+
+    .email-item {
+      padding: 16px 20px;
+      border-bottom: 1px solid #E5E7EB;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .email-item:hover {
+      background: white;
+    }
+
+    .email-item.active {
+      background: white;
+      border-left: 4px solid #10B981;
+    }
+
+    .email-sender {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1F2937;
+      margin-bottom: 6px;
+    }
+
+    .email-subject {
+      font-size: 13px;
+      color: #6B7280;
+      margin-bottom: 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .email-time {
+      font-size: 12px;
+      color: #9CA3AF;
+    }
+
+    /* Column 2: Email Thread */
+    .email-thread {
+      padding: 32px;
+      background: white;
+      overflow-y: auto;
+    }
+
+    .thread-subject {
+      font-size: 24px;
+      font-weight: 800;
+      color: #1F2937;
+      margin-bottom: 8px;
+    }
+
+    .thread-from {
+      font-size: 14px;
+      color: #6B7280;
+      margin-bottom: 24px;
+    }
+
+    .thread-message {
+      background: #F9FAFB;
+      border: 2px solid #E5E7EB;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      color: #374151;
+      font-size: 14px;
+    }
+
+    .ai-draft {
+      background: #ECFDF5;
+      border: 2px solid #10B981;
+      border-radius: 12px;
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ai-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: #10B981;
+      color: white;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .draft-text {
+      color: #1F2937;
+      font-size: 14px;
+      line-height: 1.6;
+      padding-right: 140px;
+    }
+
+    /* Column 3: Quality Score */
+    .quality-panel {
+      background: #F9FAFB;
+      border-left: 2px solid #E5E7EB;
+      padding: 24px;
+    }
+
+    .quality-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    .quality-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1F2937;
+    }
+
+    .quality-circle {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 28px;
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(16, 185, 129, 0.3);
+      border: 8px solid white;
+    }
+
+    .quality-score {
+      font-size: 64px;
+      font-weight: 900;
+      color: white;
+      line-height: 1;
+    }
+
+    .quality-label {
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.95);
+      font-weight: 600;
+      margin-top: 8px;
+    }
+
+    .quality-metrics {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .metric {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #E5E7EB;
+    }
+
+    .metric-name {
+      font-size: 13px;
+      color: #6B7280;
+      font-weight: 600;
+    }
+
+    .metric-score {
+      font-size: 15px;
+      font-weight: 800;
+      color: #10B981;
+    }
+
+    .auto-send-badge {
+      background: #ECFDF5;
+      border: 2px solid #10B981;
+      border-radius: 12px;
+      padding: 16px;
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .auto-send-icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .auto-send-text {
+      font-size: 14px;
+      font-weight: 700;
+      color: #10B981;
+    }
+  </style>
+</head>
+<body>
+  <div class="banner">
+    <div class="content">
+      <div class="badge">
+        <span>📧</span>
+        <span>E-MAIL SUPPORT</span>
+      </div>
+
+      <h1>
+        KI schreibt.<br>
+        <span class="highlight">Du entscheidest.</span>
+      </h1>
+
+      <p class="subtitle">
+        Thread-basiert wie Gmail. KI-Qualitäts-Score. Auto-Send bei hoher Qualität.
+      </p>
+
+      <div class="dashboard-mockup">
+        <div class="dashboard-header">
+          <div class="header-tab active">📥 Posteingang</div>
+          <div class="header-tab">📋 Meine Tickets</div>
+          <div class="header-tab">🔍 Prüfwarteschlange</div>
+          <div class="header-tab">✅ Auto gesendet</div>
+        </div>
+
+        <div class="dashboard-content">
+          <!-- Column 1: Email List -->
+          <div class="email-list">
+            <div class="email-list-header">
+              <div class="email-list-title">
+                <span>📧 Posteingang</span>
+                <span class="email-badge">12</span>
+              </div>
+            </div>
+            <div class="email-item active">
+              <div class="email-sender">kunde@email.de</div>
+              <div class="email-subject">Rückerstattung anfragen</div>
+              <div class="email-time">Vor 2 Min</div>
+            </div>
+            <div class="email-item">
+              <div class="email-sender">shop@beispiel.de</div>
+              <div class="email-subject">Produktverfügbarkeit</div>
+              <div class="email-time">Vor 12 Min</div>
+            </div>
+            <div class="email-item">
+              <div class="email-sender">support@test.com</div>
+              <div class="email-subject">Versandfrage</div>
+              <div class="email-time">Vor 1 Std</div>
+            </div>
+          </div>
+
+          <!-- Column 2: Email Thread -->
+          <div class="email-thread">
+            <div class="thread-subject">Rückerstattung anfragen</div>
+            <div class="thread-from">Von: kunde@email.de</div>
+
+            <div class="thread-message">
+              Hallo,<br><br>
+              ich möchte gerne meine Bestellung #1234 zurückerstatten. Das Produkt entspricht nicht meinen Erwartungen.<br><br>
+              Vielen Dank!
+            </div>
+
+            <div class="ai-draft">
+              <div class="ai-badge">
+                <span>🤖</span>
+                <span>KI-ENTWURF</span>
+              </div>
+              <div class="draft-text">
+                <strong>Hallo!</strong><br><br>
+                Gerne helfe ich dir mit der Rückerstattung für Bestellung #1234. Ich habe gesehen, dass die Bestellung am 12.10.2025 geliefert wurde - damit bist du innerhalb unserer 30-Tage-Rückgabefrist.<br><br>
+                Ich habe die Rückerstattung von €89.99 veranlasst. Das Geld sollte in 3-5 Werktagen auf deinem Konto sein.<br><br>
+                Beste Grüße,<br>
+                ReplAInow Support
+              </div>
+            </div>
+          </div>
+
+          <!-- Column 3: Quality Panel -->
+          <div class="quality-panel">
+            <div class="quality-header">
+              <span>📊</span>
+              <div class="quality-title">KI-Qualität</div>
+            </div>
+
+            <div class="quality-circle">
+              <div class="quality-score">92</div>
+              <div class="quality-label">Exzellent</div>
+            </div>
+
+            <div class="quality-metrics">
+              <div class="metric">
+                <span class="metric-name">Antwort-Qualität</span>
+                <span class="metric-score">95/100</span>
+              </div>
+              <div class="metric">
+                <span class="metric-name">Kontext-Abdeckung</span>
+                <span class="metric-score">90/100</span>
+              </div>
+              <div class="metric">
+                <span class="metric-name">Informationsgenauigkeit</span>
+                <span class="metric-score">98/100</span>
+              </div>
+              <div class="metric">
+                <span class="metric-name">Sprachfluss</span>
+                <span class="metric-score">88/100</span>
+              </div>
+              <div class="metric">
+                <span class="metric-name">Gesamt-Konfidenz</span>
+                <span class="metric-score">92/100</span>
+              </div>
+            </div>
+
+            <div class="auto-send-badge">
+              <div class="auto-send-icon">✓</div>
+              <div class="auto-send-text">Auto-Send aktiviert (Score &gt;90)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+

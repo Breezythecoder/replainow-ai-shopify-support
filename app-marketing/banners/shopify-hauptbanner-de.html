@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplAInow - Hauptbanner DE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            margin: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            overflow: hidden;
+        }
+        
+        .banner { 
+            width: 1600px; 
+            height: 900px; 
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            display: flex;
+            align-items: center;
+            padding: 60px 80px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Grid Pattern */
+        .grid-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.02) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.6;
+        }
+        
+        /* Content */
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            width: 100%;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .left-content {
+            flex: 0 0 650px;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            color: #60a5fa;
+            padding: 8px 20px;
+            border-radius: 24px;
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+        }
+        
+        h1 {
+            color: white;
+            font-size: 64px;
+            font-weight: 800;
+            margin: 0 0 24px;
+            line-height: 1.05;
+            letter-spacing: -2px;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+        
+        .subtitle {
+            color: #94a3b8;
+            font-size: 22px;
+            margin: 0 0 48px;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+        
+        .value-props {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 48px;
+        }
+        
+        .value-item {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .value-number {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+        
+        .value-label {
+            font-size: 15px;
+            color: #cbd5e1;
+            line-height: 1.4;
+        }
+        
+        .cta-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+        
+        .cta {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            color: white;
+            padding: 18px 42px;
+            border-radius: 14px;
+            font-size: 18px;
+            font-weight: 600;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 20px 40px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+            letter-spacing: 0.3px;
+        }
+        
+        .cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 25px 50px rgba(59, 130, 246, 0.4);
+        }
+        
+        .quick-fact {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #10b981;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        /* Right Visual */
+        .right-visual {
+            flex: 1;
+            position: relative;
+            height: 700px;
+        }
+        
+        /* Automation Visualization */
+        .automation-visual {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Central Dashboard */
+        .dashboard-mock {
+            width: 500px;
+            height: 400px;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(148, 163, 184, 0.2);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.5);
+            backdrop-filter: blur(20px);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .dash-header {
+            background: rgba(30, 41, 59, 0.8);
+            padding: 20px 30px;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .dash-title {
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .dash-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.1);
+            color: #10b981;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            background: #10b981;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.2); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+        
+        .dash-content {
+            padding: 30px;
+        }
+        
+        .ticket-flow {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+        
+        .flow-box {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .flow-number {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+        
+        .flow-label {
+            font-size: 13px;
+            color: #94a3b8;
+            text-transform: uppercase;
+        }
+        
+        .flow-incoming {
+            color: #60a5fa;
+        }
+        
+        .flow-automated {
+            background: linear-gradient(135deg, #10b981 0%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .flow-manual {
+            color: #fbbf24;
+        }
+        
+        .flow-arrow {
+            font-size: 32px;
+            color: #475569;
+            margin: 0 20px;
+        }
+        
+        /* Progress bars */
+        .progress-bars {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .progress-item {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 12px;
+            padding: 16px;
+        }
+        
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .progress-label {
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+        
+        .progress-value {
+            color: #60a5fa;
+            font-weight: 700;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: rgba(148, 163, 184, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            border-radius: 4px;
+            animation: fillBar 2s ease-out forwards;
+        }
+        
+        @keyframes fillBar {
+            from { width: 0; }
+        }
+        
+        .bar-automated {
+            background: linear-gradient(90deg, #10b981 0%, #34d399 100%);
+            width: 75%;
+        }
+        
+        .bar-response {
+            background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+            width: 95%;
+        }
+        
+        .bar-satisfaction {
+            background: linear-gradient(90deg, #8b5cf6 0%, #a78bfa 100%);
+            width: 98%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="grid-pattern"></div>
+        
+        <div class="content-wrapper">
+            <div class="left-content">
+                <div class="badge">KI-Helpdesk für Shopify</div>
+                
+                <h1>
+                    <span class="gradient-text">60-80%</span> weniger<br>
+                    Support-Aufwand
+                </h1>
+                
+                <p class="subtitle">
+                    Die KI beantwortet Routine-Fragen automatisch.<br>
+                    Du konzentrierst dich aufs Wachstum.
+                </p>
+                
+                <div class="value-props">
+                    <div class="value-item">
+                        <div class="value-number">24/7</div>
+                        <div class="value-label">Sofort-Antworten in<br>über 100 Sprachen</div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-number">0€</div>
+                        <div class="value-label">Setup-Kosten<br>Keine Einrichtung nötig</div>
+                    </div>
+                </div>
+                
+                <div class="cta-wrapper">
+                    <a href="#" class="cta">Kostenlos starten</a>
+                    <div class="quick-fact">Live in 60 Sekunden</div>
+                </div>
+            </div>
+            
+            <div class="right-visual">
+                <div class="automation-visual">
+                    
+                    <!-- Central Dashboard -->
+                    <div class="dashboard-mock">
+                        <div class="dash-header">
+                            <div class="dash-title">Support Dashboard • Live Chat & E-Mail</div>
+                            <div class="dash-status">
+                                <span class="status-dot"></span>
+                                <span>KI Aktiv</span>
+                            </div>
+                        </div>
+                        
+                        <div class="dash-content">
+                            <!-- Ticket Flow -->
+                            <div class="ticket-flow">
+                                <div class="flow-box">
+                                    <div class="flow-number flow-incoming">247</div>
+                                    <div class="flow-label">Anfragen/Tag</div>
+                                </div>
+                                
+                                <div class="flow-arrow">→</div>
+                                
+                                <div class="flow-box">
+                                    <div class="flow-number flow-automated">186</div>
+                                    <div class="flow-label">KI gelöst</div>
+                                </div>
+                                
+                                <div class="flow-arrow">→</div>
+                                
+                                <div class="flow-box">
+                                    <div class="flow-number flow-manual">61</div>
+                                    <div class="flow-label">Manuell</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Progress Bars -->
+                            <div class="progress-bars">
+                                <div class="progress-item">
+                                    <div class="progress-header">
+                                        <span class="progress-label">Automatisierungsrate</span>
+                                        <span class="progress-value">75%</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill bar-automated"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="progress-item">
+                                    <div class="progress-header">
+                                        <span class="progress-label">Antwortzeit</span>
+                                        <span class="progress-value">&lt; 5 Sek</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill bar-response"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="progress-item">
+                                    <div class="progress-header">
+                                        <span class="progress-label">Kundenzufriedenheit</span>
+                                        <span class="progress-value">4.9/5</span>
+                                    </div>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill bar-satisfaction"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

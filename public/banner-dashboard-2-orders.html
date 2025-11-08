@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management - Direct in Dashboard</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #000;
+            overflow: hidden;
+        }
+        
+        .banner {
+            width: 1600px;
+            height: 900px;
+            position: relative;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        
+        .pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            background-image: 
+                linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        
+        .glow-1 {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
+            top: -400px;
+            right: -200px;
+            filter: blur(120px);
+            opacity: 0.3;
+        }
+        
+        .glow-2 {
+            position: absolute;
+            width: 700px;
+            height: 700px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, transparent 70%);
+            bottom: -350px;
+            left: -150px;
+            filter: blur(120px);
+            opacity: 0.25;
+        }
+        
+        .content {
+            position: relative;
+            z-index: 2;
+            padding: 60px 80px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(139, 92, 246, 0.15);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .badge-icon {
+            width: 18px;
+            height: 18px;
+            fill: #a78bfa;
+        }
+        
+        .badge-text {
+            color: #c4b5fd;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        
+        .title {
+            font-size: 60px;
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+            margin-bottom: 16px;
+        }
+        
+        .title-gradient {
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #94a3b8;
+            font-weight: 400;
+        }
+        
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 1fr 480px;
+            gap: 24px;
+        }
+        
+        /* Chat Column */
+        .chat-column {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(71, 85, 105, 0.4);
+            border-radius: 20px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .chat-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+            margin-bottom: 24px;
+        }
+        
+        .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .customer-info {
+            flex: 1;
+        }
+        
+        .customer-name {
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 2px;
+        }
+        
+        .customer-status {
+            font-size: 12px;
+            color: #4ade80;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .online-dot {
+            width: 8px;
+            height: 8px;
+            background: #4ade80;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(0.95); }
+        }
+        
+        .messages {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        
+        .message {
+            max-width: 75%;
+            padding: 14px 18px;
+            border-radius: 14px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+        
+        .message-customer {
+            align-self: flex-end;
+            background: rgba(100, 116, 139, 0.4);
+            color: white;
+        }
+        
+        .message-ai {
+            align-self: flex-start;
+            background: white;
+            color: #1e293b;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .ai-icon {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            flex-shrink: 0;
+        }
+        
+        /* Order Panel */
+        .order-panel {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(71, 85, 105, 0.4);
+            border-radius: 20px;
+            padding: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .panel-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(71, 85, 105, 0.3);
+        }
+        
+        .panel-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: white;
+        }
+        
+        .order-badge {
+            background: rgba(34, 197, 94, 0.2);
+            color: #4ade80;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 6px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+        }
+        
+        .order-section {
+            background: rgba(51, 65, 85, 0.3);
+            border: 1px solid rgba(71, 85, 105, 0.3);
+            border-radius: 14px;
+            padding: 18px;
+        }
+        
+        .section-label {
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+        
+        .product-row {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 12px;
+            padding: 12px;
+            background: rgba(30, 41, 59, 0.4);
+            border-radius: 10px;
+        }
+        
+        .product-thumb {
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+        
+        .product-details {
+            flex: 1;
+        }
+        
+        .product-title {
+            font-size: 13px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 4px;
+        }
+        
+        .product-variant {
+            font-size: 11px;
+            color: #94a3b8;
+        }
+        
+        .product-price {
+            font-size: 14px;
+            font-weight: 700;
+            color: #c4b5fd;
+        }
+        
+        .tracking-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(30, 41, 59, 0.4);
+            padding: 14px;
+            border-radius: 10px;
+        }
+        
+        .carrier-logo {
+            width: 48px;
+            height: 48px;
+            background: #ef4444;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 800;
+            color: white;
+        }
+        
+        .tracking-details {
+            flex: 1;
+        }
+        
+        .tracking-label {
+            font-size: 10px;
+            color: #94a3b8;
+            margin-bottom: 3px;
+        }
+        
+        .tracking-number {
+            font-size: 13px;
+            font-weight: 600;
+            color: white;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .action-button {
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            color: white;
+            padding: 14px 24px;
+            border-radius: 12px;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            width: 100%;
+        }
+        
+        .action-button-secondary {
+            background: rgba(100, 116, 139, 0.3);
+            border: 1px solid rgba(100, 116, 139, 0.5);
+        }
+        
+        .metrics {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: rgba(71, 85, 105, 0.2);
+        }
+        
+        .metric {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(10px);
+            padding: 28px 40px;
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+        
+        .metric-label {
+            font-size: 13px;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="pattern"></div>
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+        
+        <div class="content">
+            <!-- Header -->
+            <div class="header">
+                <div class="badge">
+                    <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2"/>
+                        <path d="M9 3v18"/>
+                    </svg>
+                    <span class="badge-text">Order Management Integration</span>
+                </div>
+                <h1 class="title">
+                    <span class="title-gradient">Bestellungen</span> direkt verwalten
+                </h1>
+                <p class="subtitle">Stornieren • Tracking • Adresse ändern - Ohne Shopify zu öffnen</p>
+            </div>
+            
+            <!-- Main Content: Chat + Order Panel -->
+            <div class="main-content">
+                
+                <!-- Chat Column -->
+                <div class="chat-column">
+                    <div class="chat-header">
+                        <div class="avatar">JD</div>
+                        <div class="customer-info">
+                            <div class="customer-name">John Doe</div>
+                            <div class="customer-status">
+                                <div class="online-dot"></div>
+                                Online
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="messages">
+                        <div class="message message-customer">
+                            Hi! Where is my order #1234? I ordered 3 days ago
+                        </div>
+                        
+                        <div class="message message-ai">
+                            <div class="ai-icon">🤖</div>
+                            <div>
+                                Great news! Your order #1234 has been shipped!<br><br>
+                                <strong>Carrier:</strong> DHL<br>
+                                <strong>Tracking:</strong> 1234567890<br>
+                                <strong>Expected:</strong> Tomorrow by 5 PM
+                            </div>
+                        </div>
+                        
+                        <div class="message message-customer">
+                            Can I change the shipping address? I moved yesterday
+                        </div>
+                        
+                        <div class="message message-ai">
+                            <div class="ai-icon">🤖</div>
+                            <div>
+                                Let me check with our team! One moment please...
+                            </div>
+                        </div>
+                        
+                        <div style="align-self: center; padding: 12px 20px; background: rgba(251, 191, 36, 0.15); border: 1px solid rgba(251, 191, 36, 0.3); border-radius: 20px; font-size: 12px; color: #fbbf24; font-weight: 600;">
+                            🙋 Agent Request - Customer needs help
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Order Panel -->
+                <div class="order-panel">
+                    <div class="panel-header">
+                        <div class="panel-title">Order #1234</div>
+                        <div class="order-badge">Fulfilled</div>
+                    </div>
+                    
+                    <!-- Order Items -->
+                    <div class="order-section">
+                        <div class="section-label">📦 Bestellte Artikel</div>
+                        
+                        <div class="product-row">
+                            <div class="product-thumb">👟</div>
+                            <div class="product-details">
+                                <div class="product-title">Premium Sneaker</div>
+                                <div class="product-variant">Size 42 • Black</div>
+                            </div>
+                            <div class="product-price">€129,99</div>
+                        </div>
+                        
+                        <div class="product-row">
+                            <div class="product-thumb">🧦</div>
+                            <div class="product-details">
+                                <div class="product-title">Sport Socks (3-Pack)</div>
+                                <div class="product-variant">Size L • White</div>
+                            </div>
+                            <div class="product-price">€19,99</div>
+                        </div>
+                        
+                        <div style="text-align: right; margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(71, 85, 105, 0.3);">
+                            <div style="font-size: 12px; color: #94a3b8; margin-bottom: 4px;">Gesamtsumme</div>
+                            <div style="font-size: 24px; font-weight: 800; color: white;">€149,98</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Tracking Info -->
+                    <div class="order-section">
+                        <div class="section-label">🚚 Sendungsverfolgung</div>
+                        
+                        <div class="tracking-info">
+                            <div class="carrier-logo">DHL</div>
+                            <div class="tracking-details">
+                                <div class="tracking-label">Tracking Number</div>
+                                <div class="tracking-number">1234567890</div>
+                            </div>
+                        </div>
+                        
+                        <button class="action-button" style="background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); margin-top: 12px;">
+                            📍 Sendung verfolgen
+                        </button>
+                    </div>
+                    
+                    <!-- Shipping Address -->
+                    <div class="order-section">
+                        <div class="section-label">📍 Lieferadresse</div>
+                        <div style="font-size: 12px; color: #cbd5e1; line-height: 1.6;">
+                            John Doe<br>
+                            Hauptstraße 123<br>
+                            10115 Berlin<br>
+                            Germany
+                        </div>
+                    </div>
+                    
+                    <!-- Action Buttons -->
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                        <button class="action-button action-button-secondary">
+                            🔗 In Shopify öffnen
+                        </button>
+                        <button class="action-button">
+                            ❌ Bestellung stornieren
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer Metrics -->
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-value">1-Klick Storno</div>
+                <div class="metric-label">Direkt aus dem Chat</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">Live Tracking</div>
+                <div class="metric-label">DHL • UPS • FedEx • DPD</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">Keine Tabs</div>
+                <div class="metric-label">Alles in einem Dashboard</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
