@@ -31,7 +31,6 @@ import { LocaleProvider, useLocale } from "@/i18n/LocaleContext";
 // Lazy load routes
 const Index = lazy(() => import("./pages/NewIndex"));
 const ShopifyBannersPreview = lazy(() => import("./pages/ShopifyBannersPreview"));
-const BannerExport = lazy(() => import("./pages/BannerExport"));
 const BannersExport = lazy(() => import("./pages/BannersExport"));
 const BannerExportRaw = lazy(() => import("./pages/BannerExportRaw"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -103,7 +102,6 @@ const AppShell = () => {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/shopify-banners" element={<ShopifyBannersPreview />} />
-          <Route path="/banner-export" element={<BannerExport />} />
           <Route path="/banners" element={<BannersExport />} />
           <Route path="/banner-raw/:bannerId" element={<BannerExportRaw />} />
           <Route path="/en" element={<Index />} />
