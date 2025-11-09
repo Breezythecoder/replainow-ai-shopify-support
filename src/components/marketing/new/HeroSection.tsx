@@ -66,10 +66,10 @@ const HeroSection = () => {
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="inline-flex items-center gap-2 glass-card border-2 border-purple-200/40 rounded-full px-6 py-2.5 mb-8 shadow-glass"
+              className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-sm border-2 border-purple-200 rounded-full px-6 py-2.5 mb-8 shadow-lg"
             >
               <Sparkles className="w-4 h-4 text-purple-600" />
-              <span className="text-sm font-semibold text-purple-900 tracking-tight">
+              <span className="text-sm font-semibold text-purple-950 tracking-tight">
                 Enterprise KI-Lösung für Shopify
               </span>
             </motion.div>
