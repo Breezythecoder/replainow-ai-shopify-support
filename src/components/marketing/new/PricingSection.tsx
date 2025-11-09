@@ -135,20 +135,6 @@ const PricingSection = () => {
               transition={{ delay: 0.1 + i * 0.1 }}
               className="relative"
             >
-              {/* Badge - OUTSIDE the card */}
-              {plan.badge && (
-                <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
-                  <div className={`px-4 py-1.5 text-xs font-bold rounded-full shadow-lg flex items-center gap-1 ${
-                    plan.premium 
-                      ? 'bg-gradient-to-r from-amber-400 to-yellow-300 text-gray-900'
-                      : 'bg-amber-400 text-amber-900'
-                  }`}>
-                    {plan.premium ? <Sparkles className="w-3 h-3" /> : <Zap className="w-3 h-3" />}
-                    {plan.badge}
-                  </div>
-                </div>
-              )}
-
               {/* Card */}
               <div className={`
                 relative rounded-2xl border overflow-hidden h-full
@@ -159,6 +145,19 @@ const PricingSection = () => {
                     : 'bg-white border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300'
                 }
               `}>
+                {/* Badge - ON the top border line */}
+                {plan.badge && (
+                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 whitespace-nowrap">
+                    <div className={`px-4 py-1.5 text-xs font-bold rounded-full shadow-lg flex items-center gap-1 ${
+                      plan.premium 
+                        ? 'bg-gradient-to-r from-amber-400 to-yellow-300 text-gray-900'
+                        : 'bg-amber-400 text-amber-900'
+                    }`}>
+                      {plan.premium ? <Sparkles className="w-3 h-3" /> : <Zap className="w-3 h-3" />}
+                      {plan.badge}
+                    </div>
+                  </div>
+                )}
                 <div className="p-6">
                 {/* Plan Name */}
                 <h3 className={`text-xl font-bold mb-2 ${
