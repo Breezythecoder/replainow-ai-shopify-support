@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
 import { MessageSquare, Sparkles, Globe, Zap } from "lucide-react";
+import ProductCard from "@/components/marketing/cards/ProductCard";
+import DiscountCard from "@/components/marketing/cards/DiscountCard";
+import CheckoutCard from "@/components/marketing/cards/CheckoutCard";
+import TrackingCard from "@/components/marketing/cards/TrackingCard";
 
 const LiveChatBanner = () => {
   return (
@@ -154,93 +158,49 @@ const LiveChatBanner = () => {
             </p>
           </div>
 
-          {/* 4 Card Types Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* 4 Card Types Grid - Real Widget Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             
             {/* Product Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.0 }}
-              className="bg-white rounded-xl border-2 border-gray-200 hover:border-purple-300 transition-all duration-300 overflow-hidden group"
-            >
-              <div className="h-32 bg-gradient-to-br from-purple-100 to-pink-100 relative overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-5xl opacity-20">
-                  👗
-                </div>
-              </div>
-              <div className="p-4">
-                <div className="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded inline-block mb-2">
-                  PRODUKT-KARTE
-                </div>
-                <h4 className="font-bold text-sm text-gray-900 mb-1">Summer Dress</h4>
-                <p className="text-xs text-gray-600 mb-3">€49,90 • Noch 12 auf Lager</p>
-                <button className="w-full px-3 py-2 bg-gray-900 text-white text-xs font-semibold rounded-lg group-hover:bg-purple-700 transition-colors">
-                  Ansehen
-                </button>
-              </div>
-            </motion.div>
+            <ProductCard
+              title="Premium Wireless Headphones"
+              description="High-quality sound with active noise cancellation"
+              price="€149.99"
+              image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop"
+              stock={5}
+              delay={0.2}
+            />
 
             {/* Discount Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.1 }}
-              className="bg-white rounded-xl border-2 border-gray-200 hover:border-green-300 transition-all duration-300 p-6 group"
-            >
-              <div className="text-3xl mb-3">🎁</div>
-              <div className="px-2 py-1 bg-green-100 text-green-700 text-xs font-bold rounded inline-block mb-3">
-                RABATT-CODE
-              </div>
-              <div className="mb-3">
-                <div className="font-mono font-bold text-gray-900 text-sm mb-1">AI20-XYZ123</div>
-                <div className="text-xs text-green-700 font-semibold">20% OFF</div>
-              </div>
-              <button className="w-full px-3 py-2 bg-green-700 text-white text-xs font-semibold rounded-lg group-hover:bg-green-800 transition-colors">
-                Kopieren
-              </button>
-            </motion.div>
+            <DiscountCard
+              code="WELCOME20"
+              discount="20% OFF"
+              expiryDays={5}
+              usageLimit={100}
+              delay={0.3}
+            />
 
             {/* Tracking Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.2 }}
-              className="bg-white rounded-xl border-2 border-gray-200 hover:border-blue-300 transition-all duration-300 p-6 group"
-            >
-              <div className="text-3xl mb-3">📦</div>
-              <div className="px-2 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded inline-block mb-3">
-                TRACKING
-              </div>
-              <div className="mb-3">
-                <div className="text-xs text-gray-600 mb-1">DHL Express</div>
-                <div className="font-mono text-xs text-gray-900 font-semibold">DE123456789</div>
-              </div>
-              <button className="w-full px-3 py-2 bg-blue-600 text-white text-xs font-semibold rounded-lg group-hover:bg-blue-700 transition-colors">
-                Tracking öffnen
-              </button>
-            </motion.div>
+            <TrackingCard
+              orderNumber="12345"
+              carrier="DHL Express"
+              trackingNumber="1234567890"
+              status="in-transit"
+              expectedDelivery="Tomorrow"
+              delay={0.4}
+            />
 
             {/* Checkout Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 1.3 }}
-              className="bg-white rounded-xl border-2 border-gray-200 hover:border-purple-300 transition-all duration-300 p-6 group"
-            >
-              <div className="text-3xl mb-3">🛒</div>
-              <div className="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded inline-block mb-3">
-                CHECKOUT-LINK
-              </div>
-              <div className="mb-3">
-                <div className="text-xs text-gray-600 mb-2">3 Artikel</div>
-                <div className="font-bold text-gray-900 text-sm">€159,70</div>
-                <div className="text-xs text-green-700 font-semibold">+ 15% Rabatt</div>
-              </div>
-              <button className="w-full px-3 py-2 bg-gradient-to-r from-purple-600 to-violet-600 text-white text-xs font-semibold rounded-lg group-hover:from-purple-700 group-hover:to-violet-700 transition-colors">
-                Jetzt kaufen
-              </button>
-            </motion.div>
+            <CheckoutCard
+              products={[
+                { name: "Wireless Headphones", quantity: 1, price: "€149.99" },
+                { name: "USB-C Cable", quantity: 2, price: "€29.98" },
+                { name: "Phone Case", quantity: 1, price: "€19.99" }
+              ]}
+              discount={20}
+              total="€159.96"
+              delay={0.5}
+            />
           </div>
 
           {/* Bottom Benefit */}
