@@ -161,9 +161,9 @@ const LiveChatBanner = () => {
           {/* 4 Card Types Grid - Creative Staggered Layout */}
           <div className="relative max-w-6xl mx-auto">
             {/* Desktop: Creative Staggered Grid */}
-            <div className="hidden lg:grid lg:grid-cols-2 gap-8 items-start">
+            <div className="hidden lg:grid lg:grid-cols-2 gap-x-8 gap-y-16 items-start">
               {/* Top Left - Product Card */}
-              <div className="transform translate-y-8">
+              <div className="transform translate-y-4">
                 <ProductCard
                   title="Premium Wireless Kopfhörer"
                   description="Hochwertige Audioqualität mit aktiver Geräuschunterdrückung"
@@ -175,7 +175,7 @@ const LiveChatBanner = () => {
               </div>
 
               {/* Top Right - Discount Card */}
-              <div className="transform -translate-y-4">
+              <div className="transform -translate-y-2">
                 <DiscountCard
                   code="WELCOME20"
                   discount="20% RABATT"
@@ -186,7 +186,7 @@ const LiveChatBanner = () => {
               </div>
 
               {/* Bottom Left - Tracking Card */}
-              <div className="transform -translate-y-12">
+              <div className="transform translate-y-0">
                 <TrackingCard
                   orderNumber="12345"
                   carrier="DHL Express"
@@ -198,7 +198,7 @@ const LiveChatBanner = () => {
               </div>
 
               {/* Bottom Right - Checkout Card */}
-              <div className="transform translate-y-2">
+              <div className="transform translate-y-6">
                 <CheckoutCard
                   products={[
                     { name: "Wireless Kopfhörer", quantity: 1, price: "€149,99" },
