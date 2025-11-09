@@ -66,11 +66,11 @@ const AIKnowledgeBanner = () => {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
-            Ihre KI kennt <span className="font-semibold">Ihren Shop</span>
+            AI kennt <span className="font-semibold">JEDEN Aspekt</span> Ihres Shops
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            ReplAInow synchronisiert sich automatisch mit allen Shopify-Daten – 
-            ohne manuelle Arbeit
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            Produkte, Bestellungen, Kunden, Richtlinien – alles automatisch synchronisiert. 
+            Sie ändern etwas? AI weiß es sofort. Null Wartung.
           </p>
         </motion.div>
 
@@ -314,16 +314,76 @@ const AIKnowledgeBanner = () => {
           </div>
         </motion.div>
 
-        {/* Bottom CTA */}
+        {/* Real Examples - What AI Can Answer */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.4 }}
+          className="mt-16"
+        >
+          <div className="text-center mb-10">
+            <h3 className="text-2xl font-semibold text-gray-900 mb-3">
+              Was AI sofort beantworten kann
+            </h3>
+            <p className="text-gray-600">
+              Ihre Kunden fragen – AI findet die Antwort in Ihrem Shop
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                question: "Habt ihr das Kleid in Größe 42?",
+                answer: "Ja, 15 auf Lager!",
+                category: "Produkt-Fragen",
+                color: "purple"
+              },
+              {
+                question: "Wo ist meine Bestellung #1234?",
+                answer: "Versendet gestern via DHL",
+                category: "Bestellungs-Fragen",
+                color: "blue"
+              },
+              {
+                question: "Wie lange ist die Rückgabe-Frist?",
+                answer: "30 Tage lt. Ihrer Rückgabe-Richtlinie",
+                category: "Richtlinien-Fragen",
+                color: "violet"
+              }
+            ].map((example, i) => (
+              <div key={i} className="bg-white rounded-xl p-6 border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
+                <div className={`
+                  px-3 py-1 rounded-full text-xs font-bold inline-block mb-4
+                  ${example.color === 'purple' ? 'bg-purple-100 text-purple-700' : ''}
+                  ${example.color === 'blue' ? 'bg-blue-100 text-blue-700' : ''}
+                  ${example.color === 'violet' ? 'bg-violet-100 text-violet-700' : ''}
+                `}>
+                  {example.category}
+                </div>
+                <div className="mb-4">
+                  <div className="text-sm font-semibold text-gray-900 mb-2">
+                    „{example.question}"
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-gray-600">
+                    <span className="text-lg">→</span>
+                    <span className="font-medium">{example.answer}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Bottom CTA */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.6 }}
           className="text-center mt-12"
         >
-          <p className="text-gray-700 font-medium">
-            <span className="font-bold text-purple-600">Automatischer Import</span> bei Installation →{' '}
-            <span className="font-bold text-violet-600">Live in 60 Sekunden</span>
+          <p className="text-lg text-gray-700 font-medium">
+            <span className="font-bold text-purple-600">Ihr Shop-Wissen</span> ist{' '}
+            <span className="font-bold text-violet-600">AI's Wissen</span> – automatisch, sofort, präzise
           </p>
         </motion.div>
       </div>

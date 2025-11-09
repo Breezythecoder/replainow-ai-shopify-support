@@ -13,11 +13,11 @@ const EmailHelpdeskBanner = () => {
           className="text-center mb-14"
         >
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
-            E-Mail Helpdesk <span className="font-semibold">mit KI-Intelligenz</span>
+            E-Mail Helpdesk <span className="font-semibold">mit Qualitäts-Garantie</span>
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Thread-basiertes E-Mail-System mit automatischen AI-Antworten 
-            und Qualitätsbewertung
+          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            AI schreibt Antworten, bewertet sich selbst (0-100), sendet nur perfekte Emails (90+) automatisch. 
+            Sie kontrollieren die Qualität.
           </p>
         </motion.div>
 
@@ -33,28 +33,32 @@ const EmailHelpdeskBanner = () => {
             <div className="space-y-8">
               {[
                 {
-                  icon: Mail,
-                  title: "Thread-basiertes System",
-                  desc: "Alle E-Mails einer Konversation übersichtlich gruppiert – wie Gmail",
-                  stat: "Gmail-Style"
-                },
-                {
                   icon: CheckCircle2,
-                  title: "KI-Qualitätsbewertung",
-                  desc: "Jede AI-Antwort bekommt einen Score (0-100). Ab 90 Punkten automatisch versendet",
-                  stat: "90+ Auto-Send"
-                },
-                {
-                  icon: Clock,
-                  title: "Informations-Sammlung",
-                  desc: "AI sammelt fehlende Details (Bestellnummer, Telefon) bevor sie an Ihr Team übergibt",
-                  stat: "Smart Collection"
+                  title: "AI bewertet sich selbst",
+                  desc: "Score 90+? Automatisch gesendet! Score unter 90? Sie prüfen zuerst.",
+                  stat: "90+ Auto-Send",
+                  color: "green"
                 },
                 {
                   icon: TrendingUp,
-                  title: "Agent-Übernahme",
-                  desc: "Agenten können AI-Entwürfe nutzen, bearbeiten oder komplett neu schreiben",
-                  stat: "Flexibel"
+                  title: "Sie stellen Qualität ein",
+                  desc: "Mindest-Score 80, 85 oder 90? Sie entscheiden. Höher = mehr Kontrolle, niedriger = schneller.",
+                  stat: "Einstellbar",
+                  color: "purple"
+                },
+                {
+                  icon: Clock,
+                  title: "AI sammelt alle Infos",
+                  desc: "Bestellnummer, Telefon, Fotos – AI fragt nach. Wenn es bei Ihnen landet: alles da.",
+                  stat: "Vollständig",
+                  color: "blue"
+                },
+                {
+                  icon: Mail,
+                  title: "Thread-basiert wie Gmail",
+                  desc: "Alle E-Mails einer Konversation übersichtlich gruppiert. Professionelles Interface.",
+                  stat: "Gmail-Style",
+                  color: "violet"
                 }
               ].map((feature, i) => (
                 <motion.div
@@ -64,13 +68,31 @@ const EmailHelpdeskBanner = () => {
                   transition={{ delay: 0.5 + i * 0.1 }}
                   className="flex gap-4 items-start"
                 >
-                  <div className="p-3 bg-violet-50 rounded-xl flex-shrink-0">
-                    <feature.icon className="w-6 h-6 text-violet-600" />
+                  <div className={`
+                    p-3 rounded-xl flex-shrink-0
+                    ${feature.color === 'green' ? 'bg-green-50' : ''}
+                    ${feature.color === 'purple' ? 'bg-purple-50' : ''}
+                    ${feature.color === 'blue' ? 'bg-blue-50' : ''}
+                    ${feature.color === 'violet' ? 'bg-violet-50' : ''}
+                  `}>
+                    <feature.icon className={`
+                      w-6 h-6
+                      ${feature.color === 'green' ? 'text-green-600' : ''}
+                      ${feature.color === 'purple' ? 'text-purple-600' : ''}
+                      ${feature.color === 'blue' ? 'text-blue-600' : ''}
+                      ${feature.color === 'violet' ? 'text-violet-600' : ''}
+                    `} />
                   </div>
                   <div>
                     <div className="flex items-center gap-3 mb-2">
                       <h4 className="font-semibold text-gray-900">{feature.title}</h4>
-                      <span className="px-2 py-0.5 bg-violet-100 text-violet-700 text-xs font-bold rounded">
+                      <span className={`
+                        px-2 py-0.5 text-xs font-bold rounded
+                        ${feature.color === 'green' ? 'bg-green-100 text-green-700' : ''}
+                        ${feature.color === 'purple' ? 'bg-purple-100 text-purple-700' : ''}
+                        ${feature.color === 'blue' ? 'bg-blue-100 text-blue-700' : ''}
+                        ${feature.color === 'violet' ? 'bg-violet-100 text-violet-700' : ''}
+                      `}>
                         {feature.stat}
                       </span>
                     </div>
