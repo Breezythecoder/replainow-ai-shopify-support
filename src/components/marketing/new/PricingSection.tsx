@@ -126,7 +126,7 @@ const PricingSection = () => {
         </div>
 
         {/* Pricing Cards - 4 Column Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 pt-6">
           {plans.map((plan, i) => (
             <motion.div
               key={i}
@@ -137,7 +137,7 @@ const PricingSection = () => {
             >
               {/* Badge - OUTSIDE the card */}
               {plan.badge && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
+                <div className="absolute -top-5 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
                   <div className={`px-4 py-1.5 text-xs font-bold rounded-full shadow-lg flex items-center gap-1 ${
                     plan.premium 
                       ? 'bg-gradient-to-r from-amber-400 to-yellow-300 text-gray-900'
