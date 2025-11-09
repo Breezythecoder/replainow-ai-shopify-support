@@ -43,11 +43,6 @@ const ProductCard = ({ title, description, price, image, stock, url = "#", delay
             }}
             loading="lazy"
           />
-          {stock < 10 && (
-            <div className="absolute top-2 right-2 bg-orange-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md shadow-lg">
-              Nur {stock} übrig
-            </div>
-          )}
         </div>
 
         {/* Product Info */}
