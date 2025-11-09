@@ -67,10 +67,30 @@ const ProductPickerSection = () => {
               {/* Product Grid */}
               <div className="p-4 grid grid-cols-2 gap-3">
                 {[
-                  { name: "Summer Dress", price: "€49,90", selected: true },
-                  { name: "Blue Sneakers", price: "€89,90", selected: true },
-                  { name: "Beach Bag", price: "€29,90", selected: true },
-                  { name: "Sunglasses", price: "€39,90", selected: false }
+                  { 
+                    name: "Summer Dress", 
+                    price: "€49,90", 
+                    selected: true,
+                    image: "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=200&h=200&fit=crop"
+                  },
+                  { 
+                    name: "Blue Sneakers", 
+                    price: "€89,90", 
+                    selected: true,
+                    image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=200&h=200&fit=crop"
+                  },
+                  { 
+                    name: "Beach Bag", 
+                    price: "€29,90", 
+                    selected: true,
+                    image: "https://images.unsplash.com/photo-1590874103328-eac38a683ce7?w=200&h=200&fit=crop"
+                  },
+                  { 
+                    name: "Sunglasses", 
+                    price: "€39,90", 
+                    selected: false,
+                    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=200&h=200&fit=crop"
+                  }
                 ].map((product, i) => (
                   <motion.div 
                     key={i}
@@ -89,7 +109,14 @@ const ProductPickerSection = () => {
                         <Check className="w-4 h-4 text-white" />
                       </div>
                     )}
-                    <div className="h-20 bg-gradient-to-br from-purple-100 to-pink-100"></div>
+                    <div className="h-20 bg-gray-100 relative overflow-hidden">
+                      <img 
+                        src={product.image} 
+                        alt={product.name}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    </div>
                     <div className="p-2">
                       <div className="text-xs font-semibold text-gray-900 mb-1">{product.name}</div>
                       <div className="text-xs text-gray-600">{product.price}</div>
