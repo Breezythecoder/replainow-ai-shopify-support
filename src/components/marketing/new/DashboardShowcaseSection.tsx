@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageSquare, Mail, Users, ShoppingCart, Package, CheckCircle2 } from "lucide-react";
+import { MessageSquare, Mail, Users } from "lucide-react";
 import { useState } from "react";
 
 const DashboardShowcaseSection = () => {
@@ -85,38 +85,6 @@ const DashboardShowcaseSection = () => {
                   className="w-full shadow-xl"
                   loading="lazy"
                 />
-
-                {/* Floating feature badges on screenshot */}
-                {activeTab === 'livechat' && (
-                  <>
-                    <motion.div
-                      animate={{ y: [0, -8, 0] }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                      className="absolute top-10 right-10 glass-card px-4 py-2 rounded-full shadow-glass border-2 border-purple-200/40"
-                    >
-                      <span className="text-sm font-bold text-purple-900">VIP Kunde</span>
-                    </motion.div>
-                    <motion.div
-                      animate={{ y: [0, -10, 0] }}
-                      transition={{ duration: 4, repeat: Infinity, delay: 1 }}
-                      className="absolute bottom-10 left-10 glass-card px-4 py-2 rounded-full shadow-glass border-2 border-green-200/40"
-                    >
-                      <span className="text-sm font-bold text-green-700">Warenkorb: €159</span>
-        </motion.div>
-                  </>
-                )}
-
-                {activeTab === 'email' && (
-                  <>
-        <motion.div
-                      animate={{ y: [0, -8, 0] }}
-                      transition={{ duration: 3, repeat: Infinity }}
-                      className="absolute top-10 right-10 glass-card px-4 py-2 rounded-full shadow-glass border-2 border-green-200/40"
-                    >
-                      <span className="text-sm font-bold text-green-700">AI Score: 94</span>
-                    </motion.div>
-                  </>
-                )}
               </motion.div>
             </AnimatePresence>
             </div>

@@ -9,7 +9,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-mesh-purple opacity-100"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-purple-100/40 via-white/70 to-white"></div>
       
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-20 relative">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 pt-20 md:pt-24 pb-12 md:pb-20 relative">
         
         {/* Floating Glass Orbs */}
         <motion.div
