@@ -59,7 +59,7 @@ const CustomerJourneySection = () => {
                     </div>
                     
                     {/* Content Card */}
-                    <div className="flex-1 bg-white rounded-xl p-5 border border-gray-200 shadow-sm hover:shadow-md hover:border-purple-200 transition-all duration-300">
+                    <div className="flex-1 bg-white rounded-xl p-5 border border-gray-200 shadow-elevation-2 hover:shadow-elevation-3 hover:border-purple-200 transition-all duration-300">
                       <div className="flex items-center justify-between mb-2">
                         <h4 className="font-bold text-gray-900">{step.page}</h4>
                         <div className="px-2 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded">
@@ -97,7 +97,7 @@ const CustomerJourneySection = () => {
                     <div className="flex items-start gap-3">
                       <div className="text-2xl">{item.icon}</div>
                       <div className="flex-1">
-                        <div className="text-sm text-white/70 mb-1">{item.label}</div>
+                        <div className="text-sm text-white/95 mb-1">{item.label}</div>
                         <div className="font-semibold text-white">{item.value}</div>
                       </div>
                     </div>
@@ -157,8 +157,8 @@ const CustomerJourneySection = () => {
             }
           ].map((benefit, i) => (
             <div key={i} className="text-center p-6 bg-gradient-to-br from-gray-50 to-white rounded-xl border border-gray-200">
-              <benefit.icon className="w-8 h-8 text-purple-600 mx-auto mb-3" />
-              <h4 className="font-semibold text-gray-900 mb-2 text-sm">{benefit.title}</h4>
+              <benefit.icon className="w-8 h-8 text-purple-700 mx-auto mb-3" />
+              <p className="font-semibold text-gray-900 mb-2 text-sm">{benefit.title}</p>
               <p className="text-xs text-gray-600">{benefit.desc}</p>
             </div>
           ))}

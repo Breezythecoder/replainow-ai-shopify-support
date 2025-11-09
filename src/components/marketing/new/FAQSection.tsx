@@ -41,7 +41,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-white via-purple-50/20 to-white">
+    <div id="faq" className="relative overflow-hidden bg-gradient-to-b from-white via-purple-50/20 to-white">
       {/* Subtle mesh gradient */}
       <div className="absolute inset-0 bg-mesh-purple opacity-10"></div>
       <div className="max-w-4xl mx-auto px-6 md:px-8 py-10 md:py-16 relative z-10">
@@ -65,18 +65,18 @@ const FAQSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.05, duration: 0.5 }}
-              className="glass-card rounded-2xl overflow-hidden hover:shadow-float transition-all duration-500 border-2 border-white/40 hover:border-purple-200/60"
+              className="bg-white rounded-2xl overflow-hidden hover:shadow-white-card-hover transition-all duration-300 border-2 border-gray-200 hover:border-purple-400 shadow-card-strong"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full text-left p-6 flex items-center justify-between hover:bg-white/50 transition-all duration-300 group"
+                className="w-full text-left p-7 flex items-center justify-between bg-gradient-to-r from-white via-white to-gray-50 hover:from-purple-50 hover:via-white hover:to-purple-50 transition-all duration-300 group"
               >
-                <span className="font-semibold text-gray-900 pr-8 group-hover:text-purple-600 transition-colors">{faq.q}</span>
+                <span className="font-bold text-gray-900 pr-8 group-hover:text-purple-700 transition-colors">{faq.q}</span>
                 <motion.div
                   animate={{ rotate: openIndex === i ? 180 : 0 }}
                   transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <ChevronDown className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                  <ChevronDown className="w-6 h-6 text-purple-700 flex-shrink-0" />
                 </motion.div>
               </button>
               
@@ -89,8 +89,8 @@ const FAQSection = () => {
                     transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
                     className="overflow-hidden"
                   >
-                    <div className="px-6 pb-6 bg-gradient-to-b from-white/50 to-transparent">
-                  <p className="text-gray-700 leading-relaxed">{faq.a}</p>
+                    <div className="px-7 pb-7 bg-gradient-to-b from-gray-50 to-white border-t-2 border-gray-200">
+                  <p className="text-gray-800 leading-relaxed text-base">{faq.a}</p>
                 </div>
                   </motion.div>
                 )}

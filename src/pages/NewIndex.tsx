@@ -51,7 +51,12 @@ const NewIndex = () => {
 
       <PremiumNavbar />
 
-      <main className="min-h-screen">
+      <main
+        id="main-content"
+        role="main"
+        aria-label="Hauptinhalt"
+        className="min-h-screen"
+      >
         {/* 1. HERO - First Impression */}
         <HeroSection />
 

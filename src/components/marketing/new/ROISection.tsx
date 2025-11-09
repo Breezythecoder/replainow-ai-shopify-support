@@ -102,7 +102,7 @@ const ROISection = () => {
                   
                   <div className="flex items-baseline gap-3 mb-12">
                     <span className="text-7xl md:text-8xl font-light text-white tracking-tight">€3.200</span>
-                    <span className="text-2xl text-gray-400 font-light">/Monat</span>
+                    <span className="text-2xl text-gray-300 font-light">/Monat</span>
                   </div>
                   
                   <div className="h-px bg-white/10 mb-10"></div>

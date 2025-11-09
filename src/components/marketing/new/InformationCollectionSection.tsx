@@ -85,7 +85,7 @@ const InformationCollectionSection = () => {
                     {/* Customer Message */}
                     <div className="flex justify-end">
                       <div className="bg-purple-600 text-white rounded-lg p-4 max-w-[85%] shadow-sm">
-                        <div className="text-xs text-white/70 mb-1">Kunde</div>
+                        <div className="text-xs text-white/95 mb-1">Kunde</div>
                         <p className="text-sm">{step.customer}</p>
                       </div>
                     </div>
@@ -93,9 +93,9 @@ const InformationCollectionSection = () => {
                     {/* AI Response */}
                     <div className="flex gap-3">
                       <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                        <MessageCircle className="w-4 h-4 text-purple-600" />
+                        <MessageCircle className="w-4 h-4 text-purple-700" />
                       </div>
-                      <div className="bg-white border border-purple-200 rounded-lg p-4 max-w-[85%] shadow-sm">
+                      <div className="bg-white border border-purple-200 rounded-lg p-4 max-w-[85%] shadow-elevation-2">
                         <div className="text-xs text-gray-600 mb-1">ReplAI</div>
                         <p className="text-sm text-gray-800">{step.ai}</p>
                       </div>
@@ -145,7 +145,7 @@ const InformationCollectionSection = () => {
                         ].map((item, idx) => (
                           <div key={idx} className="flex items-center justify-between bg-white/10 backdrop-blur rounded-lg p-3">
                             <div className="flex items-center gap-3">
-                              <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center text-sm font-bold">
+                              <div className="w-6 h-6 bg-green-700 rounded-full flex items-center justify-center text-sm font-bold">
                                 {item.icon}
                               </div>
                               <span className="text-sm font-medium">{item.label}:</span>
@@ -156,12 +156,12 @@ const InformationCollectionSection = () => {
                       </div>
 
                       {/* Action Button */}
-                      <button className="w-full px-6 py-4 bg-white text-purple-600 rounded-xl font-bold text-sm hover:bg-gray-50 transition-colors shadow-lg flex items-center justify-center gap-2">
+                      <button className="w-full px-6 py-4 bg-white text-purple-700 rounded-xl font-bold text-sm hover:bg-gray-50 transition-colors shadow-white-button hover:shadow-white-button-hover flex items-center justify-center gap-2">
                         <CheckCircle2 className="w-5 h-5" />
                         Rückerstattung durchführen
                       </button>
 
-                      <p className="text-xs text-white/70 mt-4 text-center">
+                      <p className="text-xs text-white/95 mt-4 text-center">
                         Order automatisch geladen • Ein Klick und fertig
                       </p>
                     </div>
@@ -207,7 +207,7 @@ const InformationCollectionSection = () => {
             }
           ].map((benefit, i) => (
             <div key={i} className="text-center p-6 bg-gradient-to-br from-gray-50 to-white rounded-xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
-              <benefit.icon className="w-8 h-8 text-purple-600 mx-auto mb-3" />
+              <benefit.icon className="w-8 h-8 text-purple-700 mx-auto mb-3" />
               <div className="text-3xl font-light text-gray-900 mb-1">{benefit.stat}</div>
               <div className="text-sm font-semibold text-gray-900 mb-2">{benefit.label}</div>
               <p className="text-xs text-gray-600">{benefit.desc}</p>

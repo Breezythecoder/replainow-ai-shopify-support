@@ -25,20 +25,23 @@ const UltraFooter = () => {
             </p>
             <div className="flex gap-3">
               <a 
-                href="https://twitter.com/replainow" 
-                className="w-10 h-10 rounded-lg bg-gray-100 hover:bg-purple-100 flex items-center justify-center transition-all text-gray-700 hover:text-purple-600"
+                href="https://twitter.com/replainow"
+                aria-label="ReplAInow auf Twitter folgen"
+                className="w-10 h-10 rounded-lg bg-gray-100 hover:bg-purple-100 flex items-center justify-center transition-all text-gray-700 hover:text-purple-700"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a 
-                href="https://linkedin.com/company/replainow" 
-                className="w-10 h-10 rounded-lg bg-gray-100 hover:bg-purple-100 flex items-center justify-center transition-all text-gray-700 hover:text-purple-600"
+                href="https://linkedin.com/company/replainow"
+                aria-label="ReplAInow auf LinkedIn folgen"
+                className="w-10 h-10 rounded-lg bg-gray-100 hover:bg-purple-100 flex items-center justify-center transition-all text-gray-700 hover:text-purple-700"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a 
-                href="mailto:support@replainow.com" 
-                className="w-10 h-10 rounded-lg bg-gray-100 hover:bg-purple-100 flex items-center justify-center transition-all text-gray-700 hover:text-purple-600"
+              <a
+                href="mailto:support@replainow.com"
+                aria-label="E-Mail an ReplAInow Support senden"
+                className="w-10 h-10 rounded-lg bg-gray-100 hover:bg-purple-100 flex items-center justify-center transition-all text-gray-700 hover:text-purple-700"
               >
                 <Mail className="w-5 h-5" />
               </a>
@@ -50,17 +53,17 @@ const UltraFooter = () => {
             <h3 className="font-bold mb-4 text-gray-900">Produkt</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#features" className="text-gray-600 hover:text-purple-600 transition-colors">
+                <a href="#features" className="text-gray-700 hover:text-purple-700 transition-colors">
                   Features
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-gray-600 hover:text-purple-600 transition-colors">
+                <a href="#pricing" className="text-gray-700 hover:text-purple-700 transition-colors">
                   Pricing
                 </a>
               </li>
               <li>
-                <a href="#live-demo" className="text-gray-600 hover:text-purple-600 transition-colors">
+                <a href="#live-demo" className="text-gray-700 hover:text-purple-700 transition-colors">
                   Demo
                 </a>
               </li>
@@ -72,12 +75,12 @@ const UltraFooter = () => {
             <h3 className="font-bold mb-4 text-gray-900">Ressourcen</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#faq" className="text-gray-600 hover:text-purple-600 transition-colors">
+                <a href="#faq" className="text-gray-700 hover:text-purple-700 transition-colors">
                   FAQ
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-600 hover:text-purple-600 transition-colors">
+                <a href="#contact" className="text-gray-700 hover:text-purple-700 transition-colors">
                   Kontakt
                 </a>
               </li>
@@ -89,17 +92,17 @@ const UltraFooter = () => {
             <h3 className="font-bold mb-4 text-gray-900">Unternehmen</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/privacy" className="text-gray-600 hover:text-purple-600 transition-colors">
+                <a href="/privacy" className="text-gray-700 hover:text-purple-700 transition-colors">
                   Datenschutz
                 </a>
               </li>
               <li>
-                <a href="/terms" className="text-gray-600 hover:text-purple-600 transition-colors">
+                <a href="/terms" className="text-gray-700 hover:text-purple-700 transition-colors">
                   AGB
                 </a>
               </li>
               <li>
-                <a href="/impressum" className="text-gray-600 hover:text-purple-600 transition-colors">
+                <a href="/impressum" className="text-gray-700 hover:text-purple-700 transition-colors">
                   Impressum
                 </a>
               </li>

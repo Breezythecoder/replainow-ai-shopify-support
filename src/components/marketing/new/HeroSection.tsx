@@ -30,29 +30,6 @@ const HeroSection = () => {
           className="absolute bottom-20 left-1/3 w-48 h-48 glass-card rounded-full opacity-30 hidden lg:block"
         ></motion.div>
         
-        {/* Floating Mini Dashboard Screenshot - VIEL GRÖßER - Desktop only */}
-        <FloatingCard delay={0.5} intensity="medium" className="hidden xl:block absolute -right-32 top-1/4 w-[480px] z-20">
-          <motion.div
-            initial={{ opacity: 0, x: 100, scale: 0.9 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{ delay: 0.8, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="relative rounded-3xl p-3 shadow-float-lg border-4 border-purple-300/50"
-            style={{
-              background: 'rgba(255, 255, 255, 0.9)',
-              backdropFilter: 'blur(40px)',
-              WebkitBackdropFilter: 'blur(40px)'
-            }}
-          >
-            <img 
-              src="/images/dashboard-livechat-cart.png"
-              className="rounded-2xl w-full shadow-2xl"
-              alt="Dashboard Preview"
-              loading="eager"
-            />
-            {/* STÄRKERER Glow */}
-            <div className="absolute -inset-3 bg-gradient-to-r from-purple-500/40 to-violet-500/40 rounded-3xl blur-2xl -z-10"></div>
-          </motion.div>
-        </FloatingCard>
         
         <div className="relative">
           <motion.div
@@ -66,9 +43,9 @@ const HeroSection = () => {
               initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.2, duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-              className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-sm border-2 border-purple-200 rounded-full px-6 py-2.5 mb-8 shadow-lg"
+              className="inline-flex items-center gap-2 bg-white/95 backdrop-blur-sm border-2 border-purple-200 rounded-full px-6 py-2.5 mb-8 shadow-elevation-3"
             >
-              <Sparkles className="w-4 h-4 text-purple-600" />
+              <Sparkles className="w-4 h-4 text-purple-700" />
               <span className="text-sm font-semibold text-purple-950 tracking-tight">
                 Enterprise KI-Lösung für Shopify
               </span>
@@ -110,7 +87,7 @@ const HeroSection = () => {
               <motion.button
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="glass-card inline-flex items-center gap-2 text-gray-900 px-10 py-5 rounded-xl font-semibold text-lg border-2 border-purple-200/40 hover:border-purple-300/60 transition-all shadow-glass hover:shadow-float"
+                className="bg-white inline-flex items-center gap-2 text-gray-900 px-10 py-5 rounded-xl font-semibold text-lg border-2 border-gray-200/80 hover:border-purple-400 transition-all shadow-white-button hover:shadow-white-button-hover"
               >
                 <span>Live Demo ansehen</span>
                 <ArrowRight className="w-5 h-5" />
@@ -124,7 +101,7 @@ const HeroSection = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="glass-card inline-flex items-center gap-3 text-sm px-5 py-3 rounded-full border-2 border-purple-200/40 shadow-glass"
+                className="bg-white inline-flex items-center gap-3 text-sm px-5 py-3 rounded-full border-2 border-gray-200/80 shadow-white-card"
               >
                 <div className="flex -space-x-2">
                   <img 
@@ -165,8 +142,8 @@ const HeroSection = () => {
                   <span className="text-gray-600">(1,247 Reviews)</span>
                 </div>
                 
-                <div className="glass-card flex items-center gap-1.5 px-4 py-2 rounded-full border-2 border-purple-100/50">
-                  <Shield className="w-3.5 h-3.5 text-purple-600" />
+                <div className="bg-white flex items-center gap-1.5 px-4 py-2 rounded-full border-2 border-gray-200/80 shadow-elevation-2">
+                  <Shield className="w-3.5 h-3.5 text-purple-700" />
                   <span className="text-gray-900 font-medium">ISO 27001</span>
                 </div>
               </motion.div>

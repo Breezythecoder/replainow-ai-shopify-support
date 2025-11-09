@@ -26,15 +26,16 @@ const PremiumNavbar = () => {
 
   const navItems = [
     { label: 'Features', href: '#features' },
-    { label: 'Pricing', href: '#pricing' },
+    { label: 'Integration', href: '#integration' },
+    { label: 'Preise', href: '#pricing' },
     { label: 'FAQ', href: '#faq' },
   ];
 
   return (
     <header 
       className={`
-        fixed top-0 left-0 right-0 z-50 transition-all duration-500
-        ${isScrolled ? 'glass-card border-b border-white/30 shadow-glass-lg' : 'bg-transparent'}
+        fixed top-0 left-0 right-0 z-50 transition-all duration-300
+        ${isScrolled ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-elevation-3' : 'bg-white/80 backdrop-blur-md'}
       `}
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between h-20 px-6 md:px-8">
@@ -53,7 +54,7 @@ const PremiumNavbar = () => {
             />
           </div>
           
-          <div className="text-xl font-bold text-gray-900 group-hover:text-purple-600 transition-colors duration-300">
+          <div className="text-xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors duration-300">
             Repl<span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">AI</span>now
           </div>
         </a>
@@ -65,7 +66,9 @@ const PremiumNavbar = () => {
               key={item.href}
               href={item.href}
               onClick={(e) => handleNavClick(e, item.href.substring(1))}
-              className="relative text-sm font-medium text-gray-700 hover:text-purple-600 transition-colors duration-200 cursor-pointer group"
+              className={`relative text-sm font-semibold transition-colors duration-200 cursor-pointer group ${
+                isScrolled ? 'text-gray-900' : 'text-gray-900'
+              } hover:text-purple-700`}
             >
               {item.label}
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-violet-600 group-hover:w-full transition-all duration-300"></span>
@@ -90,7 +93,7 @@ const PremiumNavbar = () => {
           
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 min-h-[48px] min-w-[48px] flex items-center justify-center text-gray-700 hover:text-purple-600 transition-colors duration-200 rounded-lg hover:bg-purple-50"
+            className="md:hidden p-2 min-h-[48px] min-w-[48px] flex items-center justify-center text-gray-700 hover:text-purple-700 transition-colors duration-200 rounded-lg hover:bg-purple-50"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label={mobileMenuOpen ? "Menü schließen" : "Menü öffnen"}
           >
@@ -107,7 +110,7 @@ const PremiumNavbar = () => {
               <a
                 key={item.href}
                 href={item.href}
-                className="block py-3 text-base font-medium text-gray-700 hover:text-purple-600 transition-colors duration-200 hover:pl-2"
+                className="block py-3 text-base font-medium text-gray-700 hover:text-purple-700 transition-colors duration-200 hover:pl-2"
                 onClick={(e) => handleNavClick(e, item.href.substring(1))}
               >
                 {item.label}

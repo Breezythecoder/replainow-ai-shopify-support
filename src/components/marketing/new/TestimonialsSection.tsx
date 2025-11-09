@@ -74,8 +74,8 @@ const TestimonialsSection = () => {
                 <div className={`
                   absolute top-4 right-4 text-7xl font-serif leading-none opacity-10
                   ${testimonial.color === 'violet' ? 'text-violet-600' : ''}
-                  ${testimonial.color === 'purple' ? 'text-purple-600' : ''}
-                  ${testimonial.color === 'pink' ? 'text-pink-600' : ''}
+                  ${testimonial.color === 'purple' ? 'text-purple-700' : ''}
+                  ${testimonial.color === 'pink' ? 'text-pink-700' : ''}
                 `}>"</div>
                 
                 {/* Avatar - GRÖßER mit STÄRKEREM glow */}
@@ -115,8 +115,8 @@ const TestimonialsSection = () => {
                   <TrendingUp className={`
                     w-4 h-4
                     ${testimonial.color === 'violet' ? 'text-violet-600' : ''}
-                    ${testimonial.color === 'purple' ? 'text-purple-600' : ''}
-                    ${testimonial.color === 'pink' ? 'text-pink-600' : ''}
+                    ${testimonial.color === 'purple' ? 'text-purple-700' : ''}
+                    ${testimonial.color === 'pink' ? 'text-pink-700' : ''}
                   `} />
                   <span className="font-bold text-gray-900">{testimonial.metric}</span>
                 </div>

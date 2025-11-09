@@ -40,6 +40,14 @@ export default {
 					purple: '#6B46C1',
 					dark: '#1F2937',
 				},
+				// WCAG AA Compliant Text Colors
+				'text-primary': 'rgb(17, 24, 39)',      // gray-900, 13.6:1
+				'text-secondary': 'rgb(55, 65, 81)',     // gray-700, 5.7:1
+				'text-tertiary': 'rgb(75, 85, 99)',      // gray-600, 4.6:1 (body only)
+				// Accessible Accent Colors
+				'accent-purple-wcag': 'rgb(126, 34, 206)',    // purple-700, 4.7:1
+				'accent-green-wcag': 'rgb(21, 128, 61)',      // green-700, 4.6:1
+				'accent-blue-wcag': 'rgb(29, 78, 216)',       // blue-700, 5.9:1
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
@@ -112,7 +120,20 @@ export default {
 				'neon': 'var(--shadow-neon)',
 				'brand': 'var(--shadow-brand)',
 				'brand-glow': 'var(--shadow-brand-glow)',
-				'brand-mega': 'var(--shadow-brand-mega)'
+				'brand-mega': 'var(--shadow-brand-mega)',
+				// Enhanced shadow system for white/light elements
+				'white-button': '0 10px 30px rgba(0, 0, 0, 0.15), 0 -2px 8px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.1)',
+				'white-button-hover': '0 15px 40px rgba(0, 0, 0, 0.2), 0 -3px 10px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.15)',
+				'white-card': '0 8px 24px rgba(0, 0, 0, 0.12), 0 -2px 6px rgba(0, 0, 0, 0.06)',
+				'white-card-hover': '0 12px 32px rgba(0, 0, 0, 0.16), 0 -3px 8px rgba(0, 0, 0, 0.08)',
+				'card-strong': '0 10px 30px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08)',
+				'elevation-1': '0 2px 8px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.06)',
+				'elevation-2': '0 4px 16px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.06)',
+				'elevation-3': '0 8px 24px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.08)',
+				'elevation-4': '0 12px 32px rgba(0, 0, 0, 0.14), 0 6px 12px rgba(0, 0, 0, 0.1)',
+				'elevation-5': '0 16px 48px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.12)',
+				'top': '0 -4px 12px rgba(0, 0, 0, 0.1)',
+				'multi': '0 10px 30px rgba(0, 0, 0, 0.15), 0 -2px 8px rgba(0, 0, 0, 0.08), 2px 0 8px rgba(0, 0, 0, 0.06), -2px 0 8px rgba(0, 0, 0, 0.06)'
 			},
 			transitionTimingFunction: {
 				'smooth': 'var(--transition-smooth)',

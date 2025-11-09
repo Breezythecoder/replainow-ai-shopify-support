@@ -6,7 +6,7 @@ const DashboardShowcaseSection = () => {
   const [activeTab, setActiveTab] = useState<'livechat' | 'email'>('livechat');
   
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white">
+    <div id="live-demo" className="bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16">
         
         {/* Section Header */}
@@ -48,7 +48,7 @@ const DashboardShowcaseSection = () => {
                 className={`px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 ${
                   activeTab === 'livechat'
                     ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-2xl'
-                    : 'text-gray-700 hover:text-purple-600 hover:bg-white/90 hover:shadow-lg'
+                    : 'text-gray-700 hover:text-purple-700 hover:bg-white/90 hover:shadow-lg'
                 }`}
               >
                 <MessageSquare className="w-6 h-6 inline mr-2" />
@@ -61,7 +61,7 @@ const DashboardShowcaseSection = () => {
                 className={`px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 ${
                   activeTab === 'email'
                     ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-2xl'
-                    : 'text-gray-700 hover:text-purple-600 hover:bg-white/90 hover:shadow-lg'
+                    : 'text-gray-700 hover:text-purple-700 hover:bg-white/90 hover:shadow-lg'
                 }`}
               >
                 <Mail className="w-6 h-6 inline mr-2" />
@@ -131,7 +131,7 @@ const DashboardShowcaseSection = () => {
           className="text-center mt-12"
         >
           <div className="glass-card inline-flex items-center gap-3 px-8 py-4 border-2 border-purple-200/40 rounded-2xl shadow-glass">
-            <Users className="w-6 h-6 text-purple-600" />
+            <Users className="w-6 h-6 text-purple-700" />
             <span className="font-bold text-purple-900">
               Professionelles Interface wie bei großen Tools – aber alles in einem
             </span>

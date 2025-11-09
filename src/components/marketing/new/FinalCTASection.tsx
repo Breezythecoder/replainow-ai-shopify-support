@@ -3,7 +3,7 @@ import { ArrowRight, ShoppingBag, Shield, Award, Users } from "lucide-react";
 
 const FinalCTASection = () => {
   return (
-    <div className="bg-gradient-to-b from-white to-gray-50">
+    <div id="contact" className="bg-gradient-to-b from-white to-gray-50">
       <div className="max-w-5xl mx-auto px-6 md:px-8 py-20 md:py-32">
         
         <motion.div
@@ -51,17 +51,17 @@ const FinalCTASection = () => {
           {/* Trust Icons */}
           <div className="flex items-center justify-center gap-8 flex-wrap text-sm text-gray-600">
             <div className="flex items-center gap-2">
-              <Shield className="w-4 h-4 text-purple-600" />
+              <Shield className="w-4 h-4 text-purple-700" />
               <span className="font-medium">DSGVO-konform</span>
             </div>
             <div className="h-4 w-px bg-gray-300"></div>
             <div className="flex items-center gap-2">
-              <Award className="w-4 h-4 text-purple-600" />
+              <Award className="w-4 h-4 text-purple-700" />
               <span className="font-medium">ISO 27001</span>
             </div>
             <div className="h-4 w-px bg-gray-300"></div>
             <div className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-purple-600" />
+              <Users className="w-4 h-4 text-purple-700" />
               <span className="font-medium">1.247+ Händler</span>
             </div>
           </div>

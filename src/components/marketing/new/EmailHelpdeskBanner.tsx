@@ -80,9 +80,9 @@ const EmailHelpdeskBanner = () => {
                   `}>
                     <feature.icon className={`
                       w-6 h-6
-                      ${feature.color === 'green' ? 'text-green-600' : ''}
-                      ${feature.color === 'purple' ? 'text-purple-600' : ''}
-                      ${feature.color === 'blue' ? 'text-blue-600' : ''}
+                      ${feature.color === 'green' ? 'text-green-700' : ''}
+                      ${feature.color === 'purple' ? 'text-purple-700' : ''}
+                      ${feature.color === 'blue' ? 'text-blue-700' : ''}
                       ${feature.color === 'violet' ? 'text-violet-600' : ''}
                     `} />
                   </div>
@@ -117,7 +117,7 @@ const EmailHelpdeskBanner = () => {
               <div className="absolute -inset-4 bg-gradient-to-br from-violet-200/40 to-blue-200/40 rounded-3xl blur-2xl"></div>
               
               {/* Email Dashboard Mockup */}
-              <div className="relative bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+              <div className="relative bg-white rounded-2xl shadow-elevation-4 border border-gray-200 overflow-hidden">
                 {/* Dashboard Header */}
                 <div className="bg-gray-900 p-4 text-white">
                   <div className="flex items-center gap-3">
@@ -132,7 +132,7 @@ const EmailHelpdeskBanner = () => {
                   <div className="bg-white rounded-lg p-3 border border-gray-200">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-xs font-bold text-purple-600">
+                        <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-xs font-bold text-purple-700">
                           MS
                         </div>
                         <div>
@@ -153,7 +153,7 @@ const EmailHelpdeskBanner = () => {
                   <div className="bg-white rounded-lg p-3 border border-gray-200">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-xs font-bold text-blue-600">
+                        <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-xs font-bold text-blue-700">
                           TM
                         </div>
                         <div>
@@ -172,7 +172,7 @@ const EmailHelpdeskBanner = () => {
                   <div className="bg-white rounded-lg p-3 border border-yellow-200 bg-yellow-50/30">
                     <div className="flex items-center justify-between mb-2">
                       <div className="flex items-center gap-2">
-                        <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center text-xs font-bold text-pink-600">
+                        <div className="w-8 h-8 bg-pink-100 rounded-full flex items-center justify-center text-xs font-bold text-pink-700">
                           SK
                         </div>
                         <div>

@@ -45,14 +45,14 @@ const MultiLanguageBanner = () => {
           >
             <div className="absolute -inset-0.5 bg-gradient-to-br from-purple-500/10 to-violet-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
             
-            <div className="relative bg-white rounded-2xl p-8 border border-gray-200 shadow-sm group-hover:shadow-xl transition-all duration-500 h-full">
+            <div className="relative bg-white rounded-2xl p-8 border border-gray-200 shadow-elevation-2 group-hover:shadow-elevation-4 transition-all duration-500 h-full">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 bg-purple-50 rounded-xl">
-                  <Languages className="w-6 h-6 text-purple-600" />
+                  <Languages className="w-6 h-6 text-purple-700" />
                 </div>
                 <div>
                   <h3 className="text-xl font-bold text-gray-900">Widget-Interface</h3>
-                  <p className="text-sm text-purple-600 font-semibold">41 Sprachen</p>
+                  <p className="text-sm text-purple-700 font-semibold">41 Sprachen</p>
                 </div>
               </div>
 
@@ -68,7 +68,7 @@ const MultiLanguageBanner = () => {
                   "Japanischer Shop → Widget auf Japanisch"
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-2">
-                    <CheckCircle2 className="w-4 h-4 text-purple-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-4 h-4 text-purple-700 flex-shrink-0" />
                     <span className="text-sm text-gray-700">{item}</span>
                   </div>
                 ))}
@@ -91,7 +91,7 @@ const MultiLanguageBanner = () => {
           >
             <div className="absolute -inset-0.5 bg-gradient-to-br from-violet-500/10 to-blue-500/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
             
-            <div className="relative bg-white rounded-2xl p-8 border border-gray-200 shadow-sm group-hover:shadow-xl transition-all duration-500 h-full">
+            <div className="relative bg-white rounded-2xl p-8 border border-gray-200 shadow-elevation-2 group-hover:shadow-elevation-4 transition-all duration-500 h-full">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 bg-violet-50 rounded-xl">
                   <Sparkles className="w-6 h-6 text-violet-600" />
@@ -177,9 +177,9 @@ const MultiLanguageBanner = () => {
               className="text-center p-6 bg-gradient-to-br from-gray-50 to-white rounded-xl border border-gray-200"
             >
               <div className="inline-flex p-4 bg-gradient-to-br from-purple-50 to-violet-50 rounded-2xl mb-4">
-                <feature.icon className="w-8 h-8 text-purple-600" />
+                <feature.icon className="w-8 h-8 text-purple-700" />
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">{feature.title}</h4>
+              <p className="font-semibold text-gray-900 mb-2">{feature.title}</p>
               <p className="text-sm text-gray-600 leading-relaxed">{feature.desc}</p>
             </motion.div>
           ))}
@@ -195,7 +195,7 @@ const MultiLanguageBanner = () => {
           <div className="grid md:grid-cols-2 gap-8 text-center">
             <div>
               <div className="text-5xl font-light text-gray-900 mb-2">41</div>
-              <div className="text-sm font-semibold text-purple-600 mb-2">Widget-Sprachen</div>
+              <div className="text-sm font-semibold text-purple-700 mb-2">Widget-Sprachen</div>
               <p className="text-xs text-gray-600">Interface passt sich Ihrem Shop an</p>
             </div>
             <div>

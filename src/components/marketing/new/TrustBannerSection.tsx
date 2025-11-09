@@ -62,7 +62,7 @@ const TrustBannerSection = () => {
               <div className="text-5xl font-light text-white mb-2">
                 {stat.prefix}<AnimatedCounter value={stat.value} suffix={stat.suffix} />
               </div>
-              <div className="text-sm text-gray-400 uppercase tracking-wider">{stat.label}</div>
+              <div className="text-sm text-gray-300 uppercase tracking-wider">{stat.label}</div>
             </motion.div>
           ))}
         </div>

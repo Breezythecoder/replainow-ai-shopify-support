@@ -32,7 +32,7 @@ const ValuePropositionSection = () => {
   const automationCount = useCountUp(87, 2000, isStatsInView);
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-purple-50/40 via-white to-white">
+    <div id="features" className="relative overflow-hidden bg-gradient-to-b from-purple-50/40 via-white to-white">
       {/* Subtle mesh */}
       <div className="absolute inset-0 bg-mesh-purple opacity-10"></div>
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-14 relative z-10">
@@ -76,7 +76,7 @@ const ValuePropositionSection = () => {
                     whileHover={{ rotate: 360, scale: 1.1 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <svg className="w-10 h-10 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <svg className="w-10 h-10 text-purple-700" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </motion.div>

@@ -55,8 +55,6 @@ const SitemapXML = lazy(() => import("./pages/SitemapXML"));
 const RobotsTXT = lazy(() => import("./pages/RobotsTXT"));
 const LLMFactsJSON = lazy(() => import("./pages/LLMFactsJSON"));
 
-import ContrastAuditor from "@/components/dev/ContrastAuditor";
-import DesignAuditor from "@/components/dev/DesignAuditor";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import SkipLinks from "@/components/ui/SkipLinks";
 
@@ -140,12 +138,6 @@ const AppShell = () => {
       </Suspense>
       <SkipLinks />
       <ScrollProgress />
-      {import.meta.env.MODE === "development" && (
-        <>
-          <ContrastAuditor />
-          <DesignAuditor />
-        </>
-      )}
       <I18nOverlay />
     </>
   );

@@ -80,15 +80,15 @@ const VisualCommerceBanner = () => {
                   `}>
                     <tool.icon className={`
                       w-6 h-6
-                      ${tool.color === 'purple' ? 'text-purple-600' : ''}
+                      ${tool.color === 'purple' ? 'text-purple-700' : ''}
                       ${tool.color === 'violet' ? 'text-violet-600' : ''}
-                      ${tool.color === 'blue' ? 'text-blue-600' : ''}
-                      ${tool.color === 'pink' ? 'text-pink-600' : ''}
+                      ${tool.color === 'blue' ? 'text-blue-700' : ''}
+                      ${tool.color === 'pink' ? 'text-pink-700' : ''}
                     `} />
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
-                      <h4 className="font-semibold text-gray-900">{tool.title}</h4>
+                      <p className="font-semibold text-gray-900">{tool.title}</p>
                       <span className={`
                         px-2 py-0.5 text-xs font-bold rounded
                         ${tool.color === 'purple' ? 'bg-purple-100 text-purple-700' : ''}
@@ -129,7 +129,7 @@ const VisualCommerceBanner = () => {
                   {/* AI Message */}
                   <div className="flex gap-2">
                     <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <ShoppingBag className="w-4 h-4 text-purple-600" />
+                      <ShoppingBag className="w-4 h-4 text-purple-700" />
                     </div>
                     <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-200 max-w-[80%]">
                       <p className="text-sm text-gray-800 mb-3">
@@ -156,11 +156,11 @@ const VisualCommerceBanner = () => {
                   {/* Discount Offer */}
                   <div className="flex gap-2">
                     <div className="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Gift className="w-4 h-4 text-purple-600" />
+                      <Gift className="w-4 h-4 text-purple-700" />
                     </div>
                     <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-4 shadow-sm border border-purple-200">
                       <div className="flex items-center gap-2 mb-2">
-                        <Gift className="w-4 h-4 text-purple-600" />
+                        <Gift className="w-4 h-4 text-purple-700" />
                         <span className="text-xs font-bold text-purple-900">SPECIAL OFFER</span>
                       </div>
                       <p className="text-sm font-bold text-gray-900 mb-1">SAVE20-XYZ</p>
@@ -189,7 +189,7 @@ const VisualCommerceBanner = () => {
             { label: "One-Click Checkout", value: "Schnellere Käufe", icon: CreditCard }
           ].map((stat, i) => (
             <div key={i} className="text-center p-6 bg-gray-50 rounded-xl border border-gray-200">
-              <stat.icon className="w-8 h-8 text-purple-600 mx-auto mb-3" />
+              <stat.icon className="w-8 h-8 text-purple-700 mx-auto mb-3" />
               <div className="text-sm text-gray-600 mb-1">{stat.label}</div>
               <div className="font-semibold text-gray-900">{stat.value}</div>
             </div>

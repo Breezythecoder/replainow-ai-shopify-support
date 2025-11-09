@@ -228,6 +228,15 @@ All colors MUST be HSL.
     --shadow-card-hover: 0 8px 32px hsla(var(--brand-primary), 0.1);
     --shadow-button: 0 4px 16px hsla(var(--brand-primary), 0.25);
     --shadow-button-hover: 0 8px 24px hsla(var(--brand-primary), 0.3);
+    
+    /* Enhanced Shadows for White/Light Elements */
+    --shadow-white-button: 0 10px 30px rgba(0, 0, 0, 0.15), 0 -2px 8px rgba(0, 0, 0, 0.08), 0 0 1px rgba(0, 0, 0, 0.1);
+    --shadow-white-button-hover: 0 15px 40px rgba(0, 0, 0, 0.2), 0 -3px 10px rgba(0, 0, 0, 0.1), 0 0 1px rgba(0, 0, 0, 0.15);
+    --shadow-white-card: 0 8px 24px rgba(0, 0, 0, 0.12), 0 -2px 6px rgba(0, 0, 0, 0.06);
+    --shadow-white-card-hover: 0 12px 32px rgba(0, 0, 0, 0.16), 0 -3px 8px rgba(0, 0, 0, 0.08);
+    --shadow-top: 0 -4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-multi: 0 10px 30px rgba(0, 0, 0, 0.15), 0 -2px 8px rgba(0, 0, 0, 0.08), 2px 0 8px rgba(0, 0, 0, 0.06), -2px 0 8px rgba(0, 0, 0, 0.06);
+    --shadow-card-strong: 0 10px 30px rgba(0, 0, 0, 0.15), 0 2px 8px rgba(0, 0, 0, 0.08);
 
     /* World-Class Transitions - Silky Smooth */
     --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -281,15 +290,31 @@ All colors MUST be HSL.
     --brand-warning: 45 93% 60%;
   }
 
-  /* Professional focus states */
-  :focus-visible {
-    outline: 2px solid hsl(var(--brand-primary));
+  /* Enhanced focus states for accessibility */
+  *:focus-visible {
+    outline: 3px solid hsl(189, 94%, 43%); /* Cyan - high contrast */
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  
+  /* Professional focus states for brand elements */
+  button:focus-visible:not([aria-label*="menu"]),
+  a:focus-visible {
+    outline: 3px solid hsl(189, 94%, 43%);
     outline-offset: 2px;
   }
 
   /* Enhanced focus states for better accessibility */
   .focus-ring-enhanced {
     @apply focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:outline-none;
+  }
+
+  /* WCAG AA Compliant Color Utility Classes */
+  .text-on-light { color: rgb(17, 24, 39); }
+  .text-on-dark { color: rgb(255, 255, 255); }
+  .text-on-brand { 
+    color: white; 
+    text-shadow: 0 1px 2px rgba(0,0,0,0.1); 
   }
 
   /* Button focus states */
@@ -341,6 +366,16 @@ All colors MUST be HSL.
   .glass-premium { @apply backdrop-blur-xl bg-gradient-card border border-white/50 !important; box-shadow: var(--shadow-glass) !important; }
   .glass-world-class { @apply backdrop-blur-2xl bg-white/95 border border-white/40 !important; box-shadow: var(--shadow-glass-lg) !important; }
   .glass-hero { @apply backdrop-blur-xl bg-white/95 border border-white/60 !important; box-shadow: var(--shadow-card) !important; }
+
+  /* axe debugger highlight */
+  .axe-debug-outline {
+    outline: 2px dashed rgba(249, 115, 22, 0.95) !important;
+    outline-offset: 4px !important;
+    box-shadow: 0 0 0 4px rgba(249, 115, 22, 0.25) !important;
+    border-radius: 6px !important;
+    position: relative;
+    transition: outline-color 120ms ease-out, box-shadow 120ms ease-out;
+  }
 
   /* World-Class Animation System */
   .hover-scale { @apply transition-premium active:scale-95; }

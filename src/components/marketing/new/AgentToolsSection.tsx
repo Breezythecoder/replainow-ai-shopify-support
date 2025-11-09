@@ -93,7 +93,7 @@ const AgentToolsSection = () => {
                 ${tool.color === 'orange' ? 'bg-orange-500/20' : ''}
               `}></div>
               
-              <div className="relative bg-white rounded-2xl p-6 border border-gray-200 shadow-sm group-hover:shadow-xl transition-all duration-500 h-full flex flex-col">
+              <div className="relative bg-white rounded-2xl p-6 border border-gray-200 shadow-elevation-2 group-hover:shadow-elevation-4 transition-all duration-500 h-full flex flex-col">
                 {/* Icon */}
                 <div className={`
                   inline-flex p-4 rounded-xl mb-4
@@ -104,17 +104,17 @@ const AgentToolsSection = () => {
                 `}>
                   <tool.icon className={`
                     w-8 h-8
-                    ${tool.color === 'green' ? 'text-green-600' : ''}
-                    ${tool.color === 'purple' ? 'text-purple-600' : ''}
-                    ${tool.color === 'blue' ? 'text-blue-600' : ''}
-                    ${tool.color === 'orange' ? 'text-orange-600' : ''}
+                    ${tool.color === 'green' ? 'text-green-700' : ''}
+                    ${tool.color === 'purple' ? 'text-purple-700' : ''}
+                    ${tool.color === 'blue' ? 'text-blue-700' : ''}
+                    ${tool.color === 'orange' ? 'text-orange-700' : ''}
                   `} />
                 </div>
 
                 {/* Title */}
-                <h3 className="text-lg font-bold text-gray-900 mb-3">
+                <h4 className="text-lg font-bold text-gray-900 mb-3">
                   {tool.title}
-                </h3>
+                </h4>
 
                 {/* Features */}
                 <ul className="space-y-2 mb-4 flex-1">
@@ -122,10 +122,10 @@ const AgentToolsSection = () => {
                     <li key={fi} className="flex items-start gap-2">
                       <Check className={`
                         w-4 h-4 flex-shrink-0 mt-0.5
-                        ${tool.color === 'green' ? 'text-green-600' : ''}
-                        ${tool.color === 'purple' ? 'text-purple-600' : ''}
-                        ${tool.color === 'blue' ? 'text-blue-600' : ''}
-                        ${tool.color === 'orange' ? 'text-orange-600' : ''}
+                        ${tool.color === 'green' ? 'text-green-700' : ''}
+                        ${tool.color === 'purple' ? 'text-purple-700' : ''}
+                        ${tool.color === 'blue' ? 'text-blue-700' : ''}
+                        ${tool.color === 'orange' ? 'text-orange-700' : ''}
                       `} />
                       <span className="text-sm text-gray-700">{feature}</span>
                     </li>
@@ -178,8 +178,8 @@ const AgentToolsSection = () => {
             }
           ].map((feature, i) => (
             <div key={i} className="text-center p-6 bg-gradient-to-br from-gray-50 to-white rounded-xl border border-gray-200">
-              <feature.icon className="w-8 h-8 text-purple-600 mx-auto mb-3" />
-              <h4 className="font-semibold text-gray-900 mb-2">{feature.title}</h4>
+              <feature.icon className="w-8 h-8 text-purple-700 mx-auto mb-3" />
+              <p className="font-semibold text-gray-900 mb-2">{feature.title}</p>
               <p className="text-sm text-gray-600">{feature.desc}</p>
             </div>
           ))}

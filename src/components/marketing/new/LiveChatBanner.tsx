@@ -33,7 +33,7 @@ const LiveChatBanner = () => {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-purple-200/40 to-violet-200/40 rounded-3xl blur-2xl"></div>
               
-              <div className="glass-card rounded-3xl shadow-float-lg border-2 border-white/50 overflow-hidden max-w-sm mx-auto relative">
+              <div className="bg-white rounded-3xl shadow-elevation-5 border-2 border-gray-200 overflow-hidden max-w-sm mx-auto relative">
                 {/* Widget Header with animated gradient */}
                 <div className="bg-gradient-to-r from-purple-600 via-violet-600 to-purple-600 bg-[length:200%_100%] animate-gradient p-4 text-white">
                   <div className="flex items-center justify-between">
@@ -55,7 +55,7 @@ const LiveChatBanner = () => {
 
                 {/* Tabs */}
                 <div className="flex border-b border-gray-200 bg-white/50 backdrop-blur-sm">
-                  <div className="flex-1 text-center py-3 text-sm font-semibold text-purple-600 border-b-2 border-purple-600">
+                  <div className="flex-1 text-center py-3 text-sm font-semibold text-purple-700 border-b-2 border-purple-700">
                     Nachrichten
                   </div>
                   <div className="flex-1 text-center py-3 text-sm text-gray-500">
@@ -74,7 +74,7 @@ const LiveChatBanner = () => {
                     transition={{ delay: 0.3 }}
                   >
                     <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Sparkles className="w-3 h-3 text-purple-600" />
+                      <Sparkles className="w-3 h-3 text-purple-700" />
                     </div>
                     <div className="bg-white rounded-lg p-3 shadow-sm max-w-[80%] border border-gray-100">
                       <div className="text-xs text-gray-500 mb-1">ReplAI</div>
@@ -108,7 +108,7 @@ const LiveChatBanner = () => {
                     className="flex gap-2"
                   >
                     <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Sparkles className="w-3 h-3 text-purple-600" />
+                      <Sparkles className="w-3 h-3 text-purple-700" />
                     </div>
                     <div className="bg-white rounded-lg p-3 shadow-sm flex gap-1">
                       {[0, 1, 2].map(i => (
@@ -135,7 +135,7 @@ const LiveChatBanner = () => {
                     transition={{ delay: 1.2 }}
                   >
                     <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Sparkles className="w-3 h-3 text-purple-600" />
+                      <Sparkles className="w-3 h-3 text-purple-700" />
                     </div>
                     <div className="space-y-2 max-w-[80%]">
                       <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-100">
@@ -147,7 +147,7 @@ const LiveChatBanner = () => {
                       </div>
                       {/* Product Card Mini - Glass */}
                       <motion.div 
-                        className="glass-card rounded-lg overflow-hidden shadow-float border-2 border-purple-200/40"
+                        className="bg-white rounded-lg overflow-hidden shadow-elevation-3 border border-gray-200"
                         whileHover={{ scale: 1.05 }}
                         transition={{ duration: 0.3 }}
                       >
@@ -163,10 +163,14 @@ const LiveChatBanner = () => {
 
                 {/* Input */}
                 <div className="p-3 border-t border-gray-200 bg-white/90 backdrop-blur-sm">
-                  <div className="flex items-center gap-2 glass-card rounded-lg px-3 py-2 border-2 border-purple-100/50">
+                  <div className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border-2 border-gray-200 shadow-sm">
+                    <label htmlFor="chat-message-input" className="sr-only">Nachricht eingeben</label>
                     <input 
-                      type="text" 
+                      type="text"
+                      id="chat-message-input"
+                      name="chat-message"
                       placeholder="Nachricht eingeben..." 
+                      aria-label="Chat-Nachricht eingeben"
                       className="flex-1 bg-transparent text-sm outline-none"
                       disabled
                     />
@@ -239,14 +243,14 @@ const LiveChatBanner = () => {
                   `}>
                     <feature.icon className={`
                       w-6 h-6
-                      ${feature.color === 'purple' ? 'text-purple-600' : ''}
+                      ${feature.color === 'purple' ? 'text-purple-700' : ''}
                       ${feature.color === 'violet' ? 'text-violet-600' : ''}
-                      ${feature.color === 'blue' ? 'text-blue-600' : ''}
-                      ${feature.color === 'pink' ? 'text-pink-600' : ''}
+                      ${feature.color === 'blue' ? 'text-blue-700' : ''}
+                      ${feature.color === 'pink' ? 'text-pink-700' : ''}
                     `} />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900 mb-1">{feature.title}</h4>
+                    <p className="font-semibold text-gray-900 mb-1">{feature.title}</p>
                     <p className="text-sm text-gray-600 leading-relaxed">{feature.desc}</p>
                   </div>
                 </motion.div>
@@ -308,7 +312,7 @@ const LiveChatBanner = () => {
                 </div>
                 <h4 className="font-bold text-sm text-gray-900 mb-1">Summer Dress</h4>
                 <p className="text-xs text-gray-600 mb-3">€49,90 • Noch 12 auf Lager</p>
-                <button className="w-full px-3 py-2 bg-gray-900 text-white text-xs font-semibold rounded-lg group-hover:bg-purple-600 transition-colors">
+                <button className="w-full px-3 py-2 bg-gray-900 text-white text-xs font-semibold rounded-lg group-hover:bg-purple-700 transition-colors">
                   Ansehen
                 </button>
               </div>
@@ -327,9 +331,9 @@ const LiveChatBanner = () => {
               </div>
               <div className="mb-3">
                 <div className="font-mono font-bold text-gray-900 text-sm mb-1">AI20-XYZ123</div>
-                <div className="text-xs text-green-600 font-semibold">20% OFF</div>
+                <div className="text-xs text-green-700 font-semibold">20% OFF</div>
               </div>
-              <button className="w-full px-3 py-2 bg-green-600 text-white text-xs font-semibold rounded-lg group-hover:bg-green-700 transition-colors">
+              <button className="w-full px-3 py-2 bg-green-700 text-white text-xs font-semibold rounded-lg group-hover:bg-green-800 transition-colors">
                 Kopieren
               </button>
             </motion.div>
@@ -368,7 +372,7 @@ const LiveChatBanner = () => {
               <div className="mb-3">
                 <div className="text-xs text-gray-600 mb-2">3 Artikel</div>
                 <div className="font-bold text-gray-900 text-sm">€159,70</div>
-                <div className="text-xs text-green-600 font-semibold">+ 15% Rabatt</div>
+                <div className="text-xs text-green-700 font-semibold">+ 15% Rabatt</div>
               </div>
               <button className="w-full px-3 py-2 bg-gradient-to-r from-purple-600 to-violet-600 text-white text-xs font-semibold rounded-lg group-hover:from-purple-700 group-hover:to-violet-700 transition-colors">
                 Jetzt kaufen
@@ -379,7 +383,7 @@ const LiveChatBanner = () => {
           {/* Bottom Benefit */}
           <div className="text-center mt-12">
             <p className="text-lg text-gray-700">
-              <span className="font-bold text-purple-600">Visual = mehr Conversions</span> –{' '}
+              <span className="font-bold text-purple-700">Visual = mehr Conversions</span> –{' '}
               Kunde klickt, kauft, fertig
             </p>
           </div>

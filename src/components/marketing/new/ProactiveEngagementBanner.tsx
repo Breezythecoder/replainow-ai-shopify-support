@@ -88,7 +88,7 @@ const ProactiveEngagementBanner = () => {
               `}
               ></div>
 
-              <div className="relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
+              <div className="relative bg-white rounded-2xl p-8 border border-gray-200 hover:border-purple-200 shadow-elevation-2 hover:shadow-elevation-3 transition-all duration-300">
                 <div className="flex items-start gap-4">
                   <div
                     className={`
@@ -102,10 +102,10 @@ const ProactiveEngagementBanner = () => {
                     <trigger.icon
                       className={`
                       w-7 h-7
-                      ${trigger.color === "purple" ? "text-purple-600" : ""}
+                      ${trigger.color === "purple" ? "text-purple-700" : ""}
                       ${trigger.color === "violet" ? "text-violet-600" : ""}
-                      ${trigger.color === "pink" ? "text-pink-600" : ""}
-                      ${trigger.color === "blue" ? "text-blue-600" : ""}
+                      ${trigger.color === "pink" ? "text-pink-700" : ""}
+                      ${trigger.color === "blue" ? "text-blue-700" : ""}
                     `}
                     />
                   </div>
@@ -164,14 +164,14 @@ const ProactiveEngagementBanner = () => {
           ].map((feature, i) => (
             <div
               key={i}
-              className="text-center p-6 bg-white rounded-xl border border-gray-200 shadow-sm"
+              className="text-center p-6 bg-white rounded-xl border border-gray-200 shadow-elevation-2"
             >
               <div className="inline-flex p-3 bg-purple-50 rounded-xl mb-3">
-                <feature.icon className="w-6 h-6 text-purple-600" />
+                <feature.icon className="w-6 h-6 text-purple-700" />
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2 text-sm">
+              <p className="font-semibold text-gray-900 mb-2 text-sm">
                 {feature.title}
-              </h4>
+              </p>
               <p className="text-xs text-gray-600 leading-relaxed">
                 {feature.desc}
               </p>

@@ -120,7 +120,7 @@ const AIKnowledgeBanner = () => {
                     ${source.color === 'violet' ? 'bg-violet-500/20' : ''}
                   `}></div>
                   
-                  <div className="glass-card rounded-xl p-5 border-2 border-white/40 group-hover:border-purple-200/60 transition-all duration-300 shadow-glass group-hover:shadow-float relative">
+                  <div className="bg-white rounded-xl p-5 border-2 border-gray-200 group-hover:border-purple-400 transition-all duration-300 shadow-card-strong group-hover:shadow-white-card-hover relative">
                     <div className="flex items-center gap-4">
                       <div className={`
                         p-3 rounded-lg
@@ -130,8 +130,8 @@ const AIKnowledgeBanner = () => {
                       `}>
                         <source.icon className={`
                           w-6 h-6
-                          ${source.color === 'purple' ? 'text-purple-600' : ''}
-                          ${source.color === 'blue' ? 'text-blue-600' : ''}
+                          ${source.color === 'purple' ? 'text-purple-700' : ''}
+                          ${source.color === 'blue' ? 'text-blue-700' : ''}
                           ${source.color === 'violet' ? 'text-violet-600' : ''}
                         `} />
                       </div>
@@ -139,7 +139,7 @@ const AIKnowledgeBanner = () => {
                         <h4 className="font-semibold text-gray-900 text-sm mb-0.5">{source.title}</h4>
                         <p className="text-xs text-gray-600">{source.desc}</p>
                       </div>
-                      <div className="glass-card px-2 py-1 rounded border-2 border-purple-100/50 text-xs font-bold text-gray-700">
+                      <div className="bg-purple-50 px-2 py-1 rounded border-2 border-purple-300 text-xs font-bold text-gray-900">
                         {source.stats}
                       </div>
                     </div>
@@ -172,7 +172,7 @@ const AIKnowledgeBanner = () => {
                   <div className="absolute inset-8 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 rounded-full shadow-2xl"></div>
                   
                   {/* Glass overlay */}
-                  <div className="glass-card-dark rounded-full absolute inset-0">
+                  <div className="bg-gray-800 rounded-full absolute inset-0">
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
                       {/* Icon with glow */}
                       <div className="p-6 bg-gradient-to-br from-purple-500 to-violet-600 rounded-3xl shadow-neon-purple mb-3">
@@ -188,7 +188,7 @@ const AIKnowledgeBanner = () => {
                         <span className="text-sm text-green-400 font-bold ml-2">ECHTZEIT SYNC</span>
                     </div>
                       
-                    <div className="text-xs text-gray-400">Vollautomatisch</div>
+                    <div className="text-xs text-gray-600">Vollautomatisch</div>
                   </div>
                 </div>
                   
@@ -259,7 +259,7 @@ const AIKnowledgeBanner = () => {
                     ${source.color === 'blue' ? 'bg-blue-500/20' : ''}
                   `}></div>
                   
-                  <div className="glass-card rounded-xl p-5 border-2 border-white/40 group-hover:border-purple-200/60 transition-all duration-300 shadow-glass group-hover:shadow-float relative">
+                  <div className="bg-white rounded-xl p-5 border-2 border-gray-200 group-hover:border-purple-400 transition-all duration-300 shadow-card-strong group-hover:shadow-white-card-hover relative">
                     <div className="flex items-center gap-4">
                       <div className={`
                         p-3 rounded-lg
@@ -269,16 +269,16 @@ const AIKnowledgeBanner = () => {
                       `}>
                         <source.icon className={`
                           w-6 h-6
-                          ${source.color === 'pink' ? 'text-pink-600' : ''}
-                          ${source.color === 'purple' ? 'text-purple-600' : ''}
-                          ${source.color === 'blue' ? 'text-blue-600' : ''}
+                          ${source.color === 'pink' ? 'text-pink-700' : ''}
+                          ${source.color === 'purple' ? 'text-purple-700' : ''}
+                          ${source.color === 'blue' ? 'text-blue-700' : ''}
                         `} />
                       </div>
                       <div className="flex-1">
                         <h4 className="font-semibold text-gray-900 text-sm mb-0.5">{source.title}</h4>
                         <p className="text-xs text-gray-600">{source.desc}</p>
                       </div>
-                      <div className="glass-card px-2 py-1 rounded border-2 border-purple-100/50 text-xs font-bold text-gray-700">
+                      <div className="bg-purple-50 px-2 py-1 rounded border-2 border-purple-300 text-xs font-bold text-gray-900">
                         {source.stats}
                       </div>
                     </div>
@@ -320,9 +320,9 @@ const AIKnowledgeBanner = () => {
               <div className="inline-flex p-4 bg-white rounded-2xl shadow-sm mb-4 border border-gray-200">
                 <benefit.icon className={`
                   w-8 h-8
-                  ${benefit.color === 'purple' ? 'text-purple-600' : ''}
+                  ${benefit.color === 'purple' ? 'text-purple-700' : ''}
                   ${benefit.color === 'violet' ? 'text-violet-600' : ''}
-                  ${benefit.color === 'blue' ? 'text-blue-600' : ''}
+                  ${benefit.color === 'blue' ? 'text-blue-700' : ''}
                 `} />
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">{benefit.title}</h4>
@@ -348,10 +348,10 @@ const AIKnowledgeBanner = () => {
               <div key={i} className="text-center">
                 <stat.icon className={`
                   w-6 h-6 mx-auto mb-3
-                  ${stat.color === 'purple' ? 'text-purple-600' : ''}
+                  ${stat.color === 'purple' ? 'text-purple-700' : ''}
                   ${stat.color === 'violet' ? 'text-violet-600' : ''}
-                  ${stat.color === 'blue' ? 'text-blue-600' : ''}
-                  ${stat.color === 'pink' ? 'text-pink-600' : ''}
+                  ${stat.color === 'blue' ? 'text-blue-700' : ''}
+                  ${stat.color === 'pink' ? 'text-pink-700' : ''}
                 `} />
                 <div className="text-3xl font-light text-gray-900 mb-1">{stat.value}</div>
                 <div className="text-xs text-gray-600 uppercase tracking-wider">{stat.label}</div>

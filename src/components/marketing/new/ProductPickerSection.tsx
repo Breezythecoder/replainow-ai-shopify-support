@@ -34,7 +34,7 @@ const ProductPickerSection = () => {
           >
             <div className="absolute -inset-4 bg-gradient-to-br from-purple-200/40 to-pink-200/40 rounded-3xl blur-2xl"></div>
             
-            <div className="glass-card rounded-3xl p-1 shadow-float-lg border-2 border-white/50 relative">
+            <div className="bg-white rounded-3xl p-1 shadow-elevation-5 border-2 border-gray-200 relative">
               <div className="bg-white/90 rounded-2xl overflow-hidden">
               {/* Modal Header */}
               <div className="bg-gray-900 p-4 text-white flex items-center justify-between">
@@ -50,10 +50,14 @@ const ProductPickerSection = () => {
               {/* Search Bar */}
               <div className="p-4 border-b border-gray-200">
                 <div className="flex items-center gap-2 bg-gray-50 rounded-lg px-3 py-2">
-                  <span className="text-gray-400">🔍</span>
+                  <span className="text-gray-700">🔍</span>
+                  <label htmlFor="product-search" className="sr-only">Produkte suchen</label>
                   <input 
                     type="text"
+                    id="product-search"
+                    name="product-search"
                     placeholder="Produkte suchen..."
+                    aria-label="Produkte im Shop suchen"
                     className="flex-1 bg-transparent text-sm outline-none"
                     disabled
                   />
@@ -108,8 +112,12 @@ const ProductPickerSection = () => {
                       <div className="text-[10px] text-gray-600">{item.variant}</div>
                     </div>
                     <div className="flex items-center gap-2">
+                      <label htmlFor={`cart-item-${i}`} className="sr-only">Anzahl für {item.name}</label>
                       <input 
-                        type="number" 
+                        type="number"
+                        id={`cart-item-${i}`}
+                        name={`cart-item-${i}`}
+                        aria-label={`Anzahl für ${item.name}`}
                         value="1" 
                         className="w-12 text-center text-xs border border-gray-300 rounded px-1 py-1"
                         disabled
@@ -159,15 +167,15 @@ const ProductPickerSection = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.6 + i * 0.1, duration: 0.5 }}
-                className="glass-card rounded-2xl p-6 hover:shadow-float transition-all duration-500 border-2 border-white/40 group"
+                className="bg-white rounded-2xl p-6 hover:shadow-white-card-hover transition-all duration-300 border-2 border-gray-200 hover:border-purple-400 group shadow-card-strong"
               >
           <motion.div
                   whileHover={{ rotate: 360, scale: 1.1 }}
                   transition={{ duration: 0.6 }}
           >
-                  <benefit.icon className="w-8 h-8 text-purple-600 mb-3" />
+                  <benefit.icon className="w-8 h-8 text-purple-700 mb-3" />
                 </motion.div>
-                <h4 className="font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">{benefit.title}</h4>
+                <h4 className="font-bold text-gray-900 mb-2 group-hover:text-purple-700 transition-colors">{benefit.title}</h4>
                 <p className="text-sm text-gray-600 leading-relaxed">{benefit.desc}</p>
               </motion.div>
                 ))}
@@ -182,8 +190,8 @@ const ProductPickerSection = () => {
           transition={{ delay: 0.4 }}
           className="text-center mt-16"
         >
-          <div className="glass-card inline-flex items-center gap-3 px-8 py-4 border-2 border-purple-200/40 rounded-2xl shadow-glass hover:shadow-float transition-all duration-500">
-            <Sparkles className="w-6 h-6 text-purple-600" />
+          <div className="bg-white inline-flex items-center gap-3 px-8 py-4 border-2 border-purple-200 rounded-2xl shadow-white-card hover:shadow-white-card-hover hover:border-purple-400 transition-all duration-300">
+            <Sparkles className="w-6 h-6 text-purple-700" />
             <span className="font-bold text-purple-900">
               Support wird zum Verkaufstool – visuelle Empfehlungen steigern Conversion
             </span>

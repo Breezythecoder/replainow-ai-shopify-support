@@ -70,7 +70,7 @@ const AIQualitySection = () => {
           className="text-center mb-16"
         >
           <div className="glass-card inline-flex items-center gap-2 px-4 py-2 border-2 border-purple-200/40 rounded-full text-sm font-semibold mb-6 shadow-glass">
-            <Shield className="w-4 h-4 text-purple-600" />
+            <Shield className="w-4 h-4 text-purple-700" />
             <span className="text-purple-900">Qualitäts-Garantie</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
@@ -120,7 +120,7 @@ const AIQualitySection = () => {
                 {/* Score Display */}
                 <div className="text-center z-10">
                   <div className="text-6xl font-light text-gray-900 mb-1">{scoreCount}</div>
-                  <div className="text-xl text-gray-400">/100</div>
+                  <div className="text-xl text-gray-600">/100</div>
                   <div className="mt-3 px-3 py-1.5 bg-green-50 rounded-full">
                     <span className="text-xs font-bold text-green-700">EXZELLENT</span>
                   </div>
@@ -187,7 +187,7 @@ const AIQualitySection = () => {
                     <div className="flex items-center gap-3 mb-3">
                       <example.icon className={`
                         w-5 h-5
-                        ${example.color === 'green' ? 'text-green-600' : ''}
+                        ${example.color === 'green' ? 'text-green-700' : ''}
                         ${example.color === 'yellow' ? 'text-yellow-600' : ''}
                         ${example.color === 'red' ? 'text-red-600' : ''}
                       `} />
@@ -220,7 +220,7 @@ const AIQualitySection = () => {
                   "Qualitäts-Schwelle selbst einstellen (80-95)"
                 ].map((benefit, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                    <CheckCircle2 className="w-5 h-5 text-purple-700 flex-shrink-0" />
                     <span className="text-gray-700">{benefit}</span>
                   </div>
                 ))}

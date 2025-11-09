@@ -109,7 +109,7 @@ const PricingSection = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-50 to-white">
+    <div id="pricing" className="bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-[1600px] mx-auto px-6 md:px-8 py-10 md:py-16">
         
         {/* Section Header */}
@@ -134,7 +134,7 @@ const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className={`relative group ${plan.highlighted ? 'md:scale-110 md:-translate-y-4' : ''}`}
+              className={`relative group overflow-visible ${plan.highlighted ? 'md:scale-110 md:-translate-y-4' : ''}`}
             >
               {/* Glow effect stronger on highlighted */}
               <div className={`absolute -inset-1 rounded-3xl blur-2xl transition-opacity duration-500 ${
@@ -144,42 +144,42 @@ const PricingSection = () => {
                     ? 'bg-gradient-to-br from-amber-500/30 to-orange-500/30 opacity-0 group-hover:opacity-100'
                     : 'bg-gradient-to-br from-purple-500/10 to-violet-500/10 opacity-0 group-hover:opacity-100'
               }`} />
+
+              {/* Floating badge above the card */}
+              {plan.badge && (
+                <div className="absolute -top-[18px] left-1/2 -translate-x-1/2 z-30 whitespace-nowrap">
+                  <motion.div
+                    className={`px-6 py-2 rounded-full shadow-elevation-4 border-2 flex items-center gap-2 ${
+                      plan.premium
+                        ? 'bg-gradient-to-r from-amber-400 to-yellow-400 border-amber-500'
+                        : 'bg-white border-purple-300'
+                    }`}
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {plan.premium ? <Sparkles className="w-4 h-4 text-amber-900" /> : <Zap className="w-4 h-4 text-purple-700" />}
+                    <span
+                      className={`text-xs font-black tracking-wide ${
+                        plan.premium ? 'text-amber-900' : 'text-purple-700'
+                      }`}
+                    >
+                      {plan.badge}
+                    </span>
+                  </motion.div>
+                </div>
+              )}
               
-              {/* Glass Card */}
+              {/* Solid Card with strong borders */}
               <div className={`
                 relative rounded-3xl border-2 h-full overflow-hidden
                 ${plan.highlighted 
-                  ? 'bg-gradient-to-br from-purple-600 to-violet-600 text-white border-purple-300 shadow-float-lg' 
+                  ? 'bg-gradient-to-br from-purple-600 to-violet-600 text-white border-purple-400 shadow-elevation-5' 
                   : plan.premium
-                    ? 'glass-card-dark border-white/20 text-white shadow-float'
-                    : 'glass-card border-white/40 shadow-glass hover:shadow-float'
+                    ? 'bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700 text-white shadow-elevation-5'
+                    : 'bg-white text-gray-900 border-gray-200 shadow-card-strong hover:shadow-white-card-hover hover:border-purple-400'
                 }
-                transition-all duration-500
+                transition-all duration-300
               `}>
-                {/* Badge - Glass floating badge */}
-                {plan.badge && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
-                    <motion.div 
-                      className={`glass-card px-6 py-2 rounded-full shadow-float border-2 flex items-center gap-2 ${
-                        plan.premium 
-                          ? 'bg-gradient-to-r from-amber-400/90 to-yellow-300/90 border-amber-300/40'
-                          : 'border-purple-300/40'
-                      }`}
-                      whileHover={{ scale: 1.05, y: -2 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      {plan.premium ? <Sparkles className="w-3 h-3 text-gray-900" /> : <Zap className="w-3 h-3 text-purple-600" />}
-                      <span className={`text-xs font-bold ${
-                      plan.premium 
-                          ? 'bg-gradient-to-r from-amber-900 to-orange-900 bg-clip-text text-transparent'
-                          : 'bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent'
-                    }`}>
-                      {plan.badge}
-                      </span>
-                    </motion.div>
-                  </div>
-                )}
-                
                 <div className="p-6">
                 {/* Plan Name */}
                 <h3 className={`text-xl font-bold mb-2 ${
@@ -190,7 +190,7 @@ const PricingSection = () => {
                 
                 {/* Description */}
                 <p className={`text-xs mb-4 leading-relaxed ${
-                  plan.highlighted ? 'text-white/90' : plan.premium ? 'text-gray-300' : 'text-gray-600'
+                  plan.highlighted ? 'text-white' : plan.premium ? 'text-gray-200' : 'text-gray-600'
                 }`}>
                   {plan.description}
                 </p>
@@ -210,7 +210,7 @@ const PricingSection = () => {
                       ${plan.price}
                     </span>
                     <span className={`text-sm ${
-                      plan.highlighted ? 'text-white/70' : plan.premium ? 'text-gray-400' : 'text-gray-500'
+                      plan.highlighted ? 'text-white/95' : plan.premium ? 'text-gray-300' : 'text-gray-500'
                     }`}>
                       /Monat
                     </span>
@@ -222,17 +222,17 @@ const PricingSection = () => {
                   plan.highlighted ? 'border-white/20' : plan.premium ? 'border-gray-700' : 'border-gray-200'
                 }`}>
                   <div className={`text-sm font-semibold mb-1 ${
-                    plan.highlighted || plan.premium ? 'text-white' : 'text-purple-600'
+                    plan.highlighted || plan.premium ? 'text-white' : 'text-purple-700'
                   }`}>
                     {plan.aiAnswers}
                   </div>
                   <div className={`text-xs mb-1 ${
-                    plan.highlighted ? 'text-white/80' : plan.premium ? 'text-gray-400' : 'text-gray-600'
+                    plan.highlighted ? 'text-white/95' : plan.premium ? 'text-gray-300' : 'text-gray-700'
                   }`}>
                     {plan.ticketRange}
                   </div>
                   <div className={`text-xs ${
-                    plan.highlighted ? 'text-white/70' : plan.premium ? 'text-gray-500' : 'text-gray-500'
+                    plan.highlighted ? 'text-white/95' : plan.premium ? 'text-gray-300' : 'text-gray-600'
                   }`}>
                     {plan.extraCost}
                   </div>
@@ -242,10 +242,10 @@ const PricingSection = () => {
                 <button className={`
                   w-full py-3 rounded-xl font-bold text-sm transition-all mb-4
                   ${plan.highlighted 
-                    ? 'bg-white text-purple-600 hover:bg-gray-50 shadow-lg' 
+                    ? 'bg-white text-purple-700 hover:bg-gray-50 shadow-white-button hover:shadow-white-button-hover' 
                     : plan.premium
-                      ? 'bg-gradient-to-r from-purple-500 to-violet-500 text-white hover:from-purple-600 hover:to-violet-600 shadow-lg'
-                      : 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover:from-purple-700 hover:to-violet-700 shadow-lg hover:shadow-xl'
+                      ? 'bg-gradient-to-r from-purple-500 to-violet-500 text-white hover:from-purple-600 hover:to-violet-600 shadow-elevation-3'
+                      : 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover:from-purple-700 hover:to-violet-700 shadow-elevation-3 hover:shadow-elevation-4'
                   }
                 `}>
                   {plan.cta}
@@ -263,10 +263,10 @@ const PricingSection = () => {
                   {plan.features.slice(0, 8).map((feature, fi) => (
                     <li key={fi} className="flex items-start gap-2">
                       <Check className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${
-                        plan.highlighted || plan.premium ? 'text-white' : 'text-purple-600'
+                        plan.highlighted || plan.premium ? 'text-white' : 'text-purple-700'
                       }`} />
                       <span className={`leading-tight ${
-                        plan.highlighted ? 'text-white/90' : plan.premium ? 'text-gray-300' : 'text-gray-700'
+                        plan.highlighted ? 'text-white' : plan.premium ? 'text-gray-200' : 'text-gray-700'
                       }`}>
                         {feature}
                       </span>
@@ -274,7 +274,7 @@ const PricingSection = () => {
                   ))}
                   {plan.features.length > 8 && (
                     <li className={`text-xs italic pl-5 ${
-                      plan.highlighted ? 'text-white/70' : plan.premium ? 'text-gray-400' : 'text-gray-500'
+                      plan.highlighted ? 'text-white/95' : plan.premium ? 'text-gray-300' : 'text-gray-500'
                     }`}>
                       Und viele weitere Features...
                     </li>

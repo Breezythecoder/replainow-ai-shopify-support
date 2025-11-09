@@ -27,7 +27,7 @@ const IntegrationStepsSection = () => {
   ];
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50/20 to-white">
+    <div id="integration" className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50/20 to-white">
       {/* Subtle mesh gradient */}
       <div className="absolute inset-0 bg-mesh-blue opacity-10"></div>
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16 relative z-10">
@@ -70,20 +70,20 @@ const IntegrationStepsSection = () => {
                 </div>
                 
                 {/* Content card */}
-                <div className="flex-1 glass-card rounded-2xl p-8 hover:shadow-float transition-all duration-500 group border-2 border-white/40 hover:border-purple-200/60">
+                <div className="flex-1 bg-white rounded-2xl p-8 hover:shadow-white-card-hover transition-all duration-300 group border-2 border-gray-200 hover:border-purple-400 shadow-card-strong">
                   <div className="flex items-start gap-4">
                     <motion.div 
-                      className="p-3 bg-gradient-to-br from-purple-500 to-violet-500 rounded-xl shadow-lg flex-shrink-0"
+                      className="p-3 bg-gradient-to-br from-purple-500 to-violet-500 rounded-xl shadow-elevation-2 flex-shrink-0"
                       whileHover={{ rotate: 360, scale: 1.1 }}
                       transition={{ duration: 0.6 }}
                     >
                       <step.icon className="w-6 h-6 text-white" />
                     </motion.div>
                     <div className="flex-1">
-                      <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">{step.title}</h4>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-700 transition-colors">{step.title}</h3>
                       <p className="text-gray-600 leading-relaxed mb-3">{step.desc}</p>
-                      <div className="glass-card inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-purple-100/50 shadow-glass">
-                        <Clock className="w-4 h-4 text-purple-600" />
+                      <div className="bg-white inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-purple-200 shadow-elevation-2">
+                        <Clock className="w-4 h-4 text-purple-700" />
                         <span className="text-sm font-bold text-purple-900">{step.time}</span>
                       </div>
                     </div>

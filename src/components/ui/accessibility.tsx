@@ -4,12 +4,17 @@ import { t } from "@/i18n";
 
 // Skip to main content link for accessibility
 export const SkipToMainContent = () => (
-  <a
-    href="#main-content"
-    className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-50 bg-primary text-primary-foreground px-4 py-2 rounded-md font-medium shadow-lg"
+  <nav
+    aria-label="Skip Links"
+    className="sr-only focus-within:not-sr-only focus-within:absolute focus-within:top-4 focus-within:left-4 focus-within:z-50"
   >
-    {t('ui.skipToMain')}
-  </a>
+    <a
+      href="#main-content"
+      className="block bg-purple-700 text-white px-6 py-3 rounded-lg font-bold shadow-2xl border-2 border-white focus:outline-none focus:ring-4 focus:ring-cyan-400 focus:ring-offset-2 focus:ring-offset-white hover:bg-purple-800 transition-all"
+    >
+      {t("ui.skipToMain")}
+    </a>
+  </nav>
 );
 
 // Keyboard navigation helper

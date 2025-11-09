@@ -5,9 +5,10 @@ import { Globe, ChevronDown } from 'lucide-react';
 
 interface LanguageSwitcherProps {
   className?: string;
+  variant?: 'desktop' | 'mobile';
 }
 
-export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className }) => {
+export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className, variant = 'desktop' }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const [currentLocale, setCurrentLocale] = useState<Locale>('de');
@@ -55,7 +56,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className })
     <div className={`relative ${className}`}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-white bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200 min-w-[120px]"
+        className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-gray-900 bg-white border-2 border-gray-200 rounded-lg hover:border-purple-400 hover:bg-purple-50 transition-all duration-200 min-w-[120px] shadow-elevation-2"
       >
         <Globe className="h-4 w-4 flex-shrink-0" />
         <span className="flex items-center gap-1 flex-1 justify-center">
@@ -67,7 +68,7 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className })
       </button>
 
       {isOpen && (
-        <div className="absolute top-full right-0 mt-2 w-48 bg-white/95 backdrop-blur-lg border border-white/20 rounded-lg shadow-xl z-50">
+        <div className="absolute top-full right-0 mt-2 w-48 bg-white border-2 border-gray-200 rounded-lg shadow-elevation-4 z-50">
           <div className="py-1">
             {locales.map((locale) => (
               <button
