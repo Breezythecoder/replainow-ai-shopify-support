@@ -145,8 +145,8 @@ const PricingSection = () => {
             >
               {/* Badge */}
               {plan.badge && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
-                  <div className={`px-3 py-1 text-xs font-bold rounded-full shadow-lg flex items-center gap-1 ${
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap">
+                  <div className={`px-4 py-1.5 text-xs font-bold rounded-full shadow-lg flex items-center gap-1 ${
                     plan.premium 
                       ? 'bg-gradient-to-r from-amber-400 to-yellow-300 text-gray-900'
                       : 'bg-amber-400 text-amber-900'
@@ -247,7 +247,7 @@ const PricingSection = () => {
                     <li className={`text-xs italic pl-5 ${
                       plan.highlighted ? 'text-white/70' : plan.premium ? 'text-gray-400' : 'text-gray-500'
                     }`}>
-                      + {plan.features.length - 8} weitere Features...
+                      Und viele weitere Features...
                     </li>
                   )}
                 </ul>
