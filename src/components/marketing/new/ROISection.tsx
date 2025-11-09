@@ -33,7 +33,7 @@ const ROISection = () => {
 
   return (
     <div className="bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16">
         
         <motion.div
           ref={roiRef}

@@ -4,7 +4,7 @@ import { Sparkles, Star, Shield, ArrowRight, ShoppingBag } from "lucide-react";
 const HeroSection = () => {
   return (
     <div className="relative bg-gradient-to-b from-white via-purple-50/10 to-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-32">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-12 md:py-20">
         
         {/* Decorative gradient orbs */}
         <div className="absolute -top-20 left-1/4 w-[500px] h-[500px] bg-purple-200/30 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse"></div>

@@ -60,7 +60,7 @@ const AIQualitySection = () => {
 
   return (
     <div className="bg-gradient-to-b from-white via-purple-50/20 to-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16">
         
         {/* Section Header */}
         <motion.div
@@ -94,17 +94,17 @@ const AIQualitySection = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-green-200/40 to-emerald-200/40 rounded-full blur-3xl"></div>
               
               {/* Score Circle */}
-              <div className="relative w-80 h-80 rounded-full border-[16px] border-gray-100 flex items-center justify-center bg-white shadow-2xl">
+              <div className="relative w-72 h-72 rounded-full border-[12px] border-gray-100 flex items-center justify-center bg-white shadow-2xl">
                 {/* Animated border based on score */}
-                <svg className="absolute inset-0 w-full h-full -rotate-90">
+                <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 288 288">
                   <circle
-                    cx="160"
-                    cy="160"
-                    r="144"
+                    cx="144"
+                    cy="144"
+                    r="138"
                     stroke="url(#scoreGradient)"
-                    strokeWidth="16"
+                    strokeWidth="12"
                     fill="none"
-                    strokeDasharray={`${(scoreCount / 100) * 904} 904`}
+                    strokeDasharray={`${(scoreCount / 100) * 867} 867`}
                     strokeLinecap="round"
                     className="transition-all duration-1000 ease-out"
                   />
@@ -117,11 +117,11 @@ const AIQualitySection = () => {
                 </svg>
                 
                 {/* Score Display */}
-                <div className="text-center">
-                  <div className="text-7xl font-light text-gray-900 mb-2">{scoreCount}</div>
-                  <div className="text-2xl text-gray-400">/100</div>
-                  <div className="mt-4 px-4 py-2 bg-green-50 rounded-full">
-                    <span className="text-sm font-bold text-green-700">EXZELLENT</span>
+                <div className="text-center z-10">
+                  <div className="text-6xl font-light text-gray-900 mb-1">{scoreCount}</div>
+                  <div className="text-xl text-gray-400">/100</div>
+                  <div className="mt-3 px-3 py-1.5 bg-green-50 rounded-full">
+                    <span className="text-xs font-bold text-green-700">EXZELLENT</span>
                   </div>
                 </div>
               </div>
