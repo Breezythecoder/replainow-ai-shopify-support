@@ -7,7 +7,7 @@ const DashboardShowcaseSection = () => {
   
   return (
     <div id="live-demo" className="bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-16">
         
         {/* Section Header */}
         <motion.div
@@ -30,14 +30,14 @@ const DashboardShowcaseSection = () => {
           {/* STÄRKERER Background glow */}
           <div className="absolute -inset-12 bg-gradient-to-br from-purple-500/40 to-violet-500/40 rounded-3xl blur-3xl"></div>
           
-          {/* STÄRKERES Glass container */}
-          <div className="relative rounded-3xl p-10 border-2 border-white/60 shadow-2xl" style={{
+          {/* STÄRKERES Glass container - RESPONSIVE */}
+          <div className="relative rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-10 border-2 border-white/60 shadow-2xl" style={{
             background: 'rgba(255, 255, 255, 0.85)',
             backdropFilter: 'blur(40px)',
             WebkitBackdropFilter: 'blur(40px)'
           }}>
-            {/* Tab Switcher - GRÖßER */}
-            <div className="flex gap-4 mb-10 p-3 rounded-2xl w-fit mx-auto shadow-xl border-2 border-white/60" style={{
+            {/* Tab Switcher - RESPONSIVE */}
+            <div className="flex flex-col sm:flex-row gap-3 mb-6 sm:mb-8 md:mb-10 p-2 sm:p-3 rounded-2xl w-full sm:w-fit mx-auto shadow-xl border-2 border-white/60" style={{
               background: 'rgba(255, 255, 255, 0.90)',
               backdropFilter: 'blur(20px)'
             }}>
@@ -45,27 +45,27 @@ const DashboardShowcaseSection = () => {
                 onClick={() => setActiveTab('livechat')}
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.97 }}
-                className={`px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 ${
+                className={`px-4 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl font-bold text-sm sm:text-base md:text-lg transition-all duration-300 flex items-center justify-center ${
                   activeTab === 'livechat'
                     ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-2xl'
                     : 'text-gray-700 hover:text-purple-700 hover:bg-white/90 hover:shadow-lg'
                 }`}
               >
-                <MessageSquare className="w-6 h-6 inline mr-2" />
-              Live Chat Dashboard
+                <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2" />
+                <span className="whitespace-nowrap">Live Chat Dashboard</span>
               </motion.button>
               <motion.button
                 onClick={() => setActiveTab('email')}
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.97 }}
-                className={`px-10 py-5 rounded-2xl font-bold text-lg transition-all duration-300 ${
+                className={`px-4 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl font-bold text-sm sm:text-base md:text-lg transition-all duration-300 flex items-center justify-center ${
                   activeTab === 'email'
                     ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-2xl'
                     : 'text-gray-700 hover:text-purple-700 hover:bg-white/90 hover:shadow-lg'
                 }`}
               >
-                <Mail className="w-6 h-6 inline mr-2" />
-                Email Dashboard
+                <Mail className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2" />
+                <span className="whitespace-nowrap">Email Dashboard</span>
               </motion.button>
             </div>
             
