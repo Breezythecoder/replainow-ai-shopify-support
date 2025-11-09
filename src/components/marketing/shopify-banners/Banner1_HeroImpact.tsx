@@ -73,3 +73,4 @@ const Banner1_HeroImpact = () => {
 };
 
 export default Banner1_HeroImpact;
+
