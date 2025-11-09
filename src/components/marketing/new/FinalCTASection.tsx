@@ -24,7 +24,7 @@ const FinalCTASection = () => {
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto mb-10 leading-relaxed">
-            Schließen Sie sich 1,247+ erfolgreichen Shopify-Händlern an, 
+            Schließen Sie sich 24 erfolgreichen Shopify-Händlern an, 
             die mit ReplAInow Zeit und Kosten sparen
           </p>
 
@@ -62,7 +62,7 @@ const FinalCTASection = () => {
             <div className="h-4 w-px bg-gray-300"></div>
             <div className="flex items-center gap-2">
               <Users className="w-4 h-4 text-purple-700" />
-              <span className="font-medium">1.247+ Händler</span>
+              <span className="font-medium">24 Händler</span>
             </div>
           </div>
         </motion.div>

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Sparkles, Star, Shield, ArrowRight, ShoppingBag } from "lucide-react";
+import { Sparkles, Shield, ArrowRight, ShoppingBag } from "lucide-react";
 import { FloatingCard } from "@/components/ui/FloatingCard";
 
 const HeroSection = () => {
@@ -121,7 +121,7 @@ const HeroSection = () => {
                   />
                 </div>
                 <span className="font-semibold text-gray-900">
-                  1,247+ Shopify-Händler nutzen ReplAInow
+                  24 Shopify-Händler nutzen bereits ReplAInow
                 </span>
               </motion.div>
 
@@ -132,19 +132,9 @@ const HeroSection = () => {
                 transition={{ delay: 0.5 }}
                 className="flex items-center justify-center gap-6 text-sm flex-wrap"
               >
-                <div className="glass-card flex items-center gap-2 px-4 py-2 rounded-full border-2 border-purple-100/50">
-                  <div className="flex">
-                    {[1, 2, 3, 4, 5].map((i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
-                  <span className="font-bold text-gray-900">4.9</span>
-                  <span className="text-gray-600">(1,247 Reviews)</span>
-                </div>
-                
                 <div className="bg-white flex items-center gap-1.5 px-4 py-2 rounded-full border-2 border-gray-200/80 shadow-elevation-2">
                   <Shield className="w-3.5 h-3.5 text-purple-700" />
-                  <span className="text-gray-900 font-medium">ISO 27001</span>
+                  <span className="text-gray-900 font-medium">ISO 27001 zertifiziert</span>
                 </div>
               </motion.div>
             </div>

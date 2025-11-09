@@ -55,8 +55,8 @@ const Banner1_HeroImpact = () => {
                 <Star key={i} className="w-6 h-6 fill-amber-400 text-amber-400" />
               ))}
             </div>
-            <span className="text-xl font-bold">4.9</span>
-            <span className="text-lg text-white/80">(1,247 Reviews)</span>
+            <span className="text-xl font-bold">ISO 27001</span>
+            <span className="text-lg text-white/80">zertifiziert</span>
           </div>
 
           <div className="h-8 w-px bg-white/30"></div>
@@ -64,7 +64,7 @@ const Banner1_HeroImpact = () => {
           {/* Users */}
           <div className="flex items-center gap-3">
             <Users className="w-6 h-6 text-white" />
-            <span className="text-lg font-semibold">1,247+ Shopify-Händler</span>
+            <span className="text-lg font-semibold">24 Shopify-Händler</span>
           </div>
         </motion.div>
       </div>

@@ -18,8 +18,6 @@ import MultiLanguageBanner from "@/components/marketing/new/MultiLanguageBanner"
 import VisualCommerceBanner from "@/components/marketing/new/VisualCommerceBanner";
 import ProactiveEngagementBanner from "@/components/marketing/new/ProactiveEngagementBanner";
 import TestimonialsSection from "@/components/marketing/new/TestimonialsSection";
-import TrustBannerSection from "@/components/marketing/new/TrustBannerSection";
-import StatsSection from "@/components/marketing/new/StatsSection";
 import IntegrationStepsSection from "@/components/marketing/new/IntegrationStepsSection";
 import ROISection from "@/components/marketing/new/ROISection";
 import PricingSection from "@/components/marketing/new/PricingSection";
@@ -35,7 +33,7 @@ const NewIndex = () => {
         </title>
         <meta
           name="description"
-          content="Die #1 AI Helpdesk-Lösung für Shopify. 87% Automatisierung, Live-Chat + E-Mail, 100+ Sprachen. Live in 60 Sekunden. 1.247+ Händler vertrauen uns."
+          content="Die #1 AI Helpdesk-Lösung für Shopify. 87% Automatisierung, Live-Chat + E-Mail, 100+ Sprachen. Live in 60 Sekunden."
         />
         <meta
           property="og:title"
@@ -66,9 +64,6 @@ const NewIndex = () => {
         {/* 3. TESTIMONIALS - Social Proof Early */}
         <TestimonialsSection />
 
-        {/* 3.5 TRUST BANNER - Dark Glass Stats Section */}
-        <TrustBannerSection />
-
         {/* 4. AI KNOWLEDGE - Feature Banner 1 */}
         <AIKnowledgeBanner />
 
@@ -77,9 +72,6 @@ const NewIndex = () => {
 
         {/* 6. EMAIL HELPDESK - Feature Banner 3 */}
         <EmailHelpdeskBanner />
-
-        {/* 6.5 STATS SECTION - Dark Glass Performance */}
-        <StatsSection />
 
         {/* 7. AI QUALITY - NEW! Quality Guarantee */}
         <AIQualitySection />

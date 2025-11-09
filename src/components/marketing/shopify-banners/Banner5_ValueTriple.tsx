@@ -111,7 +111,7 @@ const Banner5_ValueTriple = () => {
           <div className="h-6 w-px bg-gray-300"></div>
           <div className="flex items-center gap-3">
             <TrendingUp className="w-6 h-6 text-purple-600" />
-            <span className="font-semibold">1,247+ Shopify-Händler</span>
+            <span className="font-semibold">24 Shopify-Händler</span>
           </div>
           <div className="h-6 w-px bg-gray-300"></div>
           <div className="font-semibold text-xl">
