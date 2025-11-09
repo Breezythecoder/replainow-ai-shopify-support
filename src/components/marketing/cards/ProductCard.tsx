@@ -22,7 +22,7 @@ const ProductCard = ({ title, description, price, image, stock, url = "#", delay
         scale: 1.01,
         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.06), 0 16px 32px rgba(0, 0, 0, 0.08)"
       }}
-      className="max-w-[360px] w-full mx-auto bg-white rounded-2xl overflow-hidden cursor-pointer"
+      className="max-w-[400px] w-full mx-auto bg-white rounded-2xl overflow-hidden cursor-pointer"
       style={{
         boxShadow: "0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04)",
         transition: "all 200ms cubic-bezier(0.4, 0, 0.2, 1)"
@@ -45,7 +45,7 @@ const ProductCard = ({ title, description, price, image, stock, url = "#", delay
           />
           {stock < 10 && (
             <div className="absolute top-2 right-2 bg-orange-500 text-white text-[11px] font-semibold px-2 py-1 rounded-md shadow-lg">
-              Only {stock} left
+              Nur {stock} übrig
             </div>
           )}
         </div>
@@ -62,7 +62,7 @@ const ProductCard = ({ title, description, price, image, stock, url = "#", delay
             {price}
           </p>
           <p className="text-xs text-[#525252] font-medium">
-            📦 {stock} in stock
+            📦 {stock} auf Lager
           </p>
         </div>
       </div>
@@ -73,7 +73,7 @@ const ProductCard = ({ title, description, price, image, stock, url = "#", delay
         className="flex items-center justify-center gap-2 w-full px-4 py-4 bg-[#f3f4f6] text-[#111827] text-sm font-semibold border-t border-gray-200 hover:bg-[#e5e7eb] hover:text-black transition-all duration-200"
         style={{ transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)" }}
       >
-        View Product
+        Produkt ansehen
         <span>→</span>
       </a>
     </motion.div>

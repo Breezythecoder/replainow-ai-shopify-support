@@ -158,49 +158,96 @@ const LiveChatBanner = () => {
             </p>
           </div>
 
-          {/* 4 Card Types Grid - Real Widget Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            
-            {/* Product Card */}
-            <ProductCard
-              title="Premium Wireless Headphones"
-              description="High-quality sound with active noise cancellation"
-              price="€149.99"
-              image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop"
-              stock={5}
-              delay={0.2}
-            />
+          {/* 4 Card Types Grid - Creative Staggered Layout */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Desktop: Creative Staggered Grid */}
+            <div className="hidden lg:grid lg:grid-cols-2 gap-8 items-start">
+              {/* Top Left - Product Card */}
+              <div className="transform translate-y-8">
+                <ProductCard
+                  title="Premium Wireless Kopfhörer"
+                  description="Hochwertige Audioqualität mit aktiver Geräuschunterdrückung"
+                  price="€149,99"
+                  image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop"
+                  stock={5}
+                  delay={0.2}
+                />
+              </div>
 
-            {/* Discount Card */}
-            <DiscountCard
-              code="WELCOME20"
-              discount="20% OFF"
-              expiryDays={5}
-              usageLimit={100}
-              delay={0.3}
-            />
+              {/* Top Right - Discount Card */}
+              <div className="transform -translate-y-4">
+                <DiscountCard
+                  code="WELCOME20"
+                  discount="20% RABATT"
+                  expiryDays={5}
+                  usageLimit={100}
+                  delay={0.3}
+                />
+              </div>
 
-            {/* Tracking Card */}
-            <TrackingCard
-              orderNumber="12345"
-              carrier="DHL Express"
-              trackingNumber="1234567890"
-              status="in-transit"
-              expectedDelivery="Tomorrow"
-              delay={0.4}
-            />
+              {/* Bottom Left - Tracking Card */}
+              <div className="transform -translate-y-12">
+                <TrackingCard
+                  orderNumber="12345"
+                  carrier="DHL Express"
+                  trackingNumber="1234567890"
+                  status="in-transit"
+                  expectedDelivery="Morgen"
+                  delay={0.4}
+                />
+              </div>
 
-            {/* Checkout Card */}
-            <CheckoutCard
-              products={[
-                { name: "Wireless Headphones", quantity: 1, price: "€149.99" },
-                { name: "USB-C Cable", quantity: 2, price: "€29.98" },
-                { name: "Phone Case", quantity: 1, price: "€19.99" }
-              ]}
-              discount={20}
-              total="€159.96"
-              delay={0.5}
-            />
+              {/* Bottom Right - Checkout Card */}
+              <div className="transform translate-y-2">
+                <CheckoutCard
+                  products={[
+                    { name: "Wireless Kopfhörer", quantity: 1, price: "€149,99" },
+                    { name: "USB-C Kabel", quantity: 2, price: "€29,98" },
+                    { name: "Handyhülle", quantity: 1, price: "€19,99" }
+                  ]}
+                  discount={20}
+                  total="€159,96"
+                  delay={0.5}
+                />
+              </div>
+            </div>
+
+            {/* Tablet & Mobile: Simple 2-column then 1-column Grid */}
+            <div className="grid md:grid-cols-2 lg:hidden gap-6">
+              <ProductCard
+                title="Premium Wireless Kopfhörer"
+                description="Hochwertige Audioqualität mit aktiver Geräuschunterdrückung"
+                price="€149,99"
+                image="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop"
+                stock={5}
+                delay={0.2}
+              />
+              <DiscountCard
+                code="WELCOME20"
+                discount="20% RABATT"
+                expiryDays={5}
+                usageLimit={100}
+                delay={0.3}
+              />
+              <TrackingCard
+                orderNumber="12345"
+                carrier="DHL Express"
+                trackingNumber="1234567890"
+                status="in-transit"
+                expectedDelivery="Morgen"
+                delay={0.4}
+              />
+              <CheckoutCard
+                products={[
+                  { name: "Wireless Kopfhörer", quantity: 1, price: "€149,99" },
+                  { name: "USB-C Kabel", quantity: 2, price: "€29,98" },
+                  { name: "Handyhülle", quantity: 1, price: "€19,99" }
+                ]}
+                discount={20}
+                total="€159,96"
+                delay={0.5}
+              />
+            </div>
           </div>
 
           {/* Bottom Benefit */}

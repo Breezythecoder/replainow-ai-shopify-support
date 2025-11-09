@@ -30,7 +30,7 @@ const CheckoutCard = ({ products, discount, total, url = "#", delay = 0 }: Check
         scale: 1.01,
         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.06), 0 16px 32px rgba(0, 0, 0, 0.08)"
       }}
-      className="max-w-[448px] w-full mx-auto bg-white rounded-2xl p-4"
+      className="max-w-[400px] w-full mx-auto bg-white rounded-2xl p-4"
       style={{
         boxShadow: "0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04)",
         transition: "all 200ms cubic-bezier(0.4, 0, 0.2, 1)"
@@ -42,8 +42,8 @@ const CheckoutCard = ({ products, discount, total, url = "#", delay = 0 }: Check
           🛒
         </div>
         <div className="flex-1">
-          <p className="text-sm font-semibold text-black">Ready to Checkout</p>
-          <p className="text-[11px] text-[#525252]">{products.length} items</p>
+          <p className="text-sm font-semibold text-black">Bereit zur Kasse</p>
+          <p className="text-[11px] text-[#525252]">{products.length} Artikel</p>
         </div>
       </div>
 
@@ -62,13 +62,13 @@ const CheckoutCard = ({ products, discount, total, url = "#", delay = 0 }: Check
         
         {remainingCount > 0 && (
           <p className="text-[11px] text-[#525252] mt-2 pt-2 border-t border-black/[0.06]">
-            +{remainingCount} more items
+            +{remainingCount} weitere Artikel
           </p>
         )}
 
         {discount && (
           <div className="flex justify-between items-center pt-2 mt-2 border-t border-black/[0.06]">
-            <span className="text-xs font-semibold text-[#10B981]">Discount Applied</span>
+            <span className="text-xs font-semibold text-[#10B981]">Rabatt angewendet</span>
             <span className="text-xs font-bold text-[#10B981]">-{discount}%</span>
           </div>
         )}
@@ -76,7 +76,7 @@ const CheckoutCard = ({ products, discount, total, url = "#", delay = 0 }: Check
 
       {/* Total */}
       <div className="flex items-center justify-between py-2 mb-3 border-t border-black/[0.06]">
-        <span className="text-sm font-semibold text-black">Total</span>
+        <span className="text-sm font-semibold text-black">Gesamt</span>
         <span className="text-xl font-bold text-black tracking-tight">{total}</span>
       </div>
 
@@ -86,13 +86,13 @@ const CheckoutCard = ({ products, discount, total, url = "#", delay = 0 }: Check
         className="flex items-center justify-center gap-2 w-full px-4 py-4 bg-[#17191a] text-white text-sm font-semibold rounded-xl hover:bg-black hover:scale-[1.02] transition-all duration-200 mb-3"
       >
         <ArrowRight className="w-4 h-4" />
-        Complete Purchase
+        Kauf abschließen
       </a>
 
       {/* Trust Indicators */}
       <div className="flex justify-between gap-2 text-[11px] text-[#525252]">
-        <span className="flex items-center gap-1">🔒 Secure Checkout</span>
-        <span className="flex items-center gap-1">✓ No Account Required</span>
+        <span className="flex items-center gap-1">🔒 Sichere Zahlung</span>
+        <span className="flex items-center gap-1">✓ Kein Konto nötig</span>
       </div>
     </motion.div>
   );

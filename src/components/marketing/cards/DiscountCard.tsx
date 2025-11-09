@@ -30,7 +30,7 @@ const DiscountCard = ({ code, discount, expiryDays, usageLimit, delay = 0 }: Dis
         scale: 1.01,
         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.06), 0 16px 32px rgba(0, 0, 0, 0.08)"
       }}
-      className="max-w-[384px] w-full mx-auto bg-white rounded-2xl p-4"
+      className="max-w-[400px] w-full mx-auto bg-white rounded-2xl p-4"
       style={{
         boxShadow: "0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04)",
         transition: "all 200ms cubic-bezier(0.4, 0, 0.2, 1)"
@@ -42,7 +42,7 @@ const DiscountCard = ({ code, discount, expiryDays, usageLimit, delay = 0 }: Dis
           <Ticket className="w-5 h-5 text-[#10B981]" />
         </div>
         <div className="flex-1">
-          <p className="text-sm font-semibold text-black">Discount Code</p>
+          <p className="text-sm font-semibold text-black">Rabattcode</p>
           <p className="text-[11px] font-semibold text-[#10B981]">{discount}</p>
         </div>
       </div>
@@ -69,12 +69,12 @@ const DiscountCard = ({ code, discount, expiryDays, usageLimit, delay = 0 }: Dis
         <div className="space-y-2">
           {expiryDays && (
             <p className="text-[11px] text-[#525252] flex items-center gap-1">
-              ⏰ Expires in {expiryDays} days
+              ⏰ Läuft ab in {expiryDays} Tagen
             </p>
           )}
           {usageLimit && (
             <p className="text-[11px] text-[#525252] flex items-center gap-1">
-              👥 Limited to {usageLimit} uses
+              👥 Limitiert auf {usageLimit} Nutzungen
             </p>
           )}
         </div>
