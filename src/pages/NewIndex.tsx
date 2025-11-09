@@ -71,8 +71,7 @@ const NewIndex = () => {
         {/* 7. AI QUALITY - NEW! Quality Guarantee */}
         <AIQualitySection />
 
-        {/* 8. DASHBOARD SHOWCASE - NEW! Show the product */}
-        <DashboardShowcaseSection />
+        {/* 8. DASHBOARD SHOWCASE - REMOVED (Screenshot already in Hero) */}
 
         {/* 9. INFORMATION COLLECTION - NEW! AI Intelligence */}
         <InformationCollectionSection />
