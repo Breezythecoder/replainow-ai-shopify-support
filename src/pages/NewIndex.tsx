@@ -8,6 +8,9 @@ import ValuePropositionSection from "@/components/marketing/new/ValueProposition
 import AIKnowledgeBanner from "@/components/marketing/new/AIKnowledgeBanner";
 import LiveChatBanner from "@/components/marketing/new/LiveChatBanner";
 import EmailHelpdeskBanner from "@/components/marketing/new/EmailHelpdeskBanner";
+import AIQualitySection from "@/components/marketing/new/AIQualitySection";
+import DashboardShowcaseSection from "@/components/marketing/new/DashboardShowcaseSection";
+import InformationCollectionSection from "@/components/marketing/new/InformationCollectionSection";
 import MultiLanguageBanner from "@/components/marketing/new/MultiLanguageBanner";
 import VisualCommerceBanner from "@/components/marketing/new/VisualCommerceBanner";
 import ProactiveEngagementBanner from "@/components/marketing/new/ProactiveEngagementBanner";
@@ -54,28 +57,37 @@ const NewIndex = () => {
         {/* 6. EMAIL HELPDESK - Feature Banner 3 */}
         <EmailHelpdeskBanner />
 
-        {/* 7. MULTI-LANGUAGE - Feature Banner 4 */}
+        {/* 7. AI QUALITY - NEW! Quality Guarantee */}
+        <AIQualitySection />
+
+        {/* 8. DASHBOARD SHOWCASE - NEW! Show the product */}
+        <DashboardShowcaseSection />
+
+        {/* 9. INFORMATION COLLECTION - NEW! AI Intelligence */}
+        <InformationCollectionSection />
+
+        {/* 10. MULTI-LANGUAGE - Feature Banner 4 (Updated!) */}
         <MultiLanguageBanner />
 
-        {/* 8. VISUAL COMMERCE - Feature Banner 5 */}
+        {/* 11. VISUAL COMMERCE - Feature Banner 5 */}
         <VisualCommerceBanner />
 
-        {/* 9. PROACTIVE ENGAGEMENT - Feature Banner 6 */}
+        {/* 12. PROACTIVE ENGAGEMENT - Feature Banner 6 */}
         <ProactiveEngagementBanner />
 
-        {/* 10. INTEGRATION STEPS - How It Works */}
+        {/* 13. INTEGRATION STEPS - How It Works */}
         <IntegrationStepsSection />
 
-        {/* 11. ROI - Money Talk */}
+        {/* 14. ROI - Money Talk */}
         <ROISection />
 
-        {/* 12. PRICING - Clear Options */}
+        {/* 15. PRICING - Clear Options */}
         <PricingSection />
 
-        {/* 13. FAQ - Address Objections */}
+        {/* 16. FAQ - Address Objections */}
         <FAQSection />
 
-        {/* 14. FINAL CTA - Conversion */}
+        {/* 17. FINAL CTA - Conversion */}
         <FinalCTASection />
       </main>
 
