@@ -1,4 +1,7 @@
 {
+  "ui": {
+    "skipToMain": "Zum Hauptinhalt springen"
+  },
   "navigation": {
     "home": "Startseite",
     "features": "Features",

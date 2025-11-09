@@ -170,11 +170,11 @@ const PricingSection = () => {
                     >
                       {plan.premium ? <Sparkles className="w-3 h-3 text-gray-900" /> : <Zap className="w-3 h-3 text-purple-600" />}
                       <span className={`text-xs font-bold ${
-                        plan.premium 
+                      plan.premium 
                           ? 'bg-gradient-to-r from-amber-900 to-orange-900 bg-clip-text text-transparent'
                           : 'bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent'
-                      }`}>
-                        {plan.badge}
+                    }`}>
+                      {plan.badge}
                       </span>
                     </motion.div>
                   </div>

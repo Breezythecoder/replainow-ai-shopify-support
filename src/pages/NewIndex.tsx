@@ -30,13 +30,21 @@ const NewIndex = () => {
   return (
     <>
       <Helmet>
-        <title>ReplAInow – Enterprise AI Shopify Helpdesk | Automatisierter Support</title>
-        <meta 
-          name="description" 
-          content="Die #1 AI Helpdesk-Lösung für Shopify. 87% Automatisierung, Live-Chat + E-Mail, 100+ Sprachen. Live in 60 Sekunden. 1.247+ Händler vertrauen uns." 
+        <title>
+          ReplAInow – Enterprise AI Shopify Helpdesk | Automatisierter Support
+        </title>
+        <meta
+          name="description"
+          content="Die #1 AI Helpdesk-Lösung für Shopify. 87% Automatisierung, Live-Chat + E-Mail, 100+ Sprachen. Live in 60 Sekunden. 1.247+ Händler vertrauen uns."
         />
-        <meta property="og:title" content="ReplAInow – Enterprise AI Shopify Helpdesk" />
-        <meta property="og:description" content="Automatisierter Support ohne Kompromisse. 87% Ihrer Support-Anfragen vollautomatisch beantwortet." />
+        <meta
+          property="og:title"
+          content="ReplAInow – Enterprise AI Shopify Helpdesk"
+        />
+        <meta
+          property="og:description"
+          content="Automatisierter Support ohne Kompromisse. 87% Ihrer Support-Anfragen vollautomatisch beantwortet."
+        />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://www.replainow.com" />
       </Helmet>
@@ -71,7 +79,8 @@ const NewIndex = () => {
         {/* 7. AI QUALITY - NEW! Quality Guarantee */}
         <AIQualitySection />
 
-        {/* 8. DASHBOARD SHOWCASE - REMOVED (Screenshot already in Hero) */}
+        {/* 8. DASHBOARD SHOWCASE - NEW! Show the product */}
+        <DashboardShowcaseSection />
 
         {/* 9. INFORMATION COLLECTION - NEW! AI Intelligence */}
         <InformationCollectionSection />

@@ -32,8 +32,10 @@ const ValuePropositionSection = () => {
   const automationCount = useCountUp(87, 2000, isStatsInView);
 
   return (
-    <div className="bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-14">
+    <div className="relative overflow-hidden bg-gradient-to-b from-purple-50/40 via-white to-white">
+      {/* Subtle mesh */}
+      <div className="absolute inset-0 bg-mesh-purple opacity-10"></div>
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-14 relative z-10">
         
         {/* Section Header */}
         <div className="text-center mb-16">

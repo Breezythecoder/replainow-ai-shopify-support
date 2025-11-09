@@ -140,20 +140,20 @@ export function validateTranslationStructure(
   const errors: string[] = [];
 
   try {
-    // Check for required top-level keys
-    const requiredKeys = ['ui', 'seo', 'schema'];
-    requiredKeys.forEach(key => {
-      if (!(key in translations)) {
-        errors.push(`Missing required top-level key: ${key}`);
+    // Check for required namespaced keys (new structure)
+    const requiredNamespaces = ['common', 'marketing', 'seo', 'legal'];
+    requiredNamespaces.forEach(namespace => {
+      if (!(namespace in translations)) {
+        errors.push(`Missing required namespace: ${namespace}`);
       }
     });
 
-    // Validate UI structure
-    if (translations.ui) {
-      const uiKeys = ['navigation', 'hero'];
-      uiKeys.forEach(key => {
-        if (!translations.ui[key as keyof typeof translations.ui]) {
-          errors.push(`Missing UI key: ${key}`);
+    // Validate common namespace structure
+    if (translations.common) {
+      const commonKeys = ['navigation', 'footer'];
+      commonKeys.forEach(key => {
+        if (!translations.common[key as keyof typeof translations.common]) {
+          errors.push(`Missing common key: ${key}`);
         }
       });
     }

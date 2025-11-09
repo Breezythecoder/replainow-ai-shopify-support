@@ -123,7 +123,7 @@ const LiveChatBanner = () => {
                           className="w-2 h-2 bg-purple-400 rounded-full"
                         />
                       ))}
-                    </div>
+                  </div>
                   </motion.div>
 
                   {/* AI Message with Product Card Preview */}

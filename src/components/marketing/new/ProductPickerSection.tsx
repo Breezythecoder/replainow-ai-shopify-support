@@ -161,18 +161,18 @@ const ProductPickerSection = () => {
                 transition={{ delay: 0.6 + i * 0.1, duration: 0.5 }}
                 className="glass-card rounded-2xl p-6 hover:shadow-float transition-all duration-500 border-2 border-white/40 group"
               >
-                <motion.div
+          <motion.div
                   whileHover={{ rotate: 360, scale: 1.1 }}
                   transition={{ duration: 0.6 }}
-                >
+          >
                   <benefit.icon className="w-8 h-8 text-purple-600 mb-3" />
                 </motion.div>
                 <h4 className="font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">{benefit.title}</h4>
                 <p className="text-sm text-gray-600 leading-relaxed">{benefit.desc}</p>
               </motion.div>
-            ))}
-          </div>
-        </div>
+                ))}
+              </div>
+            </div>
 
         {/* Bottom CTA - Glass */}
         <motion.div

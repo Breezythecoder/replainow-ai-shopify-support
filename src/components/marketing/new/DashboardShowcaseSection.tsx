@@ -52,7 +52,7 @@ const DashboardShowcaseSection = () => {
                 }`}
               >
                 <MessageSquare className="w-6 h-6 inline mr-2" />
-                Live Chat Dashboard
+              Live Chat Dashboard
               </motion.button>
               <motion.button
                 onClick={() => setActiveTab('email')}
@@ -79,13 +79,13 @@ const DashboardShowcaseSection = () => {
                 transition={{ duration: 0.5 }}
                 className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/70"
               >
-                <img 
+              <img 
                   src={activeTab === 'livechat' ? '/images/dashboard-livechat-cart.png' : '/images/dashboard-email-ai.png'}
                   alt={activeTab === 'livechat' ? 'Live Chat Dashboard' : 'Email Dashboard'}
                   className="w-full shadow-xl"
                   loading="lazy"
                 />
-                
+
                 {/* Floating feature badges on screenshot */}
                 {activeTab === 'livechat' && (
                   <>
@@ -102,13 +102,13 @@ const DashboardShowcaseSection = () => {
                       className="absolute bottom-10 left-10 glass-card px-4 py-2 rounded-full shadow-glass border-2 border-green-200/40"
                     >
                       <span className="text-sm font-bold text-green-700">Warenkorb: €159</span>
-                    </motion.div>
+        </motion.div>
                   </>
                 )}
-                
+
                 {activeTab === 'email' && (
                   <>
-                    <motion.div
+        <motion.div
                       animate={{ y: [0, -8, 0] }}
                       transition={{ duration: 3, repeat: Infinity }}
                       className="absolute top-10 right-10 glass-card px-4 py-2 rounded-full shadow-glass border-2 border-green-200/40"
@@ -119,8 +119,8 @@ const DashboardShowcaseSection = () => {
                 )}
               </motion.div>
             </AnimatePresence>
+            </div>
           </div>
-        </div>
 
         {/* Key Benefit */}
         <motion.div

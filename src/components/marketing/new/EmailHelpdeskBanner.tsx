@@ -3,8 +3,11 @@ import { Mail, CheckCircle2, Clock, TrendingUp } from "lucide-react";
 
 const EmailHelpdeskBanner = () => {
   return (
-    <div className="bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28">
+    <div className="relative overflow-hidden bg-gradient-to-b from-white via-purple-50/30 to-white">
+      {/* Subtle mesh gradient */}
+      <div className="absolute inset-0 bg-mesh-purple opacity-20"></div>
+      
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28 relative z-10">
         
         {/* Section Header */}
         <motion.div

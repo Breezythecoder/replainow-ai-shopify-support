@@ -86,18 +86,18 @@ const TestimonialsSection = () => {
                     ${testimonial.color === 'purple' ? 'bg-gradient-to-br from-purple-500 to-violet-500' : ''}
                     ${testimonial.color === 'pink' ? 'bg-gradient-to-br from-pink-500 to-purple-500' : ''}
                   `}></div>
-                  <img 
-                    src={testimonial.avatar} 
-                    alt={testimonial.name}
+                <img 
+                  src={testimonial.avatar} 
+                  alt={testimonial.name}
                     className="relative w-full h-full rounded-full border-4 border-white object-cover shadow-2xl ring-4 ring-white/50"
-                  />
-                </div>
-                
+                />
+              </div>
+              
                 {/* Quote - GRÖßER */}
                 <p className="text-gray-800 text-xl font-medium leading-relaxed mb-8 relative z-10">
-                  "{testimonial.text}"
-                </p>
-                
+                "{testimonial.text}"
+              </p>
+              
                 {/* Name & Role */}
                 <div className="mb-5">
                   <h4 className="font-black text-gray-900 text-lg">{testimonial.name}</h4>

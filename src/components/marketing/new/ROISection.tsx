@@ -32,8 +32,10 @@ const ROISection = () => {
   const automationCount = useCountUp(87, 2000, isRoiInView);
 
   return (
-    <div className="bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16">
+    <div className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50/20 to-white">
+      {/* Subtle mesh gradient */}
+      <div className="absolute inset-0 bg-mesh-blue opacity-10"></div>
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16 relative z-10">
         
         <motion.div
           ref={roiRef}

@@ -27,8 +27,10 @@ const IntegrationStepsSection = () => {
   ];
 
   return (
-    <div className="bg-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16">
+    <div className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50/20 to-white">
+      {/* Subtle mesh gradient */}
+      <div className="absolute inset-0 bg-mesh-blue opacity-10"></div>
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16 relative z-10">
         
         {/* Section Header */}
         <div className="text-center mb-14">
@@ -40,10 +42,10 @@ const IntegrationStepsSection = () => {
 
         {/* Vertical Timeline */}
         <div className="max-w-4xl mx-auto">
-          <div className="relative">
+        <div className="relative">
             {/* Vertical line with gradient */}
             <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-purple-300 to-transparent hidden md:block"></div>
-            
+          
             {steps.map((step, i) => (
               <motion.div
                 key={i}
