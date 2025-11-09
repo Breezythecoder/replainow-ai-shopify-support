@@ -36,7 +36,8 @@ const InformationCollectionSection = () => {
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
@@ -172,7 +173,8 @@ const InformationCollectionSection = () => {
         {/* Benefits Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ delay: 1.0 }}
           className="grid md:grid-cols-4 gap-6"
         >

@@ -8,7 +8,8 @@ const FinalCTASection = () => {
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
           className="text-center"
         >
@@ -29,11 +30,11 @@ const FinalCTASection = () => {
 
           {/* CTA Button */}
           <div className="relative inline-block mb-8">
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-violet-600 rounded-xl blur opacity-40"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-violet-600 rounded-xl blur-lg opacity-40"></div>
             <motion.button 
-              whileHover={{ scale: 1.03, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              className="relative group inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white px-12 py-6 rounded-xl font-bold text-lg transition-all shadow-2xl"
+              whileHover={{ scale: 1.05, y: -3, boxShadow: "0 30px 80px rgba(147, 51, 234, 0.5)" }}
+              whileTap={{ scale: 0.97 }}
+              className="relative group inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white px-12 py-6 rounded-xl font-bold text-lg transition-all shadow-float-lg"
             >
               <ShoppingBag className="w-5 h-5" />
               <span>14 Tage kostenlos testen</span>

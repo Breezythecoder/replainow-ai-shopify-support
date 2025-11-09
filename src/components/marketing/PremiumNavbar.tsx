@@ -34,7 +34,7 @@ const PremiumNavbar = () => {
     <header 
       className={`
         fixed top-0 left-0 right-0 z-50 transition-all duration-500
-        ${isScrolled ? 'bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-sm' : 'bg-white/70 backdrop-blur-lg'}
+        ${isScrolled ? 'glass-card border-b border-white/30 shadow-glass-lg' : 'bg-transparent'}
       `}
     >
       <nav className="max-w-7xl mx-auto flex items-center justify-between h-20 px-6 md:px-8">

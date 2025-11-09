@@ -65,8 +65,8 @@ const AIKnowledgeBanner = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
-            AI kennt <span className="font-semibold">JEDEN Aspekt</span> Ihres Shops
+          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">
+            AI kennt <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">JEDEN Aspekt</span> Ihres Shops
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Produkte, Bestellungen, Kunden, Richtlinien – alles automatisch synchronisiert. 
@@ -106,18 +106,19 @@ const AIKnowledgeBanner = () => {
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, x: -30 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: 0.3 + i * 0.1, duration: 0.6 }}
                   className="relative group"
                 >
                   <div className={`
-                    absolute -inset-0.5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur
+                    absolute -inset-0.5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg
                     ${source.color === 'purple' ? 'bg-purple-500/20' : ''}
                     ${source.color === 'blue' ? 'bg-blue-500/20' : ''}
                     ${source.color === 'violet' ? 'bg-violet-500/20' : ''}
                   `}></div>
                   
-                  <div className="relative bg-white rounded-xl p-5 border border-gray-200 group-hover:border-purple-200 transition-all duration-300 shadow-sm group-hover:shadow-md">
+                  <div className="glass-card rounded-xl p-5 border-2 border-white/40 group-hover:border-purple-200/60 transition-all duration-300 shadow-glass group-hover:shadow-float relative">
                     <div className="flex items-center gap-4">
                       <div className={`
                         p-3 rounded-lg
@@ -136,7 +137,7 @@ const AIKnowledgeBanner = () => {
                         <h4 className="font-semibold text-gray-900 text-sm mb-0.5">{source.title}</h4>
                         <p className="text-xs text-gray-600">{source.desc}</p>
                       </div>
-                      <div className="px-2 py-1 bg-gray-100 rounded text-xs font-bold text-gray-700">
+                      <div className="glass-card px-2 py-1 rounded border-2 border-purple-100/50 text-xs font-bold text-gray-700">
                         {source.stats}
                       </div>
                     </div>
@@ -145,31 +146,73 @@ const AIKnowledgeBanner = () => {
               ))}
             </div>
 
-            {/* Center - Shopify Admin Hub */}
+            {/* Center - 3D Glass Sphere */}
             <motion.div
-              initial={{ scale: 0, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ delay: 0.5, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="flex justify-center"
+              initial={{ scale: 0, rotateY: -180 }}
+              whileInView={{ scale: 1, rotateY: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
+              className="flex justify-center relative"
+              style={{ perspective: '1000px' }}
             >
               <div className="relative">
-                {/* Outer glow */}
-                <div className="absolute -inset-8 bg-gradient-to-r from-purple-400/30 to-violet-400/30 rounded-3xl blur-3xl animate-pulse"></div>
+                {/* Outer glow layers */}
+                <div className="absolute -inset-12 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
+                <div className="absolute -inset-8 bg-violet-500/15 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
                 
-                {/* Main Hub */}
-                <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-purple-900 rounded-3xl p-10 shadow-2xl border border-gray-700">
-                  <div className="text-center">
-                    <div className="inline-flex p-6 bg-gradient-to-br from-purple-500 to-violet-600 rounded-2xl shadow-xl shadow-purple-500/50 mb-4">
-                      <Database className="w-12 h-12 text-white" />
+                {/* Glass sphere container */}
+                <motion.div 
+                  className="relative w-64 h-64 mx-auto transform-gpu transition-transform duration-700 hover:scale-110"
+                  whileHover={{ rotateY: 12 }}
+                  style={{ transformStyle: 'preserve-3d' }}
+                >
+                  {/* Inner dark sphere */}
+                  <div className="absolute inset-8 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 rounded-full shadow-2xl"></div>
+                  
+                  {/* Glass overlay */}
+                  <div className="glass-card-dark rounded-full absolute inset-0">
+                    <div className="absolute inset-0 flex flex-col items-center justify-center">
+                      {/* Icon with glow */}
+                      <div className="p-6 bg-gradient-to-br from-purple-500 to-violet-600 rounded-3xl shadow-neon-purple mb-3">
+                        <Database className="w-14 h-14 text-white" />
+                      </div>
+                      
+                      <h3 className="text-2xl font-bold text-white mb-1">Shopify Admin</h3>
+                      
+                      {/* Pulsing sync indicator */}
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
+                        <div className="w-2 h-2 bg-green-400 rounded-full absolute animate-pulse"></div>
+                        <span className="text-sm text-green-400 font-bold ml-2">ECHTZEIT SYNC</span>
+                      </div>
+                      
+                      <div className="text-xs text-gray-400">Vollautomatisch</div>
                     </div>
-                    <h3 className="text-2xl font-bold text-white mb-2">Shopify Admin</h3>
-                    <div className="flex items-center justify-center gap-2 mb-3">
-                      <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                      <span className="text-sm text-green-400 font-bold">ECHTZEIT SYNC</span>
-                    </div>
-                    <div className="text-xs text-gray-400">Vollautomatisch</div>
                   </div>
-                </div>
+                  
+                  {/* Floating data particles */}
+                  {[...Array(6)].map((_, i) => (
+                    <motion.div
+                      key={i}
+                      animate={{
+                        y: [0, -20, 0],
+                        x: [0, Math.sin(i) * 10, 0],
+                        opacity: [0.3, 1, 0.3]
+                      }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        delay: i * 0.5,
+                        ease: "easeInOut"
+                      }}
+                      className="absolute w-2 h-2 bg-purple-400 rounded-full blur-sm"
+                      style={{
+                        top: `${20 + i * 10}%`,
+                        left: `${10 + i * 15}%`
+                      }}
+                    />
+                  ))}
+                </motion.div>
 
                 {/* Sync Arrows */}
                 <div className="absolute -left-12 top-1/2 -translate-y-1/2 hidden md:block">
@@ -202,18 +245,19 @@ const AIKnowledgeBanner = () => {
                 <motion.div
                   key={i}
                   initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: 0.6 + i * 0.1, duration: 0.6 }}
                   className="relative group"
                 >
                   <div className={`
-                    absolute -inset-0.5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur
+                    absolute -inset-0.5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg
                     ${source.color === 'pink' ? 'bg-pink-500/20' : ''}
                     ${source.color === 'purple' ? 'bg-purple-500/20' : ''}
                     ${source.color === 'blue' ? 'bg-blue-500/20' : ''}
                   `}></div>
                   
-                  <div className="relative bg-white rounded-xl p-5 border border-gray-200 group-hover:border-purple-200 transition-all duration-300 shadow-sm group-hover:shadow-md">
+                  <div className="glass-card rounded-xl p-5 border-2 border-white/40 group-hover:border-purple-200/60 transition-all duration-300 shadow-glass group-hover:shadow-float relative">
                     <div className="flex items-center gap-4">
                       <div className={`
                         p-3 rounded-lg
@@ -232,7 +276,7 @@ const AIKnowledgeBanner = () => {
                         <h4 className="font-semibold text-gray-900 text-sm mb-0.5">{source.title}</h4>
                         <p className="text-xs text-gray-600">{source.desc}</p>
                       </div>
-                      <div className="px-2 py-1 bg-gray-100 rounded text-xs font-bold text-gray-700">
+                      <div className="glass-card px-2 py-1 rounded border-2 border-purple-100/50 text-xs font-bold text-gray-700">
                         {source.stats}
                       </div>
                     </div>

@@ -117,8 +117,8 @@ const PricingSection = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-6">
             14 Tage kostenlos · Keine Kreditkarte · Shopify Billing
           </div>
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
-            Wähle <span className="font-semibold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">deinen Plan</span>
+          <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-4 tracking-tight">
+            Wähle <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">deinen Plan</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-2">
             Alle Funktionen in jedem Plan inklusive. Du zahlst nur für AI-Antworten.
@@ -130,32 +130,53 @@ const PricingSection = () => {
           {plans.map((plan, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 + i * 0.1 }}
-              className="relative"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1, duration: 0.6 }}
+              className={`relative group ${plan.highlighted ? 'md:scale-110 md:-translate-y-4' : ''}`}
             >
-              {/* Card */}
-              <div className={`
-                relative rounded-2xl border h-full
-                ${plan.highlighted 
-                  ? 'bg-gradient-to-br from-purple-600 to-violet-600 text-white border-purple-400 shadow-2xl shadow-purple-500/30 lg:-mt-4 lg:scale-105' 
+              {/* Glow effect stronger on highlighted */}
+              <div className={`absolute -inset-1 rounded-3xl blur-2xl transition-opacity duration-500 ${
+                plan.highlighted 
+                  ? 'bg-gradient-to-br from-purple-500/40 to-violet-500/40 opacity-100'
                   : plan.premium
-                    ? 'bg-gradient-to-br from-gray-900 to-gray-800 text-white border-gray-700 shadow-xl'
-                    : 'bg-white border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300'
+                    ? 'bg-gradient-to-br from-amber-500/30 to-orange-500/30 opacity-0 group-hover:opacity-100'
+                    : 'bg-gradient-to-br from-purple-500/10 to-violet-500/10 opacity-0 group-hover:opacity-100'
+              }`} />
+              
+              {/* Glass Card */}
+              <div className={`
+                relative rounded-3xl border-2 h-full overflow-hidden
+                ${plan.highlighted 
+                  ? 'bg-gradient-to-br from-purple-600 to-violet-600 text-white border-purple-300 shadow-float-lg' 
+                  : plan.premium
+                    ? 'glass-card-dark border-white/20 text-white shadow-float'
+                    : 'glass-card border-white/40 shadow-glass hover:shadow-float'
                 }
+                transition-all duration-500
               `}>
-                {/* Badge - ON the card border line */}
+                {/* Badge - Glass floating badge */}
                 {plan.badge && (
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 whitespace-nowrap">
-                    <div className={`px-4 py-1.5 text-xs font-bold rounded-full shadow-lg flex items-center gap-1 ${
-                      plan.premium 
-                        ? 'bg-gradient-to-r from-amber-400 to-yellow-300 text-gray-900'
-                        : 'bg-amber-400 text-amber-900'
-                    }`}>
-                      {plan.premium ? <Sparkles className="w-3 h-3" /> : <Zap className="w-3 h-3" />}
-                      {plan.badge}
-                    </div>
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
+                    <motion.div 
+                      className={`glass-card px-6 py-2 rounded-full shadow-float border-2 flex items-center gap-2 ${
+                        plan.premium 
+                          ? 'bg-gradient-to-r from-amber-400/90 to-yellow-300/90 border-amber-300/40'
+                          : 'border-purple-300/40'
+                      }`}
+                      whileHover={{ scale: 1.05, y: -2 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {plan.premium ? <Sparkles className="w-3 h-3 text-gray-900" /> : <Zap className="w-3 h-3 text-purple-600" />}
+                      <span className={`text-xs font-bold ${
+                        plan.premium 
+                          ? 'bg-gradient-to-r from-amber-900 to-orange-900 bg-clip-text text-transparent'
+                          : 'bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent'
+                      }`}>
+                        {plan.badge}
+                      </span>
+                    </motion.div>
                   </div>
                 )}
                 
@@ -174,21 +195,27 @@ const PricingSection = () => {
                   {plan.description}
                 </p>
 
-                {/* Price */}
-                <div className="mb-4">
+                {/* Price with hover animation */}
+                <motion.div 
+                  className="mb-4"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ duration: 0.3 }}
+                >
                   <div className="flex items-baseline gap-1">
-                    <span className={`text-4xl font-bold ${
-                      plan.highlighted || plan.premium ? 'text-white' : 'text-gray-900'
+                    <span className={`text-5xl font-light ${
+                      plan.highlighted || plan.premium 
+                        ? 'text-white' 
+                        : 'text-transparent bg-clip-text bg-gradient-to-br from-gray-900 via-purple-600 to-gray-900'
                     }`}>
                       ${plan.price}
                     </span>
                     <span className={`text-sm ${
                       plan.highlighted ? 'text-white/70' : plan.premium ? 'text-gray-400' : 'text-gray-500'
                     }`}>
-                      /Monat nach Trial
+                      /Monat
                     </span>
                   </div>
-                </div>
+                </motion.div>
 
                 {/* AI Answers Info */}
                 <div className={`mb-4 pb-4 border-b ${

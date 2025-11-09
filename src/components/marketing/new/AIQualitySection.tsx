@@ -65,12 +65,13 @@ const AIQualitySection = () => {
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-6">
-            <Shield className="w-4 h-4" />
-            Qualitäts-Garantie
+          <div className="glass-card inline-flex items-center gap-2 px-4 py-2 border-2 border-purple-200/40 rounded-full text-sm font-semibold mb-6 shadow-glass">
+            <Shield className="w-4 h-4 text-purple-600" />
+            <span className="text-purple-900">Qualitäts-Garantie</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
             AI die <span className="font-semibold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">sich selbst kontrolliert</span>

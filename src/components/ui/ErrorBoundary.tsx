@@ -43,7 +43,7 @@ export class ErrorBoundary extends Component<Props, State> {
           <div className="text-center p-8">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4"></div>
             <h2 className="text-xl font-semibold text-white mb-2">Loading Error</h2>
-            <p className="text-blue-200 mb-4">Something went wrong while loading the page.</p>
+            <p className="text-blue-100 mb-4">Something went wrong while loading the page.</p>
             <button 
               onClick={() => window.location.reload()} 
               className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"

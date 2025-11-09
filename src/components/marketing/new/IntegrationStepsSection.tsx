@@ -38,49 +38,53 @@ const IntegrationStepsSection = () => {
           <p className="text-lg text-gray-600">Vollautomatische Einrichtung in unter 60 Sekunden</p>
         </div>
 
-        {/* Steps */}
-        <div className="relative">
-          {/* Connection Line */}
-          <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-200 to-transparent -translate-y-1/2 hidden md:block"></div>
-          
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 relative">
+        {/* Vertical Timeline */}
+        <div className="max-w-4xl mx-auto">
+          <div className="relative">
+            {/* Vertical line with gradient */}
+            <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-purple-300 to-transparent hidden md:block"></div>
+            
             {steps.map((step, i) => (
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + i * 0.15 }}
-                whileHover={{ scale: 1.02 }}
-                className={`relative ${i === 1 ? 'md:-mt-4' : ''}`}
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.2, duration: 0.6 }}
+                className="relative flex gap-8 mb-12 last:mb-0"
               >
-                <div className={`
-                  rounded-2xl p-8 shadow-md transition-all duration-300
-                  ${i === 1 
-                    ? 'bg-gradient-to-br from-purple-500 to-violet-600 text-white border-0' 
-                    : 'bg-white border border-gray-200 hover:border-purple-200 hover:shadow-lg'
-                  }
-                `}>
-                  <div className="flex items-center justify-between mb-6">
-                    <div className={`
-                      w-12 h-12 rounded-xl flex items-center justify-center font-bold text-lg
-                      ${i === 1 ? 'bg-white/20 text-white' : 'bg-purple-100 text-purple-600'}
-                    `}>
+                {/* Step number - floating glass circle */}
+                <div className="relative z-10 flex-shrink-0">
+                  <div className="absolute -inset-3 bg-purple-500/20 rounded-full blur-xl"></div>
+                  <motion.div 
+                    className="glass-card w-16 h-16 rounded-full flex items-center justify-center relative border-4 border-white shadow-float"
+                    whileHover={{ scale: 1.15, rotate: 360 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <span className="text-2xl font-bold bg-gradient-to-br from-purple-600 to-violet-600 bg-clip-text text-transparent">
                       {step.num}
+                    </span>
+                  </motion.div>
+                </div>
+                
+                {/* Content card */}
+                <div className="flex-1 glass-card rounded-2xl p-8 hover:shadow-float transition-all duration-500 group border-2 border-white/40 hover:border-purple-200/60">
+                  <div className="flex items-start gap-4">
+                    <motion.div 
+                      className="p-3 bg-gradient-to-br from-purple-500 to-violet-500 rounded-xl shadow-lg flex-shrink-0"
+                      whileHover={{ rotate: 360, scale: 1.1 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      <step.icon className="w-6 h-6 text-white" />
+                    </motion.div>
+                    <div className="flex-1">
+                      <h4 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">{step.title}</h4>
+                      <p className="text-gray-600 leading-relaxed mb-3">{step.desc}</p>
+                      <div className="glass-card inline-flex items-center gap-2 px-4 py-2 rounded-full border-2 border-purple-100/50 shadow-glass">
+                        <Clock className="w-4 h-4 text-purple-600" />
+                        <span className="text-sm font-bold text-purple-900">{step.time}</span>
+                      </div>
                     </div>
-                    <step.icon className={`w-5 h-5 ${i === 1 ? 'text-white/90' : 'text-gray-400'}`} />
-                  </div>
-                  
-                  <h3 className={`text-xl font-semibold mb-3 ${i === 1 ? 'text-white' : 'text-gray-900'}`}>
-                    {step.title}
-                  </h3>
-                  
-                  <p className={`text-sm mb-4 leading-relaxed ${i === 1 ? 'text-white/95' : 'text-gray-600'}`}>
-                    {step.desc}
-                  </p>
-                  
-                  <div className="flex items-center gap-2 text-sm font-semibold">
-                    <div className={`w-1.5 h-1.5 rounded-full animate-pulse ${i === 1 ? 'bg-white' : 'bg-purple-500'}`}></div>
-                    <span className={i === 1 ? 'text-white' : 'text-purple-700'}>{step.time}</span>
                   </div>
                 </div>
               </motion.div>

@@ -60,7 +60,8 @@ const AgentToolsSection = () => {
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
@@ -152,7 +153,8 @@ const AgentToolsSection = () => {
         {/* Bottom Features */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ delay: 0.8 }}
           className="grid md:grid-cols-3 gap-6"
         >

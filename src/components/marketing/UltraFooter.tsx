@@ -2,8 +2,16 @@ import { Twitter, Linkedin, Mail } from "lucide-react";
 
 const UltraFooter = () => {
   return (
-    <footer className="py-16 text-white" style={{ background: '#0A0B0D' }}>
-      <div className="container mx-auto px-6">
+    <footer className="relative py-16 overflow-hidden">
+      {/* Dark background with mesh */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/30 to-gray-900"></div>
+      <div className="absolute inset-0 bg-mesh-blue opacity-20"></div>
+      
+      {/* Floating glass orbs */}
+      <div className="absolute top-20 left-1/4 w-96 h-96 glass-card-dark rounded-full blur-3xl opacity-10"></div>
+      <div className="absolute bottom-20 right-1/4 w-96 h-96 glass-card-dark rounded-full blur-3xl opacity-10"></div>
+      
+      <div className="container mx-auto px-6 relative z-10 text-white">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Logo - NEON */}
           <div>

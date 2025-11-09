@@ -12,8 +12,8 @@ const ProductPickerSection = () => {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
-            Support <span className="font-semibold bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">der verkauft</span>
+          <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-4 tracking-tight">
+            Support <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">der verkauft</span>
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
             Zeigen Sie Produkte mit Bildern, Größen, Farben – Kunde kauft mit einem Klick. 
@@ -21,18 +21,21 @@ const ProductPickerSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        {/* Asymmetrisches 2:1 Bento Layout */}
+        <div className="grid md:grid-cols-3 gap-8 items-center">
           
-          {/* Left: Product Picker Modal Mockup */}
+          {/* Left: Product Picker Modal Mockup - Spans 2 columns */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.3 }}
-            className="relative"
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3, duration: 0.7 }}
+            className="md:col-span-2 relative"
           >
             <div className="absolute -inset-4 bg-gradient-to-br from-purple-200/40 to-pink-200/40 rounded-3xl blur-2xl"></div>
             
-            <div className="relative bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+            <div className="glass-card rounded-3xl p-1 shadow-float-lg border-2 border-white/50 relative">
+              <div className="bg-white/90 rounded-2xl overflow-hidden">
               {/* Modal Header */}
               <div className="bg-gray-900 p-4 text-white flex items-center justify-between">
                 <div className="flex items-center gap-2">
@@ -65,13 +68,15 @@ const ProductPickerSection = () => {
                   { name: "Beach Bag", price: "€29,90", selected: true },
                   { name: "Sunglasses", price: "€39,90", selected: false }
                 ].map((product, i) => (
-                  <div 
+                  <motion.div 
                     key={i}
+                    whileHover={{ scale: 1.05, rotateZ: product.selected ? 0 : 2 }}
+                    transition={{ duration: 0.3 }}
                     className={`
-                      relative rounded-lg border-2 overflow-hidden transition-all
+                      relative rounded-lg border-2 overflow-hidden transition-all cursor-pointer
                       ${product.selected 
-                        ? 'border-purple-500 bg-purple-50/50' 
-                        : 'border-gray-200 bg-white'
+                        ? 'border-purple-500 bg-purple-50/50 shadow-lg' 
+                        : 'border-gray-200 bg-white hover:border-purple-300'
                       }
                     `}
                   >
@@ -85,7 +90,7 @@ const ProductPickerSection = () => {
                       <div className="text-xs font-semibold text-gray-900 mb-1">{product.name}</div>
                       <div className="text-xs text-gray-600">{product.price}</div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
 
@@ -125,71 +130,59 @@ const ProductPickerSection = () => {
                   Checkout-Link erstellen
                 </button>
               </div>
-            </div>
-          </motion.div>
-
-          {/* Right: Benefits */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.5 }}
-            className="space-y-8"
-          >
-            <div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-6">
-                Mit einem Klick: Warenkorb voll
-              </h3>
-              <p className="text-gray-700 leading-relaxed mb-6">
-                Kunde fragt nach Produkten? Wählen Sie Artikel, Größen, Farben aus. 
-                Klick auf "Checkout-Link" – Kunde hat vorgefüllten Warenkorb + optional Rabatt.
-              </p>
-            </div>
-
-            {/* Example Flow */}
-            <div className="bg-gradient-to-br from-purple-50 to-violet-50 rounded-xl p-6 border border-purple-200">
-              <h4 className="font-bold text-gray-900 mb-4">Beispiel-Ablauf:</h4>
-              <div className="space-y-3 text-sm">
-                {[
-                  { step: "1", text: "Kundin: 'Habt ihr blaue Kleider?'" },
-                  { step: "2", text: "Agent wählt 3 Kleider (Größe M)" },
-                  { step: "3", text: "Klick: Checkout-Link + 15% Rabatt" },
-                  { step: "4", text: "Kundin klickt → Im Checkout!" }
-                ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-3">
-                    <div className="w-6 h-6 bg-purple-600 text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">
-                      {item.step}
-                    </div>
-                    <span className="text-gray-700 pt-0.5">{item.text}</span>
-                  </div>
-                ))}
               </div>
             </div>
-
-            {/* Benefits List */}
-            <div className="space-y-3">
-              {[
-                "Support-Gespräch wird Umsatz",
-                "Ein Klick statt 5 Minuten Links suchen",
-                "Rabatt automatisch angewendet",
-                "Kunde kauft sofort"
-              ].map((benefit, i) => (
-                <div key={i} className="flex items-center gap-3">
-                  <Check className="w-5 h-5 text-purple-600 flex-shrink-0" />
-                  <span className="text-gray-700">{benefit}</span>
-                </div>
-              ))}
-            </div>
           </motion.div>
+
+          {/* Right: Benefits - Spans 1 column */}
+          <div className="space-y-6">
+            {[
+              {
+                icon: ShoppingBag,
+                title: "Conversion steigern",
+                desc: "Support wird zu Verkauf – direkt im Gespräch"
+              },
+              {
+                icon: Sparkles,
+                title: "Ein-Klick-Checkout",
+                desc: "Warenkorb vorgefüllt, Rabatt angewendet, fertig"
+              },
+              {
+                icon: TrendingUp,
+                title: "Höherer AOV",
+                desc: "Mehr Produkte pro Kunde durch visuelle Empfehlungen"
+              }
+            ].map((benefit, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.6 + i * 0.1, duration: 0.5 }}
+                className="glass-card rounded-2xl p-6 hover:shadow-float transition-all duration-500 border-2 border-white/40 group"
+              >
+                <motion.div
+                  whileHover={{ rotate: 360, scale: 1.1 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <benefit.icon className="w-8 h-8 text-purple-600 mb-3" />
+                </motion.div>
+                <h4 className="font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">{benefit.title}</h4>
+                <p className="text-sm text-gray-600 leading-relaxed">{benefit.desc}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
-        {/* Bottom CTA */}
+        {/* Bottom CTA - Glass */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.4 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
           className="text-center mt-16"
         >
-          <div className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-50 to-violet-50 border-2 border-purple-200 rounded-2xl">
+          <div className="glass-card inline-flex items-center gap-3 px-8 py-4 border-2 border-purple-200/40 rounded-2xl shadow-glass hover:shadow-float transition-all duration-500">
             <Sparkles className="w-6 h-6 text-purple-600" />
             <span className="font-bold text-purple-900">
               Support wird zum Verkaufstool – visuelle Empfehlungen steigern Conversion

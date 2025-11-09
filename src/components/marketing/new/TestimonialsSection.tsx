@@ -41,43 +41,85 @@ const TestimonialsSection = () => {
           <p className="text-lg text-gray-600">Echte Resultate von echten Geschäften</p>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-6">
+        {/* Testimonials Grid - 3D Floating Cards - KRASSER */}
+        <div className="grid md:grid-cols-3 gap-10">
           {testimonials.map((testimonial, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 + i * 0.1 }}
-              className="bg-white rounded-xl p-6 border border-gray-200 hover:border-gray-300 shadow-sm hover:shadow-md transition-all duration-300"
+              initial={{ opacity: 0, y: 50, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -16, rotateY: 6, scale: 1.02 }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+              className="relative group"
+              style={{ perspective: '1500px' }}
             >
-              {/* Avatar + Info */}
-              <div className="flex items-center gap-3 mb-4">
-                <img 
-                  src={testimonial.avatar} 
-                  alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-gray-100"
-                />
-                <div>
-                  <div className="font-semibold text-gray-900 text-sm">{testimonial.name}</div>
-                  <div className="text-xs text-gray-600">{testimonial.role}</div>
-                </div>
-              </div>
-              
-              {/* Quote */}
-              <p className="text-gray-700 text-sm leading-relaxed mb-4">
-                "{testimonial.text}"
-              </p>
-              
-              {/* Metric Badge */}
+              {/* VIEL STÄRKERER Glow */}
               <div className={`
-                inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold
-                ${testimonial.color === 'violet' ? 'bg-violet-50 text-violet-700' : ''}
-                ${testimonial.color === 'purple' ? 'bg-purple-50 text-purple-700' : ''}
-                ${testimonial.color === 'pink' ? 'bg-pink-50 text-pink-700' : ''}
-              `}>
-                <TrendingUp className="w-3 h-3" />
-                {testimonial.metric}
+                absolute -inset-2 rounded-3xl blur-2xl transition-all duration-500
+                ${testimonial.color === 'violet' ? 'bg-gradient-to-br from-violet-500/0 to-blue-500/0 group-hover:from-violet-500/40 group-hover:to-blue-500/40' : ''}
+                ${testimonial.color === 'purple' ? 'bg-gradient-to-br from-purple-500/0 to-violet-500/0 group-hover:from-purple-500/40 group-hover:to-violet-500/40' : ''}
+                ${testimonial.color === 'pink' ? 'bg-gradient-to-br from-pink-500/0 to-purple-500/0 group-hover:from-pink-500/40 group-hover:to-purple-500/40' : ''}
+              `}></div>
+              
+              {/* Glass card - STÄRKER */}
+              <div className="relative rounded-3xl p-10 transform-gpu transition-all duration-500 group-hover:shadow-float-lg backface-hidden border-2 border-white/60 shadow-xl"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.90)',
+                  backdropFilter: 'blur(40px)',
+                  WebkitBackdropFilter: 'blur(40px)'
+                }}
+              >
+                {/* Quote mark - large, subtle */}
+                <div className={`
+                  absolute top-4 right-4 text-7xl font-serif leading-none opacity-10
+                  ${testimonial.color === 'violet' ? 'text-violet-600' : ''}
+                  ${testimonial.color === 'purple' ? 'text-purple-600' : ''}
+                  ${testimonial.color === 'pink' ? 'text-pink-600' : ''}
+                `}>"</div>
+                
+                {/* Avatar - GRÖßER mit STÄRKEREM glow */}
+                <div className="relative w-28 h-28 mb-8">
+                  <div className={`
+                    absolute -inset-4 rounded-full blur-2xl opacity-60 group-hover:opacity-100 transition-opacity
+                    ${testimonial.color === 'violet' ? 'bg-gradient-to-br from-violet-500 to-blue-500' : ''}
+                    ${testimonial.color === 'purple' ? 'bg-gradient-to-br from-purple-500 to-violet-500' : ''}
+                    ${testimonial.color === 'pink' ? 'bg-gradient-to-br from-pink-500 to-purple-500' : ''}
+                  `}></div>
+                  <img 
+                    src={testimonial.avatar} 
+                    alt={testimonial.name}
+                    className="relative w-full h-full rounded-full border-4 border-white object-cover shadow-2xl ring-4 ring-white/50"
+                  />
+                </div>
+                
+                {/* Quote - GRÖßER */}
+                <p className="text-gray-800 text-xl font-medium leading-relaxed mb-8 relative z-10">
+                  "{testimonial.text}"
+                </p>
+                
+                {/* Name & Role */}
+                <div className="mb-5">
+                  <h4 className="font-black text-gray-900 text-lg">{testimonial.name}</h4>
+                  <p className="text-gray-600 font-medium">{testimonial.role}</p>
+                </div>
+                
+                {/* Metric - floating badge - GRÖßER */}
+                <div className="inline-flex items-center gap-2 px-5 py-3 rounded-full border-2 shadow-lg"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.8)',
+                    backdropFilter: 'blur(20px)',
+                    borderColor: testimonial.color === 'violet' ? 'rgb(139 92 246 / 0.4)' : testimonial.color === 'purple' ? 'rgb(168 85 247 / 0.4)' : 'rgb(236 72 153 / 0.4)'
+                  }}
+                >
+                  <TrendingUp className={`
+                    w-4 h-4
+                    ${testimonial.color === 'violet' ? 'text-violet-600' : ''}
+                    ${testimonial.color === 'purple' ? 'text-purple-600' : ''}
+                    ${testimonial.color === 'pink' ? 'text-pink-600' : ''}
+                  `} />
+                  <span className="font-bold text-gray-900">{testimonial.metric}</span>
+                </div>
               </div>
             </motion.div>
           ))}

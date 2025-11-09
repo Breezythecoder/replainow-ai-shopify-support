@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
 
@@ -54,35 +54,45 @@ const FAQSection = () => {
           </p>
         </div>
 
-        {/* FAQ Accordion */}
+        {/* FAQ Accordion - Glasmorphic */}
         <div className="space-y-4">
           {faqs.map((faq, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 + i * 0.05 }}
-              className="border border-gray-200 rounded-xl overflow-hidden hover:border-purple-200 transition-colors duration-300"
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.05, duration: 0.5 }}
+              className="glass-card rounded-2xl overflow-hidden hover:shadow-float transition-all duration-500 border-2 border-white/40 hover:border-purple-200/60"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full text-left p-6 flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
+                className="w-full text-left p-6 flex items-center justify-between hover:bg-white/50 transition-all duration-300 group"
               >
-                <span className="font-semibold text-gray-900 pr-8">{faq.q}</span>
-                <ChevronDown className={`
-                  w-5 h-5 text-gray-500 flex-shrink-0 transition-transform duration-300
-                  ${openIndex === i ? 'rotate-180' : ''}
-                `} />
+                <span className="font-semibold text-gray-900 pr-8 group-hover:text-purple-600 transition-colors">{faq.q}</span>
+                <motion.div
+                  animate={{ rotate: openIndex === i ? 180 : 0 }}
+                  transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <ChevronDown className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                </motion.div>
               </button>
               
-              <div className={`
-                overflow-hidden transition-all duration-300 ease-in-out
-                ${openIndex === i ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}
-              `}>
-                <div className="px-6 pb-6">
-                  <p className="text-gray-700 leading-relaxed">{faq.a}</p>
-                </div>
-              </div>
+              <AnimatePresence>
+                {openIndex === i && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: 'auto', opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-6 pb-6 bg-gradient-to-b from-white/50 to-transparent">
+                      <p className="text-gray-700 leading-relaxed">{faq.a}</p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </motion.div>
           ))}
         </div>

@@ -21,7 +21,8 @@ const MultiLanguageBanner = () => {
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-center mb-14"
         >
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
