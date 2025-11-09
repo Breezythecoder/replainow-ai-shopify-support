@@ -22,170 +22,29 @@ const LiveChatBanner = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left: Widget Mockup */}
+          {/* Left: Real Widget Screenshot */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.3, duration: 0.7 }}
             className="relative"
           >
-            {/* Widget Mockup with Glass */}
+            {/* Real Widget Screenshot */}
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-br from-purple-200/40 to-violet-200/40 rounded-3xl blur-2xl"></div>
               
-              <div className="bg-white rounded-3xl shadow-elevation-5 border-2 border-gray-200 overflow-hidden max-w-sm mx-auto relative">
-                {/* Widget Header with animated gradient */}
-                <div className="bg-gradient-to-r from-purple-600 via-violet-600 to-purple-600 bg-[length:200%_100%] animate-gradient p-4 text-white">
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                        <MessageSquare className="w-4 h-4" />
-                      </div>
-                      <div>
-                        <div className="font-semibold text-sm">Live Chat</div>
-                        <div className="text-xs text-white/80">AI + Team</div>
-                      </div>
-                    </div>
-                    <div className="relative">
-                      <div className="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
-                      <div className="w-2 h-2 bg-green-400 rounded-full absolute top-0 left-0"></div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Tabs */}
-                <div className="flex border-b border-gray-200 bg-white/50 backdrop-blur-sm">
-                  <div className="flex-1 text-center py-3 text-sm font-semibold text-purple-700 border-b-2 border-purple-700">
-                    Nachrichten
-                  </div>
-                  <div className="flex-1 text-center py-3 text-sm text-gray-500">
-                    Chats
-                  </div>
-                </div>
-
-                {/* Messages with staggered animation */}
-                <div className="p-4 space-y-3 h-64 overflow-hidden bg-gradient-to-b from-gray-50/50 to-white">
-                  {/* AI Message 1 */}
-                  <motion.div 
-                    className="flex gap-2"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.3 }}
-                  >
-                    <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Sparkles className="w-3 h-3 text-purple-700" />
-                    </div>
-                    <div className="bg-white rounded-lg p-3 shadow-sm max-w-[80%] border border-gray-100">
-                      <div className="text-xs text-gray-500 mb-1">ReplAI</div>
-                      <div className="text-sm text-gray-800">
-                        Hallo! Wie kann ich Ihnen heute helfen? 👋
-                      </div>
-                    </div>
-                  </motion.div>
-
-                  {/* Customer Message */}
-                  <motion.div 
-                    className="flex justify-end"
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.6 }}
-                  >
-                    <div className="bg-gradient-to-r from-purple-600 to-violet-600 rounded-lg p-3 max-w-[80%] shadow-lg">
-                      <div className="text-sm text-white">
-                        Habt ihr das Kleid in Größe M?
-                      </div>
-                    </div>
-                  </motion.div>
-
-                  {/* Typing indicator */}
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: [0, 1, 0] }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.9, duration: 1.5, repeat: Infinity }}
-                    className="flex gap-2"
-                  >
-                    <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Sparkles className="w-3 h-3 text-purple-700" />
-                    </div>
-                    <div className="bg-white rounded-lg p-3 shadow-sm flex gap-1">
-                      {[0, 1, 2].map(i => (
-                        <motion.div
-                          key={i}
-                          animate={{ y: [0, -5, 0] }}
-                          transition={{
-                            duration: 0.6,
-                            repeat: Infinity,
-                            delay: i * 0.2
-                          }}
-                          className="w-2 h-2 bg-purple-400 rounded-full"
-                        />
-                      ))}
-                  </div>
-                  </motion.div>
-
-                  {/* AI Message with Product Card Preview */}
-                  <motion.div 
-                    className="flex gap-2"
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 1.2 }}
-                  >
-                    <div className="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Sparkles className="w-3 h-3 text-purple-700" />
-                    </div>
-                    <div className="space-y-2 max-w-[80%]">
-                      <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-100">
-                        <div className="text-xs text-gray-500 mb-1">ReplAI</div>
-                        <div className="text-sm text-gray-800">
-                          Ja! Das Summer Dress ist in Größe M verfügbar. 
-                          Noch 12 auf Lager! ✅
-                        </div>
-                      </div>
-                      {/* Product Card Mini - Glass */}
-                      <motion.div 
-                        className="bg-white rounded-lg overflow-hidden shadow-elevation-3 border border-gray-200"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.3 }}
-                      >
-                        <div className="h-20 bg-gradient-to-br from-purple-100 to-pink-100"></div>
-                        <div className="p-2">
-                          <div className="text-xs font-semibold text-gray-900">Summer Dress</div>
-                          <div className="text-xs text-gray-600">€49.90</div>
-                        </div>
-                      </motion.div>
-                    </div>
-                  </motion.div>
-                </div>
-
-                {/* Input */}
-                <div className="p-3 border-t border-gray-200 bg-white/90 backdrop-blur-sm">
-                  <div className="flex items-center gap-2 bg-white rounded-lg px-3 py-2 border-2 border-gray-200 shadow-sm">
-                    <label htmlFor="chat-message-input" className="sr-only">Nachricht eingeben</label>
-                    <input 
-                      type="text"
-                      id="chat-message-input"
-                      name="chat-message"
-                      placeholder="Nachricht eingeben..." 
-                      aria-label="Chat-Nachricht eingeben"
-                      className="flex-1 bg-transparent text-sm outline-none"
-                      disabled
-                    />
-                    <motion.div 
-                      className="w-6 h-6 bg-gradient-to-r from-purple-600 to-violet-600 rounded-full flex items-center justify-center shadow-lg"
-                      whileHover={{ scale: 1.1, rotate: 15 }}
-                      transition={{ duration: 0.3 }}
-                    >
-                      <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                      </svg>
-                    </motion.div>
-                  </div>
-                </div>
-              </div>
+              <motion.div
+                className="relative max-w-md mx-auto"
+                whileHover={{ scale: 1.02, y: -5 }}
+                transition={{ duration: 0.4 }}
+              >
+                <img 
+                  src="/dashboard-screenshots/Hometab-widget-nobackground.png"
+                  alt="ReplAInow Live Chat Widget - Echte Ansicht mit AI-Antworten, Produktempfehlungen und Multi-Channel Support"
+                  className="w-full h-auto relative drop-shadow-2xl"
+                  loading="lazy"
+                />
+              </motion.div>
             </div>
           </motion.div>
 
@@ -394,12 +253,3 @@ const LiveChatBanner = () => {
 };
 
 export default LiveChatBanner;
-
-
-
-
-
-
-
-
-
