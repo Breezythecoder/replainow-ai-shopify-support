@@ -31,20 +31,24 @@ const LiveChatBanner = () => {
           >
             {/* Real Widget Screenshot */}
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-purple-200/40 to-violet-200/40 rounded-3xl blur-2xl"></div>
+              {/* Glow effect */}
+              <div className="absolute -inset-6 bg-gradient-to-br from-purple-200/40 to-violet-200/40 rounded-3xl blur-3xl"></div>
               
-              <motion.div
-                className="relative max-w-md mx-auto"
-                whileHover={{ scale: 1.02, y: -5 }}
-                transition={{ duration: 0.4 }}
-              >
-                <img 
-                  src="/dashboard-screenshots/Hometab-widget-nobackground.png"
-                  alt="ReplAInow Live Chat Widget - Echte Ansicht mit AI-Antworten, Produktempfehlungen und Multi-Channel Support"
-                  className="w-full h-auto relative drop-shadow-2xl"
-                  loading="lazy"
-                />
-              </motion.div>
+              {/* Overflow container to cut off screenshot shadow */}
+              <div className="relative max-w-md mx-auto overflow-hidden rounded-3xl">
+                <motion.div
+                  className="relative"
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  transition={{ duration: 0.4 }}
+                >
+                  <img 
+                    src="/dashboard-screenshots/Hometab-widget-nobackground.png"
+                    alt="ReplAInow Live Chat Widget - Echte Ansicht mit AI-Antworten, Produktempfehlungen und Multi-Channel Support"
+                    className="w-full h-auto relative"
+                    loading="lazy"
+                  />
+                </motion.div>
+              </div>
             </div>
           </motion.div>
 
