@@ -133,19 +133,11 @@ const PricingSection = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 + i * 0.1 }}
-              className={`
-                relative rounded-2xl border overflow-hidden
-                ${plan.highlighted 
-                  ? 'bg-gradient-to-br from-purple-600 to-violet-600 text-white border-purple-400 shadow-2xl shadow-purple-500/30 lg:-mt-4 lg:scale-105' 
-                  : plan.premium
-                    ? 'bg-gradient-to-br from-gray-900 to-gray-800 text-white border-gray-700 shadow-xl'
-                    : 'bg-white border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300'
-                }
-              `}
+              className="relative"
             >
-              {/* Badge */}
+              {/* Badge - OUTSIDE the card */}
               {plan.badge && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 z-20 whitespace-nowrap">
                   <div className={`px-4 py-1.5 text-xs font-bold rounded-full shadow-lg flex items-center gap-1 ${
                     plan.premium 
                       ? 'bg-gradient-to-r from-amber-400 to-yellow-300 text-gray-900'
@@ -157,7 +149,17 @@ const PricingSection = () => {
                 </div>
               )}
 
-              <div className="p-6">
+              {/* Card */}
+              <div className={`
+                relative rounded-2xl border overflow-hidden h-full
+                ${plan.highlighted 
+                  ? 'bg-gradient-to-br from-purple-600 to-violet-600 text-white border-purple-400 shadow-2xl shadow-purple-500/30 lg:-mt-4 lg:scale-105' 
+                  : plan.premium
+                    ? 'bg-gradient-to-br from-gray-900 to-gray-800 text-white border-gray-700 shadow-xl'
+                    : 'bg-white border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300'
+                }
+              `}>
+                <div className="p-6">
                 {/* Plan Name */}
                 <h3 className={`text-xl font-bold mb-2 ${
                   plan.highlighted || plan.premium ? 'text-white' : 'text-gray-900'
@@ -251,6 +253,7 @@ const PricingSection = () => {
                     </li>
                   )}
                 </ul>
+                </div>
               </div>
             </motion.div>
           ))}
