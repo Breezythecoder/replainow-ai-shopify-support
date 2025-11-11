@@ -52,7 +52,7 @@ const FAQSection = () => {
     <div id="faq" className="relative overflow-hidden bg-gradient-to-b from-white via-purple-50/20 to-white">
       {/* Subtle mesh gradient */}
       <div className="absolute inset-0 bg-mesh-purple opacity-10"></div>
-      <div className="max-w-4xl mx-auto px-6 md:px-8 py-10 md:py-16 relative z-10">
+      <div className="max-w-4xl mx-auto px-6 md:px-8 py-12 md:py-20 relative z-10">
         
         {/* Section Header */}
         <div className="text-center mb-14">

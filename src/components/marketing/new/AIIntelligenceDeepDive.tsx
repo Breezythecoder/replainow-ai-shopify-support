@@ -15,7 +15,7 @@ const AIIntelligenceDeepDive = () => {
       {/* Mesh gradient */}
       <div className="absolute inset-0 bg-mesh-purple opacity-10"></div>
       
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-20 md:py-28 relative">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24 relative">
         
         {/* Section Header */}
         <motion.div

@@ -110,7 +110,7 @@ const PricingSection = () => {
 
   return (
     <div id="pricing" className="bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-8 py-10 md:py-16">
+      <div className="max-w-[1600px] mx-auto px-6 md:px-8 py-12 md:py-20">
         
         {/* Section Header */}
         <div className="text-center mb-6">

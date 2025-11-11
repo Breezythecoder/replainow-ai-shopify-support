@@ -4,7 +4,7 @@ import { ArrowRight, ShoppingBag, Shield, Award, Users } from "lucide-react";
 const FinalCTASection = () => {
   return (
     <div id="contact" className="bg-gradient-to-b from-white to-gray-50">
-      <div className="max-w-5xl mx-auto px-6 md:px-8 py-20 md:py-32">
+      <div className="max-w-5xl mx-auto px-6 md:px-8 py-16 md:py-28">
         
         <motion.div
           initial={{ opacity: 0, y: 20 }}

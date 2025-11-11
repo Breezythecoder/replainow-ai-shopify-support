@@ -7,7 +7,7 @@ const DashboardShowcaseSection = () => {
   
   return (
     <div id="live-demo" className="bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-8 sm:py-10 md:py-16">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24">
         
         {/* Section Header */}
         <motion.div
