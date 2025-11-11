@@ -206,25 +206,25 @@ const AIPowerShowcase = () => {
           transition={{ delay: 0.5, duration: 0.7 }}
           className="relative mb-20"
         >
-          {/* Connecting arrows */}
-          <div className="absolute top-1/2 left-0 right-0 -translate-y-1/2 hidden md:block pointer-events-none">
-            <div className="max-w-5xl mx-auto relative h-1">
-              {/* Horizontal line */}
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-300 via-violet-300 to-blue-300 h-1 rounded-full"></div>
-              
-              {/* Animated dots */}
-              <motion.div
-                animate={{ x: ["0%", "100%"] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                className="absolute left-0 w-3 h-3 bg-purple-500 rounded-full -top-1"
-              />
+          <div className="grid md:grid-cols-3 gap-8 items-start relative">
+            {/* Connecting line - positioned at icon height */}
+            <div className="absolute top-[50px] left-0 right-0 hidden md:block pointer-events-none">
+              <div className="max-w-5xl mx-auto relative h-1">
+                {/* Horizontal line */}
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-300 via-violet-300 to-blue-300 h-1 rounded-full"></div>
+                
+                {/* Animated dots */}
+                <motion.div
+                  animate={{ x: ["0%", "100%"] }}
+                  transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                  className="absolute left-0 w-3 h-3 bg-purple-500 rounded-full -top-1"
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-8 items-center relative">
             {/* Step 1 */}
-            <div className="text-center">
-              <div className="inline-flex p-6 bg-gradient-to-br from-purple-100 to-violet-100 rounded-2xl mb-4 border-2 border-purple-300">
+            <div className="text-center relative z-10">
+              <div className="inline-flex p-6 bg-gradient-to-br from-purple-100 to-violet-100 rounded-2xl mb-4 border-2 border-purple-300 bg-white">
                 <Package className="w-12 h-12 text-purple-700" />
               </div>
               <h4 className="font-bold text-gray-900 mb-2">1. Shop-Daten lesen</h4>
@@ -234,8 +234,8 @@ const AIPowerShowcase = () => {
             </div>
 
             {/* Step 2 */}
-            <div className="text-center">
-              <div className="inline-flex p-6 bg-gradient-to-br from-violet-100 to-blue-100 rounded-2xl mb-4 border-2 border-violet-300">
+            <div className="text-center relative z-10">
+              <div className="inline-flex p-6 bg-gradient-to-br from-violet-100 to-blue-100 rounded-2xl mb-4 border-2 border-violet-300 bg-white">
                 <MessageSquare className="w-12 h-12 text-violet-700" />
               </div>
               <h4 className="font-bold text-gray-900 mb-2">2. Kunden antworten</h4>
@@ -245,8 +245,8 @@ const AIPowerShowcase = () => {
             </div>
 
             {/* Step 3 */}
-            <div className="text-center">
-              <div className="inline-flex p-6 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl mb-4 border-2 border-blue-300">
+            <div className="text-center relative z-10">
+              <div className="inline-flex p-6 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl mb-4 border-2 border-blue-300 bg-white">
                 <ArrowRight className="w-12 h-12 text-blue-700" />
               </div>
               <h4 className="font-bold text-gray-900 mb-2">3. Intelligente Übergabe</h4>

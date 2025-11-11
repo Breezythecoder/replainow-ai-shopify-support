@@ -85,14 +85,15 @@ const HeroSection = () => {
               </div>
 
               {/* Secondary CTA - Glass */}
-              <motion.button
+              <motion.a
+                href="#pricing"
                 whileHover={{ scale: 1.03, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 className="bg-white inline-flex items-center gap-2 text-gray-900 px-10 py-5 rounded-xl font-semibold text-lg border-2 border-gray-200/80 hover:border-purple-400 transition-all shadow-white-button hover:shadow-white-button-hover"
               >
-                <span>Live Demo ansehen</span>
+                <span>Pläne ansehen</span>
                 <ArrowRight className="w-5 h-5" />
-              </motion.button>
+              </motion.a>
             </div>
 
             {/* Social Proof + Trust */}
