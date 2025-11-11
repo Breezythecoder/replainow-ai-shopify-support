@@ -7,36 +7,44 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      q: "Wie lange dauert die Installation?",
-      a: "Die Installation dauert unter 60 Sekunden. Ein Klick im Shopify App Store, und ReplAInow beginnt automatisch, Ihre Shop-Daten zu importieren. Keine manuelle Konfiguration erforderlich."
+      q: "Ersetzt die AI wirklich meine Support-Mitarbeiter?",
+      a: "Die AI automatisiert 87% aller Support-Anfragen – das entspricht 2-3 Vollzeit-Mitarbeitern bei durchschnittlichem Ticket-Volumen. Einfache Fragen (Produktverfügbarkeit, Order-Tracking, Richtlinien) löst die AI sofort. Komplexe Fälle übergibt sie intelligent an Ihr Team mit vollständigem Kontext."
     },
     {
-      q: "Muss ich die KI trainieren?",
-      a: "Nein! Die KI lernt automatisch aus Ihren Shopify-Daten. Sie kennt sofort alle Produkte, Richtlinien, Bestellungen und Kundendaten. Null Setup-Zeit, null Wartung."
+      q: "Was passiert bei komplexen Anfragen die AI nicht beantworten kann?",
+      a: "Die AI weiß, wann sie nicht helfen kann. Bei komplexen Fragen, Beschwerden oder wenn der Kunde explizit einen Menschen fordert, übergibt die AI nahtlos an Ihr Team. Ihr Agent sieht die komplette Gesprächshistorie, alle gesammelten Informationen (Bestellnummer, Telefon, Fotos) und weiß genau was zu tun ist – keine Information geht verloren."
+    },
+    {
+      q: "Wie genau ist die AI? Macht sie Fehler?",
+      a: "Die AI arbeitet mit 99.8% Genauigkeit, weil sie nur mit echten Daten aus Ihrem Shopify-Shop antwortet – keine Halluzinationen, keine Schätzungen. Jede Antwort wird auf 5 Dimensionen selbst-bewertet (0-100 Punkte). Nur Antworten mit Score ≥90 werden automatisch gesendet. Bei Unsicherheit eskaliert die AI lieber zu Ihrem Team."
+    },
+    {
+      q: "Muss ich die AI trainieren oder Daten eingeben?",
+      a: "Nein! Die AI importiert automatisch bei Installation alle Ihre Shopify-Daten: Produkte, Bestellungen, Kunden, Richtlinien, Seiten, Blog-Artikel. Ändern Sie etwas in Shopify? Die AI weiß es innerhalb von 5 Sekunden durch Echtzeit-Synchronisation. Null Setup, null Wartung, null manuelle Arbeit."
+    },
+    {
+      q: "Wie schnell ist die AI produktiv?",
+      a: "Ab Installation: 60 Sekunden bis die AI einsatzbereit ist. Sie kann sofort Produktfragen beantworten, Bestellungen tracken und Richtlinien erklären. Die AI kennt Ihren kompletten Shop-Katalog vom ersten Moment an – kein Training erforderlich."
     },
     {
       q: "Kann ich die KI-Antworten vor dem Versand prüfen?",
-      a: "Ja! Sie kontrollieren den Auto-Send-Schwellenwert. Setzen Sie ihn auf 90 für konservativ (mehr manuelle Prüfungen) oder 80 für ausgewogen (mehr Automatisierung). AI-Antworten unter dem Schwellenwert landen in der Prüfwarteschlange."
+      a: "Ja! Sie kontrollieren den Auto-Send-Schwellenwert. Setzen Sie ihn auf 90 für konservativ (mehr manuelle Prüfungen) oder 80 für ausgewogen (mehr Automatisierung). AI-Antworten unter dem Schwellenwert landen in der Prüfwarteschlange, wo Sie sie vor dem Versand bearbeiten oder genehmigen können."
     },
     {
       q: "Welche Sprachen werden unterstützt?",
-      a: "Die KI unterstützt 100+ Sprachen und erkennt automatisch, in welcher Sprache der Kunde schreibt. Deutsch, Englisch, Französisch, Spanisch, Arabisch, Chinesisch – alles automatisch, ohne Konfiguration."
-    },
-    {
-      q: "Wie funktioniert die Übergabe an menschliche Agenten?",
-      a: "Die KI weiß, wann sie nicht helfen kann. Bei komplexen Fragen, Beschwerden oder wenn der Kunde explizit nach einem Menschen fragt, übergibt die KI nahtlos an Ihr Team – mit vollem Kontext und gesammelten Informationen."
+      a: "Die KI unterstützt 100+ Sprachen und erkennt automatisch, in welcher Sprache der Kunde schreibt. Deutsch, Englisch, Französisch, Spanisch, Arabisch, Chinesisch, Japanisch – alles automatisch, ohne Konfiguration. Die AI antwortet fließend in der Kundensprache."
     },
     {
       q: "Werden meine Kundendaten sicher gespeichert?",
-      a: "Ja! Wir sind ISO 27001 zertifiziert und DSGVO-konform. Alle Daten werden verschlüsselt gespeichert, und Sie haben volle Kontrolle über Ihre Daten. Uninstall = komplette Datenlöschung."
+      a: "Ja! Wir sind ISO 27001 zertifiziert und DSGVO-konform. Alle Daten werden verschlüsselt gespeichert (TLS 1.3), und Sie haben volle Kontrolle. Uninstall = komplette automatische Datenlöschung innerhalb von 24 Stunden."
     },
     {
-      q: "Kann ich das Chat-Widget anpassen?",
-      a: "Ja! Sie können Ihr Logo hochladen, Markenfarben setzen, die KI-Begrüßung anpassen und die Widget-Position wählen. Vollständige Anpassung an Ihr Branding."
+      q: "Wie lange dauert die Installation?",
+      a: "Unter 60 Sekunden. Ein Klick im Shopify App Store, und ReplAInow beginnt automatisch Ihre Shop-Daten zu importieren. Widget aktivieren im Theme Editor (1 Klick), fertig. Keine technischen Kenntnisse erforderlich."
     },
     {
       q: "Was passiert, wenn ich kündige?",
-      a: "Keine Vertragsbindung – Sie können jederzeit kündigen. Bei Uninstall werden alle Ihre Daten automatisch gelöscht. Keine versteckten Kosten, keine Kündigungsfrist."
+      a: "Keine Vertragsbindung – Sie können jederzeit kündigen. Bei Uninstall werden alle Ihre Daten automatisch gelöscht. Keine versteckten Kosten, keine Kündigungsfrist, kein Kleingedrucktes."
     }
   ];
 

@@ -37,6 +37,7 @@ const ROISection = () => {
       <div className="absolute inset-0 bg-mesh-blue opacity-10"></div>
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-10 md:py-16 relative z-10">
         
+        {/* ROI Card */}
         <motion.div
           ref={roiRef}
           initial={{ opacity: 0, y: 40 }}

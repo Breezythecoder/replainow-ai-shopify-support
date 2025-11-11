@@ -382,29 +382,72 @@ const AIKnowledgeBanner = () => {
                 question: "Habt ihr das Kleid in Größe 42?",
                 answer: "Ja, 15 auf Lager!",
                 category: "Produkt-Fragen",
-                color: "purple"
+                color: "purple",
+                difficulty: "Einfach"
               },
               {
                 question: "Wo ist meine Bestellung #1234?",
                 answer: "Versendet gestern via DHL",
                 category: "Bestellungs-Fragen",
-                color: "blue"
+                color: "blue",
+                difficulty: "Einfach"
               },
               {
                 question: "Wie lange ist die Rückgabe-Frist?",
                 answer: "30 Tage lt. Ihrer Rückgabe-Richtlinie",
                 category: "Richtlinien-Fragen",
-                color: "violet"
+                color: "violet",
+                difficulty: "Einfach"
+              },
+              {
+                question: "Passt dieses Shirt zu meiner Jeans?",
+                answer: "Ja! Zeige Ihnen 3 passende Styles →",
+                category: "Style-Beratung",
+                color: "pink",
+                difficulty: "Medium"
+              },
+              {
+                question: "Kann ich die Versandadresse noch ändern?",
+                answer: "Bestellung noch nicht versendet – Adresse aktualisierbar",
+                category: "Bestellungs-Änderung",
+                color: "blue",
+                difficulty: "Medium"
+              },
+              {
+                question: "Ich bin VIP-Kunde, gibt's einen Rabatt?",
+                answer: "Ja! 20% Rabattcode für Sie erstellt 🎁",
+                category: "VIP-Service",
+                color: "green",
+                difficulty: "Komplex"
               }
             ].map((example, i) => (
-              <div key={i} className="bg-white rounded-xl p-6 border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
-                <div className={`
-                  px-3 py-1 rounded-full text-xs font-bold inline-block mb-4
-                  ${example.color === 'purple' ? 'bg-purple-100 text-purple-700' : ''}
-                  ${example.color === 'blue' ? 'bg-blue-100 text-blue-700' : ''}
-                  ${example.color === 'violet' ? 'bg-violet-100 text-violet-700' : ''}
-                `}>
-                  {example.category}
+              <motion.div 
+                key={i} 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.1 * i, duration: 0.5 }}
+                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="flex items-center justify-between mb-4">
+                  <div className={`
+                    px-3 py-1 rounded-full text-xs font-bold inline-block
+                    ${example.color === 'purple' ? 'bg-purple-100 text-purple-700' : ''}
+                    ${example.color === 'blue' ? 'bg-blue-100 text-blue-700' : ''}
+                    ${example.color === 'violet' ? 'bg-violet-100 text-violet-700' : ''}
+                    ${example.color === 'pink' ? 'bg-pink-100 text-pink-700' : ''}
+                    ${example.color === 'green' ? 'bg-green-100 text-green-700' : ''}
+                  `}>
+                    {example.category}
+                  </div>
+                  <div className={`
+                    px-2 py-1 rounded text-xs font-medium
+                    ${example.difficulty === 'Einfach' ? 'bg-green-50 text-green-700' : ''}
+                    ${example.difficulty === 'Medium' ? 'bg-yellow-50 text-yellow-700' : ''}
+                    ${example.difficulty === 'Komplex' ? 'bg-orange-50 text-orange-700' : ''}
+                  `}>
+                    {example.difficulty}
+                  </div>
                 </div>
                 <div className="mb-4">
                   <div className="text-sm font-semibold text-gray-900 mb-2">
@@ -415,7 +458,7 @@ const AIKnowledgeBanner = () => {
                     <span className="font-medium">{example.answer}</span>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </motion.div>
@@ -427,10 +470,17 @@ const AIKnowledgeBanner = () => {
           transition={{ delay: 1.6 }}
           className="text-center mt-12"
         >
-          <p className="text-lg text-gray-700 font-medium">
-            <span className="font-bold text-purple-600">Ihr Shop-Wissen</span> ist{' '}
-            <span className="font-bold text-violet-600">AI's Wissen</span> – automatisch, sofort, präzise
-          </p>
+          <div className="inline-flex flex-col items-center gap-4">
+            <p className="text-2xl text-gray-900 font-bold">
+              <span className="text-purple-600">Null Setup, null Wartung</span> –{" "}
+              AI kennt Ihren Shop in{" "}
+              <span className="text-violet-600">60 Sekunden</span>
+            </p>
+            <p className="text-lg text-gray-600 font-medium">
+              <span className="font-bold text-purple-600">Ihr Shop-Wissen</span> ist{' '}
+              <span className="font-bold text-violet-600">AI's Wissen</span> – automatisch, sofort, präzise
+            </p>
+          </div>
         </motion.div>
       </div>
     </div>

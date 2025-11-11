@@ -4,20 +4,14 @@ import UltraFooter from "@/components/marketing/UltraFooter";
 
 // New Premium Sections
 import HeroSection from "@/components/marketing/new/HeroSection";
+import AIPowerShowcase from "@/components/marketing/new/AIPowerShowcase";
 import ValuePropositionSection from "@/components/marketing/new/ValuePropositionSection";
-import AIKnowledgeBanner from "@/components/marketing/new/AIKnowledgeBanner";
-import LiveChatBanner from "@/components/marketing/new/LiveChatBanner";
-import EmailHelpdeskBanner from "@/components/marketing/new/EmailHelpdeskBanner";
-import AIQualitySection from "@/components/marketing/new/AIQualitySection";
-import DashboardShowcaseSection from "@/components/marketing/new/DashboardShowcaseSection";
-import InformationCollectionSection from "@/components/marketing/new/InformationCollectionSection";
-import CustomerJourneySection from "@/components/marketing/new/CustomerJourneySection";
-import ProductPickerSection from "@/components/marketing/new/ProductPickerSection";
-import AgentToolsSection from "@/components/marketing/new/AgentToolsSection";
-import MultiLanguageBanner from "@/components/marketing/new/MultiLanguageBanner";
-import VisualCommerceBanner from "@/components/marketing/new/VisualCommerceBanner";
-import ProactiveEngagementBanner from "@/components/marketing/new/ProactiveEngagementBanner";
 import TestimonialsSection from "@/components/marketing/new/TestimonialsSection";
+import AIKnowledgeBanner from "@/components/marketing/new/AIKnowledgeBanner";
+import OmnichannelUnified from "@/components/marketing/new/OmnichannelUnified";
+import AIIntelligenceDeepDive from "@/components/marketing/new/AIIntelligenceDeepDive";
+import DashboardShowcaseSection from "@/components/marketing/new/DashboardShowcaseSection";
+import AgentProductivity from "@/components/marketing/new/AgentProductivity";
 import IntegrationStepsSection from "@/components/marketing/new/IntegrationStepsSection";
 import ROISection from "@/components/marketing/new/ROISection";
 import PricingSection from "@/components/marketing/new/PricingSection";
@@ -55,64 +49,46 @@ const NewIndex = () => {
         aria-label="Hauptinhalt"
         className="min-h-screen"
       >
-        {/* 1. HERO - First Impression */}
+        {/* 1. HERO - AI-Mitarbeiter statt Helpdesk */}
         <HeroSection />
 
-        {/* 2. VALUE PROPOSITION - 3 Core Metrics */}
+        {/* 2. AI-POWER SHOWCASE - Was Ihre AI alles kann! */}
+        <AIPowerShowcase />
+
+        {/* 3. VALUE PROPOSITION - 87% Automation + AI-Intelligenz + 24/7 */}
         <ValuePropositionSection />
 
-        {/* 3. TESTIMONIALS - Social Proof Early */}
+        {/* 4. TESTIMONIALS - Social Proof Early */}
         <TestimonialsSection />
 
-        {/* 4. AI KNOWLEDGE - Feature Banner 1 */}
+        {/* 5. AI KNOWLEDGE - Automatischer Shop-Wissen Import */}
         <AIKnowledgeBanner />
 
-        {/* 5. LIVE CHAT - Feature Banner 2 */}
-        <LiveChatBanner />
+        {/* 6. OMNICHANNEL UNIFIED - Chat + Email nahtlos verbunden */}
+        <OmnichannelUnified />
 
-        {/* 6. EMAIL HELPDESK - Feature Banner 3 */}
-        <EmailHelpdeskBanner />
+        {/* 7. AI INTELLIGENCE DEEP-DIVE - Quality + Collection + Journey */}
+        <AIIntelligenceDeepDive />
 
-        {/* 7. AI QUALITY - NEW! Quality Guarantee */}
-        <AIQualitySection />
-
-        {/* 8. DASHBOARD SHOWCASE - NEW! Show the product */}
+        {/* 8. DASHBOARD SHOWCASE - Show the product */}
         <DashboardShowcaseSection />
 
-        {/* 9. INFORMATION COLLECTION - NEW! AI Intelligence */}
-        <InformationCollectionSection />
+        {/* 9. AGENT PRODUCTIVITY - Tools für die 13% */}
+        <AgentProductivity />
 
-        {/* 10. CUSTOMER JOURNEY - NEW! Behavior Tracking */}
-        <CustomerJourneySection />
-
-        {/* 11. PRODUCT PICKER - NEW! Visual Commerce Tools */}
-        <ProductPickerSection />
-
-        {/* 12. AGENT TOOLS - NEW! All-in-One Tools */}
-        <AgentToolsSection />
-
-        {/* 13. MULTI-LANGUAGE - Feature Banner 4 (Updated!) */}
-        <MultiLanguageBanner />
-
-        {/* 14. VISUAL COMMERCE - Feature Banner 5 */}
-        <VisualCommerceBanner />
-
-        {/* 15. PROACTIVE ENGAGEMENT - Feature Banner 6 */}
-        <ProactiveEngagementBanner />
-
-        {/* 16. INTEGRATION STEPS - How It Works */}
+        {/* 10. INTEGRATION STEPS - How It Works */}
         <IntegrationStepsSection />
 
-        {/* 17. ROI - Money Talk */}
+        {/* 11. ROI - Mitarbeiter-Ersparnis Calculator */}
         <ROISection />
 
-        {/* 18. PRICING - Clear Options */}
+        {/* 12. PRICING - Clear Options */}
         <PricingSection />
 
-        {/* 19. FAQ - Address Objections */}
+        {/* 13. FAQ - Address Objections */}
         <FAQSection />
 
-        {/* 20. FINAL CTA - Conversion */}
+        {/* 14. FINAL CTA - Conversion */}
         <FinalCTASection />
       </main>
 

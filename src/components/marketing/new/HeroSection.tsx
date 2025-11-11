@@ -53,17 +53,18 @@ const HeroSection = () => {
             
             {/* Main Headline */}
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-light text-gray-900 mb-7 tracking-tight leading-[1.1]">
-              Automatisierter Support
-              <br />
+              Ihr 24/7{" "}
               <span className="font-semibold bg-gradient-to-r from-gray-900 via-purple-600 to-gray-900 bg-clip-text text-transparent">
-                ohne Kompromisse
+                AI-Mitarbeiter
               </span>
+              <br />
+              für Shopify
             </h1>
             
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-gray-700 font-normal max-w-3xl mx-auto leading-relaxed mb-10">
-              Ihre KI versteht jeden Aspekt Ihres Shopify-Stores und beantwortet 
-              Kundenanfragen mit der Präzision eines erfahrenen Support-Teams
+              Ersetzt bis zu 3 Support-Mitarbeiter. Kennt jeden Aspekt Ihres Shops. 
+              Antwortet wie Ihr bestes Team – nur schneller, präziser und ohne Pause.
             </p>
 
             {/* CTA Buttons */}
