@@ -1,0 +1,546 @@
+{
+  "automatisierung": {
+    "meta": {
+      "title": "Automate Shopify Customer Support 2025 | 60-80% Less Effort",
+      "description": "Automate 60-80% of your Shopify customer support. AI answers product questions, tracking requests & more in 3 seconds. 100+ languages. From $19/month. Try 14 days free.",
+      "keywords": "automate Shopify customer support, AI customer support Shopify, support automation Shopify, Shopify AI support"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Automate Customer Support"
+    },
+    "hero": {
+      "badge": "🚀 SUPPORT AUTOMATION 2025",
+      "title": "Automate Shopify Customer Support",
+      "subtitle": "Automate 60-80% of your support tickets – with AI that truly knows your store",
+      "stats": [
+        { "number": "60-80%", "label": "Automation" },
+        { "number": "3 Sec", "label": "Response Time" },
+        { "number": "100+", "label": "Languages" },
+        { "number": "60 Sec", "label": "Setup Time" }
+      ],
+      "cta": {
+        "primary": "Try 14 Days Free",
+        "secondary": "See Live Demo"
+      }
+    },
+    "toc": {
+      "title": "Contents",
+      "items": [
+        "The Problem: Support Consumes Time",
+        "The Solution: Intelligent Automation",
+        "How AI Automation Works",
+        "What Gets Automated? (Concrete Examples)",
+        "ROI Calculation: Save Time & Money",
+        "Setup in 60 Seconds",
+        "Frequently Asked Questions"
+      ]
+    },
+    "problem": {
+      "title": "The Problem: Support Consumes Time & Money",
+      "subtitle": "The reality for Shopify merchants without automation",
+      "points": [
+        {
+          "title": "Repetitive Questions Dominate",
+          "desc": "70-80% of all support requests are standard questions: 'Where's my order?', 'Do you have size M?', 'What's the return policy?' – same questions over and over.",
+          "icon": "repeat"
+        },
+        {
+          "title": "Support Team at Capacity",
+          "desc": "One agent can handle 20-30 tickets per day. With 100 daily tickets, you need 3-4 full-time employees. Cost: $9,000-12,000 per month just for salaries.",
+          "icon": "users"
+        },
+        {
+          "title": "Nights & Weekends: Silent",
+          "desc": "Customers buy at 11 PM and on Sundays. Without support, sales are lost. Night shifts are expensive ($4,000+/month per agent) and hard to staff.",
+          "icon": "moon"
+        },
+        {
+          "title": "International Customers = Language Barriers",
+          "desc": "Your shop sells in 5 countries? You need support in 5 languages. Multilingual agents cost $4,500-6,000/month per language.",
+          "icon": "globe"
+        },
+        {
+          "title": "Scaling = Exponentially More Expensive",
+          "desc": "Your shop grows from 50 to 200 tickets/day? You must scale from 2 to 8 agents. Support costs rise from $6,000 to $24,000/month.",
+          "icon": "trending-up"
+        }
+      ],
+      "realityCheck": {
+        "title": "The Hard Reality:",
+        "calculation": [
+          "100 tickets per day × 15 minutes/ticket = 25 hours/day",
+          "25 hours ÷ 8 hours/agent = 3.1 full-time agents needed",
+          "3 agents × $3,000/month = $9,000 monthly cost",
+          "Plus: Recruiting, training, vacation, sick leave..."
+        ],
+        "conclusion": "Support is one of the biggest cost factors in e-commerce."
+      }
+    },
+    "solution": {
+      "title": "The Solution: Intelligent Support Automation with AI",
+      "subtitle": "Automate 60-80% of your tickets – without quality loss",
+      "intro": "What if an AI could answer 60-80% of your support tickets automatically, instantly, in any language? And in 3 seconds instead of 15 minutes? That's exactly what ReplAInow does.",
+      "how": {
+        "title": "How it works:",
+        "steps": [
+          {
+            "number": "1",
+            "title": "AI knows your store automatically",
+            "desc": "After installation, ReplAInow imports all products, orders, customers, policies and shop pages from Shopify. Automatically. No configuration needed.",
+            "detail": "The AI knows: Which products you have, what's in stock, what prices apply, what your return policy is, where orders currently are."
+          },
+          {
+            "number": "2",
+            "title": "Customer asks question",
+            "desc": "Customer writes in live chat or email: 'Do you still have the blue dress in size M?'",
+            "detail": "The question arrives in real-time at ReplAInow."
+          },
+          {
+            "number": "3",
+            "title": "AI analyzes & responds",
+            "desc": "The AI understands the question, checks your inventory in real-time, and responds: 'Yes! The blue summer dress is available in size M ($49, in stock). Would you like to order it?'",
+            "detail": "With product image, price, and 'Buy now' button. In 3 seconds."
+          },
+          {
+            "number": "4",
+            "title": "Your team stays free",
+            "desc": "The AI has resolved the ticket. Your agent didn't have to do anything. They can focus on complex cases.",
+            "detail": "Result: 15 minutes saved. With 80 such tickets/day = 20 hours/day saved."
+          }
+        ]
+      },
+      "automation": {
+        "title": "60-80% Automation Rate",
+        "subtitle": "What does that mean concretely?",
+        "explanation": "Out of 100 tickets per day, AI handles 60-80 automatically. Only 20-40 tickets need human attention. Your team only handles important tickets that need real expertise.",
+        "breakdown": {
+          "automated": {
+            "percentage": "60-80%",
+            "label": "AI handles automatically",
+            "examples": [
+              "Product questions (size, color, stock)",
+              "Tracking requests ('Where is my order?')",
+              "Policy questions (returns, shipping)",
+              "FAQ answers",
+              "Business hours, contact details",
+              "Simple order changes"
+            ]
+          },
+          "human": {
+            "percentage": "20-40%",
+            "label": "Team handles",
+            "examples": [
+              "Complaints (empathy needed)",
+              "Complex refunds",
+              "Custom orders",
+              "VIP customers",
+              "Escalations",
+              "Special requests"
+            ]
+          }
+        }
+      }
+    },
+    "examples": {
+      "title": "What Gets Automated? Concrete Examples",
+      "subtitle": "Real scenarios from Shopify stores",
+      "cases": [
+        {
+          "category": "Product Questions",
+          "customerMessage": "Do you still have the white t-shirt in XL?",
+          "aiResponse": "Yes! The Premium Cotton T-Shirt in White is available in XL. Price: $29. In stock: 15 pieces. Would you like to order it?",
+          "aiAction": "[Shows product card with image, price, 'Buy now' button]",
+          "timeSaved": "Agent would have taken 5 minutes (search catalog, check stock, respond)"
+        },
+        {
+          "category": "Order Tracking",
+          "customerMessage": "Where is my order #1234?",
+          "aiResponse": "Your order #1234 was shipped on November 10th with DHL. Expected delivery: November 12th. Tracking: DHL1234567890",
+          "aiAction": "[Shows tracking card with DHL logo, status, tracking link]",
+          "timeSaved": "Agent would have taken 3 minutes (find order, check status, copy tracking)"
+        },
+        {
+          "category": "Return Policy",
+          "customerMessage": "Can I return this if it doesn't fit?",
+          "aiResponse": "Yes! We accept returns within 30 days of receipt. Items must be unworn and with tags. Return shipping costs are borne by the customer. Refund processed within 5-7 business days after receipt.",
+          "aiAction": "[Quotes actual return policy from Shopify]",
+          "timeSaved": "Agent would have taken 2 minutes (look up policy, respond)"
+        },
+        {
+          "category": "International Requests",
+          "customerMessage": "¿Envían a España? ¿Cuánto cuesta?",
+          "aiResponse": "¡Sí! Enviamos a España. El costo de envío es de €8.90. Tiempo de entrega: 5-7 días laborables. Envío gratis para pedidos superiores a €50.",
+          "aiAction": "[Automatic language detection → Response in Spanish]",
+          "timeSaved": "Agent would have taken 10 minutes (translator, find shipping info) OR you'd need Spanish agent ($4,500/month)"
+        },
+        {
+          "category": "Complex Case (To Agent)",
+          "customerMessage": "I received the wrong product and want my money back!",
+          "aiResponse": "I'm very sorry about that! I'm connecting you with my colleague who will handle the refund immediately. They'll contact you within 2 hours.",
+          "aiAction": "[Escalates to agent with full context: Order number, product, customer emotion: frustrated]",
+          "timeSaved": "AI recognizes: Too complex → Human empathy needed. Agent gets ALL info immediately."
+        }
+      ],
+      "summary": {
+        "title": "Summary of Examples",
+        "automated": "4 out of 5 tickets (80%) → AI handles",
+        "human": "1 out of 5 tickets (20%) → Agent handles",
+        "timeSavings": "20 minutes saved on 5 tickets = 4 minutes/ticket average"
+      }
+    },
+    "howItWorks": {
+      "title": "How AI Automation Works (Technically Explained)",
+      "subtitle": "The process behind the scenes",
+      "step1": {
+        "title": "Automatic Data Import",
+        "desc": "After installation, ReplAInow automatically imports:",
+        "items": [
+          "All products (title, description, variants, prices, inventory, images)",
+          "Orders from last 60 days (status, tracking, customer info)",
+          "Customer profiles (name, email, order history, VIP status)",
+          "Shop policies (returns, shipping, privacy, terms)",
+          "Content pages (FAQs, size guides, blog articles)"
+        ],
+        "technical": "Uses: Shopify GraphQL API, Webhooks for real-time updates, automatic synchronization",
+        "time": "Import takes: 2-5 minutes (depending on shop size)"
+      },
+      "step2": {
+        "title": "AI understands context",
+        "desc": "When customer writes, AI analyzes:",
+        "items": [
+          "Question type (product question, tracking, policy, complaint)",
+          "Customer history (orders, VIP status, previous conversations)",
+          "Shop context (inventory, shipping status, policies)",
+          "Language (automatically detected from message)",
+          "Emotion (positive, neutral, frustrated)"
+        ],
+        "technical": "Uses: GPT-4 for Natural Language Understanding, Embedding-based product search",
+        "time": "Analysis takes: < 1 second"
+      },
+      "step3": {
+        "title": "AI generates response",
+        "desc": "Based on analysis, AI creates:",
+        "items": [
+          "Precise answer with real shop data",
+          "Visual elements (product cards, tracking cards)",
+          "Action suggestions (checkout link, discount code)",
+          "Professional tone (friendly, helpful)",
+          "Linguistically perfect (in customer's language)"
+        ],
+        "technical": "Uses: GPT-4 for text generation, Shopify API for real-time data",
+        "time": "Generation takes: 1-2 seconds"
+      },
+      "step4": {
+        "title": "Quality check",
+        "desc": "AI evaluates own response (0-100 score):",
+        "items": [
+          "Response quality (Is question fully answered?)",
+          "Context coverage (Are all customer infos considered?)",
+          "Information accuracy (Do Shopify data match?)",
+          "Language flow (Does it sound natural?)",
+          "Overall confidence (How sure is AI?)"
+        ],
+        "decision": {
+          "autoSend": "Score 90-100 → Send automatically",
+          "review": "Score 80-89 → To review queue (optional)",
+          "human": "Score < 80 → Agent must write"
+        },
+        "time": "Scoring takes: < 0.5 seconds"
+      },
+      "step5": {
+        "title": "Customer receives response",
+        "desc": "Total time: 3 seconds from question to answer",
+        "comparison": {
+          "withAI": "3 seconds (automatic)",
+          "withoutAI": "15-45 minutes (agent must search catalog, check stock, respond)"
+        },
+        "impact": "60x faster than manual support"
+      }
+    },
+    "roi": {
+      "title": "ROI Calculation: Massively Save Time & Money",
+      "subtitle": "Concrete numbers for your shop",
+      "calculator": {
+        "title": "Calculate Your Savings",
+        "inputs": {
+          "ticketsPerDay": "Tickets per day",
+          "agentCost": "Cost per agent/month",
+          "automationRate": "Automation rate"
+        },
+        "defaultValues": {
+          "ticketsPerDay": "100",
+          "agentCost": "$3,000",
+          "automationRate": "70%"
+        }
+      },
+      "example": {
+        "title": "Example Calculation: Medium-sized Shopify Shop",
+        "before": {
+          "title": "WITHOUT ReplAInow",
+          "tickets": "100 tickets/day = 3,000 tickets/month",
+          "timePerTicket": "15 minutes/ticket average",
+          "totalTime": "3,000 × 15min = 750 hours/month",
+          "agentsNeeded": "750h ÷ 160h/month = 4.7 agents",
+          "roundedAgents": "5 full-time agents needed",
+          "cost": "5 × $3,000 = $15,000/month",
+          "annualCost": "$180,000/year"
+        },
+        "after": {
+          "title": "WITH ReplAInow",
+          "automatedTickets": "70% automated = 70 tickets/day by AI",
+          "humanTickets": "30% manual = 30 tickets/day by agents",
+          "totalTime": "30 × 15min = 450min = 7.5h/day = 150h/month",
+          "agentsNeeded": "150h ÷ 160h = 0.94 agents",
+          "roundedAgents": "1 full-time agent needed",
+          "agentCost": "1 × $3,000 = $3,000/month",
+          "aiCost": "ReplAInow Scale Plan: $99/month",
+          "totalCost": "$3,099/month",
+          "annualCost": "$37,188/year"
+        },
+        "savings": {
+          "monthly": "$15,000 - $3,099 = $11,901 saved/month",
+          "annual": "$180,000 - $37,188 = $142,812 saved/year",
+          "percentage": "79% cost savings",
+          "agents": "4 full-time positions saved"
+        }
+      },
+      "hiddenSavings": {
+        "title": "Hidden Savings (often forgotten!):",
+        "items": [
+          {
+            "title": "Recruiting Costs",
+            "before": "$2,000-5,000 per new agent",
+            "after": "$0 (no new agents needed)"
+          },
+          {
+            "title": "Training & Onboarding",
+            "before": "$3,000-8,000 per agent (4-6 weeks)",
+            "after": "$0 (AI needs no training)"
+          },
+          {
+            "title": "Vacation Coverage",
+            "before": "$4,000-6,000/year per agent",
+            "after": "$0 (AI never takes vacation)"
+          },
+          {
+            "title": "Sick Days",
+            "before": "$2,000-3,000/year per agent",
+            "after": "$0 (AI never gets sick)"
+          },
+          {
+            "title": "Overtime",
+            "before": "$500-2,000/month during peak times",
+            "after": "$0 (AI scales instantly)"
+          },
+          {
+            "title": "Helpdesk Software",
+            "before": "$200-800/month (Zendesk, Gorgias)",
+            "after": "$0 (included in ReplAInow)"
+          }
+        ],
+        "totalHiddenSavings": "$15,000-30,000 additional/year"
+      },
+      "realMerchant": {
+        "title": "Real Merchant Results:",
+        "quote": "We reduced from 4 support agents to 1 agent + ReplAInow. Now saving $9,000/month with better response times. ROI break-even after 2 weeks!",
+        "merchant": "Thomas K., ElectroMax (Electronics Shop, 150 tickets/day)"
+      }
+    },
+    "setup": {
+      "title": "Setup in 60 Seconds – Honestly!",
+      "subtitle": "No technician needed. No training required. Just install and go.",
+      "steps": [
+        {
+          "number": "1",
+          "time": "10 seconds",
+          "title": "Install app",
+          "desc": "Open Shopify App Store → Search 'ReplAInow' → Click 'Install' → Confirm permissions",
+          "note": "Required permissions: Read products, read orders (only essentials)"
+        },
+        {
+          "number": "2",
+          "time": "2-5 minutes",
+          "title": "Automatic import runs",
+          "desc": "ReplAInow now imports all your products, orders, customers, policies automatically. You can watch or continue working.",
+          "note": "Import takes 2-5 minutes depending on shop size (500 products ≈ 3 minutes)"
+        },
+        {
+          "number": "3",
+          "time": "15 seconds",
+          "title": "Activate widget",
+          "desc": "Go to Settings → General → 'Open in Shopify Theme Editor' → Activate 'ReplAInow Live Chat Widget' → Save",
+          "note": "Widget appears immediately in your shop (bottom right)"
+        },
+        {
+          "number": "4",
+          "time": "Optional",
+          "title": "Customizations (optional)",
+          "desc": "Upload logo, adjust colors, change AI name – all optional. AI works immediately even without customizations.",
+          "note": "Default setup is already professional and works perfectly"
+        }
+      ],
+      "total": "Total time: 60 seconds active work (+ 2-5min automatic import in background)",
+      "comparison": {
+        "replainow": "60 seconds until live",
+        "zendesk": "2-3 hours configuration + days for knowledge base",
+        "gorgias": "1-2 hours setup + weeks for automation rules",
+        "intercom": "3-4 hours for flows & bots"
+      }
+    },
+    "faq": {
+      "title": "Frequently Asked Questions About Support Automation",
+      "items": [
+        {
+          "question": "How accurate is the AI? Does it make mistakes?",
+          "answer": "The AI has access to your real Shopify data. It doesn't guess, it KNOWS the answers. For product questions, it checks real inventory. For tracking requests, it reads real order status. Error rate: < 5% (and these cases go to your team). You control the quality threshold."
+        },
+        {
+          "question": "What happens when AI can't answer?",
+          "answer": "The AI recognizes when a question is too complex or needs human empathy (e.g., complaints). In these cases, it automatically escalates to your team with full context. Your agent sees the entire conversation history and knows immediately what to do."
+        },
+        {
+          "question": "How much time do I really save?",
+          "answer": "With 100 tickets/day and 70% automation, you save ~17 hours/day. That equals 2.1 full-time agents. At $3,000/month per agent = $6,300/month saved. Minus ReplAInow costs ($99) = $6,201 net saved/month."
+        },
+        {
+          "question": "Do I need technical know-how?",
+          "answer": "No! Installation is as easy as any other Shopify app. One click install, activate widget, done. No programming, no configuration files, no technical training. If you can use Shopify, you can use ReplAInow."
+        },
+        {
+          "question": "What about multilingual support?",
+          "answer": "The AI automatically detects customer language and responds in 100+ languages. You no longer need multilingual agents ($4,500+/month per language). One German-speaking agent can operate the dashboard while AI responds in Spanish, French, Japanese, etc."
+        },
+        {
+          "question": "How quickly do I see results?",
+          "answer": "Immediately! After installation (60 seconds), AI is already answering customer questions. In the first week you'll see: Reduced response times (3 seconds instead of minutes), happier customers (instant answers), more relaxed team (less repetitive work)."
+        },
+        {
+          "question": "Can I control the automation?",
+          "answer": "Absolutely! You control the auto-send threshold (80-95%). Set it higher for conservative (more manual review) or lower for more automation. You see all AI responses in the dashboard and can always intervene."
+        },
+        {
+          "question": "Does this work for B2B or only B2C?",
+          "answer": "Both! AI works for B2C (many simple questions) and B2B (more complex requests, but repeatable patterns). B2B especially benefits from bulk-order support and technical product question automation."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Pricing: Automation for Every Shop",
+      "subtitle": "Transparent, scalable, no hidden costs",
+      "comparison": {
+        "title": "Cost Comparison: Traditional vs. Automated",
+        "traditional": {
+          "label": "Traditional Support",
+          "cost": "$9,000-15,000/month",
+          "breakdown": [
+            "3-5 full-time agents",
+            "Recruiting & training",
+            "Helpdesk software ($200-800/mo)",
+            "Overtime & coverage"
+          ]
+        },
+        "replainow": {
+          "label": "With ReplAInow",
+          "cost": "$19-399/month",
+          "breakdown": [
+            "AI automates 60-80%",
+            "1-2 agents for complex cases",
+            "No recruiting costs",
+            "Everything included"
+          ]
+        },
+        "savings": "85-95% cost savings"
+      },
+      "plans": [
+        {
+          "name": "Launch",
+          "price": "$19",
+          "period": "/month",
+          "responses": "200 AI responses included",
+          "ideal": "Ideal for 10-80 tickets/month",
+          "overage": "$0.05 per additional response",
+          "cta": "Try 14 days free"
+        },
+        {
+          "name": "Growth",
+          "price": "$49",
+          "period": "/month",
+          "badge": "MOST POPULAR",
+          "responses": "2,500 AI responses included",
+          "ideal": "Perfect for 100-600 tickets/month",
+          "overage": "$0.03 per additional response",
+          "cta": "Try 14 days free"
+        },
+        {
+          "name": "Scale",
+          "price": "$99",
+          "period": "/month",
+          "responses": "5,000 AI responses included",
+          "ideal": "Optimized for 600-1,500 tickets/month",
+          "overage": "$0.03 per additional response",
+          "cta": "Try 14 days free"
+        },
+        {
+          "name": "Ultimate",
+          "price": "$399",
+          "period": "/month",
+          "badge": "ENTERPRISE",
+          "responses": "40,000 AI responses included",
+          "ideal": "For 1,500+ tickets/month & enterprise teams",
+          "overage": "$0.02 per additional response",
+          "cta": "Try 14 days free"
+        }
+      ],
+      "allIncluded": {
+        "title": "Included in ALL plans:",
+        "features": [
+          "Live Chat Widget (AI + Human)",
+          "Mail Dashboard with AI email responses",
+          "Automatic Shopify import",
+          "100+ languages support",
+          "Unlimited team members",
+          "Order tracking & management",
+          "AI discount codes",
+          "Proactive chat triggers",
+          "Real-time synchronization",
+          "Customer journey tracking",
+          "VIP customer recognition"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Ready to Automate Your Support?",
+      "subtitle": "Join 24 successful Shopify merchants",
+      "stats": [
+        "4.9/5 stars",
+        "280+ reviews",
+        "60-80% automation"
+      ],
+      "primary": "Try 14 Days Free",
+      "secondary": "See Live Demo",
+      "guarantee": "No credit card required • 30-day money-back guarantee • Cancel anytime"
+    },
+    "related": {
+      "title": "Related Articles",
+      "articles": [
+        {
+          "title": "24/7 Customer Support for Shopify",
+          "url": "/24-7-customer-support-shopify",
+          "desc": "How to offer round-the-clock support without night shifts"
+        },
+        {
+          "title": "Multilingual Support for Shopify",
+          "url": "/multilingual-customer-support-shopify",
+          "desc": "100+ languages support without expensive translators"
+        },
+        {
+          "title": "Reduce Support Costs",
+          "url": "/reduce-shopify-support-costs",
+          "desc": "Detailed ROI analysis and cost optimization"
+        }
+      ]
+    }
+  }
+}
+

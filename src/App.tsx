@@ -43,6 +43,10 @@ const Impressum = lazy(() => import("./pages/Impressum"));
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+
+// Content Pages (SEO-optimized killer content!)
+const ShopifyKundensupportAutomatisieren = lazy(() => import("./pages/content/ShopifyKundensupportAutomatisieren"));
+
 const SitemapXML = lazy(() => import("./pages/SitemapXML"));
 const RobotsTXT = lazy(() => import("./pages/RobotsTXT"));
 const LLMFactsJSON = lazy(() => import("./pages/LLMFactsJSON"));
@@ -97,6 +101,9 @@ const AppShell = () => {
           <Route path="/en" element={<Index />} />
           <Route path="/fr" element={<Index />} />
           <Route path="/es" element={<Index />} />
+          {/* Content Pages */}
+          <Route path="/shopify-kundensupport-automatisieren" element={<ShopifyKundensupportAutomatisieren />} />
+          
           <Route path="/sitemap.xml" element={<SitemapXML />} />
           <Route path="/robots.txt" element={<RobotsTXT />} />
           <Route

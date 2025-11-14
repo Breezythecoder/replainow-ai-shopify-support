@@ -11,21 +11,25 @@ import deCommon from './locales/de/common.json';
 import deMarketing from './locales/de/marketing.json';
 import deSEO from './locales/de/seo.json';
 import deLegal from './locales/de/legal.json';
+import deContent from './locales/de/content.json';
 
 import enCommon from './locales/en/common.json';
 import enMarketing from './locales/en/marketing.json';
 import enSEO from './locales/en/seo.json';
 import enLegal from './locales/en/legal.json';
+import enContent from './locales/en/content.json';
 
 import esCommon from './locales/es/common.json';
 import esMarketing from './locales/es/marketing.json';
 import esSEO from './locales/es/seo.json';
 import esLegal from './locales/es/legal.json';
+import esContent from './locales/es/content.json';
 
 import frCommon from './locales/fr/common.json';
 import frMarketing from './locales/fr/marketing.json';
 import frSEO from './locales/fr/seo.json';
 import frLegal from './locales/fr/legal.json';
+import frContent from './locales/fr/content.json';
 
 /**
  * Consolidated translations by locale
@@ -36,24 +40,28 @@ export const translations: Record<SupportedLocale, LocaleTranslations> = {
     marketing: deMarketing,
     seo: deSEO,
     legal: deLegal,
+    content: deContent,
   },
   en: {
     common: enCommon,
     marketing: enMarketing,
     seo: enSEO,
     legal: enLegal,
+    content: enContent,
   },
   es: {
     common: esCommon,
     marketing: esMarketing,
     seo: esSEO,
     legal: esLegal,
+    content: esContent,
   },
   fr: {
     common: frCommon,
     marketing: frMarketing,
     seo: frSEO,
     legal: frLegal,
+    content: frContent,
   },
 };
 

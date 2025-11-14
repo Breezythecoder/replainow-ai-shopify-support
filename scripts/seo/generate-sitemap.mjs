@@ -48,6 +48,17 @@ const languageSitemaps = [
     ]
   },
   {
+    name: 'content',
+    urls: [
+      {
+        loc: `${baseUrl}/shopify-kundensupport-automatisieren`,
+        lastmod: currentDate,
+        changefreq: 'monthly',
+        priority: '0.9'
+      }
+    ]
+  },
+  {
     name: 'legal',
     urls: [
       {

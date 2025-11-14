@@ -1,0 +1,558 @@
+{
+  "automatisierung": {
+    "meta": {
+      "title": "Shopify Kundensupport automatisieren 2025 | 60-80% weniger Aufwand",
+      "description": "60-80% deines Shopify Kundensupports automatisch bearbeiten. KI beantwortet Produktfragen, Tracking-Anfragen & mehr in 3 Sekunden. 100+ Sprachen. Ab $19/Monat. 14 Tage kostenlos testen.",
+      "keywords": "Shopify Kundensupport automatisieren, KI Kundensupport Shopify, automatischer Support Shopify, Shopify Support KI, Kundensupport automatisierung"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "Kundensupport automatisieren"
+    },
+    "hero": {
+      "badge": "🚀 SUPPORT AUTOMATION 2025",
+      "title": "Shopify Kundensupport automatisieren",
+      "subtitle": "60-80% deiner Support-Tickets automatisch bearbeiten – mit KI, die deinen Shop wirklich kennt",
+      "stats": [
+        {
+          "number": "60-80%",
+          "label": "Automatisierung"
+        },
+        {
+          "number": "3 Sek",
+          "label": "Antwortzeit"
+        },
+        {
+          "number": "100+",
+          "label": "Sprachen"
+        },
+        {
+          "number": "60 Sek",
+          "label": "Setup-Zeit"
+        }
+      ],
+      "cta": {
+        "primary": "14 Tage kostenlos testen",
+        "secondary": "Live Demo ansehen"
+      }
+    },
+    "toc": {
+      "title": "Inhalt",
+      "items": [
+        "Das Problem: Support frisst Zeit",
+        "Die Lösung: Intelligente Automatisierung",
+        "Wie KI-Automatisierung funktioniert",
+        "Was wird automatisiert? (Konkrete Beispiele)",
+        "ROI-Rechnung: Zeit & Kosten sparen",
+        "Setup in 60 Sekunden",
+        "Häufige Fragen"
+      ]
+    },
+    "problem": {
+      "title": "Das Problem: Support frisst Zeit & Geld",
+      "subtitle": "Die Realität für Shopify-Händler ohne Automatisierung",
+      "points": [
+        {
+          "title": "Repetitive Fragen dominieren",
+          "desc": "70-80% aller Support-Anfragen sind Standardfragen: 'Wo ist meine Bestellung?', 'Habt ihr Größe M?', 'Wie ist die Rückgaberichtlinie?' – immer und immer wieder die gleichen Fragen.",
+          "icon": "repeat"
+        },
+        {
+          "title": "Support-Team an der Belastungsgrenze",
+          "desc": "Ein Agent kann 20-30 Tickets pro Tag bearbeiten. Bei 100 Tickets täglich brauchst du 3-4 Vollzeit-Mitarbeiter. Kosten: $9,000-12,000 pro Monat nur für Gehälter.",
+          "icon": "users"
+        },
+        {
+          "title": "Nachts & Wochenende: Stille",
+          "desc": "Kunden kaufen auch um 23:00 Uhr und sonntags. Ohne Support gehen Verkäufe verloren. Nachtschichten sind teuer ($4,000+/Monat pro Agent) und schwer zu besetzen.",
+          "icon": "moon"
+        },
+        {
+          "title": "Internationale Kunden = Sprachbarrieren",
+          "desc": "Dein Shop verkauft in 5 Länder? Du brauchst Support in 5 Sprachen. Mehrsprachige Agents kosten $4,500-6,000/Monat pro Sprache.",
+          "icon": "globe"
+        },
+        {
+          "title": "Skalierung = Exponential teurerer",
+          "desc": "Wächst dein Shop von 50 auf 200 Tickets/Tag? Du musst von 2 auf 8 Agents skalieren. Support-Kosten steigen von $6,000 auf $24,000/Monat.",
+          "icon": "trending-up"
+        }
+      ],
+      "realityCheck": {
+        "title": "Die harte Realität:",
+        "calculation": [
+          "100 Tickets pro Tag × 15 Minuten/Ticket = 25 Stunden/Tag",
+          "25 Stunden ÷ 8 Stunden/Agent = 3,1 Vollzeit-Agents nötig",
+          "3 Agents × $3,000/Monat = $9,000 monatliche Kosten",
+          "Plus: Recruiting, Training, Urlaub, Krankheit..."
+        ],
+        "conclusion": "Support ist einer der größten Kostenfaktoren im E-Commerce."
+      }
+    },
+    "solution": {
+      "title": "Die Lösung: Intelligente Support-Automatisierung mit KI",
+      "subtitle": "60-80% deiner Tickets automatisch bearbeiten – ohne Qualitätsverlust",
+      "intro": "Was wäre, wenn eine KI 60-80% deiner Support-Tickets automatisch, sofort und in jeder Sprache beantworten könnte? Und das in 3 Sekunden statt 15 Minuten? Genau das macht ReplAInow.",
+      "how": {
+        "title": "Wie es funktioniert:",
+        "steps": [
+          {
+            "number": "1",
+            "title": "KI kennt deinen Shop automatisch",
+            "desc": "Nach der Installation importiert ReplAInow alle Produkte, Bestellungen, Kunden, Richtlinien und Shop-Seiten aus Shopify. Automatisch. Keine Konfiguration nötig.",
+            "detail": "Die KI weiß: Welche Produkte du hast, was auf Lager ist, welche Preise gelten, welche Rückgaberichtlinie du hast, wo Bestellungen gerade sind."
+          },
+          {
+            "number": "2",
+            "title": "Kunde stellt Frage",
+            "desc": "Kunde schreibt im Live-Chat oder per E-Mail: 'Habt ihr das blaue Kleid noch in Größe M?'",
+            "detail": "Die Frage kommt in Echtzeit bei ReplAInow an."
+          },
+          {
+            "number": "3",
+            "title": "KI analysiert & antwortet",
+            "desc": "Die KI versteht die Frage, prüft deinen Lagerbestand in Echtzeit, und antwortet: 'Ja! Das blaue Sommerkleid ist in Größe M verfügbar ($49, auf Lager). Möchtest du es bestellen?'",
+            "detail": "Mit Produktbild, Preis, und 'Jetzt kaufen'-Button. In 3 Sekunden."
+          },
+          {
+            "number": "4",
+            "title": "Dein Team bleibt frei",
+            "desc": "Die KI hat das Ticket gelöst. Dein Agent hat nichts machen müssen. Er kann sich auf komplexe Fälle konzentrieren.",
+            "detail": "Ergebnis: 15 Minuten gespart. Bei 80 solchen Tickets/Tag = 20 Stunden/Tag gespart."
+          }
+        ]
+      },
+      "automation": {
+        "title": "60-80% Automatisierungsrate",
+        "subtitle": "Was bedeutet das konkret?",
+        "explanation": "Von 100 Tickets pro Tag bearbeitet die KI 60-80 automatisch. Nur 20-40 Tickets brauchen menschliche Aufmerksamkeit. Dein Team macht nur noch die wichtigen Tickets, die echte Expertise brauchen.",
+        "breakdown": {
+          "automated": {
+            "percentage": "60-80%",
+            "label": "KI bearbeitet automatisch",
+            "examples": [
+              "Produktfragen (Größe, Farbe, Lager)",
+              "Tracking-Anfragen ('Wo ist meine Bestellung?')",
+              "Richtlinien-Fragen (Rückgabe, Versand)",
+              "FAQ-Antworten",
+              "Öffnungszeiten, Kontaktdaten",
+              "Einfache Bestelländerungen"
+            ]
+          },
+          "human": {
+            "percentage": "20-40%",
+            "label": "Team bearbeitet",
+            "examples": [
+              "Beschwerden (Empathie nötig)",
+              "Komplexe Rückerstattungen",
+              "Custom Orders",
+              "VIP-Kunden",
+              "Eskalationen",
+              "Spezielle Anfragen"
+            ]
+          }
+        }
+      }
+    },
+    "examples": {
+      "title": "Was wird automatisiert? Konkrete Beispiele",
+      "subtitle": "Echte Szenarien aus Shopify-Shops",
+      "cases": [
+        {
+          "category": "Produktfragen",
+          "customerMessage": "Habt ihr das weiße T-Shirt noch in XL?",
+          "aiResponse": "Ja! Das Premium Baumwoll-T-Shirt in Weiß ist in XL verfügbar. Preis: $29. Auf Lager: 15 Stück. Möchtest du es bestellen?",
+          "aiAction": "[Zeigt Produktkarte mit Bild, Preis, 'Jetzt kaufen'-Button]",
+          "timeSaved": "Agent hätte 5 Minuten gebraucht (Katalog durchsuchen, Lager prüfen, antworten)"
+        },
+        {
+          "category": "Sendungsverfolgung",
+          "customerMessage": "Wo ist meine Bestellung #1234?",
+          "aiResponse": "Deine Bestellung #1234 wurde am 10. November versendet mit DHL. Voraussichtliche Lieferung: 12. November. Tracking: DHL1234567890",
+          "aiAction": "[Zeigt Tracking-Karte mit DHL-Logo, Status, Tracking-Link]",
+          "timeSaved": "Agent hätte 3 Minuten gebraucht (Bestellung suchen, Status prüfen, Tracking kopieren)"
+        },
+        {
+          "category": "Rückgaberichtlinie",
+          "customerMessage": "Kann ich das zurückgeben wenn es nicht passt?",
+          "aiResponse": "Ja! Wir akzeptieren Rücksendungen innerhalb von 30 Tagen nach Erhalt. Die Artikel müssen ungetragen und mit Etikett sein. Versandkosten für Rücksendungen trägt der Kunde. Rückerstattung erfolgt innerhalb von 5-7 Werktagen nach Erhalt.",
+          "aiAction": "[Zitiert echte Rückgaberichtlinie aus Shopify]",
+          "timeSaved": "Agent hätte 2 Minuten gebraucht (Richtlinie nachlesen, antworten)"
+        },
+        {
+          "category": "Internationale Anfragen",
+          "customerMessage": "¿Envían a España? ¿Cuánto cuesta?",
+          "aiResponse": "¡Sí! Enviamos a España. El costo de envío es de €8.90. Tiempo de entrega: 5-7 días laborables. Envío gratis para pedidos superiores a €50.",
+          "aiAction": "[Automatische Spracherkennung → Antwort auf Spanisch]",
+          "timeSaved": "Agent hätte 10 Minuten gebraucht (Übersetzer, Versandinfo suchen) ODER du bräuchtest spanischen Agent ($4,500/Monat)"
+        },
+        {
+          "category": "Komplexer Fall (An Agent)",
+          "customerMessage": "Ich habe das falsche Produkt erhalten und möchte Geld zurück!",
+          "aiResponse": "Das tut mir sehr leid! Ich leite dich an meinen Kollegen weiter, der sich sofort um die Rückerstattung kümmert. Er wird dich innerhalb von 2 Stunden kontaktieren.",
+          "aiAction": "[Eskaliert an Agent mit vollständigem Kontext: Bestellnummer, Produkt, Kundenemotio: frustriert]",
+          "timeSaved": "KI erkennt: Zu komplex → Menschliche Empathie nötig. Agent bekommt ALLE Infos sofort."
+        }
+      ],
+      "summary": {
+        "title": "Zusammenfassung der Beispiele",
+        "automated": "4 von 5 Tickets (80%) → KI bearbeitet",
+        "human": "1 von 5 Tickets (20%) → Agent bearbeitet",
+        "timeSavings": "20 Minuten gespart bei 5 Tickets = 4 Minuten/Ticket im Durchschnitt"
+      }
+    },
+    "howItWorks": {
+      "title": "Wie KI-Automatisierung funktioniert (Technisch erklärt)",
+      "subtitle": "Der Prozess hinter den Kulissen",
+      "step1": {
+        "title": "Automatischer Daten-Import",
+        "desc": "Nach Installation importiert ReplAInow automatisch:",
+        "items": [
+          "Alle Produkte (Titel, Beschreibung, Varianten, Preise, Lagerbestände, Bilder)",
+          "Bestellungen der letzten 60 Tage (Status, Tracking, Kundeninfo)",
+          "Kundenprofile (Name, E-Mail, Bestellhistorie, VIP-Status)",
+          "Shop-Richtlinien (Rückgabe, Versand, Datenschutz, AGB)",
+          "Inhaltsseiten (FAQs, Größentabellen, Blog-Artikel)"
+        ],
+        "technical": "Verwendet: Shopify GraphQL API, Webhooks für Echtzeit-Updates, automatische Synchronisation",
+        "time": "Import dauert: 2-5 Minuten (je nach Shop-Größe)"
+      },
+      "step2": {
+        "title": "KI versteht Kontext",
+        "desc": "Wenn Kunde schreibt, analysiert KI:",
+        "items": [
+          "Frage-Typ (Produktfrage, Tracking, Richtlinie, Beschwerde)",
+          "Kundenhistorie (Bestellungen, VIP-Status, frühere Gespräche)",
+          "Shop-Kontext (Lagerbestand, Versandstatus, Richtlinien)",
+          "Sprache (automatisch erkannt aus Nachricht)",
+          "Emotion (positiv, neutral, frustriert)"
+        ],
+        "technical": "Verwendet: GPT-4 für Natural Language Understanding, Embedding-basierte Produktsuche",
+        "time": "Analyse dauert: < 1 Sekunde"
+      },
+      "step3": {
+        "title": "KI generiert Antwort",
+        "desc": "Basierend auf Analyse erstellt KI:",
+        "items": [
+          "Präzise Antwort mit echten Shop-Daten",
+          "Visuelle Elemente (Produktkarten, Tracking-Karten)",
+          "Handlungsvorschläge (Checkout-Link, Rabattcode)",
+          "Professioneller Ton (freundlich, hilfreich)",
+          "Sprachlich perfekt (in Kundensprache)"
+        ],
+        "technical": "Verwendet: GPT-4 für Text-Generierung, Shopify API für Echtzeit-Daten",
+        "time": "Generierung dauert: 1-2 Sekunden"
+      },
+      "step4": {
+        "title": "Qualitäts-Check",
+        "desc": "KI bewertet eigene Antwort (0-100 Score):",
+        "items": [
+          "Antwortqualität (Ist Frage vollständig beantwortet?)",
+          "Kontext-Abdeckung (Sind alle Kundeninfos berücksichtigt?)",
+          "Informationsgenauigkeit (Stimmen Daten aus Shopify?)",
+          "Sprachfluss (Klingt es natürlich?)",
+          "Gesamt-Konfidenz (Wie sicher ist KI?)"
+        ],
+        "decision": {
+          "autoSend": "Score 90-100 → Automatisch senden",
+          "review": "Score 80-89 → In Review Queue (optional)",
+          "human": "Score < 80 → Agent muss schreiben"
+        },
+        "time": "Scoring dauert: < 0.5 Sekunden"
+      },
+      "step5": {
+        "title": "Kunde erhält Antwort",
+        "desc": "Gesamt-Zeit: 3 Sekunden vom Frage bis Antwort",
+        "comparison": {
+          "withAI": "3 Sekunden (automatisch)",
+          "withoutAI": "15-45 Minuten (Agent muss Katalog durchsuchen, Lager prüfen, antworten)"
+        },
+        "impact": "60x schneller als manueller Support"
+      }
+    },
+    "roi": {
+      "title": "ROI-Rechnung: Zeit & Kosten massiv sparen",
+      "subtitle": "Konkrete Zahlen für deinen Shop",
+      "calculator": {
+        "title": "Berechne deine Ersparnis",
+        "inputs": {
+          "ticketsPerDay": "Tickets pro Tag",
+          "agentCost": "Kosten pro Agent/Monat",
+          "automationRate": "Automatisierungsrate"
+        },
+        "defaultValues": {
+          "ticketsPerDay": "100",
+          "agentCost": "$3,000",
+          "automationRate": "70%"
+        }
+      },
+      "example": {
+        "title": "Beispiel-Rechnung: Mittelgroßer Shopify-Shop",
+        "before": {
+          "title": "OHNE ReplAInow",
+          "tickets": "100 Tickets/Tag = 3,000 Tickets/Monat",
+          "timePerTicket": "15 Minuten/Ticket im Durchschnitt",
+          "totalTime": "3,000 × 15min = 750 Stunden/Monat",
+          "agentsNeeded": "750h ÷ 160h/Monat = 4.7 Agents",
+          "roundedAgents": "5 Vollzeit-Agents nötig",
+          "cost": "5 × $3,000 = $15,000/Monat",
+          "annualCost": "$180,000/Jahr"
+        },
+        "after": {
+          "title": "MIT ReplAInow",
+          "automatedTickets": "70% automatisiert = 70 Tickets/Tag von KI",
+          "humanTickets": "30% manuell = 30 Tickets/Tag von Agents",
+          "totalTime": "30 × 15min = 450min = 7.5h/Tag = 150h/Monat",
+          "agentsNeeded": "150h ÷ 160h = 0.94 Agents",
+          "roundedAgents": "1 Vollzeit-Agent nötig",
+          "agentCost": "1 × $3,000 = $3,000/Monat",
+          "aiCost": "ReplAInow Scale Plan: $99/Monat",
+          "totalCost": "$3,099/Monat",
+          "annualCost": "$37,188/Jahr"
+        },
+        "savings": {
+          "monthly": "$15,000 - $3,099 = $11,901 gespart/Monat",
+          "annual": "$180,000 - $37,188 = $142,812 gespart/Jahr",
+          "percentage": "79% Kosteneinsparung",
+          "agents": "4 Vollzeit-Stellen eingespart"
+        }
+      },
+      "hiddenSavings": {
+        "title": "Versteckte Einsparungen (oft vergessen!):",
+        "items": [
+          {
+            "title": "Recruiting-Kosten",
+            "before": "$2,000-5,000 pro neuem Agent",
+            "after": "$0 (keine neuen Agents nötig)"
+          },
+          {
+            "title": "Training & Onboarding",
+            "before": "$3,000-8,000 pro Agent (4-6 Wochen)",
+            "after": "$0 (KI braucht kein Training)"
+          },
+          {
+            "title": "Urlaubsvertretung",
+            "before": "$4,000-6,000/Jahr pro Agent",
+            "after": "$0 (KI macht nie Urlaub)"
+          },
+          {
+            "title": "Krankheitstage",
+            "before": "$2,000-3,000/Jahr pro Agent",
+            "after": "$0 (KI wird nie krank)"
+          },
+          {
+            "title": "Überstunden",
+            "before": "$500-2,000/Monat bei Spitzenzeiten",
+            "after": "$0 (KI skaliert instant)"
+          },
+          {
+            "title": "Helpdesk-Software",
+            "before": "$200-800/Monat (Zendesk, Gorgias)",
+            "after": "$0 (in ReplAInow inklusive)"
+          }
+        ],
+        "totalHiddenSavings": "$15,000-30,000 zusätzlich/Jahr"
+      },
+      "realMerchant": {
+        "title": "Echte Händler-Ergebnisse:",
+        "quote": "Wir haben von 4 Support-Agents auf 1 Agent + ReplAInow reduziert. Sparen jetzt $9,000/Monat bei besserer Antwortzeit. ROI break-even nach 2 Wochen!",
+        "merchant": "Thomas K., ElectroMax (Elektronik-Shop, 150 Tickets/Tag)"
+      }
+    },
+    "setup": {
+      "title": "Setup in 60 Sekunden – Ehrlich!",
+      "subtitle": "Kein Techniker nötig. Kein Training erforderlich. Einfach installieren und loslegen.",
+      "steps": [
+        {
+          "number": "1",
+          "time": "10 Sekunden",
+          "title": "App installieren",
+          "desc": "Öffne Shopify App Store → Suche 'ReplAInow' → Klick 'Installieren' → Bestätige Berechtigungen",
+          "note": "Benötigte Berechtigungen: Produkte lesen, Bestellungen lesen (nur das Nötigste)"
+        },
+        {
+          "number": "2",
+          "time": "2-5 Minuten",
+          "title": "Automatischer Import läuft",
+          "desc": "ReplAInow importiert jetzt alle deine Produkte, Bestellungen, Kunden, Richtlinien automatisch. Du kannst zuschauen oder weitermachen.",
+          "note": "Import dauert 2-5 Minuten je nach Shop-Größe (500 Produkte ≈ 3 Minuten)"
+        },
+        {
+          "number": "3",
+          "time": "15 Sekunden",
+          "title": "Widget aktivieren",
+          "desc": "Gehe zu Einstellungen → Allgemein → 'Im Shopify Theme Editor öffnen' → Aktiviere 'ReplAInow Live Chat Widget' → Speichern",
+          "note": "Widget erscheint sofort in deinem Shop (rechts unten)"
+        },
+        {
+          "number": "4",
+          "time": "Optional",
+          "title": "Anpassungen (optional)",
+          "desc": "Logo hochladen, Farben anpassen, KI-Namen ändern – alles optional. Die KI funktioniert sofort auch ohne Anpassungen.",
+          "note": "Standard-Setup ist bereits professionell und funktioniert perfekt"
+        }
+      ],
+      "total": "Gesamt-Zeit: 60 Sekunden aktive Arbeit (+ 2-5min automatischer Import im Hintergrund)",
+      "comparison": {
+        "replainow": "60 Sekunden bis live",
+        "zendesk": "2-3 Stunden Konfiguration + Tage für Knowledge Base",
+        "gorgias": "1-2 Stunden Setup + Wochen für Automation Rules",
+        "intercom": "3-4 Stunden für Flows & Bots"
+      }
+    },
+    "faq": {
+      "title": "Häufige Fragen zur Support-Automatisierung",
+      "items": [
+        {
+          "question": "Wie genau ist die KI? Macht sie Fehler?",
+          "answer": "Die KI hat Zugriff auf deine echten Shopify-Daten. Sie rät nicht, sie WEISS die Antworten. Bei Produktfragen prüft sie echten Lagerbestand. Bei Tracking-Anfragen liest sie echten Bestellstatus. Fehlerquote: < 5% (und diese Fälle gehen an dein Team). Du kontrollierst den Qualitäts-Schwellenwert."
+        },
+        {
+          "question": "Was passiert wenn die KI nicht antworten kann?",
+          "answer": "Die KI erkennt, wenn eine Frage zu komplex ist oder menschliche Empathie braucht (z.B. Beschwerden). In diesen Fällen eskaliert sie automatisch an dein Team mit vollständigem Kontext. Dein Agent sieht die ganze Gesprächshistorie und weiß sofort was zu tun ist."
+        },
+        {
+          "question": "Wie viel Zeit spare ich wirklich?",
+          "answer": "Bei 100 Tickets/Tag und 70% Automatisierung sparst du ~17 Stunden/Tag. Das entspricht 2.1 Vollzeit-Agents. Bei $3,000/Monat pro Agent = $6,300/Monat gespart. Minus ReplAInow-Kosten ($99) = $6,201 netto gespart/Monat."
+        },
+        {
+          "question": "Brauche ich technisches Know-how?",
+          "answer": "Nein! Installation ist so einfach wie jede andere Shopify-App. Ein Klick installieren, Widget aktivieren, fertig. Keine Programmierung, keine Konfigurationsdateien, kein technisches Training. Wenn du Shopify bedienen kannst, kannst du ReplAInow bedienen."
+        },
+        {
+          "question": "Was ist mit mehrsprachigem Support?",
+          "answer": "Die KI erkennt automatisch die Kundensprache und antwortet in 100+ Sprachen. Du brauchst keine mehrsprachigen Agents mehr ($4,500+/Monat pro Sprache). Ein deutschsprachiger Agent kann das Dashboard bedienen, während die KI auf Spanisch, Französisch, Japanisch etc. antwortet."
+        },
+        {
+          "question": "Wie schnell sehe ich Ergebnisse?",
+          "answer": "Sofort! Nach Installation (60 Sekunden) beantwortet die KI bereits Kundenfragen. In der ersten Woche siehst du: Reduzierte Antwortzeiten (3 Sekunden statt Minuten), zufriedenere Kunden (instant Antworten), entspannteres Team (weniger repetitive Arbeit)."
+        },
+        {
+          "question": "Kann ich die Automatisierung kontrollieren?",
+          "answer": "Absolut! Du steuerst den Auto-Send-Schwellenwert (80-95%). Setze ihn höher für konservativ (mehr manuelle Prüfung) oder niedriger für mehr Automatisierung. Du siehst alle KI-Antworten im Dashboard und kannst jederzeit eingreifen."
+        },
+        {
+          "question": "Funktioniert das auch für B2B oder nur B2C?",
+          "answer": "Beides! Die KI funktioniert für B2C (viele einfache Fragen) und B2B (komplexere Anfragen, aber wiederholbare Muster). B2B profitiert besonders von Bulk-Order-Support und technischen Produktfragen-Automation."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "Pricing: Automatisierung für jeden Shop",
+      "subtitle": "Transparent, skalierbar, ohne versteckte Kosten",
+      "comparison": {
+        "title": "Kosten-Vergleich: Traditionell vs. Automatisiert",
+        "traditional": {
+          "label": "Traditioneller Support",
+          "cost": "$9,000-15,000/Monat",
+          "breakdown": [
+            "3-5 Vollzeit-Agents",
+            "Recruiting & Training",
+            "Helpdesk-Software ($200-800/mo)",
+            "Überstunden & Vertretungen"
+          ]
+        },
+        "replainow": {
+          "label": "Mit ReplAInow",
+          "cost": "$19-399/Monat",
+          "breakdown": [
+            "KI automatisiert 60-80%",
+            "1-2 Agents für komplexe Fälle",
+            "Keine Recruiting-Kosten",
+            "Alles inklusive"
+          ]
+        },
+        "savings": "85-95% Kostenersparnis"
+      },
+      "plans": [
+        {
+          "name": "Launch",
+          "price": "$19",
+          "period": "/Monat",
+          "responses": "200 AI-Antworten inklusive",
+          "ideal": "Ideal für 10-80 Tickets/Monat",
+          "overage": "$0.05 pro zusätzliche Antwort",
+          "cta": "14 Tage kostenlos testen"
+        },
+        {
+          "name": "Growth",
+          "price": "$49",
+          "period": "/Monat",
+          "badge": "BELIEBTESTE WAHL",
+          "responses": "2,500 AI-Antworten inklusive",
+          "ideal": "Perfekt für 100-600 Tickets/Monat",
+          "overage": "$0.03 pro zusätzliche Antwort",
+          "cta": "14 Tage kostenlos testen"
+        },
+        {
+          "name": "Scale",
+          "price": "$99",
+          "period": "/Monat",
+          "responses": "5,000 AI-Antworten inklusive",
+          "ideal": "Optimiert für 600-1,500 Tickets/Monat",
+          "overage": "$0.03 pro zusätzliche Antwort",
+          "cta": "14 Tage kostenlos testen"
+        },
+        {
+          "name": "Ultimate",
+          "price": "$399",
+          "period": "/Monat",
+          "badge": "ENTERPRISE",
+          "responses": "40,000 AI-Antworten inklusive",
+          "ideal": "Für 1,500+ Tickets/Monat & Enterprise-Teams",
+          "overage": "$0.02 pro zusätzliche Antwort",
+          "cta": "14 Tage kostenlos testen"
+        }
+      ],
+      "allIncluded": {
+        "title": "In ALLEN Plänen inklusive:",
+        "features": [
+          "Live Chat Widget (KI + Mensch)",
+          "Mail Dashboard mit KI E-Mail-Antworten",
+          "Automatischer Shopify Import",
+          "100+ Sprachen Support",
+          "Unbegrenzt Teammitglieder",
+          "Bestellverfolgung & Verwaltung",
+          "KI Rabattcodes",
+          "Proaktive Chat-Trigger",
+          "Echtzeit-Synchronisation",
+          "Customer Journey Tracking",
+          "VIP-Kunden-Erkennung"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Bereit, deinen Support zu automatisieren?",
+      "subtitle": "Schließe dich 24 erfolgreichen Shopify-Händlern an",
+      "stats": [
+        "4.9/5 Sterne",
+        "280+ Bewertungen",
+        "60-80% Automatisierung"
+      ],
+      "primary": "14 Tage kostenlos testen",
+      "secondary": "Live Demo ansehen",
+      "guarantee": "Keine Kreditkarte erforderlich • 30-Tage Geld-zurück-Garantie • Jederzeit kündbar"
+    },
+    "related": {
+      "title": "Weiterführende Artikel",
+      "articles": [
+        {
+          "title": "24/7 Kundensupport für Shopify",
+          "url": "/24-7-kundensupport-shopify",
+          "desc": "Wie du rund um die Uhr Support anbietest ohne Nachtschichten"
+        },
+        {
+          "title": "Mehrsprachiger Support für Shopify",
+          "url": "/mehrsprachiger-kundensupport-shopify",
+          "desc": "100+ Sprachen Support ohne teure Übersetzer"
+        },
+        {
+          "title": "Support Kosten senken",
+          "url": "/shopify-support-kosten-senken",
+          "desc": "Detaillierte ROI-Analyse und Kostenoptimierung"
+        }
+      ]
+    }
+  }
+}
+

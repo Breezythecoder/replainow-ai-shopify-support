@@ -148,6 +148,7 @@ export interface LocaleTranslations {
   marketing: TranslationMarketing;
   seo: TranslationSEO;
   legal: TranslationLegal;
+  content: any; // Content pages (SEO articles, guides, etc.)
 }
 
 /**
