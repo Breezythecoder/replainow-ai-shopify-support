@@ -1,5 +1,5 @@
-import ModernNavbar from "@/components/marketing/PremiumNavbar";
-import Footer from "@/components/marketing/UltraFooter";
+import PremiumNavbar from "@/components/marketing/PremiumNavbar";
+import UltraFooter from "@/components/marketing/UltraFooter";
 import SEO from "@/components/SEO";
 import { useTranslation } from "@/i18n";
 
@@ -21,7 +21,7 @@ const SecurityStatement = () => {
           <article className="space-y-6 leading-relaxed">
             <header>
               <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">{t('legal.security.title')}</h1>
-              <p className="text-sm text-muted-foreground">{t('legal.lastUpdated', { date: lastUpdated })}</p>
+              <p className="text-sm text-muted-foreground">{t('legal.lastUpdated')}</p>
             </header>
 
             <section>

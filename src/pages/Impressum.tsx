@@ -1,5 +1,5 @@
-import ModernNavbar from "@/components/marketing/PremiumNavbar";
-import Footer from "@/components/marketing/UltraFooter";
+import PremiumNavbar from "@/components/marketing/PremiumNavbar";
+import UltraFooter from "@/components/marketing/UltraFooter";
 import SEO from "@/components/SEO";
 import { useTranslation } from "@/i18n";
 
@@ -15,7 +15,7 @@ const Impressum = () => {
         description={t('legal.impressum.metaDescription')}
         path="/impressum"
       />
-      <ModernNavbar />
+      <PremiumNavbar />
       <main>
         <section className="container mx-auto max-w-[800px] px-4 py-12 md:py-16">
           <article className="space-y-6 leading-relaxed">
@@ -24,7 +24,7 @@ const Impressum = () => {
                 {t('legal.impressum.title')}
               </h1>
               <p className="text-sm text-muted-foreground">
-                {t('legal.lastUpdated', { date: lastUpdated })}
+                {t('legal.lastUpdated')}
               </p>
             </header>
 
@@ -54,7 +54,7 @@ const Impressum = () => {
           </article>
         </section>
       </main>
-      <Footer />
+      <UltraFooter />
     </div>
   );
 };

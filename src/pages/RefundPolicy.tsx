@@ -1,6 +1,6 @@
 import React from "react";
-import ModernNavbar from "@/components/marketing/PremiumNavbar";
-import Footer from "@/components/marketing/UltraFooter";
+import PremiumNavbar from "@/components/marketing/PremiumNavbar";
+import UltraFooter from "@/components/marketing/UltraFooter";
 import SEO from "@/components/SEO";
 import { useTranslation } from "@/i18n";
 
@@ -16,13 +16,13 @@ const RefundPolicy = () => {
         description={t('legal.refund.metaDescription')}
         path="/refund"
       />
-      <ModernNavbar />
+      <PremiumNavbar />
       <main>
         <section className="container mx-auto max-w-[800px] px-4 py-12 md:py-16">
           <article className="space-y-6 leading-relaxed">
             <header>
               <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">{t('legal.refund.title')}</h1>
-              <p className="text-sm text-muted-foreground">{t('legal.lastUpdated', { date: lastUpdated })}</p>
+              <p className="text-sm text-muted-foreground">{t('legal.lastUpdated')}</p>
             </header>
 
             <section>
@@ -81,7 +81,7 @@ const RefundPolicy = () => {
           </article>
         </section>
       </main>
-      <Footer />
+      <UltraFooter />
     </div>
   );
 };
