@@ -75,6 +75,11 @@ const UltraFooter = () => {
             <h3 className="font-bold mb-4 text-gray-900">Ressourcen</h3>
             <ul className="space-y-3">
               <li>
+                <a href="/shopify-kundensupport-automatisieren" className="text-gray-700 hover:text-purple-700 transition-colors">
+                  Support automatisieren
+                </a>
+              </li>
+              <li>
                 <a href="#faq" className="text-gray-700 hover:text-purple-700 transition-colors">
                   FAQ
                 </a>
