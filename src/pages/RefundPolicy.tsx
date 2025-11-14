@@ -1,19 +1,28 @@
 import React from "react";
 import ModernNavbar from "@/components/marketing/PremiumNavbar";
 import Footer from "@/components/marketing/UltraFooter";
+import SEO from "@/components/SEO";
+import { useTranslation } from "@/i18n";
+
+const lastUpdated = "2025-11-14";
 
 const RefundPolicy = () => {
-  const lastUpdated = "September 27, 2025";
-
+  const { t } = useTranslation();
+  
   return (
-    <>
-      <PremiumNavbar />
+    <div>
+      <SEO
+        title={`${t('legal.refund.title')} | ReplAInow`}
+        description={t('legal.refund.metaDescription')}
+        path="/refund"
+      />
+      <ModernNavbar />
       <main>
         <section className="container mx-auto max-w-[800px] px-4 py-12 md:py-16">
           <article className="space-y-6 leading-relaxed">
             <header>
-              <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">Refund Policy</h1>
-              <p className="text-sm text-muted-foreground">Last updated: {lastUpdated}</p>
+              <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">{t('legal.refund.title')}</h1>
+              <p className="text-sm text-muted-foreground">{t('legal.lastUpdated', { date: lastUpdated })}</p>
             </header>
 
             <section>
@@ -72,8 +81,8 @@ const RefundPolicy = () => {
           </article>
         </section>
       </main>
-      <UltraFooter />
-    </>
+      <Footer />
+    </div>
   );
 };
 

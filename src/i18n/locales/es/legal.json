@@ -1,27 +1,27 @@
 {
+  "lastUpdated": "Última actualización: {{date}}",
   "privacy": {
-    "title": "Privacy Policy",
-    "lastUpdated": "Last updated: 2024"
+    "title": "Política de Privacidad",
+    "metaDescription": "Descubra cómo ReplAInow recopila, usa, almacena y protege los datos de los comerciantes. Política de privacidad conforme con el RGPD con el uso de la API de Shopify explicado."
   },
   "terms": {
-    "title": "Terms of Service",
-    "lastUpdated": "Last updated: 2024"
-  },
-  "refund": {
-    "title": "Refund Policy",
-    "lastUpdated": "Last updated: 2024"
+    "title": "Términos de Servicio",
+    "metaDescription": "Lea los Términos de Servicio de ReplAInow, que cubren cuenta, pagos, uso aceptable, responsabilidad, terminación y ley aplicable (EAU)."
   },
   "cookies": {
-    "title": "Cookie Policy",
-    "lastUpdated": "Last updated: 2024"
+    "title": "Política de Cookies",
+    "metaDescription": "Descubra cómo ReplAInow usa cookies para mejorar su experiencia. Cookies esenciales, analíticas y funcionales explicadas."
   },
   "security": {
-    "title": "Security Statement",
-    "lastUpdated": "Last updated: 2024"
+    "title": "Declaración de Seguridad",
+    "metaDescription": "Nuestro compromiso con la seguridad: cifrado en tránsito y en reposo, webhooks HMAC, RBAC, monitoreo, ubicación de datos y respuesta a incidentes."
+  },
+  "refund": {
+    "title": "Política de Reembolso",
+    "metaDescription": "Política de reembolso de ReplAInow: prueba gratuita de 14 días, ventana de reembolso de 7 días para suscripciones pagas. Conozca sobre elegibilidad y proceso."
   },
   "impressum": {
-    "title": "Impressum",
-    "company": "ReplAInow",
-    "location": "Dubai, UAE"
+    "title": "Aviso Legal",
+    "metaDescription": "Aviso legal de PrimeVision Group LLC (ReplAInow): dirección, contacto, persona responsable según § 55 Abs. 2 RStV, número de registro fiscal."
   }
 }

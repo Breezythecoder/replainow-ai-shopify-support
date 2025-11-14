@@ -1,15 +1,18 @@
 import ModernNavbar from "@/components/marketing/PremiumNavbar";
 import Footer from "@/components/marketing/UltraFooter";
 import SEO from "@/components/SEO";
+import { useTranslation } from "@/i18n";
 
-const lastUpdated = "2025-08-11";
+const lastUpdated = "2025-11-14";
 
 const TermsOfService = () => {
+  const { t } = useTranslation();
+  
   return (
     <div>
       <SEO
-        title="Terms of Service | ReplAInow"
-        description="Read the Terms of Service for ReplAInow, covering account, payments, acceptable use, liability, termination, and governing law (UAE)."
+        title={`${t('legal.terms.title')} | ReplAInow`}
+        description={t('legal.terms.metaDescription')}
         path="/terms"
       />
       <PremiumNavbar />
@@ -17,8 +20,8 @@ const TermsOfService = () => {
         <section className="container mx-auto max-w-[800px] px-4 py-12 md:py-16">
           <article className="space-y-6 leading-relaxed">
             <header>
-              <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">Terms of Service</h1>
-              <p className="text-sm text-muted-foreground">Last updated: {lastUpdated}</p>
+              <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">{t('legal.terms.title')}</h1>
+              <p className="text-sm text-muted-foreground">{t('legal.lastUpdated', { date: lastUpdated })}</p>
             </header>
 
             <section>

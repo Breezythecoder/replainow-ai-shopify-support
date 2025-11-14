@@ -1,15 +1,18 @@
 import ModernNavbar from "@/components/marketing/PremiumNavbar";
 import Footer from "@/components/marketing/UltraFooter";
 import SEO from "@/components/SEO";
+import { useTranslation } from "@/i18n";
 
-const lastUpdated = "2025-08-11";
+const lastUpdated = "2025-11-14";
 
 const SecurityStatement = () => {
+  const { t } = useTranslation();
+  
   return (
     <div>
       <SEO
-        title="Security Statement | ReplAInow"
-        description="Our commitment to security: encryption in transit and at rest, HMAC webhooks, RBAC, monitoring, data location, and incident response."
+        title={`${t('legal.security.title')} | ReplAInow`}
+        description={t('legal.security.metaDescription')}
         path="/security"
       />
       <PremiumNavbar />
@@ -17,8 +20,8 @@ const SecurityStatement = () => {
         <section className="container mx-auto max-w-[800px] px-4 py-12 md:py-16">
           <article className="space-y-6 leading-relaxed">
             <header>
-              <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">Security Statement</h1>
-              <p className="text-sm text-muted-foreground">Last updated: {lastUpdated}</p>
+              <h1 className="text-3xl md:text-4xl font-semibold tracking-tight mb-2">{t('legal.security.title')}</h1>
+              <p className="text-sm text-muted-foreground">{t('legal.lastUpdated', { date: lastUpdated })}</p>
             </header>
 
             <section>

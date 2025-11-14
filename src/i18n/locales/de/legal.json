@@ -1,27 +1,38 @@
 {
+  "lastUpdated": "Zuletzt aktualisiert: {{date}}",
   "privacy": {
-    "title": "Privacy Policy",
-    "lastUpdated": "Last updated: 2024"
+    "title": "Datenschutzerklärung",
+    "metaDescription": "Erfahren Sie, wie ReplAInow Händlerdaten sammelt, verwendet, speichert und schützt. DSGVO-konforme Datenschutzerklärung mit Shopify API-Nutzung erklärt."
   },
   "terms": {
-    "title": "Terms of Service",
-    "lastUpdated": "Last updated: 2024"
-  },
-  "refund": {
-    "title": "Refund Policy",
-    "lastUpdated": "Last updated: 2024"
+    "title": "Nutzungsbedingungen",
+    "metaDescription": "Lesen Sie die Nutzungsbedingungen für ReplAInow, einschließlich Account, Zahlungen, akzeptable Nutzung, Haftung, Kündigung und geltendes Recht (UAE)."
   },
   "cookies": {
-    "title": "Cookie Policy",
-    "lastUpdated": "Last updated: 2024"
+    "title": "Cookie-Richtlinie",
+    "metaDescription": "Erfahren Sie, wie ReplAInow Cookies verwendet, um Ihre Erfahrung zu verbessern. Essenzielle, Analyse- und Funktions-Cookies erklärt."
   },
   "security": {
-    "title": "Security Statement",
-    "lastUpdated": "Last updated: 2024"
+    "title": "Sicherheitserklärung",
+    "metaDescription": "Unser Sicherheitsversprechen: Verschlüsselung während der Übertragung und im Ruhezustand, HMAC-Webhooks, RBAC, Überwachung, Datenspeicherort und Incident Response."
+  },
+  "refund": {
+    "title": "Rückerstattungsrichtlinie",
+    "metaDescription": "ReplAInow Rückerstattungsrichtlinie: 14-Tage kostenlose Testphase, 7-Tage Rückerstattungsfrist für bezahlte Abonnements. Erfahren Sie mehr über Berechtigung und Verfahren."
   },
   "impressum": {
     "title": "Impressum",
-    "company": "ReplAInow",
-    "location": "Dubai, UAE"
+    "metaDescription": "Impressum der PrimeVision Group LLC (ReplAInow): Anschrift, Kontakt, Verantwortlicher gem. § 55 Abs. 2 RStV, Steuerregistrierungsnummer.",
+    "provider": "Anbieter",
+    "legalForm": "Rechtsform & Sitz",
+    "address": "Geschäftsadresse",
+    "contact": "Kontakt",
+    "responsible": "Verantwortlich i. S. d. § 55 Abs. 2 RStV",
+    "taxInfo": "Steuerangaben",
+    "companyName": "PrimeVision Group LLC",
+    "companyType": "LLC, Dubai, Vereinigte Arabische Emirate",
+    "companyAddress": "Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai",
+    "email": "E-Mail",
+    "taxNumber": "Tax Registration Number"
   }
 }

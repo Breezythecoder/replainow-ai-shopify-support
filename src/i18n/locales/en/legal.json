@@ -1,27 +1,38 @@
 {
+  "lastUpdated": "Last updated: {{date}}",
   "privacy": {
     "title": "Privacy Policy",
-    "lastUpdated": "Last updated: 2024"
+    "metaDescription": "Learn how ReplAInow collects, uses, stores, and protects merchant data. GDPR-compliant privacy policy with Shopify API usage explained."
   },
   "terms": {
     "title": "Terms of Service",
-    "lastUpdated": "Last updated: 2024"
-  },
-  "refund": {
-    "title": "Refund Policy",
-    "lastUpdated": "Last updated: 2024"
+    "metaDescription": "Read the Terms of Service for ReplAInow, covering account, payments, acceptable use, liability, termination, and governing law (UAE)."
   },
   "cookies": {
     "title": "Cookie Policy",
-    "lastUpdated": "Last updated: 2024"
+    "metaDescription": "Learn how ReplAInow uses cookies to improve your experience. Essential, analytics, and functional cookies explained."
   },
   "security": {
     "title": "Security Statement",
-    "lastUpdated": "Last updated: 2024"
+    "metaDescription": "Our commitment to security: encryption in transit and at rest, HMAC webhooks, RBAC, monitoring, data location, and incident response."
+  },
+  "refund": {
+    "title": "Refund Policy",
+    "metaDescription": "ReplAInow refund policy: 14-day free trial, 7-day refund window for paid subscriptions. Learn about eligibility and process."
   },
   "impressum": {
     "title": "Impressum",
-    "company": "ReplAInow",
-    "location": "Dubai, UAE"
+    "metaDescription": "Impressum of PrimeVision Group LLC (ReplAInow): Address, contact, responsible person according to § 55 Abs. 2 RStV, Tax Registration Number.",
+    "provider": "Provider",
+    "legalForm": "Legal Form & Location",
+    "address": "Business Address",
+    "contact": "Contact",
+    "responsible": "Responsible according to § 55 Abs. 2 RStV",
+    "taxInfo": "Tax Information",
+    "companyName": "PrimeVision Group LLC",
+    "companyType": "LLC, Dubai, United Arab Emirates",
+    "companyAddress": "Meydan Grandstand, 6th floor, Meydan Road, Nad Al Sheba, Dubai",
+    "email": "Email",
+    "taxNumber": "Tax Registration Number"
   }
 }

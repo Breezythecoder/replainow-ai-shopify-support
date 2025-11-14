@@ -1,27 +1,27 @@
 {
+  "lastUpdated": "Dernière mise à jour: {{date}}",
   "privacy": {
-    "title": "Privacy Policy",
-    "lastUpdated": "Last updated: 2024"
+    "title": "Politique de Confidentialité",
+    "metaDescription": "Découvrez comment ReplAInow collecte, utilise, stocke et protège les données des marchands. Politique de confidentialité conforme au RGPD avec utilisation de l'API Shopify expliquée."
   },
   "terms": {
-    "title": "Terms of Service",
-    "lastUpdated": "Last updated: 2024"
-  },
-  "refund": {
-    "title": "Refund Policy",
-    "lastUpdated": "Last updated: 2024"
+    "title": "Conditions d'Utilisation",
+    "metaDescription": "Lisez les Conditions d'Utilisation de ReplAInow, couvrant le compte, les paiements, l'utilisation acceptable, la responsabilité, la résiliation et la loi applicable (EAU)."
   },
   "cookies": {
-    "title": "Cookie Policy",
-    "lastUpdated": "Last updated: 2024"
+    "title": "Politique de Cookies",
+    "metaDescription": "Découvrez comment ReplAInow utilise les cookies pour améliorer votre expérience. Cookies essentiels, analytiques et fonctionnels expliqués."
   },
   "security": {
-    "title": "Security Statement",
-    "lastUpdated": "Last updated: 2024"
+    "title": "Déclaration de Sécurité",
+    "metaDescription": "Notre engagement en matière de sécurité: cryptage en transit et au repos, webhooks HMAC, RBAC, surveillance, localisation des données et réponse aux incidents."
+  },
+  "refund": {
+    "title": "Politique de Remboursement",
+    "metaDescription": "Politique de remboursement ReplAInow: essai gratuit de 14 jours, fenêtre de remboursement de 7 jours pour les abonnements payants. En savoir plus sur l'éligibilité et le processus."
   },
   "impressum": {
-    "title": "Impressum",
-    "company": "ReplAInow",
-    "location": "Dubai, UAE"
+    "title": "Mentions Légales",
+    "metaDescription": "Mentions légales de PrimeVision Group LLC (ReplAInow): adresse, contact, personne responsable selon § 55 Abs. 2 RStV, numéro d'enregistrement fiscal."
   }
 }
