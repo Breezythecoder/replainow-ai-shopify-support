@@ -8,20 +8,17 @@
 import fs from 'fs';
 import path from 'path';
 
+// Only create redirects for pillar content pages
+// Legal pages should use 404.html fallback for SPA routing
 const routes = [
   'ai-shopify-helpdesk',
   'multilingual-support', 
   'shopify-customer-service',
   'shopify-ai-support',
   'gorgias-alternative',
-  'intercom-alternative',
-  'privacy',
-  'terms',
-  'security',
-  'impressum',
-  'refund',
-  'cookies',
-  'uninstall'
+  'intercom-alternative'
+  // REMOVED: Legal pages (privacy, terms, security, impressum, refund, cookies, uninstall)
+  // These use 404.html fallback to avoid redirect loops
 ];
 
 const createRedirectHTML = (route) => `<!doctype html>
@@ -30,17 +27,19 @@ const createRedirectHTML = (route) => `<!doctype html>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ReplAInow - Wird geladen...</title>
+    <title>ReplAInow - Loading...</title>
     <meta name="robots" content="noindex, nofollow" />
     <script>
-      // Immediate redirect to clean URL (GitHub Pages SPA routing)
-      window.location.replace('/${route}');
+      // Save the requested route and redirect to SPA root
+      // React Router will handle the routing based on URL
+      sessionStorage.setItem('redirectFrom', '/${route}');
+      window.location.replace('/');
     </script>
   </head>
   <body>
     <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1e293b, #334155); color: white; font-family: system-ui, -apple-system, sans-serif;">
       <div style="text-align: center; padding: 2rem;">
-        <h1 style="font-size: 2rem; margin-bottom: 1rem;">Wird geladen...</h1>
+        <h1 style="font-size: 2rem; margin-bottom: 1rem;">Loading...</h1>
         <div style="width: 40px; height: 40px; border: 4px solid rgba(255,255,255,0.3); border-top: 4px solid white; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto;"></div>
       </div>
     </div>

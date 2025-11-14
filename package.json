@@ -11,7 +11,7 @@
     "dev": "vite",
     "build:de": "cross-env FORCE_LOCALE=de vite build",
     "build:en": "cross-env FORCE_LOCALE=en vite build",
-    "build:mpages": "npm run clean && npm run build:de && node scripts/build/make-locale-html.mjs && node scripts/build/create-spa-redirects.mjs && node scripts/seo/generate-sitemap.mjs && node scripts/seo/generate-robots.mjs && node scripts/build/postbuild-verify.mjs",
+    "build:mpages": "npm run clean && npm run build:de && node scripts/build/make-locale-html.mjs && node scripts/build/create-spa-redirects.mjs && node scripts/build/copy-index-to-404.mjs && node scripts/seo/generate-sitemap.mjs && node scripts/seo/generate-robots.mjs && node scripts/build/postbuild-verify.mjs",
     "build": "npm run build:mpages",
     "deploy": "npm run build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
