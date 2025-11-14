@@ -37,3 +37,5 @@ Dieser Ordner ist für die **echten Dashboard-Screenshots** von ReplAInow.
 **Tipp:** Am besten mehrere Screenshots hochladen, dann können wir die besten auswählen! 📸
 
 
+
+

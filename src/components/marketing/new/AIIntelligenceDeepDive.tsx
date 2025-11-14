@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Shield, Database, Eye, CheckCircle2, AlertTriangle, Clock, Sparkles, ShoppingCart, TrendingUp } from "lucide-react";
+import { Shield, Database, Eye, CheckCircle2, AlertTriangle, Clock, Sparkles, ShoppingCart, TrendingUp, Smartphone } from "lucide-react";
 import { useState } from "react";
 
 type TabType = "quality" | "collection" | "journey";
@@ -50,64 +50,66 @@ const AIIntelligenceDeepDive = () => {
           transition={{ delay: 0.2 }}
           className="flex justify-center mb-12"
         >
-          <div className="inline-flex bg-white rounded-2xl p-2 shadow-xl border-2 border-gray-200 gap-2">
+          <div className="inline-flex flex-col sm:flex-row bg-white rounded-2xl p-2 shadow-xl border-2 border-gray-200 gap-2 w-full sm:w-auto">
             <button
               onClick={() => setActiveTab("quality")}
               className={`
-                px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300
+                px-4 sm:px-6 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 whitespace-nowrap
                 ${activeTab === "quality" 
                   ? "bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-lg" 
                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                 }
               `}
             >
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center sm:justify-start gap-2">
                 <Shield className="w-4 h-4" />
-                <span>Qualitäts-Garantie</span>
+                <span className="hidden sm:inline">Qualitäts-Garantie</span>
+                <span className="sm:hidden">Qualität</span>
               </div>
             </button>
             <button
               onClick={() => setActiveTab("collection")}
               className={`
-                px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300
+                px-4 sm:px-6 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 whitespace-nowrap
                 ${activeTab === "collection" 
                   ? "bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-lg" 
                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                 }
               `}
             >
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center sm:justify-start gap-2">
                 <Database className="w-4 h-4" />
-                <span>Informations-Sammlung</span>
+                <span className="hidden sm:inline">Informations-Sammlung</span>
+                <span className="sm:hidden">Info-Sammlung</span>
               </div>
             </button>
             <button
               onClick={() => setActiveTab("journey")}
               className={`
-                px-6 py-3 rounded-xl font-bold text-sm transition-all duration-300
+                px-4 sm:px-6 py-3 rounded-xl font-bold text-xs sm:text-sm transition-all duration-300 whitespace-nowrap
                 ${activeTab === "journey" 
                   ? "bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-lg" 
                   : "text-gray-600 hover:text-gray-900 hover:bg-gray-50"
                 }
               `}
             >
-              <div className="flex items-center gap-2">
+              <div className="flex items-center justify-center sm:justify-start gap-2">
                 <Eye className="w-4 h-4" />
-                <span>Kunden-Verständnis</span>
+                <span className="hidden sm:inline">Kunden-Verständnis</span>
+                <span className="sm:hidden">Kunden-Journey</span>
               </div>
             </button>
           </div>
         </motion.div>
 
         {/* Tab Content */}
-        <div className="relative min-h-[500px]">
-          
+        <div className="relative w-full">
           {/* Tab 1: Quality Guarantee */}
           {activeTab === "quality" && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
               className="grid md:grid-cols-2 gap-12 items-center"
             >
               {/* Left: Visual */}
@@ -184,9 +186,9 @@ const AIIntelligenceDeepDive = () => {
           {/* Tab 2: Information Collection */}
           {activeTab === "collection" && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
               className="space-y-12"
             >
               <div className="text-center mb-8">
@@ -293,9 +295,9 @@ const AIIntelligenceDeepDive = () => {
           {/* Tab 3: Customer Journey */}
           {activeTab === "journey" && (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
               className="grid md:grid-cols-2 gap-12 items-center"
             >
               {/* Left: Journey Timeline */}
