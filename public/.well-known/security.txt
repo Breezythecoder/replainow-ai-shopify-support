@@ -1,0 +1,33 @@
+# Security Contact Information for ReplAInow
+# RFC 9116 compliant security.txt
+# https://securitytxt.org/
+
+Contact: mailto:security@replainow.com
+Expires: 2026-12-31T23:59:59.000Z
+Preferred-Languages: en, de
+Canonical: https://replainow.com/.well-known/security.txt
+
+# Encryption key for secure reporting
+Encryption: mailto:security@replainow.com
+
+# Company Information
+Policy: https://replainow.com/security
+Acknowledgments: https://replainow.com/security#responsible-disclosure
+
+# Scope
+# This security.txt applies to:
+# - https://replainow.com
+# - All subdomains of replainow.com
+# - ReplAInow Shopify App
+
+# Response Time
+# We aim to acknowledge security reports within 24 hours
+# and provide regular updates throughout investigation
+
+# Hiring
+Hiring: https://replainow.com/#contact
+
+# About
+# ReplAInow is an AI-powered customer support platform for Shopify
+# Operated by PrimeVision Group LLC, Dubai, UAE
+

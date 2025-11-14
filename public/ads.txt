@@ -1,0 +1,15 @@
+# ads.txt for ReplAInow
+# IAB Ads.txt 1.0 specification
+# https://iabtechlab.com/ads-txt/
+
+# This file declares authorized digital sellers for replainow.com
+# Required by Google AdSense and other ad networks for transparency
+
+# Format: domain, publisher ID, relationship, certification authority
+
+# Currently no ads running - placeholder for future use
+# google.com, pub-XXXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0
+
+# Contact for authorized sellers: support@replainow.com
+# Last updated: 2025-11-14
+

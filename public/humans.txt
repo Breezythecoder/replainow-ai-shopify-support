@@ -1,0 +1,51 @@
+/* TEAM */
+
+Founder & CEO: Ruben Calabrese
+Contact: support [at] replainow.com
+Twitter: @replainow
+LinkedIn: linkedin.com/company/replainow
+Location: Dubai, UAE
+
+/* SITE */
+
+Last update: 2025/11/14
+Language: Deutsch / German (de-DE)
+Doctype: HTML5
+IDE: Cursor, VS Code
+Tech Stack: React, TypeScript, Vite, TailwindCSS
+
+/* THANKS */
+
+AI: Claude Sonnet 4.5 (Development Assistant)
+Design: Modern 2025 Glass Morphism Design
+Hosting: GitHub Pages
+CDN: GitHub CDN
+
+/* TECHNOLOGY */
+
+Frontend: React 18 + TypeScript
+Styling: TailwindCSS + Radix UI
+Build: Vite 7
+SEO: Schema.org + JSON-LD
+Performance: Core Web Vitals Optimized
+Analytics: Google Analytics 4
+Live Chat: Chaport
+
+/* LEGAL */
+
+Company: PrimeVision Group LLC
+Registration: Dubai, UAE
+Tax ID: 104756281200001
+Privacy: https://replainow.com/privacy
+Terms: https://replainow.com/terms
+
+/* SECURITY */
+
+Security Contact: security@replainow.com
+Security Policy: https://replainow.com/security
+GDPR Compliant: Yes
+ISO 27001: Standards followed
+Data Location: EU & US (with SCCs)
+
+/* MADE WITH ❤️ IN DUBAI */
+

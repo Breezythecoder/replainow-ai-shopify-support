@@ -104,13 +104,31 @@ const languageSitemaps = [
         priority: '0.3'
       },
       {
-        loc: `${baseUrl}/security`,
+        loc: `${baseUrl}/cookies`,
         lastmod: currentDate,
         changefreq: 'yearly',
         priority: '0.3'
       },
       {
         loc: `${baseUrl}/impressum`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/security`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/refund`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/uninstall`,
         lastmod: currentDate,
         changefreq: 'yearly',
         priority: '0.3'

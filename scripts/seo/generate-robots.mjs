@@ -14,6 +14,11 @@ const baseUrl = 'https://replainow.com';
 const generateRobotsTxt = () => {
   return `# Robots.txt for ReplAInow
 # Generated automatically - do not edit manually
+# Last updated: ${new Date().toISOString().split('T')[0]}
+
+# ============================================
+# GOOGLE & TRADITIONAL SEARCH ENGINES
+# ============================================
 
 # Allow all crawlers
 User-agent: *
@@ -43,19 +48,113 @@ Allow: /fonts/
 Allow: /favicon.ico
 Allow: /robots.txt
 Allow: /sitemap*.xml
+Allow: /.well-known/
 
-# Sitemap references
+# Crawl delay (be respectful to servers)
+Crawl-delay: 1
+
+# ============================================
+# AI CRAWLERS - 2025 OPTIMIZATION
+# ============================================
+
+# OpenAI GPTBot (ChatGPT training & browsing)
+User-agent: GPTBot
+Allow: /
+Allow: /.well-known/llm-facts.json
+Crawl-delay: 1
+# Let ChatGPT learn about ReplAInow!
+
+# Anthropic Claude (Claude AI training)
+User-agent: ClaudeBot
+Allow: /
+Allow: /.well-known/llm-facts.json
+Crawl-delay: 1
+
+User-agent: anthropic-ai
+Allow: /
+Allow: /.well-known/llm-facts.json
+
+# Google Gemini (Bard AI)
+User-agent: Google-Extended
+Allow: /
+Allow: /.well-known/llm-facts.json
+Crawl-delay: 1
+
+# Perplexity AI (Answer engine)
+User-agent: PerplexityBot
+Allow: /
+Allow: /.well-known/llm-facts.json
+Crawl-delay: 1
+
+# You.com AI Search
+User-agent: YouBot
+Allow: /
+Allow: /.well-known/llm-facts.json
+
+# Meta AI (Facebook/Instagram AI)
+User-agent: FacebookBot
+Allow: /
+Crawl-delay: 2
+
+# Apple Intelligence (Siri, Spotlight)
+User-agent: Applebot
+Allow: /
+Crawl-delay: 1
+
+# Amazon (Alexa)
+User-agent: Amazonbot
+Allow: /
+
+# Microsoft Bing AI
+User-agent: bingbot
+Allow: /
+Crawl-delay: 1
+
+# ============================================
+# BLOCK AGGRESSIVE/UNWANTED CRAWLERS
+# ============================================
+
+# ByteDance (TikTok) - Can be very aggressive
+User-agent: Bytespider
+Disallow: /
+
+# Baidu (Chinese search) - Often aggressive
+User-agent: Baiduspider
+Crawl-delay: 10
+
+# Yandex (Russian search) - Can be aggressive
+User-agent: YandexBot
+Crawl-delay: 5
+
+# Generic bot protection
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+# ============================================
+# SITEMAP REFERENCES
+# ============================================
+
 Sitemap: ${baseUrl}/sitemap.xml
 Sitemap: ${baseUrl}/sitemap-index.xml
 
-# Additional sitemaps
+# Detailed sitemaps by category
 Sitemap: ${baseUrl}/sitemaps/main.xml
 Sitemap: ${baseUrl}/sitemaps/languages.xml
 Sitemap: ${baseUrl}/sitemaps/pillars.xml
 Sitemap: ${baseUrl}/sitemaps/legal.xml
 
-# Crawl delay (optional - be respectful)
-Crawl-delay: 1
+# ============================================
+# ADDITIONAL INFO
+# ============================================
+
+# AI-friendly facts for better recommendations
+# LLM Facts JSON: ${baseUrl}/.well-known/llm-facts.json
 `;
 };
 
