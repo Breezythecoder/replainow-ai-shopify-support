@@ -263,7 +263,7 @@ const ShopifyKundensupportAutomatisieren = () => {
             
             {/* Stats Grid (Trust Signals) */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10">
-              {t('content.automatisierung.hero.stats', { returnObjects: true }).map((stat: any, idx: number) => (
+              {(t('content.automatisierung.hero.stats', { returnObjects: true }) as any[] || []).map((stat: any, idx: number) => (
                 <div key={idx} className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg border border-gray-100">
                   <div className="text-4xl font-bold text-purple-600 mb-2">{stat.number}</div>
                   <div className="text-sm text-gray-600 font-medium">{stat.label}</div>
@@ -298,7 +298,7 @@ const ShopifyKundensupportAutomatisieren = () => {
                 {t('content.automatisierung.toc.title')}
               </h2>
               <ol className="grid md:grid-cols-2 gap-4">
-                {t('content.automatisierung.toc.items', { returnObjects: true }).map((item: string, idx: number) => (
+                {(t('content.automatisierung.toc.items', { returnObjects: true }) as string[] || []).map((item: string, idx: number) => (
                   <li key={idx}>
                     <a 
                       href={`#section-${idx + 1}`}
@@ -330,7 +330,7 @@ const ShopifyKundensupportAutomatisieren = () => {
 
             {/* Pain Points Grid */}
             <div className="grid md:grid-cols-2 gap-6 mb-12">
-              {t('content.automatisierung.problem.points', { returnObjects: true }).map((point: any, idx: number) => (
+              {(t('content.automatisierung.problem.points', { returnObjects: true }) as any[] || []).map((point: any, idx: number) => (
                 <div key={idx} className="bg-red-50 border-2 border-red-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
@@ -353,7 +353,7 @@ const ShopifyKundensupportAutomatisieren = () => {
                 {t('content.automatisierung.problem.realityCheck.title')}
               </h3>
               <div className="space-y-4">
-                {t('content.automatisierung.problem.realityCheck.calculation', { returnObjects: true }).map((calc: string, idx: number) => (
+                {(t('content.automatisierung.problem.realityCheck.calculation', { returnObjects: true }) as string[] || []).map((calc: string, idx: number) => (
                   <div key={idx} className="flex items-center gap-3">
                     <ArrowRight className="w-5 h-5 text-purple-400 flex-shrink-0" />
                     <p className="text-lg font-mono">{calc}</p>
@@ -386,7 +386,7 @@ const ShopifyKundensupportAutomatisieren = () => {
 
             {/* How It Works - Step by Step */}
             <div className="space-y-6">
-              {t('content.automatisierung.solution.how.steps', { returnObjects: true }).map((step: any, idx: number) => (
+              {(t('content.automatisierung.solution.how.steps', { returnObjects: true }) as any[] || []).map((step: any, idx: number) => (
                 <div key={idx} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow border border-purple-100">
                   <div className="flex items-start gap-6">
                     <div className="flex-shrink-0">
@@ -437,7 +437,7 @@ const ShopifyKundensupportAutomatisieren = () => {
                     </div>
                   </div>
                   <ul className="space-y-3">
-                    {t('content.automatisierung.solution.automation.breakdown.automated.examples', { returnObjects: true }).map((example: string, idx: number) => (
+                    {(t('content.automatisierung.solution.automation.breakdown.automated.examples', { returnObjects: true }) as string[] || []).map((example: string, idx: number) => (
                       <li key={idx} className="flex items-start gap-2">
                         <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                         <span className="text-gray-700">{example}</span>
@@ -462,7 +462,7 @@ const ShopifyKundensupportAutomatisieren = () => {
                     </div>
                   </div>
                   <ul className="space-y-3">
-                    {t('content.automatisierung.solution.automation.breakdown.human.examples', { returnObjects: true }).map((example: string, idx: number) => (
+                    {(t('content.automatisierung.solution.automation.breakdown.human.examples', { returnObjects: true }) as string[] || []).map((example: string, idx: number) => (
                       <li key={idx} className="flex items-start gap-2">
                         <Users className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                         <span className="text-gray-700">{example}</span>
@@ -488,7 +488,7 @@ const ShopifyKundensupportAutomatisieren = () => {
             </div>
 
             <div className="space-y-8">
-              {t('content.automatisierung.examples.cases', { returnObjects: true }).map((example: any, idx: number) => (
+              {(t('content.automatisierung.examples.cases', { returnObjects: true }) as any[] || []).map((example: any, idx: number) => (
                 <div key={idx} className="bg-gray-50 rounded-2xl p-8 border border-gray-200">
                   {/* Category Badge */}
                   <div className="inline-block bg-purple-100 text-purple-700 px-4 py-1 rounded-full text-sm font-semibold mb-4">
@@ -701,7 +701,7 @@ const ShopifyKundensupportAutomatisieren = () => {
               <div className="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-600 to-violet-600 hidden md:block"></div>
               
               <div className="space-y-8">
-                {t('content.automatisierung.setup.steps', { returnObjects: true }).map((step: any, idx: number) => (
+                {(t('content.automatisierung.setup.steps', { returnObjects: true }) as any[] || []).map((step: any, idx: number) => (
                   <div key={idx} className="relative md:pl-20">
                     {/* Step Number */}
                     <div className="absolute left-0 md:left-2 w-16 h-16 rounded-full bg-gradient-to-br from-purple-600 to-violet-600 flex items-center justify-center text-white text-2xl font-bold shadow-lg">
@@ -736,7 +736,7 @@ const ShopifyKundensupportAutomatisieren = () => {
             <div className="mt-12">
               <h3 className="text-2xl font-bold text-center mb-8">Setup-Zeit Vergleich:</h3>
               <div className="grid md:grid-cols-4 gap-6">
-                {Object.entries(t('content.automatisierung.setup.comparison', { returnObjects: true })).map(([key, value]: [string, any], idx: number) => (
+                {Object.entries(t('content.automatisierung.setup.comparison', { returnObjects: true }) as Record<string, any> || {}).map(([key, value]: [string, any], idx: number) => (
                   <div key={key} className={`rounded-xl p-6 text-center ${idx === 0 ? 'bg-gradient-to-br from-purple-600 to-violet-600 text-white' : 'bg-gray-100 text-gray-700'}`}>
                     <div className="text-xl font-bold mb-2 capitalize">{key}</div>
                     <div className="text-2xl font-bold">{value}</div>
@@ -755,7 +755,7 @@ const ShopifyKundensupportAutomatisieren = () => {
             </h2>
             
             <div className="space-y-6">
-              {t('content.automatisierung.faq.items', { returnObjects: true }).map((faq: any, idx: number) => (
+              {(t('content.automatisierung.faq.items', { returnObjects: true }) as any[] || []).map((faq: any, idx: number) => (
                 <div 
                   key={idx} 
                   className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:border-purple-300 transition-colors"
@@ -797,7 +797,7 @@ const ShopifyKundensupportAutomatisieren = () => {
 
             {/* Pricing Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-              {t('content.automatisierung.pricing.plans', { returnObjects: true }).map((plan: any, idx: number) => (
+              {(t('content.automatisierung.pricing.plans', { returnObjects: true }) as any[] || []).map((plan: any, idx: number) => (
                 <div 
                   key={idx} 
                   className={`rounded-2xl p-6 border-2 ${plan.badge ? 'border-purple-600 relative' : 'border-gray-200'}`}
@@ -833,7 +833,7 @@ const ShopifyKundensupportAutomatisieren = () => {
                 {t('content.automatisierung.pricing.allIncluded.title')}
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {t('content.automatisierung.pricing.allIncluded.features', { returnObjects: true }).map((feature: string, idx: number) => (
+                {(t('content.automatisierung.pricing.allIncluded.features', { returnObjects: true }) as string[] || []).map((feature: string, idx: number) => (
                   <div key={idx} className="flex items-start gap-2">
                     <Check className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{feature}</span>
@@ -856,7 +856,7 @@ const ShopifyKundensupportAutomatisieren = () => {
             
             {/* Stats */}
             <div className="flex justify-center gap-8 mb-10">
-              {t('content.automatisierung.cta.stats', { returnObjects: true }).map((stat: string, idx: number) => (
+              {(t('content.automatisierung.cta.stats', { returnObjects: true }) as string[] || []).map((stat: string, idx: number) => (
                 <div key={idx} className="text-center">
                   <div className="text-2xl font-bold">{stat}</div>
                 </div>
@@ -894,7 +894,7 @@ const ShopifyKundensupportAutomatisieren = () => {
               {t('content.automatisierung.related.title')}
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              {t('content.automatisierung.related.articles', { returnObjects: true }).map((article: any, idx: number) => (
+              {(t('content.automatisierung.related.articles', { returnObjects: true }) as any[] || []).map((article: any, idx: number) => (
                 <Link
                   key={idx}
                   to={article.url}
