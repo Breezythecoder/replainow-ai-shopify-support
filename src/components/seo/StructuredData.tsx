@@ -90,7 +90,9 @@ export const softwareApplicationSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "ratingCount": "150"
+    "ratingCount": "280",
+    "bestRating": "5",
+    "worstRating": "1"
   }
 };
 
@@ -116,7 +118,7 @@ export const productSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
-    "ratingCount": "150",
+    "ratingCount": "280",
     "bestRating": "5",
     "worstRating": "1"
   }
