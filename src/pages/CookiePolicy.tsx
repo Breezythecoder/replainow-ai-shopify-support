@@ -1,5 +1,5 @@
 import React from "react";
-import PremiumNavbar from "@/components/marketing/PremiumNavbar";
+import LegalNavbar from "@/components/marketing/LegalNavbar";
 import UltraFooter from "@/components/marketing/UltraFooter";
 import SEO from "@/components/SEO";
 import { useTranslation } from "@/i18n";
@@ -16,8 +16,8 @@ const CookiePolicy = () => {
         description={t('legal.cookies.metaDescription')}
         path="/cookies"
       />
-      <PremiumNavbar />
-      <main>
+      <LegalNavbar />
+      <main className="pt-20">
         <section className="container mx-auto max-w-[800px] px-4 py-12 md:py-16">
           <article className="space-y-6 leading-relaxed">
             <header>

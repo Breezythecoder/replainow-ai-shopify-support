@@ -1,4 +1,4 @@
-import ModernNavbar from "@/components/marketing/PremiumNavbar";
+import LegalNavbar from "@/components/marketing/LegalNavbar";
 import Footer from "@/components/marketing/UltraFooter";
 import SEO from "@/components/SEO";
 
@@ -12,8 +12,8 @@ const UninstallInstructions = () => {
         description="How to uninstall ReplAInow from your Shopify store. Simple steps and data deletion policy with GDPR options."
         path="/uninstall"
       />
-      <PremiumNavbar />
-      <main>
+      <LegalNavbar />
+      <main className="pt-20">
         <section className="container mx-auto max-w-[800px] px-4 py-12 md:py-16">
           <article className="space-y-6 leading-relaxed">
             <header>
