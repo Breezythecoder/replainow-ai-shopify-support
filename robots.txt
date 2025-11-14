@@ -132,7 +132,6 @@ Sitemap: https://replainow.com/sitemap-index.xml
 # Detailed sitemaps by category
 Sitemap: https://replainow.com/sitemaps/main.xml
 Sitemap: https://replainow.com/sitemaps/languages.xml
-Sitemap: https://replainow.com/sitemaps/pillars.xml
 Sitemap: https://replainow.com/sitemaps/legal.xml
 
 # ============================================

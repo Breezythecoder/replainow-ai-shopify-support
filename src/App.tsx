@@ -43,14 +43,6 @@ const Impressum = lazy(() => import("./pages/Impressum"));
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const AIShopifyHelpdesk = lazy(() => import("./pages/AIShopifyHelpdesk"));
-const MultilingualSupport = lazy(() => import("./pages/MultilingualSupport"));
-const ShopifyCustomerService = lazy(
-  () => import("./pages/ShopifyCustomerService")
-);
-const GorgiasAlternative = lazy(() => import("./pages/GorgiasAlternative"));
-const IntercomAlternative = lazy(() => import("./pages/IntercomAlternative"));
-const ShopifyAISupport = lazy(() => import("./pages/ShopifyAISupport"));
 const SitemapXML = lazy(() => import("./pages/SitemapXML"));
 const RobotsTXT = lazy(() => import("./pages/RobotsTXT"));
 const LLMFactsJSON = lazy(() => import("./pages/LLMFactsJSON"));
@@ -105,21 +97,6 @@ const AppShell = () => {
           <Route path="/en" element={<Index />} />
           <Route path="/fr" element={<Index />} />
           <Route path="/es" element={<Index />} />
-          <Route path="/ai-shopify-helpdesk" element={<AIShopifyHelpdesk />} />
-          <Route
-            path="/multilingual-support"
-            element={<MultilingualSupport />}
-          />
-          <Route
-            path="/shopify-customer-service"
-            element={<ShopifyCustomerService />}
-          />
-          <Route path="/gorgias-alternative" element={<GorgiasAlternative />} />
-          <Route
-            path="/intercom-alternative"
-            element={<IntercomAlternative />}
-          />
-          <Route path="/shopify-ai-support" element={<ShopifyAISupport />} />
           <Route path="/sitemap.xml" element={<SitemapXML />} />
           <Route path="/robots.txt" element={<RobotsTXT />} />
           <Route

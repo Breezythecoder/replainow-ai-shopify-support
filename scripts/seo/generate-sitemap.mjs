@@ -48,47 +48,6 @@ const languageSitemaps = [
     ]
   },
   {
-    name: 'pillars',
-    urls: [
-      {
-        loc: `${baseUrl}/ai-shopify-helpdesk`,
-        lastmod: currentDate,
-        changefreq: 'weekly',
-        priority: '0.9'
-      },
-      {
-        loc: `${baseUrl}/multilingual-support`,
-        lastmod: currentDate,
-        changefreq: 'weekly',
-        priority: '0.9'
-      },
-      {
-        loc: `${baseUrl}/shopify-customer-service`,
-        lastmod: currentDate,
-        changefreq: 'weekly',
-        priority: '0.9'
-      },
-      {
-        loc: `${baseUrl}/gorgias-alternative`,
-        lastmod: currentDate,
-        changefreq: 'weekly',
-        priority: '0.9'
-      },
-      {
-        loc: `${baseUrl}/intercom-alternative`,
-        lastmod: currentDate,
-        changefreq: 'weekly',
-        priority: '0.9'
-      },
-      {
-        loc: `${baseUrl}/shopify-ai-support`,
-        lastmod: currentDate,
-        changefreq: 'weekly',
-        priority: '0.9'
-      }
-    ]
-  },
-  {
     name: 'legal',
     urls: [
       {

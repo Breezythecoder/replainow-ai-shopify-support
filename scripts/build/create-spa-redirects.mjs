@@ -8,17 +8,12 @@
 import fs from 'fs';
 import path from 'path';
 
-// Only create redirects for pillar content pages
-// Legal pages should use 404.html fallback for SPA routing
+// All pages now use 404.html fallback for SPA routing
+// This prevents redirect loops and simplifies architecture
+// The 404.html is a copy of index.html, so React Router handles all routing
 const routes = [
-  'ai-shopify-helpdesk',
-  'multilingual-support', 
-  'shopify-customer-service',
-  'shopify-ai-support',
-  'gorgias-alternative',
-  'intercom-alternative'
-  // REMOVED: Legal pages (privacy, terms, security, impressum, refund, cookies, uninstall)
-  // These use 404.html fallback to avoid redirect loops
+  // No redirect pages needed - 404.html fallback handles everything!
+  // Keeping array empty to prevent redirect loops
 ];
 
 const createRedirectHTML = (route) => `<!doctype html>
@@ -64,5 +59,10 @@ for (const route of routes) {
   console.log(`✅ Created: ${route}.html`);
 }
 
-console.log(`\n🎉 Created ${routes.length} redirect pages for GitHub Pages SPA routing!`);
-console.log('These pages will redirect to the main SPA with hash routing.');
+if (routes.length > 0) {
+  console.log(`\n🎉 Created ${routes.length} redirect pages for GitHub Pages SPA routing!`);
+  console.log('These pages will redirect to the main SPA with hash routing.');
+} else {
+  console.log('\n✅ No redirect pages needed - All routes use 404.html fallback!');
+  console.log('🎯 Clean architecture: 404.html = index.html → React Router handles everything');
+}
