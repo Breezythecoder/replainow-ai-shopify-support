@@ -87,9 +87,9 @@ const UltraFooter = () => {
             </ul>
           </div>
 
-          {/* Company */}
+          {/* Legal */}
           <div>
-            <h3 className="font-bold mb-4 text-gray-900">Unternehmen</h3>
+            <h3 className="font-bold mb-4 text-gray-900">Legal</h3>
             <ul className="space-y-3">
               <li>
                 <a href="/privacy" className="text-gray-700 hover:text-purple-700 transition-colors">
@@ -104,6 +104,21 @@ const UltraFooter = () => {
               <li>
                 <a href="/impressum" className="text-gray-700 hover:text-purple-700 transition-colors">
                   Impressum
+                </a>
+              </li>
+              <li>
+                <a href="/cookies" className="text-gray-700 hover:text-purple-700 transition-colors">
+                  Cookies
+                </a>
+              </li>
+              <li>
+                <a href="/security" className="text-gray-700 hover:text-purple-700 transition-colors">
+                  Sicherheit
+                </a>
+              </li>
+              <li>
+                <a href="/refund" className="text-gray-700 hover:text-purple-700 transition-colors">
+                  Rückerstattung
                 </a>
               </li>
             </ul>
