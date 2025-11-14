@@ -26,9 +26,9 @@ const DashboardShowcaseSection = () => {
         </motion.div>
 
         {/* Interactive Dashboard Tabs - KRASSER */}
-        <div className="relative">
+        <div className="relative overflow-hidden">
           {/* STÄRKERER Background glow */}
-          <div className="absolute -inset-12 bg-gradient-to-br from-purple-500/40 to-violet-500/40 rounded-3xl blur-3xl"></div>
+          <div className="absolute -inset-4 md:-inset-12 bg-gradient-to-br from-purple-500/40 to-violet-500/40 rounded-3xl blur-3xl"></div>
           
           {/* STÄRKERES Glass container - RESPONSIVE */}
           <div className="relative rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-10 border-2 border-white/60 shadow-2xl" style={{
