@@ -1038,7 +1038,7 @@
     "hero": {
       "badge": "💰 KOSTEN-OPTIMIERUNG",
       "title": "Shopify Support Kosten senken",
-      "subtitle": "79-97% Ersparnis durch intelligente Automatisierung – Total Cost of Ownership komplett analysiert",
+      "subtitle": "79-97% Ersparnis durch intelligente Automatisierung – Gesamtbetriebskosten komplett analysiert",
       "stats": [
         {
           "number": "79-97%",
@@ -1066,7 +1066,7 @@
       "title": "Inhalt",
       "items": [
         "Das Kosten-Problem: 76% versteckt",
-        "Total Cost of Ownership Analyse",
+        "Gesamtbetriebskosten Analyse",
         "12 Kostenkategorien im Detail",
         "Die Skalierungs-Falle",
         "Advanced TCO Calculator",
@@ -1121,12 +1121,12 @@
       }
     },
     "tco": {
-      "title": "Total Cost of Ownership: Die komplette Wahrheit",
+      "title": "Gesamtbetriebskosten (TCO): Die komplette Wahrheit",
       "subtitle": "Alle Kosten aufgedeckt – nichts versteckt",
-      "intro": "TCO (Total Cost of Ownership) bedeutet: ALLE Kosten über die gesamte Nutzungsdauer. Nicht nur Gehälter, sondern auch Einrichtung, Wartung, Ersatz, und versteckte Ineffizienzen.",
+      "intro": "TCO (Gesamtbetriebskosten) bedeutet: ALLE Kosten über die gesamte Nutzungsdauer. Nicht nur Gehälter, sondern auch Einrichtung, Wartung, Ersatz, und versteckte Ineffizienzen.",
       "categories": [
         {
-          "name": "Personnel Costs",
+          "name": "Personalkosten",
           "percentage": "65%",
           "items": [
             { "item": "Grundgehälter", "typical": "$3,000-4,000/Agent/Monat", "annual": "$36k-48k" },
@@ -1139,7 +1139,7 @@
           "totalRange": "$75k-123.8k pro Agent/Jahr"
         },
         {
-          "name": "Technology Costs",
+          "name": "Technologie-Kosten",
           "percentage": "8%",
           "items": [
             { "item": "Helpdesk-Software (Zendesk/Gorgias)", "typical": "$115-300/Agent/Monat", "annual": "$1.4k-3.6k pro Agent" },
@@ -1151,7 +1151,7 @@
           "totalRange": "$2.6k-7.7k pro Agent/Jahr"
         },
         {
-          "name": "Operational Costs",
+          "name": "Betriebskosten",
           "percentage": "15%",
           "items": [
             { "item": "Recruiting (pro neuem Agent)", "typical": "$2,000-5,000", "amortized": "$333-833/Monat (wenn 1 Agent/Jahr)" },
@@ -1163,7 +1163,7 @@
           "totalRange": "$10k-21k/Jahr"
         },
         {
-          "name": "Hidden Costs",
+          "name": "Versteckte Kosten",
           "percentage": "12%",
           "items": [
             { "item": "Krankheitstage-Vertretung", "typical": "10 Tage/Jahr pro Agent", "annual": "$1,150/Agent" },
@@ -1272,7 +1272,7 @@
         }
       ],
       "summary": {
-        "title": "Total Cost of Ownership - Die Vollrechnung:",
+        "title": "Gesamtbetriebskosten (TCO) - Die Vollrechnung:",
         "perAgent": "$88,000-198,000/Agent/Jahr (alles inklusive)",
         "threeAgents": "$264,000-594,000/Jahr für 3 Agents",
         "monthly": "$22,000-49,500/Monat",
@@ -1639,7 +1639,7 @@
         },
         {
           "question": "Wie vergleiche ich Kosten zwischen verschiedenen Lösungen?",
-          "answer": "Benutze TCO (Total Cost of Ownership), nicht nur monatliche Preise. Beispiel: Zendesk $115/Monat sieht günstig aus, aber du brauchst 3-5 Agents ($9k-15k) + Software = $9,115-15,115 total. ReplAInow: $99 + 1 Agent ($3k) = $3,099 total. Vergleiche TOTAL, nicht nur Software."
+          "answer": "Benutze TCO (Gesamtbetriebskosten), nicht nur monatliche Preise. Beispiel: Zendesk $115/Monat sieht günstig aus, aber du brauchst 3-5 Agents ($9k-15k) + Software = $9,115-15,115 total. ReplAInow: $99 + 1 Agent ($3k) = $3,099 total. Vergleiche GESAMT, nicht nur Software."
         },
         {
           "question": "Was kostet mich Support in 3 Jahren (Projection)?",
