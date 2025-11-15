@@ -2,7 +2,7 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "@/i18n";
 import LegalNavbar from "@/components/marketing/LegalNavbar";
 import UltraFooter from "@/components/marketing/UltraFooter";
-import { Check, X, Clock, Users, Globe, TrendingUp, Zap, Shield, DollarSign, ArrowRight, ChevronRight } from "lucide-react";
+import { Check, X, Clock, Users, Globe, TrendingUp, Zap, Shield, DollarSign, ArrowRight, ChevronRight, Moon } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
