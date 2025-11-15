@@ -46,6 +46,7 @@ const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Content Pages (SEO-optimized killer content!)
 const ShopifyKundensupportAutomatisieren = lazy(() => import("./pages/content/ShopifyKundensupportAutomatisieren"));
+const Support24_7Shopify = lazy(() => import("./pages/content/Support24-7Shopify"));
 
 const SitemapXML = lazy(() => import("./pages/SitemapXML"));
 const RobotsTXT = lazy(() => import("./pages/RobotsTXT"));
@@ -103,6 +104,7 @@ const AppShell = () => {
           <Route path="/es" element={<Index />} />
           {/* Content Pages */}
           <Route path="/shopify-kundensupport-automatisieren" element={<ShopifyKundensupportAutomatisieren />} />
+          <Route path="/24-7-kundensupport-shopify" element={<Support24_7Shopify />} />
           
           <Route path="/sitemap.xml" element={<SitemapXML />} />
           <Route path="/robots.txt" element={<RobotsTXT />} />

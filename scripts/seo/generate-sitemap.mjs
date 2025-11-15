@@ -55,6 +55,12 @@ const languageSitemaps = [
         lastmod: currentDate,
         changefreq: 'monthly',
         priority: '0.9'
+      },
+      {
+        loc: `${baseUrl}/24-7-kundensupport-shopify`,
+        lastmod: currentDate,
+        changefreq: 'monthly',
+        priority: '0.9'
       }
     ]
   },

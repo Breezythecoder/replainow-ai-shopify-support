@@ -553,6 +553,477 @@
         }
       ]
     }
+  },
+  "support24-7": {
+    "meta": {
+      "title": "24/7 Kundensupport für Shopify | Ohne Nachtschichten, ohne Zuschläge",
+      "description": "24/7 Kundensupport mit KI statt teuren Nachtschichten. Sofortige Antworten nachts & am Wochenende. Alle Zeitzonen abgedeckt. Ab $19/Monat. 14 Tage kostenlos testen.",
+      "keywords": "24/7 Kundensupport Shopify, Rund um die Uhr Support, Support ohne Nachtschichten, 24 Stunden Support, Wochenend-Support"
+    },
+    "breadcrumb": {
+      "home": "Startseite",
+      "current": "24/7 Kundensupport"
+    },
+    "hero": {
+      "badge": "🌙 24/7 VERFÜGBARKEIT",
+      "title": "24/7 Kundensupport für Shopify",
+      "subtitle": "Rund um die Uhr verfügbar – ohne Nachtschichten, ohne Überstunden, ohne Zuschläge",
+      "stats": [
+        {
+          "number": "24/7",
+          "label": "Immer erreichbar"
+        },
+        {
+          "number": "3 Sek",
+          "label": "Antwortzeit"
+        },
+        {
+          "number": "100%",
+          "label": "Uptime"
+        },
+        {
+          "number": "$0",
+          "label": "Nacht-Zuschläge"
+        }
+      ],
+      "cta": {
+        "primary": "24/7 Support aktivieren",
+        "secondary": "Live Demo ansehen"
+      }
+    },
+    "toc": {
+      "title": "Inhalt",
+      "items": [
+        "Das Nachtschicht-Problem",
+        "Warum Kunden nachts kaufen",
+        "Die 24/7 KI-Lösung",
+        "Nachtschicht-Kosten vs. ReplAInow",
+        "Echte 24/7 Szenarien",
+        "Internationale Zeitzonen",
+        "Häufige Fragen"
+      ]
+    },
+    "problem": {
+      "title": "Das Nachtschicht-Problem: Wenn Kunden nicht schlafen",
+      "subtitle": "Die teure Realität von 24/7 Support mit menschlichen Agents",
+      "points": [
+        {
+          "title": "Kunden kaufen zu jeder Zeit",
+          "desc": "E-Commerce kennt keine Öffnungszeiten. 35% aller Online-Käufe passieren zwischen 18:00-08:00 Uhr. 28% am Wochenende. Ohne Support gehen diese Verkäufe oft verloren.",
+          "stat": "35% Käufe nachts"
+        },
+        {
+          "title": "Nachtschichten sind extrem teuer",
+          "desc": "Nachtschicht-Zuschläge: +50% Grundgehalt. Ein Agent für $3,000/Monat kostet nachts $4,500/Monat. Plus Wochenend-Zuschläge (+30%). Echte Kosten: $5,000-6,000/Monat pro Nachtschicht-Agent.",
+          "stat": "$5,000+/Monat"
+        },
+        {
+          "title": "Schwer zu besetzen",
+          "desc": "Nur 15-20% der Arbeitssuchenden sind bereit, Nachtschichten zu übernehmen. Hohe Fluktuation (60% verlassen Job nach 6 Monaten). Ständiges Recruiting und Training nötig.",
+          "stat": "60% Fluktuation"
+        },
+        {
+          "title": "Gesundheitliche Belastung",
+          "desc": "Nachtschichten erhöhen Krankheitstage um 40%. Mehr Fehler durch Müdigkeit. Niedrigere Produktivität (30% weniger Tickets/Stunde nachts). Burnout-Risiko hoch.",
+          "stat": "+40% Krankheitstage"
+        },
+        {
+          "title": "Internationale Shops brauchen echtes 24/7",
+          "desc": "Verkaufst du in USA, Europa und Asien? Du brauchst Support für alle Zeitzonen. Das bedeutet: 3 Schichten täglich = 9-12 Agents = $27,000-36,000/Monat nur für Gehälter.",
+          "stat": "$27k-36k/Monat"
+        }
+      ],
+      "realityCheck": {
+        "title": "Die Nachtschicht-Rechnung:",
+        "calculation": [
+          "2 Nachtschicht-Agents (20:00-08:00) × $5,000 = $10,000/Monat",
+          "2 Wochenend-Agents (Samstag/Sonntag) × $4,000 = $8,000/Monat",
+          "Recruiting & Training (2 neue Agents/Jahr) = $10,000/Jahr",
+          "Zusätzliche Krankheitstage (+40%) = $2,400/Jahr"
+        ],
+        "total": "Total: $18,000/Monat + $12,400/Jahr = ~$230,000/Jahr",
+        "conclusion": "24/7 Support mit Menschen ist einer der teuersten Kostenfaktoren im E-Commerce."
+      }
+    },
+    "whyNight": {
+      "title": "Warum Kunden nachts & am Wochenende kaufen",
+      "subtitle": "E-Commerce Traffic-Analyse",
+      "intro": "Online-Shopping folgt dem Lebensrhythmus, nicht Geschäftszeiten. Die meisten Kunden shoppen in ihrer Freizeit – abends nach der Arbeit, nachts vor dem Schlafengehen, am Wochenende beim Entspannen.",
+      "stats": [
+        {
+          "time": "18:00-23:00",
+          "percentage": "28%",
+          "desc": "Nach Feierabend - Höchster Traffic"
+        },
+        {
+          "time": "23:00-02:00",
+          "percentage": "7%",
+          "desc": "Spät-Nachts - Impulskäufe"
+        },
+        {
+          "time": "Samstag/Sonntag",
+          "percentage": "28%",
+          "desc": "Wochenende - Entspanntes Stöbern"
+        },
+        {
+          "time": "Feiertage",
+          "percentage": "15%",
+          "desc": "Black Friday, Cyber Monday, Weihnachten"
+        }
+      ],
+      "impact": {
+        "title": "Was passiert ohne 24/7 Support?",
+        "scenarios": [
+          {
+            "time": "Sonntag 22:00",
+            "situation": "Kunde hat Frage zu Produktgröße",
+            "noSupport": "Keine Antwort → Kunde verlässt Shop → Verkauf verloren",
+            "withAI": "KI antwortet in 3 Sekunden → Kunde kauft → $89 Umsatz"
+          },
+          {
+            "time": "Freitag 23:30",
+            "situation": "Kunde unsicher bei Checkout (Versandkosten?)",
+            "noSupport": "Keine Hilfe → Warenkorb-Abbruch → $145 verloren",
+            "withAI": "KI erklärt Versand → Kunde schließt Kauf ab → $145 Umsatz"
+          },
+          {
+            "time": "Samstag 14:00",
+            "situation": "Tracking-Anfrage zu Wochenend-Bestellung",
+            "noSupport": "Warten bis Montag → Frustrierter Kunde → Negative Review",
+            "withAI": "KI zeigt Tracking sofort → Zufriedener Kunde → 5-Sterne Review"
+          }
+        ],
+        "lostRevenue": "Durchschnittlich 15-25% Umsatz-Verlust ohne 24/7 Support"
+      }
+    },
+    "solution": {
+      "title": "Die 24/7 KI-Lösung: Immer da, wenn Kunden dich brauchen",
+      "subtitle": "Ohne Nachtschichten, ohne Zuschläge, ohne Kompromisse",
+      "intro": "Was wäre, wenn dein Support-Team 24/7 erreichbar wäre – ohne dass jemand Nachtschichten machen muss? Ohne Überstunden-Zuschläge? Ohne Wochenend-Prämien? Genau das leistet ReplAInow.",
+      "features": [
+        {
+          "title": "Echtes 24/7 – Keine Pausen",
+          "desc": "Die KI ist 365 Tage, 24 Stunden täglich verfügbar. Keine Feiertage, keine Urlaubstage, keine Krankheitstage. Immer die gleiche Qualität, egal ob 14:00 oder 02:00 Uhr.",
+          "benefit": "Kunden bekommen IMMER sofortige Antworten"
+        },
+        {
+          "title": "3 Sekunden Antwortzeit – Immer",
+          "desc": "Egal ob Montag 10:00 oder Sonntag 23:00 – die KI antwortet in 3 Sekunden. Keine langen Wartezeiten. Keine 'Wir sind zurück am Montag' Nachrichten.",
+          "benefit": "Höhere Conversion (Kunden warten nicht)"
+        },
+        {
+          "title": "Alle Zeitzonen abgedeckt",
+          "desc": "Verkaufst du in USA (UTC-5), Deutschland (UTC+1) und Australien (UTC+10)? Die KI unterstützt alle Zeitzonen gleichzeitig. Kein Schicht-Management nötig.",
+          "benefit": "Internationales Wachstum ohne Mehrkosten"
+        },
+        {
+          "title": "Keine Zuschläge, keine Überstunden",
+          "desc": "ReplAInow kostet $19-399/Monat. Egal ob Tag oder Nacht, Wochentag oder Wochenende. Keine variablen Kosten, keine Überraschungen.",
+          "benefit": "Planbare, fixe Kosten"
+        },
+        {
+          "title": "Dein Team arbeitet normale Zeiten",
+          "desc": "Komplexe Fälle? Die sammelt die KI nachts und übergibt sie morgens an dein Team. Deine Agents arbeiten 9-17 Uhr, leben gesund, bleiben länger.",
+          "benefit": "Zufriedeneres Team, weniger Fluktuation"
+        }
+      ]
+    },
+    "calculator": {
+      "title": "Nachtschicht-Kosten Rechner",
+      "subtitle": "Berechne was 24/7 Support mit Menschen kostet",
+      "inputs": {
+        "nightAgents": "Nachtschicht-Agents",
+        "nightCostPerAgent": "Kosten pro Nachtschicht-Agent",
+        "weekendAgents": "Wochenend-Agents",
+        "weekendCostPerAgent": "Kosten pro Wochenend-Agent"
+      },
+      "defaults": {
+        "nightAgents": "2",
+        "nightCostPerAgent": "$5,000",
+        "weekendAgents": "2",
+        "weekendCostPerAgent": "$4,000"
+      },
+      "replainowOptions": [
+        { "plan": "Launch", "cost": 19, "tickets": "10-80/Monat" },
+        { "plan": "Growth", "cost": 49, "tickets": "100-600/Monat" },
+        { "plan": "Scale", "cost": 99, "tickets": "600-1,500/Monat" },
+        { "plan": "Ultimate", "cost": 399, "tickets": "1,500+/Monat" }
+      ]
+    },
+    "scenarios": {
+      "title": "Echte 24/7 Szenarien: Wenn KI Leben rettet",
+      "subtitle": "Was nachts & am Wochenende wirklich passiert",
+      "cases": [
+        {
+          "time": "Sonntag, 22:47 Uhr",
+          "location": "Kunde in München",
+          "situation": "Kunde will Geschenk für Montag bestellen, unsicher ob rechtzeitig",
+          "question": "Kommt das noch bis Montag an wenn ich jetzt bestelle?",
+          "aiAction": "KI prüft Lagerbestand (auf Lager), Versandoptionen (Express verfügbar), und Zustellzeiten",
+          "aiResponse": "Ja! Mit Express-Versand (€12,90) kommt es Montag bis 18:00 Uhr an. Soll ich Express-Versand zum Warenkorb hinzufügen?",
+          "outcome": "Kunde kauft (€156 + Express €12,90) = €168,90 Umsatz. Ohne KI: Verkauf verloren.",
+          "impact": "€168,90 Umsatz gerettet"
+        },
+        {
+          "time": "Freitag, 23:15 Uhr",
+          "location": "Kunde in Hamburg",
+          "situation": "Kunde im Checkout, unsicher wegen Rückgaberecht",
+          "question": "Kann ich das zurückgeben wenn es nicht passt?",
+          "aiAction": "KI zitiert Rückgaberichtlinie aus Shopify, erklärt Prozess",
+          "aiResponse": "Ja! 30 Tage Rückgaberecht, kostenloser Rückversand innerhalb Deutschland. Einfach Rücksendeschein ausdrucken und zur Post bringen.",
+          "outcome": "Kunde schließt Kauf ab (€245). Ohne KI: Warenkorb-Abbruch bis Montag → 60% kommen nie zurück.",
+          "impact": "€245 Conversion gesichert"
+        },
+        {
+          "time": "Samstag, 11:30 Uhr",
+          "location": "Kunde in Wien, Österreich",
+          "situation": "Tracking-Anfrage zu Freitag-Bestellung",
+          "question": "Wo ist meine Bestellung #5678? Habe gestern bestellt.",
+          "aiAction": "KI ruft Bestellung ab, findet Tracking-Info",
+          "aiResponse": "Deine Bestellung #5678 wurde heute um 09:00 Uhr versendet mit DHL. Tracking: DHL9876543210. Voraussichtliche Lieferung: Montag 12. Nov. [Tracking-Link]",
+          "outcome": "Kunde zufrieden, keine Sorgen übers Wochenende. Ohne KI: Kunde wartet bis Montag, wächst Frust.",
+          "impact": "Kundenzufriedenheit +40%"
+        },
+        {
+          "time": "Mittwoch, 01:45 Uhr",
+          "location": "Kunde in USA (Kalifornien, UTC-8)",
+          "situation": "US-Kunde shoppt während deutscher Nacht",
+          "question": "Do you ship to California? How much?",
+          "aiAction": "KI erkennt Englisch, prüft internationale Versandoptionen",
+          "aiResponse": "Yes! We ship to California. Shipping: $15.90 (7-10 business days) or $35.90 Express (3-5 days). Free shipping on orders over $100!",
+          "outcome": "US-Kunde kauft (€234 = $255). Ohne KI: Keine Antwort → Shop verloren an Konkurrenz.",
+          "impact": "$255 internationaler Umsatz"
+        },
+        {
+          "time": "Sonntag, 15:00 Uhr",
+          "location": "Kunde in Zürich, Schweiz",
+          "situation": "Sonntags-Shopper, Frage zu Produktverfügbarkeit",
+          "question": "Ist das iPhone Case noch verfügbar? Brauche es dringend!",
+          "aiAction": "KI prüft Echtzeit-Lagerbestand",
+          "aiResponse": "Ja! Das iPhone 15 Pro Case in Schwarz ist auf Lager (12 Stück). Express-Versand möglich (Lieferung Dienstag). Soll ich es für dich reservieren?",
+          "outcome": "Kunde kauft sofort. Ohne KI: Wartet bis Montag → kauft woanders (Amazon Prime).",
+          "impact": "Wettbewerbsvorteil gesichert"
+        }
+      ],
+      "summary": {
+        "title": "Wochenend-Umsatz-Analyse:",
+        "data": [
+          "5 Szenarien = €168,90 + €245 + €234 (=$255) + CHF (€234 equiv) ≈ €1,120 Umsatz",
+          "Nur Freitag Nacht bis Sonntag!",
+          "Ohne 24/7 Support: 60-80% dieser Verkäufe verloren",
+          "Mit ReplAInow: Fast alle Verkäufe gesichert"
+        ],
+        "conclusion": "24/7 KI zahlt sich durch gerettete Verkäufe selbst – oft schon am ersten Wochenende."
+      }
+    },
+    "costComparison": {
+      "title": "Nachtschicht-Kosten vs. ReplAInow",
+      "subtitle": "Der schockierende Unterschied",
+      "humanSupport": {
+        "title": "24/7 mit menschlichen Agents",
+        "breakdown": [
+          {
+            "item": "2 Nachtschicht-Agents (20:00-08:00)",
+            "calculation": "2 × $5,000/Monat",
+            "cost": "$10,000"
+          },
+          {
+            "item": "2 Wochenend-Agents (Sa/So 08:00-20:00)",
+            "calculation": "2 × $4,000/Monat",
+            "cost": "$8,000"
+          },
+          {
+            "item": "Recruiting (2 neue Agents/Jahr)",
+            "calculation": "2 × $5,000/Jahr ÷ 12",
+            "cost": "$833"
+          },
+          {
+            "item": "Training & Onboarding",
+            "calculation": "2 × $3,000/Jahr ÷ 12",
+            "cost": "$500"
+          },
+          {
+            "item": "Zusätzliche Krankheitstage",
+            "calculation": "+40% bei Nachtschicht",
+            "cost": "$400"
+          },
+          {
+            "item": "Helpdesk-Software",
+            "calculation": "Zendesk/Gorgias",
+            "cost": "$400"
+          }
+        ],
+        "total": "$20,133/Monat",
+        "annual": "$241,596/Jahr"
+      },
+      "aiSupport": {
+        "title": "24/7 mit ReplAInow KI",
+        "breakdown": [
+          {
+            "item": "ReplAInow (Scale Plan)",
+            "calculation": "Alle Features, unbegrenzte Zeiten",
+            "cost": "$99"
+          },
+          {
+            "item": "1 Agent für komplexe Fälle (normal hours)",
+            "calculation": "Nur 9-17 Uhr, keine Zuschläge",
+            "cost": "$3,000"
+          },
+          {
+            "item": "Recruiting",
+            "calculation": "Nur 1 Agent, geringe Fluktuation",
+            "cost": "$0"
+          },
+          {
+            "item": "Training",
+            "calculation": "KI braucht kein Training",
+            "cost": "$0"
+          },
+          {
+            "item": "Überstunden",
+            "calculation": "Keine Überstunden nötig",
+            "cost": "$0"
+          },
+          {
+            "item": "Helpdesk-Software",
+            "calculation": "In ReplAInow enthalten",
+            "cost": "$0"
+          }
+        ],
+        "total": "$3,099/Monat",
+        "annual": "$37,188/Jahr"
+      },
+      "savings": {
+        "monthly": "$20,133 - $3,099 = $17,034 gespart/Monat",
+        "annual": "$241,596 - $37,188 = $204,408 gespart/Jahr",
+        "percentage": "85% Kosteneinsparung",
+        "agents": "6 Nacht/Wochenend-Agents eingespart"
+      }
+    },
+    "international": {
+      "title": "Internationale Zeitzonen: Eine KI, alle Märkte",
+      "subtitle": "Wie ReplAInow globalen 24/7 Support ermöglicht",
+      "challenge": "Ein Shopify-Shop verkauft in Deutschland (UTC+1), USA (UTC-5) und Australien (UTC+10). Das sind 15 Stunden Zeitunterschied. Für echtes 24/7 brauchst du 3 komplette Schichten = 9-12 Agents = $27,000-36,000/Monat.",
+      "solution": "ReplAInow KI arbeitet in allen Zeitzonen gleichzeitig. Ein deutscher Agent betreut das Dashboard 9-17 Uhr. Die KI beantwortet US-Kunden um 02:00 Uhr deutscher Zeit, australische Kunden um 23:00 Uhr deutscher Zeit – automatisch.",
+      "timezones": [
+        {
+          "market": "Deutschland",
+          "timezone": "UTC+1",
+          "peakHours": "18:00-23:00",
+          "coverage": "KI 24/7 + Agent 09:00-17:00"
+        },
+        {
+          "market": "USA (Ost-Küste)",
+          "timezone": "UTC-5",
+          "peakHours": "19:00-00:00 (= 01:00-06:00 deutscher Zeit)",
+          "coverage": "KI automatisch (deutsche Nacht)"
+        },
+        {
+          "market": "Australien",
+          "timezone": "UTC+10",
+          "peakHours": "18:00-23:00 (= 09:00-14:00 deutscher Zeit)",
+          "coverage": "KI + Agent (Überschneidung)"
+        }
+      ],
+      "benefit": "Eine Lösung, drei Märkte. Keine Schicht-Koordination, keine Zeitrechnung, keine Chaos."
+    },
+    "faq": {
+      "title": "Häufige Fragen zu 24/7 Support",
+      "items": [
+        {
+          "question": "Ist die KI wirklich 24/7 verfügbar oder gibt es Wartungsfenster?",
+          "answer": "ReplAInow ist 365 Tage, 24 Stunden verfügbar. Wartungen passieren ohne Downtime (Rolling Updates). Uptime: 99.9%. Selbst bei seltenen Ausfällen (< 1 Stunde/Jahr) sammelt die KI Anfragen und bearbeitet sie nach Wiederherstellung."
+        },
+        {
+          "question": "Was macht die KI wenn nachts eine komplexe Anfrage kommt?",
+          "answer": "Die KI sammelt alle Informationen (Bestellnummer, Problem-Details, Kundenemotion), erstellt eine professionelle 'Wir kümmern uns morgen früh'-Antwort mit realistischen Erwartungen (z.B. 'Mein Kollege meldet sich bis 10:00 Uhr'), und markiert das Ticket für dein Team. Deine Agents finden morgen eine vollständige Zusammenfassung."
+        },
+        {
+          "question": "Merken Kunden dass es eine KI ist?",
+          "answer": "Die KI stellt sich vor ('Hallo! Ich bin ReplAI, dein KI-Assistent'). Kunden wissen es und finden es gut – weil sie sofortige Antworten bekommen statt 'Wir sind geschlossen'. 87% der Kunden bevorzugen sofortige KI-Antworten über langsame menschliche Antworten (Quelle: Gartner 2024)."
+        },
+        {
+          "question": "Kann ich nachts eingreifen wenn nötig?",
+          "answer": "Ja! Du bekommst Push-Benachrichtigungen für wichtige/dringende Fälle. Dein Team kann jederzeit im Dashboard einloggen (auch nachts vom Handy) und übernehmen. Aber in 95% der Fälle ist das nicht nötig – die KI löst es automatisch."
+        },
+        {
+          "question": "Wie funktioniert das für internationale Kunden?",
+          "answer": "Die KI erkennt automatisch die Kundensprache (100+ Sprachen) und die Zeitzone. Ein US-Kunde um 20:00 Uhr Kalifornien-Zeit (= 05:00 Uhr deutscher Zeit) bekommt englische Antworten mit USD-Preisen. Ein französischer Kunde um 14:00 Uhr Paris-Zeit bekommt französische Antworten mit EUR-Preisen."
+        },
+        {
+          "question": "Was kostet 24/7 Support mit ReplAInow wirklich?",
+          "answer": "Der Plan-Preis ($19-399/Monat), mehr nicht. Keine Nacht-Zuschläge, keine Wochenend-Prämien, keine Überstunden. Egal ob deine Kunden dich um 14:00 oder 02:00 Uhr kontaktieren – der Preis bleibt gleich."
+        },
+        {
+          "question": "Kann ich 24/7 Support auch nur für Peak-Zeiten aktivieren?",
+          "answer": "ReplAInow ist immer 24/7. Aber du kannst steuern WANN die KI automatisch antwortet. Beispiel: Nachts (22:00-08:00) Auto-Send auf 95% setzen (nur beste Antworten), tagsüber auf 85% (mehr Automatisierung). So hast du nachts Sicherheit, tagsüber Geschwindigkeit."
+        },
+        {
+          "question": "Was ist mit Feiertagen (Weihnachten, Neujahr)?",
+          "answer": "Die KI arbeitet an Feiertagen normal weiter. Black Friday, Cyber Monday, Weihnachten – die stressigsten Zeiten für E-Commerce – sind für ReplAInow normale Tage. Kein Stress, keine Überstunden-Planung, keine Notfall-Schichten."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "24/7 Support für jeden Shop",
+      "subtitle": "Von Startup bis Enterprise – alle bekommen echtes 24/7",
+      "note": "Alle Pläne beinhalten volle 24/7 Verfügbarkeit. Keine Premium-Feature. Kein Aufpreis für Nacht/Wochenende.",
+      "comparison": {
+        "title": "Was andere für 24/7 verlangen:",
+        "competitors": [
+          {
+            "name": "Zendesk",
+            "baseCost": "$115/Agent/Monat",
+            "nightCost": "Nachtschicht-Agent: $150-200/Monat Aufpreis",
+            "total": "$265-315/Agent für 24/7"
+          },
+          {
+            "name": "Gorgias",
+            "baseCost": "$60/Monat Basis",
+            "nightCost": "24/7 = Advanced Plan $300/Monat",
+            "total": "$300/Monat (limited tickets!)"
+          },
+          {
+            "name": "ReplAInow",
+            "baseCost": "$19-399/Monat",
+            "nightCost": "$0 Aufpreis (immer 24/7!)",
+            "total": "$19-399 (je nach Volumen)"
+          }
+        ]
+      }
+    },
+    "cta": {
+      "title": "Aktiviere 24/7 Support – ohne Nachtschichten",
+      "subtitle": "Deine Kunden kaufen rund um die Uhr. Dein Support sollte verfügbar sein.",
+      "stats": [
+        "99.9% Uptime",
+        "3 Sek Antwortzeit",
+        "Alle Zeitzonen"
+      ],
+      "primary": "Jetzt 24/7 aktivieren",
+      "secondary": "Nachtschicht-Kosten berechnen",
+      "guarantee": "14 Tage kostenlos testen • Keine Nacht-Zuschläge • Jederzeit kündbar"
+    },
+    "related": {
+      "title": "Weiterführende Artikel",
+      "articles": [
+        {
+          "title": "Shopify Kundensupport automatisieren",
+          "url": "/shopify-kundensupport-automatisieren",
+          "desc": "60-80% deiner Tickets automatisch bearbeiten"
+        },
+        {
+          "title": "Mehrsprachiger Support",
+          "url": "/mehrsprachiger-kundensupport-shopify",
+          "desc": "100+ Sprachen für internationale Kunden"
+        },
+        {
+          "title": "Support Kosten senken",
+          "url": "/shopify-support-kosten-senken",
+          "desc": "Komplette Kostenanalyse und ROI"
+        }
+      ]
+    }
   }
 }
 

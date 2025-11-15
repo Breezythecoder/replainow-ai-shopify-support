@@ -14,10 +14,22 @@
       "title": "Automate Shopify Customer Support",
       "subtitle": "Automate 60-80% of your support tickets – with AI that truly knows your store",
       "stats": [
-        { "number": "60-80%", "label": "Automation" },
-        { "number": "3 Sec", "label": "Response Time" },
-        { "number": "100+", "label": "Languages" },
-        { "number": "60 Sec", "label": "Setup Time" }
+        {
+          "number": "60-80%",
+          "label": "Automation"
+        },
+        {
+          "number": "3 Sec",
+          "label": "Response Time"
+        },
+        {
+          "number": "100+",
+          "label": "Languages"
+        },
+        {
+          "number": "60 Sec",
+          "label": "Setup Time"
+        }
       ],
       "cta": {
         "primary": "Try 14 Days Free",
@@ -541,6 +553,384 @@
         }
       ]
     }
+  },
+  "support24-7": {
+    "meta": {
+      "title": "24/7 Customer Support for Shopify | No Night Shifts Required",
+      "description": "24/7 customer support with AI instead of expensive night shifts. Instant answers at night & weekends. All timezones covered. From $19/month.",
+      "keywords": "24/7 customer support Shopify, round the clock support, support without night shifts"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "24/7 Support"
+    },
+    "hero": {
+      "badge": "🌙 24/7 AVAILABILITY",
+      "title": "24/7 Customer Support for Shopify",
+      "subtitle": "Available round the clock – without night shifts, without overtime, without surcharges",
+      "stats": [
+        {
+          "number": "24/7",
+          "label": "Always Available"
+        },
+        {
+          "number": "3 Sec",
+          "label": "Response Time"
+        },
+        {
+          "number": "100%",
+          "label": "Uptime"
+        },
+        {
+          "number": "$0",
+          "label": "Night Surcharges"
+        }
+      ],
+      "cta": {
+        "primary": "Activate 24/7 Support",
+        "secondary": "See Live Demo"
+      }
+    },
+    "toc": {
+      "title": "Contents",
+      "items": [
+        "The Night Shift Problem",
+        "Why Customers Buy at Night",
+        "The 24/7 AI Solution",
+        "Night Shift Costs vs. ReplAInow",
+        "Real 24/7 Scenarios",
+        "International Timezones",
+        "FAQ"
+      ]
+    },
+    "problem": {
+      "title": "The Night Shift Problem: When Customers Don't Sleep",
+      "subtitle": "The expensive reality of 24/7 support with human agents",
+      "points": [
+        {
+          "title": "Customers Buy Anytime",
+          "desc": "E-commerce has no opening hours. 35% of online purchases happen between 6 PM-8 AM. 28% on weekends.",
+          "stat": "35% at night"
+        },
+        {
+          "title": "Night Shifts Are Extremely Expensive",
+          "desc": "Night shift surcharges: +50% base salary. An agent for $3,000/month costs $4,500 at night. Plus weekend surcharges (+30%).",
+          "stat": "$5,000+/month"
+        },
+        {
+          "title": "Hard to Staff",
+          "desc": "Only 15-20% of job seekers accept night shifts. High turnover (60% leave after 6 months).",
+          "stat": "60% Turnover"
+        },
+        {
+          "title": "Health Impact",
+          "desc": "Night shifts increase sick days by 40%. More errors due to fatigue. Lower productivity at night.",
+          "stat": "+40% Sick Days"
+        },
+        {
+          "title": "International Shops Need Real 24/7",
+          "desc": "Selling in USA, Europe and Asia? You need support for all timezones. That's 9-12 agents = $27k-36k/month.",
+          "stat": "$27k-36k/month"
+        }
+      ],
+      "realityCheck": {
+        "title": "The Night Shift Calculation:",
+        "calculation": [
+          "2 Night Shift Agents (8 PM-8 AM) × $5,000 = $10,000/month",
+          "2 Weekend Agents (Sat/Sun) × $4,000 = $8,000/month",
+          "Recruiting & Training = $10,000/year",
+          "Extra sick days (+40%) = $2,400/year"
+        ],
+        "total": "Total: $18,000/month + $12,400/year ≈ $230,000/year",
+        "conclusion": "24/7 support with humans is one of the most expensive cost factors in e-commerce."
+      }
+    },
+    "whyNight": {
+      "title": "Why Customers Buy at Night & Weekends",
+      "subtitle": "E-commerce traffic analysis",
+      "intro": "Online shopping follows life rhythm, not business hours. Most customers shop during their free time.",
+      "stats": [
+        {
+          "time": "6 PM-11 PM",
+          "percentage": "28%",
+          "desc": "After work - Highest traffic"
+        },
+        {
+          "time": "11 PM-2 AM",
+          "percentage": "7%",
+          "desc": "Late night - Impulse buys"
+        },
+        {
+          "time": "Sat/Sun",
+          "percentage": "28%",
+          "desc": "Weekend - Relaxed browsing"
+        },
+        {
+          "time": "Holidays",
+          "percentage": "15%",
+          "desc": "Black Friday, Christmas"
+        }
+      ],
+      "impact": {
+        "title": "What Happens Without 24/7 Support?",
+        "scenarios": [
+          {
+            "time": "Sunday 10 PM",
+            "situation": "Question about product size",
+            "noSupport": "No answer → Customer leaves → Sale lost",
+            "withAI": "AI answers in 3 sec → Customer buys → $89 revenue"
+          },
+          {
+            "time": "Friday 11:30 PM",
+            "situation": "Uncertain at checkout",
+            "noSupport": "No help → Cart abandonment → $145 lost",
+            "withAI": "AI explains → Customer completes purchase → $145 revenue"
+          },
+          {
+            "time": "Saturday 2 PM",
+            "situation": "Tracking request",
+            "noSupport": "Wait until Monday → Frustrated customer",
+            "withAI": "AI shows tracking → Happy customer"
+          }
+        ],
+        "lostRevenue": "Average 15-25% revenue loss without 24/7 support"
+      }
+    },
+    "solution": {
+      "title": "The 24/7 AI Solution: Always There When Customers Need You",
+      "subtitle": "Without night shifts, without surcharges, without compromises",
+      "intro": "What if your support team was available 24/7 – without anyone working night shifts? Without overtime surcharges? Exactly what ReplAInow delivers.",
+      "features": [
+        {
+          "title": "Real 24/7 – No Breaks",
+          "desc": "AI available 365 days, 24 hours. No holidays, no vacation, no sick days.",
+          "benefit": "Customers ALWAYS get instant answers"
+        },
+        {
+          "title": "3 Second Response – Always",
+          "desc": "Whether Monday 10 AM or Sunday 11 PM – AI responds in 3 seconds.",
+          "benefit": "Higher conversion (customers don't wait)"
+        },
+        {
+          "title": "All Timezones Covered",
+          "desc": "Selling in USA, Germany and Australia? AI supports all timezones simultaneously.",
+          "benefit": "International growth without extra costs"
+        },
+        {
+          "title": "No Surcharges, No Overtime",
+          "desc": "ReplAInow costs $19-399/month. Day or night, weekday or weekend – same price.",
+          "benefit": "Predictable, fixed costs"
+        },
+        {
+          "title": "Your Team Works Normal Hours",
+          "desc": "Complex cases? AI collects them at night and hands off to your team in the morning. Your agents work 9-5, live healthy.",
+          "benefit": "Happier team, less turnover"
+        }
+      ]
+    },
+    "calculator": {
+      "title": "Night Shift Cost Calculator",
+      "subtitle": "Calculate what 24/7 support with humans costs",
+      "inputs": {
+        "nightAgents": "Night Shift Agents",
+        "nightCostPerAgent": "Cost per Night Agent",
+        "weekendAgents": "Weekend Agents",
+        "weekendCostPerAgent": "Cost per Weekend Agent"
+      }
+    },
+    "costComparison": {
+      "title": "Night Shift Costs vs. ReplAInow",
+      "subtitle": "The shocking difference"
+    },
+    "scenarios": {
+      "title": "Real 24/7 Scenarios: When AI Saves the Day",
+      "subtitle": "What really happens at night & weekends",
+      "cases": [
+        {
+          "time": "Sunday, 10:47 PM",
+          "location": "Customer in Munich",
+          "situation": "Wants gift by Monday",
+          "question": "Will this arrive by Monday if I order now?",
+          "aiAction": "AI checks inventory, shipping options, delivery times",
+          "aiResponse": "Yes! With Express shipping (€12.90) it arrives Monday by 6 PM. Should I add Express to cart?",
+          "outcome": "Customer buys (€156 + Express) = €168.90. Without AI: Sale lost.",
+          "impact": "€168.90 revenue saved"
+        },
+        {
+          "time": "Friday, 11:15 PM",
+          "location": "Customer in Hamburg",
+          "situation": "Uncertain about returns at checkout",
+          "question": "Can I return if it doesn't fit?",
+          "aiAction": "AI quotes return policy from Shopify",
+          "aiResponse": "Yes! 30-day return policy, free return shipping within Germany.",
+          "outcome": "Customer completes purchase (€245). Without AI: Cart abandonment.",
+          "impact": "€245 conversion secured"
+        },
+        {
+          "time": "Saturday, 11:30 AM",
+          "location": "Customer in Vienna",
+          "situation": "Tracking request for Friday order",
+          "question": "Where is my order #5678?",
+          "aiAction": "AI retrieves order, finds tracking",
+          "aiResponse": "Order #5678 shipped today at 9 AM with DHL. Tracking: DHL9876543210. Expected delivery: Monday.",
+          "outcome": "Customer satisfied. Without AI: Waits until Monday, grows frustrated.",
+          "impact": "Customer satisfaction +40%"
+        },
+        {
+          "time": "Wednesday, 1:45 AM",
+          "location": "Customer in USA (California)",
+          "situation": "US customer shops during German night",
+          "question": "Do you ship to California? How much?",
+          "aiAction": "AI detects English, checks international shipping",
+          "aiResponse": "Yes! We ship to California. Shipping: $15.90 (7-10 days) or $35.90 Express (3-5 days).",
+          "outcome": "US customer buys ($255). Without AI: Lost to competition.",
+          "impact": "$255 international revenue"
+        },
+        {
+          "time": "Sunday, 3 PM",
+          "location": "Customer in Zurich",
+          "situation": "Sunday shopper, product availability",
+          "question": "Is the iPhone case still available?",
+          "aiAction": "AI checks real-time inventory",
+          "aiResponse": "Yes! iPhone 15 Pro Case in Black is in stock (12 pieces). Express shipping available.",
+          "outcome": "Customer buys immediately. Without AI: Buys elsewhere (Amazon Prime).",
+          "impact": "Competitive advantage secured"
+        }
+      ],
+      "summary": {
+        "title": "Weekend Revenue Analysis:",
+        "data": [
+          "5 scenarios = ~€1,120 revenue",
+          "Just Friday night through Sunday!",
+          "Without 24/7: 60-80% of these sales lost",
+          "With ReplAInow: Almost all sales secured"
+        ],
+        "conclusion": "24/7 AI pays for itself through saved sales – often within the first weekend."
+      }
+    },
+    "international": {
+      "title": "International Timezones: One AI, All Markets",
+      "subtitle": "How ReplAInow enables global 24/7 support",
+      "challenge": "A Shopify shop sells in Germany (UTC+1), USA (UTC-5) and Australia (UTC+10). That's 15 hours difference. For real 24/7 you need 3 complete shifts = 9-12 agents = $27k-36k/month.",
+      "solution": "ReplAInow AI works in all timezones simultaneously. One German agent manages the dashboard 9-5. AI answers US customers at 2 AM German time, Australian customers at 11 PM German time – automatically.",
+      "timezones": [
+        {
+          "market": "Germany",
+          "timezone": "UTC+1",
+          "peakHours": "6 PM-11 PM",
+          "coverage": "AI 24/7 + Agent 9 AM-5 PM"
+        },
+        {
+          "market": "USA (East Coast)",
+          "timezone": "UTC-5",
+          "peakHours": "7 PM-12 AM (= 1-6 AM German time)",
+          "coverage": "AI automatic (German night)"
+        },
+        {
+          "market": "Australia",
+          "timezone": "UTC+10",
+          "peakHours": "6 PM-11 PM (= 9 AM-2 PM German time)",
+          "coverage": "AI + Agent (overlap)"
+        }
+      ],
+      "benefit": "One solution, three markets. No shift coordination, no time math, no chaos."
+    },
+    "faq": {
+      "title": "FAQ: 24/7 Support",
+      "items": [
+        {
+          "question": "Is AI really available 24/7 or are there maintenance windows?",
+          "answer": "ReplAInow is available 365 days, 24 hours. Maintenance happens without downtime (rolling updates). Uptime: 99.9%."
+        },
+        {
+          "question": "What does AI do when a complex request comes at night?",
+          "answer": "AI collects all information, creates professional 'We'll handle this tomorrow morning' response with realistic expectations, and flags ticket for your team. Agents find complete summary in the morning."
+        },
+        {
+          "question": "Do customers notice it's AI?",
+          "answer": "AI introduces itself ('Hi! I'm ReplAI, your AI assistant'). Customers know and appreciate it – because they get instant answers instead of 'We're closed'. 87% prefer instant AI answers over slow human responses."
+        },
+        {
+          "question": "Can I intervene at night if needed?",
+          "answer": "Yes! You get push notifications for important/urgent cases. Your team can login anytime (even at night from mobile). But in 95% of cases it's not needed – AI handles it automatically."
+        },
+        {
+          "question": "How does this work for international customers?",
+          "answer": "AI automatically detects customer language (100+ languages) and timezone. A US customer at 8 PM California time gets English answers with USD prices."
+        },
+        {
+          "question": "What does 24/7 support with ReplAInow really cost?",
+          "answer": "The plan price ($19-399/month), nothing more. No night surcharges, no weekend premiums, no overtime. Same price day or night."
+        },
+        {
+          "question": "Can I activate 24/7 only for peak times?",
+          "answer": "ReplAInow is always 24/7. But you control WHEN AI auto-sends. Example: Set auto-send to 95% at night (only best answers), 85% during day (more automation)."
+        },
+        {
+          "question": "What about holidays (Christmas, New Year)?",
+          "answer": "AI works normally on holidays. Black Friday, Cyber Monday, Christmas – the most stressful times for e-commerce – are normal days for ReplAInow."
+        }
+      ]
+    },
+    "pricing": {
+      "title": "24/7 Support for Every Shop",
+      "subtitle": "From startup to enterprise – everyone gets real 24/7",
+      "note": "All plans include full 24/7 availability. Not a premium feature. No surcharge for night/weekend.",
+      "comparison": {
+        "title": "What others charge for 24/7:",
+        "competitors": [
+          {
+            "name": "Zendesk",
+            "baseCost": "$115/agent/month",
+            "nightCost": "Night agent: $150-200/month surcharge",
+            "total": "$265-315/agent for 24/7"
+          },
+          {
+            "name": "Gorgias",
+            "baseCost": "$60/month base",
+            "nightCost": "24/7 = Advanced Plan $300/month",
+            "total": "$300/month (limited tickets!)"
+          },
+          {
+            "name": "ReplAInow",
+            "baseCost": "$19-399/month",
+            "nightCost": "$0 surcharge (always 24/7!)",
+            "total": "$19-399 (based on volume)"
+          }
+        ]
+      }
+    },
+    "cta": {
+      "title": "Activate 24/7 Support – Without Night Shifts",
+      "subtitle": "Your customers buy round the clock. Your support should be available.",
+      "stats": [
+        "99.9% Uptime",
+        "3 Sec Response",
+        "All Timezones"
+      ],
+      "primary": "Activate 24/7 Now",
+      "secondary": "Calculate Night Shift Costs",
+      "guarantee": "Try 14 days free • No night surcharges • Cancel anytime"
+    },
+    "related": {
+      "title": "Related Articles",
+      "articles": [
+        {
+          "title": "Automate Shopify Customer Support",
+          "url": "/shopify-kundensupport-automatisieren",
+          "desc": "Automate 60-80% of your tickets"
+        },
+        {
+          "title": "Multilingual Support",
+          "url": "/mehrsprachiger-kundensupport-shopify",
+          "desc": "100+ languages for international customers"
+        },
+        {
+          "title": "Reduce Support Costs",
+          "url": "/shopify-support-kosten-senken",
+          "desc": "Complete cost analysis and ROI"
+        }
+      ]
+    }
   }
 }
-
