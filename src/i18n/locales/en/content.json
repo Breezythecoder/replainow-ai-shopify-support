@@ -1070,8 +1070,59 @@
     "tco": {
       "title": "Total Cost of Ownership: The Complete Truth",
       "subtitle": "All costs revealed – nothing hidden",
-      "intro": "TCO means ALL costs over entire lifetime. Not just salaries, but also setup, maintenance, replacement, hidden inefficiencies.",
-      "categories": [],
+      "intro": "TCO (Total Cost of Ownership) means: ALL costs over entire lifetime. Not just salaries, but also setup, maintenance, replacement, and hidden inefficiencies.",
+      "categories": [
+        {
+          "name": "Personnel Costs",
+          "percentage": "65%",
+          "items": [
+            { "item": "Base Salaries", "typical": "$3,000-4,000/agent/month", "annual": "$36k-48k" },
+            { "item": "Benefits & Payroll Taxes", "typical": "+25-30% on salary", "annual": "$9k-14.4k" },
+            { "item": "Night Shift Premium", "typical": "+50% for night shifts", "annual": "$18k-24k per night agent" },
+            { "item": "Weekend Premium", "typical": "+30% Sat/Sun", "annual": "$4.3k-6.2k" },
+            { "item": "Overtime", "typical": "$500-2,000/month", "annual": "$6k-24k" },
+            { "item": "Bonuses & Incentives", "typical": "5-15% annual salary", "annual": "$1.8k-7.2k" }
+          ],
+          "totalRange": "$75k-123.8k per agent/year"
+        },
+        {
+          "name": "Technology Costs",
+          "percentage": "8%",
+          "items": [
+            { "item": "Helpdesk Software (Zendesk/Gorgias)", "typical": "$115-300/agent/month", "annual": "$1.4k-3.6k per agent" },
+            { "item": "CRM Integration", "typical": "$50-200/month", "annual": "$600-2.4k" },
+            { "item": "Analytics Tools", "typical": "$30-100/month", "annual": "$360-1.2k" },
+            { "item": "Communication Tools (Slack, etc.)", "typical": "$8-15/user/month", "annual": "$96-180 per agent" },
+            { "item": "VPN & Security", "typical": "$10-30/user/month", "annual": "$120-360 per agent" }
+          ],
+          "totalRange": "$2.6k-7.7k per agent/year"
+        },
+        {
+          "name": "Operational Costs",
+          "percentage": "15%",
+          "items": [
+            { "item": "Recruiting (per new agent)", "typical": "$2,000-5,000", "amortized": "$333-833/month (if 1 agent/year)" },
+            { "item": "Training & Onboarding", "typical": "$3,000-8,000 (4-6 weeks)", "amortized": "$500-1,333/month" },
+            { "item": "Continued Training", "typical": "5-10h/month per agent", "annual": "$1.5k-3k per agent" },
+            { "item": "Quality Assurance", "typical": "3-5h/week management", "annual": "$7.8k-13k" },
+            { "item": "Equipment (Laptop, Headset)", "typical": "$1,500-2,500 per agent", "amortized": "$125-208/month (over 1 year)" }
+          ],
+          "totalRange": "$10k-21k/year"
+        },
+        {
+          "name": "Hidden Costs",
+          "percentage": "12%",
+          "items": [
+            { "item": "Sick Leave Coverage", "typical": "10 days/year per agent", "annual": "$1,150/agent" },
+            { "item": "Vacation Coverage", "typical": "20-25 days/year per agent", "annual": "$2,300-2,875/agent" },
+            { "item": "Turnover Costs", "typical": "30-40% annual in support", "annual": "$5,000-15,000 per departure" },
+            { "item": "Inefficiencies", "typical": "Ramp-up time, mistakes, slow responses", "annual": "$3,000-8,000" },
+            { "item": "Office Space (if applicable)", "typical": "$300-800/agent/month", "annual": "$3.6k-9.6k per agent" },
+            { "item": "Miscellaneous", "typical": "Legal, HR, admin overhead", "annual": "$2k-5k" }
+          ],
+          "totalRange": "$17k-42k/year"
+        }
+      ],
       "totalTCO": {
         "perAgent": "$88k-198k/agent/year",
         "threeAgents": "$264k-594k for 3 agents/year",
@@ -1081,9 +1132,102 @@
       }
     },
     "categories": {
-      "title": "12 Cost Categories in Detail",
+      "title": "12 Cost Categories in Detail: Where Your Money Really Goes",
       "subtitle": "Every cost point transparently explained",
-      "items": []
+      "items": [
+        {
+          "number": "1",
+          "category": "Base Salaries",
+          "cost": "$3,000-4,000/agent/month",
+          "description": "The most obvious: Base salary for support agents. Varies by experience, location, and industry.",
+          "savingsWithAI": "3 agents = $9,000-12,000/month. With ReplAInow: 1 agent for 20-40% tickets = $3,000-4,000/month. Savings: $6,000-8,000/month."
+        },
+        {
+          "number": "2",
+          "category": "Benefits & Payroll Taxes",
+          "cost": "+25-30% on salaries",
+          "description": "Health insurance, pension, unemployment insurance, workers comp. Often 20-25% in Europe, 25-35% in USA with healthcare.",
+          "savingsWithAI": "$2,250-3,600/month saved with fewer agents."
+        },
+        {
+          "number": "3",
+          "category": "Night Shift & Weekend Premiums",
+          "cost": "+50-80% surcharge",
+          "description": "Legal and market-standard premiums. Night shift (10pm-6am): +50%. Sundays: +50-100%. Holidays: +100-150%.",
+          "savingsWithAI": "With ReplAInow AI: $0 surcharges. 24/7 support without extra costs. Savings: $4,000-8,000/month."
+        },
+        {
+          "number": "4",
+          "category": "Helpdesk Software",
+          "cost": "$200-800/month",
+          "description": "Zendesk: $115-215/agent. Gorgias: $60-900/month. Intercom: $74-999/month. Plus add-ons for automation, reporting, integrations.",
+          "savingsWithAI": "ReplAInow includes everything: Live chat, email, dashboard, automation. No extra software needed. Savings: $200-800/month."
+        },
+        {
+          "number": "5",
+          "category": "Recruiting & Hiring",
+          "cost": "$2,000-5,000 per new agent",
+          "description": "Job ads ($300-800), recruiter fees (15-25% annual salary = $5,400-12,000), interview time (20-30h management), background checks ($50-200).",
+          "savingsWithAI": "With 3 agents at 40% turnover = 1.2 new agents/year = $2,400-6,000/year. With ReplAInow: Only 1 agent, lower turnover. Savings: ~$2,000-5,000/year."
+        },
+        {
+          "number": "6",
+          "category": "Training & Onboarding",
+          "cost": "$3,000-8,000 per agent",
+          "description": "4-6 weeks training: Product knowledge, policies, software, processes. Costs: Trainer time ($2,000-4,000) + new agent at 50% productivity ($1,500-3,000) + materials ($200-500) + error costs ($300-500).",
+          "savingsWithAI": "ReplAInow: 60-second installation. No training needed. AI knows products automatically. Savings: $3,000-8,000 per agent = $9,000-24,000 for 3 agents."
+        },
+        {
+          "number": "7",
+          "category": "Equipment & Hardware",
+          "cost": "$1,500-2,500 per agent",
+          "description": "Laptop/Computer ($800-1,500), headset ($100-300), monitor ($200-400), mouse/keyboard ($50-100), software licenses ($200-400/year), replacement parts ($100-200/year).",
+          "savingsWithAI": "3 agents = $4,500-7,500 initial + $900-1,800/year maintenance. With 1 agent: $1,500-2,500. Savings: $3,000-5,000 one-time."
+        },
+        {
+          "number": "8",
+          "category": "Overtime & Peak Times",
+          "cost": "$500-2,000/month",
+          "description": "Black Friday, Cyber Monday, Christmas, flash sales. Overtime premiums: +25-50%. With 3 agents at 20h overtime/month = $750-2,250/month extra.",
+          "savingsWithAI": "AI scales instantly without extra costs. Black Friday? Normal costs. Savings: $6,000-24,000/year."
+        },
+        {
+          "number": "9",
+          "category": "Management & QA",
+          "cost": "$1,500-3,000/month",
+          "description": "Support manager or owner spends 8-15h/week: Team meetings, performance reviews, quality checks, conflict resolution, planning. At $100-150/h value = $3,200-9,000/month.",
+          "savingsWithAI": "AI needs minimal management. 1-2h/week instead of 10h. Savings: $5,600-7,200/month owner time."
+        },
+        {
+          "number": "10",
+          "category": "Sick Leave & Vacation Coverage",
+          "cost": "$300-900/agent/month",
+          "description": "Sick days: 10/year per agent = $1,150. Vacation: 25 days/year = $2,875. Organizing coverage: Management time. With 3 agents = $12,000/year = $1,000/month.",
+          "savingsWithAI": "AI never gets sick, never takes vacation. Savings: $900-2,700/month for 3 agents."
+        },
+        {
+          "number": "11",
+          "category": "Turnover & Knowledge Loss",
+          "cost": "$5,000-15,000 per departure",
+          "description": "Support has 30-40% annual turnover. Costs: Recruiting ($2-5k) + training ($3-8k) + productivity loss 3 months ($4.5-6k) + knowledge transfer (50h = $2.5k). With 3 agents = 1+ departure/year.",
+          "savingsWithAI": "ReplAInow: No knowledge loss. Everything stored in AI. Savings: $5,000-15,000/year."
+        },
+        {
+          "number": "12",
+          "category": "Inefficiency & Error Costs",
+          "cost": "$2,000-8,000/year",
+          "description": "Agents make mistakes (2-5% error rate): Wrong info (refunds needed), lost sales (customer frustrated), productivity loss (10-20% time on non-support tasks).",
+          "savingsWithAI": "AI < 5% error rate, only on complex cases. No productivity losses. Savings: $1,500-6,000/year."
+        }
+      ],
+      "summary": {
+        "title": "Total Cost of Ownership (TCO) - Complete Calculation:",
+        "perAgent": "$88,000-198,000/agent/year (all-inclusive)",
+        "threeAgents": "$264,000-594,000/year for 3 agents",
+        "monthly": "$22,000-49,500/month",
+        "vsGehaltOnly": "2.4-5.5x more than salaries only!",
+        "shocking": "A support team costs as much as renting 2-3 additional stores!"
+      }
     },
     "scalingTrap": {
       "title": "The Scaling Trap",
@@ -1102,11 +1246,18 @@
           "agents": "8 agents",
           "costNaive": "$24,000",
           "costReality": "$39,600/month",
-          "vsPhase1": "4.7x more costs",
-          "structure": "Complex"
+          "vsPhase1": "4.7x more costs (not 4x!)",
+          "structure": "Complex: 2 shifts, team lead, specialization needed"
         },
-        "whyMore": [],
-        "withReplAInow": "200 tickets: $9,099/month with ReplAInow"
+        "whyMore": [
+          "Team lead/supervisor needed (+$4,500/month)",
+          "2 shifts for coverage (coordination overhead)",
+          "More tools needed (reporting, analytics)",
+          "Specialization (product experts, returns experts)",
+          "More meeting time (team sync)",
+          "Higher error rate (less context per agent)"
+        ],
+        "withReplAInow": "200 tickets: 160 AI (80%) + 40 human (20%) = 2-3 agents + $99 ReplAInow = $6,099-9,099/month. Savings: $30,501/month (77%)!"
       }
     },
     "calculator": {
@@ -1129,52 +1280,303 @@
       "defaults": {}
     },
     "replainowTCO": {
-      "title": "ReplAInow TCO: 100% Transparent",
-      "subtitle": "What does ReplAInow really cost?",
-      "breakdown": [],
+      "title": "ReplAInow TCO: 100% Transparent, No Surprises",
+      "subtitle": "What does ReplAInow really cost? Everything revealed.",
+      "breakdown": [
+        {
+          "item": "Plan Costs",
+          "plans": [
+            { "name": "Launch", "cost": "$19/month", "ideal": "10-80 tickets/month" },
+            { "name": "Growth", "cost": "$49/month", "ideal": "100-600 tickets/month" },
+            { "name": "Scale", "cost": "$99/month", "ideal": "600-1,500 tickets/month" },
+            { "name": "Ultimate", "cost": "$399/month", "ideal": "1,500+ tickets/month" }
+          ]
+        },
+        {
+          "item": "Overage (over included responses)",
+          "cost": "$0.02-0.05 per additional AI response",
+          "example": "Growth Plan (2,500 included) + 500 extra = 500 × $0.03 = $15 extra"
+        },
+        {
+          "item": "1 Human Agent (for 20-40% complex tickets)",
+          "cost": "$3,000-4,000/month",
+          "note": "Optional - small shops might only need 0.5 FTE"
+        },
+        {
+          "item": "Setup & Training",
+          "cost": "$0 (60-second installation, zero training)",
+          "comparison": "vs. $3,000-8,000 with traditional software"
+        },
+        {
+          "item": "Equipment",
+          "cost": "$0 additional (cloud-based)",
+          "comparison": "vs. $1,500-2,500 per agent"
+        },
+        {
+          "item": "Management Overhead",
+          "cost": "~1h/week instead of 10h/week",
+          "savings": "9h/week × $100/h = $3,600/month saved"
+        }
+      ],
       "totalComparison": {
-        "title": "Total TCO Comparison",
+        "title": "Total TCO Comparison (100 tickets/day, 3,000/month):",
         "human": {
-          "title": "Traditional (3 Agents):",
-          "items": [],
+          "title": "Traditional Support (3 Agents):",
+          "items": [
+            "Salaries & Benefits: $11,250",
+            "Software: $400",
+            "Recruiting/Training (amortized): $1,200",
+            "Equipment (amortized): $375",
+            "Management: $2,000",
+            "Overtime: $750",
+            "Misc (sick leave, etc.): $600"
+          ],
           "total": "$16,575/month",
           "annual": "$198,900/year"
         },
         "replainow": {
-          "title": "With ReplAInow:",
-          "items": [],
+          "title": "With ReplAInow (1 Agent + AI):",
+          "items": [
+            "ReplAInow Scale: $99",
+            "1 Agent (20-40% tickets): $3,000",
+            "Benefits for 1 agent: $750",
+            "Recruiting/Training: $0",
+            "Equipment: $0 (use existing)",
+            "Management: $200 (1h/week)",
+            "Overtime: $0",
+            "Misc: $0"
+          ],
           "total": "$4,049/month",
           "annual": "$48,588/year"
         },
         "savings": {
-          "monthly": "$12,526/month saved",
-          "annual": "$150,312/year saved",
+          "monthly": "$12,526/month",
+          "annual": "$150,312/year",
           "percentage": "76% cost savings",
-          "breakEven": "2 weeks"
+          "breakEven": "2 weeks (ReplAInow costs $99, you save $12,526/month = ROI after ~2 weeks!)"
         }
       }
     },
     "hiddenSavings": {
-      "title": "Hidden Savings",
+      "title": "Hidden Savings: What The Calculation Doesn't Show",
       "subtitle": "Additional benefits hard to quantify",
-      "items": [],
-      "totalHidden": "$15k-30k/month additional benefits!"
+      "items": [
+        {
+          "category": "Time Savings for Owner/Manager",
+          "before": "10-15 hours/week on team management",
+          "after": "1-2 hours/week on AI monitoring",
+          "savings": "8-13 hours/week back",
+          "value": "At $150/h value = $4,800-7,800/month owner time saved",
+          "realValue": "Can be reinvested in: Marketing, product development, strategy"
+        },
+        {
+          "category": "Faster Response Times = Higher Conversion",
+          "before": "Average 15-45 minutes wait time",
+          "after": "3 seconds with AI",
+          "impact": "15-25% higher conversion on pre-sale questions",
+          "value": "At $100k monthly revenue = $15k-25k additional",
+          "calculation": "More revenue = more profit than just 'saving costs'"
+        },
+        {
+          "category": "24/7 Support = Nighttime Sales",
+          "before": "35% purchases nights/weekends lost without support",
+          "after": "95% purchases secured with 24/7 AI",
+          "impact": "At $100k monthly revenue = $33k+ additional potential",
+          "value": "Not just cost reduction - revenue increase!"
+        },
+        {
+          "category": "Lower Turnover (happier team)",
+          "before": "3 agents, 40% turnover = 1.2 departures/year",
+          "after": "1 agent (only interesting work), 15% turnover",
+          "savings": "Less recruiting, less training, better team",
+          "value": "$6,000-15,000/year in turnover costs saved"
+        },
+        {
+          "category": "International Expansion Without Extra Costs",
+          "before": "New country = new language = new agent ($4,500/month)",
+          "after": "AI speaks 100+ languages natively",
+          "value": "Per additional language: $4,500/month × 12 = $54,000/year saved",
+          "impact": "5 language support = $270,000/year saved!"
+        },
+        {
+          "category": "Scaling Without Proportional Costs",
+          "before": "Double tickets = double agents = double costs",
+          "after": "Double tickets = same AI + 20% more agent time = +20% costs",
+          "example": "From 100 to 200 tickets: Human +100% costs vs. ReplAInow +20% costs",
+          "value": "Unlimited scalability"
+        }
+      ],
+      "totalHidden": "Estimated additional benefits: $15,000-30,000/month + revenue increase!"
     },
     "caseStudies": {
       "title": "Real Merchants: Concrete Cost Savings",
       "subtitle": "Real shops, real numbers, real results",
-      "cases": [],
+      "cases": [
+        {
+          "merchant": "ElectroMax (Electronics Shop)",
+          "location": "Germany, Hamburg",
+          "size": "150 tickets/day, 4,500/month",
+          "before": {
+            "setup": "4 full-time support agents",
+            "costs": [
+              "Salaries: $12,000",
+              "Benefits: $3,000",
+              "Software (Zendesk): $600",
+              "Recruiting/Training: $1,000",
+              "Management: $2,500",
+              "Extras: $900"
+            ],
+            "total": "$20,000/month",
+            "annual": "$240,000/year"
+          },
+          "after": {
+            "setup": "1 Agent + ReplAInow (Ultimate Plan)",
+            "costs": [
+              "ReplAInow: $399",
+              "1 Agent: $3,000",
+              "Benefits: $750",
+              "Management: $300",
+              "Extras: $0"
+            ],
+            "total": "$4,449/month",
+            "annual": "$53,388/year"
+          },
+          "results": {
+            "savings": "$15,551/month ($186,612/year)",
+            "percentage": "78% cost savings",
+            "roi": "Break-even after 2 weeks",
+            "additional": "+37% customer satisfaction (3s response time)",
+            "quote": "We thought support costs us $12k/month. It was $20k! Now we pay $4.4k and have better service. This saved our business."
+          }
+        },
+        {
+          "merchant": "FashionHub (Fashion Shop)",
+          "location": "Austria, Vienna",
+          "size": "80 tickets/day, 2,400/month",
+          "before": {
+            "setup": "3 Agents (2 full-time, 1 part-time)",
+            "costs": [
+              "Salaries: $8,500",
+              "Benefits: $2,125",
+              "Software (Gorgias): $300",
+              "Recruiting/Training: $750",
+              "Management: $1,800",
+              "Overtime (peak): $600"
+            ],
+            "total": "$14,075/month",
+            "annual": "$168,900/year"
+          },
+          "after": {
+            "setup": "0.5 Agent (part-time) + ReplAInow (Growth Plan)",
+            "costs": [
+              "ReplAInow: $49",
+              "0.5 Agent: $1,500",
+              "Benefits: $375",
+              "Management: $200"
+            ],
+            "total": "$2,124/month",
+            "annual": "$25,488/year"
+          },
+          "results": {
+            "savings": "$11,951/month ($143,412/year)",
+            "percentage": "85% cost savings",
+            "roi": "Break-even after 1 week",
+            "additional": "Team member focuses on VIP customers (higher satisfaction)",
+            "quote": "From 3 stressed agents to 1 relaxed + AI. Costs down 85%, quality up. Wish we did this sooner!"
+          }
+        },
+        {
+          "merchant": "HomeDecor Plus (Furniture)",
+          "location": "Switzerland, Zurich",
+          "size": "200 tickets/day, 6,000/month",
+          "before": {
+            "setup": "5 Agents + 1 Team Lead",
+            "costs": [
+              "Salaries (5 agents + lead): $21,000",
+              "Benefits: $5,250",
+              "Software (Zendesk): $800",
+              "Night/Weekend Coverage: $3,000",
+              "Recruiting/Training: $1,500",
+              "Management: $3,000",
+              "Office Space: $1,800",
+              "Extras: $1,200"
+            ],
+            "total": "$37,550/month",
+            "annual": "$450,600/year"
+          },
+          "after": {
+            "setup": "2 Agents + ReplAInow (Ultimate Plan)",
+            "costs": [
+              "ReplAInow: $399",
+              "2 Agents: $6,000",
+              "Benefits: $1,500",
+              "Management: $500",
+              "Extras: $100"
+            ],
+            "total": "$8,499/month",
+            "annual": "$101,988/year"
+          },
+          "results": {
+            "savings": "$29,051/month ($348,612/year)",
+            "percentage": "77% cost savings",
+            "roi": "Break-even after 2 weeks",
+            "additional": "+42% conversion (instant answers), +28% revenue",
+            "quote": "The $348k savings/year we reinvested in marketing. Revenue +50% in first year. ReplAInow paid for itself and more."
+          }
+        }
+      ],
       "summary": {
-        "title": "Summary:",
-        "avgSavings": "76-85% average savings",
-        "avgROI": "1-2 weeks break-even",
+        "title": "Case Studies Summary:",
+        "avgSavings": "76-85% average cost savings",
+        "avgROI": "Break-even after 1-2 weeks",
         "pattern": "Larger shops save more ($), smaller save more (%)",
-        "additionalBenefit": "All report higher satisfaction + more revenue"
+        "additionalBenefit": "All 3 report: Higher customer satisfaction + more revenue"
       }
     },
     "faq": {
-      "title": "FAQ: Cost Questions",
-      "items": []
+      "title": "Frequently Asked Questions About Support Costs",
+      "items": [
+        {
+          "question": "What does ReplAInow really cost (all-in)?",
+          "answer": "Plan price ($19-399/month) + optional 1 agent for complex cases ($3,000/month). That's everything. No setup fees, no training costs, no equipment purchases, no hidden surcharges. Total: $3,019-3,399/month for complete support (vs. $15,000-40,000 with only humans)."
+        },
+        {
+          "question": "Are there hidden costs with ReplAInow?",
+          "answer": "No. The only variable factor: Overage charges if you need more AI responses than included in plan ($0.02-0.05/response). But it's transparent and predictable. No recruiting fees, no training costs, no night premiums, no surprises."
+        },
+        {
+          "question": "What if I get more tickets than expected?",
+          "answer": "ReplAInow scales flexibly. Option 1: Upgrade to next plan (more included responses). Option 2: Pay overage ($0.02-0.05/response). Option 3: Increase auto-send threshold (fewer AI sends). All changeable within minutes in dashboard. No contracts, no cancellation periods."
+        },
+        {
+          "question": "Is it worth it for small shops (< 50 tickets/day)?",
+          "answer": "Absolutely! Small shops benefit most percentage-wise. Example: 30 tickets/day = 1 full-time agent ($3,000 + $1,500 hidden = $4,500/month). With ReplAInow Launch ($19) + 0.3 agent ($900) = $919/month. Savings: 80%. ROI: 1 week."
+        },
+        {
+          "question": "How fast is the ROI break-even?",
+          "answer": "Average 1-2 weeks. ReplAInow costs $19-399/month. You save $2,000-30,000/month (depending on size). At $99/month plan + $12,000/month savings = break-even after 6 hours. Even conservative calculation: ROI positive after max 1 month."
+        },
+        {
+          "question": "What are the biggest cost traps in support?",
+          "answer": "Top 5: (1) Hidden costs not calculated (benefits, training, etc.) – 43% of costs! (2) Night shift premiums underestimated (+50-80%). (3) Turnover ignored ($5-15k per departure). (4) Management time not tracked (10h/week = $2k/month). (5) Scaling thought linearly (but it's exponential!)."
+        },
+        {
+          "question": "Can I also only PARTIALLY automate?",
+          "answer": "Yes, but why? ReplAInow automates 60-80% optimally. You can increase auto-send threshold (e.g. 95%) for more manual reviews, but that increases costs again. Sweet spot: 80-90% threshold = 60-70% automation = maximum savings at high quality."
+        },
+        {
+          "question": "What if I need more agents again (AI doesn't work)?",
+          "answer": "ReplAInow has 4.9/5 stars from 280+ merchants – it works. But: Cancel anytime (monthly). No contracts, no lock-in. If you're unsatisfied (< 1% of users), you can return to traditional. 30-day money-back guarantee."
+        },
+        {
+          "question": "How do I compare costs between different solutions?",
+          "answer": "Use TCO (Total Cost of Ownership), not just monthly prices. Example: Zendesk $115/month looks cheap, but you need 3-5 agents ($9k-15k) + software = $9,115-15,115 total. ReplAInow: $99 + 1 agent ($3k) = $3,099 total. Compare TOTAL, not just software."
+        },
+        {
+          "question": "What will support cost me in 3 years (projection)?",
+          "answer": "Traditional: $180k-240k/year × 3 = $540k-720k. With ReplAInow: $40k-50k/year × 3 = $120k-150k. Savings over 3 years: $420k-570k! That's enough to open a second shop, hire 2 marketing managers, or launch new product lines."
+        }
+      ]
     },
     "cta": {
       "title": "Ready to Save $150,000+/Year?",
