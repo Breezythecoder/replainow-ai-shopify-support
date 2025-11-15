@@ -117,7 +117,7 @@ const UltraFooter = () => {
 
           {/* Legal */}
           <div>
-            <h3 className="font-bold mb-4 text-gray-900">Legal</h3>
+            <h3 className="font-bold mb-4 text-gray-900">{t('common.footer.legal.title')}</h3>
             <ul className="space-y-3">
               <li>
                 <a href="/privacy" className="text-gray-700 hover:text-purple-700 transition-colors">

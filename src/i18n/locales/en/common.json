@@ -30,6 +30,7 @@
       "contact": "Contact"
     },
     "legal": {
+      "title": "Legal",
       "privacy": "Privacy Policy",
       "terms": "Terms of Service",
       "security": "Security",
