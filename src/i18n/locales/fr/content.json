@@ -932,5 +932,281 @@
         }
       ]
     }
+  },
+  "kostenSenken": {
+    "meta": {
+      "title": "Reduce Shopify Support Costs 2025 | 79-97% Savings with AI",
+      "description": "Reduce support costs by 79-97% with AI automation. Complete TCO analysis, hidden costs revealed, 2-week ROI. Advanced calculator. From $19/month.",
+      "keywords": "reduce support costs, cheaper customer support, support budget optimization, TCO customer support"
+    },
+    "breadcrumb": {
+      "home": "Home",
+      "current": "Reduce Costs"
+    },
+    "hero": {
+      "badge": "💰 COST OPTIMIZATION",
+      "title": "Reduce Shopify Support Costs",
+      "subtitle": "79-97% savings through intelligent automation – Complete Total Cost of Ownership analysis",
+      "stats": [
+        {
+          "number": "79-97%",
+          "label": "Cost Savings"
+        },
+        {
+          "number": "$17k+",
+          "label": "Saved/Month"
+        },
+        {
+          "number": "2 Weeks",
+          "label": "ROI Break-even"
+        },
+        {
+          "number": "76%",
+          "label": "Hidden Costs"
+        }
+      ],
+      "cta": {
+        "primary": "Calculate Savings",
+        "secondary": "See Live Demo"
+      }
+    },
+    "toc": {
+      "title": "Contents",
+      "items": [
+        "The Cost Problem: 76% Hidden",
+        "Total Cost of Ownership Analysis",
+        "12 Cost Categories Detailed",
+        "The Scaling Trap",
+        "Advanced TCO Calculator",
+        "ReplAInow Costs (Transparent)",
+        "Hidden Savings",
+        "Real Merchant Case Studies",
+        "Pricing & ROI",
+        "FAQ"
+      ]
+    },
+    "problem": {
+      "title": "The Cost Problem: Your Support Costs 76% More Than You Think",
+      "subtitle": "The Salary Illusion and Hidden Cost Traps",
+      "intro": "Most merchants only calculate salaries: 3 agents × $3,000 = $9,000/month. But that is only 57% of real costs. Reality: $15,858/month.",
+      "illusionVsReality": {
+        "shopOwnerThinks": {
+          "title": "What Shop Owners Think:",
+          "calculation": "3 agents × $3,000 = $9,000/month",
+          "assumption": "That is not so expensive...",
+          "percentage": "57% of real costs"
+        },
+        "reality": {
+          "title": "The Hidden Reality:",
+          "breakdown": [
+            {
+              "item": "Salaries (3 agents)",
+              "cost": "$9,000",
+              "visible": true
+            },
+            {
+              "item": "Benefits (+25%)",
+              "cost": "$2,250",
+              "visible": false
+            },
+            {
+              "item": "Helpdesk Software",
+              "cost": "$400",
+              "visible": true
+            },
+            {
+              "item": "Recruiting",
+              "cost": "$625",
+              "visible": false
+            },
+            {
+              "item": "Training",
+              "cost": "$750",
+              "visible": false
+            },
+            {
+              "item": "Equipment",
+              "cost": "$208",
+              "visible": false
+            },
+            {
+              "item": "Overtime",
+              "cost": "$750",
+              "visible": false
+            },
+            {
+              "item": "Management",
+              "cost": "$1,500",
+              "visible": false
+            },
+            {
+              "item": "Sick Leave",
+              "cost": "$288",
+              "visible": false
+            },
+            {
+              "item": "Turnover",
+              "cost": "$87",
+              "visible": false
+            }
+          ],
+          "total": "$15,858/month",
+          "hidden": "$6,858/month hidden (43%)",
+          "annual": "$190,296/year",
+          "shock": "76% more than thought!"
+        }
+      },
+      "whyHidden": {
+        "title": "Why Do These Costs Stay Hidden?",
+        "reasons": [
+          "Recruiting happens only every 6-12 months",
+          "Training is one-time",
+          "Overtime comes in waves",
+          "Management time is not tracked",
+          "Benefits are in payroll, not support costs"
+        ]
+      }
+    },
+    "tco": {
+      "title": "Total Cost of Ownership: The Complete Truth",
+      "subtitle": "All costs revealed – nothing hidden",
+      "intro": "TCO means ALL costs over entire lifetime. Not just salaries, but also setup, maintenance, replacement, hidden inefficiencies.",
+      "categories": [],
+      "totalTCO": {
+        "perAgent": "$88k-198k/agent/year",
+        "threeAgents": "$264k-594k for 3 agents/year",
+        "monthly": "$22k-49.5k/month",
+        "vsGehaltOnly": "2.4-5.5x more than salaries only!",
+        "shocking": "A support team costs as much as renting 2-3 additional stores!"
+      }
+    },
+    "categories": {
+      "title": "12 Cost Categories in Detail",
+      "subtitle": "Every cost point transparently explained",
+      "items": []
+    },
+    "scalingTrap": {
+      "title": "The Scaling Trap",
+      "subtitle": "50 to 200 tickets = 4x agents but 6x costs!",
+      "explanation": "Support does not scale linearly.",
+      "example": {
+        "title": "Example",
+        "phase1": {
+          "tickets": "50 tickets/day",
+          "agents": "2 agents",
+          "cost": "$8,400/month",
+          "structure": "Simple"
+        },
+        "phase2": {
+          "tickets": "200 tickets/day",
+          "agents": "8 agents",
+          "costNaive": "$24,000",
+          "costReality": "$39,600/month",
+          "vsPhase1": "4.7x more costs",
+          "structure": "Complex"
+        },
+        "whyMore": [],
+        "withReplAInow": "200 tickets: $9,099/month with ReplAInow"
+      }
+    },
+    "calculator": {
+      "title": "Advanced TCO Calculator",
+      "subtitle": "Include all 12 cost factors",
+      "inputs": {
+        "agents": "Number of Agents",
+        "salary": "Average Salary",
+        "benefits": "Benefits %",
+        "nightShift": "Night Shift Agents",
+        "weekendShift": "Weekend Agents",
+        "software": "Software Costs",
+        "recruiting": "Recruiting Costs",
+        "training": "Training Costs",
+        "equipment": "Equipment Costs",
+        "managementHours": "Management Hours/Week",
+        "overtime": "Overtime Budget",
+        "turnover": "Turnover (agents/year)"
+      },
+      "defaults": {}
+    },
+    "replainowTCO": {
+      "title": "ReplAInow TCO: 100% Transparent",
+      "subtitle": "What does ReplAInow really cost?",
+      "breakdown": [],
+      "totalComparison": {
+        "title": "Total TCO Comparison",
+        "human": {
+          "title": "Traditional (3 Agents):",
+          "items": [],
+          "total": "$16,575/month",
+          "annual": "$198,900/year"
+        },
+        "replainow": {
+          "title": "With ReplAInow:",
+          "items": [],
+          "total": "$4,049/month",
+          "annual": "$48,588/year"
+        },
+        "savings": {
+          "monthly": "$12,526/month saved",
+          "annual": "$150,312/year saved",
+          "percentage": "76% cost savings",
+          "breakEven": "2 weeks"
+        }
+      }
+    },
+    "hiddenSavings": {
+      "title": "Hidden Savings",
+      "subtitle": "Additional benefits hard to quantify",
+      "items": [],
+      "totalHidden": "$15k-30k/month additional benefits!"
+    },
+    "caseStudies": {
+      "title": "Real Merchants: Concrete Cost Savings",
+      "subtitle": "Real shops, real numbers, real results",
+      "cases": [],
+      "summary": {
+        "title": "Summary:",
+        "avgSavings": "76-85% average savings",
+        "avgROI": "1-2 weeks break-even",
+        "pattern": "Larger shops save more ($), smaller save more (%)",
+        "additionalBenefit": "All report higher satisfaction + more revenue"
+      }
+    },
+    "faq": {
+      "title": "FAQ: Cost Questions",
+      "items": []
+    },
+    "cta": {
+      "title": "Ready to Save $150,000+/Year?",
+      "subtitle": "Join 24 merchants saving 76-97% on support costs",
+      "stats": [
+        "76-97% Savings",
+        "2 Weeks ROI",
+        "No Hidden Costs"
+      ],
+      "primary": "Calculate Savings",
+      "secondary": "Try 14 Days Free",
+      "guarantee": "No credit card • 30-day money-back • Cancel anytime"
+    },
+    "related": {
+      "title": "Related Articles",
+      "articles": [
+        {
+          "title": "Automate Support",
+          "url": "/shopify-kundensupport-automatisieren",
+          "desc": "Automate 60-80% of tickets"
+        },
+        {
+          "title": "24/7 Support",
+          "url": "/24-7-kundensupport-shopify",
+          "desc": "Round-the-clock without night shifts"
+        },
+        {
+          "title": "Multilingual",
+          "url": "/mehrsprachiger-kundensupport-shopify",
+          "desc": "100+ languages"
+        }
+      ]
+    }
   }
 }

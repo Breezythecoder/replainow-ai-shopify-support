@@ -85,6 +85,11 @@ const UltraFooter = () => {
                 </a>
               </li>
               <li>
+                <a href="/shopify-support-kosten-senken" className="text-gray-700 hover:text-purple-700 transition-colors">
+                  Kosten senken
+                </a>
+              </li>
+              <li>
                 <a href="#faq" className="text-gray-700 hover:text-purple-700 transition-colors">
                   FAQ
                 </a>

@@ -61,6 +61,12 @@ const languageSitemaps = [
         lastmod: currentDate,
         changefreq: 'monthly',
         priority: '0.9'
+      },
+      {
+        loc: `${baseUrl}/shopify-support-kosten-senken`,
+        lastmod: currentDate,
+        changefreq: 'monthly',
+        priority: '0.9'
       }
     ]
   },
