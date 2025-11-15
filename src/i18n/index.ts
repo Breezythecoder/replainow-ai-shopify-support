@@ -167,11 +167,62 @@ const getTranslationForLocale = (key: string, locale: Locale): string => {
 };
 
 /**
+ * Get nested object/array from translations (for complex data structures)
+ * @param key - Translation key
+ * @param locale - Optional locale override
+ * @returns The translation value (can be string, object, or array)
+ */
+export const getTranslation = (key: string, locale?: Locale): any => {
+  const FORCE_LOCALE = import.meta.env.VITE_FORCE_LOCALE as Locale;
+  if (FORCE_LOCALE && isSupportedLocale(FORCE_LOCALE)) {
+    return getNestedValue(key, FORCE_LOCALE);
+  }
+
+  if (typeof window !== 'undefined' && isEnglishRoute()) {
+    return getNestedValue(key, 'en');
+  }
+
+  if (typeof window !== 'undefined' && window.location.pathname.includes('/en')) {
+    return getNestedValue(key, 'en');
+  }
+  
+  let detectedLocale = locale;
+  if (!detectedLocale && typeof window !== 'undefined') {
+    detectedLocale = getLocaleFromPath(window.location.pathname);
+  }
+  
+  return getNestedValue(key, detectedLocale || DEFAULT_LOCALE);
+};
+
+/**
+ * Helper to get nested value (supports objects and arrays)
+ */
+const getNestedValue = (key: string, locale: Locale): any => {
+  const parts = key.split('.');
+  let value: any = translations[locale];
+  
+  for (const part of parts) {
+    if (value && typeof value === 'object') {
+      value = value[part];
+    } else {
+      return undefined;
+    }
+  }
+  
+  return value;
+};
+
+/**
  * Hook for using translations with React context
  */
 export const useTranslation = () => {
-  const tWithLocale = (key: string, locale?: Locale) => t(key, locale);
-  return { t: tWithLocale };
+  const tWithLocale = (key: string, locale?: Locale, options?: { returnObjects?: boolean }) => {
+    if (options?.returnObjects) {
+      return getTranslation(key, locale);
+    }
+    return t(key, locale);
+  };
+  return { t: tWithLocale, getTranslation };
 };
 
 // Import robust locale detection

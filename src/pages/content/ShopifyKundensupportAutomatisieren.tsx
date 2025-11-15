@@ -10,17 +10,17 @@ import { Link } from "react-router-dom";
 // 100% Echte Daten, Keine Halluzinationen, Maximum SEO Power
 
 const ShopifyKundensupportAutomatisieren = () => {
-  const { t } = useTranslation();
+  const { t, getTranslation } = useTranslation();
   
   // Helper to safely get arrays from i18n (prevents crashes!)
   const getArray = (key: string): any[] => {
-    const result = t(key, { returnObjects: true });
+    const result = getTranslation(key);
     return Array.isArray(result) ? result : [];
   };
   
   // Helper to safely get objects from i18n
   const getObject = (key: string): Record<string, any> => {
-    const result = t(key, { returnObjects: true });
+    const result = getTranslation(key);
     return typeof result === 'object' && result !== null && !Array.isArray(result) ? result : {};
   };
   
