@@ -114,6 +114,12 @@ const languageSitemaps = [
         lastmod: currentDate,
         changefreq: 'yearly',
         priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/contact`,
+        lastmod: currentDate,
+        changefreq: 'monthly',
+        priority: '0.6'
       }
     ]
   }

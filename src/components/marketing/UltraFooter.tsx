@@ -1,6 +1,19 @@
 import { Twitter, Linkedin, Mail } from "lucide-react";
+import { useTranslation } from "@/i18n";
+import { useLocation } from "react-router-dom";
 
 const UltraFooter = () => {
+  const { t } = useTranslation();
+  const location = useLocation();
+  
+  // Check if we're on homepage or content/legal page
+  const isHomePage = location.pathname === '/' || location.pathname === '/en' || location.pathname === '/es' || location.pathname === '/fr';
+  
+  // Smart link helper: if not on homepage, link to /#anchor, otherwise just #anchor
+  const getAnchorLink = (anchor: string) => {
+    return isHomePage ? `#${anchor}` : `/#${anchor}`;
+  };
+  
   return (
     <footer className="relative py-16 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
       {/* Subtle mesh gradient like other sections */}
@@ -53,18 +66,18 @@ const UltraFooter = () => {
             <h3 className="font-bold mb-4 text-gray-900">Produkt</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#features" className="text-gray-700 hover:text-purple-700 transition-colors">
-                  Features
+                <a href={getAnchorLink('features')} className="text-gray-700 hover:text-purple-700 transition-colors">
+                  {t('common.footer.links.features')}
                 </a>
               </li>
               <li>
-                <a href="#pricing" className="text-gray-700 hover:text-purple-700 transition-colors">
-                  Pricing
+                <a href={getAnchorLink('pricing')} className="text-gray-700 hover:text-purple-700 transition-colors">
+                  {t('common.footer.links.pricing')}
                 </a>
               </li>
               <li>
-                <a href="#live-demo" className="text-gray-700 hover:text-purple-700 transition-colors">
-                  Demo
+                <a href={getAnchorLink('live-demo')} className="text-gray-700 hover:text-purple-700 transition-colors">
+                  {t('common.footer.links.demo')}
                 </a>
               </li>
             </ul>
@@ -90,13 +103,13 @@ const UltraFooter = () => {
                 </a>
               </li>
               <li>
-                <a href="#faq" className="text-gray-700 hover:text-purple-700 transition-colors">
+                <a href={getAnchorLink('faq')} className="text-gray-700 hover:text-purple-700 transition-colors">
                   FAQ
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-gray-700 hover:text-purple-700 transition-colors">
-                  Kontakt
+                <a href="/contact" className="text-gray-700 hover:text-purple-700 transition-colors">
+                  {t('common.footer.links.contact')}
                 </a>
               </li>
             </ul>

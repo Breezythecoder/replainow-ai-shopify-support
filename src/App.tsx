@@ -42,6 +42,7 @@ const SecurityStatement = lazy(() => import("./pages/SecurityStatement"));
 const Impressum = lazy(() => import("./pages/Impressum"));
 const RefundPolicy = lazy(() => import("./pages/RefundPolicy"));
 const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
+const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Content Pages (SEO-optimized killer content!)
@@ -121,6 +122,7 @@ const AppShell = () => {
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/refund" element={<RefundPolicy />} />
           <Route path="/cookies" element={<CookiePolicy />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
