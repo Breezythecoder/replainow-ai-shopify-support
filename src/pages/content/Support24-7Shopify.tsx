@@ -64,6 +64,39 @@ const Support24_7Shopify = () => {
     }))
   };
 
+  // HowTo Schema - Setup 24/7 Support
+  const howToSchema = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "24/7 Kundensupport für Shopify einrichten",
+    "description": "So aktivierst du 24/7 Support ohne Nachtschichten",
+    "totalTime": "PT1M",
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "ReplAInow installieren",
+        "text": "Installiere ReplAInow aus dem Shopify App Store in 60 Sekunden"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Automatischer Import",
+        "text": "ReplAInow importiert automatisch alle Shop-Daten"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "24/7 Support ist aktiv",
+        "text": "KI beantwortet Kunden 24/7 automatisch - ohne Nachtschichten"
+      }
+    ],
+    "tool": [{
+      "@type": "HowToTool",
+      "name": "ReplAInow AI Helpdesk"
+    }]
+  };
+
   // Article Schema
   const articleSchema = {
     "@context": "https://schema.org",
@@ -84,7 +117,10 @@ const Support24_7Shopify = () => {
     },
     "datePublished": "2025-11-15",
     "dateModified": "2025-11-15",
-    "mainEntityOfPage": "https://replainow.com/24-7-kundensupport-shopify"
+    "mainEntityOfPage": "https://replainow.com/24-7-kundensupport-shopify",
+    "wordCount": 2700,
+    "articleSection": "Customer Support",
+    "keywords": ["24/7 Support", "Kundensupport", "Nachtschichten", "Shopify"]
   };
 
   // Breadcrumb Schema
@@ -121,8 +157,22 @@ const Support24_7Shopify = () => {
         <meta property="og:url" content="https://replainow.com/24-7-kundensupport-shopify" />
         
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
+        <meta name="article:published_time" content="2025-11-15T00:00:00Z" />
+        <meta name="article:modified_time" content="2025-11-15T00:00:00Z" />
+        <meta name="article:author" content="ReplAInow Team" />
+        <meta name="article:section" content="24/7 Customer Support" />
+        
+        {/* Twitter Card Enhanced */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="24/7 Support ohne Nachtschichten" />
+        <meta name="twitter:description" content="KI statt teurer Nachtschichten. 85% Kostenersparnis." />
+        <meta name="twitter:label1" content="Ersparnis" />
+        <meta name="twitter:data1" content="85% günstiger" />
+        <meta name="twitter:label2" content="Verfügbarkeit" />
+        <meta name="twitter:data2" content="24/7/365" />
         
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(howToSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
@@ -360,6 +410,28 @@ const Support24_7Shopify = () => {
                   {t('content.support24-7.whyNight.impact.lostRevenue')}
                 </p>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Internal Link Box (SEO Power!) */}
+        <section className="py-8 bg-white border-y border-indigo-200">
+          <div className="container mx-auto max-w-4xl px-6">
+            <div className="bg-gradient-to-r from-purple-500 to-violet-500 rounded-xl p-6 text-white">
+              <div className="flex items-center gap-3 mb-3">
+                <Zap className="w-6 h-6" />
+                <h3 className="text-xl font-bold">Siehe auch: Support-Automatisierung verstehen</h3>
+              </div>
+              <p className="mb-4">
+                24/7 ist wichtig – aber wie automatisierst du generell deinen Support? Erfahre wie du 60-80% deiner Tickets automatisch bearbeiten kannst.
+              </p>
+              <Link
+                to="/shopify-kundensupport-automatisieren"
+                className="inline-flex items-center gap-2 bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all"
+              >
+                Automatisierungs-Guide lesen
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </div>
           </div>
         </section>
