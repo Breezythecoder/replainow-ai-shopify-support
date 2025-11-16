@@ -117,133 +117,115 @@
     ]
   },
   "pricing": {
-    "title": "Einfache, transparente Preise",
-    "subtitle": "Starte kostenlos, skaliere mit deinem Wachstum",
-    "headline": {
-      "primary": "Mehr Support-Power",
-      "secondary": "für weniger Budget",
-      "tagline": "Ein klassischer Support-Mitarbeiter kostet leicht 2.000 € im Monat.",
-      "detail": "ReplAInow startet bei nur 19 €/Monat und arbeitet 24/7 ohne Pause."
-    },
-    "baseFeatures": [
-      "1-Klick Installation",
-      "Unbegrenzte Store-Daten (Produkte, Seiten, Richtlinien etc.)",
-      "AI E-Mail & AI Live Chat",
-      "Anpassbare Markenführung"
-    ],
+    "badge": "14 Tage kostenlos · Keine Kreditkarte · Shopify Billing",
+    "title": "Wähle deinen Plan",
+    "subtitle": "Alle Funktionen in jedem Plan inklusive. Du zahlst nur für AI-Antworten.",
     "plans": [
       {
-        "name": "Starter",
-        "price": "€19",
-        "period": "/ Monat",
-        "quota": "Bis zu 300 AI-Antworten / Monat",
-        "trial": "14 Tage kostenlos testen",
+        "name": "Launch",
+        "price": "19",
+        "description": "Für ambitionierte Shops, die AI-Support testen möchten",
+        "aiAnswers": "200 AI-Antworten inklusive",
+        "ticketRange": "Ideal für 10–80 Tickets pro Monat",
+        "extraCost": "$0.05 pro zusätzliche Antwort",
         "features": [
-          "1-Klick Installation",
-          "Unbegrenzte Store-Daten (Produkte, Seiten, Richtlinien etc.)",
-          "AI E-Mail & AI Live Chat",
-          "Anpassbare Markenführung",
-          "E-Mail-Versand über ReplAInow-Adresse"
+          "Live Chat Widget (KI + Mensch)",
+          "Mail Dashboard mit KI E-Mail-Antworten",
+          "Automatischer Shopify Import (Produkte, Bestellungen, Richtlinien)",
+          "Mehrsprachiger Support (100+ Sprachen)",
+          "Unbegrenzt Teammitglieder (keine Kosten pro Nutzer)",
+          "Bestellverfolgung & Verwaltung",
+          "KI Rabattcodes (unbegrenzt)",
+          "Proaktive Chat-Auslöser (unbegrenzt)",
+          "Nachrichten-Feed für Ankündigungen",
+          "Produktempfehlungen",
+          "Individuelles Branding & Logo",
+          "WhatsApp Business KI (Demnächst verfügbar)",
+          "Und vieles mehr..."
         ],
-        "highlight": false,
-        "description": "Perfekt zum Testen",
-        "cta": "Jetzt kostenlos testen"
+        "cta": "14 Tage kostenlos testen",
+        "highlighted": false
       },
       {
         "name": "Growth",
-        "price": "€49",
-        "period": "/ Monat",
-        "quota": "Bis zu 1.500 AI-Antworten / Monat",
-        "trial": "14 Tage kostenlos testen",
+        "price": "49",
+        "description": "Beliebteste Wahl für wachsende Marken",
+        "badge": "BELIEBTESTE WAHL",
+        "aiAnswers": "2.500 AI-Antworten inklusive",
+        "ticketRange": "Perfekt für 100–600 Tickets pro Monat",
+        "extraCost": "$0.03 pro zusätzliche Antwort",
         "features": [
-          "1-Klick Installation",
-          "Unbegrenzte Store-Daten (Produkte, Seiten, Richtlinien etc.)",
-          "AI E-Mail & AI Live Chat",
-          "Anpassbare Markenführung",
-          "E-Mail-Versand mit deiner Domain"
+          "Live Chat Widget (KI + Mensch)",
+          "Mail Dashboard mit KI E-Mail-Antworten",
+          "Automatischer Shopify Import (Produkte, Bestellungen, Richtlinien)",
+          "Mehrsprachiger Support (100+ Sprachen)",
+          "Unbegrenzt Teammitglieder (keine Kosten pro Nutzer)",
+          "Bestellverfolgung & Verwaltung",
+          "KI Rabattcodes (unbegrenzt)",
+          "Proaktive Chat-Auslöser (unbegrenzt)",
+          "Nachrichten-Feed für Ankündigungen",
+          "Produktempfehlungen",
+          "Individuelles Branding & Logo",
+          "WhatsApp Business KI (Demnächst verfügbar)",
+          "Und vieles mehr..."
         ],
-        "highlight": true,
-        "badge": "Beliebtester Plan",
-        "description": "Für wachsende Stores",
-        "cta": "Jetzt kostenlos testen"
-      },
-      {
-        "name": "Pro",
-        "price": "€99",
-        "period": "/ Monat",
-        "quota": "Bis zu 3.000 AI-Antworten / Monat",
-        "trial": "14 Tage kostenlos testen",
-        "features": [
-          "1-Klick Installation",
-          "Unbegrenzte Store-Daten (Produkte, Seiten, Richtlinien etc.)",
-          "AI E-Mail & AI Live Chat",
-          "Anpassbare Markenführung",
-          "E-Mail-Versand mit deiner Domain"
-        ],
-        "highlight": false,
-        "description": "Für etablierte Stores",
-        "cta": "Jetzt kostenlos testen"
+        "cta": "14 Tage kostenlos testen",
+        "highlighted": true
       },
       {
         "name": "Scale",
-        "price": "€199",
-        "period": "/ Monat",
-        "quota": "Unbegrenzte AI-Antworten",
-        "trial": "14 Tage kostenlos testen",
+        "price": "99",
+        "description": "Operational Excellence für D2C Leader",
+        "aiAnswers": "5.000 AI-Antworten inklusive",
+        "ticketRange": "Optimiert für 600–1.500 Tickets pro Monat",
+        "extraCost": "$0.03 pro zusätzliche Antwort",
         "features": [
-          "1-Klick Installation",
-          "Unbegrenzte Store-Daten (Produkte, Seiten, Richtlinien etc.)",
-          "AI E-Mail & AI Live Chat",
-          "Anpassbare Markenführung",
-          "E-Mail-Versand mit deiner Domain"
+          "Live Chat Widget (KI + Mensch)",
+          "Mail Dashboard mit KI E-Mail-Antworten",
+          "Automatischer Shopify Import (Produkte, Bestellungen, Richtlinien)",
+          "Mehrsprachiger Support (100+ Sprachen)",
+          "Unbegrenzt Teammitglieder (keine Kosten pro Nutzer)",
+          "Bestellverfolgung & Verwaltung",
+          "KI Rabattcodes (unbegrenzt)",
+          "Proaktive Chat-Auslöser (unbegrenzt)",
+          "Nachrichten-Feed für Ankündigungen",
+          "Produktempfehlungen",
+          "Individuelles Branding & Logo",
+          "WhatsApp Business KI (Demnächst verfügbar)",
+          "Und vieles mehr..."
         ],
-        "highlight": false,
-        "description": "Für Enterprise-Teams",
-        "cta": "Jetzt kostenlos testen"
+        "cta": "14 Tage kostenlos testen",
+        "highlighted": false
+      },
+      {
+        "name": "Ultimate",
+        "price": "399",
+        "description": "Enterprise-Support mit SLA & Compliance",
+        "badge": "ENTERPRISE",
+        "aiAnswers": "40.000 AI-Antworten inklusive",
+        "ticketRange": "Für 1.500+ Tickets pro Monat & Enterprise-Teams",
+        "extraCost": "$0.02 pro zusätzliche Antwort",
+        "features": [
+          "Live Chat Widget (KI + Mensch)",
+          "Mail Dashboard mit KI E-Mail-Antworten",
+          "Automatischer Shopify Import (Produkte, Bestellungen, Richtlinien)",
+          "Mehrsprachiger Support (100+ Sprachen)",
+          "Unbegrenzt Teammitglieder (keine Kosten pro Nutzer)",
+          "Bestellverfolgung & Verwaltung",
+          "KI Rabattcodes (unbegrenzt)",
+          "Proaktive Chat-Auslöser (unbegrenzt)",
+          "Nachrichten-Feed für Ankündigungen",
+          "Produktempfehlungen",
+          "Individuelles Branding & Logo",
+          "WhatsApp Business KI (Demnächst verfügbar)",
+          "Und vieles mehr..."
+        ],
+        "cta": "14 Tage kostenlos testen",
+        "highlighted": false,
+        "premium": true
       }
     ],
-    "cta": "Jetzt installieren",
-    "ctaButton": "Installiere {0}",
-    "guarantee": "14-Tage Geld-zurück-Garantie",
-    "savings": {
-      "badge": "KOSTENVERGLEICH",
-      "title": "Massive Kosteneinsparungen",
-      "description": "Während Wettbewerber pro Ticket abrechnen, bekommst du mit ReplAInow unbegrenzte Antworten.",
-      "competitors": [
-        {
-          "name": "Gorgias",
-          "price": "€50+/Monat",
-          "surcharge": "+ €2-5 pro Ticket",
-          "savings": "372 €+ gespart/Jahr"
-        },
-        {
-          "name": "Intercom",
-          "price": "€74+/Monat",
-          "surcharge": "+ €1-3 pro Ticket",
-          "savings": "660 €+ gespart/Jahr"
-        },
-        {
-          "name": "Zendesk",
-          "price": "€115+/Monat",
-          "surcharge": "+ €0,50-2 pro Ticket",
-          "savings": "1.152 €+ gespart/Jahr"
-        }
-      ],
-      "ownPlan": {
-        "name": "ReplAInow Scale",
-        "price": "€199/Monat",
-        "tagline": "Alles inklusive",
-        "bullets": [
-          "Unlimitierte AI-Antworten",
-          "Keine Per-Ticket-Gebühren",
-          "Keine versteckten Kosten"
-        ]
-      },
-      "bottomCallout": {
-        "title": "Bei 1.000 Tickets/Monat verlangt Gorgias 3.000 €+ extra!",
-        "subtitle": "Mit ReplAInow zahlst du 0 € Aufpreis – egal ob 100 oder 10.000 Tickets."
-      }
-    }
+    "bottomNote": "💜 Alle Pläne mit 14-Tage-Test · Keine Kreditkarte erforderlich · Über Shopify Billing · Jederzeit kündbar"
   },
   "testimonials": {
     "title": "Was echte Händler sagen",
@@ -251,32 +233,47 @@
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
-    "subtitle": "Alles was du über ReplAInow wissen musst",
+    "subtitle": "Alles, was Sie wissen müssen",
     "items": [
       {
-        "question": "Was ist ReplAInow AI Helpdesk?",
-        "shortAnswer": "ReplAInow ist eine KI-gestützte Customer Support-Lösung für Shopify mit GPT-4 Technologie.",
-        "detailedAnswer": "ReplAInow ist eine KI-gestützte Customer Support-Lösung für Shopify, die automatisch auf Kundenanfragen antwortet, Produktempfehlungen gibt und in über 32 Sprachen verfügbar ist. Die Software nutzt GPT-4 Technologie für präzise, menschenähnliche Antworten und integriert sich nahtlos in bestehende Shopify Stores."
+        "q": "Ersetzt die AI wirklich meine Support-Mitarbeiter?",
+        "a": "Die AI automatisiert 87% aller Support-Anfragen – das entspricht 2-3 Vollzeit-Mitarbeitern bei durchschnittlichem Ticket-Volumen. Einfache Fragen (Produktverfügbarkeit, Order-Tracking, Richtlinien) löst die AI sofort. Komplexe Fälle übergibt sie intelligent an Ihr Team mit vollständigem Kontext."
       },
       {
-        "question": "Wie viel kostet ReplAInow?",
-        "shortAnswer": "ReplAInow startet bei 19€/Monat mit 14 Tagen kostenloser Testphase.",
-        "detailedAnswer": "ReplAInow startet bei 19€/Monat für den Starter Plan. Weitere Pläne: Pro (49€/Monat), Scale (199€/Monat). Alle Pläne beinhalten 14 Tage kostenlose Testphase ohne Setup-Gebühren und unbegrenzte KI-Antworten."
+        "q": "Was passiert bei komplexen Anfragen die AI nicht beantworten kann?",
+        "a": "Die AI weiß, wann sie nicht helfen kann. Bei komplexen Fragen, Beschwerden oder wenn der Kunde explizit einen Menschen fordert, übergibt die AI nahtlos an Ihr Team. Ihr Agent sieht die komplette Gesprächshistorie, alle gesammelten Informationen (Bestellnummer, Telefon, Fotos) und weiß genau was zu tun ist – keine Information geht verloren."
       },
       {
-        "question": "Ist ReplAInow DSGVO-konform?",
-        "shortAnswer": "Ja, ReplAInow ist vollständig DSGVO-konform und erfüllt alle EU-Datenschutzbestimmungen.",
-        "detailedAnswer": "Ja, ReplAInow ist vollständig DSGVO-konform und erfüllt alle europäischen Datenschutzbestimmungen. Alle Kundendaten werden sicher verschlüsselt übertragen und gespeichert, mit vollständiger Transparenz über Datenverarbeitung und Löschungsrechte."
+        "q": "Wie genau ist die AI? Macht sie Fehler?",
+        "a": "Die AI arbeitet mit 99.8% Genauigkeit, weil sie nur mit echten Daten aus Ihrem Shopify-Shop antwortet – keine Halluzinationen, keine Schätzungen. Jede Antwort wird auf 5 Dimensionen selbst-bewertet (0-100 Punkte). Nur Antworten mit Score ≥90 werden automatisch gesendet. Bei Unsicherheit eskaliert die AI lieber zu Ihrem Team."
       },
       {
-        "question": "Welche Sprachen unterstützt ReplAInow?",
-        "shortAnswer": "ReplAInow unterstützt nativ 32+ Sprachen inklusive Deutsch, Englisch, Spanisch, Französisch.",
-        "detailedAnswer": "ReplAInow unterstützt nativ 32+ Sprachen inklusive Deutsch, Englisch, Spanisch, Italienisch, Niederländisch, Portugiesisch, Französisch und mehr. Die KI erkennt automatisch die Kundensprache und antwortet entsprechend, ohne Übersetzungsfehler."
+        "q": "Muss ich die AI trainieren oder Daten eingeben?",
+        "a": "Nein! Die AI importiert automatisch bei Installation alle Ihre Shopify-Daten: Produkte, Bestellungen, Kunden, Richtlinien, Seiten, Blog-Artikel. Ändern Sie etwas in Shopify? Die AI weiß es innerhalb von 5 Sekunden durch Echtzeit-Synchronisation. Null Setup, null Wartung, null manuelle Arbeit."
       },
       {
-        "question": "Wie schnell antwortet ReplAInow KI?",
-        "shortAnswer": "ReplAInow antwortet in unter 3 Sekunden mit präzisen, kontextuellen Antworten.",
-        "detailedAnswer": "ReplAInow antwortet in unter 3 Sekunden mit präzisen, kontextuellen Antworten. Die KI analysiert Kundenanfragen, greift auf Echtzeit-Shopify-Daten zu und liefert personalisierte Antworten schneller als jeder menschliche Agent."
+        "q": "Wie schnell ist die AI produktiv?",
+        "a": "Ab Installation: 60 Sekunden bis die AI einsatzbereit ist. Sie kann sofort Produktfragen beantworten, Bestellungen tracken und Richtlinien erklären. Die AI kennt Ihren kompletten Shop-Katalog vom ersten Moment an – kein Training erforderlich."
+      },
+      {
+        "q": "Kann ich die KI-Antworten vor dem Versand prüfen?",
+        "a": "Ja! Sie kontrollieren den Auto-Send-Schwellenwert. Setzen Sie ihn auf 90 für konservativ (mehr manuelle Prüfungen) oder 80 für ausgewogen (mehr Automatisierung). AI-Antworten unter dem Schwellenwert landen in der Prüfwarteschlange, wo Sie sie vor dem Versand bearbeiten oder genehmigen können."
+      },
+      {
+        "q": "Welche Sprachen werden unterstützt?",
+        "a": "Die KI unterstützt 100+ Sprachen und erkennt automatisch, in welcher Sprache der Kunde schreibt. Deutsch, Englisch, Französisch, Spanisch, Arabisch, Chinesisch, Japanisch – alles automatisch, ohne Konfiguration. Die AI antwortet fließend in der Kundensprache."
+      },
+      {
+        "q": "Werden meine Kundendaten sicher gespeichert?",
+        "a": "Ja! Wir sind ISO 27001 zertifiziert und DSGVO-konform. Alle Daten werden verschlüsselt gespeichert (TLS 1.3), und Sie haben volle Kontrolle. Uninstall = komplette automatische Datenlöschung innerhalb von 24 Stunden."
+      },
+      {
+        "q": "Wie lange dauert die Installation?",
+        "a": "Unter 60 Sekunden. Ein Klick im Shopify App Store, und ReplAInow beginnt automatisch Ihre Shop-Daten zu importieren. Widget aktivieren im Theme Editor (1 Klick), fertig. Keine technischen Kenntnisse erforderlich."
+      },
+      {
+        "q": "Was passiert, wenn ich kündige?",
+        "a": "Keine Vertragsbindung – Sie können jederzeit kündigen. Bei Uninstall werden alle Ihre Daten automatisch gelöscht. Keine versteckten Kosten, keine Kündigungsfrist, kein Kleingedrucktes."
       }
     ]
   },
