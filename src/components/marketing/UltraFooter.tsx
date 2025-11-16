@@ -28,13 +28,8 @@ const UltraFooter = () => {
   };
 
   // Locale-aware page link: adds locale prefix to maintain current language
-  // BUT: Legal pages are NOT localized (all in English), so they don't need prefix!
-  const getPageLink = (path: string, isLegalPage = false) => {
-    // Legal pages always go to root path (content not localized)
-    if (isLegalPage) {
-      return path;
-    }
-    // Other pages maintain locale
+  // Legal pages ARE locale-routed but content stays English - keeps nav/footer in user's language!
+  const getPageLink = (path: string) => {
     return `${currentLocale}${path}`;
   };
 
@@ -175,7 +170,7 @@ const UltraFooter = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href={getPageLink("/privacy", true)}
+                  href={getPageLink("/privacy")}
                   className="text-gray-700 hover:text-purple-700 transition-colors"
                 >
                   {t("common.footer.legal.privacy")}
@@ -183,7 +178,7 @@ const UltraFooter = () => {
               </li>
               <li>
                 <a
-                  href={getPageLink("/terms", true)}
+                  href={getPageLink("/terms")}
                   className="text-gray-700 hover:text-purple-700 transition-colors"
                 >
                   {t("common.footer.legal.terms")}
@@ -191,7 +186,7 @@ const UltraFooter = () => {
               </li>
               <li>
                 <a
-                  href={getPageLink("/impressum", true)}
+                  href={getPageLink("/impressum")}
                   className="text-gray-700 hover:text-purple-700 transition-colors"
                 >
                   {t("common.footer.legal.impressum")}
@@ -199,7 +194,7 @@ const UltraFooter = () => {
               </li>
               <li>
                 <a
-                  href={getPageLink("/cookies", true)}
+                  href={getPageLink("/cookies")}
                   className="text-gray-700 hover:text-purple-700 transition-colors"
                 >
                   {t("common.footer.legal.cookies")}
@@ -207,7 +202,7 @@ const UltraFooter = () => {
               </li>
               <li>
                 <a
-                  href={getPageLink("/security", true)}
+                  href={getPageLink("/security")}
                   className="text-gray-700 hover:text-purple-700 transition-colors"
                 >
                   {t("common.footer.legal.security")}
@@ -215,7 +210,7 @@ const UltraFooter = () => {
               </li>
               <li>
                 <a
-                  href={getPageLink("/refund", true)}
+                  href={getPageLink("/refund")}
                   className="text-gray-700 hover:text-purple-700 transition-colors"
                 >
                   {t("common.footer.legal.refund")}

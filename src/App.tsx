@@ -115,6 +115,7 @@ const AppShell = () => {
             path="/.well-known/llm-facts.json"
             element={<LLMFactsJSON />}
           />
+          {/* Legal & Contact Pages - DE (root) */}
           <Route path="/privacy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<TermsOfService />} />
           <Route path="/uninstall" element={<UninstallInstructions />} />
@@ -123,6 +124,37 @@ const AppShell = () => {
           <Route path="/refund" element={<RefundPolicy />} />
           <Route path="/cookies" element={<CookiePolicy />} />
           <Route path="/contact" element={<Contact />} />
+          
+          {/* Legal & Contact Pages - EN */}
+          <Route path="/en/privacy" element={<PrivacyPolicy />} />
+          <Route path="/en/terms" element={<TermsOfService />} />
+          <Route path="/en/uninstall" element={<UninstallInstructions />} />
+          <Route path="/en/security" element={<SecurityStatement />} />
+          <Route path="/en/impressum" element={<Impressum />} />
+          <Route path="/en/refund" element={<RefundPolicy />} />
+          <Route path="/en/cookies" element={<CookiePolicy />} />
+          <Route path="/en/contact" element={<Contact />} />
+          
+          {/* Legal & Contact Pages - ES */}
+          <Route path="/es/privacy" element={<PrivacyPolicy />} />
+          <Route path="/es/terms" element={<TermsOfService />} />
+          <Route path="/es/uninstall" element={<UninstallInstructions />} />
+          <Route path="/es/security" element={<SecurityStatement />} />
+          <Route path="/es/impressum" element={<Impressum />} />
+          <Route path="/es/refund" element={<RefundPolicy />} />
+          <Route path="/es/cookies" element={<CookiePolicy />} />
+          <Route path="/es/contact" element={<Contact />} />
+          
+          {/* Legal & Contact Pages - FR */}
+          <Route path="/fr/privacy" element={<PrivacyPolicy />} />
+          <Route path="/fr/terms" element={<TermsOfService />} />
+          <Route path="/fr/uninstall" element={<UninstallInstructions />} />
+          <Route path="/fr/security" element={<SecurityStatement />} />
+          <Route path="/fr/impressum" element={<Impressum />} />
+          <Route path="/fr/refund" element={<RefundPolicy />} />
+          <Route path="/fr/cookies" element={<CookiePolicy />} />
+          <Route path="/fr/contact" element={<Contact />} />
+          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
