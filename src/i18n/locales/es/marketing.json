@@ -324,6 +324,27 @@
     "tabEmail": "Dashboard de Email",
     "bottomText": "Interfaz profesional como las grandes herramientas, pero todo en uno"
   },
+  "roi": {
+    "badge": "Retorno de la Inversión",
+    "title": "Resultados Medibles desde el Día 1",
+    "description": "Con un promedio de 500 tickets de soporte mensuales, los comerciantes de Shopify ahorran hasta €3.200 por mes en costos de personal con ReplAInow.",
+    "benefits": [
+      "Sin costos de capacitación para nuevos empleados",
+      "Escala automáticamente con tu crecimiento",
+      "Calidad constante en cualquier volumen"
+    ],
+    "statsLabel": "Ahorro Promedio",
+    "statsAmount": "€3.200",
+    "statsPeriod": "/Mes",
+    "ticketsLabel": "Tickets de Soporte",
+    "ticketsCount": "500+",
+    "ticketsPeriod": "por mes",
+    "roiLabel": "ROI Alcanzado",
+    "roiDays": "11 Días",
+    "roiBadge": "Garantizado",
+    "automationLabel": "Tasa de Automatización",
+    "guarantee": "Garantía de Reembolso de 30 Días"
+  },
   "finalCta": {
     "title": "¿Listo para automatizar tu soporte?",
     "subtitle": "Únete a 24 comerciantes exitosos de Shopify ahorrando tiempo y costos con ReplAInow",

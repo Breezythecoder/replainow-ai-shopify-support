@@ -753,6 +753,27 @@
     "tabEmail": "Email Dashboard",
     "bottomText": "Professionelles Interface wie bei großen Tools – aber alles in einem"
   },
+  "roi": {
+    "badge": "Return on Investment",
+    "title": "Messbare Resultate ab Tag 1",
+    "description": "Bei durchschnittlich 500 Support-Tickets monatlich sparen Shopify-Händler mit ReplAInow bis zu €3.200 pro Monat an Personalkosten.",
+    "benefits": [
+      "Keine Schulungskosten für neue Mitarbeiter",
+      "Skaliert automatisch mit Ihrem Wachstum",
+      "Konstante Qualität bei jedem Volumen"
+    ],
+    "statsLabel": "Durchschnittliche Ersparnis",
+    "statsAmount": "€3.200",
+    "statsPeriod": "/Monat",
+    "ticketsLabel": "Support-Tickets",
+    "ticketsCount": "500+",
+    "ticketsPeriod": "pro Monat",
+    "roiLabel": "ROI erreicht",
+    "roiDays": "11 Tage",
+    "roiBadge": "Garantiert",
+    "automationLabel": "Automatisierungsgrad",
+    "guarantee": "30-Tage Geld-zurück-Garantie"
+  },
   "finalCta": {
     "title": "Bereit, Ihren Support zu automatisieren?",
     "subtitle": "Schließen Sie sich 24 erfolgreichen Shopify-Händlern an, die mit ReplAInow Zeit und Kosten sparen",

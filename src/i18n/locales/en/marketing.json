@@ -852,6 +852,27 @@
     "tabEmail": "Email Dashboard",
     "bottomText": "Professional interface like the big tools – but all in one"
   },
+  "roi": {
+    "badge": "Return on Investment",
+    "title": "Measurable Results from Day 1",
+    "description": "With an average of 500 support tickets monthly, Shopify merchants save up to €3,200 per month in personnel costs with ReplAInow.",
+    "benefits": [
+      "No training costs for new employees",
+      "Scales automatically with your growth",
+      "Consistent quality at any volume"
+    ],
+    "statsLabel": "Average Savings",
+    "statsAmount": "€3,200",
+    "statsPeriod": "/Month",
+    "ticketsLabel": "Support Tickets",
+    "ticketsCount": "500+",
+    "ticketsPeriod": "per month",
+    "roiLabel": "ROI Achieved",
+    "roiDays": "11 Days",
+    "roiBadge": "Guaranteed",
+    "automationLabel": "Automation Rate",
+    "guarantee": "30-Day Money-Back Guarantee"
+  },
   "finalCta": {
     "title": "Ready to automate your support?",
     "subtitle": "Join 24 successful Shopify merchants saving time and costs with ReplAInow",

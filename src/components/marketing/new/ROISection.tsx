@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { TrendingUp, CheckCircle2, Zap, Shield } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
+import { useTranslation } from "@/i18n";
 
 // Count-up hook
 const useCountUp = (end: number, duration: number = 2000, shouldStart: boolean = false) => {
@@ -27,9 +28,16 @@ const useCountUp = (end: number, duration: number = 2000, shouldStart: boolean =
 };
 
 const ROISection = () => {
+  const { t, getTranslation } = useTranslation();
   const roiRef = useRef(null);
   const isRoiInView = useInView(roiRef, { once: true, margin: "-100px" });
   const automationCount = useCountUp(87, 2000, isRoiInView);
+  
+  const benefits = getTranslation('marketing.roi.benefits') || [
+    "Keine Schulungskosten für neue Mitarbeiter",
+    "Skaliert automatisch mit Ihrem Wachstum",
+    "Konstante Qualität bei jedem Volumen"
+  ];
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50/20 to-white">
@@ -60,28 +68,19 @@ const ROISection = () => {
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-sm border border-white/10 rounded-full px-5 py-2.5 mb-8">
                   <TrendingUp className="w-4 h-4 text-purple-300" />
-                  <span className="text-sm font-bold text-white/90 tracking-tight">Return on Investment</span>
+                  <span className="text-sm font-bold text-white/90 tracking-tight">{t('marketing.roi.badge')}</span>
                 </div>
                 
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-light text-white mb-6 leading-tight tracking-tight">
-                  Messbare Resultate
-                  <br />
-                  <span className="font-semibold">ab Tag 1</span>
+                  {t('marketing.roi.title')}
                 </h2>
                 
                 <p className="text-gray-200 mb-10 leading-relaxed text-base md:text-lg">
-                  Bei durchschnittlich 500 Support-Tickets monatlich sparen Shopify-Händler 
-                  mit ReplAInow bis zu{' '}
-                  <span className="font-bold text-white">€3.200 pro Monat</span>
-                  {' '}an Personalkosten.
+                  {t('marketing.roi.description')}
                 </p>
                 
                 <div className="space-y-4">
-                  {[
-                    "Keine Schulungskosten für neue Mitarbeiter",
-                    "Skaliert automatisch mit Ihrem Wachstum",
-                    "Konstante Qualität bei jedem Volumen"
-                  ].map((benefit, i) => (
+                  {benefits.map((benefit, i) => (
                     <div key={i} className="flex items-start gap-3.5">
                       <div className="mt-0.5 p-1 bg-purple-500/20 rounded-full flex-shrink-0">
                         <CheckCircle2 className="w-4 h-4 text-purple-300" />
@@ -98,35 +97,35 @@ const ROISection = () => {
                 
                 <div className="relative bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:p-10">
                   <div className="text-sm uppercase tracking-wider text-purple-300 mb-6 font-bold">
-                    Durchschnittliche Ersparnis
+                    {t('marketing.roi.statsLabel')}
                   </div>
                   
                   <div className="flex items-baseline gap-2 md:gap-3 mb-8 md:mb-12">
-                    <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white tracking-tight">€3.200</span>
-                    <span className="text-xl md:text-2xl text-gray-300 font-light">/Monat</span>
+                    <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-light text-white tracking-tight">{t('marketing.roi.statsAmount')}</span>
+                    <span className="text-xl md:text-2xl text-gray-300 font-light">{t('marketing.roi.statsPeriod')}</span>
                   </div>
                   
                   <div className="h-px bg-white/10 mb-10"></div>
                   
                   <div className="grid grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-10">
                     <div>
-                      <div className="text-gray-300 mb-2 text-xs md:text-sm font-medium">Support-Tickets</div>
-                      <div className="text-3xl md:text-4xl font-light text-white">500+</div>
-                      <div className="text-xs text-gray-500 mt-1.5">pro Monat</div>
+                      <div className="text-gray-300 mb-2 text-xs md:text-sm font-medium">{t('marketing.roi.ticketsLabel')}</div>
+                      <div className="text-3xl md:text-4xl font-light text-white">{t('marketing.roi.ticketsCount')}</div>
+                      <div className="text-xs text-gray-500 mt-1.5">{t('marketing.roi.ticketsPeriod')}</div>
                     </div>
                     <div>
-                      <div className="text-gray-300 mb-2 text-xs md:text-sm font-medium">ROI erreicht</div>
-                      <div className="text-3xl md:text-4xl font-light text-white">11 Tage</div>
+                      <div className="text-gray-300 mb-2 text-xs md:text-sm font-medium">{t('marketing.roi.roiLabel')}</div>
+                      <div className="text-3xl md:text-4xl font-light text-white">{t('marketing.roi.roiDays')}</div>
                       <div className="text-xs text-purple-300 mt-1.5 font-semibold flex items-center gap-1">
                         <Zap className="w-3 h-3" />
-                        Garantiert
+                        {t('marketing.roi.roiBadge')}
                       </div>
                     </div>
                   </div>
 
                   <div className="p-5 bg-purple-500/10 border border-purple-400/20 rounded-xl">
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-sm text-gray-200 font-medium">Automatisierungsgrad</span>
+                      <span className="text-sm text-gray-200 font-medium">{t('marketing.roi.automationLabel')}</span>
                       <span className="text-xl font-bold text-white">{automationCount}%</span>
                     </div>
                     <div className="h-2.5 bg-white/5 rounded-full overflow-hidden">
@@ -142,7 +141,7 @@ const ROISection = () => {
                   {/* Guarantee */}
                   <div className="mt-6 pt-6 border-t border-white/10 flex items-center justify-center gap-2 text-sm text-gray-200">
                     <Shield className="w-4 h-4 text-purple-400" />
-                    <span className="font-medium">30-Tage Geld-zurück-Garantie</span>
+                    <span className="font-medium">{t('marketing.roi.guarantee')}</span>
                   </div>
                 </div>
               </div>
