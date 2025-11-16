@@ -1,11 +1,13 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "@/i18n";
 
 const FAQSection = () => {
+  const { t, getTranslation } = useTranslation();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
-  const faqs = [
+  const faqs = getTranslation('marketing.faq.items') || [
     {
       q: "Ersetzt die AI wirklich meine Support-Mitarbeiter?",
       a: "Die AI automatisiert 87% aller Support-Anfragen – das entspricht 2-3 Vollzeit-Mitarbeitern bei durchschnittlichem Ticket-Volumen. Einfache Fragen (Produktverfügbarkeit, Order-Tracking, Richtlinien) löst die AI sofort. Komplexe Fälle übergibt sie intelligent an Ihr Team mit vollständigem Kontext."
@@ -57,10 +59,10 @@ const FAQSection = () => {
         {/* Section Header */}
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
-            Häufig gestellte <span className="font-semibold">Fragen</span>
+            {t('marketing.faq.title')}
           </h2>
           <p className="text-lg text-gray-600">
-            Alles, was Sie wissen müssen
+            {t('marketing.faq.subtitle')}
           </p>
         </div>
 
