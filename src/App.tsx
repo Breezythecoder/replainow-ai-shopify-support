@@ -104,10 +104,25 @@ const AppShell = () => {
           <Route path="/en" element={<Index />} />
           <Route path="/fr" element={<Index />} />
           <Route path="/es" element={<Index />} />
-          {/* Content Pages */}
+          {/* Content Pages - DE (root) */}
           <Route path="/shopify-kundensupport-automatisieren" element={<ShopifyKundensupportAutomatisieren />} />
           <Route path="/24-7-kundensupport-shopify" element={<Support24_7Shopify />} />
           <Route path="/shopify-support-kosten-senken" element={<SupportKostenSenken />} />
+          
+          {/* Content Pages - EN */}
+          <Route path="/en/shopify-kundensupport-automatisieren" element={<ShopifyKundensupportAutomatisieren />} />
+          <Route path="/en/24-7-kundensupport-shopify" element={<Support24_7Shopify />} />
+          <Route path="/en/shopify-support-kosten-senken" element={<SupportKostenSenken />} />
+          
+          {/* Content Pages - ES */}
+          <Route path="/es/shopify-kundensupport-automatisieren" element={<ShopifyKundensupportAutomatisieren />} />
+          <Route path="/es/24-7-kundensupport-shopify" element={<Support24_7Shopify />} />
+          <Route path="/es/shopify-support-kosten-senken" element={<SupportKostenSenken />} />
+          
+          {/* Content Pages - FR */}
+          <Route path="/fr/shopify-kundensupport-automatisieren" element={<ShopifyKundensupportAutomatisieren />} />
+          <Route path="/fr/24-7-kundensupport-shopify" element={<Support24_7Shopify />} />
+          <Route path="/fr/shopify-support-kosten-senken" element={<SupportKostenSenken />} />
           
           <Route path="/sitemap.xml" element={<SitemapXML />} />
           <Route path="/robots.txt" element={<RobotsTXT />} />
