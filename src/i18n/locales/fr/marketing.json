@@ -291,6 +291,32 @@
   "socialProof": {},
   "industryExamples": {},
   "liveExamples": {},
+  "integration": {
+    "title": "Intégration Parfaite avec Shopify",
+    "subtitle": "Configuration entièrement automatique en moins de 60 secondes",
+    "steps": [
+      {
+        "num": 1,
+        "title": "Installer l'App",
+        "desc": "Installation en 1 clic depuis le Shopify App Store",
+        "time": "30 Secondes"
+      },
+      {
+        "num": 2,
+        "title": "L'IA Apprend Automatiquement",
+        "desc": "Formation automatique basée sur vos données Shopify",
+        "time": "Entièrement Automatique"
+      },
+      {
+        "num": 3,
+        "title": "Support En Marche",
+        "desc": "L'IA répond aux demandes de manière indépendante",
+        "time": "En Direct Immédiatement"
+      }
+    ],
+    "bottomText": "Aucune formation requise. Aucune configuration complexe. Installez simplement et commencez.",
+    "bottomBadge": "En Direct en 60 Secondes"
+  },
   "finalCta": {
     "title": "Prêt à automatiser votre support ?",
     "subtitle": "Rejoignez 24 marchands Shopify prospères économisant temps et coûts avec ReplAInow",

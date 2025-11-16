@@ -4,29 +4,36 @@ import { useTranslation } from "@/i18n";
 
 const IntegrationStepsSection = () => {
   const { t, getTranslation } = useTranslation();
-  const steps = getTranslation('marketing.integration.steps') || [
+  
+  // Icon mapping for steps
+  const stepIcons = [Clock, Sparkles, CheckCircle2];
+  
+  const stepsData = getTranslation('marketing.integration.steps') || [
     { 
       num: 1, 
       title: "App installieren", 
       desc: "1-Klick Installation aus dem Shopify App Store", 
-      time: "30 Sekunden", 
-      icon: Clock 
+      time: "30 Sekunden"
     },
     { 
       num: 2, 
       title: "KI lernt automatisch", 
       desc: "Automatisches Training anhand Ihrer Shopify-Daten", 
-      time: "Vollautomatisch", 
-      icon: Sparkles 
+      time: "Vollautomatisch"
     },
     { 
       num: 3, 
       title: "Support läuft", 
       desc: "KI beantwortet Anfragen eigenständig", 
-      time: "Sofort live", 
-      icon: CheckCircle2 
+      time: "Sofort live"
     }
   ];
+  
+  // Map icons to steps based on index
+  const steps = stepsData.map((step, idx) => ({
+    ...step,
+    icon: stepIcons[idx] || Clock
+  }));
 
   return (
     <div id="integration" className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50/20 to-white">

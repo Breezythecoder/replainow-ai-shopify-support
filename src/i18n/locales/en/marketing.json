@@ -819,6 +819,32 @@
       }
     ]
   },
+  "integration": {
+    "title": "Seamless Shopify Integration",
+    "subtitle": "Fully automatic setup in under 60 seconds",
+    "steps": [
+      {
+        "num": 1,
+        "title": "Install App",
+        "desc": "1-click installation from Shopify App Store",
+        "time": "30 Seconds"
+      },
+      {
+        "num": 2,
+        "title": "AI Learns Automatically",
+        "desc": "Automatic training based on your Shopify data",
+        "time": "Fully Automatic"
+      },
+      {
+        "num": 3,
+        "title": "Support Running",
+        "desc": "AI answers requests independently",
+        "time": "Live Immediately"
+      }
+    ],
+    "bottomText": "No training required. No complex setup. Simply install and go.",
+    "bottomBadge": "Live in 60 Seconds"
+  },
   "finalCta": {
     "title": "Ready to automate your support?",
     "subtitle": "Join 24 successful Shopify merchants saving time and costs with ReplAInow",
