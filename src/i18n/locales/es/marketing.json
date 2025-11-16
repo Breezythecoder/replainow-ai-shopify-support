@@ -291,7 +291,15 @@
   "socialProof": {},
   "industryExamples": {},
   "liveExamples": {},
-  "finalCta": {},
+  "finalCta": {
+    "title": "¿Listo para automatizar tu soporte?",
+    "subtitle": "Únete a 24 comerciantes exitosos de Shopify ahorrando tiempo y costos con ReplAInow",
+    "cta": "Prueba 14 Días Gratis",
+    "guarantee": "Sin tarjeta de crédito · Garantía de reembolso de 30 días · Cancela en cualquier momento",
+    "trustDsgvo": "Conforme a GDPR",
+    "trustIso": "ISO 27001",
+    "trustMerchants": "24 Comerciantes"
+  },
   "stickyInstallBar": {},
   "exitIntent": {},
   "shopifyBanners": {

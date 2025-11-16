@@ -820,11 +820,13 @@
     ]
   },
   "finalCta": {
-    "badge": "START NOW",
-    "title": "Ready for the AI revolution?",
-    "subtitle": "Over 280+ Shopify merchants already use ReplAInow. Become part of the elite and destroy your competition with superior AI technology.",
-    "cta": "INSTALL NOW",
-    "demo": "LIVE DEMO",
+    "title": "Ready to automate your support?",
+    "subtitle": "Join 24 successful Shopify merchants saving time and costs with ReplAInow",
+    "cta": "Try 14 Days Free",
+    "guarantee": "No credit card required · 30-day money-back guarantee · Cancel anytime",
+    "trustDsgvo": "GDPR Compliant",
+    "trustIso": "ISO 27001",
+    "trustMerchants": "24 Merchants",
     "features": [
       "14 days free",
       "Setup-free",
