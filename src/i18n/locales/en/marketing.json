@@ -873,6 +873,18 @@
     "automationLabel": "Automation Rate",
     "guarantee": "30-Day Money-Back Guarantee"
   },
+  "agentProductivity": {
+    "title": "When Your Agents Take Over – Perfectly Equipped",
+    "subtitle": "AI handles 87% automatically. The other 13%? Your agents have all the tools for professional support in one place.",
+    "tools": [
+      {"title": "Product Picker", "desc": "Select variants (size, color), send as cards or checkout link", "color": "purple"},
+      {"title": "Discount Generator", "desc": "10%, 15%, 20% quick buttons. One click → customer has code", "color": "green"},
+      {"title": "Refunds", "desc": "Direct from dashboard. Select items, amount, done", "color": "blue"},
+      {"title": "Customer Journey", "desc": "Pages visited, cart contents, purchase intent score", "color": "violet"}
+    ],
+    "exampleTitle": "Example: Create Checkout Link",
+    "exampleSubtitle": "Customer interested in multiple products? One-click experience:"
+  },
   "finalCta": {
     "title": "Ready to automate your support?",
     "subtitle": "Join 24 successful Shopify merchants saving time and costs with ReplAInow",

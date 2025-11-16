@@ -1,7 +1,17 @@
 import { motion } from "framer-motion";
 import { ShoppingBag, Gift, Link2, RefreshCcw, CheckCircle2, Sparkles, Eye, Package } from "lucide-react";
+import { useTranslation } from "@/i18n";
 
 const AgentProductivity = () => {
+  const { t, getTranslation } = useTranslation();
+  
+  const iconMap = { ShoppingBag, Gift, RefreshCcw, Eye };
+  const tools = getTranslation('marketing.agentProductivity.tools') || [
+    {title: "Product Picker", desc: "Varianten wählen (Größe, Farbe), als Karten oder Checkout-Link senden", color: "purple"},
+    {title: "Rabatt-Generator", desc: "10%, 15%, 20% Quick-Buttons. Ein Klick → Kunde hat Code", color: "green"},
+    {title: "Rückerstattungen", desc: "Direkt aus Dashboard. Artikel wählen, Betrag, fertig", color: "blue"},
+    {title: "Kunden-Journey", desc: "Welche Seiten besucht, was im Warenkorb, Kaufabsicht-Score", color: "violet"}
+  ].map((tool, i) => ({...tool, icon: [ShoppingBag, Gift, RefreshCcw, Eye][i]}));
   return (
     <div 
       className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50/20 to-white"
@@ -21,14 +31,10 @@ const AgentProductivity = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
-            Wenn Ihre Agenten übernehmen –{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">
-              perfekt ausgestattet
-            </span>
+            {t('marketing.agentProductivity.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            AI macht 87% automatisch. Die anderen 13%? Ihre Agenten haben alle Tools für 
-            professionellen Support an einem Ort.
+            {t('marketing.agentProductivity.subtitle')}
           </p>
         </motion.div>
 
@@ -56,32 +62,7 @@ const AgentProductivity = () => {
 
           {/* Right: Key Tools (2 columns) */}
           <div className="md:col-span-2 space-y-6">
-            {[
-              {
-                icon: ShoppingBag,
-                title: "Product Picker",
-                desc: "Varianten wählen (Größe, Farbe), als Karten oder Checkout-Link senden",
-                color: "purple"
-              },
-              {
-                icon: Gift,
-                title: "Rabatt-Generator",
-                desc: "10%, 15%, 20% Quick-Buttons. Ein Klick → Kunde hat Code",
-                color: "green"
-              },
-              {
-                icon: RefreshCcw,
-                title: "Rückerstattungen",
-                desc: "Direkt aus Dashboard. Artikel wählen, Betrag, fertig",
-                color: "blue"
-              },
-              {
-                icon: Eye,
-                title: "Kunden-Journey",
-                desc: "Welche Seiten besucht, was im Warenkorb, Kaufabsicht-Score",
-                color: "violet"
-              }
-            ].map((tool, i) => (
+            {tools.map((tool, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, x: 30 }}
@@ -139,10 +120,10 @@ const AgentProductivity = () => {
           <div className="relative bg-gradient-to-r from-purple-50 via-violet-50 to-blue-50 rounded-3xl p-10 md:p-14 border-2 border-purple-200">
             <div className="text-center mb-10">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                Beispiel: Checkout-Link erstellen
+                {t('marketing.agentProductivity.exampleTitle')}
               </h3>
               <p className="text-gray-600 max-w-2xl mx-auto">
-                Kunde interessiert an mehreren Produkten? Ein Klick-Erlebnis:
+                {t('marketing.agentProductivity.exampleSubtitle')}
               </p>
             </div>
 

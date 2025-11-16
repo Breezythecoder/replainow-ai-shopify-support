@@ -345,6 +345,18 @@
     "automationLabel": "Tasa de Automatización",
     "guarantee": "Garantía de Reembolso de 30 Días"
   },
+  "agentProductivity": {
+    "title": "Cuando Tus Agentes Toman el Control – Perfectamente Equipados",
+    "subtitle": "La IA maneja el 87% automáticamente. ¿El otro 13%? Tus agentes tienen todas las herramientas para soporte profesional en un solo lugar.",
+    "tools": [
+      {"title": "Selector de Productos", "desc": "Selecciona variantes (talla, color), envía como tarjetas o enlace de checkout", "color": "purple"},
+      {"title": "Generador de Descuentos", "desc": "Botones rápidos 10%, 15%, 20%. Un clic → cliente tiene código", "color": "green"},
+      {"title": "Reembolsos", "desc": "Directamente desde el dashboard. Selecciona artículos, monto, listo", "color": "blue"},
+      {"title": "Journey del Cliente", "desc": "Páginas visitadas, contenido del carrito, puntuación de intención de compra", "color": "violet"}
+    ],
+    "exampleTitle": "Ejemplo: Crear Enlace de Checkout",
+    "exampleSubtitle": "¿Cliente interesado en múltiples productos? Experiencia de un clic:"
+  },
   "finalCta": {
     "title": "¿Listo para automatizar tu soporte?",
     "subtitle": "Únete a 24 comerciantes exitosos de Shopify ahorrando tiempo y costos con ReplAInow",

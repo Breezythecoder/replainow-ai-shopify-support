@@ -774,6 +774,18 @@
     "automationLabel": "Automatisierungsgrad",
     "guarantee": "30-Tage Geld-zurück-Garantie"
   },
+  "agentProductivity": {
+    "title": "Wenn Ihre Agenten übernehmen – perfekt ausgestattet",
+    "subtitle": "AI macht 87% automatisch. Die anderen 13%? Ihre Agenten haben alle Tools für professionellen Support an einem Ort.",
+    "tools": [
+      {"title": "Product Picker", "desc": "Varianten wählen (Größe, Farbe), als Karten oder Checkout-Link senden", "color": "purple"},
+      {"title": "Rabatt-Generator", "desc": "10%, 15%, 20% Quick-Buttons. Ein Klick → Kunde hat Code", "color": "green"},
+      {"title": "Rückerstattungen", "desc": "Direkt aus Dashboard. Artikel wählen, Betrag, fertig", "color": "blue"},
+      {"title": "Kunden-Journey", "desc": "Welche Seiten besucht, was im Warenkorb, Kaufabsicht-Score", "color": "violet"}
+    ],
+    "exampleTitle": "Beispiel: Checkout-Link erstellen",
+    "exampleSubtitle": "Kunde interessiert an mehreren Produkten? Ein Klick-Erlebnis:"
+  },
   "finalCta": {
     "title": "Bereit, Ihren Support zu automatisieren?",
     "subtitle": "Schließen Sie sich 24 erfolgreichen Shopify-Händlern an, die mit ReplAInow Zeit und Kosten sparen",
