@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Clock, Sparkles, CheckCircle2 } from "lucide-react";
+import { useTranslation } from "@/i18n";
 
 const IntegrationStepsSection = () => {
-  const steps = [
+  const { t, getTranslation } = useTranslation();
+  const steps = getTranslation('marketing.integration.steps') || [
     { 
       num: 1, 
       title: "App installieren", 
@@ -35,9 +37,9 @@ const IntegrationStepsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-14">
           <h2 className="text-4xl md:text-5xl font-light text-gray-900 mb-4 tracking-tight">
-            Nahtlose <span className="font-semibold">Shopify-Integration</span>
+            {t('marketing.integration.title')}
           </h2>
-          <p className="text-lg text-gray-600">Vollautomatische Einrichtung in unter 60 Sekunden</p>
+          <p className="text-lg text-gray-600">{t('marketing.integration.subtitle')}</p>
         </div>
 
         {/* Vertical Timeline */}
@@ -102,11 +104,11 @@ const IntegrationStepsSection = () => {
           className="text-center mt-14"
         >
           <p className="text-gray-600 mb-4">
-            Keine Schulung erforderlich. Keine komplexe Einrichtung. Einfach installieren und loslegen.
+            {t('marketing.integration.bottomText')}
           </p>
           <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-green-50 text-green-700 rounded-full border border-green-200">
             <CheckCircle2 className="w-4 h-4" />
-            <span className="text-sm font-semibold">Live in 60 Sekunden</span>
+            <span className="text-sm font-semibold">{t('marketing.integration.bottomBadge')}</span>
           </div>
         </motion.div>
       </div>
