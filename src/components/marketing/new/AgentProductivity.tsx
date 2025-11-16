@@ -5,13 +5,14 @@ import { useTranslation } from "@/i18n";
 const AgentProductivity = () => {
   const { t, getTranslation } = useTranslation();
   
-  const iconMap = { ShoppingBag, Gift, RefreshCcw, Eye };
-  const tools = getTranslation('marketing.agentProductivity.tools') || [
+  const toolIcons = [ShoppingBag, Gift, RefreshCcw, Eye];
+  const toolsData = getTranslation('marketing.agentProductivity.tools') || [
     {title: "Product Picker", desc: "Varianten wählen (Größe, Farbe), als Karten oder Checkout-Link senden", color: "purple"},
     {title: "Rabatt-Generator", desc: "10%, 15%, 20% Quick-Buttons. Ein Klick → Kunde hat Code", color: "green"},
     {title: "Rückerstattungen", desc: "Direkt aus Dashboard. Artikel wählen, Betrag, fertig", color: "blue"},
     {title: "Kunden-Journey", desc: "Welche Seiten besucht, was im Warenkorb, Kaufabsicht-Score", color: "violet"}
-  ].map((tool, i) => ({...tool, icon: [ShoppingBag, Gift, RefreshCcw, Eye][i]}));
+  ];
+  const tools = toolsData.map((tool, i) => ({...tool, icon: toolIcons[i]}));
   return (
     <div 
       className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50/20 to-white"

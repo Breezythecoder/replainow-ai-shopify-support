@@ -96,6 +96,7 @@ const OmnichannelUnified = () => {
               <div className="space-y-4">
                 {liveChatFeatures.map((text, i) => {
                   const icons = [Globe, Package, Gift, Zap];
+                  const Icon = icons[i];
                   return (
                   <motion.div
                     key={i}
@@ -106,7 +107,7 @@ const OmnichannelUnified = () => {
                     className="flex items-center gap-4"
                   >
                     <div className="p-3 bg-purple-50 rounded-xl">
-                      {icons[i] && icons[i]({ className: "w-6 h-6 text-purple-700" })}
+                      <Icon className="w-6 h-6 text-purple-700" />
                     </div>
                     <span className="text-gray-800 font-medium text-lg">{text}</span>
                   </motion.div>
@@ -149,6 +150,7 @@ const OmnichannelUnified = () => {
                   const icons = [CheckCircle2, TrendingUp, Brain, Mail];
                   const colors = ["green", "violet", "blue", "purple"];
                   const color = colors[i];
+                  const Icon = icons[i];
                   return (
                   <motion.div
                     key={i}
@@ -165,9 +167,7 @@ const OmnichannelUnified = () => {
                       ${color === 'blue' ? 'bg-blue-50' : ''}
                       ${color === 'purple' ? 'bg-purple-50' : ''}
                     `}>
-                      {icons[i] && icons[i]({
-                        className: `w-6 h-6 ${color === 'green' ? 'text-green-700' : ''} ${color === 'violet' ? 'text-violet-700' : ''} ${color === 'blue' ? 'text-blue-700' : ''} ${color === 'purple' ? 'text-purple-700' : ''}`
-                      })}
+                      <Icon className={`w-6 h-6 ${color === 'green' ? 'text-green-700' : ''} ${color === 'violet' ? 'text-violet-700' : ''} ${color === 'blue' ? 'text-blue-700' : ''} ${color === 'purple' ? 'text-purple-700' : ''}`} />
                     </div>
                     <span className="text-gray-800 font-medium text-lg">{text}</span>
                   </motion.div>

@@ -27,10 +27,10 @@ const PremiumNavbar = () => {
   };
 
   const navItems = [
-    { label: t('navigation.features'), href: '#features' },
-    { label: t('navigation.integration'), href: '#integration' },
-    { label: t('navigation.pricing'), href: '#pricing' },
-    { label: t('navigation.faq'), href: '#faq' },
+    { label: t('common.navigation.features'), href: '#features' },
+    { label: t('common.navigation.integration'), href: '#integration' },
+    { label: t('common.navigation.pricing'), href: '#pricing' },
+    { label: t('common.navigation.faq'), href: '#faq' },
   ];
 
   return (
@@ -89,7 +89,7 @@ const PremiumNavbar = () => {
               className="relative inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all duration-300 shadow-lg shadow-purple-500/20 hover:shadow-purple-500/30 hover:scale-105"
             >
               <Sparkles className="w-4 h-4" />
-              <span>{t('navigation.cta')}</span>
+              <span>{t('common.navigation.cta')}</span>
             </a>
           </div>
           
@@ -97,7 +97,7 @@ const PremiumNavbar = () => {
           <button
             className="md:hidden p-2 min-h-[48px] min-w-[48px] flex items-center justify-center text-gray-700 hover:text-purple-700 transition-colors duration-200 rounded-lg hover:bg-purple-50"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label={mobileMenuOpen ? t('navigation.menuClose') : t('navigation.menuOpen')}
+            aria-label={mobileMenuOpen ? t('common.navigation.menuClose') : t('common.navigation.menuOpen')}
           >
             {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
@@ -125,7 +125,7 @@ const PremiumNavbar = () => {
             >
               <span className="flex items-center justify-center gap-2">
                 <Sparkles className="w-4 h-4" />
-                {t('navigation.cta')}
+                {t('common.navigation.cta')}
               </span>
             </a>
             
