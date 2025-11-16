@@ -1,10 +1,12 @@
 import { motion } from "framer-motion";
 import { Shield, Database, Eye, CheckCircle2, AlertTriangle, Clock, Sparkles, ShoppingCart, TrendingUp, Smartphone } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "@/i18n";
 
 type TabType = "quality" | "collection" | "journey";
 
 const AIIntelligenceDeepDive = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<TabType>("quality");
 
   return (
@@ -27,18 +29,14 @@ const AIIntelligenceDeepDive = () => {
         >
           <div className="inline-flex items-center gap-2 bg-purple-50 border-2 border-purple-200 px-5 py-2.5 rounded-full mb-6">
             <Sparkles className="w-4 h-4 text-purple-700" />
-            <span className="text-sm font-bold text-purple-900">ENTERPRISE AI INTELLIGENCE</span>
+            <span className="text-sm font-bold text-purple-900">{t('marketing.aiIntelligenceDeepDive.badge')}</span>
           </div>
           
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
-            Mehr als nur ein{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">
-              Chatbot
-            </span>
+            {t('marketing.aiIntelligenceDeepDive.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Enterprise-Level AI Intelligence: Selbstkontrolle, Informationssammlung, 
-            Kundenverständnis – das bekommen Sie nirgendwo sonst
+            {t('marketing.aiIntelligenceDeepDive.subtitle')}
           </p>
         </motion.div>
 
@@ -63,8 +61,7 @@ const AIIntelligenceDeepDive = () => {
             >
               <div className="flex items-center justify-center sm:justify-start gap-2">
                 <Shield className="w-4 h-4" />
-                <span className="hidden sm:inline">Qualitäts-Garantie</span>
-                <span className="sm:hidden">Qualität</span>
+                <span>{t('marketing.aiIntelligenceDeepDive.tab1')}</span>
               </div>
             </button>
             <button
@@ -79,8 +76,7 @@ const AIIntelligenceDeepDive = () => {
             >
               <div className="flex items-center justify-center sm:justify-start gap-2">
                 <Database className="w-4 h-4" />
-                <span className="hidden sm:inline">Informations-Sammlung</span>
-                <span className="sm:hidden">Info-Sammlung</span>
+                <span>{t('marketing.aiIntelligenceDeepDive.tab2')}</span>
               </div>
             </button>
             <button
@@ -95,8 +91,7 @@ const AIIntelligenceDeepDive = () => {
             >
               <div className="flex items-center justify-center sm:justify-start gap-2">
                 <Eye className="w-4 h-4" />
-                <span className="hidden sm:inline">Kunden-Verständnis</span>
-                <span className="sm:hidden">Kunden-Journey</span>
+                <span>{t('marketing.aiIntelligenceDeepDive.tab3')}</span>
               </div>
             </button>
           </div>
@@ -141,19 +136,18 @@ const AIIntelligenceDeepDive = () => {
               {/* Right: Explanation */}
               <div className="space-y-6">
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                  AI kontrolliert sich selbst
+                  {t('marketing.aiIntelligenceDeepDive.qualityTitle')}
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Jede Antwort wird auf 5 Dimensionen bewertet: Antwortqualität, Kontext-Abdeckung, 
-                  Informations-Genauigkeit, Sprachfluss, Gesamt-Konfidenz. Nur Score ≥ 90 wird automatisch gesendet.
+                  {t('marketing.aiIntelligenceDeepDive.qualityDesc')}
                 </p>
 
                 <div className="space-y-4">
                   {[
-                    { score: "90-100", label: "Exzellent", color: "green", action: "Automatisch gesendet" },
-                    { score: "80-89", label: "Gut", color: "gray", action: "Je nach Schwellenwert" },
-                    { score: "70-79", label: "Befriedigend", color: "yellow", action: "Zur Prüfung" },
-                    { score: "<70", label: "Unsicher", color: "red", action: "Sie schreiben neu" }
+                    { score: t('marketing.aiIntelligenceDeepDive.qualityScore1'), label: t('marketing.aiIntelligenceDeepDive.qualityScore1Label'), color: "green", action: t('marketing.aiIntelligenceDeepDive.qualityScore1Action') },
+                    { score: t('marketing.aiIntelligenceDeepDive.qualityScore2'), label: t('marketing.aiIntelligenceDeepDive.qualityScore2Label'), color: "gray", action: t('marketing.aiIntelligenceDeepDive.qualityScore2Action') },
+                    { score: t('marketing.aiIntelligenceDeepDive.qualityScore3'), label: t('marketing.aiIntelligenceDeepDive.qualityScore3Label'), color: "yellow", action: t('marketing.aiIntelligenceDeepDive.qualityScore3Action') },
+                    { score: t('marketing.aiIntelligenceDeepDive.qualityScore4'), label: t('marketing.aiIntelligenceDeepDive.qualityScore4Label'), color: "red", action: t('marketing.aiIntelligenceDeepDive.qualityScore4Action') }
                   ].map((range, i) => (
                     <div key={i} className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200">
                       <div className={`
@@ -175,8 +169,7 @@ const AIIntelligenceDeepDive = () => {
 
                 <div className="bg-purple-50 border-2 border-purple-200 rounded-xl p-6">
                   <p className="text-sm font-medium text-gray-900">
-                    <span className="text-purple-700 font-bold">Sie kontrollieren die Qualität:</span>{" "}
-                    Schwellenwert 80, 85 oder 90? Sie entscheiden. Höher = mehr Kontrolle, niedriger = schneller.
+                    {t('marketing.aiIntelligenceDeepDive.qualityControl')}
                   </p>
                 </div>
               </div>
@@ -193,11 +186,10 @@ const AIIntelligenceDeepDive = () => {
             >
               <div className="text-center mb-8">
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                  AI fragt nach – Sie bekommen alles
+                  {t('marketing.aiIntelligenceDeepDive.collectionTitle')}
                 </h3>
                 <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                  Nie wieder unvollständige Infos. AI sammelt systematisch alle Details, 
-                  bevor es bei Ihnen landet.
+                  {t('marketing.aiIntelligenceDeepDive.collectionDesc')}
                 </p>
               </div>
 
@@ -206,27 +198,27 @@ const AIIntelligenceDeepDive = () => {
                 {[
                   {
                     step: "Schritt 1",
-                    badge: "AI sammelt Info",
+                    badge: t('marketing.aiIntelligenceDeepDive.collectionStep1Badge'),
                     badgeColor: "blue",
-                    customer: "Das Produkt ist kaputt!",
-                    ai: "Verstehe! Damit ich helfen kann: Bestellnummer? Welches Produkt? Foto?",
-                    status: "Informationen sammeln..."
+                    customer: t('marketing.aiIntelligenceDeepDive.collectionStep1Customer'),
+                    ai: t('marketing.aiIntelligenceDeepDive.collectionStep1AI'),
+                    status: t('marketing.aiIntelligenceDeepDive.collectionStep1Status')
                   },
                   {
                     step: "Schritt 2",
-                    badge: "Fast komplett",
+                    badge: t('marketing.aiIntelligenceDeepDive.collectionStep2Badge'),
                     badgeColor: "yellow",
-                    customer: "Bestellung #5678, blaue Sneakers, hier das Foto",
-                    ai: "Danke! Notiert: Bestellung #5678, blaue Sneakers, Foto da. Rückerstattung oder Ersatz?",
-                    status: "Noch 1 Info fehlt"
+                    customer: t('marketing.aiIntelligenceDeepDive.collectionStep2Customer'),
+                    ai: t('marketing.aiIntelligenceDeepDive.collectionStep2AI'),
+                    status: t('marketing.aiIntelligenceDeepDive.collectionStep2Status')
                   },
                   {
                     step: "Schritt 3",
-                    badge: "Bereit für Sie",
+                    badge: t('marketing.aiIntelligenceDeepDive.collectionStep3Badge'),
                     badgeColor: "green",
-                    customer: "Rückerstattung bitte",
-                    ai: "Perfekt! Unser Team bearbeitet Ihre Rückerstattung innerhalb von 24 Stunden.",
-                    status: "✅ Alle Infos komplett"
+                    customer: t('marketing.aiIntelligenceDeepDive.collectionStep3Customer'),
+                    ai: t('marketing.aiIntelligenceDeepDive.collectionStep3AI'),
+                    status: t('marketing.aiIntelligenceDeepDive.collectionStep3Status')
                   }
                 ].map((item, i) => (
                   <motion.div
@@ -285,8 +277,7 @@ const AIIntelligenceDeepDive = () => {
               {/* Bottom Highlight */}
               <div className="bg-gradient-to-r from-purple-50 via-violet-50 to-purple-50 rounded-2xl p-8 border-2 border-purple-200 mt-12">
                 <p className="text-center text-lg font-bold text-gray-900">
-                  <span className="text-purple-600">Wenn es bei Ihnen landet:</span>{" "}
-                  Bestellnummer ✓ Telefon ✓ Foto ✓ Kundenwunsch ✓ – komplett fertig für Bearbeitung
+                  {t('marketing.aiIntelligenceDeepDive.collectionHighlight')}
                 </p>
               </div>
             </motion.div>
@@ -303,7 +294,7 @@ const AIIntelligenceDeepDive = () => {
               {/* Left: Journey Timeline */}
               <div className="space-y-6">
                 <h3 className="text-3xl font-bold text-gray-900 mb-6">
-                  Kunden-Verhalten live sehen
+                  {t('marketing.aiIntelligenceDeepDive.journeyTitle')}
                 </h3>
                 
                 <div className="relative">
@@ -342,15 +333,15 @@ const AIIntelligenceDeepDive = () => {
               {/* Right: What AI Sees */}
               <div className="space-y-6">
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Was Ihre AI sieht
+                  {t('marketing.aiIntelligenceDeepDive.journeyWhatAISees')}
                 </h3>
                 
                 <div className="space-y-4">
                   {[
-                    { icon: Eye, label: "Besuchte Seiten", value: "4 Seiten, 1:17 Min" },
-                    { icon: ShoppingCart, label: "Warenkorb", value: "€150 (3 Produkte)" },
-                    { icon: TrendingUp, label: "Kaufabsicht", value: "Hoch (85/100)" },
-                    { icon: Smartphone, label: "Gerät", value: "iPhone 15, iOS" }
+                    { icon: Eye, label: t('marketing.aiIntelligenceDeepDive.journeyInsight1'), value: t('marketing.aiIntelligenceDeepDive.journeyInsight1Value') },
+                    { icon: ShoppingCart, label: t('marketing.aiIntelligenceDeepDive.journeyInsight2'), value: t('marketing.aiIntelligenceDeepDive.journeyInsight2Value') },
+                    { icon: TrendingUp, label: t('marketing.aiIntelligenceDeepDive.journeyInsight3'), value: t('marketing.aiIntelligenceDeepDive.journeyInsight3Value') },
+                    { icon: Smartphone, label: t('marketing.aiIntelligenceDeepDive.journeyInsight4'), value: t('marketing.aiIntelligenceDeepDive.journeyInsight4Value') }
                   ].map((insight, i) => (
                     <div key={i} className="flex items-center gap-4 p-4 bg-white rounded-xl border border-gray-200">
                       <div className="p-3 bg-purple-50 rounded-lg">
@@ -366,9 +357,7 @@ const AIIntelligenceDeepDive = () => {
 
                 <div className="bg-gradient-to-br from-purple-50 to-violet-50 border-2 border-purple-200 rounded-xl p-6 mt-8">
                   <p className="text-sm font-medium text-gray-900">
-                    <span className="text-purple-700 font-bold">AI nutzt Kontext:</span>{" "}
-                    "Summer Dress" 45 Sek angeschaut + €150 im Warenkorb = Kaufbereit → 
-                    Empfiehlt passende Accessoires!
+                    {t('marketing.aiIntelligenceDeepDive.journeyExample')}
                   </p>
                 </div>
               </div>
@@ -385,11 +374,7 @@ const AIIntelligenceDeepDive = () => {
           className="text-center mt-20"
         >
           <p className="text-2xl font-bold text-gray-900">
-            Enterprise-Level{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">
-              AI Intelligence
-            </span>
-            {" "}– nicht nur Chatbot, sondern intelligenter Support-Mitarbeiter
+            {t('marketing.aiIntelligenceDeepDive.bottomStatement')}
           </p>
         </motion.div>
       </div>
