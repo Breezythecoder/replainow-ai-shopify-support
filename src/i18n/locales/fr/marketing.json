@@ -357,6 +357,37 @@
     "exampleTitle": "Exemple : Créer un Lien de Checkout",
     "exampleSubtitle": "Client intéressé par plusieurs produits ? Expérience en un clic :"
   },
+  "omnichannelUnified": {
+    "title": "Un Système pour Chat et Email – Connectés Sans Faille",
+    "subtitle": "Vos clients choisissent le canal – votre IA répond partout. Widget de live chat + helpdesk email professionnel, parfaitement synchronisés.",
+    "liveChatBadge": "LIVE CHAT",
+    "liveChatTitle": "Plus Qu'un Simple Widget de Chat",
+    "liveChatDesc": "Interface multi-onglets moderne avec cartes visuelles et fonctionnalités intelligentes",
+    "liveChatFeatures": [
+      "L'IA répond en 100+ langues, interface du widget en 41 langues",
+      "Cartes produits avec images et prix",
+      "Codes de réduction avec copie en 1 clic",
+      "Messages proactifs sur toutes les pages"
+    ],
+    "emailBadge": "HELPDESK EMAIL",
+    "emailTitle": "Garantie de Qualité par Notation IA",
+    "emailDesc": "Boîte de réception basée sur les fils comme Gmail. L'IA note les réponses (0-100), n'envoie que les emails parfaits automatiquement.",
+    "emailFeatures": [
+      "Score IA 90+ : Envoyé automatiquement",
+      "Seuil de qualité réglable",
+      "L'IA collecte toutes les infos avant escalade",
+      "Basé sur les fils comme Gmail"
+    ],
+    "unifiedLabel": "Un Système",
+    "unifiedSync": "Synchronisé sans faille – même IA, même base de données, transitions parfaites",
+    "unifiedFeature1Title": "100+ Langues",
+    "unifiedFeature1Desc": "Détection automatique – l'IA répond dans la langue du client. Allemand, anglais, français, japonais, arabe... tout automatique.",
+    "unifiedFeature2Title": "Commerce Visuel",
+    "unifiedFeature2Desc": "Pas seulement du texte : Cartes produits avec images, liens de checkout avec panier pré-rempli, cartes de suivi avec logos de transporteurs.",
+    "unifiedFeature3Title": "Proactif et Intelligent",
+    "unifiedFeature3Desc": "Accueil sur la page d'accueil, aide sur les pages produits, ventes flash – l'IA contacte proactivement sur toutes les pages avec un timing parfait.",
+    "bottomStatement": "Votre client décide comment contacter – votre IA répond parfaitement partout"
+  },
   "finalCta": {
     "title": "Prêt à automatiser votre support ?",
     "subtitle": "Rejoignez 24 marchands Shopify prospères économisant temps et coûts avec ReplAInow",

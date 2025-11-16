@@ -1,7 +1,23 @@
 import { motion } from "framer-motion";
 import { MessageSquare, Mail, Globe, Sparkles, CheckCircle2, Zap, Gift, Package, Brain, TrendingUp } from "lucide-react";
+import { useTranslation } from "@/i18n";
 
 const OmnichannelUnified = () => {
+  const { t, getTranslation } = useTranslation();
+  
+  const liveChatFeatures = getTranslation('marketing.omnichannelUnified.liveChatFeatures') || [
+    "AI antwortet in 100+ Sprachen, Widget-Interface in 41 Sprachen",
+    "Produktkarten mit Bildern & Preisen",
+    "Rabatt-Codes mit 1-Klick kopieren",
+    "Proaktive Nachrichten auf allen Seiten"
+  ];
+  
+  const emailFeatures = getTranslation('marketing.omnichannelUnified.emailFeatures') || [
+    "AI-Score 90+: Automatisch gesendet",
+    "Qualitäts-Schwellenwert einstellbar",
+    "AI sammelt alle Infos vor Eskalation",
+    "Thread-basiert wie Gmail"
+  ];
   return (
     <div 
       className="relative overflow-hidden bg-gradient-to-b from-white via-gray-50 to-white"
@@ -21,15 +37,10 @@ const OmnichannelUnified = () => {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
-            Ein System für{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">
-              Chat & E-Mail
-            </span>
-            {" "}– nahtlos verbunden
+            {t('marketing.omnichannelUnified.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Ihre Kunden wählen den Kanal – Ihre AI antwortet überall. Live-Chat Widget + professioneller 
-            E-Mail Helpdesk, perfekt synchronisiert.
+            {t('marketing.omnichannelUnified.subtitle')}
           </p>
         </motion.div>
 
@@ -70,25 +81,22 @@ const OmnichannelUnified = () => {
               <div>
                 <div className="inline-flex items-center gap-3 bg-gradient-to-r from-purple-500 to-violet-600 text-white px-5 py-2.5 rounded-full mb-6 shadow-neon-purple">
                   <MessageSquare className="w-5 h-5" />
-                  <span className="font-bold tracking-wide">LIVE CHAT</span>
+                  <span className="font-bold tracking-wide">{t('marketing.omnichannelUnified.liveChatBadge')}</span>
                 </div>
                 
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                  Mehr als nur ein Chat-Widget
+                  {t('marketing.omnichannelUnified.liveChatTitle')}
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Modernes Multi-Tab Interface mit visuellen Karten und intelligenten Features
+                  {t('marketing.omnichannelUnified.liveChatDesc')}
                 </p>
               </div>
 
               {/* Features */}
               <div className="space-y-4">
-                {[
-                  { icon: Globe, text: "AI antwortet in 100+ Sprachen, Widget-Interface in 41 Sprachen" },
-                  { icon: Package, text: "Produktkarten mit Bildern & Preisen" },
-                  { icon: Gift, text: "Rabatt-Codes mit 1-Klick kopieren" },
-                  { icon: Zap, text: "Proaktive Nachrichten auf allen Seiten" }
-                ].map((feature, i) => (
+                {liveChatFeatures.map((text, i) => {
+                  const icons = [Globe, Package, Gift, Zap];
+                  return (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, x: 20 }}
@@ -98,11 +106,11 @@ const OmnichannelUnified = () => {
                     className="flex items-center gap-4"
                   >
                     <div className="p-3 bg-purple-50 rounded-xl">
-                      <feature.icon className="w-6 h-6 text-purple-700" />
+                      {icons[i] && icons[i]({ className: "w-6 h-6 text-purple-700" })}
                     </div>
-                    <span className="text-gray-800 font-medium text-lg">{feature.text}</span>
+                    <span className="text-gray-800 font-medium text-lg">{text}</span>
                   </motion.div>
-                ))}
+                )})}
               </div>
             </motion.div>
           </div>
@@ -124,26 +132,24 @@ const OmnichannelUnified = () => {
               <div>
                 <div className="inline-flex items-center gap-3 bg-gradient-to-r from-violet-500 to-blue-500 text-white px-5 py-2.5 rounded-full mb-6 shadow-neon-purple">
                   <Mail className="w-5 h-5" />
-                  <span className="font-bold tracking-wide">E-MAIL HELPDESK</span>
+                  <span className="font-bold tracking-wide">{t('marketing.omnichannelUnified.emailBadge')}</span>
                 </div>
                 
                 <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                  Qualitäts-Garantie durch AI-Scoring
+                  {t('marketing.omnichannelUnified.emailTitle')}
                 </h3>
                 <p className="text-lg text-gray-600 leading-relaxed">
-                  Thread-basierter Posteingang wie Gmail. AI bewertet Antworten (0-100), 
-                  sendet nur perfekte Emails automatisch.
+                  {t('marketing.omnichannelUnified.emailDesc')}
                 </p>
               </div>
 
               {/* Features */}
               <div className="space-y-4">
-                {[
-                  { icon: CheckCircle2, text: "AI-Score 90+: Automatisch gesendet", color: "green" },
-                  { icon: TrendingUp, text: "Qualitäts-Schwellenwert einstellbar", color: "violet" },
-                  { icon: Brain, text: "AI sammelt alle Infos vor Eskalation", color: "blue" },
-                  { icon: Mail, text: "Thread-basiert wie Gmail", color: "purple" }
-                ].map((feature, i) => (
+                {emailFeatures.map((text, i) => {
+                  const icons = [CheckCircle2, TrendingUp, Brain, Mail];
+                  const colors = ["green", "violet", "blue", "purple"];
+                  const color = colors[i];
+                  return (
                   <motion.div
                     key={i}
                     initial={{ opacity: 0, x: -20 }}
@@ -154,22 +160,18 @@ const OmnichannelUnified = () => {
                   >
                     <div className={`
                       p-3 rounded-xl
-                      ${feature.color === 'green' ? 'bg-green-50' : ''}
-                      ${feature.color === 'violet' ? 'bg-violet-50' : ''}
-                      ${feature.color === 'blue' ? 'bg-blue-50' : ''}
-                      ${feature.color === 'purple' ? 'bg-purple-50' : ''}
+                      ${color === 'green' ? 'bg-green-50' : ''}
+                      ${color === 'violet' ? 'bg-violet-50' : ''}
+                      ${color === 'blue' ? 'bg-blue-50' : ''}
+                      ${color === 'purple' ? 'bg-purple-50' : ''}
                     `}>
-                      <feature.icon className={`
-                        w-6 h-6
-                        ${feature.color === 'green' ? 'text-green-700' : ''}
-                        ${feature.color === 'violet' ? 'text-violet-700' : ''}
-                        ${feature.color === 'blue' ? 'text-blue-700' : ''}
-                        ${feature.color === 'purple' ? 'text-purple-700' : ''}
-                      `} />
+                      {icons[i] && icons[i]({
+                        className: `w-6 h-6 ${color === 'green' ? 'text-green-700' : ''} ${color === 'violet' ? 'text-violet-700' : ''} ${color === 'blue' ? 'text-blue-700' : ''} ${color === 'purple' ? 'text-purple-700' : ''}`
+                      })}
                     </div>
-                    <span className="text-gray-800 font-medium text-lg">{feature.text}</span>
+                    <span className="text-gray-800 font-medium text-lg">{text}</span>
                   </motion.div>
-                ))}
+                )})}
               </div>
             </motion.div>
 
@@ -245,13 +247,13 @@ const OmnichannelUnified = () => {
                 <div className="p-6 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl shadow-float mb-3">
                   <Sparkles className="w-10 h-10 text-white" />
                 </div>
-                <span className="font-bold text-gray-900">Ein System</span>
+                <span className="font-bold text-gray-900">{t('marketing.omnichannelUnified.unifiedLabel')}</span>
               </div>
             </div>
 
             {/* Bottom Text */}
             <p className="text-center text-gray-700 font-medium mt-8">
-              Nahtlos synchronisiert – gleiche AI, gleiche Datengrundlage, perfekte Übergänge
+              {t('marketing.omnichannelUnified.unifiedSync')}
             </p>
           </div>
         </motion.div>
@@ -269,10 +271,9 @@ const OmnichannelUnified = () => {
             <div className="inline-flex p-4 bg-purple-50 rounded-xl mb-6">
               <Globe className="w-8 h-8 text-purple-700" />
             </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-3">100+ Sprachen</h4>
+            <h4 className="text-xl font-bold text-gray-900 mb-3">{t('marketing.omnichannelUnified.unifiedFeature1Title')}</h4>
             <p className="text-gray-600 leading-relaxed">
-              Automatische Erkennung – AI antwortet in der Sprache des Kunden. Deutsch, Englisch, 
-              Französisch, Japanisch, Arabisch... alles automatisch.
+              {t('marketing.omnichannelUnified.unifiedFeature1Desc')}
             </p>
           </div>
 
@@ -281,10 +282,9 @@ const OmnichannelUnified = () => {
             <div className="inline-flex p-4 bg-violet-50 rounded-xl mb-6">
               <Package className="w-8 h-8 text-violet-700" />
             </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-3">Visual Commerce</h4>
+            <h4 className="text-xl font-bold text-gray-900 mb-3">{t('marketing.omnichannelUnified.unifiedFeature2Title')}</h4>
             <p className="text-gray-600 leading-relaxed">
-              Nicht nur Text: Produktkarten mit Bildern, Checkout-Links mit vorausgefülltem Warenkorb, 
-              Tracking-Karten mit Carrier-Logos.
+              {t('marketing.omnichannelUnified.unifiedFeature2Desc')}
             </p>
           </div>
 
@@ -293,10 +293,9 @@ const OmnichannelUnified = () => {
             <div className="inline-flex p-4 bg-blue-50 rounded-xl mb-6">
               <Zap className="w-8 h-8 text-blue-700" />
             </div>
-            <h4 className="text-xl font-bold text-gray-900 mb-3">Proaktiv & Smart</h4>
+            <h4 className="text-xl font-bold text-gray-900 mb-3">{t('marketing.omnichannelUnified.unifiedFeature3Title')}</h4>
             <p className="text-gray-600 leading-relaxed">
-              Homepage-Begrüßung, Produktseiten-Hilfe, Flash-Sales – AI meldet sich proaktiv 
-              auf allen Seiten mit perfektem Timing.
+              {t('marketing.omnichannelUnified.unifiedFeature3Desc')}
             </p>
           </div>
         </motion.div>
@@ -310,8 +309,7 @@ const OmnichannelUnified = () => {
           className="text-center mt-16"
         >
           <p className="text-2xl font-bold text-gray-900">
-            <span className="text-purple-600">Ihr Kunde entscheidet</span> wie er kontaktiert –{" "}
-            <span className="text-violet-600">Ihre AI antwortet</span> perfekt überall
+            {t('marketing.omnichannelUnified.bottomStatement')}
           </p>
         </motion.div>
       </div>

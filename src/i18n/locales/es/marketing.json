@@ -349,13 +349,60 @@
     "title": "Cuando Tus Agentes Toman el Control – Perfectamente Equipados",
     "subtitle": "La IA maneja el 87% automáticamente. ¿El otro 13%? Tus agentes tienen todas las herramientas para soporte profesional en un solo lugar.",
     "tools": [
-      {"title": "Selector de Productos", "desc": "Selecciona variantes (talla, color), envía como tarjetas o enlace de checkout", "color": "purple"},
-      {"title": "Generador de Descuentos", "desc": "Botones rápidos 10%, 15%, 20%. Un clic → cliente tiene código", "color": "green"},
-      {"title": "Reembolsos", "desc": "Directamente desde el dashboard. Selecciona artículos, monto, listo", "color": "blue"},
-      {"title": "Journey del Cliente", "desc": "Páginas visitadas, contenido del carrito, puntuación de intención de compra", "color": "violet"}
+      {
+        "title": "Selector de Productos",
+        "desc": "Selecciona variantes (talla, color), envía como tarjetas o enlace de checkout",
+        "color": "purple"
+      },
+      {
+        "title": "Generador de Descuentos",
+        "desc": "Botones rápidos 10%, 15%, 20%. Un clic → cliente tiene código",
+        "color": "green"
+      },
+      {
+        "title": "Reembolsos",
+        "desc": "Directamente desde el dashboard. Selecciona artículos, monto, listo",
+        "color": "blue"
+      },
+      {
+        "title": "Journey del Cliente",
+        "desc": "Páginas visitadas, contenido del carrito, puntuación de intención de compra",
+        "color": "violet"
+      }
     ],
     "exampleTitle": "Ejemplo: Crear Enlace de Checkout",
     "exampleSubtitle": "¿Cliente interesado en múltiples productos? Experiencia de un clic:"
+  },
+  "omnichannelUnified": {
+    "title": "Un Sistema para Chat y Email – Conectados a la Perfección",
+    "subtitle": "Tus clientes eligen el canal – tu IA responde en todas partes. Widget de live chat + helpdesk de email profesional, perfectamente sincronizados.",
+    "liveChatBadge": "LIVE CHAT",
+    "liveChatTitle": "Más Que Solo un Widget de Chat",
+    "liveChatDesc": "Interfaz multi-pestaña moderna con tarjetas visuales y funciones inteligentes",
+    "liveChatFeatures": [
+      "La IA responde en 100+ idiomas, interfaz del widget en 41 idiomas",
+      "Tarjetas de productos con imágenes y precios",
+      "Códigos de descuento con copia de 1 clic",
+      "Mensajes proactivos en todas las páginas"
+    ],
+    "emailBadge": "HELPDESK DE EMAIL",
+    "emailTitle": "Garantía de Calidad Mediante Puntuación IA",
+    "emailDesc": "Bandeja de entrada basada en hilos como Gmail. La IA califica respuestas (0-100), solo envía emails perfectos automáticamente.",
+    "emailFeatures": [
+      "Puntuación IA 90+: Enviado automáticamente",
+      "Umbral de calidad ajustable",
+      "La IA recopila toda la info antes de escalar",
+      "Basado en hilos como Gmail"
+    ],
+    "unifiedLabel": "Un Sistema",
+    "unifiedSync": "Sincronizado a la perfección – misma IA, misma base de datos, transiciones perfectas",
+    "unifiedFeature1Title": "100+ Idiomas",
+    "unifiedFeature1Desc": "Detección automática – la IA responde en el idioma del cliente. Alemán, inglés, francés, japonés, árabe... todo automático.",
+    "unifiedFeature2Title": "Comercio Visual",
+    "unifiedFeature2Desc": "No solo texto: Tarjetas de productos con imágenes, enlaces de checkout con carrito prellenado, tarjetas de seguimiento con logos de transportistas.",
+    "unifiedFeature3Title": "Proactivo e Inteligente",
+    "unifiedFeature3Desc": "Saludos en la página principal, ayuda en páginas de productos, ventas flash – la IA se comunica proactivamente en todas las páginas con timing perfecto.",
+    "bottomStatement": "Tu cliente decide cómo contactar – tu IA responde perfectamente en todas partes"
   },
   "finalCta": {
     "title": "¿Listo para automatizar tu soporte?",

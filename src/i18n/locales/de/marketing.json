@@ -786,6 +786,37 @@
     "exampleTitle": "Beispiel: Checkout-Link erstellen",
     "exampleSubtitle": "Kunde interessiert an mehreren Produkten? Ein Klick-Erlebnis:"
   },
+  "omnichannelUnified": {
+    "title": "Ein System für Chat & E-Mail – nahtlos verbunden",
+    "subtitle": "Ihre Kunden wählen den Kanal – Ihre AI antwortet überall. Live-Chat Widget + professioneller E-Mail Helpdesk, perfekt synchronisiert.",
+    "liveChatBadge": "LIVE CHAT",
+    "liveChatTitle": "Mehr als nur ein Chat-Widget",
+    "liveChatDesc": "Modernes Multi-Tab Interface mit visuellen Karten und intelligenten Features",
+    "liveChatFeatures": [
+      "AI antwortet in 100+ Sprachen, Widget-Interface in 41 Sprachen",
+      "Produktkarten mit Bildern & Preisen",
+      "Rabatt-Codes mit 1-Klick kopieren",
+      "Proaktive Nachrichten auf allen Seiten"
+    ],
+    "emailBadge": "E-MAIL HELPDESK",
+    "emailTitle": "Qualitäts-Garantie durch AI-Scoring",
+    "emailDesc": "Thread-basierter Posteingang wie Gmail. AI bewertet Antworten (0-100), sendet nur perfekte Emails automatisch.",
+    "emailFeatures": [
+      "AI-Score 90+: Automatisch gesendet",
+      "Qualitäts-Schwellenwert einstellbar",
+      "AI sammelt alle Infos vor Eskalation",
+      "Thread-basiert wie Gmail"
+    ],
+    "unifiedLabel": "Ein System",
+    "unifiedSync": "Nahtlos synchronisiert – gleiche AI, gleiche Datengrundlage, perfekte Übergänge",
+    "unifiedFeature1Title": "100+ Sprachen",
+    "unifiedFeature1Desc": "Automatische Erkennung – AI antwortet in der Sprache des Kunden. Deutsch, Englisch, Französisch, Japanisch, Arabisch... alles automatisch.",
+    "unifiedFeature2Title": "Visual Commerce",
+    "unifiedFeature2Desc": "Nicht nur Text: Produktkarten mit Bildern, Checkout-Links mit vorausgefülltem Warenkorb, Tracking-Karten mit Carrier-Logos.",
+    "unifiedFeature3Title": "Proaktiv & Smart",
+    "unifiedFeature3Desc": "Homepage-Begrüßung, Produktseiten-Hilfe, Flash-Sales – AI meldet sich proaktiv auf allen Seiten mit perfektem Timing.",
+    "bottomStatement": "Ihr Kunde entscheidet wie er kontaktiert – Ihre AI antwortet perfekt überall"
+  },
   "finalCta": {
     "title": "Bereit, Ihren Support zu automatisieren?",
     "subtitle": "Schließen Sie sich 24 erfolgreichen Shopify-Händlern an, die mit ReplAInow Zeit und Kosten sparen",

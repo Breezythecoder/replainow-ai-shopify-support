@@ -885,6 +885,37 @@
     "exampleTitle": "Example: Create Checkout Link",
     "exampleSubtitle": "Customer interested in multiple products? One-click experience:"
   },
+  "omnichannelUnified": {
+    "title": "One System for Chat & Email – Seamlessly Connected",
+    "subtitle": "Your customers choose the channel – your AI responds everywhere. Live chat widget + professional email helpdesk, perfectly synchronized.",
+    "liveChatBadge": "LIVE CHAT",
+    "liveChatTitle": "More Than Just a Chat Widget",
+    "liveChatDesc": "Modern multi-tab interface with visual cards and intelligent features",
+    "liveChatFeatures": [
+      "AI responds in 100+ languages, widget interface in 41 languages",
+      "Product cards with images & prices",
+      "Discount codes with 1-click copy",
+      "Proactive messages on all pages"
+    ],
+    "emailBadge": "EMAIL HELPDESK",
+    "emailTitle": "Quality Guarantee Through AI Scoring",
+    "emailDesc": "Thread-based inbox like Gmail. AI rates responses (0-100), only sends perfect emails automatically.",
+    "emailFeatures": [
+      "AI Score 90+: Auto-sent",
+      "Quality threshold adjustable",
+      "AI collects all info before escalation",
+      "Thread-based like Gmail"
+    ],
+    "unifiedLabel": "One System",
+    "unifiedSync": "Seamlessly synchronized – same AI, same data foundation, perfect transitions",
+    "unifiedFeature1Title": "100+ Languages",
+    "unifiedFeature1Desc": "Automatic detection – AI responds in customer's language. German, English, French, Japanese, Arabic... all automatic.",
+    "unifiedFeature2Title": "Visual Commerce",
+    "unifiedFeature2Desc": "Not just text: Product cards with images, checkout links with pre-filled cart, tracking cards with carrier logos.",
+    "unifiedFeature3Title": "Proactive & Smart",
+    "unifiedFeature3Desc": "Homepage greetings, product page help, flash sales – AI reaches out proactively on all pages with perfect timing.",
+    "bottomStatement": "Your customer decides how to contact – your AI responds perfectly everywhere"
+  },
   "finalCta": {
     "title": "Ready to automate your support?",
     "subtitle": "Join 24 successful Shopify merchants saving time and costs with ReplAInow",
