@@ -8,6 +8,54 @@
     "socialProof": "24 marchands Shopify utilisent déjà ReplAInow",
     "trustBadge": "Certifié ISO 27001"
   },
+  "aiPowerShowcase": {
+    "title": "Votre IA peut faire plus que n'importe quel employé de support",
+    "subtitle": "Pas un simple chatbot : votre IA est un employé de support complet qui connaît chaque aspect de votre boutique et agit intelligemment",
+    "wissen": {
+      "title": "Connaissance",
+      "desc": "Connaît chaque aspect de votre boutique, synchronisé automatiquement",
+      "features": [
+        "Tous les produits, variantes, prix",
+        "Commandes des 60 derniers jours",
+        "Profils clients et préférences",
+        "Politiques et pages de la boutique"
+      ],
+      "highlight": "Synchronisation en temps réel, automatique"
+    },
+    "handeln": {
+      "title": "Action",
+      "desc": "Répond aux questions intelligemment et avec contexte, comme un agent expérimenté",
+      "features": [
+        "Recommandations de produits avec images",
+        "Suivi de commande avec statut de livraison",
+        "Codes de réduction et liens de checkout",
+        "Escalade en cas de complexité"
+      ],
+      "highlight": "Temps de réponse : Instantané"
+    },
+    "lernen": {
+      "title": "Apprentissage",
+      "desc": "S'améliore et devient plus précise avec chaque conversation, sans fatigue",
+      "features": [
+        "Analyse le comportement client",
+        "Reconnaît l'intention d'achat",
+        "Adapte les réponses contextuellement",
+        "99.8% de précision"
+      ],
+      "highlight": "24/7 actif, jamais fatigué"
+    },
+    "processStep1": "Lire les données de la boutique",
+    "processStep1Desc": "L'IA importe automatiquement tous les produits, commandes et politiques",
+    "processStep2": "Répondre aux clients",
+    "processStep2Desc": "Réponses précises et conscientes du contexte, instantanées et intelligentes",
+    "processStep3": "Transfert intelligent",
+    "processStep3Desc": "En cas de complexité : Transfert parfait à votre équipe avec contexte complet",
+    "bottomStatement1": "Ce que 3 employés à temps plein accomplissent —",
+    "bottomStatement2": "Votre IA le fait en secondes",
+    "bottomHighlight1": "Zéro configuration",
+    "bottomHighlight2": "Zéro maintenance",
+    "bottomHighlight3": "Zéro erreur"
+  },
   "features": {
     "title": "Pourquoi Choisir ReplAInow ?",
     "subtitle": "Transformez votre boutique Shopify avec le support client IA",

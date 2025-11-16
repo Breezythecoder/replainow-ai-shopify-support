@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { Brain, Zap, TrendingUp, MessageSquare, Package, Clock, CheckCircle2, ArrowRight, Sparkles } from "lucide-react";
+import { useTranslation } from "@/i18n";
 
 const AIPowerShowcase = () => {
+  const { t, getTranslation } = useTranslation();
   return (
     <div 
       className="relative overflow-hidden bg-gradient-to-b from-white via-purple-50/30 to-white"
@@ -21,14 +23,10 @@ const AIPowerShowcase = () => {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
-            Ihre AI kann mehr als jeder{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">
-              Support-Mitarbeiter
-            </span>
+            {t('marketing.aiPowerShowcase.title')}
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Kein einfacher Chatbot – Ihre AI ist ein vollwertiger Support-Mitarbeiter, 
-            der jeden Aspekt Ihres Shops kennt und intelligent handelt
+            {t('marketing.aiPowerShowcase.subtitle')}
           </p>
         </motion.div>
 
@@ -56,22 +54,22 @@ const AIPowerShowcase = () => {
               
               {/* Title */}
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Wissen
+                {t('marketing.aiPowerShowcase.wissen.title')}
               </h3>
               
               {/* Description */}
               <p className="text-gray-600 leading-relaxed mb-6">
-                Kennt <span className="font-semibold text-gray-900">jeden Aspekt</span> Ihres Shops – automatisch synchronisiert
+                {t('marketing.aiPowerShowcase.wissen.desc')}
               </p>
               
               {/* Feature List */}
               <ul className="space-y-3">
-                {[
+                {(getTranslation('marketing.aiPowerShowcase.wissen.features') || [
                   "Alle Produkte, Varianten, Preise",
                   "Bestellungen der letzten 60 Tage",
                   "Kundenprofile & Präferenzen",
                   "Richtlinien & Shop-Seiten"
-                ].map((item, i) => (
+                ]).map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm">
                     <CheckCircle2 className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{item}</span>
@@ -83,7 +81,7 @@ const AIPowerShowcase = () => {
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <div className="flex items-center gap-2 text-sm font-semibold text-purple-700">
                   <Sparkles className="w-4 h-4" />
-                  <span>Echtzeit-Sync – automatisch</span>
+                  <span>{t('marketing.aiPowerShowcase.wissen.highlight')}</span>
                 </div>
               </div>
             </div>
@@ -110,22 +108,22 @@ const AIPowerShowcase = () => {
               
               {/* Title */}
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Handeln
+                {t('marketing.aiPowerShowcase.handeln.title')}
               </h3>
               
               {/* Description */}
               <p className="text-gray-600 leading-relaxed mb-6">
-                Beantwortet Fragen <span className="font-semibold text-gray-900">intelligent & kontextbewusst</span> – wie ein erfahrener Agent
+                {t('marketing.aiPowerShowcase.handeln.desc')}
               </p>
               
               {/* Feature List */}
               <ul className="space-y-3">
-                {[
+                {(getTranslation('marketing.aiPowerShowcase.handeln.features') || [
                   "Produktempfehlungen mit Bildern",
                   "Order-Tracking mit Lieferstatus",
                   "Rabattcodes & Checkout-Links",
                   "Eskalation bei Komplexität"
-                ].map((item, i) => (
+                ]).map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm">
                     <CheckCircle2 className="w-5 h-5 text-violet-600 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{item}</span>
@@ -137,7 +135,7 @@ const AIPowerShowcase = () => {
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <div className="flex items-center gap-2 text-sm font-semibold text-violet-700">
                   <MessageSquare className="w-4 h-4" />
-                  <span>Antwortzeit: Sofort</span>
+                  <span>{t('marketing.aiPowerShowcase.handeln.highlight')}</span>
                 </div>
               </div>
             </div>
@@ -164,22 +162,22 @@ const AIPowerShowcase = () => {
               
               {/* Title */}
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                Lernen
+                {t('marketing.aiPowerShowcase.lernen.title')}
               </h3>
               
               {/* Description */}
               <p className="text-gray-600 leading-relaxed mb-6">
-                Wird mit jedem Gespräch <span className="font-semibold text-gray-900">besser & präziser</span> – ohne Ermüdung
+                {t('marketing.aiPowerShowcase.lernen.desc')}
               </p>
               
               {/* Feature List */}
               <ul className="space-y-3">
-                {[
+                {(getTranslation('marketing.aiPowerShowcase.lernen.features') || [
                   "Analysiert Kundenverhalten",
                   "Erkennt Kaufabsichten",
                   "Passt Antworten kontextual an",
                   "99.8% Genauigkeit"
-                ].map((item, i) => (
+                ]).map((item, i) => (
                   <li key={i} className="flex items-start gap-3 text-sm">
                     <CheckCircle2 className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span className="text-gray-700">{item}</span>
@@ -191,7 +189,7 @@ const AIPowerShowcase = () => {
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <div className="flex items-center gap-2 text-sm font-semibold text-blue-700">
                   <Clock className="w-4 h-4" />
-                  <span>24/7 aktiv, nie müde</span>
+                  <span>{t('marketing.aiPowerShowcase.lernen.highlight')}</span>
                 </div>
               </div>
             </div>
@@ -227,9 +225,9 @@ const AIPowerShowcase = () => {
               <div className="inline-flex p-6 bg-gradient-to-br from-purple-100 to-violet-100 rounded-2xl mb-4 border-2 border-purple-300 bg-white">
                 <Package className="w-12 h-12 text-purple-700" />
               </div>
-              <h4 className="font-bold text-gray-900 mb-2">1. Shop-Daten lesen</h4>
+              <h4 className="font-bold text-gray-900 mb-2">1. {t('marketing.aiPowerShowcase.processStep1')}</h4>
               <p className="text-sm text-gray-600">
-                AI importiert automatisch alle Produkte, Bestellungen & Richtlinien
+                {t('marketing.aiPowerShowcase.processStep1Desc')}
               </p>
             </div>
 
@@ -238,9 +236,9 @@ const AIPowerShowcase = () => {
               <div className="inline-flex p-6 bg-gradient-to-br from-violet-100 to-blue-100 rounded-2xl mb-4 border-2 border-violet-300 bg-white">
                 <MessageSquare className="w-12 h-12 text-violet-700" />
               </div>
-              <h4 className="font-bold text-gray-900 mb-2">2. Kunden antworten</h4>
+              <h4 className="font-bold text-gray-900 mb-2">2. {t('marketing.aiPowerShowcase.processStep2')}</h4>
               <p className="text-sm text-gray-600">
-                Präzise, kontextbewusste Antworten – sofort und intelligent
+                {t('marketing.aiPowerShowcase.processStep2Desc')}
               </p>
             </div>
 
@@ -249,9 +247,9 @@ const AIPowerShowcase = () => {
               <div className="inline-flex p-6 bg-gradient-to-br from-blue-100 to-purple-100 rounded-2xl mb-4 border-2 border-blue-300 bg-white">
                 <ArrowRight className="w-12 h-12 text-blue-700" />
               </div>
-              <h4 className="font-bold text-gray-900 mb-2">3. Intelligente Übergabe</h4>
+              <h4 className="font-bold text-gray-900 mb-2">3. {t('marketing.aiPowerShowcase.processStep3')}</h4>
               <p className="text-sm text-gray-600">
-                Bei Komplexität: Nahtloser Handoff an Ihr Team mit vollem Kontext
+                {t('marketing.aiPowerShowcase.processStep3Desc')}
               </p>
             </div>
           </div>
@@ -271,31 +269,24 @@ const AIPowerShowcase = () => {
           <div className="relative bg-gradient-to-r from-purple-50 via-violet-50 to-purple-50 rounded-3xl p-12 border-2 border-purple-200 text-center">
             <div className="max-w-4xl mx-auto">
               <p className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                Was{" "}
-                <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">
-                  3 Vollzeit-Mitarbeiter
-                </span>{" "}
-                leisten —
+                {t('marketing.aiPowerShowcase.bottomStatement1')}
               </p>
               <p className="text-2xl md:text-3xl font-bold text-gray-900">
-                Ihre AI macht es in{" "}
-                <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">
-                  Sekunden
-                </span>
+                {t('marketing.aiPowerShowcase.bottomStatement2')}
               </p>
               
               <div className="mt-8 inline-flex items-center gap-6 text-sm text-gray-600">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-purple-600" />
-                  <span className="font-medium">Null Setup</span>
+                  <span className="font-medium">{t('marketing.aiPowerShowcase.bottomHighlight1')}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-purple-600" />
-                  <span className="font-medium">Null Wartung</span>
+                  <span className="font-medium">{t('marketing.aiPowerShowcase.bottomHighlight2')}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-purple-600" />
-                  <span className="font-medium">Null Fehler</span>
+                  <span className="font-medium">{t('marketing.aiPowerShowcase.bottomHighlight3')}</span>
                 </div>
               </div>
             </div>
