@@ -5,57 +5,74 @@ import { useLocation } from "react-router-dom";
 const UltraFooter = () => {
   const { t } = useTranslation();
   const location = useLocation();
-  
+
   // Detect current locale from pathname
-  const currentLocale = location.pathname.startsWith('/en') ? '/en' 
-                      : location.pathname.startsWith('/es') ? '/es'
-                      : location.pathname.startsWith('/fr') ? '/fr'
-                      : '';
-  
+  const currentLocale = location.pathname.startsWith("/en")
+    ? "/en"
+    : location.pathname.startsWith("/es")
+    ? "/es"
+    : location.pathname.startsWith("/fr")
+    ? "/fr"
+    : "";
+
   // Check if we're on homepage or content/legal page
-  const isHomePage = location.pathname === '/' || location.pathname === '/en' || location.pathname === '/es' || location.pathname === '/fr';
-  
+  const isHomePage =
+    location.pathname === "/" ||
+    location.pathname === "/en" ||
+    location.pathname === "/es" ||
+    location.pathname === "/fr";
+
   // Smart link helper: if not on homepage, link to /#anchor, otherwise just #anchor
   const getAnchorLink = (anchor: string) => {
     return isHomePage ? `#${anchor}` : `/#${anchor}`;
   };
-  
+
   // Locale-aware page link: adds locale prefix to maintain current language
-  const getPageLink = (path: string) => {
+  // BUT: Legal pages are NOT localized (all in English), so they don't need prefix!
+  const getPageLink = (path: string, isLegalPage = false) => {
+    // Legal pages always go to root path (content not localized)
+    if (isLegalPage) {
+      return path;
+    }
+    // Other pages maintain locale
     return `${currentLocale}${path}`;
   };
-  
+
   return (
     <footer className="relative py-16 overflow-hidden bg-gradient-to-b from-gray-50 to-white">
       {/* Subtle mesh gradient like other sections */}
       <div className="absolute inset-0 bg-mesh-purple opacity-5"></div>
-      
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Logo */}
           <div>
             <div className="flex items-center mb-4">
-              <img 
-                src="/lovable-uploads/ReplAInow_Logo_optimized.png" 
-                alt="Logo" 
+              <img
+                src="/lovable-uploads/ReplAInow_Logo_optimized.png"
+                alt="Logo"
                 className="h-8 w-8"
               />
               <span className="ml-2 text-xl font-black text-gray-900">
-                Repl<span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">AI</span>now
+                Repl
+                <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">
+                  AI
+                </span>
+                now
               </span>
             </div>
             <p className="text-gray-600 mb-6">
-              {t('common.footer.company.tagline')}
+              {t("common.footer.company.tagline")}
             </p>
             <div className="flex gap-3">
-              <a 
+              <a
                 href="https://twitter.com/replainow"
                 aria-label="ReplAInow auf Twitter folgen"
                 className="w-10 h-10 rounded-lg bg-gray-100 hover:bg-purple-100 flex items-center justify-center transition-all text-gray-700 hover:text-purple-700"
               >
                 <Twitter className="w-5 h-5" />
               </a>
-              <a 
+              <a
                 href="https://linkedin.com/company/replainow"
                 aria-label="ReplAInow auf LinkedIn folgen"
                 className="w-10 h-10 rounded-lg bg-gray-100 hover:bg-purple-100 flex items-center justify-center transition-all text-gray-700 hover:text-purple-700"
@@ -77,18 +94,27 @@ const UltraFooter = () => {
             <h3 className="font-bold mb-4 text-gray-900">Produkt</h3>
             <ul className="space-y-3">
               <li>
-                <a href={getAnchorLink('features')} className="text-gray-700 hover:text-purple-700 transition-colors">
-                  {t('common.footer.links.features')}
+                <a
+                  href={getAnchorLink("features")}
+                  className="text-gray-700 hover:text-purple-700 transition-colors"
+                >
+                  {t("common.footer.links.features")}
                 </a>
               </li>
               <li>
-                <a href={getAnchorLink('pricing')} className="text-gray-700 hover:text-purple-700 transition-colors">
-                  {t('common.footer.links.pricing')}
+                <a
+                  href={getAnchorLink("pricing")}
+                  className="text-gray-700 hover:text-purple-700 transition-colors"
+                >
+                  {t("common.footer.links.pricing")}
                 </a>
               </li>
               <li>
-                <a href={getAnchorLink('live-demo')} className="text-gray-700 hover:text-purple-700 transition-colors">
-                  {t('common.footer.links.demo')}
+                <a
+                  href={getAnchorLink("live-demo")}
+                  className="text-gray-700 hover:text-purple-700 transition-colors"
+                >
+                  {t("common.footer.links.demo")}
                 </a>
               </li>
             </ul>
@@ -99,28 +125,43 @@ const UltraFooter = () => {
             <h3 className="font-bold mb-4 text-gray-900">Ressourcen</h3>
             <ul className="space-y-3">
               <li>
-                <a href={getPageLink('/shopify-kundensupport-automatisieren')} className="text-gray-700 hover:text-purple-700 transition-colors">
+                <a
+                  href={getPageLink("/shopify-kundensupport-automatisieren")}
+                  className="text-gray-700 hover:text-purple-700 transition-colors"
+                >
                   Support automatisieren
                 </a>
               </li>
               <li>
-                <a href={getPageLink('/24-7-kundensupport-shopify')} className="text-gray-700 hover:text-purple-700 transition-colors">
+                <a
+                  href={getPageLink("/24-7-kundensupport-shopify")}
+                  className="text-gray-700 hover:text-purple-700 transition-colors"
+                >
                   24/7 Support
                 </a>
               </li>
               <li>
-                <a href={getPageLink('/shopify-support-kosten-senken')} className="text-gray-700 hover:text-purple-700 transition-colors">
+                <a
+                  href={getPageLink("/shopify-support-kosten-senken")}
+                  className="text-gray-700 hover:text-purple-700 transition-colors"
+                >
                   Kosten senken
                 </a>
               </li>
               <li>
-                <a href={getAnchorLink('faq')} className="text-gray-700 hover:text-purple-700 transition-colors">
+                <a
+                  href={getAnchorLink("faq")}
+                  className="text-gray-700 hover:text-purple-700 transition-colors"
+                >
                   FAQ
                 </a>
               </li>
               <li>
-                <a href={getPageLink('/contact')} className="text-gray-700 hover:text-purple-700 transition-colors">
-                  {t('common.footer.links.contact')}
+                <a
+                  href={getPageLink("/contact")}
+                  className="text-gray-700 hover:text-purple-700 transition-colors"
+                >
+                  {t("common.footer.links.contact")}
                 </a>
               </li>
             </ul>
@@ -128,36 +169,56 @@ const UltraFooter = () => {
 
           {/* Legal */}
           <div>
-            <h3 className="font-bold mb-4 text-gray-900">{t('common.footer.legal.title')}</h3>
+            <h3 className="font-bold mb-4 text-gray-900">
+              {t("common.footer.legal.title")}
+            </h3>
             <ul className="space-y-3">
               <li>
-                <a href={getPageLink('/privacy')} className="text-gray-700 hover:text-purple-700 transition-colors">
-                  {t('common.footer.legal.privacy')}
+                <a
+                  href={getPageLink("/privacy", true)}
+                  className="text-gray-700 hover:text-purple-700 transition-colors"
+                >
+                  {t("common.footer.legal.privacy")}
                 </a>
               </li>
               <li>
-                <a href={getPageLink('/terms')} className="text-gray-700 hover:text-purple-700 transition-colors">
-                  {t('common.footer.legal.terms')}
+                <a
+                  href={getPageLink("/terms", true)}
+                  className="text-gray-700 hover:text-purple-700 transition-colors"
+                >
+                  {t("common.footer.legal.terms")}
                 </a>
               </li>
               <li>
-                <a href={getPageLink('/impressum')} className="text-gray-700 hover:text-purple-700 transition-colors">
-                  {t('common.footer.legal.impressum')}
+                <a
+                  href={getPageLink("/impressum", true)}
+                  className="text-gray-700 hover:text-purple-700 transition-colors"
+                >
+                  {t("common.footer.legal.impressum")}
                 </a>
               </li>
               <li>
-                <a href={getPageLink('/cookies')} className="text-gray-700 hover:text-purple-700 transition-colors">
-                  {t('common.footer.legal.cookies')}
+                <a
+                  href={getPageLink("/cookies", true)}
+                  className="text-gray-700 hover:text-purple-700 transition-colors"
+                >
+                  {t("common.footer.legal.cookies")}
                 </a>
               </li>
               <li>
-                <a href={getPageLink('/security')} className="text-gray-700 hover:text-purple-700 transition-colors">
-                  {t('common.footer.legal.security')}
+                <a
+                  href={getPageLink("/security", true)}
+                  className="text-gray-700 hover:text-purple-700 transition-colors"
+                >
+                  {t("common.footer.legal.security")}
                 </a>
               </li>
               <li>
-                <a href={getPageLink('/refund')} className="text-gray-700 hover:text-purple-700 transition-colors">
-                  {t('common.footer.legal.refund')}
+                <a
+                  href={getPageLink("/refund", true)}
+                  className="text-gray-700 hover:text-purple-700 transition-colors"
+                >
+                  {t("common.footer.legal.refund")}
                 </a>
               </li>
             </ul>
@@ -165,7 +226,11 @@ const UltraFooter = () => {
         </div>
 
         <div className="pt-8 text-center text-sm border-t border-gray-200 text-gray-600">
-          © 2025 ReplAInow. Made with <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent font-semibold">AI</span> in Dubai.
+          © 2025 ReplAInow. Made with{" "}
+          <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent font-semibold">
+            AI
+          </span>{" "}
+          in Dubai.
         </div>
       </div>
     </footer>
@@ -173,4 +238,3 @@ const UltraFooter = () => {
 };
 
 export default UltraFooter;
-
