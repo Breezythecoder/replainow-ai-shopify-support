@@ -175,16 +175,16 @@ const AIKnowledgeBanner = () => {
                         <Database className="w-14 h-14 text-white" />
                       </div>
                       
-                      <h3 className="text-2xl font-bold text-white mb-1">{t('marketing.aiKnowledge.centerTitle')}</h3>
+                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">{t('marketing.aiKnowledge.centerTitle')}</h3>
                       
                       {/* Pulsing sync indicator */}
-                      <div className="flex items-center gap-2 mb-2">
+                      <div className="flex items-center justify-center gap-2 mb-2 flex-wrap px-2">
                         <div className="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
                         <div className="w-2 h-2 bg-green-400 rounded-full absolute animate-pulse"></div>
-                        <span className="text-sm text-green-400 font-bold ml-2">{t('marketing.aiKnowledge.syncLabel')}</span>
+                        <span className="text-xs sm:text-sm text-green-400 font-bold text-center">{t('marketing.aiKnowledge.syncLabel')}</span>
                     </div>
                       
-                    <div className="text-xs text-gray-600">{t('marketing.aiKnowledge.autoLabel')}</div>
+                    <div className="text-xs text-gray-600 text-center px-4">{t('marketing.aiKnowledge.autoLabel')}</div>
                   </div>
                 </div>
                   
