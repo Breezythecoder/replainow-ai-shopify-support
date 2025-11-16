@@ -295,12 +295,11 @@ const AIKnowledgeBanner = () => {
           {benefits.map((benefit, i) => {
             const icons = [Zap, CheckCircle2, TrendingUp];
             const colors = ["purple", "violet", "blue"];
+            const Icon = icons[i];
             return (
             <div key={i} className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
               <div className="inline-flex p-4 bg-white rounded-2xl shadow-sm mb-4 border border-gray-200">
-                {icons[i] && icons[i]({
-                  className: `w-8 h-8 ${colors[i] === 'purple' ? 'text-purple-700' : ''} ${colors[i] === 'violet' ? 'text-violet-600' : ''} ${colors[i] === 'blue' ? 'text-blue-700' : ''}`
-                })}
+                <Icon className={`w-8 h-8 ${colors[i] === 'purple' ? 'text-purple-700' : ''} ${colors[i] === 'violet' ? 'text-violet-600' : ''} ${colors[i] === 'blue' ? 'text-blue-700' : ''}`} />
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">{benefit.title}</h4>
               <p className="text-sm text-gray-600 leading-relaxed">{benefit.desc}</p>
@@ -319,11 +318,10 @@ const AIKnowledgeBanner = () => {
             {stats.map((stat, i) => {
               const statIcons = [Database, Zap, CheckCircle2, TrendingUp];
               const statColors = ["purple", "violet", "blue", "pink"];
+              const StatIcon = statIcons[i];
               return (
               <div key={i} className="text-center">
-                {statIcons[i] && statIcons[i]({
-                  className: `w-6 h-6 mx-auto mb-3 ${statColors[i] === 'purple' ? 'text-purple-700' : ''} ${statColors[i] === 'violet' ? 'text-violet-600' : ''} ${statColors[i] === 'blue' ? 'text-blue-700' : ''} ${statColors[i] === 'pink' ? 'text-pink-700' : ''}`
-                })}
+                <StatIcon className={`w-6 h-6 mx-auto mb-3 ${statColors[i] === 'purple' ? 'text-purple-700' : ''} ${statColors[i] === 'violet' ? 'text-violet-600' : ''} ${statColors[i] === 'blue' ? 'text-blue-700' : ''} ${statColors[i] === 'pink' ? 'text-pink-700' : ''}`} />
                 <div className="text-3xl font-light text-gray-900 mb-1">{stat.value}</div>
                 <div className="text-xs text-gray-600 uppercase tracking-wider">{stat.label}</div>
               </div>
