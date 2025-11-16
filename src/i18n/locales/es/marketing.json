@@ -1,17 +1,12 @@
 {
   "hero": {
-    "title": "Mesa de Ayuda IA para Shopify.",
-    "subtitle": "Responde en 3 segundos",
-    "description": "IA GPT-4.1 revolucionaria con datos de Shopify en tiempo real: Mayor conversión, respuestas más rápidas, 90% menos tickets de soporte.",
-    "storesCount": "Tiendas Activas",
-    "responseTime": "Tiempo de Respuesta",
-    "aiAccuracy": "Precisión IA",
-    "languages": "{{count}} Idiomas",
-    "costSavings": "{{percentage}} Ahorro de Costos",
-    "liveDemoButton": "Ver demostración en vivo",
-    "installButton": "INSTALAR AHORA",
-    "cta": "Probar Gratis",
-    "demo": "Ver Demo"
+    "badge": "Solución IA Enterprise para Shopify",
+    "title": "Tu Empleado IA 24/7 para Shopify",
+    "subtitle": "Reemplaza hasta 3 empleados de soporte. Conoce cada aspecto de tu tienda. Responde como tu mejor equipo, solo más rápido, preciso y sin pausas.",
+    "ctaPrimary": "Prueba 14 Días Gratis",
+    "ctaSecondary": "Ver Planes",
+    "socialProof": "24 comerciantes de Shopify ya usan ReplAInow",
+    "trustBadge": "Certificado ISO 27001"
   },
   "features": {
     "title": "¿Por Qué Elegir ReplAInow?",

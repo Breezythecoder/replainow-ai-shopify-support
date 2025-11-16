@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Sparkles, Shield, ArrowRight, ShoppingBag } from "lucide-react";
 import { FloatingCard } from "@/components/ui/FloatingCard";
+import { useTranslation } from "@/i18n";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   return (
     <div className="relative overflow-hidden bg-gradient-to-b from-purple-50 via-white to-white">
       {/* Animated Mesh Gradient Background - STÄRKER */}
@@ -47,24 +49,18 @@ const HeroSection = () => {
             >
               <Sparkles className="w-4 h-4 text-purple-700" />
               <span className="text-sm font-semibold text-purple-950 tracking-tight">
-                Enterprise KI-Lösung für Shopify
+                {t('marketing.hero.badge')}
               </span>
             </motion.div>
             
             {/* Main Headline */}
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-light text-gray-900 mb-7 tracking-tight leading-[1.1]">
-              Ihr 24/7{" "}
-              <span className="font-semibold bg-gradient-to-r from-gray-900 via-purple-600 to-gray-900 bg-clip-text text-transparent">
-                AI-Mitarbeiter
-              </span>
-              <br />
-              für Shopify
+              {t('marketing.hero.title')}
             </h1>
             
             {/* Subheadline */}
             <p className="text-lg md:text-xl text-gray-700 font-normal max-w-3xl mx-auto leading-relaxed mb-10">
-              Ersetzt bis zu 3 Support-Mitarbeiter. Kennt jeden Aspekt Ihres Shops. 
-              Antwortet wie Ihr bestes Team – nur schneller, präziser und ohne Pause.
+              {t('marketing.hero.subtitle')}
             </p>
 
             {/* CTA Buttons */}
@@ -78,7 +74,7 @@ const HeroSection = () => {
                   className="relative group inline-flex items-center gap-3 bg-gradient-to-r from-purple-600 to-violet-600 hover:from-purple-700 hover:to-violet-700 text-white px-12 py-5 rounded-xl font-bold text-lg transition-all shadow-float"
                 >
                   <ShoppingBag className="w-5 h-5" />
-                  <span>14 Tage kostenlos testen</span>
+                  <span>{t('marketing.hero.ctaPrimary')}</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                   <div className="absolute inset-0 rounded-xl bg-white/0 group-hover:bg-white/10 transition-all duration-300"></div>
                 </motion.button>
@@ -91,7 +87,7 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.98 }}
                 className="bg-white inline-flex items-center gap-2 text-gray-900 px-10 py-5 rounded-xl font-semibold text-lg border-2 border-gray-200/80 hover:border-purple-400 transition-all shadow-white-button hover:shadow-white-button-hover"
               >
-                <span>Pläne ansehen</span>
+                <span>{t('marketing.hero.ctaSecondary')}</span>
                 <ArrowRight className="w-5 h-5" />
               </motion.a>
             </div>
@@ -123,7 +119,7 @@ const HeroSection = () => {
                   />
                 </div>
                 <span className="font-semibold text-gray-900">
-                  24 Shopify-Händler nutzen bereits ReplAInow
+                  {t('marketing.hero.socialProof')}
                 </span>
               </motion.div>
 
@@ -136,7 +132,7 @@ const HeroSection = () => {
               >
                 <div className="bg-white flex items-center gap-1.5 px-4 py-2 rounded-full border-2 border-gray-200/80 shadow-elevation-2">
                   <Shield className="w-3.5 h-3.5 text-purple-700" />
-                  <span className="text-gray-900 font-medium">ISO 27001 zertifiziert</span>
+                  <span className="text-gray-900 font-medium">{t('marketing.hero.trustBadge')}</span>
                 </div>
               </motion.div>
             </div>
