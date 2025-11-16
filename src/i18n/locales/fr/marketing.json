@@ -36,40 +36,166 @@
     ]
   },
   "pricing": {
-    "title": "Tarification Simple et Transparente",
-    "subtitle": "Commencez gratuitement, évoluez avec votre croissance",
+    "badge": "14 Jours Gratuits · Sans Carte · Facturation Shopify",
+    "title": "Choisissez Votre Plan",
+    "subtitle": "Toutes les fonctionnalités incluses dans chaque plan. Vous ne payez que pour les réponses IA.",
     "plans": [
       {
-        "name": "Débutant",
+        "name": "Launch",
         "price": "19",
-        "currency": "EUR",
-        "period": "mois",
+        "description": "Pour les boutiques ambitieuses qui veulent tester le support IA",
+        "aiAnswers": "200 réponses IA incluses",
+        "ticketRange": "Idéal pour 10–80 tickets par mois",
+        "extraCost": "$0.05 par réponse supplémentaire",
         "features": [
-          "Jusqu'à 1 000 conversations/mois",
-          "Temps de réponse de 3 secondes",
-          "32+ langues",
-          "Analyses de base"
-        ]
+          "Widget Live Chat (IA + Humain)",
+          "Tableau de Bord Email avec Réponses IA",
+          "Import Automatique Shopify (Produits, Commandes, Politiques)",
+          "Support Multilingue (100+ Langues)",
+          "Membres d'Équipe Illimités (sans coûts par utilisateur)",
+          "Suivi et Gestion des Commandes",
+          "Codes de Réduction IA (illimités)",
+          "Déclencheurs de Chat Proactifs (illimités)",
+          "Fil d'Annonces",
+          "Recommandations de Produits",
+          "Marque et Logo Personnalisés",
+          "WhatsApp Business IA (Bientôt Disponible)",
+          "Et bien plus..."
+        ],
+        "cta": "Essayez 14 Jours Gratuits",
+        "highlighted": false
       },
       {
-        "name": "Professionnel",
+        "name": "Growth",
         "price": "49",
-        "currency": "EUR",
-        "period": "mois",
+        "description": "Choix le plus populaire pour les marques en croissance",
+        "badge": "LE PLUS POPULAIRE",
+        "aiAnswers": "2,500 réponses IA incluses",
+        "ticketRange": "Parfait pour 100–600 tickets par mois",
+        "extraCost": "$0.03 par réponse supplémentaire",
         "features": [
-          "Jusqu'à 5 000 conversations/mois",
-          "Analyses avancées",
-          "Marque personnalisée",
-          "Support prioritaire"
-        ]
+          "Widget Live Chat (IA + Humain)",
+          "Tableau de Bord Email avec Réponses IA",
+          "Import Automatique Shopify (Produits, Commandes, Politiques)",
+          "Support Multilingue (100+ Langues)",
+          "Membres d'Équipe Illimités (sans coûts par utilisateur)",
+          "Suivi et Gestion des Commandes",
+          "Codes de Réduction IA (illimités)",
+          "Déclencheurs de Chat Proactifs (illimités)",
+          "Fil d'Annonces",
+          "Recommandations de Produits",
+          "Marque et Logo Personnalisés",
+          "WhatsApp Business IA (Bientôt Disponible)",
+          "Et bien plus..."
+        ],
+        "cta": "Essayez 14 Jours Gratuits",
+        "highlighted": true
+      },
+      {
+        "name": "Scale",
+        "price": "99",
+        "description": "Excellence Opérationnelle pour les Leaders D2C",
+        "aiAnswers": "5,000 réponses IA incluses",
+        "ticketRange": "Optimisé pour 600–1,500 tickets par mois",
+        "extraCost": "$0.03 par réponse supplémentaire",
+        "features": [
+          "Widget Live Chat (IA + Humain)",
+          "Tableau de Bord Email avec Réponses IA",
+          "Import Automatique Shopify (Produits, Commandes, Politiques)",
+          "Support Multilingue (100+ Langues)",
+          "Membres d'Équipe Illimités (sans coûts par utilisateur)",
+          "Suivi et Gestion des Commandes",
+          "Codes de Réduction IA (illimités)",
+          "Déclencheurs de Chat Proactifs (illimités)",
+          "Fil d'Annonces",
+          "Recommandations de Produits",
+          "Marque et Logo Personnalisés",
+          "WhatsApp Business IA (Bientôt Disponible)",
+          "Et bien plus..."
+        ],
+        "cta": "Essayez 14 Jours Gratuits",
+        "highlighted": false
+      },
+      {
+        "name": "Ultimate",
+        "price": "399",
+        "description": "Support Enterprise avec SLA et Conformité",
+        "badge": "ENTERPRISE",
+        "aiAnswers": "40,000 réponses IA incluses",
+        "ticketRange": "Pour 1,500+ tickets par mois et équipes Enterprise",
+        "extraCost": "$0.02 par réponse supplémentaire",
+        "features": [
+          "Widget Live Chat (IA + Humain)",
+          "Tableau de Bord Email avec Réponses IA",
+          "Import Automatique Shopify (Produits, Commandes, Politiques)",
+          "Support Multilingue (100+ Langues)",
+          "Membres d'Équipe Illimités (sans coûts par utilisateur)",
+          "Suivi et Gestion des Commandes",
+          "Codes de Réduction IA (illimités)",
+          "Déclencheurs de Chat Proactifs (illimités)",
+          "Fil d'Annonces",
+          "Recommandations de Produits",
+          "Marque et Logo Personnalisés",
+          "WhatsApp Business IA (Bientôt Disponible)",
+          "Et bien plus..."
+        ],
+        "cta": "Essayez 14 Jours Gratuits",
+        "highlighted": false,
+        "premium": true
       }
-    ]
+    ],
+    "bottomNote": "💜 Tous les plans avec essai de 14 jours · Sans carte de crédit · Via Facturation Shopify · Annulez à tout moment"
   },
   "testimonials": {
     "title": "Ce Que Disent les Vrais Commerçants",
     "subtitle": "Rejoignez 280+ commerçants Shopify satisfaits"
   },
-  "faq": {},
+  "faq": {
+    "title": "Questions Fréquentes",
+    "subtitle": "Tout ce que vous devez savoir",
+    "items": [
+      {
+        "q": "L'IA remplace-t-elle vraiment mon personnel de support ?",
+        "a": "L'IA automatise 87% de toutes les demandes de support, soit l'équivalent de 2-3 employés à temps plein avec un volume de tickets moyen. Les questions simples (disponibilité des produits, suivi des commandes, politiques) sont résolues instantanément par l'IA. Les cas complexes sont intelligemment transférés à votre équipe avec le contexte complet."
+      },
+      {
+        "q": "Que se passe-t-il avec les demandes complexes que l'IA ne peut pas répondre ?",
+        "a": "L'IA sait quand elle ne peut pas aider. Pour les questions complexes, les plaintes ou lorsque le client demande explicitement un humain, l'IA transfère sans problème à votre équipe. Votre agent voit l'historique complet de la conversation, toutes les informations collectées (numéro de commande, téléphone, photos) et sait exactement quoi faire : aucune information n'est perdue."
+      },
+      {
+        "q": "Quelle est la précision de l'IA ? Fait-elle des erreurs ?",
+        "a": "L'IA fonctionne avec une précision de 99.8% car elle ne répond qu'avec des données réelles de votre boutique Shopify : pas d'hallucinations, pas d'estimations. Chaque réponse est auto-évaluée sur 5 dimensions (0-100 points). Seules les réponses avec un score ≥90 sont envoyées automatiquement. En cas d'incertitude, l'IA préfère escalader à votre équipe."
+      },
+      {
+        "q": "Dois-je entraîner l'IA ou saisir des données ?",
+        "a": "Non ! L'IA importe automatiquement toutes vos données Shopify lors de l'installation : produits, commandes, clients, politiques, pages, articles de blog. Vous changez quelque chose dans Shopify ? L'IA le sait en 5 secondes grâce à la synchronisation en temps réel. Zéro configuration, zéro maintenance, zéro travail manuel."
+      },
+      {
+        "q": "À quelle vitesse l'IA est-elle productive ?",
+        "a": "Dès l'installation : 60 secondes jusqu'à ce que l'IA soit prête à l'emploi. Elle peut immédiatement répondre aux questions sur les produits, suivre les commandes et expliquer les politiques. L'IA connaît votre catalogue complet dès le premier instant : aucune formation requise."
+      },
+      {
+        "q": "Puis-je examiner les réponses de l'IA avant l'envoi ?",
+        "a": "Oui ! Vous contrôlez le seuil d'envoi automatique. Réglez-le sur 90 pour conservateur (plus de révisions manuelles) ou 80 pour équilibré (plus d'automatisation). Les réponses IA en dessous du seuil vont dans la file d'attente de révision où vous pouvez les modifier ou les approuver avant l'envoi."
+      },
+      {
+        "q": "Quelles langues sont prises en charge ?",
+        "a": "L'IA prend en charge plus de 100 langues et détecte automatiquement dans quelle langue le client écrit. Allemand, anglais, français, espagnol, arabe, chinois, japonais : tout automatique, sans configuration. L'IA répond couramment dans la langue du client."
+      },
+      {
+        "q": "Les données de mes clients sont-elles stockées en toute sécurité ?",
+        "a": "Oui ! Nous sommes certifiés ISO 27001 et conformes au RGPD. Toutes les données sont stockées cryptées (TLS 1.3), et vous avez un contrôle total. Désinstallation = suppression automatique complète des données dans les 24 heures."
+      },
+      {
+        "q": "Combien de temps prend l'installation ?",
+        "a": "Moins de 60 secondes. Un clic dans le Shopify App Store, et ReplAInow commence automatiquement à importer les données de votre boutique. Activez le widget dans l'éditeur de thème (1 clic), terminé. Aucune connaissance technique requise."
+      },
+      {
+        "q": "Que se passe-t-il si j'annule ?",
+        "a": "Pas d'engagement contractuel : vous pouvez annuler à tout moment. Lors de la désinstallation, toutes vos données sont automatiquement supprimées. Pas de coûts cachés, pas de période d'annulation, pas de petits caractères."
+      }
+    ]
+  },
   "cta": {
     "title": "Prêt à Automatiser Votre Support ?",
     "subtitle": "Rejoignez 280+ commerçants Shopify satisfaits et commencez à économiser dès aujourd'hui",
