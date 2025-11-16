@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import PremiumNavbar from "@/components/marketing/PremiumNavbar";
 import UltraFooter from "@/components/marketing/UltraFooter";
+import { useTranslation } from "@/i18n";
 
 // New Premium Sections
 import HeroSection from "@/components/marketing/new/HeroSection";
@@ -19,23 +20,23 @@ import FAQSection from "@/components/marketing/new/FAQSection";
 import FinalCTASection from "@/components/marketing/new/FinalCTASection";
 
 const NewIndex = () => {
+  const { t } = useTranslation();
+  
   return (
     <>
       <Helmet>
-        <title>
-          ReplAInow – Enterprise AI Shopify Helpdesk | Automatisierter Support
-        </title>
+        <title>{t('marketing.seo.title')}</title>
         <meta
           name="description"
-          content="Die #1 AI Helpdesk-Lösung für Shopify. 87% Automatisierung, Live-Chat + E-Mail, 100+ Sprachen. Live in 60 Sekunden."
+          content={t('marketing.seo.description')}
         />
         <meta
           property="og:title"
-          content="ReplAInow – Enterprise AI Shopify Helpdesk"
+          content={t('marketing.seo.ogTitle')}
         />
         <meta
           property="og:description"
-          content="Automatisierter Support ohne Kompromisse. 87% Ihrer Support-Anfragen vollautomatisch beantwortet."
+          content={t('marketing.seo.ogDescription')}
         />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://www.replainow.com" />

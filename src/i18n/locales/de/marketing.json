@@ -834,6 +834,12 @@
     "syncLabel": "ECHTZEIT SYNC",
     "autoLabel": "Vollautomatisch"
   },
+  "seo": {
+    "title": "ReplAInow – Enterprise AI Shopify Helpdesk | Automatisierter Support",
+    "description": "Die #1 AI Helpdesk-Lösung für Shopify. 87% Automatisierung, Live-Chat + E-Mail, 100+ Sprachen. Live in 60 Sekunden.",
+    "ogTitle": "ReplAInow – Enterprise AI Shopify Helpdesk",
+    "ogDescription": "Automatisierter Support ohne Kompromisse. 87% Ihrer Support-Anfragen vollautomatisch beantwortet."
+  },
   "finalCta": {
     "title": "Bereit, Ihren Support zu automatisieren?",
     "subtitle": "Schließen Sie sich 24 erfolgreichen Shopify-Händlern an, die mit ReplAInow Zeit und Kosten sparen",
