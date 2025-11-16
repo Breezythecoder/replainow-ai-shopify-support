@@ -13,6 +13,13 @@ const AgentProductivity = () => {
     {title: "Kunden-Journey", desc: "Welche Seiten besucht, was im Warenkorb, Kaufabsicht-Score", color: "violet"}
   ];
   const tools = toolsData.map((tool, i) => ({...tool, icon: toolIcons[i]}));
+  
+  const workflowSteps = getTranslation('marketing.agentProductivity.workflowSteps') || [
+    {num: "1", title: "Produkte wählen", desc: "Dress + Shoes + Bag"},
+    {num: "2", title: "Varianten setzen", desc: "Größe M, Farbe Rot"},
+    {num: "3", title: "Rabatt hinzu", desc: "Optional: 20% OFF"},
+    {num: "4", title: "Link senden", desc: "Kunde klickt → Checkout"}
+  ];
   return (
     <div 
       className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50/20 to-white"
@@ -130,36 +137,12 @@ const AgentProductivity = () => {
 
             {/* Flow Steps */}
             <div className="grid md:grid-cols-4 gap-6">
-              {[
-                { 
-                  num: "1", 
-                  title: "Produkte wählen",
-                  desc: "Dress + Shoes + Bag",
-                  icon: ShoppingBag,
-                  color: "purple"
-                },
-                { 
-                  num: "2", 
-                  title: "Varianten setzen",
-                  desc: "Größe M, Farbe Rot",
-                  icon: CheckCircle2,
-                  color: "violet"
-                },
-                { 
-                  num: "3", 
-                  title: "Rabatt hinzu",
-                  desc: "Optional: 20% OFF",
-                  icon: Gift,
-                  color: "blue"
-                },
-                { 
-                  num: "4", 
-                  title: "Link senden",
-                  desc: "Kunde klickt → Checkout",
-                  icon: Link2,
-                  color: "green"
-                }
-              ].map((step, i) => (
+              {workflowSteps.map((step, i) => {
+                const stepIcons = [ShoppingBag, CheckCircle2, Gift, Link2];
+                const stepColors = ["purple", "violet", "blue", "green"];
+                const StepIcon = stepIcons[i];
+                const color = stepColors[i];
+                return (
                 <div key={i} className="relative">
                   {/* Connection Arrow */}
                   {i < 3 && (
@@ -175,17 +158,17 @@ const AgentProductivity = () => {
                     
                     <div className={`
                       inline-flex p-4 rounded-xl mb-4 mt-2
-                      ${step.color === 'purple' ? 'bg-purple-50' : ''}
-                      ${step.color === 'violet' ? 'bg-violet-50' : ''}
-                      ${step.color === 'blue' ? 'bg-blue-50' : ''}
-                      ${step.color === 'green' ? 'bg-green-50' : ''}
+                      ${color === 'purple' ? 'bg-purple-50' : ''}
+                      ${color === 'violet' ? 'bg-violet-50' : ''}
+                      ${color === 'blue' ? 'bg-blue-50' : ''}
+                      ${color === 'green' ? 'bg-green-50' : ''}
                     `}>
-                      <step.icon className={`
+                      <StepIcon className={`
                         w-6 h-6
-                        ${step.color === 'purple' ? 'text-purple-700' : ''}
-                        ${step.color === 'violet' ? 'text-violet-700' : ''}
-                        ${step.color === 'blue' ? 'text-blue-700' : ''}
-                        ${step.color === 'green' ? 'text-green-700' : ''}
+                        ${color === 'purple' ? 'text-purple-700' : ''}
+                        ${color === 'violet' ? 'text-violet-700' : ''}
+                        ${color === 'blue' ? 'text-blue-700' : ''}
+                        ${color === 'green' ? 'text-green-700' : ''}
                       `} />
                     </div>
                     
@@ -193,7 +176,7 @@ const AgentProductivity = () => {
                     <p className="text-xs text-gray-600">{step.desc}</p>
                   </div>
                 </div>
-              ))}
+              )})}
             </div>
 
             {/* Bottom Result */}
@@ -201,7 +184,7 @@ const AgentProductivity = () => {
               <div className="inline-flex items-center gap-3 bg-white rounded-2xl px-8 py-4 border-2 border-green-300 shadow-lg">
                 <Package className="w-6 h-6 text-green-700" />
                 <span className="font-bold text-gray-900">
-                  Resultat: Pre-filled Cart mit 20% Rabatt → Ein-Klick-Checkout für Kunde
+                  {t('marketing.agentProductivity.workflowResult')}
                 </span>
                 <CheckCircle2 className="w-6 h-6 text-green-600" />
               </div>
@@ -218,9 +201,7 @@ const AgentProductivity = () => {
           className="text-center mt-16"
         >
           <p className="text-2xl font-bold text-gray-900">
-            <span className="text-purple-600">AI macht 87%</span> automatisch –{" "}
-            <span className="text-violet-600">Ihre Agenten die 13%</span>{" "}
-            mit den besten Tools
+            {t('marketing.agentProductivity.bottomStatement')}
           </p>
         </motion.div>
       </div>

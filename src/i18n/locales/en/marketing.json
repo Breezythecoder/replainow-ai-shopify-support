@@ -860,7 +860,15 @@
       {"title": "Customer Journey", "desc": "Pages visited, cart contents, purchase intent score", "color": "violet"}
     ],
     "exampleTitle": "Example: Create Checkout Link",
-    "exampleSubtitle": "Customer interested in multiple products? One-click experience:"
+    "exampleSubtitle": "Customer interested in multiple products? One-click experience:",
+    "workflowSteps": [
+      {"num": "1", "title": "Select Products", "desc": "Dress + Shoes + Bag"},
+      {"num": "2", "title": "Set Variants", "desc": "Size M, Color Red"},
+      {"num": "3", "title": "Add Discount", "desc": "Optional: 20% OFF"},
+      {"num": "4", "title": "Send Link", "desc": "Customer clicks → Checkout"}
+    ],
+    "workflowResult": "Result: Pre-filled cart with 20% discount → One-click checkout for customer",
+    "bottomStatement": "AI handles 87% automatically – your agents the 13% with the best tools"
   },
   "omnichannelUnified": {
     "title": "One System for Chat & Email – Seamlessly Connected",

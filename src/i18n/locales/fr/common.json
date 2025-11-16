@@ -12,9 +12,39 @@
     "menuClose": "Fermer le menu"
   },
   "footer": {
+    "about": {
+      "title": "À Propos",
+      "description": "ReplAInow révolutionne le support client Shopify avec l'automatisation par IA. Notre technologie GPT-4.1 fournit des réponses instantanées et précises en 32+ langues.",
+      "promise": "Notre Promesse",
+      "promiseText": "Nous nous engageons à rendre le support client IA accessible, fiable et rentable pour chaque marchand Shopify."
+    },
     "company": {
-      "tagline": "Le Helpdesk IA #1 pour Shopify"
-    }
+      "description": "Le support IA le plus intelligent pour les marchands Shopify. Disponible 24/7, 32+ langues, conforme RGPD.",
+      "tagline": "Le Helpdesk IA #1 pour Shopify",
+      "madeWith": "Made with",
+      "location": "in Dubai"
+    },
+    "links": {
+      "features": "Fonctionnalités",
+      "pricing": "Tarifs",
+      "demo": "Démo",
+      "contact": "Contact"
+    },
+    "legal": {
+      "title": "Légal",
+      "privacy": "Politique de Confidentialité",
+      "terms": "Conditions d'Utilisation",
+      "security": "Sécurité",
+      "impressum": "Mentions Légales",
+      "refund": "Politique de Remboursement",
+      "cookies": "Politique des Cookies",
+      "uninstall": "Guide de Désinstallation"
+    },
+    "contact": {
+      "email": "support@replainow.com",
+      "location": "Dubaï, EAU"
+    },
+    "copyright": "© 2024 ReplAInow. Tous droits réservés."
   },
   "contact": {}
 }

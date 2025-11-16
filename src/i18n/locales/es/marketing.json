@@ -372,7 +372,15 @@
       }
     ],
     "exampleTitle": "Ejemplo: Crear Enlace de Checkout",
-    "exampleSubtitle": "¿Cliente interesado en múltiples productos? Experiencia de un clic:"
+    "exampleSubtitle": "¿Cliente interesado en múltiples productos? Experiencia de un clic:",
+    "workflowSteps": [
+      {"num": "1", "title": "Seleccionar Productos", "desc": "Vestido + Zapatos + Bolso"},
+      {"num": "2", "title": "Establecer Variantes", "desc": "Talla M, Color Rojo"},
+      {"num": "3", "title": "Añadir Descuento", "desc": "Opcional: 20% OFF"},
+      {"num": "4", "title": "Enviar Enlace", "desc": "Cliente hace clic → Checkout"}
+    ],
+    "workflowResult": "Resultado: Carrito prellenado con 20% descuento → Checkout de un clic para el cliente",
+    "bottomStatement": "La IA maneja el 87% automáticamente – tus agentes el 13% con las mejores herramientas"
   },
   "omnichannelUnified": {
     "title": "Un Sistema para Chat y Email – Conectados a la Perfección",
@@ -496,25 +504,64 @@
     "syncLabel": "SINCRONIZACIÓN EN TIEMPO REAL",
     "autoLabel": "Totalmente Automático",
     "benefits": [
-      {"title": "Actualizaciones en Tiempo Real", "desc": "Los cambios de Shopify se sincronizan en segundos"},
-      {"title": "Cero Mantenimiento", "desc": "Sin actualizaciones manuales, sin mantenimiento de base de conocimientos"},
-      {"title": "99.8% de Precisión", "desc": "La IA conoce datos exactos, sin estimaciones ni conjeturas"}
+      {
+        "title": "Actualizaciones en Tiempo Real",
+        "desc": "Los cambios de Shopify se sincronizan en segundos"
+      },
+      {
+        "title": "Cero Mantenimiento",
+        "desc": "Sin actualizaciones manuales, sin mantenimiento de base de conocimientos"
+      },
+      {
+        "title": "99.8% de Precisión",
+        "desc": "La IA conoce datos exactos, sin estimaciones ni conjeturas"
+      }
     ],
     "stats": [
-      {"label": "Fuentes de Datos", "value": "12+"},
-      {"label": "Tiempo de Sincronización", "value": "<5 Seg"},
-      {"label": "Mantenimiento", "value": "0 Min"},
-      {"label": "Precisión", "value": "99.8%"}
+      { "label": "Fuentes de Datos", "value": "12+" },
+      { "label": "Tiempo de Sincronización", "value": "<5 Seg" },
+      { "label": "Mantenimiento", "value": "0 Min" },
+      { "label": "Precisión", "value": "99.8%" }
     ],
     "examplesTitle": "Lo Que la IA Puede Responder Instantáneamente",
     "examplesSubtitle": "Tus clientes preguntan – la IA encuentra la respuesta en tu tienda",
     "examples": [
-      {"category": "Preguntas de Productos", "question": "¿Tienen este vestido en talla 42?", "answer": "¡Sí, 15 en stock!", "difficulty": "Fácil"},
-      {"category": "Preguntas de Pedidos", "question": "¿Dónde está mi pedido #1234?", "answer": "Enviado ayer vía DHL", "difficulty": "Fácil"},
-      {"category": "Preguntas de Políticas", "question": "¿Cuánto tiempo es el período de devolución?", "answer": "30 días según tu política de devoluciones", "difficulty": "Fácil"},
-      {"category": "Asesoramiento de Estilo", "question": "¿Esta camisa combina con mis jeans?", "answer": "¡Sí! Te muestro 3 estilos a juego →", "difficulty": "Medio"},
-      {"category": "Cambio de Pedido", "question": "¿Puedo cambiar la dirección de envío?", "answer": "Pedido aún no enviado – dirección actualizable", "difficulty": "Medio"},
-      {"category": "Servicio VIP", "question": "Soy cliente VIP, ¿hay descuento?", "answer": "¡Sí! Código de descuento del 20% creado para ti 🎁", "difficulty": "Complejo"}
+      {
+        "category": "Preguntas de Productos",
+        "question": "¿Tienen este vestido en talla 42?",
+        "answer": "¡Sí, 15 en stock!",
+        "difficulty": "Fácil"
+      },
+      {
+        "category": "Preguntas de Pedidos",
+        "question": "¿Dónde está mi pedido #1234?",
+        "answer": "Enviado ayer vía DHL",
+        "difficulty": "Fácil"
+      },
+      {
+        "category": "Preguntas de Políticas",
+        "question": "¿Cuánto tiempo es el período de devolución?",
+        "answer": "30 días según tu política de devoluciones",
+        "difficulty": "Fácil"
+      },
+      {
+        "category": "Asesoramiento de Estilo",
+        "question": "¿Esta camisa combina con mis jeans?",
+        "answer": "¡Sí! Te muestro 3 estilos a juego →",
+        "difficulty": "Medio"
+      },
+      {
+        "category": "Cambio de Pedido",
+        "question": "¿Puedo cambiar la dirección de envío?",
+        "answer": "Pedido aún no enviado – dirección actualizable",
+        "difficulty": "Medio"
+      },
+      {
+        "category": "Servicio VIP",
+        "question": "Soy cliente VIP, ¿hay descuento?",
+        "answer": "¡Sí! Código de descuento del 20% creado para ti 🎁",
+        "difficulty": "Complejo"
+      }
     ],
     "bottomCta": "Cero configuración, cero mantenimiento – la IA conoce tu tienda en 60 segundos"
   },

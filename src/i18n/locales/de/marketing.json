@@ -658,44 +658,28 @@
       {
         "name": "Fashion & Mode",
         "example": "ModeStore",
-        "challenges": [
-          "Größenberatung",
-          "Rückgabe",
-          "Styling-Tipps"
-        ],
+        "challenges": ["Größenberatung", "Rückgabe", "Styling-Tipps"],
         "solution": "KI erkennt Produktmerkmale und gibt personalisierte Empfehlungen",
         "results": "+45% Conversion, -60% Support-Tickets"
       },
       {
         "name": "Elektronik & Tech",
         "example": "TechGadgets",
-        "challenges": [
-          "Technische Fragen",
-          "Kompatibilität",
-          "Setup-Hilfe"
-        ],
+        "challenges": ["Technische Fragen", "Kompatibilität", "Setup-Hilfe"],
         "solution": "KI kennt alle Produktspezifikationen und löst 90% der Fragen",
         "results": "+67% Kundenzufriedenheit, -80% Wartezeiten"
       },
       {
         "name": "Beauty & Kosmetik",
         "example": "BeautyStore",
-        "challenges": [
-          "Produktberatung",
-          "Hauttyp-Analyse",
-          "Anwendungstipps"
-        ],
+        "challenges": ["Produktberatung", "Hauttyp-Analyse", "Anwendungstipps"],
         "solution": "KI analysiert Hauttyp und empfiehlt passende Produkte",
         "results": "+52% Upselling, -70% Retouren"
       },
       {
         "name": "Home & Garden",
         "example": "HomeGarden",
-        "challenges": [
-          "Montageanleitungen",
-          "Pflegetipps",
-          "Kompatibilität"
-        ],
+        "challenges": ["Montageanleitungen", "Pflegetipps", "Kompatibilität"],
         "solution": "KI liefert detaillierte Anleitungen und Pflegehinweise",
         "results": "+38% Kundenzufriedenheit, -55% Support-Aufwand"
       }
@@ -779,13 +763,37 @@
     "title": "Wenn Ihre Agenten übernehmen – perfekt ausgestattet",
     "subtitle": "AI macht 87% automatisch. Die anderen 13%? Ihre Agenten haben alle Tools für professionellen Support an einem Ort.",
     "tools": [
-      {"title": "Product Picker", "desc": "Varianten wählen (Größe, Farbe), als Karten oder Checkout-Link senden", "color": "purple"},
-      {"title": "Rabatt-Generator", "desc": "10%, 15%, 20% Quick-Buttons. Ein Klick → Kunde hat Code", "color": "green"},
-      {"title": "Rückerstattungen", "desc": "Direkt aus Dashboard. Artikel wählen, Betrag, fertig", "color": "blue"},
-      {"title": "Kunden-Journey", "desc": "Welche Seiten besucht, was im Warenkorb, Kaufabsicht-Score", "color": "violet"}
+      {
+        "title": "Product Picker",
+        "desc": "Varianten wählen (Größe, Farbe), als Karten oder Checkout-Link senden",
+        "color": "purple"
+      },
+      {
+        "title": "Rabatt-Generator",
+        "desc": "10%, 15%, 20% Quick-Buttons. Ein Klick → Kunde hat Code",
+        "color": "green"
+      },
+      {
+        "title": "Rückerstattungen",
+        "desc": "Direkt aus Dashboard. Artikel wählen, Betrag, fertig",
+        "color": "blue"
+      },
+      {
+        "title": "Kunden-Journey",
+        "desc": "Welche Seiten besucht, was im Warenkorb, Kaufabsicht-Score",
+        "color": "violet"
+      }
     ],
     "exampleTitle": "Beispiel: Checkout-Link erstellen",
-    "exampleSubtitle": "Kunde interessiert an mehreren Produkten? Ein Klick-Erlebnis:"
+    "exampleSubtitle": "Kunde interessiert an mehreren Produkten? Ein Klick-Erlebnis:",
+    "workflowSteps": [
+      {"num": "1", "title": "Produkte wählen", "desc": "Dress + Shoes + Bag"},
+      {"num": "2", "title": "Varianten setzen", "desc": "Größe M, Farbe Rot"},
+      {"num": "3", "title": "Rabatt hinzu", "desc": "Optional: 20% OFF"},
+      {"num": "4", "title": "Link senden", "desc": "Kunde klickt → Checkout"}
+    ],
+    "workflowResult": "Resultat: Pre-filled Cart mit 20% Rabatt → Ein-Klick-Checkout für Kunde",
+    "bottomStatement": "AI macht 87% automatisch – Ihre Agenten die 13% mit den besten Tools"
   },
   "omnichannelUnified": {
     "title": "Ein System für Chat & E-Mail – nahtlos verbunden",
@@ -822,38 +830,93 @@
     "title": "AI kennt JEDEN Aspekt Ihres Shops",
     "subtitle": "Produkte, Bestellungen, Kunden, Richtlinien – alles automatisch synchronisiert. Sie ändern etwas? AI weiß es sofort. Null Wartung.",
     "dataSourcesLeft": [
-      {"title": "Produkte", "desc": "Katalog, Varianten, Preise", "stats": "Real-time"},
-      {"title": "Bestellungen", "desc": "Status, Tracking, Historie", "stats": "60 Tage"},
-      {"title": "Kunden", "desc": "Profile, Präferenzen", "stats": "Lifetime"}
+      {
+        "title": "Produkte",
+        "desc": "Katalog, Varianten, Preise",
+        "stats": "Real-time"
+      },
+      {
+        "title": "Bestellungen",
+        "desc": "Status, Tracking, Historie",
+        "stats": "60 Tage"
+      },
+      { "title": "Kunden", "desc": "Profile, Präferenzen", "stats": "Lifetime" }
     ],
     "dataSourcesRight": [
-      {"title": "Richtlinien", "desc": "Rückgabe, Versand, AGB", "stats": "Auto-Sync"},
-      {"title": "Versand", "desc": "Carrier, Tracking-Links", "stats": "Live"},
-      {"title": "Content", "desc": "Seiten, FAQs, Blog", "stats": "Voll"}
+      {
+        "title": "Richtlinien",
+        "desc": "Rückgabe, Versand, AGB",
+        "stats": "Auto-Sync"
+      },
+      {
+        "title": "Versand",
+        "desc": "Carrier, Tracking-Links",
+        "stats": "Live"
+      },
+      { "title": "Content", "desc": "Seiten, FAQs, Blog", "stats": "Voll" }
     ],
     "centerTitle": "Shopify Admin",
     "syncLabel": "ECHTZEIT SYNC",
     "autoLabel": "Vollautomatisch",
     "benefits": [
-      {"title": "Echtzeit-Updates", "desc": "Shopify-Änderungen synchronisieren sich innerhalb von Sekunden"},
-      {"title": "Null Wartung", "desc": "Keine manuellen Updates, keine Wissensdatenbank-Pflege"},
-      {"title": "99.8% Genauigkeit", "desc": "AI kennt exakte Daten, keine Schätzungen oder Raten"}
+      {
+        "title": "Echtzeit-Updates",
+        "desc": "Shopify-Änderungen synchronisieren sich innerhalb von Sekunden"
+      },
+      {
+        "title": "Null Wartung",
+        "desc": "Keine manuellen Updates, keine Wissensdatenbank-Pflege"
+      },
+      {
+        "title": "99.8% Genauigkeit",
+        "desc": "AI kennt exakte Daten, keine Schätzungen oder Raten"
+      }
     ],
     "stats": [
-      {"label": "Datenquellen", "value": "12+"},
-      {"label": "Sync-Zeit", "value": "<5 Sek"},
-      {"label": "Wartung", "value": "0 Min"},
-      {"label": "Genauigkeit", "value": "99.8%"}
+      { "label": "Datenquellen", "value": "12+" },
+      { "label": "Sync-Zeit", "value": "<5 Sek" },
+      { "label": "Wartung", "value": "0 Min" },
+      { "label": "Genauigkeit", "value": "99.8%" }
     ],
     "examplesTitle": "Was AI sofort beantworten kann",
     "examplesSubtitle": "Ihre Kunden fragen – AI findet die Antwort in Ihrem Shop",
     "examples": [
-      {"category": "Produkt-Fragen", "question": "Habt ihr das Kleid in Größe 42?", "answer": "Ja, 15 auf Lager!", "difficulty": "Einfach"},
-      {"category": "Bestellungs-Fragen", "question": "Wo ist meine Bestellung #1234?", "answer": "Versendet gestern via DHL", "difficulty": "Einfach"},
-      {"category": "Richtlinien-Fragen", "question": "Wie lange ist die Rückgabe-Frist?", "answer": "30 Tage lt. Ihrer Rückgabe-Richtlinie", "difficulty": "Einfach"},
-      {"category": "Style-Beratung", "question": "Passt dieses Shirt zu meiner Jeans?", "answer": "Ja! Zeige Ihnen 3 passende Styles →", "difficulty": "Medium"},
-      {"category": "Bestellungs-Änderung", "question": "Kann ich die Versandadresse noch ändern?", "answer": "Bestellung noch nicht versendet – Adresse aktualisierbar", "difficulty": "Medium"},
-      {"category": "VIP-Service", "question": "Ich bin VIP-Kunde, gibt's einen Rabatt?", "answer": "Ja! 20% Rabattcode für Sie erstellt 🎁", "difficulty": "Komplex"}
+      {
+        "category": "Produkt-Fragen",
+        "question": "Habt ihr das Kleid in Größe 42?",
+        "answer": "Ja, 15 auf Lager!",
+        "difficulty": "Einfach"
+      },
+      {
+        "category": "Bestellungs-Fragen",
+        "question": "Wo ist meine Bestellung #1234?",
+        "answer": "Versendet gestern via DHL",
+        "difficulty": "Einfach"
+      },
+      {
+        "category": "Richtlinien-Fragen",
+        "question": "Wie lange ist die Rückgabe-Frist?",
+        "answer": "30 Tage lt. Ihrer Rückgabe-Richtlinie",
+        "difficulty": "Einfach"
+      },
+      {
+        "category": "Style-Beratung",
+        "question": "Passt dieses Shirt zu meiner Jeans?",
+        "answer": "Ja! Zeige Ihnen 3 passende Styles →",
+        "difficulty": "Medium"
+      },
+      {
+        "category": "Bestellungs-Änderung",
+        "question": "Kann ich die Versandadresse noch ändern?",
+        "answer": "Bestellung noch nicht versendet – Adresse aktualisierbar",
+        "difficulty": "Medium"
+      },
+      {
+        "category": "VIP-Service",
+        "question": "Ich bin VIP-Kunde, gibt's einen Rabatt?",
+        "answer": "Ja! 20% Rabattcode für Sie erstellt 🎁",
+        "difficulty": "Komplex"
+      }
     ],
     "bottomCta": "Null Setup, null Wartung – AI kennt Ihren Shop in 60 Sekunden"
   },

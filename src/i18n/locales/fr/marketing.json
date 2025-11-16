@@ -356,7 +356,15 @@
       {"title": "Parcours Client", "desc": "Pages visitées, contenu du panier, score d'intention d'achat", "color": "violet"}
     ],
     "exampleTitle": "Exemple : Créer un Lien de Checkout",
-    "exampleSubtitle": "Client intéressé par plusieurs produits ? Expérience en un clic :"
+    "exampleSubtitle": "Client intéressé par plusieurs produits ? Expérience en un clic :",
+    "workflowSteps": [
+      {"num": "1", "title": "Sélectionner Produits", "desc": "Robe + Chaussures + Sac"},
+      {"num": "2", "title": "Définir Variantes", "desc": "Taille M, Couleur Rouge"},
+      {"num": "3", "title": "Ajouter Réduction", "desc": "Optionnel : 20% OFF"},
+      {"num": "4", "title": "Envoyer Lien", "desc": "Client clique → Checkout"}
+    ],
+    "workflowResult": "Résultat : Panier pré-rempli avec 20% réduction → Checkout en un clic pour le client",
+    "bottomStatement": "L'IA gère 87% automatiquement – vos agents les 13% avec les meilleurs outils"
   },
   "omnichannelUnified": {
     "title": "Un Système pour Chat et Email – Connectés Sans Faille",
