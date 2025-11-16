@@ -24,6 +24,28 @@ const AIKnowledgeBanner = () => {
   
   const dataSourcesLeft = leftData.map((item, i) => ({...item, icon: leftIcons[i], color: leftColors[i]}));
   const dataSourcesRight = rightData.map((item, i) => ({...item, icon: rightIcons[i], color: rightColors[i]}));
+  
+  const benefits = getTranslation('marketing.aiKnowledge.benefits') || [
+    {title: "Echtzeit-Updates", desc: "Shopify-Änderungen synchronisieren sich innerhalb von Sekunden"},
+    {title: "Null Wartung", desc: "Keine manuellen Updates, keine Wissensdatenbank-Pflege"},
+    {title: "99.8% Genauigkeit", desc: "AI kennt exakte Daten, keine Schätzungen oder Raten"}
+  ];
+  
+  const stats = getTranslation('marketing.aiKnowledge.stats') || [
+    {label: "Datenquellen", value: "12+"},
+    {label: "Sync-Zeit", value: "<5 Sek"},
+    {label: "Wartung", value: "0 Min"},
+    {label: "Genauigkeit", value: "99.8%"}
+  ];
+  
+  const examples = getTranslation('marketing.aiKnowledge.examples') || [
+    {category: "Produkt-Fragen", question: "Habt ihr das Kleid in Größe 42?", answer: "Ja, 15 auf Lager!", difficulty: "Einfach"},
+    {category: "Bestellungs-Fragen", question: "Wo ist meine Bestellung #1234?", answer: "Versendet gestern via DHL", difficulty: "Einfach"},
+    {category: "Richtlinien-Fragen", question: "Wie lange ist die Rückgabe-Frist?", answer: "30 Tage lt. Ihrer Rückgabe-Richtlinie", difficulty: "Einfach"},
+    {category: "Style-Beratung", question: "Passt dieses Shirt zu meiner Jeans?", answer: "Ja! Zeige Ihnen 3 passende Styles →", difficulty: "Medium"},
+    {category: "Bestellungs-Änderung", question: "Kann ich die Versandadresse noch ändern?", answer: "Bestellung noch nicht versendet – Adresse aktualisierbar", difficulty: "Medium"},
+    {category: "VIP-Service", question: "Ich bin VIP-Kunde, gibt's einen Rabatt?", answer: "Ja! 20% Rabattcode für Sie erstellt 🎁", difficulty: "Komplex"}
+  ];
 
   return (
     <div className="bg-gradient-to-b from-white via-purple-50/30 to-white relative overflow-hidden">
@@ -270,39 +292,20 @@ const AIKnowledgeBanner = () => {
           transition={{ delay: 1.0 }}
           className="grid md:grid-cols-3 gap-6 mb-16"
         >
-          {[
-            {
-              icon: Zap,
-              title: "Echtzeit-Updates",
-              desc: "Shopify-Änderungen synchronisieren sich innerhalb von Sekunden",
-              color: "purple"
-            },
-            {
-              icon: CheckCircle2,
-              title: "Null Wartung",
-              desc: "Keine manuellen Updates, keine Wissensdatenbank-Pflege",
-              color: "violet"
-            },
-            {
-              icon: TrendingUp,
-              title: "99.8% Genauigkeit",
-              desc: "AI kennt exakte Daten, keine Schätzungen oder Raten",
-              color: "blue"
-            }
-          ].map((benefit, i) => (
+          {benefits.map((benefit, i) => {
+            const icons = [Zap, CheckCircle2, TrendingUp];
+            const colors = ["purple", "violet", "blue"];
+            return (
             <div key={i} className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
               <div className="inline-flex p-4 bg-white rounded-2xl shadow-sm mb-4 border border-gray-200">
-                <benefit.icon className={`
-                  w-8 h-8
-                  ${benefit.color === 'purple' ? 'text-purple-700' : ''}
-                  ${benefit.color === 'violet' ? 'text-violet-600' : ''}
-                  ${benefit.color === 'blue' ? 'text-blue-700' : ''}
-                `} />
+                {icons[i] && icons[i]({
+                  className: `w-8 h-8 ${colors[i] === 'purple' ? 'text-purple-700' : ''} ${colors[i] === 'violet' ? 'text-violet-600' : ''} ${colors[i] === 'blue' ? 'text-blue-700' : ''}`
+                })}
               </div>
               <h4 className="font-semibold text-gray-900 mb-2">{benefit.title}</h4>
               <p className="text-sm text-gray-600 leading-relaxed">{benefit.desc}</p>
             </div>
-          ))}
+          )})}
         </motion.div>
 
         {/* Bottom Stats Row */}
@@ -313,24 +316,18 @@ const AIKnowledgeBanner = () => {
           className="bg-gradient-to-r from-purple-50 via-violet-50 to-purple-50 rounded-2xl p-8 border border-purple-100"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {[
-              { icon: Database, label: "Datenquellen", value: "12+", color: "purple" },
-              { icon: Zap, label: "Sync-Zeit", value: "<5 Sek", color: "violet" },
-              { icon: CheckCircle2, label: "Wartung", value: "0 Min", color: "blue" },
-              { icon: TrendingUp, label: "Genauigkeit", value: "99.8%", color: "pink" }
-            ].map((stat, i) => (
+            {stats.map((stat, i) => {
+              const statIcons = [Database, Zap, CheckCircle2, TrendingUp];
+              const statColors = ["purple", "violet", "blue", "pink"];
+              return (
               <div key={i} className="text-center">
-                <stat.icon className={`
-                  w-6 h-6 mx-auto mb-3
-                  ${stat.color === 'purple' ? 'text-purple-700' : ''}
-                  ${stat.color === 'violet' ? 'text-violet-600' : ''}
-                  ${stat.color === 'blue' ? 'text-blue-700' : ''}
-                  ${stat.color === 'pink' ? 'text-pink-700' : ''}
-                `} />
+                {statIcons[i] && statIcons[i]({
+                  className: `w-6 h-6 mx-auto mb-3 ${statColors[i] === 'purple' ? 'text-purple-700' : ''} ${statColors[i] === 'violet' ? 'text-violet-600' : ''} ${statColors[i] === 'blue' ? 'text-blue-700' : ''} ${statColors[i] === 'pink' ? 'text-pink-700' : ''}`
+                })}
                 <div className="text-3xl font-light text-gray-900 mb-1">{stat.value}</div>
                 <div className="text-xs text-gray-600 uppercase tracking-wider">{stat.label}</div>
               </div>
-            ))}
+            )})}
           </div>
         </motion.div>
 
@@ -343,58 +340,18 @@ const AIKnowledgeBanner = () => {
         >
           <div className="text-center mb-10">
             <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-              Was AI sofort beantworten kann
+              {t('marketing.aiKnowledge.examplesTitle')}
             </h3>
             <p className="text-gray-600">
-              Ihre Kunden fragen – AI findet die Antwort in Ihrem Shop
+              {t('marketing.aiKnowledge.examplesSubtitle')}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {[
-              {
-                question: "Habt ihr das Kleid in Größe 42?",
-                answer: "Ja, 15 auf Lager!",
-                category: "Produkt-Fragen",
-                color: "purple",
-                difficulty: "Einfach"
-              },
-              {
-                question: "Wo ist meine Bestellung #1234?",
-                answer: "Versendet gestern via DHL",
-                category: "Bestellungs-Fragen",
-                color: "blue",
-                difficulty: "Einfach"
-              },
-              {
-                question: "Wie lange ist die Rückgabe-Frist?",
-                answer: "30 Tage lt. Ihrer Rückgabe-Richtlinie",
-                category: "Richtlinien-Fragen",
-                color: "violet",
-                difficulty: "Einfach"
-              },
-              {
-                question: "Passt dieses Shirt zu meiner Jeans?",
-                answer: "Ja! Zeige Ihnen 3 passende Styles →",
-                category: "Style-Beratung",
-                color: "pink",
-                difficulty: "Medium"
-              },
-              {
-                question: "Kann ich die Versandadresse noch ändern?",
-                answer: "Bestellung noch nicht versendet – Adresse aktualisierbar",
-                category: "Bestellungs-Änderung",
-                color: "blue",
-                difficulty: "Medium"
-              },
-              {
-                question: "Ich bin VIP-Kunde, gibt's einen Rabatt?",
-                answer: "Ja! 20% Rabattcode für Sie erstellt 🎁",
-                category: "VIP-Service",
-                color: "green",
-                difficulty: "Komplex"
-              }
-            ].map((example, i) => (
+            {examples.map((example, i) => {
+              const exampleColors = ["purple", "blue", "violet", "pink", "blue", "green"];
+              const color = exampleColors[i];
+              return (
               <motion.div 
                 key={i} 
                 initial={{ opacity: 0, y: 20 }}
@@ -406,19 +363,19 @@ const AIKnowledgeBanner = () => {
                 <div className="flex items-center justify-between mb-4">
                   <div className={`
                     px-3 py-1 rounded-full text-xs font-bold inline-block
-                    ${example.color === 'purple' ? 'bg-purple-100 text-purple-700' : ''}
-                    ${example.color === 'blue' ? 'bg-blue-100 text-blue-700' : ''}
-                    ${example.color === 'violet' ? 'bg-violet-100 text-violet-700' : ''}
-                    ${example.color === 'pink' ? 'bg-pink-100 text-pink-700' : ''}
-                    ${example.color === 'green' ? 'bg-green-100 text-green-700' : ''}
+                    ${color === 'purple' ? 'bg-purple-100 text-purple-700' : ''}
+                    ${color === 'blue' ? 'bg-blue-100 text-blue-700' : ''}
+                    ${color === 'violet' ? 'bg-violet-100 text-violet-700' : ''}
+                    ${color === 'pink' ? 'bg-pink-100 text-pink-700' : ''}
+                    ${color === 'green' ? 'bg-green-100 text-green-700' : ''}
                   `}>
                     {example.category}
                   </div>
                   <div className={`
                     px-2 py-1 rounded text-xs font-medium
-                    ${example.difficulty === 'Einfach' ? 'bg-green-50 text-green-700' : ''}
-                    ${example.difficulty === 'Medium' ? 'bg-yellow-50 text-yellow-700' : ''}
-                    ${example.difficulty === 'Komplex' ? 'bg-orange-50 text-orange-700' : ''}
+                    ${example.difficulty === 'Easy' || example.difficulty === 'Einfach' || example.difficulty === 'Fácil' || example.difficulty === 'Facile' ? 'bg-green-50 text-green-700' : ''}
+                    ${example.difficulty === 'Medium' || example.difficulty === 'Medio' || example.difficulty === 'Moyen' ? 'bg-yellow-50 text-yellow-700' : ''}
+                    ${example.difficulty === 'Complex' || example.difficulty === 'Komplex' || example.difficulty === 'Complejo' || example.difficulty === 'Complexe' ? 'bg-orange-50 text-orange-700' : ''}
                   `}>
                     {example.difficulty}
                   </div>
@@ -433,7 +390,7 @@ const AIKnowledgeBanner = () => {
                   </div>
                 </div>
               </motion.div>
-            ))}
+            )})}
           </div>
         </motion.div>
 
@@ -446,13 +403,7 @@ const AIKnowledgeBanner = () => {
         >
           <div className="inline-flex flex-col items-center gap-4">
             <p className="text-2xl text-gray-900 font-bold">
-              <span className="text-purple-600">Null Setup, null Wartung</span> –{" "}
-              AI kennt Ihren Shop in{" "}
-              <span className="text-violet-600">60 Sekunden</span>
-            </p>
-            <p className="text-lg text-gray-600 font-medium">
-              <span className="font-bold text-purple-600">Ihr Shop-Wissen</span> ist{' '}
-              <span className="font-bold text-violet-600">AI's Wissen</span> – automatisch, sofort, präzise
+              {t('marketing.aiKnowledge.bottomCta')}
             </p>
           </div>
         </motion.div>

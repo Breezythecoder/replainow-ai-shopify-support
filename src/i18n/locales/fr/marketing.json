@@ -94,6 +94,7 @@
     "badge": "14 Jours Gratuits · Sans Carte · Facturation Shopify",
     "title": "Choisissez Votre Plan",
     "subtitle": "Toutes les fonctionnalités incluses dans chaque plan. Vous ne payez que pour les réponses IA.",
+    "moreFeatures": "Et bien plus encore...",
     "plans": [
       {
         "name": "Launch",
@@ -453,7 +454,29 @@
     ],
     "centerTitle": "Shopify Admin",
     "syncLabel": "SYNCHRONISATION EN TEMPS RÉEL",
-    "autoLabel": "Entièrement Automatique"
+    "autoLabel": "Entièrement Automatique",
+    "benefits": [
+      {"title": "Mises à Jour en Temps Réel", "desc": "Les changements Shopify se synchronisent en quelques secondes"},
+      {"title": "Zéro Maintenance", "desc": "Pas de mises à jour manuelles, pas de gestion de base de connaissances"},
+      {"title": "99.8% de Précision", "desc": "L'IA connaît les données exactes, sans estimations ni suppositions"}
+    ],
+    "stats": [
+      {"label": "Sources de Données", "value": "12+"},
+      {"label": "Temps de Synchro", "value": "<5 Sec"},
+      {"label": "Maintenance", "value": "0 Min"},
+      {"label": "Précision", "value": "99.8%"}
+    ],
+    "examplesTitle": "Ce Que l'IA Peut Répondre Instantanément",
+    "examplesSubtitle": "Vos clients posent des questions – l'IA trouve la réponse dans votre boutique",
+    "examples": [
+      {"category": "Questions Produits", "question": "Avez-vous cette robe en taille 42?", "answer": "Oui, 15 en stock!", "difficulty": "Facile"},
+      {"category": "Questions Commandes", "question": "Où est ma commande #1234?", "answer": "Expédiée hier via DHL", "difficulty": "Facile"},
+      {"category": "Questions Politiques", "question": "Quelle est la durée de retour?", "answer": "30 jours selon votre politique de retour", "difficulty": "Facile"},
+      {"category": "Conseil de Style", "question": "Cette chemise va-t-elle avec mon jean?", "answer": "Oui! Je vous montre 3 styles assortis →", "difficulty": "Moyen"},
+      {"category": "Modification Commande", "question": "Puis-je encore changer l'adresse de livraison?", "answer": "Commande pas encore expédiée – adresse modifiable", "difficulty": "Moyen"},
+      {"category": "Service VIP", "question": "Je suis client VIP, y a-t-il une réduction?", "answer": "Oui! Code de réduction 20% créé pour vous 🎁", "difficulty": "Complexe"}
+    ],
+    "bottomCta": "Zéro configuration, zéro maintenance – l'IA connaît votre boutique en 60 secondes"
   },
   "seo": {
     "title": "ReplAInow – Helpdesk IA Shopify | Support Client Automatisé",

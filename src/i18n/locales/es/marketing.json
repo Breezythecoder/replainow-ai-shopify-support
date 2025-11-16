@@ -94,6 +94,7 @@
     "badge": "14 Días Gratis · Sin Tarjeta · Facturación de Shopify",
     "title": "Elige Tu Plan",
     "subtitle": "Todas las funciones incluidas en cada plan. Solo pagas por respuestas de IA.",
+    "moreFeatures": "Y mucho más...",
     "plans": [
       {
         "name": "Launch",
@@ -458,18 +459,64 @@
     "title": "La IA Conoce CADA Aspecto de Tu Tienda",
     "subtitle": "Productos, pedidos, clientes, políticas: todo sincronizado automáticamente. ¿Cambias algo? La IA lo sabe al instante. Cero mantenimiento.",
     "dataSourcesLeft": [
-      {"title": "Productos", "desc": "Catálogo, variantes, precios", "stats": "Tiempo real"},
-      {"title": "Pedidos", "desc": "Estado, seguimiento, historial", "stats": "60 Días"},
-      {"title": "Clientes", "desc": "Perfiles, preferencias", "stats": "Vitalicio"}
+      {
+        "title": "Productos",
+        "desc": "Catálogo, variantes, precios",
+        "stats": "Tiempo real"
+      },
+      {
+        "title": "Pedidos",
+        "desc": "Estado, seguimiento, historial",
+        "stats": "60 Días"
+      },
+      {
+        "title": "Clientes",
+        "desc": "Perfiles, preferencias",
+        "stats": "Vitalicio"
+      }
     ],
     "dataSourcesRight": [
-      {"title": "Políticas", "desc": "Devoluciones, envío, términos", "stats": "Auto-Sync"},
-      {"title": "Envío", "desc": "Transportistas, enlaces de seguimiento", "stats": "En vivo"},
-      {"title": "Contenido", "desc": "Páginas, FAQs, blog", "stats": "Completo"}
+      {
+        "title": "Políticas",
+        "desc": "Devoluciones, envío, términos",
+        "stats": "Auto-Sync"
+      },
+      {
+        "title": "Envío",
+        "desc": "Transportistas, enlaces de seguimiento",
+        "stats": "En vivo"
+      },
+      {
+        "title": "Contenido",
+        "desc": "Páginas, FAQs, blog",
+        "stats": "Completo"
+      }
     ],
     "centerTitle": "Shopify Admin",
     "syncLabel": "SINCRONIZACIÓN EN TIEMPO REAL",
-    "autoLabel": "Totalmente Automático"
+    "autoLabel": "Totalmente Automático",
+    "benefits": [
+      {"title": "Actualizaciones en Tiempo Real", "desc": "Los cambios de Shopify se sincronizan en segundos"},
+      {"title": "Cero Mantenimiento", "desc": "Sin actualizaciones manuales, sin mantenimiento de base de conocimientos"},
+      {"title": "99.8% de Precisión", "desc": "La IA conoce datos exactos, sin estimaciones ni conjeturas"}
+    ],
+    "stats": [
+      {"label": "Fuentes de Datos", "value": "12+"},
+      {"label": "Tiempo de Sincronización", "value": "<5 Seg"},
+      {"label": "Mantenimiento", "value": "0 Min"},
+      {"label": "Precisión", "value": "99.8%"}
+    ],
+    "examplesTitle": "Lo Que la IA Puede Responder Instantáneamente",
+    "examplesSubtitle": "Tus clientes preguntan – la IA encuentra la respuesta en tu tienda",
+    "examples": [
+      {"category": "Preguntas de Productos", "question": "¿Tienen este vestido en talla 42?", "answer": "¡Sí, 15 en stock!", "difficulty": "Fácil"},
+      {"category": "Preguntas de Pedidos", "question": "¿Dónde está mi pedido #1234?", "answer": "Enviado ayer vía DHL", "difficulty": "Fácil"},
+      {"category": "Preguntas de Políticas", "question": "¿Cuánto tiempo es el período de devolución?", "answer": "30 días según tu política de devoluciones", "difficulty": "Fácil"},
+      {"category": "Asesoramiento de Estilo", "question": "¿Esta camisa combina con mis jeans?", "answer": "¡Sí! Te muestro 3 estilos a juego →", "difficulty": "Medio"},
+      {"category": "Cambio de Pedido", "question": "¿Puedo cambiar la dirección de envío?", "answer": "Pedido aún no enviado – dirección actualizable", "difficulty": "Medio"},
+      {"category": "Servicio VIP", "question": "Soy cliente VIP, ¿hay descuento?", "answer": "¡Sí! Código de descuento del 20% creado para ti 🎁", "difficulty": "Complejo"}
+    ],
+    "bottomCta": "Cero configuración, cero mantenimiento – la IA conoce tu tienda en 60 segundos"
   },
   "seo": {
     "title": "ReplAInow – Helpdesk IA Shopify | Soporte al Cliente Automatizado",

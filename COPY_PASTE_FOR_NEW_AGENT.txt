@@ -5,10 +5,10 @@ Du musst die remaining 50% fertigmachen (~6-8 Stunden).
 
 🎯 LIES DIESE DATEIEN IN DIESER REIHENFOLGE:
 
-1. @START_HERE_SESSION_2.md (5min - Quick Start)
-2. @ULTIMATE_HANDOFF_SESSION_2_NO_MISTAKES.md (30min - HAUPTDOKUMENT!)  
-3. @COPY_PASTE_TRANSLATIONS_READY.md (10min - Ready translations)
-4. @SESSION_2_EXECUTION_CHECKLIST.md (Reference - Step by step)
+1. START_HERE_SESSION_2.md (5min - Quick Start)
+2. ULTIMATE_HANDOFF_SESSION_2_NO_MISTAKES.md (30min - HAUPTDOKUMENT!)  
+3. COPY_PASTE_TRANSLATIONS_READY.md (10min - Ready translations)
+4. SESSION_2_EXECUTION_CHECKLIST.md (Reference - Step by step)
 
 📊 QUICK STATUS:
 

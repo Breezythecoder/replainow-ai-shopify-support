@@ -65,18 +65,6 @@
       "highlight": "Revolutionary GPT-4.1 technology",
       "continuation": "meets perfect Shopify integration"
     },
-    "valueProposition": {
-      "title": "Why Shopify Merchants Choose Us",
-      "subtitle": "Enterprise-level support automation that works",
-      "automation": "AUTOMATION RATE",
-      "automationDesc": "Of your support requests are answered fully automatically – accurate and brand-compliant",
-      "intelligence": "AI INTELLIGENCE",
-      "intelligenceMetric": "99.8% Accuracy",
-      "intelligenceDesc": "AI knows exact data from your shop – no hallucinations, no errors, no estimates",
-      "availability": "AVAILABILITY",
-      "availabilityMetric": "24/7",
-      "availabilityDesc": "Seamless support without downtime, vacation, or sick days – always available"
-    },
     "items": [
       {
         "title": "GPT-4.1 intelligence",
@@ -191,191 +179,191 @@
     "journeyExample": "AI uses context: 'Summer Dress' viewed 45 sec + €150 in cart = Ready to buy → Recommends matching accessories!",
     "bottomStatement": "Enterprise-level AI intelligence – not just a chatbot, but an intelligent support agent"
   },
+  "agentProductivity": {
+    "title": "When Your Agents Take Over – Perfectly Equipped",
+    "subtitle": "AI handles 87% automatically. The other 13%? Your agents have all the tools for professional support in one place.",
+    "tool1": "Product Picker",
+    "tool1Desc": "Select variants (size, color), send as cards or checkout link",
+    "tool2": "Discount Generator",
+    "tool2Desc": "10%, 15%, 20% quick buttons. One click → customer has code",
+    "tool3": "Refunds",
+    "tool3Desc": "Direct from dashboard. Select items, amount, done",
+    "tool4": "Customer Journey",
+    "tool4Desc": "Pages visited, cart contents, purchase intent score",
+    "workflowTitle": "Example: Create Checkout Link",
+    "workflowSubtitle": "Customer interested in multiple products? One-click experience:",
+    "workflowStep1": "Select Products",
+    "workflowStep1Desc": "Dress + Shoes + Bag",
+    "workflowStep2": "Set Variants",
+    "workflowStep2Desc": "Size M, Color Red",
+    "workflowStep3": "Add Discount",
+    "workflowStep3Desc": "Optional: 20% OFF",
+    "workflowStep4": "Send Link",
+    "workflowStep4Desc": "Customer clicks → Checkout",
+    "workflowResult": "Result: Pre-filled cart with 20% discount → One-click checkout for customer",
+    "bottomStatement": "AI handles 87% automatically – your agents the 13% with the best tools"
+  },
   "pricing": {
-    "badge": "14 Days Free · No Credit Card · Shopify Billing",
-    "title": "Choose Your Plan",
-    "subtitle": "All features included in every plan. You only pay for AI responses.",
-    "moreFeatures": "And much more...",
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Start free, scale as you grow",
+    "headline": {
+      "primary": "More support power",
+      "secondary": "for less money",
+      "tagline": "A traditional support agent easily costs €2,000 per month.",
+      "detail": "ReplAInow starts at just €19/month and works 24/7 without breaks."
+    },
+    "baseFeatures": [
+      "1-Click Installation",
+      "Unlimited Store Data (Products, Pages, Policies etc.)",
+      "AI Email & AI Live Chat",
+      "Customizable Branding"
+    ],
     "plans": [
       {
-        "name": "Launch",
-        "price": "19",
-        "description": "For ambitious shops wanting to test AI support",
-        "aiAnswers": "200 AI responses included",
-        "ticketRange": "Ideal for 10–80 tickets per month",
-        "extraCost": "$0.05 per additional response",
+        "name": "Starter",
+        "price": "€19",
+        "period": "/ Month",
+        "quota": "Up to 300 AI responses / Month",
+        "trial": "14 days free trial",
         "features": [
-          "Live Chat Widget (AI + Human)",
-          "Mail Dashboard with AI Email Responses",
-          "Automatic Shopify Import (Products, Orders, Policies)",
-          "Multilingual Support (100+ Languages)",
-          "Unlimited Team Members (no per-user costs)",
-          "Order Tracking & Management",
-          "AI Discount Codes (unlimited)",
-          "Proactive Chat Triggers (unlimited)",
-          "Message Feed for Announcements",
-          "Product Recommendations",
-          "Custom Branding & Logo",
-          "WhatsApp Business AI (Coming Soon)",
-          "And much more..."
+          "1-Click Installation",
+          "Unlimited Store Data (Products, Pages, Policies etc.)",
+          "AI Email & AI Live Chat",
+          "Customizable Branding",
+          "Email sending via ReplAInow address"
         ],
-        "cta": "Try 14 Days Free",
-        "highlighted": false
+        "highlight": false,
+        "description": "Perfect for testing",
+        "cta": "Start with Starter"
       },
       {
         "name": "Growth",
-        "price": "49",
-        "description": "Most popular choice for growing brands",
-        "badge": "MOST POPULAR",
-        "aiAnswers": "2,500 AI responses included",
-        "ticketRange": "Perfect for 100–600 tickets per month",
-        "extraCost": "$0.03 per additional response",
+        "price": "€49",
+        "period": "/ Month",
+        "quota": "Up to 1500 AI responses / Month",
+        "trial": "14 days free trial",
         "features": [
-          "Live Chat Widget (AI + Human)",
-          "Mail Dashboard with AI Email Responses",
-          "Automatic Shopify Import (Products, Orders, Policies)",
-          "Multilingual Support (100+ Languages)",
-          "Unlimited Team Members (no per-user costs)",
-          "Order Tracking & Management",
-          "AI Discount Codes (unlimited)",
-          "Proactive Chat Triggers (unlimited)",
-          "Message Feed for Announcements",
-          "Product Recommendations",
-          "Custom Branding & Logo",
-          "WhatsApp Business AI (Coming Soon)",
-          "And much more..."
+          "1-Click Installation",
+          "Unlimited Store Data (Products, Pages, Policies etc.)",
+          "AI Email & AI Live Chat",
+          "Customizable Branding",
+          "Email sending with your domain"
         ],
-        "cta": "Try 14 Days Free",
-        "highlighted": true
+        "highlight": true,
+        "badge": "Most Popular Plan",
+        "description": "For growing stores",
+        "cta": "Scale with Growth"
+      },
+      {
+        "name": "Pro",
+        "price": "€99",
+        "period": "/ Month",
+        "quota": "Up to 3000 AI responses / Month",
+        "trial": "14 days free trial",
+        "features": [
+          "1-Click Installation",
+          "Unlimited Store Data (Products, Pages, Policies etc.)",
+          "AI Email & AI Live Chat",
+          "Customizable Branding",
+          "Email sending with your domain"
+        ],
+        "highlight": false,
+        "description": "For established stores",
+        "cta": "Upgrade to Pro"
       },
       {
         "name": "Scale",
-        "price": "99",
-        "description": "Operational Excellence for D2C Leaders",
-        "aiAnswers": "5,000 AI responses included",
-        "ticketRange": "Optimized for 600–1,500 tickets per month",
-        "extraCost": "$0.03 per additional response",
+        "price": "€199",
+        "period": "/ Month",
+        "quota": "Unlimited AI responses",
+        "trial": "14 days free trial",
         "features": [
-          "Live Chat Widget (AI + Human)",
-          "Mail Dashboard with AI Email Responses",
-          "Automatic Shopify Import (Products, Orders, Policies)",
-          "Multilingual Support (100+ Languages)",
-          "Unlimited Team Members (no per-user costs)",
-          "Order Tracking & Management",
-          "AI Discount Codes (unlimited)",
-          "Proactive Chat Triggers (unlimited)",
-          "Message Feed for Announcements",
-          "Product Recommendations",
-          "Custom Branding & Logo",
-          "WhatsApp Business AI (Coming Soon)",
-          "And much more..."
+          "1-Click Installation",
+          "Unlimited Store Data (Products, Pages, Policies etc.)",
+          "AI Email & AI Live Chat",
+          "Customizable Branding",
+          "Email sending with your domain"
         ],
-        "cta": "Try 14 Days Free",
-        "highlighted": false
-      },
-      {
-        "name": "Ultimate",
-        "price": "399",
-        "description": "Enterprise Support with SLA & Compliance",
-        "badge": "ENTERPRISE",
-        "aiAnswers": "40,000 AI responses included",
-        "ticketRange": "For 1,500+ tickets per month & Enterprise teams",
-        "extraCost": "$0.02 per additional response",
-        "features": [
-          "Live Chat Widget (AI + Human)",
-          "Mail Dashboard with AI Email Responses",
-          "Automatic Shopify Import (Products, Orders, Policies)",
-          "Multilingual Support (100+ Languages)",
-          "Unlimited Team Members (no per-user costs)",
-          "Order Tracking & Management",
-          "AI Discount Codes (unlimited)",
-          "Proactive Chat Triggers (unlimited)",
-          "Message Feed for Announcements",
-          "Product Recommendations",
-          "Custom Branding & Logo",
-          "WhatsApp Business AI (Coming Soon)",
-          "And much more..."
-        ],
-        "cta": "Try 14 Days Free",
-        "highlighted": false,
-        "premium": true
+        "highlight": false,
+        "description": "For enterprise teams",
+        "cta": "Go all-in with Scale"
       }
     ],
-    "bottomNote": "💜 All plans with 14-day trial · No credit card required · Via Shopify Billing · Cancel anytime"
+    "cta": "Install Now",
+    "ctaButton": "Install {0}",
+    "guarantee": "14-day money-back guarantee",
+    "savings": {
+      "badge": "COST COMPARISON",
+      "title": "Massive Cost Savings",
+      "description": "While competitors charge per ticket, you get unlimited responses with ReplAInow.",
+      "competitors": [
+        {
+          "name": "Gorgias",
+          "price": "€50+/month",
+          "surcharge": "+ €2-5 per ticket",
+          "savings": "€372+ saved/year"
+        },
+        {
+          "name": "Intercom",
+          "price": "€74+/month",
+          "surcharge": "+ €1-3 per ticket",
+          "savings": "€660+ saved/year"
+        },
+        {
+          "name": "Zendesk",
+          "price": "€115+/month",
+          "surcharge": "+ €0.50-2 per ticket",
+          "savings": "€1,152+ saved/year"
+        }
+      ],
+      "ownPlan": {
+        "name": "ReplAInow Scale",
+        "price": "€199/month",
+        "tagline": "Everything included",
+        "bullets": [
+          "Unlimited AI responses",
+          "No per-ticket fees",
+          "No hidden costs"
+        ]
+      },
+      "bottomCallout": {
+        "title": "With 1,000 tickets/month Gorgias adds €3,000+ in fees!",
+        "subtitle": "With ReplAInow you pay €0 extra — whether it's 100 or 10,000 tickets."
+      }
+    }
   },
   "testimonials": {
-    "title": "Trusted by Leading Shopify Merchants",
-    "subtitle": "Real results from real businesses",
-    "items": [
-      {
-        "name": "Michael Weber",
-        "role": "CEO, Fashion & Style GmbH",
-        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces",
-        "text": "ReplAInow reduced our support workload by 78%. The AI understands our products perfectly!",
-        "metric": "€2,840/month saved",
-        "color": "purple"
-      },
-      {
-        "name": "Sarah Klein",
-        "role": "Head of Operations, TechStore",
-        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces",
-        "text": "Best investment of 2024! Our customers now get perfect answers around the clock.",
-        "metric": "92% Automation",
-        "color": "violet"
-      },
-      {
-        "name": "Thomas Müller",
-        "role": "Owner, BeautyWorld",
-        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces",
-        "text": "Integration was done in 5 minutes. ROI after 9 days. Absolutely impressive!",
-        "metric": "ROI in 9 days",
-        "color": "pink"
-      }
-    ]
+    "title": "What Real Merchants Say",
+    "subtitle": "Join 280+ satisfied Shopify merchants"
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Everything you need to know",
+    "subtitle": "Everything you need to know about ReplAInow",
     "items": [
       {
-        "q": "Does the AI really replace my support staff?",
-        "a": "The AI automates 87% of all support requests – equivalent to 2-3 full-time employees with average ticket volume. Simple questions (product availability, order tracking, policies) are solved instantly by the AI. Complex cases are intelligently handed off to your team with complete context."
+        "question": "What is ReplAInow AI Helpdesk?",
+        "shortAnswer": "ReplAInow is an AI-powered customer support solution for Shopify with GPT-4 technology.",
+        "detailedAnswer": "ReplAInow is an AI-powered customer support solution for Shopify that automatically responds to customer queries, provides product recommendations, and is available in 32+ languages. The software uses GPT-4 technology for precise, human-like responses and integrates seamlessly into existing Shopify stores."
       },
       {
-        "q": "What happens with complex requests the AI cannot answer?",
-        "a": "The AI knows when it can't help. For complex questions, complaints, or when the customer explicitly requests a human, the AI seamlessly transfers to your team. Your agent sees the complete conversation history, all collected information (order number, phone, photos) and knows exactly what to do – no information is lost."
+        "question": "How much does ReplAInow cost?",
+        "shortAnswer": "ReplAInow starts at $19/month with a 14-day free trial.",
+        "detailedAnswer": "ReplAInow starts at $19/month for the Starter plan. Other plans: Pro ($49/month), Scale ($199/month). All plans include a 14-day free trial with no setup fees and unlimited AI responses."
       },
       {
-        "q": "How accurate is the AI? Does it make mistakes?",
-        "a": "The AI works with 99.8% accuracy because it only responds with real data from your Shopify store – no hallucinations, no estimates. Each response is self-evaluated on 5 dimensions (0-100 points). Only responses with score ≥90 are sent automatically. When uncertain, the AI prefers to escalate to your team."
+        "question": "Is ReplAInow GDPR compliant?",
+        "shortAnswer": "Yes, ReplAInow is fully GDPR compliant and meets all EU data protection requirements.",
+        "detailedAnswer": "Yes, ReplAInow is fully GDPR compliant and meets all European data protection requirements. All customer data is securely encrypted during transmission and storage, with full transparency about data processing and deletion rights."
       },
       {
-        "q": "Do I need to train the AI or enter data?",
-        "a": "No! The AI automatically imports all your Shopify data during installation: products, orders, customers, policies, pages, blog articles. Change something in Shopify? The AI knows within 5 seconds through real-time synchronization. Zero setup, zero maintenance, zero manual work."
+        "question": "Which languages does ReplAInow support?",
+        "shortAnswer": "ReplAInow natively supports 32+ languages including English, German, Spanish, French.",
+        "detailedAnswer": "ReplAInow natively supports 32+ languages including English, German, Spanish, Italian, Dutch, Portuguese, French, and more. The AI automatically detects customer language and responds accordingly, with no translation errors."
       },
       {
-        "q": "How quickly is the AI productive?",
-        "a": "From installation: 60 seconds until the AI is ready to use. It can immediately answer product questions, track orders, and explain policies. The AI knows your complete store catalog from the first moment – no training required."
-      },
-      {
-        "q": "Can I review AI responses before they're sent?",
-        "a": "Yes! You control the auto-send threshold. Set it to 90 for conservative (more manual reviews) or 80 for balanced (more automation). AI responses below the threshold go to the review queue where you can edit or approve them before sending."
-      },
-      {
-        "q": "Which languages are supported?",
-        "a": "The AI supports 100+ languages and automatically detects which language the customer is writing in. German, English, French, Spanish, Arabic, Chinese, Japanese – all automatic, no configuration needed. The AI responds fluently in the customer's language."
-      },
-      {
-        "q": "Is my customer data stored securely?",
-        "a": "Yes! We are ISO 27001 certified and GDPR compliant. All data is stored encrypted (TLS 1.3), and you have full control. Uninstall = complete automatic data deletion within 24 hours."
-      },
-      {
-        "q": "How long does installation take?",
-        "a": "Under 60 seconds. One click in the Shopify App Store, and ReplAInow automatically begins importing your store data. Activate the widget in the theme editor (1 click), done. No technical knowledge required."
-      },
-      {
-        "q": "What happens if I cancel?",
-        "a": "No contract lock-in – you can cancel anytime. Upon uninstall, all your data is automatically deleted. No hidden costs, no cancellation period, no fine print."
+        "question": "How fast does ReplAInow AI respond?",
+        "shortAnswer": "ReplAInow responds in under 3 seconds with accurate, contextual answers.",
+        "detailedAnswer": "ReplAInow responds in under 3 seconds with accurate, contextual answers. The AI analyzes customer queries, accesses real-time Shopify data, and provides personalized responses faster than any human agent."
       }
     ]
   },
@@ -796,156 +784,12 @@
       }
     ]
   },
-  "integration": {
-    "title": "Seamless Shopify Integration",
-    "subtitle": "Fully automatic setup in under 60 seconds",
-    "steps": [
-      {
-        "num": 1,
-        "title": "Install App",
-        "desc": "1-click installation from Shopify App Store",
-        "time": "30 Seconds"
-      },
-      {
-        "num": 2,
-        "title": "AI Learns Automatically",
-        "desc": "Automatic training based on your Shopify data",
-        "time": "Fully Automatic"
-      },
-      {
-        "num": 3,
-        "title": "Support Running",
-        "desc": "AI answers requests independently",
-        "time": "Live Immediately"
-      }
-    ],
-    "bottomText": "No training required. No complex setup. Simply install and go.",
-    "bottomBadge": "Live in 60 Seconds"
-  },
-  "dashboard": {
-    "title": "This Is Your Dashboard",
-    "subtitle": "Chat, Email, Customer Info, Orders – everything in one screen. No more tab chaos.",
-    "tabLivechat": "Live Chat Dashboard",
-    "tabEmail": "Email Dashboard",
-    "bottomText": "Professional interface like the big tools – but all in one"
-  },
-  "roi": {
-    "badge": "Return on Investment",
-    "title": "Measurable Results from Day 1",
-    "description": "With an average of 500 support tickets monthly, Shopify merchants save up to €3,200 per month in personnel costs with ReplAInow.",
-    "benefits": [
-      "No training costs for new employees",
-      "Scales automatically with your growth",
-      "Consistent quality at any volume"
-    ],
-    "statsLabel": "Average Savings",
-    "statsAmount": "€3,200",
-    "statsPeriod": "/Month",
-    "ticketsLabel": "Support Tickets",
-    "ticketsCount": "500+",
-    "ticketsPeriod": "per month",
-    "roiLabel": "ROI Achieved",
-    "roiDays": "11 Days",
-    "roiBadge": "Guaranteed",
-    "automationLabel": "Automation Rate",
-    "guarantee": "30-Day Money-Back Guarantee"
-  },
-  "agentProductivity": {
-    "title": "When Your Agents Take Over – Perfectly Equipped",
-    "subtitle": "AI handles 87% automatically. The other 13%? Your agents have all the tools for professional support in one place.",
-    "tools": [
-      {"title": "Product Picker", "desc": "Select variants (size, color), send as cards or checkout link", "color": "purple"},
-      {"title": "Discount Generator", "desc": "10%, 15%, 20% quick buttons. One click → customer has code", "color": "green"},
-      {"title": "Refunds", "desc": "Direct from dashboard. Select items, amount, done", "color": "blue"},
-      {"title": "Customer Journey", "desc": "Pages visited, cart contents, purchase intent score", "color": "violet"}
-    ],
-    "exampleTitle": "Example: Create Checkout Link",
-    "exampleSubtitle": "Customer interested in multiple products? One-click experience:"
-  },
-  "omnichannelUnified": {
-    "title": "One System for Chat & Email – Seamlessly Connected",
-    "subtitle": "Your customers choose the channel – your AI responds everywhere. Live chat widget + professional email helpdesk, perfectly synchronized.",
-    "liveChatBadge": "LIVE CHAT",
-    "liveChatTitle": "More Than Just a Chat Widget",
-    "liveChatDesc": "Modern multi-tab interface with visual cards and intelligent features",
-    "liveChatFeatures": [
-      "AI responds in 100+ languages, widget interface in 41 languages",
-      "Product cards with images & prices",
-      "Discount codes with 1-click copy",
-      "Proactive messages on all pages"
-    ],
-    "emailBadge": "EMAIL HELPDESK",
-    "emailTitle": "Quality Guarantee Through AI Scoring",
-    "emailDesc": "Thread-based inbox like Gmail. AI rates responses (0-100), only sends perfect emails automatically.",
-    "emailFeatures": [
-      "AI Score 90+: Auto-sent",
-      "Quality threshold adjustable",
-      "AI collects all info before escalation",
-      "Thread-based like Gmail"
-    ],
-    "unifiedLabel": "One System",
-    "unifiedSync": "Seamlessly synchronized – same AI, same data foundation, perfect transitions",
-    "unifiedFeature1Title": "100+ Languages",
-    "unifiedFeature1Desc": "Automatic detection – AI responds in customer's language. German, English, French, Japanese, Arabic... all automatic.",
-    "unifiedFeature2Title": "Visual Commerce",
-    "unifiedFeature2Desc": "Not just text: Product cards with images, checkout links with pre-filled cart, tracking cards with carrier logos.",
-    "unifiedFeature3Title": "Proactive & Smart",
-    "unifiedFeature3Desc": "Homepage greetings, product page help, flash sales – AI reaches out proactively on all pages with perfect timing.",
-    "bottomStatement": "Your customer decides how to contact – your AI responds perfectly everywhere"
-  },
-  "aiKnowledge": {
-    "title": "AI Knows EVERY Aspect of Your Store",
-    "subtitle": "Products, orders, customers, policies – all automatically synchronized. You change something? AI knows it instantly. Zero maintenance.",
-    "dataSourcesLeft": [
-      {"title": "Products", "desc": "Catalog, variants, prices", "stats": "Real-time"},
-      {"title": "Orders", "desc": "Status, tracking, history", "stats": "60 Days"},
-      {"title": "Customers", "desc": "Profiles, preferences", "stats": "Lifetime"}
-    ],
-    "dataSourcesRight": [
-      {"title": "Policies", "desc": "Returns, shipping, terms", "stats": "Auto-Sync"},
-      {"title": "Shipping", "desc": "Carriers, tracking links", "stats": "Live"},
-      {"title": "Content", "desc": "Pages, FAQs, blog", "stats": "Full"}
-    ],
-    "centerTitle": "Shopify Admin",
-    "syncLabel": "REAL-TIME SYNC",
-    "autoLabel": "Fully Automatic",
-    "benefits": [
-      {"title": "Real-Time Updates", "desc": "Shopify changes sync within seconds"},
-      {"title": "Zero Maintenance", "desc": "No manual updates, no knowledge base management"},
-      {"title": "99.8% Accuracy", "desc": "AI knows exact data, no estimates or guesses"}
-    ],
-    "stats": [
-      {"label": "Data Sources", "value": "12+"},
-      {"label": "Sync Time", "value": "<5 Sec"},
-      {"label": "Maintenance", "value": "0 Min"},
-      {"label": "Accuracy", "value": "99.8%"}
-    ],
-    "examplesTitle": "What AI Can Answer Instantly",
-    "examplesSubtitle": "Your customers ask – AI finds the answer in your store",
-    "examples": [
-      {"category": "Product Questions", "question": "Do you have this dress in size 42?", "answer": "Yes, 15 in stock!", "difficulty": "Easy"},
-      {"category": "Order Questions", "question": "Where is my order #1234?", "answer": "Shipped yesterday via DHL", "difficulty": "Easy"},
-      {"category": "Policy Questions", "question": "How long is the return period?", "answer": "30 days according to your return policy", "difficulty": "Easy"},
-      {"category": "Style Advice", "question": "Does this shirt match my jeans?", "answer": "Yes! Showing you 3 matching styles →", "difficulty": "Medium"},
-      {"category": "Order Change", "question": "Can I still change the shipping address?", "answer": "Order not shipped yet – address can be updated", "difficulty": "Medium"},
-      {"category": "VIP Service", "question": "I'm a VIP customer, is there a discount?", "answer": "Yes! 20% discount code created for you 🎁", "difficulty": "Complex"}
-    ],
-    "bottomCta": "Zero setup, zero maintenance – AI knows your store in 60 seconds"
-  },
-  "seo": {
-    "title": "ReplAInow – AI Shopify Helpdesk | Automated Customer Support",
-    "description": "The #1 AI Helpdesk solution for Shopify. 87% automation, Live Chat + Email, 100+ languages. Live in 60 seconds.",
-    "ogTitle": "ReplAInow – Enterprise AI Shopify Helpdesk",
-    "ogDescription": "Automated support without compromise. 87% of your support requests answered fully automatically."
-  },
   "finalCta": {
-    "title": "Ready to automate your support?",
-    "subtitle": "Join 24 successful Shopify merchants saving time and costs with ReplAInow",
-    "cta": "Try 14 Days Free",
-    "guarantee": "No credit card required · 30-day money-back guarantee · Cancel anytime",
-    "trustDsgvo": "GDPR Compliant",
-    "trustIso": "ISO 27001",
-    "trustMerchants": "24 Merchants",
+    "badge": "START NOW",
+    "title": "Ready for the AI revolution?",
+    "subtitle": "Over 280+ Shopify merchants already use ReplAInow. Become part of the elite and destroy your competition with superior AI technology.",
+    "cta": "INSTALL NOW",
+    "demo": "LIVE DEMO",
     "features": [
       "14 days free",
       "Setup-free",

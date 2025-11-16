@@ -11,6 +11,10 @@
     "menuOpen": "Ouvrir le menu",
     "menuClose": "Fermer le menu"
   },
-  "footer": {},
+  "footer": {
+    "company": {
+      "tagline": "Le Helpdesk IA #1 pour Shopify"
+    }
+  },
   "contact": {}
 }

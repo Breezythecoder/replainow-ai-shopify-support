@@ -1,6 +1,6 @@
 # Robots.txt for ReplAInow
 # Generated automatically - do not edit manually
-# Last updated: 2025-11-15
+# Last updated: 2025-11-16
 
 # ============================================
 # GOOGLE & TRADITIONAL SEARCH ENGINES

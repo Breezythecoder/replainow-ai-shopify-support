@@ -34,7 +34,7 @@ const UltraFooter = () => {
               </span>
             </div>
             <p className="text-gray-600 mb-6">
-              Die #1 AI-Helpdesk für Shopify
+              {t('common.footer.company.tagline')}
             </p>
             <div className="flex gap-3">
               <a 

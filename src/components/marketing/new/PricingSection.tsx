@@ -278,7 +278,7 @@ const PricingSection = () => {
                     <li className={`text-xs italic pl-5 ${
                       plan.highlighted ? 'text-white/95' : plan.premium ? 'text-gray-300' : 'text-gray-500'
                     }`}>
-                      Und viele weitere Features...
+                      {t('marketing.pricing.moreFeatures')}
                     </li>
                   )}
                 </ul>
