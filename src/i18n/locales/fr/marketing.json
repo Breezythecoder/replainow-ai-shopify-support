@@ -350,18 +350,50 @@
     "title": "Quand Vos Agents Prennent Le Relais – Parfaitement Équipés",
     "subtitle": "L'IA gère 87% automatiquement. Les autres 13% ? Vos agents ont tous les outils pour un support professionnel en un seul endroit.",
     "tools": [
-      {"title": "Sélecteur de Produits", "desc": "Sélectionnez les variantes (taille, couleur), envoyez sous forme de cartes ou lien de checkout", "color": "purple"},
-      {"title": "Générateur de Réductions", "desc": "Boutons rapides 10%, 15%, 20%. Un clic → le client a le code", "color": "green"},
-      {"title": "Remboursements", "desc": "Directement depuis le tableau de bord. Sélectionnez les articles, le montant, terminé", "color": "blue"},
-      {"title": "Parcours Client", "desc": "Pages visitées, contenu du panier, score d'intention d'achat", "color": "violet"}
+      {
+        "title": "Sélecteur de Produits",
+        "desc": "Sélectionnez les variantes (taille, couleur), envoyez sous forme de cartes ou lien de checkout",
+        "color": "purple"
+      },
+      {
+        "title": "Générateur de Réductions",
+        "desc": "Boutons rapides 10%, 15%, 20%. Un clic → le client a le code",
+        "color": "green"
+      },
+      {
+        "title": "Remboursements",
+        "desc": "Directement depuis le tableau de bord. Sélectionnez les articles, le montant, terminé",
+        "color": "blue"
+      },
+      {
+        "title": "Parcours Client",
+        "desc": "Pages visitées, contenu du panier, score d'intention d'achat",
+        "color": "violet"
+      }
     ],
     "exampleTitle": "Exemple : Créer un Lien de Checkout",
     "exampleSubtitle": "Client intéressé par plusieurs produits ? Expérience en un clic :",
     "workflowSteps": [
-      {"num": "1", "title": "Sélectionner Produits", "desc": "Robe + Chaussures + Sac"},
-      {"num": "2", "title": "Définir Variantes", "desc": "Taille M, Couleur Rouge"},
-      {"num": "3", "title": "Ajouter Réduction", "desc": "Optionnel : 20% OFF"},
-      {"num": "4", "title": "Envoyer Lien", "desc": "Client clique → Checkout"}
+      {
+        "num": "1",
+        "title": "Sélectionner Produits",
+        "desc": "Robe + Chaussures + Sac"
+      },
+      {
+        "num": "2",
+        "title": "Définir Variantes",
+        "desc": "Taille M, Couleur Rouge"
+      },
+      {
+        "num": "3",
+        "title": "Ajouter Réduction",
+        "desc": "Optionnel : 20% OFF"
+      },
+      {
+        "num": "4",
+        "title": "Envoyer Lien",
+        "desc": "Client clique → Checkout"
+      }
     ],
     "workflowResult": "Résultat : Panier pré-rempli avec 20% réduction → Checkout en un clic pour le client",
     "bottomStatement": "L'IA gère 87% automatiquement – vos agents les 13% avec les meilleurs outils"
@@ -451,38 +483,93 @@
     "title": "L'IA Connaît CHAQUE Aspect de Votre Boutique",
     "subtitle": "Produits, commandes, clients, politiques – tout synchronisé automatiquement. Vous changez quelque chose ? L'IA le sait instantanément. Zéro maintenance.",
     "dataSourcesLeft": [
-      {"title": "Produits", "desc": "Catalogue, variantes, prix", "stats": "Temps réel"},
-      {"title": "Commandes", "desc": "Statut, suivi, historique", "stats": "60 Jours"},
-      {"title": "Clients", "desc": "Profils, préférences", "stats": "À vie"}
+      {
+        "title": "Produits",
+        "desc": "Catalogue, variantes, prix",
+        "stats": "Temps réel"
+      },
+      {
+        "title": "Commandes",
+        "desc": "Statut, suivi, historique",
+        "stats": "60 Jours"
+      },
+      { "title": "Clients", "desc": "Profils, préférences", "stats": "À vie" }
     ],
     "dataSourcesRight": [
-      {"title": "Politiques", "desc": "Retours, expédition, conditions", "stats": "Auto-Sync"},
-      {"title": "Expédition", "desc": "Transporteurs, liens de suivi", "stats": "En direct"},
-      {"title": "Contenu", "desc": "Pages, FAQs, blog", "stats": "Complet"}
+      {
+        "title": "Politiques",
+        "desc": "Retours, expédition, conditions",
+        "stats": "Auto-Sync"
+      },
+      {
+        "title": "Expédition",
+        "desc": "Transporteurs, liens de suivi",
+        "stats": "En direct"
+      },
+      { "title": "Contenu", "desc": "Pages, FAQs, blog", "stats": "Complet" }
     ],
     "centerTitle": "Shopify Admin",
-    "syncLabel": "SYNCHRONISATION EN TEMPS RÉEL",
+    "syncLabel": "SYNC TEMPS RÉEL",
     "autoLabel": "Entièrement Automatique",
     "benefits": [
-      {"title": "Mises à Jour en Temps Réel", "desc": "Les changements Shopify se synchronisent en quelques secondes"},
-      {"title": "Zéro Maintenance", "desc": "Pas de mises à jour manuelles, pas de gestion de base de connaissances"},
-      {"title": "99.8% de Précision", "desc": "L'IA connaît les données exactes, sans estimations ni suppositions"}
+      {
+        "title": "Mises à Jour en Temps Réel",
+        "desc": "Les changements Shopify se synchronisent en quelques secondes"
+      },
+      {
+        "title": "Zéro Maintenance",
+        "desc": "Pas de mises à jour manuelles, pas de gestion de base de connaissances"
+      },
+      {
+        "title": "99.8% de Précision",
+        "desc": "L'IA connaît les données exactes, sans estimations ni suppositions"
+      }
     ],
     "stats": [
-      {"label": "Sources de Données", "value": "12+"},
-      {"label": "Temps de Synchro", "value": "<5 Sec"},
-      {"label": "Maintenance", "value": "0 Min"},
-      {"label": "Précision", "value": "99.8%"}
+      { "label": "Sources de Données", "value": "12+" },
+      { "label": "Temps de Synchro", "value": "<5 Sec" },
+      { "label": "Maintenance", "value": "0 Min" },
+      { "label": "Précision", "value": "99.8%" }
     ],
     "examplesTitle": "Ce Que l'IA Peut Répondre Instantanément",
     "examplesSubtitle": "Vos clients posent des questions – l'IA trouve la réponse dans votre boutique",
     "examples": [
-      {"category": "Questions Produits", "question": "Avez-vous cette robe en taille 42?", "answer": "Oui, 15 en stock!", "difficulty": "Facile"},
-      {"category": "Questions Commandes", "question": "Où est ma commande #1234?", "answer": "Expédiée hier via DHL", "difficulty": "Facile"},
-      {"category": "Questions Politiques", "question": "Quelle est la durée de retour?", "answer": "30 jours selon votre politique de retour", "difficulty": "Facile"},
-      {"category": "Conseil de Style", "question": "Cette chemise va-t-elle avec mon jean?", "answer": "Oui! Je vous montre 3 styles assortis →", "difficulty": "Moyen"},
-      {"category": "Modification Commande", "question": "Puis-je encore changer l'adresse de livraison?", "answer": "Commande pas encore expédiée – adresse modifiable", "difficulty": "Moyen"},
-      {"category": "Service VIP", "question": "Je suis client VIP, y a-t-il une réduction?", "answer": "Oui! Code de réduction 20% créé pour vous 🎁", "difficulty": "Complexe"}
+      {
+        "category": "Questions Produits",
+        "question": "Avez-vous cette robe en taille 42?",
+        "answer": "Oui, 15 en stock!",
+        "difficulty": "Facile"
+      },
+      {
+        "category": "Questions Commandes",
+        "question": "Où est ma commande #1234?",
+        "answer": "Expédiée hier via DHL",
+        "difficulty": "Facile"
+      },
+      {
+        "category": "Questions Politiques",
+        "question": "Quelle est la durée de retour?",
+        "answer": "30 jours selon votre politique de retour",
+        "difficulty": "Facile"
+      },
+      {
+        "category": "Conseil de Style",
+        "question": "Cette chemise va-t-elle avec mon jean?",
+        "answer": "Oui! Je vous montre 3 styles assortis →",
+        "difficulty": "Moyen"
+      },
+      {
+        "category": "Modification Commande",
+        "question": "Puis-je encore changer l'adresse de livraison?",
+        "answer": "Commande pas encore expédiée – adresse modifiable",
+        "difficulty": "Moyen"
+      },
+      {
+        "category": "Service VIP",
+        "question": "Je suis client VIP, y a-t-il une réduction?",
+        "answer": "Oui! Code de réduction 20% créé pour vous 🎁",
+        "difficulty": "Complexe"
+      }
     ],
     "bottomCta": "Zéro configuration, zéro maintenance – l'IA connaît votre boutique en 60 secondes"
   },
