@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import { useRef, useState, useEffect } from "react";
+import { useTranslation } from "@/i18n";
 
 // Count-up animation hook
 const useCountUp = (end: number, duration: number = 2000, shouldStart: boolean = false) => {
@@ -27,6 +28,7 @@ const useCountUp = (end: number, duration: number = 2000, shouldStart: boolean =
 };
 
 const ValuePropositionSection = () => {
+  const { t } = useTranslation();
   const statsRef = useRef(null);
   const isStatsInView = useInView(statsRef, { once: true, margin: "-100px" });
   const automationCount = useCountUp(87, 2000, isStatsInView);
@@ -40,10 +42,10 @@ const ValuePropositionSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-light text-gray-900 mb-4 tracking-tight">
-            Warum <span className="font-semibold">Shopify-Händler</span> uns wählen
+            {t('marketing.features.valueProposition.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Enterprise-Level Support-Automatisierung, die funktioniert
+            {t('marketing.features.valueProposition.subtitle')}
           </p>
         </div>
 
@@ -99,12 +101,12 @@ const ValuePropositionSection = () => {
                   
                   {/* WHITE BADGE */}
                   <div className="inline-block px-6 py-3 bg-white/20 backdrop-blur-xl rounded-full border-2 border-white/30 shadow-xl">
-                    <span className="text-sm font-black text-white tracking-wider">AUTOMATISIERUNGSRATE</span>
+                    <span className="text-sm font-black text-white tracking-wider">{t('marketing.features.valueProposition.automation')}</span>
                   </div>
                 </motion.div>
 
                 <p className="text-white/95 leading-relaxed text-xl font-medium max-w-md">
-                  Ihrer Support-Anfragen werden vollautomatisch beantwortet – präzise und markenkonform
+                  {t('marketing.features.valueProposition.automationDesc')}
                 </p>
               </div>
             </div>
@@ -153,15 +155,15 @@ const ValuePropositionSection = () => {
 
                 <div className="mb-6">
                   <div className="text-5xl md:text-6xl font-black text-gray-900 mb-4 tracking-tight leading-none">
-                    99.8<span className="text-violet-600">%</span> Genauigkeit
+                    {t('marketing.features.valueProposition.intelligenceMetric')}
                   </div>
                   <div className="inline-block px-5 py-2.5 rounded-full border-2 border-violet-300 bg-violet-50/80 backdrop-blur-sm shadow-lg">
-                    <span className="text-xs font-black text-violet-900 tracking-wider">AI-INTELLIGENZ</span>
+                    <span className="text-xs font-black text-violet-900 tracking-wider">{t('marketing.features.valueProposition.intelligence')}</span>
                   </div>
                 </div>
 
                 <p className="text-gray-800 leading-relaxed text-lg font-medium">
-                  AI kennt exakte Daten aus Ihrem Shop – keine Halluzinationen, keine Fehler, keine Schätzungen
+                  {t('marketing.features.valueProposition.intelligenceDesc')}
                 </p>
               </div>
             </div>
@@ -201,14 +203,14 @@ const ValuePropositionSection = () => {
                 </div>
 
                 <div className="mb-6">
-                  <div className="text-7xl md:text-8xl font-black text-gray-900 mb-4 tracking-tight leading-none">24/7</div>
+                  <div className="text-7xl md:text-8xl font-black text-gray-900 mb-4 tracking-tight leading-none">{t('marketing.features.valueProposition.availabilityMetric')}</div>
                   <div className="inline-block px-5 py-2.5 rounded-full border-2 border-pink-300 bg-pink-50/80 backdrop-blur-sm shadow-lg">
-                    <span className="text-xs font-black text-pink-900 tracking-wider">VERFÜGBARKEIT</span>
+                    <span className="text-xs font-black text-pink-900 tracking-wider">{t('marketing.features.valueProposition.availability')}</span>
                   </div>
                 </div>
 
                 <p className="text-gray-800 leading-relaxed text-lg font-medium">
-                  Nahtloser Support ohne Ausfallzeiten, Urlaub oder Krankheitstage – immer verfügbar
+                  {t('marketing.features.valueProposition.availabilityDesc')}
                 </p>
               </div>
             </div>

@@ -59,6 +59,18 @@
   "features": {
     "title": "¿Por Qué Elegir ReplAInow?",
     "subtitle": "Transforma tu tienda Shopify con soporte al cliente impulsado por IA",
+    "valueProposition": {
+      "title": "Por qué los comerciantes de Shopify nos eligen",
+      "subtitle": "Automatización de soporte de nivel Enterprise que funciona",
+      "automation": "TASA DE AUTOMATIZACIÓN",
+      "automationDesc": "De tus solicitudes de soporte son respondidas completamente automático, preciso y alineado con tu marca",
+      "intelligence": "INTELIGENCIA IA",
+      "intelligenceMetric": "99.8% de precisión",
+      "intelligenceDesc": "La IA conoce datos exactos de tu tienda: sin alucinaciones, sin errores, sin estimaciones",
+      "availability": "DISPONIBILIDAD",
+      "availabilityMetric": "24/7",
+      "availabilityDesc": "Soporte sin interrupciones, vacaciones o días de enfermedad: siempre disponible"
+    },
     "items": [
       {
         "title": "Respuesta en 3 Segundos",

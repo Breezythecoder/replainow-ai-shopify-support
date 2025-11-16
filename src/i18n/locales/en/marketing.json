@@ -65,6 +65,18 @@
       "highlight": "Revolutionary GPT-4.1 technology",
       "continuation": "meets perfect Shopify integration"
     },
+    "valueProposition": {
+      "title": "Why Shopify Merchants Choose Us",
+      "subtitle": "Enterprise-level support automation that works",
+      "automation": "AUTOMATION RATE",
+      "automationDesc": "Of your support requests are answered fully automatically – accurate and brand-compliant",
+      "intelligence": "AI INTELLIGENCE",
+      "intelligenceMetric": "99.8% Accuracy",
+      "intelligenceDesc": "AI knows exact data from your shop – no hallucinations, no errors, no estimates",
+      "availability": "AVAILABILITY",
+      "availabilityMetric": "24/7",
+      "availabilityDesc": "Seamless support without downtime, vacation, or sick days – always available"
+    },
     "items": [
       {
         "title": "GPT-4.1 intelligence",
