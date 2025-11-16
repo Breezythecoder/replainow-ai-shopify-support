@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Check, Zap, Sparkles } from "lucide-react";
+import { useTranslation } from "@/i18n";
 
 const PricingSection = () => {
-  const plans = [
+  const { t, getTranslation } = useTranslation();
+  const plans = getTranslation('marketing.pricing.plans') || [
     {
       name: "Launch",
       price: "19",
@@ -115,13 +117,13 @@ const PricingSection = () => {
         {/* Section Header */}
         <div className="text-center mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-6">
-            14 Tage kostenlos · Keine Kreditkarte · Shopify Billing
+            {t('marketing.pricing.badge')}
           </div>
           <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-4 tracking-tight">
-            Wähle <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">deinen Plan</span>
+            {t('marketing.pricing.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-2">
-            Alle Funktionen in jedem Plan inklusive. Du zahlst nur für AI-Antworten.
+            {t('marketing.pricing.subtitle')}
           </p>
         </div>
 
@@ -294,7 +296,7 @@ const PricingSection = () => {
           className="text-center"
         >
           <p className="text-gray-600 text-sm">
-            💜 Alle Pläne mit 14-Tage-Test · Keine Kreditkarte erforderlich · Über Shopify Billing · Jederzeit kündbar
+            {t('marketing.pricing.bottomNote')}
           </p>
         </motion.div>
       </div>
