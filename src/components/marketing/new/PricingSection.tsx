@@ -4,7 +4,7 @@ import { useTranslation } from "@/i18n";
 
 const PricingSection = () => {
   const { t, getTranslation } = useTranslation();
-  const plans = getTranslation('marketing.pricing.plans') || [
+  const plans = getTranslation("marketing.pricing.plans") || [
     {
       name: "Launch",
       price: "19",
@@ -25,10 +25,10 @@ const PricingSection = () => {
         "Produktempfehlungen",
         "Individuelles Branding & Logo",
         "WhatsApp Business KI (Demnächst verfügbar)",
-        "Und vieles mehr..."
+        "Und vieles mehr...",
       ],
       cta: "14 Tage kostenlos testen",
-      highlighted: false
+      highlighted: false,
     },
     {
       name: "Growth",
@@ -51,10 +51,10 @@ const PricingSection = () => {
         "Produktempfehlungen",
         "Individuelles Branding & Logo",
         "WhatsApp Business KI (Demnächst verfügbar)",
-        "Und vieles mehr..."
+        "Und vieles mehr...",
       ],
       cta: "14 Tage kostenlos testen",
-      highlighted: true
+      highlighted: true,
     },
     {
       name: "Scale",
@@ -76,10 +76,10 @@ const PricingSection = () => {
         "Produktempfehlungen",
         "Individuelles Branding & Logo",
         "WhatsApp Business KI (Demnächst verfügbar)",
-        "Und vieles mehr..."
+        "Und vieles mehr...",
       ],
       cta: "14 Tage kostenlos testen",
-      highlighted: false
+      highlighted: false,
     },
     {
       name: "Ultimate",
@@ -102,28 +102,27 @@ const PricingSection = () => {
         "Produktempfehlungen",
         "Individuelles Branding & Logo",
         "WhatsApp Business KI (Demnächst verfügbar)",
-        "Und vieles mehr..."
+        "Und vieles mehr...",
       ],
       cta: "14 Tage kostenlos testen",
       highlighted: false,
-      premium: true
-    }
+      premium: true,
+    },
   ];
 
   return (
     <div id="pricing" className="bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-[1600px] mx-auto px-6 md:px-8 py-12 md:py-20">
-        
         {/* Section Header */}
         <div className="text-center mb-6">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-semibold mb-6">
-            {t('marketing.pricing.badge')}
+            {t("marketing.pricing.badge")}
           </div>
           <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-4 tracking-tight">
-            {t('marketing.pricing.title')}
+            {t("marketing.pricing.title")}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-2">
-            {t('marketing.pricing.subtitle')}
+            {t("marketing.pricing.subtitle")}
           </p>
         </div>
 
@@ -136,16 +135,20 @@ const PricingSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1, duration: 0.6 }}
-              className={`relative group overflow-visible ${plan.highlighted ? 'md:scale-110 md:-translate-y-4' : ''}`}
+              className={`relative group overflow-visible ${
+                plan.highlighted ? "md:scale-110 md:-translate-y-4" : ""
+              }`}
             >
               {/* Glow effect stronger on highlighted */}
-              <div className={`absolute -inset-1 rounded-3xl blur-2xl transition-opacity duration-500 ${
-                plan.highlighted 
-                  ? 'bg-gradient-to-br from-purple-500/40 to-violet-500/40 opacity-100'
-                  : plan.premium
-                    ? 'bg-gradient-to-br from-amber-500/30 to-orange-500/30 opacity-0 group-hover:opacity-100'
-                    : 'bg-gradient-to-br from-purple-500/10 to-violet-500/10 opacity-0 group-hover:opacity-100'
-              }`} />
+              <div
+                className={`absolute -inset-1 rounded-3xl blur-2xl transition-opacity duration-500 ${
+                  plan.highlighted
+                    ? "bg-gradient-to-br from-purple-500/40 to-violet-500/40 opacity-100"
+                    : plan.premium
+                    ? "bg-gradient-to-br from-amber-500/30 to-orange-500/30 opacity-0 group-hover:opacity-100"
+                    : "bg-gradient-to-br from-purple-500/10 to-violet-500/10 opacity-0 group-hover:opacity-100"
+                }`}
+              />
 
               {/* Floating badge above the card */}
               {plan.badge && (
@@ -153,16 +156,20 @@ const PricingSection = () => {
                   <motion.div
                     className={`px-6 py-2 rounded-full shadow-elevation-4 border-2 flex items-center gap-2 ${
                       plan.premium
-                        ? 'bg-gradient-to-r from-amber-400 to-yellow-400 border-amber-500'
-                        : 'bg-white border-purple-300'
+                        ? "bg-gradient-to-r from-amber-400 to-yellow-400 border-amber-500"
+                        : "bg-white border-purple-300"
                     }`}
                     whileHover={{ scale: 1.05, y: -2 }}
                     transition={{ duration: 0.3 }}
                   >
-                    {plan.premium ? <Sparkles className="w-4 h-4 text-amber-900" /> : <Zap className="w-4 h-4 text-purple-700" />}
+                    {plan.premium ? (
+                      <Sparkles className="w-4 h-4 text-amber-900" />
+                    ) : (
+                      <Zap className="w-4 h-4 text-purple-700" />
+                    )}
                     <span
                       className={`text-xs font-black tracking-wide ${
-                        plan.premium ? 'text-amber-900' : 'text-purple-700'
+                        plan.premium ? "text-amber-900" : "text-purple-700"
                       }`}
                     >
                       {plan.badge}
@@ -170,118 +177,184 @@ const PricingSection = () => {
                   </motion.div>
                 </div>
               )}
-              
+
               {/* Solid Card with strong borders */}
-              <div className={`
+              <div
+                className={`
                 relative rounded-3xl border-2 h-full overflow-hidden
-                ${plan.highlighted 
-                  ? 'bg-gradient-to-br from-purple-600 to-violet-600 text-white border-purple-400 shadow-elevation-5' 
-                  : plan.premium
-                    ? 'bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700 text-white shadow-elevation-5'
-                    : 'bg-white text-gray-900 border-gray-200 shadow-card-strong hover:shadow-white-card-hover hover:border-purple-400'
+                ${
+                  plan.highlighted
+                    ? "bg-gradient-to-br from-purple-600 to-violet-600 text-white border-purple-400 shadow-elevation-5"
+                    : plan.premium
+                    ? "bg-gradient-to-br from-gray-800 to-gray-900 border-gray-700 text-white shadow-elevation-5"
+                    : "bg-white text-gray-900 border-gray-200 shadow-card-strong hover:shadow-white-card-hover hover:border-purple-400"
                 }
                 transition-all duration-300
-              `}>
+              `}
+              >
                 <div className="p-6">
-                {/* Plan Name */}
-                <h3 className={`text-xl font-bold mb-2 ${
-                  plan.highlighted || plan.premium ? 'text-white' : 'text-gray-900'
-                }`}>
-                  {plan.name}
-                </h3>
-                
-                {/* Description */}
-                <p className={`text-xs mb-4 leading-relaxed ${
-                  plan.highlighted ? 'text-white' : plan.premium ? 'text-gray-200' : 'text-gray-600'
-                }`}>
-                  {plan.description}
-                </p>
+                  {/* Plan Name */}
+                  <h3
+                    className={`text-xl font-bold mb-2 ${
+                      plan.highlighted || plan.premium
+                        ? "text-white"
+                        : "text-gray-900"
+                    }`}
+                  >
+                    {plan.name}
+                  </h3>
 
-                {/* Price with hover animation */}
-                <motion.div 
-                  className="mb-4"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="flex items-baseline gap-1">
-                    <span className={`text-5xl font-light ${
-                      plan.highlighted || plan.premium 
-                        ? 'text-white' 
-                        : 'text-transparent bg-clip-text bg-gradient-to-br from-gray-900 via-purple-600 to-gray-900'
-                    }`}>
-                      ${plan.price}
-                    </span>
-                    <span className={`text-sm ${
-                      plan.highlighted ? 'text-white/95' : plan.premium ? 'text-gray-300' : 'text-gray-500'
-                    }`}>
-                      /Monat
-                    </span>
-                  </div>
-                </motion.div>
+                  {/* Description */}
+                  <p
+                    className={`text-xs mb-4 leading-relaxed ${
+                      plan.highlighted
+                        ? "text-white"
+                        : plan.premium
+                        ? "text-gray-200"
+                        : "text-gray-600"
+                    }`}
+                  >
+                    {plan.description}
+                  </p>
 
-                {/* AI Answers Info */}
-                <div className={`mb-4 pb-4 border-b ${
-                  plan.highlighted ? 'border-white/20' : plan.premium ? 'border-gray-700' : 'border-gray-200'
-                }`}>
-                  <div className={`text-sm font-semibold mb-1 ${
-                    plan.highlighted || plan.premium ? 'text-white' : 'text-purple-700'
-                  }`}>
-                    {plan.aiAnswers}
-                  </div>
-                  <div className={`text-xs mb-1 ${
-                    plan.highlighted ? 'text-white/95' : plan.premium ? 'text-gray-300' : 'text-gray-700'
-                  }`}>
-                    {plan.ticketRange}
-                  </div>
-                  <div className={`text-xs ${
-                    plan.highlighted ? 'text-white/95' : plan.premium ? 'text-gray-300' : 'text-gray-600'
-                  }`}>
-                    {plan.extraCost}
-                  </div>
-                </div>
-
-                {/* CTA Button */}
-                <button className={`
-                  w-full py-3 rounded-xl font-bold text-sm transition-all mb-4
-                  ${plan.highlighted 
-                    ? 'bg-white text-purple-700 hover:bg-gray-50 shadow-white-button hover:shadow-white-button-hover' 
-                    : plan.premium
-                      ? 'bg-gradient-to-r from-purple-500 to-violet-500 text-white hover:from-purple-600 hover:to-violet-600 shadow-elevation-3'
-                      : 'bg-gradient-to-r from-purple-600 to-violet-600 text-white hover:from-purple-700 hover:to-violet-700 shadow-elevation-3 hover:shadow-elevation-4'
-                  }
-                `}>
-                  {plan.cta}
-                </button>
-
-                {/* Features Header */}
-                <div className={`text-xs font-bold mb-3 ${
-                  plan.highlighted || plan.premium ? 'text-white' : 'text-gray-900'
-                }`}>
-                  Alles inklusive
-                </div>
-
-                {/* Features List - Condensed */}
-                <ul className="space-y-2 text-xs">
-                  {plan.features.slice(0, 8).map((feature, fi) => (
-                    <li key={fi} className="flex items-start gap-2">
-                      <Check className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${
-                        plan.highlighted || plan.premium ? 'text-white' : 'text-purple-700'
-                      }`} />
-                      <span className={`leading-tight ${
-                        plan.highlighted ? 'text-white' : plan.premium ? 'text-gray-200' : 'text-gray-700'
-                      }`}>
-                        {feature}
+                  {/* Price with hover animation */}
+                  <motion.div
+                    className="mb-4"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <div className="flex items-baseline gap-1">
+                      <span
+                        className={`text-5xl font-light ${
+                          plan.highlighted || plan.premium
+                            ? "text-white"
+                            : "text-transparent bg-clip-text bg-gradient-to-br from-gray-900 via-purple-600 to-gray-900"
+                        }`}
+                      >
+                        ${plan.price}
                       </span>
-                    </li>
-                  ))}
-                  {plan.features.length > 8 && (
-                    <li className={`text-xs italic pl-5 ${
-                      plan.highlighted ? 'text-white/95' : plan.premium ? 'text-gray-300' : 'text-gray-500'
-                    }`}>
-                      {t('marketing.pricing.moreFeatures')}
-                    </li>
-                  )}
-                </ul>
+                      <span
+                        className={`text-sm ${
+                          plan.highlighted
+                            ? "text-white/95"
+                            : plan.premium
+                            ? "text-gray-300"
+                            : "text-gray-500"
+                        }`}
+                      >
+                        /Monat
+                      </span>
+                    </div>
+                  </motion.div>
+
+                  {/* AI Answers Info */}
+                  <div
+                    className={`mb-4 pb-4 border-b ${
+                      plan.highlighted
+                        ? "border-white/20"
+                        : plan.premium
+                        ? "border-gray-700"
+                        : "border-gray-200"
+                    }`}
+                  >
+                    <div
+                      className={`text-sm font-semibold mb-1 ${
+                        plan.highlighted || plan.premium
+                          ? "text-white"
+                          : "text-purple-700"
+                      }`}
+                    >
+                      {plan.aiAnswers}
+                    </div>
+                    <div
+                      className={`text-xs mb-1 ${
+                        plan.highlighted
+                          ? "text-white/95"
+                          : plan.premium
+                          ? "text-gray-300"
+                          : "text-gray-700"
+                      }`}
+                    >
+                      {plan.ticketRange}
+                    </div>
+                    <div
+                      className={`text-xs ${
+                        plan.highlighted
+                          ? "text-white/95"
+                          : plan.premium
+                          ? "text-gray-300"
+                          : "text-gray-600"
+                      }`}
+                    >
+                      {plan.extraCost}
+                    </div>
+                  </div>
+
+                  {/* CTA Button */}
+                  <button
+                    className={`
+                  w-full py-3 rounded-xl font-bold text-sm transition-all mb-4
+                  ${
+                    plan.highlighted
+                      ? "bg-white text-purple-700 hover:bg-gray-50 shadow-white-button hover:shadow-white-button-hover"
+                      : plan.premium
+                      ? "bg-gradient-to-r from-purple-500 to-violet-500 text-white hover:from-purple-600 hover:to-violet-600 shadow-elevation-3"
+                      : "bg-gradient-to-r from-purple-600 to-violet-600 text-white hover:from-purple-700 hover:to-violet-700 shadow-elevation-3 hover:shadow-elevation-4"
+                  }
+                `}
+                  >
+                    {plan.cta}
+                  </button>
+
+                  {/* Features Header */}
+                  <div
+                    className={`text-xs font-bold mb-3 ${
+                      plan.highlighted || plan.premium
+                        ? "text-white"
+                        : "text-gray-900"
+                    }`}
+                  >
+                    Alles inklusive
+                  </div>
+
+                  {/* Features List - Condensed */}
+                  <ul className="space-y-2 text-xs">
+                    {plan.features.slice(0, 8).map((feature, fi) => (
+                      <li key={fi} className="flex items-start gap-2">
+                        <Check
+                          className={`w-3.5 h-3.5 flex-shrink-0 mt-0.5 ${
+                            plan.highlighted || plan.premium
+                              ? "text-white"
+                              : "text-purple-700"
+                          }`}
+                        />
+                        <span
+                          className={`leading-tight ${
+                            plan.highlighted
+                              ? "text-white"
+                              : plan.premium
+                              ? "text-gray-200"
+                              : "text-gray-700"
+                          }`}
+                        >
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                    {plan.features.length > 8 && (
+                      <li
+                        className={`text-xs italic pl-5 ${
+                          plan.highlighted
+                            ? "text-white/95"
+                            : plan.premium
+                            ? "text-gray-300"
+                            : "text-gray-500"
+                        }`}
+                      >
+                        {t("marketing.pricing.moreFeatures")}
+                      </li>
+                    )}
+                  </ul>
                 </div>
               </div>
             </motion.div>
@@ -296,7 +369,7 @@ const PricingSection = () => {
           className="text-center"
         >
           <p className="text-gray-600 text-sm">
-            {t('marketing.pricing.bottomNote')}
+            {t("marketing.pricing.bottomNote")}
           </p>
         </motion.div>
       </div>

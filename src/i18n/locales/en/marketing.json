@@ -555,11 +555,7 @@
         {
           "name": "Gorgias",
           "price": "€50+/month",
-          "bulletPoints": [
-            "Basic macros",
-            "Slow support",
-            "Limited languages"
-          ],
+          "bulletPoints": ["Basic macros", "Slow support", "Limited languages"],
           "summary": "€372+ extra per year for basic automation"
         },
         {
@@ -733,22 +729,14 @@
       {
         "name": "Fashion & Mode",
         "example": "ModeStore",
-        "challenges": [
-          "Size consulting",
-          "Returns",
-          "Styling tips"
-        ],
+        "challenges": ["Size consulting", "Returns", "Styling tips"],
         "solution": "AI recognizes product features and gives personalized recommendations",
         "results": "+45% conversion, -60% support tickets"
       },
       {
         "name": "Electronics & Tech",
         "example": "TechGadgets",
-        "challenges": [
-          "Technical questions",
-          "Compatibility",
-          "Setup help"
-        ],
+        "challenges": ["Technical questions", "Compatibility", "Setup help"],
         "solution": "AI knows all product specifications and solves 90% of questions",
         "results": "+67% customer satisfaction, -80% wait times"
       },
@@ -766,11 +754,7 @@
       {
         "name": "Home & Garden",
         "example": "HomeGarden",
-        "challenges": [
-          "Assembly instructions",
-          "Care tips",
-          "Compatibility"
-        ],
+        "challenges": ["Assembly instructions", "Care tips", "Compatibility"],
         "solution": "AI provides detailed instructions and care tips",
         "results": "+38% customer satisfaction, -55% support effort"
       }
@@ -854,18 +838,34 @@
     "title": "When Your Agents Take Over – Perfectly Equipped",
     "subtitle": "AI handles 87% automatically. The other 13%? Your agents have all the tools for professional support in one place.",
     "tools": [
-      {"title": "Product Picker", "desc": "Select variants (size, color), send as cards or checkout link", "color": "purple"},
-      {"title": "Discount Generator", "desc": "10%, 15%, 20% quick buttons. One click → customer has code", "color": "green"},
-      {"title": "Refunds", "desc": "Direct from dashboard. Select items, amount, done", "color": "blue"},
-      {"title": "Customer Journey", "desc": "Pages visited, cart contents, purchase intent score", "color": "violet"}
+      {
+        "title": "Product Picker",
+        "desc": "Select variants (size, color), send as cards or checkout link",
+        "color": "purple"
+      },
+      {
+        "title": "Discount Generator",
+        "desc": "10%, 15%, 20% quick buttons. One click → customer has code",
+        "color": "green"
+      },
+      {
+        "title": "Refunds",
+        "desc": "Direct from dashboard. Select items, amount, done",
+        "color": "blue"
+      },
+      {
+        "title": "Customer Journey",
+        "desc": "Pages visited, cart contents, purchase intent score",
+        "color": "violet"
+      }
     ],
     "exampleTitle": "Example: Create Checkout Link",
     "exampleSubtitle": "Customer interested in multiple products? One-click experience:",
     "workflowSteps": [
-      {"num": "1", "title": "Select Products", "desc": "Dress + Shoes + Bag"},
-      {"num": "2", "title": "Set Variants", "desc": "Size M, Color Red"},
-      {"num": "3", "title": "Add Discount", "desc": "Optional: 20% OFF"},
-      {"num": "4", "title": "Send Link", "desc": "Customer clicks → Checkout"}
+      { "num": "1", "title": "Select Products", "desc": "Dress + Shoes + Bag" },
+      { "num": "2", "title": "Set Variants", "desc": "Size M, Color Red" },
+      { "num": "3", "title": "Add Discount", "desc": "Optional: 20% OFF" },
+      { "num": "4", "title": "Send Link", "desc": "Customer clicks → Checkout" }
     ],
     "workflowResult": "Result: Pre-filled cart with 20% discount → One-click checkout for customer",
     "bottomStatement": "AI handles 87% automatically – your agents the 13% with the best tools"
@@ -905,38 +905,97 @@
     "title": "AI Knows EVERY Aspect of Your Store",
     "subtitle": "Products, orders, customers, policies – all automatically synchronized. You change something? AI knows it instantly. Zero maintenance.",
     "dataSourcesLeft": [
-      {"title": "Products", "desc": "Catalog, variants, prices", "stats": "Real-time"},
-      {"title": "Orders", "desc": "Status, tracking, history", "stats": "60 Days"},
-      {"title": "Customers", "desc": "Profiles, preferences", "stats": "Lifetime"}
+      {
+        "title": "Products",
+        "desc": "Catalog, variants, prices",
+        "stats": "Real-time"
+      },
+      {
+        "title": "Orders",
+        "desc": "Status, tracking, history",
+        "stats": "60 Days"
+      },
+      {
+        "title": "Customers",
+        "desc": "Profiles, preferences",
+        "stats": "Lifetime"
+      }
     ],
     "dataSourcesRight": [
-      {"title": "Policies", "desc": "Returns, shipping, terms", "stats": "Auto-Sync"},
-      {"title": "Shipping", "desc": "Carriers, tracking links", "stats": "Live"},
-      {"title": "Content", "desc": "Pages, FAQs, blog", "stats": "Full"}
+      {
+        "title": "Policies",
+        "desc": "Returns, shipping, terms",
+        "stats": "Auto-Sync"
+      },
+      {
+        "title": "Shipping",
+        "desc": "Carriers, tracking links",
+        "stats": "Live"
+      },
+      { "title": "Content", "desc": "Pages, FAQs, blog", "stats": "Full" }
     ],
     "centerTitle": "Shopify Admin",
     "syncLabel": "REAL-TIME SYNC",
     "autoLabel": "Fully Automatic",
     "benefits": [
-      {"title": "Real-Time Updates", "desc": "Shopify changes sync within seconds"},
-      {"title": "Zero Maintenance", "desc": "No manual updates, no knowledge base management"},
-      {"title": "99.8% Accuracy", "desc": "AI knows exact data, no estimates or guesses"}
+      {
+        "title": "Real-Time Updates",
+        "desc": "Shopify changes sync within seconds"
+      },
+      {
+        "title": "Zero Maintenance",
+        "desc": "No manual updates, no knowledge base management"
+      },
+      {
+        "title": "99.8% Accuracy",
+        "desc": "AI knows exact data, no estimates or guesses"
+      }
     ],
     "stats": [
-      {"label": "Data Sources", "value": "12+"},
-      {"label": "Sync Time", "value": "<5 Sec"},
-      {"label": "Maintenance", "value": "0 Min"},
-      {"label": "Accuracy", "value": "99.8%"}
+      { "label": "Data Sources", "value": "12+" },
+      { "label": "Sync Time", "value": "<5 Sec" },
+      { "label": "Maintenance", "value": "0 Min" },
+      { "label": "Accuracy", "value": "99.8%" }
     ],
     "examplesTitle": "What AI Can Answer Instantly",
     "examplesSubtitle": "Your customers ask – AI finds the answer in your store",
     "examples": [
-      {"category": "Product Questions", "question": "Do you have this dress in size 42?", "answer": "Yes, 15 in stock!", "difficulty": "Easy"},
-      {"category": "Order Questions", "question": "Where is my order #1234?", "answer": "Shipped yesterday via DHL", "difficulty": "Easy"},
-      {"category": "Policy Questions", "question": "How long is the return period?", "answer": "30 days according to your return policy", "difficulty": "Easy"},
-      {"category": "Style Advice", "question": "Does this shirt match my jeans?", "answer": "Yes! Showing you 3 matching styles →", "difficulty": "Medium"},
-      {"category": "Order Change", "question": "Can I still change the shipping address?", "answer": "Order not shipped yet – address can be updated", "difficulty": "Medium"},
-      {"category": "VIP Service", "question": "I'm a VIP customer, is there a discount?", "answer": "Yes! 20% discount code created for you 🎁", "difficulty": "Complex"}
+      {
+        "category": "Product Questions",
+        "question": "Do you have this dress in size 42?",
+        "answer": "Yes, 15 in stock!",
+        "difficulty": "Easy"
+      },
+      {
+        "category": "Order Questions",
+        "question": "Where is my order #1234?",
+        "answer": "Shipped yesterday via DHL",
+        "difficulty": "Easy"
+      },
+      {
+        "category": "Policy Questions",
+        "question": "How long is the return period?",
+        "answer": "30 days according to your return policy",
+        "difficulty": "Easy"
+      },
+      {
+        "category": "Style Advice",
+        "question": "Does this shirt match my jeans?",
+        "answer": "Yes! Showing you 3 matching styles →",
+        "difficulty": "Medium"
+      },
+      {
+        "category": "Order Change",
+        "question": "Can I still change the shipping address?",
+        "answer": "Order not shipped yet – address can be updated",
+        "difficulty": "Medium"
+      },
+      {
+        "category": "VIP Service",
+        "question": "I'm a VIP customer, is there a discount?",
+        "answer": "Yes! 20% discount code created for you 🎁",
+        "difficulty": "Complex"
+      }
     ],
     "bottomCta": "Zero setup, zero maintenance – AI knows your store in 60 seconds"
   },
@@ -954,12 +1013,7 @@
     "trustDsgvo": "GDPR Compliant",
     "trustIso": "ISO 27001",
     "trustMerchants": "24 Merchants",
-    "features": [
-      "14 days free",
-      "Setup-free",
-      "Cancel anytime",
-      "Money-back"
-    ],
+    "features": ["14 days free", "Setup-free", "Cancel anytime", "Money-back"],
     "stats": {
       "title": "Why 280+ Shopify merchants rely on ReplAInow",
       "subtitle": "Start today with the 14-day free trial",

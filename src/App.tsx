@@ -30,7 +30,9 @@ import { LocaleProvider, useLocale } from "@/i18n/LocaleContext";
 
 // Lazy load routes
 const Index = lazy(() => import("./pages/NewIndex"));
-const ShopifyBannersPreview = lazy(() => import("./pages/ShopifyBannersPreview"));
+const ShopifyBannersPreview = lazy(
+  () => import("./pages/ShopifyBannersPreview")
+);
 const BannersExport = lazy(() => import("./pages/BannersExport"));
 const BannerExportRaw = lazy(() => import("./pages/BannerExportRaw"));
 const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
@@ -46,9 +48,15 @@ const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Content Pages (SEO-optimized killer content!)
-const ShopifyKundensupportAutomatisieren = lazy(() => import("./pages/content/ShopifyKundensupportAutomatisieren"));
-const Support24_7Shopify = lazy(() => import("./pages/content/Support24-7Shopify"));
-const SupportKostenSenken = lazy(() => import("./pages/content/SupportKostenSenken"));
+const ShopifyKundensupportAutomatisieren = lazy(
+  () => import("./pages/content/ShopifyKundensupportAutomatisieren")
+);
+const Support24_7Shopify = lazy(
+  () => import("./pages/content/Support24-7Shopify")
+);
+const SupportKostenSenken = lazy(
+  () => import("./pages/content/SupportKostenSenken")
+);
 
 const SitemapXML = lazy(() => import("./pages/SitemapXML"));
 const RobotsTXT = lazy(() => import("./pages/RobotsTXT"));
@@ -105,25 +113,61 @@ const AppShell = () => {
           <Route path="/fr" element={<Index />} />
           <Route path="/es" element={<Index />} />
           {/* Content Pages - DE (root) */}
-          <Route path="/shopify-kundensupport-automatisieren" element={<ShopifyKundensupportAutomatisieren />} />
-          <Route path="/24-7-kundensupport-shopify" element={<Support24_7Shopify />} />
-          <Route path="/shopify-support-kosten-senken" element={<SupportKostenSenken />} />
-          
+          <Route
+            path="/shopify-kundensupport-automatisieren"
+            element={<ShopifyKundensupportAutomatisieren />}
+          />
+          <Route
+            path="/24-7-kundensupport-shopify"
+            element={<Support24_7Shopify />}
+          />
+          <Route
+            path="/shopify-support-kosten-senken"
+            element={<SupportKostenSenken />}
+          />
+
           {/* Content Pages - EN */}
-          <Route path="/en/shopify-kundensupport-automatisieren" element={<ShopifyKundensupportAutomatisieren />} />
-          <Route path="/en/24-7-kundensupport-shopify" element={<Support24_7Shopify />} />
-          <Route path="/en/shopify-support-kosten-senken" element={<SupportKostenSenken />} />
-          
+          <Route
+            path="/en/shopify-kundensupport-automatisieren"
+            element={<ShopifyKundensupportAutomatisieren />}
+          />
+          <Route
+            path="/en/24-7-kundensupport-shopify"
+            element={<Support24_7Shopify />}
+          />
+          <Route
+            path="/en/shopify-support-kosten-senken"
+            element={<SupportKostenSenken />}
+          />
+
           {/* Content Pages - ES */}
-          <Route path="/es/shopify-kundensupport-automatisieren" element={<ShopifyKundensupportAutomatisieren />} />
-          <Route path="/es/24-7-kundensupport-shopify" element={<Support24_7Shopify />} />
-          <Route path="/es/shopify-support-kosten-senken" element={<SupportKostenSenken />} />
-          
+          <Route
+            path="/es/shopify-kundensupport-automatisieren"
+            element={<ShopifyKundensupportAutomatisieren />}
+          />
+          <Route
+            path="/es/24-7-kundensupport-shopify"
+            element={<Support24_7Shopify />}
+          />
+          <Route
+            path="/es/shopify-support-kosten-senken"
+            element={<SupportKostenSenken />}
+          />
+
           {/* Content Pages - FR */}
-          <Route path="/fr/shopify-kundensupport-automatisieren" element={<ShopifyKundensupportAutomatisieren />} />
-          <Route path="/fr/24-7-kundensupport-shopify" element={<Support24_7Shopify />} />
-          <Route path="/fr/shopify-support-kosten-senken" element={<SupportKostenSenken />} />
-          
+          <Route
+            path="/fr/shopify-kundensupport-automatisieren"
+            element={<ShopifyKundensupportAutomatisieren />}
+          />
+          <Route
+            path="/fr/24-7-kundensupport-shopify"
+            element={<Support24_7Shopify />}
+          />
+          <Route
+            path="/fr/shopify-support-kosten-senken"
+            element={<SupportKostenSenken />}
+          />
+
           <Route path="/sitemap.xml" element={<SitemapXML />} />
           <Route path="/robots.txt" element={<RobotsTXT />} />
           <Route
@@ -139,7 +183,7 @@ const AppShell = () => {
           <Route path="/refund" element={<RefundPolicy />} />
           <Route path="/cookies" element={<CookiePolicy />} />
           <Route path="/contact" element={<Contact />} />
-          
+
           {/* Legal & Contact Pages - EN */}
           <Route path="/en/privacy" element={<PrivacyPolicy />} />
           <Route path="/en/terms" element={<TermsOfService />} />
@@ -149,7 +193,7 @@ const AppShell = () => {
           <Route path="/en/refund" element={<RefundPolicy />} />
           <Route path="/en/cookies" element={<CookiePolicy />} />
           <Route path="/en/contact" element={<Contact />} />
-          
+
           {/* Legal & Contact Pages - ES */}
           <Route path="/es/privacy" element={<PrivacyPolicy />} />
           <Route path="/es/terms" element={<TermsOfService />} />
@@ -159,7 +203,7 @@ const AppShell = () => {
           <Route path="/es/refund" element={<RefundPolicy />} />
           <Route path="/es/cookies" element={<CookiePolicy />} />
           <Route path="/es/contact" element={<Contact />} />
-          
+
           {/* Legal & Contact Pages - FR */}
           <Route path="/fr/privacy" element={<PrivacyPolicy />} />
           <Route path="/fr/terms" element={<TermsOfService />} />
@@ -169,7 +213,7 @@ const AppShell = () => {
           <Route path="/fr/refund" element={<RefundPolicy />} />
           <Route path="/fr/cookies" element={<CookiePolicy />} />
           <Route path="/fr/contact" element={<Contact />} />
-          
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>

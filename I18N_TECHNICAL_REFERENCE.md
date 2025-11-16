@@ -53,14 +53,14 @@ export const translations: Record<SupportedLocale, LocaleTranslations> = {
 // Splits: ['marketing', 'hero', 'title']
 
 const getTranslationForLocale = (key: string, locale: Locale) => {
-  const parts = key.split('.');
+  const parts = key.split(".");
   let value: any = translations[locale];
-  
+
   // Traverse: translations['de']['marketing']['hero']['title']
   for (const part of parts) {
     value = value[part];
   }
-  
+
   return value || key; // Return key if not found
 };
 ```
@@ -90,15 +90,15 @@ getLocaleFromPath('/') → 'de' (default)
 const { t } = useTranslation();
 
 // Basic usage
-t('marketing.hero.title')
+t("marketing.hero.title");
 // → "Your 24/7 AI Employee for Shopify"
 
 // With namespace
-t('common.navigation.features')
+t("common.navigation.features");
 // → "Features"
 
 // Fallback if key missing
-t('marketing.missing.key')
+t("marketing.missing.key");
 // → "marketing.missing.key" (returns key itself)
 ```
 
@@ -108,16 +108,16 @@ t('marketing.missing.key')
 const { getTranslation } = useTranslation();
 
 // Get array
-const items = getTranslation('marketing.faq.items');
+const items = getTranslation("marketing.faq.items");
 // → [{q: "...", a: "..."}, ...]
 
 // Get object
-const pricing = getTranslation('marketing.pricing');
+const pricing = getTranslation("marketing.pricing");
 // → {title: "...", subtitle: "...", plans: [...]}
 
 // With fallback
-const items = getTranslation('marketing.section.items') || [
-  { title: "Fallback", desc: "..." }
+const items = getTranslation("marketing.section.items") || [
+  { title: "Fallback", desc: "..." },
 ];
 ```
 
@@ -169,9 +169,9 @@ If 4 spaces → nested inside previous section!
 ```json
 {
   "items": [
-    { "title": "Item 1", "desc": "..." },  // ← comma
-    { "title": "Item 2", "desc": "..." },  // ← comma
-    { "title": "Item 3", "desc": "..." }   // ← NO comma (last)
+    { "title": "Item 1", "desc": "..." }, // ← comma
+    { "title": "Item 2", "desc": "..." }, // ← comma
+    { "title": "Item 3", "desc": "..." } // ← NO comma (last)
   ]
 }
 ```
@@ -179,6 +179,7 @@ If 4 spaces → nested inside previous section!
 ### **Rule #4: Validation**
 
 **Always validate after editing:**
+
 ```bash
 jq '.' src/i18n/locales/de/marketing.json > /dev/null
 # No output = valid ✅
@@ -186,6 +187,7 @@ jq '.' src/i18n/locales/de/marketing.json > /dev/null
 ```
 
 **Common Errors:**
+
 - Missing comma between sections
 - Extra comma after last item
 - Unclosed bracket
@@ -229,11 +231,11 @@ import { useTranslation } from "@/i18n";
 
 const SimpleComponent = () => {
   const { t } = useTranslation();
-  
+
   return (
     <div>
-      <h1>{t('marketing.section.title')}</h1>
-      <p>{t('marketing.section.subtitle')}</p>
+      <h1>{t("marketing.section.title")}</h1>
+      <p>{t("marketing.section.subtitle")}</p>
     </div>
   );
 };
@@ -244,16 +246,16 @@ const SimpleComponent = () => {
 ```typescript
 const ComponentWithArray = () => {
   const { t, getTranslation } = useTranslation();
-  
-  const items = getTranslation('marketing.section.items') || [
+
+  const items = getTranslation("marketing.section.items") || [
     { title: "Fallback 1", desc: "..." },
-    { title: "Fallback 2", desc: "..." }
+    { title: "Fallback 2", desc: "..." },
   ];
-  
+
   return (
     <div>
-      <h2>{t('marketing.section.title')}</h2>
-      {items.map(item => (
+      <h2>{t("marketing.section.title")}</h2>
+      {items.map((item) => (
         <div key={item.title}>
           <h3>{item.title}</h3>
           <p>{item.desc}</p>
@@ -269,21 +271,21 @@ const ComponentWithArray = () => {
 ```typescript
 const ComponentWithIcons = () => {
   const { getTranslation } = useTranslation();
-  
+
   const iconComponents = [Icon1, Icon2, Icon3];
-  const data = getTranslation('marketing.section.items') || fallback;
-  
+  const data = getTranslation("marketing.section.items") || fallback;
+
   // Map icons to data
   const items = data.map((item, i) => ({
     ...item,
-    icon: iconComponents[i]
+    icon: iconComponents[i],
   }));
-  
+
   return items.map((item, i) => {
-    const Icon = item.icon;  // ← Extract component
+    const Icon = item.icon; // ← Extract component
     return (
       <div key={i}>
-        <Icon className="w-6 h-6" />  {/* ← Render as component */}
+        <Icon className="w-6 h-6" /> {/* ← Render as component */}
         <h3>{item.title}</h3>
       </div>
     );
@@ -306,22 +308,26 @@ const ComponentWithIcons = () => {
   <Route path="/en" element={<Index />} />
   <Route path="/es" element={<Index />} />
   <Route path="/fr" element={<Index />} />
-  
+
   {/* Legal pages - 8 pages × 4 locales = 32 routes */}
   <Route path="/privacy" element={<PrivacyPolicy />} />
   <Route path="/en/privacy" element={<PrivacyPolicy />} />
   <Route path="/es/privacy" element={<PrivacyPolicy />} />
   <Route path="/fr/privacy" element={<PrivacyPolicy />} />
   {/* Repeat for: terms, security, impressum, refund, cookies, uninstall, contact */}
-  
+
   {/* Content pages - 3 pages × 4 locales = 12 routes */}
   <Route path="/shopify-kundensupport-automatisieren" element={<Content1 />} />
-  <Route path="/en/shopify-kundensupport-automatisieren" element={<Content1 />} />
+  <Route
+    path="/en/shopify-kundensupport-automatisieren"
+    element={<Content1 />}
+  />
   {/* Repeat for ES, FR */}
 </Routes>
 ```
 
 **Why so many routes?**
+
 - User on `/en` clicks Privacy → goes to `/en/privacy`
 - Navigation stays English
 - Footer stays English
@@ -334,17 +340,20 @@ This is how Stripe, Shopify, all enterprise SaaS do it!
 
 ```typescript
 // In UltraFooter.tsx
-const currentLocale = location.pathname.startsWith('/en') ? '/en' 
-                    : location.pathname.startsWith('/es') ? '/es'
-                    : location.pathname.startsWith('/fr') ? '/fr'
-                    : '';
+const currentLocale = location.pathname.startsWith("/en")
+  ? "/en"
+  : location.pathname.startsWith("/es")
+  ? "/es"
+  : location.pathname.startsWith("/fr")
+  ? "/fr"
+  : "";
 
 const getPageLink = (path: string) => {
   return `${currentLocale}${path}`;
 };
 
 // Usage:
-<a href={getPageLink('/privacy')}>Privacy</a>
+<a href={getPageLink("/privacy")}>Privacy</a>;
 // On /en → href="/en/privacy" ✅
 // On /es → href="/es/privacy" ✅
 ```
@@ -358,6 +367,7 @@ const getPageLink = (path: string) => {
 **Symptom:** Page shows "marketing.section.key" instead of translation
 
 **Diagnosis:**
+
 ```bash
 # 1. Check if key exists
 grep -r "section.key" src/i18n/locales/
@@ -379,13 +389,16 @@ jq '.' src/i18n/locales/en/marketing.json > /dev/null
 **Diagnosis:** Icon called as function instead of component
 
 **Fix:**
+
 ```typescript
 // ❌ WRONG:
-{icons[i]({ className: "..." })}
+{
+  icons[i]({ className: "..." });
+}
 
 // ✅ RIGHT:
 const Icon = icons[i];
-<Icon className="..." />
+<Icon className="..." />;
 ```
 
 ### **Problem: JSON Section Not Loading**
@@ -395,6 +408,7 @@ const Icon = icons[i];
 **Diagnosis:** Wrong nesting (section inside another section)
 
 **Fix:**
+
 ```bash
 # Check indentation
 awk 'NR>=1040 && NR<=1050 {printf "%4d:%s\n", NR, $0}' file.json
@@ -410,6 +424,7 @@ awk 'NR>=1040 && NR<=1050 {printf "%4d:%s\n", NR, $0}' file.json
 **Diagnosis:** Links not using getPageLink() helper
 
 **Fix:** Already fixed in UltraFooter.tsx! If it breaks, check:
+
 ```typescript
 <a href={getPageLink('/privacy')}>  // ← Should use helper
 // NOT:
@@ -423,12 +438,14 @@ awk 'NR>=1040 && NR<=1050 {printf "%4d:%s\n", NR, $0}' file.json
 ### **Text Length Limits:**
 
 **Small UI Elements:**
+
 - Buttons: 10-20 chars max
 - Badges: 8-15 chars max
 - Center sphere labels: 10-20 chars max
 - Navigation items: 8-15 chars
 
 **Example:**
+
 ```json
 // ✅ GOOD:
 "syncLabel": "SYNC TEMPS RÉEL"  // 16 chars
@@ -438,6 +455,7 @@ awk 'NR>=1040 && NR<=1050 {printf "%4d:%s\n", NR, $0}' file.json
 ```
 
 **If Translation Too Long:**
+
 1. Shorten while keeping meaning
 2. Make UI responsive: `text-sm → text-xs sm:text-sm`
 3. Add wrapping: `flex-wrap`, `text-center`
@@ -448,11 +466,13 @@ awk 'NR>=1040 && NR<=1050 {printf "%4d:%s\n", NR, $0}' file.json
 ## 🔐 JSON VALIDATION SCRIPTS
 
 ### **Validate Single File:**
+
 ```bash
 jq '.' src/i18n/locales/de/marketing.json > /dev/null && echo "✅ Valid"
 ```
 
 ### **Validate All Files:**
+
 ```bash
 for lang in de en es fr; do
   for file in common marketing seo legal content; do
@@ -464,6 +484,7 @@ done
 ```
 
 ### **Check for Duplicate Keys:**
+
 ```bash
 # Example: Check for duplicate "pricing"
 grep -n '"pricing"' src/i18n/locales/de/marketing.json
@@ -471,6 +492,7 @@ grep -n '"pricing"' src/i18n/locales/de/marketing.json
 ```
 
 ### **Check Key Exists in All Languages:**
+
 ```bash
 # Example: Check if "dashboard" exists everywhere
 for lang in de en es fr; do
@@ -487,15 +509,17 @@ done
 ### **Example: Adding "TestimonialsV2Section"**
 
 **Step 1: Extract German Content**
+
 ```typescript
 // In component, note all text:
 const testimonials = [
-  { name: "Max", text: "Sehr gut!", rating: "5/5" }
+  { name: "Max", text: "Sehr gut!", rating: "5/5" },
   // ...
 ];
 ```
 
 **Step 2: Create JSON in DE**
+
 ```json
 // src/i18n/locales/de/marketing.json
 "testimonialsV2": {
@@ -508,6 +532,7 @@ const testimonials = [
 ```
 
 **Step 3: Translate to EN/ES/FR**
+
 ```json
 // EN:
 "testimonialsV2": {
@@ -522,25 +547,29 @@ const testimonials = [
 ```
 
 **Step 4: Add i18n to Component**
+
 ```typescript
 import { useTranslation } from "@/i18n";
 
 const TestimonialsV2 = () => {
   const { t, getTranslation } = useTranslation();
-  
-  const items = getTranslation('marketing.testimonialsV2.items') || fallback;
-  
+
+  const items = getTranslation("marketing.testimonialsV2.items") || fallback;
+
   return (
     <div>
-      <h2>{t('marketing.testimonialsV2.title')}</h2>
-      <p>{t('marketing.testimonialsV2.subtitle')}</p>
-      {items.map(item => <div>{item.text}</div>)}
+      <h2>{t("marketing.testimonialsV2.title")}</h2>
+      <p>{t("marketing.testimonialsV2.subtitle")}</p>
+      {items.map((item) => (
+        <div>{item.text}</div>
+      ))}
     </div>
   );
 };
 ```
 
 **Step 5: Test All Languages**
+
 ```bash
 # German
 open http://localhost:5173/
@@ -556,6 +585,7 @@ open http://localhost:5173/fr
 ```
 
 **Step 6: Commit**
+
 ```bash
 git add src/components/marketing/new/TestimonialsV2.tsx
 git add src/i18n/locales/*/marketing.json
@@ -582,6 +612,7 @@ git push origin main
 ## 🔧 TROUBLESHOOTING COMMANDS
 
 ### **Find All Raw Keys in Page:**
+
 ```bash
 # Get page snapshot
 curl -s http://localhost:5173/en > /tmp/en_page.html
@@ -592,6 +623,7 @@ grep -o "marketing\.[a-zA-Z.]*\|common\.[a-zA-Z.]*" /tmp/en_page.html | sort -u
 ```
 
 ### **Find Missing Translations:**
+
 ```bash
 # Compare DE vs EN keys
 diff <(jq 'keys' src/i18n/locales/de/marketing.json) \
@@ -600,6 +632,7 @@ diff <(jq 'keys' src/i18n/locales/de/marketing.json) \
 ```
 
 ### **Check Translation Coverage:**
+
 ```bash
 # Count keys in each language
 for lang in de en es fr; do
@@ -620,11 +653,11 @@ done
 const { t } = useTranslation();
 
 const getLocalizedImage = () => {
-  const locale = location.pathname.startsWith('/en') ? 'en' : 'de';
+  const locale = location.pathname.startsWith("/en") ? "en" : "de";
   return `/images/hero-${locale}.png`;
 };
 
-<img src={getLocalizedImage()} alt={t('marketing.hero.imageAlt')} />
+<img src={getLocalizedImage()} alt={t("marketing.hero.imageAlt")} />;
 ```
 
 ### **Pattern: Dynamic Keys**
@@ -643,9 +676,10 @@ const title = t(`marketing.pricing.${planName}.title`);
 const { t, getTranslation } = useTranslation();
 
 // Try specific key, fallback to general, fallback to hardcoded
-const text = t('marketing.section.specific') || 
-             t('marketing.section.general') || 
-             "Default Text";
+const text =
+  t("marketing.section.specific") ||
+  t("marketing.section.general") ||
+  "Default Text";
 ```
 
 ---
@@ -653,12 +687,14 @@ const text = t('marketing.section.specific') ||
 ## 📊 PERFORMANCE CONSIDERATIONS
 
 ### **Translation Loading:**
+
 - All translations loaded at build time (static imports)
 - No runtime fetching
 - No network requests
 - Instant lookup
 
 ### **Bundle Size:**
+
 ```bash
 # Check size
 npm run build
@@ -669,6 +705,7 @@ npm run build
 ```
 
 ### **Code Splitting:**
+
 Currently: All translations in main bundle  
 Future: Could split by route/language if needed
 
@@ -679,17 +716,20 @@ Future: Could split by route/language if needed
 ### **Example: Adding Italian (it)**
 
 **1. Update config.ts:**
+
 ```typescript
-export const SUPPORTED_LOCALES = ['de', 'en', 'es', 'fr', 'it'] as const;
+export const SUPPORTED_LOCALES = ["de", "en", "es", "fr", "it"] as const;
 ```
 
 **2. Create locale folder:**
+
 ```bash
 mkdir -p src/i18n/locales/it
 cp src/i18n/locales/en/*.json src/i18n/locales/it/
 ```
 
 **3. Translate all files:**
+
 ```bash
 # Manually translate:
 src/i18n/locales/it/common.json
@@ -698,6 +738,7 @@ src/i18n/locales/it/marketing.json
 ```
 
 **4. Import in index.ts:**
+
 ```typescript
 import itCommon from './locales/it/common.json';
 import itMarketing from './locales/it/marketing.json';
@@ -710,6 +751,7 @@ export const translations = {
 ```
 
 **5. Add routes in App.tsx:**
+
 ```typescript
 <Route path="/it" element={<Index />} />
 <Route path="/it/privacy" element={<PrivacyPolicy />} />
@@ -717,14 +759,16 @@ export const translations = {
 ```
 
 **6. Add to LanguageSwitcher:**
+
 ```typescript
 const languages = [
   // ...
-  { code: 'it', name: 'Italiano', flag: '🇮🇹' }
+  { code: "it", name: "Italiano", flag: "🇮🇹" },
 ];
 ```
 
 **7. Test:**
+
 ```bash
 open http://localhost:5173/it
 ```
@@ -734,7 +778,9 @@ open http://localhost:5173/it
 ## 📈 MONITORING & ANALYTICS
 
 ### **i18n Errors:**
+
 Check console for:
+
 ```
 [i18n] Missing translation: marketing.section.key
 [i18n] Locale not found: de
@@ -743,11 +789,13 @@ Check console for:
 Currently: System returns key itself if missing (graceful degradation)
 
 ### **Usage Analytics:**
+
 Track which languages are used:
+
 ```typescript
 // In analytics
-trackEvent('language_viewed', { locale: 'en' });
-trackEvent('language_switched', { from: 'de', to: 'en' });
+trackEvent("language_viewed", { locale: "en" });
+trackEvent("language_switched", { from: "de", to: "en" });
 ```
 
 ---
@@ -755,6 +803,7 @@ trackEvent('language_switched', { from: 'de', to: 'en' });
 ## 🎯 TESTING BEST PRACTICES
 
 ### **Manual Testing:**
+
 1. Test EVERY component on EVERY language
 2. Check console for errors
 3. Check for raw keys visually
@@ -763,15 +812,16 @@ trackEvent('language_switched', { from: 'de', to: 'en' });
 6. Test on different screen sizes (responsive!)
 
 ### **Automated Testing (Future):**
+
 ```typescript
 // Example test
-describe('i18n', () => {
-  it('loads German translations', () => {
-    const text = t('marketing.hero.title');
-    expect(text).not.toContain('marketing.');
+describe("i18n", () => {
+  it("loads German translations", () => {
+    const text = t("marketing.hero.title");
+    expect(text).not.toContain("marketing.");
   });
-  
-  it('all languages have same keys', () => {
+
+  it("all languages have same keys", () => {
     const deKeys = Object.keys(translations.de.marketing);
     const enKeys = Object.keys(translations.en.marketing);
     expect(deKeys).toEqual(enKeys);
@@ -799,6 +849,7 @@ describe('i18n', () => {
 ## 🚀 PRODUCTION DEPLOYMENT
 
 ### **Build:**
+
 ```bash
 npm run build
 # Creates dist/ folder
@@ -807,6 +858,7 @@ npm run build
 ```
 
 ### **Deploy:**
+
 ```bash
 # Upload dist/ to hosting
 # Configure server:
@@ -820,6 +872,7 @@ npm run build
 ```
 
 ### **Verify Production:**
+
 ```bash
 npm run preview
 open http://localhost:4173/
@@ -832,26 +885,31 @@ open http://localhost:4173/en
 ## 💡 TIPS FOR NEXT AGENT
 
 **1. Don't Break What Works:**
+
 - i18n system is complete and working
 - All 14 components work perfectly
 - Don't refactor unless absolutely necessary
 
 **2. Follow Established Patterns:**
+
 - Look at existing components as reference
 - Use same t()/getTranslation() patterns
 - Keep icon rendering consistent
 
 **3. Test Thoroughly:**
+
 - Always test all 4 languages
 - Check console for errors
 - Visual check for raw keys
 
 **4. Document Changes:**
+
 - Update this doc if you modify system
 - Commit messages should be detailed
 - User will appreciate clarity
 
 **5. Listen to User:**
+
 - User feedback in Session 2 made it ENTERPRISE
 - User knows UX better than we do
 - No shortcuts, no "good enough" - do it right!
@@ -866,7 +924,7 @@ open http://localhost:4173/en
 ✅ All user feedback incorporated  
 ✅ Every detail polished  
 ✅ Fully documented  
-✅ Production ready  
+✅ Production ready
 
 **Your job:** Keep it that way! 💪
 
@@ -880,4 +938,3 @@ open http://localhost:4173/en
 **Purpose:** Enable any future agent to understand and maintain the system
 
 **VIEL ERFOLG, BRUDERHERZ!** 🚀
-

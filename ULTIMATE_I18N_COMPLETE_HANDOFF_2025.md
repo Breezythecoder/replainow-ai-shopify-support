@@ -18,11 +18,12 @@
 **Meta Tags:** SEO-optimized for all languages ✅  
 **Footer:** Complete translations + locale-aware links ✅  
 **Routes:** All pages × all locales = 40+ routes ✅  
-**Production Build:** SUCCESS ✅  
+**Production Build:** SUCCESS ✅
 
 ### 📈 SESSION 2 ACHIEVEMENTS
 
 **Components Completed (7/7):**
+
 1. ✅ IntegrationStepsSection - 3 steps, all languages
 2. ✅ DashboardShowcaseSection - 2 tabs, all languages
 3. ✅ ROISection - Stats, benefits, all languages
@@ -32,6 +33,7 @@
 7. ✅ AIIntelligenceDeepDive - 3 tabs, all languages
 
 **Plus:**
+
 - ✅ Navigation (PremiumNavbar) - all languages
 - ✅ Meta Tags (NewIndex Helmet) - SEO for all languages
 - ✅ Footer (UltraFooter) - complete translations
@@ -68,31 +70,35 @@ src/i18n/
 ### **Key System Concepts:**
 
 **1. Namespace-Based Keys:**
+
 ```typescript
 // Format: namespace.section.key
-t('marketing.hero.title')          // Marketing content
-t('common.navigation.features')     // Common UI
-t('seo.homepage.title')            // SEO metadata
+t("marketing.hero.title"); // Marketing content
+t("common.navigation.features"); // Common UI
+t("seo.homepage.title"); // SEO metadata
 ```
 
 **2. Translation Functions:**
+
 ```typescript
 const { t, getTranslation } = useTranslation();
 
 // Simple strings
-t('marketing.hero.title')
+t("marketing.hero.title");
 
 // Objects/Arrays
-const items = getTranslation('marketing.faq.items') || fallback;
+const items = getTranslation("marketing.faq.items") || fallback;
 ```
 
 **3. Locale Detection:**
+
 - `/` → German (default)
 - `/en` → English
 - `/es` → Spanish
 - `/fr` → French
 
 **4. Route Structure:**
+
 ```typescript
 // Homepage
 / → German
@@ -112,43 +118,51 @@ const items = getTranslation('marketing.faq.items') || fallback;
 ## 🔧 CRITICAL FIXES APPLIED (Session 2)
 
 ### **Fix #1: Icon Rendering**
+
 **Problem:** Icons called as functions `icons[i]()` caused crashes  
 **Solution:** Use `const Icon = icons[i]; <Icon className=".." />`  
 **Components Fixed:** IntegrationSteps, AgentProductivity, OmnichannelUnified, AIKnowledgeBanner  
 **Status:** ✅ All icons render correctly
 
 ### **Fix #2: Navigation Namespace**
+
 **Problem:** Raw keys `navigation.features` instead of translated  
 **Solution:** Changed to `common.navigation.features` (correct namespace)  
 **Status:** ✅ Navigation translates properly
 
 ### **Fix #3: Duplicate JSON Keys**
+
 **Problem:** Multiple `agentProductivity` sections in DE/EN caused second to override first  
 **Solution:** Removed old sections (tool1/tool2 structure), kept new (tools[] array)  
 **Status:** ✅ No duplicates, correct structure used
 
 ### **Fix #4: DE JSON Structure (CRITICAL!)**
+
 **Problem:** `aiIntelligenceDeepDive` nested inside `shopifyBanners` due to wrong closing braces  
 **Result:** aiIntelligenceDeepDive not loading, showing raw keys on German  
 **Solution:** Fixed JSON structure, aiIntelligenceDeepDive now at top level  
 **Status:** ✅ German page works perfectly
 
 ### **Fix #5: Hardcoded German Texts**
+
 **Problem:** Extended sections in AIKnowledgeBanner hardcoded (benefits, stats, 6 examples)  
 **Solution:** Added all to JSON (benefits[], stats[], examples[]), updated component  
 **Status:** ✅ All sections translated
 
 ### **Fix #6: Pricing "And much more..."**
+
 **Problem:** Hardcoded in all 4 plans  
 **Solution:** Added `pricing.moreFeatures` key to all languages  
 **Status:** ✅ Translated
 
 ### **Fix #7: Footer Tagline**
+
 **Problem:** "Die #1 AI-Helpdesk für Shopify" hardcoded  
 **Solution:** Added `common.footer.company.tagline` to all languages  
 **Status:** ✅ Translated
 
 ### **Fix #8: Footer Links Not Locale-Aware**
+
 **Problem:** Legal links went to `/privacy` (always German) instead of `/en/privacy`  
 **User Impact:** User on /en gets kicked out of English when clicking Privacy!  
 **Solution:** Created `getPageLink()` helper + routes for all locales  
@@ -156,27 +170,32 @@ const items = getTranslation('marketing.faq.items') || fallback;
 **Status:** ✅ User stays in their language
 
 ### **Fix #9: FR/ES Footer Raw Keys**
+
 **Problem:** French/Spanish footer showed `common.footer.links.features` etc.  
 **Solution:** Added complete footer sections to ES/FR common.json  
 **Status:** ✅ All footer links translate
 
 ### **Fix #10: AgentProductivity Workflow Hardcoded**
+
 **Problem:** Workflow steps + result text hardcoded German  
 **Solution:** Added workflowSteps[] + workflowResult + bottomStatement  
 **Status:** ✅ Workflow translated
 
 ### **Fix #11: Center Sphere Text Too Long**
+
 **Problem:** "SINCRONIZACIÓN EN TIEMPO REAL" (30 chars) broke sphere layout on ES/FR  
-**Solution:** 
+**Solution:**
+
 - Shortened: ES "SYNC EN TIEMPO REAL" (19 chars), FR "SYNC TEMPS RÉEL" (16 chars)
 - Made responsive: `text-xs sm:text-sm`, `flex-wrap`, `text-center`  
-**Status:** ✅ Sphere looks good on all languages
+  **Status:** ✅ Sphere looks good on all languages
 
 ---
 
 ## 📋 COMPLETE COMPONENTS LIST
 
 ### ✅ Session 1 (Components 1-7):
+
 1. **HeroSection** - Badge, title, subtitle, CTAs, social proof
 2. **AIPowerShowcase** - 3 pillars (Wissen, Handeln, Lernen), process steps, features
 3. **ValuePropositionSection** - Value props, automation stats, 6 feature cards
@@ -186,6 +205,7 @@ const items = getTranslation('marketing.faq.items') || fallback;
 7. **FinalCTASection** - CTA, guarantee, trust badges, stats
 
 ### ✅ Session 2 (Components 8-14):
+
 8. **IntegrationStepsSection** - 3 steps, bottom badge
 9. **DashboardShowcaseSection** - Title, subtitle, 2 tabs, bottom text
 10. **ROISection** - Badge, title, description, 3 benefits, stats (€3,200/month)
@@ -195,10 +215,12 @@ const items = getTranslation('marketing.faq.items') || fallback;
 14. **AIIntelligenceDeepDive** - Badge, title, subtitle, 3 tabs (Quality: 4 score ranges, Collection: 3 dialog steps, Journey: 4 insights), bottom
 
 ### ✅ Navigation & Meta:
+
 - **PremiumNavbar** - Nav links (Features, Integration, Preise, FAQ), CTA, menu labels
 - **NewIndex Helmet** - Title, description, og:title, og:description
 
 ### ✅ Footer:
+
 - **UltraFooter** - Company tagline, links, legal links (all locale-aware)
 
 ---
@@ -206,35 +228,38 @@ const items = getTranslation('marketing.faq.items') || fallback;
 ## 🎯 KEY PATTERNS & BEST PRACTICES
 
 ### **Pattern #1: Simple Strings**
+
 ```typescript
 import { useTranslation } from "@/i18n";
 
 const Component = () => {
   const { t } = useTranslation();
-  
-  return <h1>{t('marketing.section.title')}</h1>;
+
+  return <h1>{t("marketing.section.title")}</h1>;
 };
 ```
 
 ### **Pattern #2: Arrays**
+
 ```typescript
 const { getTranslation } = useTranslation();
 
-const items = getTranslation('marketing.section.items') || [
+const items = getTranslation("marketing.section.items") || [
   // German fallback
-  { title: "...", desc: "..." }
+  { title: "...", desc: "..." },
 ];
 
-return items.map(item => <div>{item.title}</div>);
+return items.map((item) => <div>{item.title}</div>);
 ```
 
 ### **Pattern #3: Arrays with Icons**
+
 ```typescript
 const icons = [Icon1, Icon2, Icon3];
-const data = getTranslation('marketing.section.items') || fallback;
+const data = getTranslation("marketing.section.items") || fallback;
 const items = data.map((item, i) => ({
   ...item,
-  icon: icons[i]
+  icon: icons[i],
 }));
 
 // Render
@@ -247,26 +272,31 @@ items.map((item, i) => {
 **CRITICAL:** Never call icon as function `icon()` - always `<Icon />`
 
 ### **Pattern #4: Namespace for common.json**
+
 ```typescript
 // Marketing content (default)
-t('marketing.hero.title')
+t("marketing.hero.title");
 
 // Common UI (explicit namespace)
-t('common.navigation.features')
-t('common.footer.legal.privacy')
+t("common.navigation.features");
+t("common.footer.legal.privacy");
 ```
 
 ### **Pattern #5: Locale-Aware Links**
+
 ```typescript
 // In UltraFooter
-const currentLocale = location.pathname.startsWith('/en') ? '/en' 
-                    : location.pathname.startsWith('/es') ? '/es'
-                    : location.pathname.startsWith('/fr') ? '/fr'
-                    : '';
+const currentLocale = location.pathname.startsWith("/en")
+  ? "/en"
+  : location.pathname.startsWith("/es")
+  ? "/es"
+  : location.pathname.startsWith("/fr")
+  ? "/fr"
+  : "";
 
 const getPageLink = (path) => `${currentLocale}${path}`;
 
-<a href={getPageLink('/privacy')}>Privacy</a>
+<a href={getPageLink("/privacy")}>Privacy</a>;
 // On /en → href="/en/privacy" ✅
 // On /es → href="/es/privacy" ✅
 ```
@@ -276,26 +306,32 @@ const getPageLink = (path) => `${currentLocale}${path}`;
 ## 🚨 COMMON PITFALLS (AVOID THESE!)
 
 ### **Pitfall #1: Icon Rendering**
+
 ❌ **WRONG:** `{icons[i]({ className: "..." })}`  
 ✅ **RIGHT:** `const Icon = icons[i]; <Icon className="..." />`
 
 ### **Pitfall #2: Missing Namespace**
+
 ❌ **WRONG:** `t('navigation.features')`  
 ✅ **RIGHT:** `t('common.navigation.features')`
 
 ### **Pitfall #3: Duplicate JSON Keys**
+
 ❌ **WRONG:** Two `agentProductivity` sections in same file  
 ✅ **RIGHT:** One section per key, check before adding
 
 ### **Pitfall #4: Wrong JSON Structure**
+
 ❌ **WRONG:** Section nested inside another (wrong closing braces)  
 ✅ **RIGHT:** All top-level sections at 2-space indentation
 
 ### **Pitfall #5: Text Too Long for UI**
+
 ❌ **WRONG:** "SYNCHRONISATION EN TEMPS RÉEL" (32 chars) breaks layout  
 ✅ **RIGHT:** "SYNC TEMPS RÉEL" (16 chars) fits perfectly
 
 ### **Pitfall #6: Non-Locale-Aware Links**
+
 ❌ **WRONG:** `<a href="/privacy">` (always goes to German)  
 ✅ **RIGHT:** `<a href={getPageLink('/privacy')}>` (maintains locale)
 
@@ -306,6 +342,7 @@ const getPageLink = (path) => `${currentLocale}${path}`;
 ### **Quick Visual Test (5 minutes):**
 
 **German (/):**
+
 ```bash
 open http://localhost:5173/
 # Scroll through entire page
@@ -316,6 +353,7 @@ open http://localhost:5173/
 ```
 
 **English (/en):**
+
 ```bash
 open http://localhost:5173/en
 # All sections show English
@@ -326,6 +364,7 @@ open http://localhost:5173/en
 ```
 
 **Spanish (/es):**
+
 ```bash
 open http://localhost:5173/es
 # All sections Spanish
@@ -335,6 +374,7 @@ open http://localhost:5173/es
 ```
 
 **French (/fr):**
+
 ```bash
 open http://localhost:5173/fr
 # All sections French
@@ -346,6 +386,7 @@ open http://localhost:5173/fr
 ### **Deep Testing (30 minutes):**
 
 **Test Matrix - Each component × each language:**
+
 - Hero ✅
 - AIPowerShowcase ✅
 - ValueProposition ✅
@@ -362,6 +403,7 @@ open http://localhost:5173/fr
 - FinalCTA ✅
 
 **Critical Verifications:**
+
 - [ ] Pricing plans correct on all languages
 - [ ] FAQ has 10 questions on all languages
 - [ ] No raw keys anywhere
@@ -379,7 +421,7 @@ open http://localhost:5173/fr
 {
   "hero": { ... },
   "aiPowerShowcase": { ... },
-  "features": { 
+  "features": {
     "valueProposition": { ... },
     "items": [ ... ]
   },
@@ -488,12 +530,14 @@ open http://localhost:5173/fr
 ### **String Length Considerations:**
 
 **Short Labels (10-15 chars max):**
+
 - Center sphere labels
 - Button text
 - Badge text
 - Navigation items
 
 **Example:**
+
 - ✅ DE: "ECHTZEIT SYNC" (13 chars)
 - ✅ EN: "REAL-TIME SYNC" (15 chars)
 - ❌ ES: "SINCRONIZACIÓN EN TIEMPO REAL" (30 chars) - TOO LONG!
@@ -504,11 +548,12 @@ open http://localhost:5173/fr
 ### **Difficulty Labels:**
 
 Map multiple language variants:
+
 ```typescript
-${example.difficulty === 'Easy' || 
-  example.difficulty === 'Einfach' || 
-  example.difficulty === 'Fácil' || 
-  example.difficulty === 'Facile' 
+${example.difficulty === 'Easy' ||
+  example.difficulty === 'Einfach' ||
+  example.difficulty === 'Fácil' ||
+  example.difficulty === 'Facile'
     ? 'bg-green-50 text-green-700' : ''}
 ```
 
@@ -595,6 +640,7 @@ Impact: Low - English legal is standard practice
 
 **3. Additional Components:**
 If you add new components to NewIndex:
+
 - Create translations in all 4 marketing.json files
 - Follow the patterns documented here
 - Test on all 4 languages
@@ -602,6 +648,7 @@ If you add new components to NewIndex:
 
 **4. More Languages (Future):**
 System supports easy expansion:
+
 - Add new locale to config.ts
 - Create new locale folder (e.g., `it/`)
 - Copy JSON structure from `en/`
@@ -613,33 +660,41 @@ System supports easy expansion:
 ## 🔥 KNOWN ISSUES & SOLUTIONS
 
 ### **Issue: Page Shows "We're updating this page"**
+
 **Cause:** HMR (Hot Module Reload) updating  
 **Solution:** Click "Reload Page" button or hard refresh (Cmd+R)
 
 ### **Issue: Raw Keys Visible**
+
 **Cause:** Translation missing in that language's JSON  
-**Solution:** 
+**Solution:**
+
 1. Find the key (e.g., `marketing.section.key`)
 2. Add to relevant language JSON
 3. Validate: `jq '.' src/i18n/locales/en/marketing.json`
 4. Refresh browser
 
 ### **Issue: Icons Not Rendering**
+
 **Cause:** Calling icon as function instead of component  
 **Solution:** Use `const Icon = icons[i]; <Icon />` pattern
 
 ### **Issue: Duplicate Keys in JSON**
+
 **Cause:** Added same section twice (old + new structure)  
 **Solution:** Search for duplicate: `grep -n '"sectionName"' file.json`  
 Remove old one, keep new
 
 ### **Issue: Footer Links Redirect to German**
+
 **Cause:** Links not locale-aware  
 **Solution:** Already fixed! Use `getPageLink()` helper
 
 ### **Issue: Text Too Long Breaks Layout**
+
 **Cause:** Translation longer than German original  
-**Solution:** 
+**Solution:**
+
 - Shorten translation (keep meaning)
 - Make UI responsive (text-sm → text-xs sm:text-sm)
 - Add wrapping (flex-wrap, text-center)
@@ -666,6 +721,7 @@ Remove old one, keep new
 ## 🎯 COMMIT & DEPLOYMENT
 
 ### **Final Commit Status:**
+
 ```bash
 git log --oneline -20
 # Should show all Session 2 commits
@@ -676,6 +732,7 @@ git status
 ```
 
 ### **Production Build:**
+
 ```bash
 npm run build
 # ✅ Builds successfully
@@ -687,6 +744,7 @@ npm run preview
 ```
 
 ### **Deployment:**
+
 ```bash
 # dist/ folder is ready to deploy
 # Upload to Netlify/Vercel/your hosting
@@ -711,6 +769,7 @@ npm run preview
 **French (FR):** 100% ✅
 
 **Files Modified:**
+
 - 7 marketing.json files (DE/EN/ES/FR + 3 backups)
 - 4 common.json files (DE/EN/ES/FR)
 - 14 component files (all with i18n)
@@ -744,6 +803,7 @@ npm run preview
 ### **If Continuing Work:**
 
 **1. Adding New Components:**
+
 ```bash
 # 1. Create component in src/components/marketing/new/
 # 2. Extract all German strings
@@ -755,6 +815,7 @@ npm run preview
 ```
 
 **2. Fixing Issues:**
+
 ```bash
 # If raw keys show:
 grep -r "marketing\.section" src/i18n/locales/
@@ -770,6 +831,7 @@ jq '.' src/i18n/locales/de/marketing.json
 ```
 
 **3. Testing:**
+
 ```bash
 # Always test ALL 4 languages
 open http://localhost:5173/
@@ -786,6 +848,7 @@ open http://localhost:5173/fr
 ## 💾 BACKUP FILES
 
 **Backups Created (in case of emergency):**
+
 ```
 src/i18n/locales/de/marketing.json.backup
 src/i18n/locales/en/marketing.json.backup
@@ -794,6 +857,7 @@ src/i18n/locales/fr/marketing.json.backup
 ```
 
 **If Something Breaks:**
+
 ```bash
 # Restore from backup
 cp src/i18n/locales/de/marketing.json.backup src/i18n/locales/de/marketing.json
@@ -819,13 +883,17 @@ git revert HEAD
 ## 🚨 MOST IMPORTANT LESSONS
 
 ### **1. User Feedback is GOLD**
+
 Every issue user reported was REAL and made the project better:
+
 - No shortcuts → Enterprise level
 - Locale-aware routing → Professional UX
 - Complete translations → No half-measures
 
 ### **2. Test EVERYTHING**
+
 Don't assume - verify:
+
 - All 4 languages
 - Every component
 - Every link
@@ -833,23 +901,27 @@ Don't assume - verify:
 - Visual appearance
 
 ### **3. JSON Structure Matters**
+
 One wrong closing brace → entire sections don't load!  
 Always validate: `jq '.' file.json`
 
 ### **4. Layout Responsiveness**
+
 Long translations can break UI:
+
 - Consider text length when translating
 - Make UI responsive (text-sm → text-xs sm:text-sm)
 - Test on actual browser, not just code
 
 ### **5. Icon Rendering Pattern**
+
 ```typescript
 // ✅ ALWAYS DO THIS:
 const Icon = icons[i];
-<Icon className="..." />
+<Icon className="..." />;
 
 // ❌ NEVER DO THIS:
-icons[i]({ className: "..." })
+icons[i]({ className: "..." });
 ```
 
 ---
@@ -880,19 +952,20 @@ icons[i]({ className: "..." })
 ✅ Enterprise level quality  
 ✅ Zero raw keys  
 ✅ Zero errors  
-✅ Documentation complete  
+✅ Documentation complete
 
 ---
 
 ## 🎉 PROJECT = 100% COMPLETE!
 
 **From 0% to 100% in 2 Sessions:**
+
 - Session 1: 50% (Foundation)
 - Session 2: 50% (Completion + Polish + Fixes)
 
 **Quality:** ENTERPRISE LEVEL  
 **User:** GLÜCKLICH  
-**Next Steps:** DEPLOY OR CONTINUE WITH NEW FEATURES  
+**Next Steps:** DEPLOY OR CONTINUE WITH NEW FEATURES
 
 ---
 
@@ -929,4 +1002,3 @@ open http://localhost:5173/fr
 ```
 
 **Everything works. Everything is documented. Everything is ready.** ✅
-

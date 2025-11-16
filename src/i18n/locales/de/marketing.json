@@ -787,10 +787,10 @@
     "exampleTitle": "Beispiel: Checkout-Link erstellen",
     "exampleSubtitle": "Kunde interessiert an mehreren Produkten? Ein Klick-Erlebnis:",
     "workflowSteps": [
-      {"num": "1", "title": "Produkte wählen", "desc": "Dress + Shoes + Bag"},
-      {"num": "2", "title": "Varianten setzen", "desc": "Größe M, Farbe Rot"},
-      {"num": "3", "title": "Rabatt hinzu", "desc": "Optional: 20% OFF"},
-      {"num": "4", "title": "Link senden", "desc": "Kunde klickt → Checkout"}
+      { "num": "1", "title": "Produkte wählen", "desc": "Dress + Shoes + Bag" },
+      { "num": "2", "title": "Varianten setzen", "desc": "Größe M, Farbe Rot" },
+      { "num": "3", "title": "Rabatt hinzu", "desc": "Optional: 20% OFF" },
+      { "num": "4", "title": "Link senden", "desc": "Kunde klickt → Checkout" }
     ],
     "workflowResult": "Resultat: Pre-filled Cart mit 20% Rabatt → Ein-Klick-Checkout für Kunde",
     "bottomStatement": "AI macht 87% automatisch – Ihre Agenten die 13% mit den besten Tools"

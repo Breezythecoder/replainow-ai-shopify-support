@@ -1,50 +1,122 @@
 import { motion } from "framer-motion";
-import { Database, Zap, CheckCircle2, TrendingUp, Package, Users, FileText, ShoppingBag, Truck, Globe } from "lucide-react";
+import {
+  Database,
+  Zap,
+  CheckCircle2,
+  TrendingUp,
+  Package,
+  Users,
+  FileText,
+  ShoppingBag,
+  Truck,
+  Globe,
+} from "lucide-react";
 import { useTranslation } from "@/i18n";
 
 const AIKnowledgeBanner = () => {
   const { t, getTranslation } = useTranslation();
-  
-  const leftData = getTranslation('marketing.aiKnowledge.dataSourcesLeft') || [
-    {title: "Produkte", desc: "Katalog, Varianten, Preise", stats: "Real-time"},
-    {title: "Bestellungen", desc: "Status, Tracking, Historie", stats: "60 Tage"},
-    {title: "Kunden", desc: "Profile, Präferenzen", stats: "Lifetime"}
+
+  const leftData = getTranslation("marketing.aiKnowledge.dataSourcesLeft") || [
+    {
+      title: "Produkte",
+      desc: "Katalog, Varianten, Preise",
+      stats: "Real-time",
+    },
+    {
+      title: "Bestellungen",
+      desc: "Status, Tracking, Historie",
+      stats: "60 Tage",
+    },
+    { title: "Kunden", desc: "Profile, Präferenzen", stats: "Lifetime" },
   ];
-  
-  const rightData = getTranslation('marketing.aiKnowledge.dataSourcesRight') || [
-    {title: "Richtlinien", desc: "Rückgabe, Versand, AGB", stats: "Auto-Sync"},
-    {title: "Versand", desc: "Carrier, Tracking-Links", stats: "Live"},
-    {title: "Content", desc: "Seiten, FAQs, Blog", stats: "Voll"}
+
+  const rightData = getTranslation(
+    "marketing.aiKnowledge.dataSourcesRight"
+  ) || [
+    {
+      title: "Richtlinien",
+      desc: "Rückgabe, Versand, AGB",
+      stats: "Auto-Sync",
+    },
+    { title: "Versand", desc: "Carrier, Tracking-Links", stats: "Live" },
+    { title: "Content", desc: "Seiten, FAQs, Blog", stats: "Voll" },
   ];
-  
+
   const leftIcons = [Package, ShoppingBag, Users];
   const rightIcons = [FileText, Truck, Globe];
   const leftColors = ["purple", "blue", "violet"];
   const rightColors = ["pink", "purple", "blue"];
-  
-  const dataSourcesLeft = leftData.map((item, i) => ({...item, icon: leftIcons[i], color: leftColors[i]}));
-  const dataSourcesRight = rightData.map((item, i) => ({...item, icon: rightIcons[i], color: rightColors[i]}));
-  
-  const benefits = getTranslation('marketing.aiKnowledge.benefits') || [
-    {title: "Echtzeit-Updates", desc: "Shopify-Änderungen synchronisieren sich innerhalb von Sekunden"},
-    {title: "Null Wartung", desc: "Keine manuellen Updates, keine Wissensdatenbank-Pflege"},
-    {title: "99.8% Genauigkeit", desc: "AI kennt exakte Daten, keine Schätzungen oder Raten"}
+
+  const dataSourcesLeft = leftData.map((item, i) => ({
+    ...item,
+    icon: leftIcons[i],
+    color: leftColors[i],
+  }));
+  const dataSourcesRight = rightData.map((item, i) => ({
+    ...item,
+    icon: rightIcons[i],
+    color: rightColors[i],
+  }));
+
+  const benefits = getTranslation("marketing.aiKnowledge.benefits") || [
+    {
+      title: "Echtzeit-Updates",
+      desc: "Shopify-Änderungen synchronisieren sich innerhalb von Sekunden",
+    },
+    {
+      title: "Null Wartung",
+      desc: "Keine manuellen Updates, keine Wissensdatenbank-Pflege",
+    },
+    {
+      title: "99.8% Genauigkeit",
+      desc: "AI kennt exakte Daten, keine Schätzungen oder Raten",
+    },
   ];
-  
-  const stats = getTranslation('marketing.aiKnowledge.stats') || [
-    {label: "Datenquellen", value: "12+"},
-    {label: "Sync-Zeit", value: "<5 Sek"},
-    {label: "Wartung", value: "0 Min"},
-    {label: "Genauigkeit", value: "99.8%"}
+
+  const stats = getTranslation("marketing.aiKnowledge.stats") || [
+    { label: "Datenquellen", value: "12+" },
+    { label: "Sync-Zeit", value: "<5 Sek" },
+    { label: "Wartung", value: "0 Min" },
+    { label: "Genauigkeit", value: "99.8%" },
   ];
-  
-  const examples = getTranslation('marketing.aiKnowledge.examples') || [
-    {category: "Produkt-Fragen", question: "Habt ihr das Kleid in Größe 42?", answer: "Ja, 15 auf Lager!", difficulty: "Einfach"},
-    {category: "Bestellungs-Fragen", question: "Wo ist meine Bestellung #1234?", answer: "Versendet gestern via DHL", difficulty: "Einfach"},
-    {category: "Richtlinien-Fragen", question: "Wie lange ist die Rückgabe-Frist?", answer: "30 Tage lt. Ihrer Rückgabe-Richtlinie", difficulty: "Einfach"},
-    {category: "Style-Beratung", question: "Passt dieses Shirt zu meiner Jeans?", answer: "Ja! Zeige Ihnen 3 passende Styles →", difficulty: "Medium"},
-    {category: "Bestellungs-Änderung", question: "Kann ich die Versandadresse noch ändern?", answer: "Bestellung noch nicht versendet – Adresse aktualisierbar", difficulty: "Medium"},
-    {category: "VIP-Service", question: "Ich bin VIP-Kunde, gibt's einen Rabatt?", answer: "Ja! 20% Rabattcode für Sie erstellt 🎁", difficulty: "Komplex"}
+
+  const examples = getTranslation("marketing.aiKnowledge.examples") || [
+    {
+      category: "Produkt-Fragen",
+      question: "Habt ihr das Kleid in Größe 42?",
+      answer: "Ja, 15 auf Lager!",
+      difficulty: "Einfach",
+    },
+    {
+      category: "Bestellungs-Fragen",
+      question: "Wo ist meine Bestellung #1234?",
+      answer: "Versendet gestern via DHL",
+      difficulty: "Einfach",
+    },
+    {
+      category: "Richtlinien-Fragen",
+      question: "Wie lange ist die Rückgabe-Frist?",
+      answer: "30 Tage lt. Ihrer Rückgabe-Richtlinie",
+      difficulty: "Einfach",
+    },
+    {
+      category: "Style-Beratung",
+      question: "Passt dieses Shirt zu meiner Jeans?",
+      answer: "Ja! Zeige Ihnen 3 passende Styles →",
+      difficulty: "Medium",
+    },
+    {
+      category: "Bestellungs-Änderung",
+      question: "Kann ich die Versandadresse noch ändern?",
+      answer: "Bestellung noch nicht versendet – Adresse aktualisierbar",
+      difficulty: "Medium",
+    },
+    {
+      category: "VIP-Service",
+      question: "Ich bin VIP-Kunde, gibt's einen Rabatt?",
+      answer: "Ja! 20% Rabattcode für Sie erstellt 🎁",
+      difficulty: "Komplex",
+    },
   ];
 
   return (
@@ -52,12 +124,14 @@ const AIKnowledgeBanner = () => {
       {/* Mesh gradient */}
       <div className="absolute inset-0 bg-mesh-purple opacity-15"></div>
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-[0.02]" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239333ea' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-      }}></div>
+      <div
+        className="absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239333ea' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+        }}
+      ></div>
 
       <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24 relative">
-        
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -65,23 +139,22 @@ const AIKnowledgeBanner = () => {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">
-            {t('marketing.aiKnowledge.title')}
+            {t("marketing.aiKnowledge.title")}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            {t('marketing.aiKnowledge.subtitle')}
+            {t("marketing.aiKnowledge.subtitle")}
           </p>
         </motion.div>
 
         {/* Main Data Flow Visualization */}
         <div className="relative mb-20">
-          
           {/* Connection Lines - Animated */}
           <div className="absolute top-1/2 left-0 right-0 flex justify-center -translate-y-1/2 pointer-events-none">
             <div className="w-full max-w-5xl relative h-px">
               {/* Horizontal lines */}
               <div className="absolute left-0 w-1/3 h-px bg-gradient-to-r from-transparent via-purple-300 to-purple-300"></div>
               <div className="absolute right-0 w-1/3 h-px bg-gradient-to-l from-transparent via-purple-300 to-purple-300"></div>
-              
+
               {/* Animated flow dots */}
               <motion.div
                 animate={{ x: [0, 200, 200], opacity: [0, 1, 0] }}
@@ -90,14 +163,18 @@ const AIKnowledgeBanner = () => {
               />
               <motion.div
                 animate={{ x: [0, -200, -200], opacity: [0, 1, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear", delay: 1.5 }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "linear",
+                  delay: 1.5,
+                }}
                 className="absolute right-0 w-2 h-2 bg-purple-500 rounded-full"
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-            
             {/* Left Data Sources */}
             <div className="space-y-4">
               {dataSourcesLeft.map((source, i) => (
@@ -109,30 +186,38 @@ const AIKnowledgeBanner = () => {
                   transition={{ delay: 0.3 + i * 0.1, duration: 0.6 }}
                   className="relative group"
                 >
-                  <div className={`
+                  <div
+                    className={`
                     absolute -inset-0.5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg
-                    ${source.color === 'purple' ? 'bg-purple-500/20' : ''}
-                    ${source.color === 'blue' ? 'bg-blue-500/20' : ''}
-                    ${source.color === 'violet' ? 'bg-violet-500/20' : ''}
-                  `}></div>
-                  
+                    ${source.color === "purple" ? "bg-purple-500/20" : ""}
+                    ${source.color === "blue" ? "bg-blue-500/20" : ""}
+                    ${source.color === "violet" ? "bg-violet-500/20" : ""}
+                  `}
+                  ></div>
+
                   <div className="bg-white rounded-xl p-5 border-2 border-gray-200 group-hover:border-purple-400 transition-all duration-300 shadow-card-strong group-hover:shadow-white-card-hover relative">
                     <div className="flex items-center gap-4">
-                      <div className={`
+                      <div
+                        className={`
                         p-3 rounded-lg
-                        ${source.color === 'purple' ? 'bg-purple-50' : ''}
-                        ${source.color === 'blue' ? 'bg-blue-50' : ''}
-                        ${source.color === 'violet' ? 'bg-violet-50' : ''}
-                      `}>
-                        <source.icon className={`
+                        ${source.color === "purple" ? "bg-purple-50" : ""}
+                        ${source.color === "blue" ? "bg-blue-50" : ""}
+                        ${source.color === "violet" ? "bg-violet-50" : ""}
+                      `}
+                      >
+                        <source.icon
+                          className={`
                           w-6 h-6
-                          ${source.color === 'purple' ? 'text-purple-700' : ''}
-                          ${source.color === 'blue' ? 'text-blue-700' : ''}
-                          ${source.color === 'violet' ? 'text-violet-600' : ''}
-                        `} />
+                          ${source.color === "purple" ? "text-purple-700" : ""}
+                          ${source.color === "blue" ? "text-blue-700" : ""}
+                          ${source.color === "violet" ? "text-violet-600" : ""}
+                        `}
+                        />
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-semibold text-gray-900 text-sm mb-0.5">{source.title}</h4>
+                        <h4 className="font-semibold text-gray-900 text-sm mb-0.5">
+                          {source.title}
+                        </h4>
                         <p className="text-xs text-gray-600">{source.desc}</p>
                       </div>
                       <div className="bg-purple-50 px-2 py-1 rounded border-2 border-purple-300 text-xs font-bold text-gray-900">
@@ -151,22 +236,25 @@ const AIKnowledgeBanner = () => {
               viewport={{ once: true }}
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
               className="flex justify-center relative"
-              style={{ perspective: '1000px' }}
+              style={{ perspective: "1000px" }}
             >
               <div className="relative">
                 {/* Outer glow layers */}
                 <div className="absolute -inset-12 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-                <div className="absolute -inset-8 bg-violet-500/15 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-                
+                <div
+                  className="absolute -inset-8 bg-violet-500/15 rounded-full blur-2xl animate-pulse"
+                  style={{ animationDelay: "1s" }}
+                ></div>
+
                 {/* Glass sphere container */}
-                <motion.div 
+                <motion.div
                   className="relative w-64 h-64 mx-auto transform-gpu transition-transform duration-700 hover:scale-110"
                   whileHover={{ rotateY: 12 }}
-                  style={{ transformStyle: 'preserve-3d' }}
+                  style={{ transformStyle: "preserve-3d" }}
                 >
                   {/* Inner dark sphere */}
                   <div className="absolute inset-8 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 rounded-full shadow-2xl"></div>
-                  
+
                   {/* Glass overlay */}
                   <div className="bg-gray-800 rounded-full absolute inset-0">
                     <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -174,20 +262,26 @@ const AIKnowledgeBanner = () => {
                       <div className="p-6 bg-gradient-to-br from-purple-500 to-violet-600 rounded-3xl shadow-neon-purple mb-3">
                         <Database className="w-14 h-14 text-white" />
                       </div>
-                      
-                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">{t('marketing.aiKnowledge.centerTitle')}</h3>
-                      
+
+                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
+                        {t("marketing.aiKnowledge.centerTitle")}
+                      </h3>
+
                       {/* Pulsing sync indicator */}
                       <div className="flex items-center justify-center gap-2 mb-2 flex-wrap px-2">
                         <div className="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
                         <div className="w-2 h-2 bg-green-400 rounded-full absolute animate-pulse"></div>
-                        <span className="text-xs sm:text-sm text-green-400 font-bold text-center">{t('marketing.aiKnowledge.syncLabel')}</span>
+                        <span className="text-xs sm:text-sm text-green-400 font-bold text-center">
+                          {t("marketing.aiKnowledge.syncLabel")}
+                        </span>
+                      </div>
+
+                      <div className="text-xs text-gray-600 text-center px-4">
+                        {t("marketing.aiKnowledge.autoLabel")}
+                      </div>
                     </div>
-                      
-                    <div className="text-xs text-gray-600 text-center px-4">{t('marketing.aiKnowledge.autoLabel')}</div>
                   </div>
-                </div>
-                  
+
                   {/* Floating data particles */}
                   {[...Array(6)].map((_, i) => (
                     <motion.div
@@ -195,18 +289,18 @@ const AIKnowledgeBanner = () => {
                       animate={{
                         y: [0, -20, 0],
                         x: [0, Math.sin(i) * 10, 0],
-                        opacity: [0.3, 1, 0.3]
+                        opacity: [0.3, 1, 0.3],
                       }}
                       transition={{
                         duration: 3,
                         repeat: Infinity,
                         delay: i * 0.5,
-                        ease: "easeInOut"
+                        ease: "easeInOut",
                       }}
                       className="absolute w-2 h-2 bg-purple-400 rounded-full blur-sm"
                       style={{
                         top: `${20 + i * 10}%`,
-                        left: `${10 + i * 15}%`
+                        left: `${10 + i * 15}%`,
                       }}
                     />
                   ))}
@@ -216,21 +310,50 @@ const AIKnowledgeBanner = () => {
                 <div className="absolute -left-12 top-1/2 -translate-y-1/2 hidden md:block">
                   <motion.div
                     animate={{ x: [0, -10, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
                   >
-                    <svg className="w-8 h-8 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    <svg
+                      className="w-8 h-8 text-purple-400"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                      />
                     </svg>
                   </motion.div>
                 </div>
-                
+
                 <div className="absolute -right-12 top-1/2 -translate-y-1/2 hidden md:block">
                   <motion.div
                     animate={{ x: [0, 10, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1,
+                    }}
                   >
-                    <svg className="w-8 h-8 text-purple-400 rotate-180" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    <svg
+                      className="w-8 h-8 text-purple-400 rotate-180"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M13 7l5 5m0 0l-5 5m5-5H6"
+                      />
                     </svg>
                   </motion.div>
                 </div>
@@ -248,30 +371,38 @@ const AIKnowledgeBanner = () => {
                   transition={{ delay: 0.6 + i * 0.1, duration: 0.6 }}
                   className="relative group"
                 >
-                  <div className={`
+                  <div
+                    className={`
                     absolute -inset-0.5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg
-                    ${source.color === 'pink' ? 'bg-pink-500/20' : ''}
-                    ${source.color === 'purple' ? 'bg-purple-500/20' : ''}
-                    ${source.color === 'blue' ? 'bg-blue-500/20' : ''}
-                  `}></div>
-                  
+                    ${source.color === "pink" ? "bg-pink-500/20" : ""}
+                    ${source.color === "purple" ? "bg-purple-500/20" : ""}
+                    ${source.color === "blue" ? "bg-blue-500/20" : ""}
+                  `}
+                  ></div>
+
                   <div className="bg-white rounded-xl p-5 border-2 border-gray-200 group-hover:border-purple-400 transition-all duration-300 shadow-card-strong group-hover:shadow-white-card-hover relative">
                     <div className="flex items-center gap-4">
-                      <div className={`
+                      <div
+                        className={`
                         p-3 rounded-lg
-                        ${source.color === 'pink' ? 'bg-pink-50' : ''}
-                        ${source.color === 'purple' ? 'bg-purple-50' : ''}
-                        ${source.color === 'blue' ? 'bg-blue-50' : ''}
-                      `}>
-                        <source.icon className={`
+                        ${source.color === "pink" ? "bg-pink-50" : ""}
+                        ${source.color === "purple" ? "bg-purple-50" : ""}
+                        ${source.color === "blue" ? "bg-blue-50" : ""}
+                      `}
+                      >
+                        <source.icon
+                          className={`
                           w-6 h-6
-                          ${source.color === 'pink' ? 'text-pink-700' : ''}
-                          ${source.color === 'purple' ? 'text-purple-700' : ''}
-                          ${source.color === 'blue' ? 'text-blue-700' : ''}
-                        `} />
+                          ${source.color === "pink" ? "text-pink-700" : ""}
+                          ${source.color === "purple" ? "text-purple-700" : ""}
+                          ${source.color === "blue" ? "text-blue-700" : ""}
+                        `}
+                        />
                       </div>
                       <div className="flex-1">
-                        <h4 className="font-semibold text-gray-900 text-sm mb-0.5">{source.title}</h4>
+                        <h4 className="font-semibold text-gray-900 text-sm mb-0.5">
+                          {source.title}
+                        </h4>
                         <p className="text-xs text-gray-600">{source.desc}</p>
                       </div>
                       <div className="bg-purple-50 px-2 py-1 rounded border-2 border-purple-300 text-xs font-bold text-gray-900">
@@ -297,14 +428,28 @@ const AIKnowledgeBanner = () => {
             const colors = ["purple", "violet", "blue"];
             const Icon = icons[i];
             return (
-            <div key={i} className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300">
-              <div className="inline-flex p-4 bg-white rounded-2xl shadow-sm mb-4 border border-gray-200">
-                <Icon className={`w-8 h-8 ${colors[i] === 'purple' ? 'text-purple-700' : ''} ${colors[i] === 'violet' ? 'text-violet-600' : ''} ${colors[i] === 'blue' ? 'text-blue-700' : ''}`} />
+              <div
+                key={i}
+                className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300"
+              >
+                <div className="inline-flex p-4 bg-white rounded-2xl shadow-sm mb-4 border border-gray-200">
+                  <Icon
+                    className={`w-8 h-8 ${
+                      colors[i] === "purple" ? "text-purple-700" : ""
+                    } ${colors[i] === "violet" ? "text-violet-600" : ""} ${
+                      colors[i] === "blue" ? "text-blue-700" : ""
+                    }`}
+                  />
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  {benefit.title}
+                </h4>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  {benefit.desc}
+                </p>
               </div>
-              <h4 className="font-semibold text-gray-900 mb-2">{benefit.title}</h4>
-              <p className="text-sm text-gray-600 leading-relaxed">{benefit.desc}</p>
-            </div>
-          )})}
+            );
+          })}
         </motion.div>
 
         {/* Bottom Stats Row */}
@@ -320,12 +465,23 @@ const AIKnowledgeBanner = () => {
               const statColors = ["purple", "violet", "blue", "pink"];
               const StatIcon = statIcons[i];
               return (
-              <div key={i} className="text-center">
-                <StatIcon className={`w-6 h-6 mx-auto mb-3 ${statColors[i] === 'purple' ? 'text-purple-700' : ''} ${statColors[i] === 'violet' ? 'text-violet-600' : ''} ${statColors[i] === 'blue' ? 'text-blue-700' : ''} ${statColors[i] === 'pink' ? 'text-pink-700' : ''}`} />
-                <div className="text-3xl font-light text-gray-900 mb-1">{stat.value}</div>
-                <div className="text-xs text-gray-600 uppercase tracking-wider">{stat.label}</div>
-              </div>
-            )})}
+                <div key={i} className="text-center">
+                  <StatIcon
+                    className={`w-6 h-6 mx-auto mb-3 ${
+                      statColors[i] === "purple" ? "text-purple-700" : ""
+                    } ${statColors[i] === "violet" ? "text-violet-600" : ""} ${
+                      statColors[i] === "blue" ? "text-blue-700" : ""
+                    } ${statColors[i] === "pink" ? "text-pink-700" : ""}`}
+                  />
+                  <div className="text-3xl font-light text-gray-900 mb-1">
+                    {stat.value}
+                  </div>
+                  <div className="text-xs text-gray-600 uppercase tracking-wider">
+                    {stat.label}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </motion.div>
 
@@ -338,57 +494,89 @@ const AIKnowledgeBanner = () => {
         >
           <div className="text-center mb-10">
             <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-              {t('marketing.aiKnowledge.examplesTitle')}
+              {t("marketing.aiKnowledge.examplesTitle")}
             </h3>
             <p className="text-gray-600">
-              {t('marketing.aiKnowledge.examplesSubtitle')}
+              {t("marketing.aiKnowledge.examplesSubtitle")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
             {examples.map((example, i) => {
-              const exampleColors = ["purple", "blue", "violet", "pink", "blue", "green"];
+              const exampleColors = [
+                "purple",
+                "blue",
+                "violet",
+                "pink",
+                "blue",
+                "green",
+              ];
               const color = exampleColors[i];
               return (
-              <motion.div 
-                key={i} 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.1 * i, duration: 0.5 }}
-                className="bg-white rounded-xl p-6 border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="flex items-center justify-between mb-4">
-                  <div className={`
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 * i, duration: 0.5 }}
+                  className="bg-white rounded-xl p-6 border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="flex items-center justify-between mb-4">
+                    <div
+                      className={`
                     px-3 py-1 rounded-full text-xs font-bold inline-block
-                    ${color === 'purple' ? 'bg-purple-100 text-purple-700' : ''}
-                    ${color === 'blue' ? 'bg-blue-100 text-blue-700' : ''}
-                    ${color === 'violet' ? 'bg-violet-100 text-violet-700' : ''}
-                    ${color === 'pink' ? 'bg-pink-100 text-pink-700' : ''}
-                    ${color === 'green' ? 'bg-green-100 text-green-700' : ''}
-                  `}>
-                    {example.category}
-                  </div>
-                  <div className={`
+                    ${color === "purple" ? "bg-purple-100 text-purple-700" : ""}
+                    ${color === "blue" ? "bg-blue-100 text-blue-700" : ""}
+                    ${color === "violet" ? "bg-violet-100 text-violet-700" : ""}
+                    ${color === "pink" ? "bg-pink-100 text-pink-700" : ""}
+                    ${color === "green" ? "bg-green-100 text-green-700" : ""}
+                  `}
+                    >
+                      {example.category}
+                    </div>
+                    <div
+                      className={`
                     px-2 py-1 rounded text-xs font-medium
-                    ${example.difficulty === 'Easy' || example.difficulty === 'Einfach' || example.difficulty === 'Fácil' || example.difficulty === 'Facile' ? 'bg-green-50 text-green-700' : ''}
-                    ${example.difficulty === 'Medium' || example.difficulty === 'Medio' || example.difficulty === 'Moyen' ? 'bg-yellow-50 text-yellow-700' : ''}
-                    ${example.difficulty === 'Complex' || example.difficulty === 'Komplex' || example.difficulty === 'Complejo' || example.difficulty === 'Complexe' ? 'bg-orange-50 text-orange-700' : ''}
-                  `}>
-                    {example.difficulty}
+                    ${
+                      example.difficulty === "Easy" ||
+                      example.difficulty === "Einfach" ||
+                      example.difficulty === "Fácil" ||
+                      example.difficulty === "Facile"
+                        ? "bg-green-50 text-green-700"
+                        : ""
+                    }
+                    ${
+                      example.difficulty === "Medium" ||
+                      example.difficulty === "Medio" ||
+                      example.difficulty === "Moyen"
+                        ? "bg-yellow-50 text-yellow-700"
+                        : ""
+                    }
+                    ${
+                      example.difficulty === "Complex" ||
+                      example.difficulty === "Komplex" ||
+                      example.difficulty === "Complejo" ||
+                      example.difficulty === "Complexe"
+                        ? "bg-orange-50 text-orange-700"
+                        : ""
+                    }
+                  `}
+                    >
+                      {example.difficulty}
+                    </div>
                   </div>
-                </div>
-                <div className="mb-4">
-                  <div className="text-sm font-semibold text-gray-900 mb-2">
-                    „{example.question}"
+                  <div className="mb-4">
+                    <div className="text-sm font-semibold text-gray-900 mb-2">
+                      „{example.question}"
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-gray-600">
+                      <span className="text-lg">→</span>
+                      <span className="font-medium">{example.answer}</span>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 text-sm text-gray-600">
-                    <span className="text-lg">→</span>
-                    <span className="font-medium">{example.answer}</span>
-                  </div>
-                </div>
-              </motion.div>
-            )})}
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
 
@@ -401,7 +589,7 @@ const AIKnowledgeBanner = () => {
         >
           <div className="inline-flex flex-col items-center gap-4">
             <p className="text-2xl text-gray-900 font-bold">
-              {t('marketing.aiKnowledge.bottomCta')}
+              {t("marketing.aiKnowledge.bottomCta")}
             </p>
           </div>
         </motion.div>
