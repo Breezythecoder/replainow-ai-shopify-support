@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { TrendingUp } from "lucide-react";
+import { useTranslation } from "@/i18n";
 
 const TestimonialsSection = () => {
-  const testimonials = [
+  const { t, getTranslation } = useTranslation();
+  const testimonials = getTranslation('marketing.testimonials.items') || [
     {
       name: "Michael Weber",
       role: "CEO, Fashion & Style GmbH",
@@ -36,9 +38,9 @@ const TestimonialsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-14">
           <h3 className="text-3xl md:text-4xl font-light text-gray-900 mb-3 tracking-tight">
-            Vertraut von führenden <span className="font-semibold">Shopify-Händlern</span>
+            {t('marketing.testimonials.title')}
           </h3>
-          <p className="text-lg text-gray-600">Echte Resultate von echten Geschäften</p>
+          <p className="text-lg text-gray-600">{t('marketing.testimonials.subtitle')}</p>
         </div>
 
         {/* Testimonials Grid - 3D Floating Cards - KRASSER */}

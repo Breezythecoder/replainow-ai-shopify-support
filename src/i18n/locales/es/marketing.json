@@ -202,8 +202,34 @@
     "bottomNote": "💜 Todos los planes con prueba de 14 días · Sin tarjeta de crédito · A través de Facturación de Shopify · Cancela en cualquier momento"
   },
   "testimonials": {
-    "title": "Lo Que Dicen los Comerciantes Reales",
-    "subtitle": "Únete a 280+ comerciantes Shopify satisfechos"
+    "title": "Confiado por Comerciantes Líderes de Shopify",
+    "subtitle": "Resultados reales de negocios reales",
+    "items": [
+      {
+        "name": "Michael Weber",
+        "role": "CEO, Fashion & Style GmbH",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces",
+        "text": "ReplAInow redujo nuestra carga de soporte en un 78%. ¡La IA entiende nuestros productos perfectamente!",
+        "metric": "€2.840/mes ahorrados",
+        "color": "purple"
+      },
+      {
+        "name": "Sarah Klein",
+        "role": "Head of Operations, TechStore",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces",
+        "text": "¡Mejor inversión de 2024! Nuestros clientes ahora reciben respuestas perfectas las 24 horas.",
+        "metric": "92% Automatización",
+        "color": "violet"
+      },
+      {
+        "name": "Thomas Müller",
+        "role": "Owner, BeautyWorld",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces",
+        "text": "La integración se completó en 5 minutos. ROI después de 9 días. ¡Absolutamente impresionante!",
+        "metric": "ROI en 9 días",
+        "color": "pink"
+      }
+    ]
   },
   "faq": {
     "title": "Preguntas Frecuentes",

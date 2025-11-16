@@ -228,8 +228,34 @@
     "bottomNote": "💜 Alle Pläne mit 14-Tage-Test · Keine Kreditkarte erforderlich · Über Shopify Billing · Jederzeit kündbar"
   },
   "testimonials": {
-    "title": "Was echte Händler sagen",
-    "subtitle": "Schließe dich 280+ zufriedenen Shopify-Händlern an"
+    "title": "Vertraut von führenden Shopify-Händlern",
+    "subtitle": "Echte Resultate von echten Geschäften",
+    "items": [
+      {
+        "name": "Michael Weber",
+        "role": "CEO, Fashion & Style GmbH",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces",
+        "text": "ReplAInow hat unseren Support-Aufwand um 78% reduziert. Die KI versteht unsere Produkte perfekt!",
+        "metric": "€2.840/Monat gespart",
+        "color": "purple"
+      },
+      {
+        "name": "Sarah Klein",
+        "role": "Head of Operations, TechStore",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces",
+        "text": "Beste Investition 2024! Unsere Kunden bekommen jetzt rund um die Uhr perfekte Antworten.",
+        "metric": "92% Automatisierung",
+        "color": "violet"
+      },
+      {
+        "name": "Thomas Müller",
+        "role": "Owner, BeautyWorld",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces",
+        "text": "Die Integration war in 5 Minuten fertig. ROI nach 9 Tagen. Absolut beeindruckend!",
+        "metric": "ROI in 9 Tagen",
+        "color": "pink"
+      }
+    ]
   },
   "faq": {
     "title": "Häufig gestellte Fragen",
