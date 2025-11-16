@@ -5,9 +5,14 @@
   "navigation": {
     "home": "Startseite",
     "features": "Features",
+    "integration": "Integration",
     "pricing": "Preise",
+    "faq": "FAQ",
     "demo": "Live Demo",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "cta": "Kostenlos starten",
+    "menuOpen": "Menü öffnen",
+    "menuClose": "Menü schließen"
   },
   "footer": {
     "about": {

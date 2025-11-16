@@ -2,9 +2,14 @@
   "navigation": {
     "home": "Inicio",
     "features": "Características",
+    "integration": "Integración",
     "pricing": "Precios",
+    "faq": "Preguntas Frecuentes",
     "demo": "Demo en Vivo",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "cta": "Comenzar Gratis",
+    "menuOpen": "Abrir menú",
+    "menuClose": "Cerrar menú"
   },
   "footer": {},
   "contact": {}
