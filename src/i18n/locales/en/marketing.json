@@ -845,6 +845,13 @@
     "bottomText": "No training required. No complex setup. Simply install and go.",
     "bottomBadge": "Live in 60 Seconds"
   },
+  "dashboard": {
+    "title": "This Is Your Dashboard",
+    "subtitle": "Chat, Email, Customer Info, Orders – everything in one screen. No more tab chaos.",
+    "tabLivechat": "Live Chat Dashboard",
+    "tabEmail": "Email Dashboard",
+    "bottomText": "Professional interface like the big tools – but all in one"
+  },
   "finalCta": {
     "title": "Ready to automate your support?",
     "subtitle": "Join 24 successful Shopify merchants saving time and costs with ReplAInow",

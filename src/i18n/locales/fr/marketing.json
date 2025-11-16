@@ -317,6 +317,13 @@
     "bottomText": "Aucune formation requise. Aucune configuration complexe. Installez simplement et commencez.",
     "bottomBadge": "En Direct en 60 Secondes"
   },
+  "dashboard": {
+    "title": "Voici Votre Tableau de Bord",
+    "subtitle": "Chat, Email, Infos Client, Commandes – tout sur un seul écran. Fini le chaos des onglets.",
+    "tabLivechat": "Tableau de Bord Live Chat",
+    "tabEmail": "Tableau de Bord Email",
+    "bottomText": "Interface professionnelle comme les grands outils – mais tout en un"
+  },
   "finalCta": {
     "title": "Prêt à automatiser votre support ?",
     "subtitle": "Rejoignez 24 marchands Shopify prospères économisant temps et coûts avec ReplAInow",

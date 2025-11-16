@@ -1,8 +1,10 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, Mail, Users } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "@/i18n";
 
 const DashboardShowcaseSection = () => {
+  const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState<'livechat' | 'email'>('livechat');
   
   return (
@@ -17,11 +19,10 @@ const DashboardShowcaseSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-4 tracking-tight">
-            So sieht <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">Ihr Dashboard</span> aus
+            {t('marketing.dashboard.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Chat, Email, Kunden-Info, Bestellungen – alles in einem Bildschirm. 
-            Kein Tab-Chaos mehr.
+            {t('marketing.dashboard.subtitle')}
           </p>
         </motion.div>
 
@@ -52,7 +53,7 @@ const DashboardShowcaseSection = () => {
                 }`}
               >
                 <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2" />
-                <span className="whitespace-nowrap">Live Chat Dashboard</span>
+                <span className="whitespace-nowrap">{t('marketing.dashboard.tabLivechat')}</span>
               </motion.button>
               <motion.button
                 onClick={() => setActiveTab('email')}
@@ -65,7 +66,7 @@ const DashboardShowcaseSection = () => {
                 }`}
               >
                 <Mail className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2" />
-                <span className="whitespace-nowrap">Email Dashboard</span>
+                <span className="whitespace-nowrap">{t('marketing.dashboard.tabEmail')}</span>
               </motion.button>
             </div>
             
@@ -101,7 +102,7 @@ const DashboardShowcaseSection = () => {
           <div className="glass-card inline-flex items-center gap-3 px-8 py-4 border-2 border-purple-200/40 rounded-2xl shadow-glass">
             <Users className="w-6 h-6 text-purple-700" />
             <span className="font-bold text-purple-900">
-              Professionelles Interface wie bei großen Tools – aber alles in einem
+              {t('marketing.dashboard.bottomText')}
             </span>
           </div>
         </motion.div>

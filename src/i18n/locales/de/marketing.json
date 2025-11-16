@@ -746,6 +746,13 @@
     "bottomText": "Keine Schulung erforderlich. Keine komplexe Einrichtung. Einfach installieren und loslegen.",
     "bottomBadge": "Live in 60 Sekunden"
   },
+  "dashboard": {
+    "title": "So sieht Ihr Dashboard aus",
+    "subtitle": "Chat, Email, Kunden-Info, Bestellungen – alles in einem Bildschirm. Kein Tab-Chaos mehr.",
+    "tabLivechat": "Live Chat Dashboard",
+    "tabEmail": "Email Dashboard",
+    "bottomText": "Professionelles Interface wie bei großen Tools – aber alles in einem"
+  },
   "finalCta": {
     "title": "Bereit, Ihren Support zu automatisieren?",
     "subtitle": "Schließen Sie sich 24 erfolgreichen Shopify-Händlern an, die mit ReplAInow Zeit und Kosten sparen",
