@@ -6,12 +6,23 @@ const UltraFooter = () => {
   const { t } = useTranslation();
   const location = useLocation();
   
+  // Detect current locale from pathname
+  const currentLocale = location.pathname.startsWith('/en') ? '/en' 
+                      : location.pathname.startsWith('/es') ? '/es'
+                      : location.pathname.startsWith('/fr') ? '/fr'
+                      : '';
+  
   // Check if we're on homepage or content/legal page
   const isHomePage = location.pathname === '/' || location.pathname === '/en' || location.pathname === '/es' || location.pathname === '/fr';
   
   // Smart link helper: if not on homepage, link to /#anchor, otherwise just #anchor
   const getAnchorLink = (anchor: string) => {
     return isHomePage ? `#${anchor}` : `/#${anchor}`;
+  };
+  
+  // Locale-aware page link: adds locale prefix to maintain current language
+  const getPageLink = (path: string) => {
+    return `${currentLocale}${path}`;
   };
   
   return (
@@ -88,17 +99,17 @@ const UltraFooter = () => {
             <h3 className="font-bold mb-4 text-gray-900">Ressourcen</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/shopify-kundensupport-automatisieren" className="text-gray-700 hover:text-purple-700 transition-colors">
+                <a href={getPageLink('/shopify-kundensupport-automatisieren')} className="text-gray-700 hover:text-purple-700 transition-colors">
                   Support automatisieren
                 </a>
               </li>
               <li>
-                <a href="/24-7-kundensupport-shopify" className="text-gray-700 hover:text-purple-700 transition-colors">
+                <a href={getPageLink('/24-7-kundensupport-shopify')} className="text-gray-700 hover:text-purple-700 transition-colors">
                   24/7 Support
                 </a>
               </li>
               <li>
-                <a href="/shopify-support-kosten-senken" className="text-gray-700 hover:text-purple-700 transition-colors">
+                <a href={getPageLink('/shopify-support-kosten-senken')} className="text-gray-700 hover:text-purple-700 transition-colors">
                   Kosten senken
                 </a>
               </li>
@@ -108,7 +119,7 @@ const UltraFooter = () => {
                 </a>
               </li>
               <li>
-                <a href="/contact" className="text-gray-700 hover:text-purple-700 transition-colors">
+                <a href={getPageLink('/contact')} className="text-gray-700 hover:text-purple-700 transition-colors">
                   {t('common.footer.links.contact')}
                 </a>
               </li>
@@ -120,33 +131,33 @@ const UltraFooter = () => {
             <h3 className="font-bold mb-4 text-gray-900">{t('common.footer.legal.title')}</h3>
             <ul className="space-y-3">
               <li>
-                <a href="/privacy" className="text-gray-700 hover:text-purple-700 transition-colors">
-                  Datenschutz
+                <a href={getPageLink('/privacy')} className="text-gray-700 hover:text-purple-700 transition-colors">
+                  {t('common.footer.legal.privacy')}
                 </a>
               </li>
               <li>
-                <a href="/terms" className="text-gray-700 hover:text-purple-700 transition-colors">
-                  AGB
+                <a href={getPageLink('/terms')} className="text-gray-700 hover:text-purple-700 transition-colors">
+                  {t('common.footer.legal.terms')}
                 </a>
               </li>
               <li>
-                <a href="/impressum" className="text-gray-700 hover:text-purple-700 transition-colors">
-                  Impressum
+                <a href={getPageLink('/impressum')} className="text-gray-700 hover:text-purple-700 transition-colors">
+                  {t('common.footer.legal.impressum')}
                 </a>
               </li>
               <li>
-                <a href="/cookies" className="text-gray-700 hover:text-purple-700 transition-colors">
-                  Cookies
+                <a href={getPageLink('/cookies')} className="text-gray-700 hover:text-purple-700 transition-colors">
+                  {t('common.footer.legal.cookies')}
                 </a>
               </li>
               <li>
-                <a href="/security" className="text-gray-700 hover:text-purple-700 transition-colors">
-                  Sicherheit
+                <a href={getPageLink('/security')} className="text-gray-700 hover:text-purple-700 transition-colors">
+                  {t('common.footer.legal.security')}
                 </a>
               </li>
               <li>
-                <a href="/refund" className="text-gray-700 hover:text-purple-700 transition-colors">
-                  Rückerstattung
+                <a href={getPageLink('/refund')} className="text-gray-700 hover:text-purple-700 transition-colors">
+                  {t('common.footer.legal.refund')}
                 </a>
               </li>
             </ul>
