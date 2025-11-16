@@ -438,6 +438,23 @@
     "journeyExample": "L'IA utilise le contexte : 'Robe d'Été' vue 45 sec + €150 dans le panier = Prêt à acheter → Recommande des accessoires assortis !",
     "bottomStatement": "Intelligence IA de niveau enterprise – pas seulement un chatbot, mais un agent de support intelligent"
   },
+  "aiKnowledge": {
+    "title": "L'IA Connaît CHAQUE Aspect de Votre Boutique",
+    "subtitle": "Produits, commandes, clients, politiques – tout synchronisé automatiquement. Vous changez quelque chose ? L'IA le sait instantanément. Zéro maintenance.",
+    "dataSourcesLeft": [
+      {"title": "Produits", "desc": "Catalogue, variantes, prix", "stats": "Temps réel"},
+      {"title": "Commandes", "desc": "Statut, suivi, historique", "stats": "60 Jours"},
+      {"title": "Clients", "desc": "Profils, préférences", "stats": "À vie"}
+    ],
+    "dataSourcesRight": [
+      {"title": "Politiques", "desc": "Retours, expédition, conditions", "stats": "Auto-Sync"},
+      {"title": "Expédition", "desc": "Transporteurs, liens de suivi", "stats": "En direct"},
+      {"title": "Contenu", "desc": "Pages, FAQs, blog", "stats": "Complet"}
+    ],
+    "centerTitle": "Shopify Admin",
+    "syncLabel": "SYNCHRONISATION EN TEMPS RÉEL",
+    "autoLabel": "Entièrement Automatique"
+  },
   "finalCta": {
     "title": "Prêt à automatiser votre support ?",
     "subtitle": "Rejoignez 24 marchands Shopify prospères économisant temps et coûts avec ReplAInow",

@@ -916,6 +916,23 @@
     "unifiedFeature3Desc": "Homepage greetings, product page help, flash sales – AI reaches out proactively on all pages with perfect timing.",
     "bottomStatement": "Your customer decides how to contact – your AI responds perfectly everywhere"
   },
+  "aiKnowledge": {
+    "title": "AI Knows EVERY Aspect of Your Store",
+    "subtitle": "Products, orders, customers, policies – all automatically synchronized. You change something? AI knows it instantly. Zero maintenance.",
+    "dataSourcesLeft": [
+      {"title": "Products", "desc": "Catalog, variants, prices", "stats": "Real-time"},
+      {"title": "Orders", "desc": "Status, tracking, history", "stats": "60 Days"},
+      {"title": "Customers", "desc": "Profiles, preferences", "stats": "Lifetime"}
+    ],
+    "dataSourcesRight": [
+      {"title": "Policies", "desc": "Returns, shipping, terms", "stats": "Auto-Sync"},
+      {"title": "Shipping", "desc": "Carriers, tracking links", "stats": "Live"},
+      {"title": "Content", "desc": "Pages, FAQs, blog", "stats": "Full"}
+    ],
+    "centerTitle": "Shopify Admin",
+    "syncLabel": "REAL-TIME SYNC",
+    "autoLabel": "Fully Automatic"
+  },
   "finalCta": {
     "title": "Ready to automate your support?",
     "subtitle": "Join 24 successful Shopify merchants saving time and costs with ReplAInow",

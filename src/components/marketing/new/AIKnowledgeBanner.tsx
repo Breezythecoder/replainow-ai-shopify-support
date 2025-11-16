@@ -1,54 +1,29 @@
 import { motion } from "framer-motion";
 import { Database, Zap, CheckCircle2, TrendingUp, Package, Users, FileText, ShoppingBag, Truck, Globe } from "lucide-react";
+import { useTranslation } from "@/i18n";
 
 const AIKnowledgeBanner = () => {
-  const dataSourcesLeft = [
-    { 
-      icon: Package, 
-      title: "Produkte", 
-      desc: "Katalog, Varianten, Preise", 
-      color: "purple",
-      stats: "Real-time"
-    },
-    { 
-      icon: ShoppingBag, 
-      title: "Bestellungen", 
-      desc: "Status, Tracking, Historie", 
-      color: "blue",
-      stats: "60 Tage"
-    },
-    { 
-      icon: Users, 
-      title: "Kunden", 
-      desc: "Profile, Präferenzen", 
-      color: "violet",
-      stats: "Lifetime"
-    }
+  const { t, getTranslation } = useTranslation();
+  
+  const leftData = getTranslation('marketing.aiKnowledge.dataSourcesLeft') || [
+    {title: "Produkte", desc: "Katalog, Varianten, Preise", stats: "Real-time"},
+    {title: "Bestellungen", desc: "Status, Tracking, Historie", stats: "60 Tage"},
+    {title: "Kunden", desc: "Profile, Präferenzen", stats: "Lifetime"}
   ];
-
-  const dataSourcesRight = [
-    { 
-      icon: FileText, 
-      title: "Richtlinien", 
-      desc: "Rückgabe, Versand, AGB", 
-      color: "pink",
-      stats: "Auto-Sync"
-    },
-    { 
-      icon: Truck, 
-      title: "Versand", 
-      desc: "Carrier, Tracking-Links", 
-      color: "purple",
-      stats: "Live"
-    },
-    { 
-      icon: Globe, 
-      title: "Content", 
-      desc: "Seiten, FAQs, Blog", 
-      color: "blue",
-      stats: "Voll"
-    }
+  
+  const rightData = getTranslation('marketing.aiKnowledge.dataSourcesRight') || [
+    {title: "Richtlinien", desc: "Rückgabe, Versand, AGB", stats: "Auto-Sync"},
+    {title: "Versand", desc: "Carrier, Tracking-Links", stats: "Live"},
+    {title: "Content", desc: "Seiten, FAQs, Blog", stats: "Voll"}
   ];
+  
+  const leftIcons = [Package, ShoppingBag, Users];
+  const rightIcons = [FileText, Truck, Globe];
+  const leftColors = ["purple", "blue", "violet"];
+  const rightColors = ["pink", "purple", "blue"];
+  
+  const dataSourcesLeft = leftData.map((item, i) => ({...item, icon: leftIcons[i], color: leftColors[i]}));
+  const dataSourcesRight = rightData.map((item, i) => ({...item, icon: rightIcons[i], color: rightColors[i]}));
 
   return (
     <div className="bg-gradient-to-b from-white via-purple-50/30 to-white relative overflow-hidden">
@@ -68,11 +43,10 @@ const AIKnowledgeBanner = () => {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">
-            AI kennt <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">JEDEN Aspekt</span> Ihres Shops
+            {t('marketing.aiKnowledge.title')}
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Produkte, Bestellungen, Kunden, Richtlinien – alles automatisch synchronisiert. 
-            Sie ändern etwas? AI weiß es sofort. Null Wartung.
+            {t('marketing.aiKnowledge.subtitle')}
           </p>
         </motion.div>
 
@@ -179,16 +153,16 @@ const AIKnowledgeBanner = () => {
                         <Database className="w-14 h-14 text-white" />
                       </div>
                       
-                      <h3 className="text-2xl font-bold text-white mb-1">Shopify Admin</h3>
+                      <h3 className="text-2xl font-bold text-white mb-1">{t('marketing.aiKnowledge.centerTitle')}</h3>
                       
                       {/* Pulsing sync indicator */}
                       <div className="flex items-center gap-2 mb-2">
                         <div className="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
                         <div className="w-2 h-2 bg-green-400 rounded-full absolute animate-pulse"></div>
-                        <span className="text-sm text-green-400 font-bold ml-2">ECHTZEIT SYNC</span>
+                        <span className="text-sm text-green-400 font-bold ml-2">{t('marketing.aiKnowledge.syncLabel')}</span>
                     </div>
                       
-                    <div className="text-xs text-gray-600">Vollautomatisch</div>
+                    <div className="text-xs text-gray-600">{t('marketing.aiKnowledge.autoLabel')}</div>
                   </div>
                 </div>
                   
