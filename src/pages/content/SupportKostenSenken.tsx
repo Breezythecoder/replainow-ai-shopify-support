@@ -1,16 +1,20 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "@/i18n";
-import LegalNavbar from "@/components/marketing/LegalNavbar";
+import { useLocale } from "@/i18n/LocaleContext";
+import PremiumNavbar from "@/components/marketing/PremiumNavbar";
 import UltraFooter from "@/components/marketing/UltraFooter";
 import { Check, X, DollarSign, TrendingDown, AlertTriangle, ArrowRight, ChevronRight, Zap, Eye, EyeOff } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { getHreflangTags, getCanonicalUrl } from "@/seo/hreflangHelper";
+import { contentPageUrls } from "@/i18n/contentUrls";
 
 // 💰 SUPPORT KOSTEN SENKEN PAGE - Money Theme, TCO Focus
 // 100% Real TCO Analysis, Advanced 12-Input Calculator, 3 Real Case Studies
 
 const SupportKostenSenken = () => {
   const { t, getTranslation } = useTranslation();
+  const { locale: currentLocale } = useLocale();
   
   const getArray = (key: string): any[] => {
     const result = getTranslation(key);
@@ -21,6 +25,10 @@ const SupportKostenSenken = () => {
     const result = getTranslation(key);
     return typeof result === 'object' && result !== null && !Array.isArray(result) ? result : {};
   };
+  
+  // SEO: Hreflang tags for multilingual support
+  const hreflangs = getHreflangTags('kostenSenken');
+  const canonicalUrl = getCanonicalUrl('kostenSenken', currentLocale);
   
   // Advanced TCO Calculator State (12 Inputs!)
   const [agents, setAgents] = useState(3);
@@ -166,7 +174,12 @@ const SupportKostenSenken = () => {
         <title>{t('content.kostenSenken.meta.title')}</title>
         <meta name="description" content={t('content.kostenSenken.meta.description')} />
         <meta name="keywords" content={t('content.kostenSenken.meta.keywords')} />
-        <link rel="canonical" href="https://replainow.com/shopify-support-kosten-senken" />
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* Hreflang tags for multilingual SEO */}
+        {hreflangs.map(({ hreflang, href }) => (
+          <link key={hreflang} rel="alternate" hreflang={hreflang} href={href} />
+        ))}
         
         <meta property="og:title" content="Shopify Support Kosten senken | 79-97% Ersparnis" />
         <meta property="og:description" content="Support-Kosten um 79-97% senken. TCO-Analyse, Advanced Calculator, Real Merchant Results." />
@@ -194,8 +207,8 @@ const SupportKostenSenken = () => {
         <script type="application/ld+json">{JSON.stringify(softwareAppSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
-
-      <LegalNavbar />
+      
+      <PremiumNavbar />
 
       <main 
         id="main-content" 
@@ -306,7 +319,7 @@ const SupportKostenSenken = () => {
               {/* What Shop Owners Think */}
               <div className="bg-white rounded-2xl p-8 border-2 border-gray-300 relative">
                 <div className="absolute -top-4 left-6 bg-gray-600 text-white px-4 py-1 rounded-full text-sm font-bold">
-                  💭 Illusion
+                  {t('content.common.labels.illusion')}
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
                   {getObject('content.kostenSenken.problem.illusionVsReality.shopOwnerThinks').title}
@@ -318,7 +331,7 @@ const SupportKostenSenken = () => {
                   "{getObject('content.kostenSenken.problem.illusionVsReality.shopOwnerThinks').assumption}"
                 </p>
                 <div className="bg-gray-100 rounded-lg p-4">
-                  <p className="text-sm text-gray-600">Das entspricht nur:</p>
+                  <p className="text-sm text-gray-600">{t('content.common.labels.onlyThis')}</p>
                   <p className="text-2xl font-bold text-gray-900">
                     {getObject('content.kostenSenken.problem.illusionVsReality.shopOwnerThinks').percentage}
                   </p>
@@ -328,7 +341,7 @@ const SupportKostenSenken = () => {
               {/* The Hidden Reality */}
               <div className="bg-gradient-to-br from-red-500 to-orange-500 rounded-2xl p-8 text-white relative shadow-2xl">
                 <div className="absolute -top-4 left-6 bg-red-700 text-white px-4 py-1 rounded-full text-sm font-bold">
-                  ⚠️ Realität
+                  {t('content.common.labels.realityBadge')}
                 </div>
                 <h3 className="text-2xl font-bold mb-4">
                   {getObject('content.kostenSenken.problem.illusionVsReality.reality').title}
@@ -382,16 +395,16 @@ const SupportKostenSenken = () => {
             <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl p-6 text-white">
               <div className="flex items-center gap-3 mb-3">
                 <Zap className="w-6 h-6" />
-                <h3 className="text-xl font-bold">Tipp: Kosten senken durch Automatisierung</h3>
+                <h3 className="text-xl font-bold">{t('content.common.internalLinks.tipCostReductionTitle')}</h3>
               </div>
               <p className="mb-4">
-                Der größte Kostentreiber sind repetitive Tickets. Lerne wie du 60-80% automatisierst und sofort Kosten senkst.
+                {t('content.common.internalLinks.tipCostReductionDesc')}
               </p>
               <Link
-                to="/shopify-kundensupport-automatisieren"
+                to={contentPageUrls.automatisierung[currentLocale]}
                 className="inline-flex items-center gap-2 bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all"
               >
-                Automatisierungs-Guide
+                {t('content.common.internalLinks.automationGuide')}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
@@ -431,7 +444,7 @@ const SupportKostenSenken = () => {
                     ))}
                   </div>
                   <div className="mt-4 pt-4 border-t-2 border-gray-200">
-                    <div className="text-sm text-gray-600">Total Range:</div>
+                    <div className="text-sm text-gray-600">{t('content.common.labels.totalRange')}</div>
                     <div className="text-xl font-bold text-red-600">{category.totalRange}</div>
                   </div>
                 </div>
@@ -491,7 +504,7 @@ const SupportKostenSenken = () => {
                       </div>
                       <p className="text-gray-700 mb-4">{cat.description}</p>
                       <div className="bg-green-50 border-l-4 border-green-500 p-4 rounded">
-                        <span className="font-semibold text-green-700">Ersparnis mit ReplAInow: </span>
+                        <span className="font-semibold text-green-700">{t('content.common.labels.savings')} </span>
                         <span className="text-gray-700">{cat.savingsWithAI}</span>
                       </div>
                     </div>
@@ -522,23 +535,23 @@ const SupportKostenSenken = () => {
               <div className="grid md:grid-cols-2 gap-6 mb-6">
                 {/* Phase 1 */}
                 <div className="bg-white rounded-lg p-6">
-                  <h4 className="text-lg font-bold text-green-700 mb-4">Phase 1: Klein & Einfach</h4>
+                  <h4 className="text-lg font-bold text-green-700 mb-4">{t('content.common.labels.phase1SmallSimple')}</h4>
                   <div className="space-y-2 text-sm">
-                    <p><span className="font-semibold">Tickets:</span> {getObject('content.kostenSenken.scalingTrap.example.phase1').tickets}</p>
-                    <p><span className="font-semibold">Agents:</span> {getObject('content.kostenSenken.scalingTrap.example.phase1').agents}</p>
-                    <p><span className="font-semibold">Kosten:</span> {getObject('content.kostenSenken.scalingTrap.example.phase1').cost}</p>
+                    <p><span className="font-semibold">{t('content.common.labels.tickets')}</span> {getObject('content.kostenSenken.scalingTrap.example.phase1').tickets}</p>
+                    <p><span className="font-semibold">{t('content.common.labels.agents')}</span> {getObject('content.kostenSenken.scalingTrap.example.phase1').agents}</p>
+                    <p><span className="font-semibold">{t('content.common.labels.costs')}</span> {getObject('content.kostenSenken.scalingTrap.example.phase1').cost}</p>
                     <p className="text-gray-600">{getObject('content.kostenSenken.scalingTrap.example.phase1').structure}</p>
                   </div>
                 </div>
 
                 {/* Phase 2 */}
                 <div className="bg-white rounded-lg p-6 border-2 border-red-500">
-                  <h4 className="text-lg font-bold text-red-700 mb-4">Phase 2: Gewachsen & Komplex</h4>
+                  <h4 className="text-lg font-bold text-red-700 mb-4">{t('content.common.labels.phase2GrownComplex')}</h4>
                   <div className="space-y-2 text-sm">
-                    <p><span className="font-semibold">Tickets:</span> {getObject('content.kostenSenken.scalingTrap.example.phase2').tickets}</p>
-                    <p><span className="font-semibold">Agents:</span> {getObject('content.kostenSenken.scalingTrap.example.phase2').agents}</p>
-                    <p className="line-through text-gray-500">Naiv: {getObject('content.kostenSenken.scalingTrap.example.phase2').costNaive}</p>
-                    <p className="font-bold text-red-600">Reality: {getObject('content.kostenSenken.scalingTrap.example.phase2').costReality}</p>
+                    <p><span className="font-semibold">{t('content.common.labels.tickets')}</span> {getObject('content.kostenSenken.scalingTrap.example.phase2').tickets}</p>
+                    <p><span className="font-semibold">{t('content.common.labels.agents')}</span> {getObject('content.kostenSenken.scalingTrap.example.phase2').agents}</p>
+                    <p className="line-through text-gray-500">{t('content.common.labels.naive')} {getObject('content.kostenSenken.scalingTrap.example.phase2').costNaive}</p>
+                    <p className="font-bold text-red-600">{t('content.common.labels.reality')} {getObject('content.kostenSenken.scalingTrap.example.phase2').costReality}</p>
                     <p className="font-bold text-orange-600">{getObject('content.kostenSenken.scalingTrap.example.phase2').vsPhase1}</p>
                   </div>
                 </div>
@@ -546,7 +559,7 @@ const SupportKostenSenken = () => {
 
               {/* Why More */}
               <div className="bg-white rounded-lg p-6">
-                <h4 className="font-bold text-gray-900 mb-3">Warum mehr als linear?</h4>
+                <h4 className="font-bold text-gray-900 mb-3">{t('content.common.labels.whyMoreThanLinear')}</h4>
                 <ul className="space-y-2">
                   {getArray('content.kostenSenken.scalingTrap.example.whyMore').map((reason: string, idx: number) => (
                     <li key={idx} className="flex items-start gap-2">
@@ -559,7 +572,7 @@ const SupportKostenSenken = () => {
 
               {/* With ReplAInow */}
               <div className="mt-6 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg p-6 text-white">
-                <h4 className="text-xl font-bold mb-3">Mit ReplAInow:</h4>
+                <h4 className="text-xl font-bold mb-3">{t('content.common.labels.mitReplainow')}</h4>
                 <p className="text-lg">{getObject('content.kostenSenken.scalingTrap.example').withReplAInow}</p>
               </div>
             </div>
@@ -581,7 +594,7 @@ const SupportKostenSenken = () => {
             {/* Calculator */}
             <div className="bg-white rounded-2xl p-8 text-gray-900">
               <h3 className="text-2xl font-bold mb-8 text-center text-green-600">
-                Berechne deine ECHTEN Support-Kosten
+                {t('content.common.labels.calculateRealCosts')}
               </h3>
               
               {/* 12 Inputs Grid */}
@@ -609,7 +622,7 @@ const SupportKostenSenken = () => {
                   <input type="number" value={benefits} onChange={(e) => setBenefits(Number(e.target.value))}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-green-500 focus:outline-none text-lg font-semibold"
                     min="15" max="40" />
-                  <p className="text-xs text-gray-500 mt-1">Typical: 20-25% EU, 25-35% USA</p>
+                  <p className="text-xs text-gray-500 mt-1">{t('content.common.labels.typicalEU')}</p>
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -666,7 +679,7 @@ const SupportKostenSenken = () => {
                   <input type="number" value={managementHours} onChange={(e) => setManagementHours(Number(e.target.value))}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-green-500 focus:outline-none text-lg font-semibold"
                     min="0" max="40" />
-                  <p className="text-xs text-gray-500 mt-1">Meetings, Reviews, QA, Planning</p>
+                  <p className="text-xs text-gray-500 mt-1">{t('content.common.labels.meetingsReviews')}</p>
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">
@@ -683,54 +696,54 @@ const SupportKostenSenken = () => {
                   <input type="number" value={turnover} onChange={(e) => setTurnover(Number(e.target.value))}
                     className="w-full px-4 py-3 border-2 border-gray-300 rounded-xl focus:border-green-500 focus:outline-none text-lg font-semibold"
                     min="0" max="5" step="0.5" />
-                  <p className="text-xs text-gray-500 mt-1">Support: 30-40% Fluktuation/Jahr</p>
+                  <p className="text-xs text-gray-500 mt-1">{t('content.common.labels.supportTurnover')}</p>
                 </div>
               </div>
 
               {/* Results */}
               <div className="bg-gradient-to-br from-green-50 to-emerald-50 rounded-xl p-8 border-2 border-green-300">
-                <h4 className="text-2xl font-bold text-center mb-8">Deine TCO Analyse:</h4>
+                <h4 className="text-2xl font-bold text-center mb-8">{t('content.common.labels.yourTCOAnalysis')}</h4>
                 
                 <div className="grid md:grid-cols-2 gap-8 mb-8">
                   {/* Traditional Costs Breakdown */}
                   <div>
-                    <h5 className="text-lg font-bold text-red-700 mb-4">Traditional Support (Menschen):</h5>
+                    <h5 className="text-lg font-bold text-red-700 mb-4">{t('content.common.labels.traditionalSupport')}</h5>
                     <div className="space-y-2 text-sm">
-                      <div className="flex justify-between"><span>Gehälter:</span><span className="font-bold">${salariesMonthly.toLocaleString()}</span></div>
-                      <div className="flex justify-between"><span>Benefits ({benefits}%):</span><span className="font-bold">${Math.round(benefitsMonthly).toLocaleString()}</span></div>
-                      {nightShift > 0 && <div className="flex justify-between"><span>Nachtschicht-Zuschläge:</span><span className="font-bold text-red-600">${Math.round(nightCostMonthly).toLocaleString()}</span></div>}
-                      {weekendShift > 0 && <div className="flex justify-between"><span>Wochenend-Zuschläge:</span><span className="font-bold text-red-600">${Math.round(weekendCostMonthly).toLocaleString()}</span></div>}
-                      <div className="flex justify-between"><span>Software:</span><span className="font-bold">${software}</span></div>
-                      <div className="flex justify-between"><span>Recruiting (amort.):</span><span className="font-bold">${Math.round(recruitingMonthly)}</span></div>
-                      <div className="flex justify-between"><span>Training (amort.):</span><span className="font-bold">${Math.round(trainingMonthly)}</span></div>
-                      <div className="flex justify-between"><span>Equipment (amort.):</span><span className="font-bold">${Math.round(equipmentMonthly)}</span></div>
-                      <div className="flex justify-between"><span>Management:</span><span className="font-bold">${Math.round(managementMonthly).toLocaleString()}</span></div>
-                      <div className="flex justify-between"><span>Überstunden:</span><span className="font-bold">${overtime}</span></div>
+                      <div className="flex justify-between"><span>{t('content.common.labels.salaries')}</span><span className="font-bold">${salariesMonthly.toLocaleString()}</span></div>
+                      <div className="flex justify-between"><span>{t('content.common.labels.benefits')} ({benefits}%):</span><span className="font-bold">${Math.round(benefitsMonthly).toLocaleString()}</span></div>
+                      {nightShift > 0 && <div className="flex justify-between"><span>{t('content.common.labels.nightShiftSurcharges')}</span><span className="font-bold text-red-600">${Math.round(nightCostMonthly).toLocaleString()}</span></div>}
+                      {weekendShift > 0 && <div className="flex justify-between"><span>{t('content.common.labels.weekendSurcharges')}</span><span className="font-bold text-red-600">${Math.round(weekendCostMonthly).toLocaleString()}</span></div>}
+                      <div className="flex justify-between"><span>{t('content.common.labels.software')}</span><span className="font-bold">${software}</span></div>
+                      <div className="flex justify-between"><span>{t('content.common.labels.recruitingAmortized')}</span><span className="font-bold">${Math.round(recruitingMonthly)}</span></div>
+                      <div className="flex justify-between"><span>{t('content.common.labels.trainingAmortized')}</span><span className="font-bold">${Math.round(trainingMonthly)}</span></div>
+                      <div className="flex justify-between"><span>{t('content.common.labels.equipmentAmortized')}</span><span className="font-bold">${Math.round(equipmentMonthly)}</span></div>
+                      <div className="flex justify-between"><span>{t('content.common.labels.management')}</span><span className="font-bold">${Math.round(managementMonthly).toLocaleString()}</span></div>
+                      <div className="flex justify-between"><span>{t('content.common.labels.overtime')}</span><span className="font-bold">${overtime}</span></div>
                       <div className="pt-3 border-t-2 border-gray-300 flex justify-between">
-                        <span className="font-bold">TOTAL:</span>
+                        <span className="font-bold">{t('content.common.labels.total')}</span>
                         <span className="font-bold text-red-600 text-xl">${Math.round(totalHumanMonthly).toLocaleString()}/Mo</span>
                       </div>
-                      <div className="text-xs text-gray-600">${Math.round(totalHumanAnnual).toLocaleString()}/Jahr</div>
+                      <div className="text-xs text-gray-600">${Math.round(totalHumanAnnual).toLocaleString()}{t('content.common.labels.perYear')}</div>
                     </div>
                   </div>
 
                   {/* ReplAInow Costs */}
                   <div>
-                    <h5 className="text-lg font-bold text-green-700 mb-4">Mit ReplAInow (AI + Minimal Human):</h5>
+                    <h5 className="text-lg font-bold text-green-700 mb-4">{t('content.common.labels.withReplainowAI')}</h5>
                     <div className="space-y-2 text-sm">
                       <div className="flex justify-between"><span>ReplAInow ({replainowPlan}):</span><span className="font-bold">${replainowCost}</span></div>
-                      <div className="flex justify-between"><span>{agentsNeeded} Agent(s) (20-40% Tickets):</span><span className="font-bold">${agentCost.toLocaleString()}</span></div>
-                      <div className="flex justify-between"><span>Benefits ({benefits}%):</span><span className="font-bold">${Math.round(agentBenefits)}</span></div>
-                      <div className="flex justify-between"><span>Management (minimal):</span><span className="font-bold">${minimalManagement}</span></div>
-                      <div className="flex justify-between line-through text-gray-500"><span>Recruiting:</span><span>$0</span></div>
-                      <div className="flex justify-between line-through text-gray-500"><span>Training:</span><span>$0</span></div>
-                      <div className="flex justify-between line-through text-gray-500"><span>Extra Software:</span><span>$0</span></div>
-                      <div className="flex justify-between line-through text-gray-500"><span>Überstunden:</span><span>$0</span></div>
+                      <div className="flex justify-between"><span>{agentsNeeded} {t('content.common.labels.agentsForComplexCases')}</span><span className="font-bold">${agentCost.toLocaleString()}</span></div>
+                      <div className="flex justify-between"><span>{t('content.common.labels.benefits')} ({benefits}%):</span><span className="font-bold">${Math.round(agentBenefits)}</span></div>
+                      <div className="flex justify-between"><span>{t('content.common.labels.managementMinimal')}</span><span className="font-bold">${minimalManagement}</span></div>
+                      <div className="flex justify-between line-through text-gray-500"><span>{t('content.common.labels.recruiting')}</span><span>$0</span></div>
+                      <div className="flex justify-between line-through text-gray-500"><span>{t('content.common.labels.training')}</span><span>$0</span></div>
+                      <div className="flex justify-between line-through text-gray-500"><span>{t('content.common.labels.software')}</span><span>$0</span></div>
+                      <div className="flex justify-between line-through text-gray-500"><span>{t('content.common.labels.overtime')}</span><span>$0</span></div>
                       <div className="pt-3 border-t-2 border-gray-300 flex justify-between">
-                        <span className="font-bold">TOTAL:</span>
+                        <span className="font-bold">{t('content.common.labels.total')}</span>
                         <span className="font-bold text-green-600 text-xl">${Math.round(totalAIMonthly).toLocaleString()}/Mo</span>
                       </div>
-                      <div className="text-xs text-gray-600">${Math.round(totalAIAnnual).toLocaleString()}/Jahr</div>
+                      <div className="text-xs text-gray-600">${Math.round(totalAIAnnual).toLocaleString()}{t('content.common.labels.perYear')}</div>
                     </div>
                   </div>
                 </div>
@@ -739,22 +752,22 @@ const SupportKostenSenken = () => {
                 <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl p-8 text-white text-center">
                   <div className="grid md:grid-cols-3 gap-6 mb-6">
                     <div>
-                      <div className="text-sm mb-2">Monatlich gespart:</div>
+                      <div className="text-sm mb-2">{t('content.common.labels.monthlySaved')}</div>
                       <div className="text-4xl font-bold">${Math.round(savingsMonthly).toLocaleString()}</div>
-                      <div className="text-green-200">({savingsPercentage}% Ersparnis)</div>
+                      <div className="text-green-200">({savingsPercentage}% {t('content.common.labels.savings')})</div>
                     </div>
                     <div>
-                      <div className="text-sm mb-2">Jährlich gespart:</div>
+                      <div className="text-sm mb-2">{t('content.common.labels.annualSaved')}</div>
                       <div className="text-4xl font-bold">${Math.round(savingsAnnual).toLocaleString()}</div>
                     </div>
                     <div>
-                      <div className="text-sm mb-2">3 Jahre gespart:</div>
+                      <div className="text-sm mb-2">{t('content.common.labels.threeYearsSaved')}</div>
                       <div className="text-4xl font-bold">${Math.round(threeYearSavings).toLocaleString()}</div>
                     </div>
                   </div>
                   <div className="border-t border-white/30 pt-6 space-y-3">
-                    <div className="text-xl font-bold">{agentsSaved} Agents eingespart</div>
-                    <div className="text-lg">ROI Break-even: {breakEvenDays} Tage</div>
+                    <div className="text-xl font-bold">{agentsSaved} {t('content.common.labels.agentsSaved')}</div>
+                    <div className="text-lg">{t('content.common.labels.roiBreakEven')} {breakEvenDays} {t('content.common.labels.days')}</div>
                   </div>
                 </div>
               </div>
@@ -763,7 +776,7 @@ const SupportKostenSenken = () => {
               <div className="text-center mt-8">
                 <a href="https://apps.shopify.com/replainow-ai-support"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white px-10 py-5 rounded-xl font-bold text-xl shadow-xl hover:shadow-2xl transition-all hover:scale-105">
-                  Jetzt ${Math.round(savingsMonthly).toLocaleString()}/Monat sparen
+                  {t('content.common.labels.seeAlso')} ${Math.round(savingsMonthly).toLocaleString()}{t('content.common.labels.perMonth')} {t('content.common.labels.savedPerMonth')}
                   <ArrowRight className="w-6 h-6" />
                 </a>
               </div>
@@ -799,7 +812,7 @@ const SupportKostenSenken = () => {
                   ) : (
                     <div className="space-y-2">
                       <div className="text-2xl font-bold text-green-600">{item.cost}</div>
-                      {item.example && <p className="text-sm text-gray-600 italic">Beispiel: {item.example}</p>}
+                      {item.example && <p className="text-sm text-gray-600 italic">{t('content.common.labels.example')} {item.example}</p>}
                       {item.note && <p className="text-sm text-gray-600">{item.note}</p>}
                       {item.comparison && <p className="text-sm text-gray-500">{item.comparison}</p>}
                       {item.savings && <p className="text-sm font-semibold text-green-700">{item.savings}</p>}
@@ -896,17 +909,17 @@ const SupportKostenSenken = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">{saving.category}</h3>
                   <div className="grid md:grid-cols-2 gap-6 mb-4">
                     <div>
-                      <div className="text-sm text-gray-600 mb-1">Vorher:</div>
+                      <div className="text-sm text-gray-600 mb-1">{t('content.common.labels.vorher')}</div>
                       <p className="text-gray-900 font-medium">{saving.before}</p>
                     </div>
                     <div>
-                      <div className="text-sm text-gray-600 mb-1">Mit ReplAInow:</div>
+                      <div className="text-sm text-gray-600 mb-1">{t('content.common.labels.mitReplainow')}</div>
                       <p className="text-green-700 font-medium">{saving.after}</p>
                     </div>
                   </div>
                   <div className="bg-green-50 rounded-lg p-4">
                     <div className="flex items-center justify-between mb-2">
-                      <span className="font-semibold text-gray-700">{saving.impact || saving.savings || 'Benefit'}</span>
+                      <span className="font-semibold text-gray-700">{saving.impact || saving.savings || t('content.common.labels.benefit')}</span>
                       <span className="text-2xl font-bold text-green-600">{saving.value || ''}</span>
                     </div>
                     {saving.realValue && <p className="text-sm text-gray-600 italic">{saving.realValue}</p>}
@@ -947,7 +960,7 @@ const SupportKostenSenken = () => {
                   <div className="grid md:grid-cols-2 gap-6 mb-6">
                     {/* Before */}
                     <div className="bg-white rounded-lg p-6 border-2 border-red-300">
-                      <div className="text-lg font-bold text-red-700 mb-4">VORHER: {merchant.before.setup}</div>
+                      <div className="text-lg font-bold text-red-700 mb-4">{t('content.common.labels.before')} {merchant.before.setup}</div>
                       <ul className="space-y-2 text-sm mb-4">
                         {merchant.before.costs.map((cost: string, i: number) => (
                           <li key={i} className="flex justify-between">
@@ -964,7 +977,7 @@ const SupportKostenSenken = () => {
 
                     {/* After */}
                     <div className="bg-white rounded-lg p-6 border-2 border-green-300">
-                      <div className="text-lg font-bold text-green-700 mb-4">NACHHER: {merchant.after.setup}</div>
+                      <div className="text-lg font-bold text-green-700 mb-4">{t('content.common.labels.after')} {merchant.after.setup}</div>
                       <ul className="space-y-2 text-sm mb-4">
                         {merchant.after.costs.map((cost: string, i: number) => (
                           <li key={i} className="flex justify-between">
@@ -984,20 +997,20 @@ const SupportKostenSenken = () => {
                   <div className="bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl p-6 text-white">
                     <div className="grid md:grid-cols-3 gap-4 mb-4">
                       <div>
-                        <div className="text-sm mb-1">Ersparnis:</div>
+                        <div className="text-sm mb-1">{t('content.common.labels.savings')}</div>
                         <div className="text-2xl font-bold">{merchant.results?.savings || '$0'}</div>
                       </div>
                       <div>
-                        <div className="text-sm mb-1">Prozent:</div>
+                        <div className="text-sm mb-1">{t('content.common.labels.percentage')}</div>
                         <div className="text-2xl font-bold">{merchant.results.percentage}</div>
                       </div>
                       <div>
-                        <div className="text-sm mb-1">ROI:</div>
+                        <div className="text-sm mb-1">{t('content.common.labels.roi')}</div>
                         <div className="text-2xl font-bold">{merchant.results.roi}</div>
                       </div>
                     </div>
                     <div className="border-t border-white/30 pt-4">
-                      <p className="text-sm mb-2">Zusätzlicher Benefit: {merchant.results.additional}</p>
+                      <p className="text-sm mb-2">{t('content.common.labels.additionalBenefit')} {merchant.results.additional}</p>
                       <blockquote className="italic text-lg">"{merchant.results.quote}"</blockquote>
                     </div>
                   </div>
@@ -1011,11 +1024,11 @@ const SupportKostenSenken = () => {
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
                   <div className="text-3xl font-bold mb-1">{getObject('content.kostenSenken.caseStudies.summary').avgSavings}</div>
-                  <div className="text-sm">Durchschnittliche Ersparnis</div>
+                  <div className="text-sm">{t('content.common.labels.averageSavings')}</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold mb-1">{getObject('content.kostenSenken.caseStudies.summary').avgROI}</div>
-                  <div className="text-sm">ROI Break-even</div>
+                  <div className="text-sm">{t('content.common.labels.roiBreakEvenLabel')}</div>
                 </div>
               </div>
               <p className="mt-4 text-green-100">{getObject('content.kostenSenken.caseStudies.summary').additionalBenefit}</p>
@@ -1088,7 +1101,7 @@ const SupportKostenSenken = () => {
                   <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-green-600 transition-colors">{article.title}</h3>
                   <p className="text-gray-600 text-sm mb-3">{article.desc}</p>
                   <div className="flex items-center gap-2 text-green-600 font-semibold text-sm">
-                    Mehr erfahren
+                    {t('content.common.labels.learnMore')}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>

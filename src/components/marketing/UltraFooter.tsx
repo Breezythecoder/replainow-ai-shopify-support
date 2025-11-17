@@ -1,13 +1,16 @@
 import { Twitter, Linkedin, Mail } from "lucide-react";
 import { useTranslation } from "@/i18n";
 import { useLocation } from "react-router-dom";
+import { useLocale } from "@/i18n/LocaleContext";
+import { contentPageUrls } from "@/i18n/contentUrls";
 
 const UltraFooter = () => {
   const { t } = useTranslation();
   const location = useLocation();
+  const { locale: currentLocale } = useLocale();
 
-  // Detect current locale from pathname
-  const currentLocale = location.pathname.startsWith("/en")
+  // Detect current locale prefix from pathname (for legacy getPageLink)
+  const localePrefix = location.pathname.startsWith("/en")
     ? "/en"
     : location.pathname.startsWith("/es")
     ? "/es"
@@ -30,7 +33,7 @@ const UltraFooter = () => {
   // Locale-aware page link: adds locale prefix to maintain current language
   // Legal pages ARE locale-routed but content stays English - keeps nav/footer in user's language!
   const getPageLink = (path: string) => {
-    return `${currentLocale}${path}`;
+    return `${localePrefix}${path}`;
   };
 
   return (
@@ -121,26 +124,26 @@ const UltraFooter = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href={getPageLink("/shopify-kundensupport-automatisieren")}
+                  href={contentPageUrls.automatisierung[currentLocale]}
                   className="text-gray-700 hover:text-purple-700 transition-colors"
                 >
-                  Support automatisieren
+                  {t("common.footer.links.automation")}
                 </a>
               </li>
               <li>
                 <a
-                  href={getPageLink("/24-7-kundensupport-shopify")}
+                  href={contentPageUrls.support247[currentLocale]}
                   className="text-gray-700 hover:text-purple-700 transition-colors"
                 >
-                  24/7 Support
+                  {t("common.footer.links.support247")}
                 </a>
               </li>
               <li>
                 <a
-                  href={getPageLink("/shopify-support-kosten-senken")}
+                  href={contentPageUrls.kostenSenken[currentLocale]}
                   className="text-gray-700 hover:text-purple-700 transition-colors"
                 >
-                  Kosten senken
+                  {t("common.footer.links.costs")}
                 </a>
               </li>
               <li>

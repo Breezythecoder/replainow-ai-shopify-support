@@ -1,5 +1,5 @@
 import { Helmet } from "react-helmet-async";
-import LegalNavbar from "@/components/marketing/LegalNavbar";
+import PremiumNavbar from "@/components/marketing/PremiumNavbar";
 import UltraFooter from "@/components/marketing/UltraFooter";
 
 const Impressum = () => {
@@ -18,8 +18,8 @@ const Impressum = () => {
         />
         <link rel="canonical" href="https://www.replainow.com/impressum" />
       </Helmet>
-
-      <LegalNavbar />
+      
+      <PremiumNavbar />
 
       <main
         id="main-content"

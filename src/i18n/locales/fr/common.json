@@ -28,7 +28,10 @@
       "features": "Fonctionnalités",
       "pricing": "Tarifs",
       "demo": "Démo",
-      "contact": "Contact"
+      "contact": "Contact",
+      "automation": "Automatiser Support",
+      "support247": "Support 24/7",
+      "costs": "Réduire Coûts"
     },
     "legal": {
       "title": "Légal",
@@ -46,5 +49,68 @@
     },
     "copyright": "© 2024 ReplAInow. Tous droits réservés."
   },
-  "contact": {}
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Vous avez des questions? Nous sommes là pour vous aider.",
+    "subtitleHighlight": "Réponses dans les 24 heures.",
+    "info": {
+      "title": "Informations de Contact",
+      "email": {
+        "title": "Support Email",
+        "value": "support@replainow.com",
+        "note": "Réponses dans les 24h"
+      },
+      "hours": {
+        "title": "Heures de Support",
+        "value": "Lun-Ven: 9h00 - 18h00 CET",
+        "note": "Support IA 24/7 disponible"
+      },
+      "chat": {
+        "title": "Chat en Direct",
+        "value": "Directement sur le site web",
+        "note": "L'IA répond instantanément"
+      }
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "links": [
+        "Comment fonctionne l'installation?",
+        "Quelles langues sont prises en charge?",
+        "Puis-je entraîner l'IA?",
+        "Mes données sont-elles sécurisées?"
+      ]
+    },
+    "form": {
+      "title": "Envoyer un Message",
+      "fields": {
+        "name": "Nom",
+        "email": "Email",
+        "message": "Message"
+      },
+      "placeholders": {
+        "name": "Jean Dupont",
+        "email": "vous@boutique.fr",
+        "message": "Décrivez votre demande..."
+      },
+      "submit": "Envoyer le Message",
+      "submitting": "Envoi en cours...",
+      "emailSubject": "Message du formulaire de contact de",
+      "privacyNote": "Votre message sera envoyé directement à support@replainow.com."
+    },
+    "cta": {
+      "title": "Prêt pour un Support Client Alimenté par IA?",
+      "subtitle": "Installez ReplAInow en 60 secondes. Aucune carte de crédit requise.",
+      "button": "Essai Gratuit 14 Jours"
+    },
+    "toast": {
+      "success": {
+        "title": "Merci!",
+        "description": "Nous vous contacterons bientôt."
+      },
+      "error": {
+        "title": "Erreur",
+        "description": "Le message n'a pas pu être envoyé. Veuillez réessayer ou écrire directement à support@replainow.com"
+      }
+    }
+  }
 }

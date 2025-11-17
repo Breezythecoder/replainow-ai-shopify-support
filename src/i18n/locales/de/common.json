@@ -36,7 +36,10 @@
       "features": "Features",
       "pricing": "Preise",
       "demo": "Demo",
-      "contact": "Kontakt"
+      "contact": "Kontakt",
+      "automation": "Support automatisieren",
+      "support247": "24/7 Support",
+      "costs": "Kosten senken"
     },
     "legal": {
       "title": "Rechtliches",
@@ -100,7 +103,13 @@
       },
       "submit": "Nachricht senden",
       "submitting": "Wird gesendet...",
-      "emailSubject": "Kontaktformular Nachricht von"
+      "emailSubject": "Kontaktformular Nachricht von",
+      "privacyNote": "Ihre Nachricht wird direkt an support@replainow.com gesendet."
+    },
+    "cta": {
+      "title": "Bereit für KI-gestützten Kundensupport?",
+      "subtitle": "Installieren Sie ReplAInow in 60 Sekunden. Keine Kreditkarte erforderlich.",
+      "button": "14 Tage kostenlos testen"
     },
     "toast": {
       "success": {

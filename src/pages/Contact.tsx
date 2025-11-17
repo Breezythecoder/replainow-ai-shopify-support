@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "@/i18n";
-import LegalNavbar from "@/components/marketing/LegalNavbar";
+import PremiumNavbar from "@/components/marketing/PremiumNavbar";
 import UltraFooter from "@/components/marketing/UltraFooter";
 import { Mail, Clock, Send, CheckCircle } from "lucide-react";
 import { useState } from "react";
@@ -89,7 +89,7 @@ const Contact = () => {
         <meta name="robots" content="index, follow" />
       </Helmet>
       
-      <LegalNavbar />
+      <PremiumNavbar />
       
       <main className="min-h-screen pt-20 bg-gradient-to-b from-gray-50 to-white">
         {/* Hero Section */}
@@ -262,7 +262,7 @@ const Contact = () => {
                       )}
                       
                       <p className="text-xs text-gray-500 text-center">
-                        Ihre Nachricht wird direkt an support@replainow.com gesendet.
+                        {t('common.contact.form.privacyNote')}
                       </p>
                     </form>
                   )}
@@ -278,16 +278,16 @@ const Contact = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-3xl mx-auto text-center text-white">
               <h2 className="text-3xl font-bold mb-4">
-                Bereit für KI-gestützten Kundensupport?
+                {t('common.contact.cta.title')}
               </h2>
               <p className="text-xl mb-8 text-purple-100">
-                Installieren Sie ReplAInow in 60 Sekunden. Keine Kreditkarte erforderlich.
+                {t('common.contact.cta.subtitle')}
               </p>
               <a
                 href="https://apps.shopify.com/replainow"
                 className="inline-flex items-center gap-3 bg-white text-purple-700 px-10 py-5 rounded-xl font-bold text-lg hover:shadow-2xl hover:scale-105 transition-all"
               >
-                14 Tage kostenlos testen
+                {t('common.contact.cta.button')}
                 <span className="text-2xl">→</span>
               </a>
             </div>

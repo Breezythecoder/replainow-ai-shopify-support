@@ -28,7 +28,10 @@
       "features": "Características",
       "pricing": "Precios",
       "demo": "Demo",
-      "contact": "Contacto"
+      "contact": "Contacto",
+      "automation": "Automatizar Soporte",
+      "support247": "Soporte 24/7",
+      "costs": "Reducir Costos"
     },
     "legal": {
       "title": "Legal",
@@ -46,5 +49,68 @@
     },
     "copyright": "© 2024 ReplAInow. Todos los derechos reservados."
   },
-  "contact": {}
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "¿Tiene preguntas? Estamos aquí para ayudar.",
+    "subtitleHighlight": "Respuestas dentro de 24 horas.",
+    "info": {
+      "title": "Información de Contacto",
+      "email": {
+        "title": "Soporte por Email",
+        "value": "support@replainow.com",
+        "note": "Respuestas dentro de 24h"
+      },
+      "hours": {
+        "title": "Horario de Soporte",
+        "value": "Lun-Vie: 9:00 - 18:00 CET",
+        "note": "Soporte IA 24/7 disponible"
+      },
+      "chat": {
+        "title": "Chat en Vivo",
+        "value": "Directamente en el sitio web",
+        "note": "La IA responde al instante"
+      }
+    },
+    "faq": {
+      "title": "Preguntas Frecuentes",
+      "links": [
+        "¿Cómo funciona la instalación?",
+        "¿Qué idiomas son compatibles?",
+        "¿Puedo entrenar la IA?",
+        "¿Qué tan seguros están mis datos?"
+      ]
+    },
+    "form": {
+      "title": "Enviar Mensaje",
+      "fields": {
+        "name": "Nombre",
+        "email": "Email",
+        "message": "Mensaje"
+      },
+      "placeholders": {
+        "name": "Juan Pérez",
+        "email": "tu@tienda.es",
+        "message": "Describe tu consulta..."
+      },
+      "submit": "Enviar Mensaje",
+      "submitting": "Enviando...",
+      "emailSubject": "Mensaje de formulario de contacto de",
+      "privacyNote": "Su mensaje será enviado directamente a support@replainow.com."
+    },
+    "cta": {
+      "title": "¿Listo para Soporte al Cliente con IA?",
+      "subtitle": "Instale ReplAInow en 60 segundos. No se requiere tarjeta de crédito.",
+      "button": "Prueba Gratis 14 Días"
+    },
+    "toast": {
+      "success": {
+        "title": "¡Gracias!",
+        "description": "Nos pondremos en contacto contigo pronto."
+      },
+      "error": {
+        "title": "Error",
+        "description": "No se pudo enviar el mensaje. Por favor intenta nuevamente o escribe directamente a support@replainow.com"
+      }
+    }
+  }
 }

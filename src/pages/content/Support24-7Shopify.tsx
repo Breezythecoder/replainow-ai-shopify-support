@@ -1,16 +1,20 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "@/i18n";
-import LegalNavbar from "@/components/marketing/LegalNavbar";
+import { useLocale } from "@/i18n/LocaleContext";
+import PremiumNavbar from "@/components/marketing/PremiumNavbar";
 import UltraFooter from "@/components/marketing/UltraFooter";
 import { Check, X, Clock, Moon, Globe, TrendingUp, Zap, DollarSign, ArrowRight, ChevronRight, Sun } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { getHreflangTags, getCanonicalUrl } from "@/seo/hreflangHelper";
+import { contentPageUrls } from "@/i18n/contentUrls";
 
 // 🌙 24/7 SUPPORT PAGE - Night Theme, Premium Content
 // 100% Echte Daten über 24/7 Verfügbarkeit, Nachtschicht-Kosten, Internationale Zeitzonen
 
 const Support24_7Shopify = () => {
   const { t, getTranslation } = useTranslation();
+  const { locale: currentLocale } = useLocale();
   
   // Helper functions
   const getArray = (key: string): any[] => {
@@ -22,6 +26,10 @@ const Support24_7Shopify = () => {
     const result = getTranslation(key);
     return typeof result === 'object' && result !== null && !Array.isArray(result) ? result : {};
   };
+  
+  // SEO: Hreflang tags for multilingual support
+  const hreflangs = getHreflangTags('support247');
+  const canonicalUrl = getCanonicalUrl('support247', currentLocale);
   
   // Night Shift Cost Calculator State
   const [nightAgents, setNightAgents] = useState(2);
@@ -149,7 +157,12 @@ const Support24_7Shopify = () => {
         <title>{t('content.support24-7.meta.title')}</title>
         <meta name="description" content={t('content.support24-7.meta.description')} />
         <meta name="keywords" content={t('content.support24-7.meta.keywords')} />
-        <link rel="canonical" href="https://replainow.com/24-7-kundensupport-shopify" />
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* Hreflang tags for multilingual SEO */}
+        {hreflangs.map(({ hreflang, href }) => (
+          <link key={hreflang} rel="alternate" hreflang={hreflang} href={href} />
+        ))}
         
         <meta property="og:title" content="24/7 Kundensupport für Shopify | Ohne Nachtschichten" />
         <meta property="og:description" content="24/7 Support mit KI statt teuren Nachtschichten. Sofortige Antworten, alle Zeitzonen." />
@@ -176,8 +189,8 @@ const Support24_7Shopify = () => {
         <script type="application/ld+json">{JSON.stringify(articleSchema)}</script>
         <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
-
-      <LegalNavbar />
+      
+      <PremiumNavbar />
 
       <main 
         id="main-content" 
@@ -386,7 +399,7 @@ const Support24_7Shopify = () => {
                       <div className="bg-red-50 border-2 border-red-200 rounded-lg p-4">
                         <div className="flex items-center gap-2 mb-2">
                           <X className="w-5 h-5 text-red-600" />
-                          <span className="font-bold text-red-700">Ohne Support:</span>
+                          <span className="font-bold text-red-700">{t('content.common.labels.without')}</span>
                         </div>
                         <p className="text-gray-700 text-sm">{scenario.noSupport}</p>
                       </div>
@@ -395,7 +408,7 @@ const Support24_7Shopify = () => {
                       <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
                         <div className="flex items-center gap-2 mb-2">
                           <Check className="w-5 h-5 text-green-600" />
-                          <span className="font-bold text-green-700">Mit ReplAInow KI:</span>
+                          <span className="font-bold text-green-700">{t('content.common.labels.withAI')}</span>
                         </div>
                         <p className="text-gray-700 text-sm">{scenario.withAI}</p>
                       </div>
@@ -420,16 +433,16 @@ const Support24_7Shopify = () => {
             <div className="bg-gradient-to-r from-purple-500 to-violet-500 rounded-xl p-6 text-white">
               <div className="flex items-center gap-3 mb-3">
                 <Zap className="w-6 h-6" />
-                <h3 className="text-xl font-bold">Siehe auch: Support-Automatisierung verstehen</h3>
+                <h3 className="text-xl font-bold">{t('content.common.internalLinks.seeAlsoAutomationTitle')}</h3>
               </div>
               <p className="mb-4">
-                24/7 ist wichtig – aber wie automatisierst du generell deinen Support? Erfahre wie du 60-80% deiner Tickets automatisch bearbeiten kannst.
+                {t('content.common.internalLinks.seeAlsoAutomationDesc')}
               </p>
               <Link
-                to="/shopify-kundensupport-automatisieren"
+                to={contentPageUrls.automatisierung[currentLocale]}
                 className="inline-flex items-center gap-2 bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all"
               >
-                Automatisierungs-Guide lesen
+                {t('content.common.internalLinks.readAutomationGuide')}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
@@ -548,44 +561,44 @@ const Support24_7Shopify = () => {
               <div className="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-xl p-8 border-2 border-indigo-200">
                 <div className="grid md:grid-cols-2 gap-8 mb-8">
                   <div>
-                    <h4 className="text-lg font-bold text-gray-700 mb-4">24/7 mit Menschen:</h4>
+                    <h4 className="text-lg font-bold text-gray-700 mb-4">{t('content.common.labels.with247Humans')}</h4>
                     <div className="space-y-3 text-sm">
                       <div className="flex justify-between">
-                        <span>Nachtschicht:</span>
+                        <span>{t('content.common.labels.nightShift')}</span>
                         <span className="font-bold text-red-600">${nightCostMonthly.toLocaleString()}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span>Wochenende:</span>
+                        <span>{t('content.common.labels.weekend')}</span>
                         <span className="font-bold text-red-600">${weekendCostMonthly.toLocaleString()}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span>Recruiting/Training/Extras:</span>
+                        <span>{t('content.common.labels.recruitingTrainingExtras')}</span>
                         <span className="font-bold text-red-600">${Math.round(recruitingMonthly + trainingMonthly + sickDaysMonthly + softwareMonthly).toLocaleString()}</span>
                       </div>
                       <div className="pt-3 border-t-2 border-gray-300 flex justify-between">
-                        <span className="font-bold">Total:</span>
-                        <span className="font-bold text-red-600 text-xl">${Math.round(totalHumanMonthly).toLocaleString()}/Monat</span>
+                        <span className="font-bold">{t('content.common.labels.total')}</span>
+                        <span className="font-bold text-red-600 text-xl">${Math.round(totalHumanMonthly).toLocaleString()}{t('content.common.labels.perMonth')}</span>
                       </div>
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-gray-700 mb-4">24/7 mit ReplAInow:</h4>
+                    <h4 className="text-lg font-bold text-gray-700 mb-4">{t('content.common.labels.with247Replainow')}</h4>
                     <div className="space-y-3 text-sm">
                       <div className="flex justify-between">
-                        <span>ReplAInow KI:</span>
+                        <span>{t('content.common.labels.replainowAI')}</span>
                         <span className="font-bold text-green-600">${replainowCost}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span>1 Agent (Tagesschicht):</span>
+                        <span>{t('content.common.labels.dayShift')}</span>
                         <span className="font-bold text-green-600">${dayAgent.toLocaleString()}</span>
                       </div>
                       <div className="flex justify-between">
-                        <span>Extras:</span>
+                        <span>{t('content.common.labels.extras')}</span>
                         <span className="font-bold text-green-600">$0</span>
                       </div>
                       <div className="pt-3 border-t-2 border-gray-300 flex justify-between">
-                        <span className="font-bold">Total:</span>
-                        <span className="font-bold text-green-600 text-xl">${totalAIMonthly.toLocaleString()}/Monat</span>
+                        <span className="font-bold">{t('content.common.labels.total')}</span>
+                        <span className="font-bold text-green-600 text-xl">${totalAIMonthly.toLocaleString()}{t('content.common.labels.perMonth')}</span>
                       </div>
                     </div>
                   </div>
@@ -596,14 +609,14 @@ const Support24_7Shopify = () => {
                   <div className="text-5xl font-bold mb-2">
                     ${Math.round(savingsMonthly).toLocaleString()}
                   </div>
-                  <div className="text-xl mb-4">gespart pro Monat ({savingsPercentage}%)</div>
+                  <div className="text-xl mb-4">{t('content.common.labels.savedPerMonth')} ({savingsPercentage}%)</div>
                   <div className="text-3xl font-bold mb-2">
                     ${Math.round(savingsAnnual).toLocaleString()}
                   </div>
-                  <div className="text-lg mb-4">gespart pro Jahr</div>
+                  <div className="text-lg mb-4">{t('content.common.labels.savedPerYear')}</div>
                   <div className="pt-4 border-t border-green-400">
                     <div className="text-xl font-semibold">
-                      {agentsSaved} Nacht/Wochenend-Agents eingespart
+                      {agentsSaved} {t('content.common.labels.agentsSaved')}
                     </div>
                   </div>
                 </div>
@@ -614,7 +627,7 @@ const Support24_7Shopify = () => {
                   href="https://apps.shopify.com/replainow-ai-support"
                   className="inline-flex items-center gap-2 bg-white text-indigo-900 px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
                 >
-                  Jetzt ${Math.round(savingsMonthly).toLocaleString()}/Monat sparen
+                  {t('content.common.labels.seeAlso')} ${Math.round(savingsMonthly).toLocaleString()}{t('content.common.labels.perMonth')} {t('content.common.labels.savedPerMonth')}
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
@@ -651,12 +664,12 @@ const Support24_7Shopify = () => {
                   
                   {/* Situation */}
                   <div className="bg-white rounded-lg p-4 mb-4 border border-gray-200">
-                    <p className="text-gray-700"><span className="font-semibold">Situation:</span> {scenario.situation}</p>
+                    <p className="text-gray-700"><span className="font-semibold">{t('content.common.labels.situation')}</span> {scenario.situation}</p>
                   </div>
                   
                   {/* Customer Question */}
                   <div className="bg-blue-100 rounded-lg p-4 mb-4 border-l-4 border-blue-500">
-                    <p className="text-gray-700"><span className="font-semibold text-blue-700">Kunde fragt:</span></p>
+                    <p className="text-gray-700"><span className="font-semibold text-blue-700">{t('content.common.labels.customerAsks')}</span></p>
                     <p className="text-gray-900 font-medium text-lg mt-2">"{scenario.question}"</p>
                   </div>
                   
@@ -664,7 +677,7 @@ const Support24_7Shopify = () => {
                   <div className="bg-green-100 rounded-lg p-4 mb-4 border-l-4 border-green-500">
                     <div className="flex items-center gap-2 mb-2">
                       <Zap className="w-5 h-5 text-green-600" />
-                      <p className="font-semibold text-green-700">KI antwortet (3 Sekunden):</p>
+                      <p className="font-semibold text-green-700">{t('content.common.labels.aiResponds')}</p>
                     </div>
                     <p className="text-gray-900 font-medium mb-2">{scenario.aiResponse}</p>
                     <p className="text-sm text-green-700 italic">{scenario.aiAction}</p>
@@ -672,7 +685,7 @@ const Support24_7Shopify = () => {
                   
                   {/* Outcome */}
                   <div className="bg-white rounded-lg p-4 border-2 border-green-300">
-                    <p className="text-gray-700 mb-2"><span className="font-semibold">Ergebnis:</span> {scenario.outcome}</p>
+                    <p className="text-gray-700 mb-2"><span className="font-semibold">{t('content.common.labels.result')}</span> {scenario.outcome}</p>
                     <div className="flex items-center gap-2 text-green-700 font-bold text-lg">
                       <Check className="w-6 h-6" />
                       <span>{scenario.impact}</span>
@@ -716,13 +729,13 @@ const Support24_7Shopify = () => {
 
             {/* Challenge */}
             <div className="bg-red-50 border-2 border-red-300 rounded-xl p-6 mb-8">
-              <h3 className="text-xl font-bold text-red-700 mb-3">Die Herausforderung:</h3>
+              <h3 className="text-xl font-bold text-red-700 mb-3">{t('content.common.labels.challenge')}</h3>
               <p className="text-gray-700">{t('content.support24-7.international.challenge')}</p>
             </div>
 
             {/* Solution */}
             <div className="bg-green-50 border-2 border-green-300 rounded-xl p-6 mb-8">
-              <h3 className="text-xl font-bold text-green-700 mb-3">Die ReplAInow Lösung:</h3>
+              <h3 className="text-xl font-bold text-green-700 mb-3">{t('content.common.labels.solution')}</h3>
               <p className="text-gray-700">{t('content.support24-7.international.solution')}</p>
             </div>
 
@@ -736,15 +749,15 @@ const Support24_7Shopify = () => {
                   </div>
                   <div className="space-y-2 text-sm">
                     <div>
-                      <span className="text-gray-600">Zeitzone:</span>
+                      <span className="text-gray-600">{t('content.common.labels.timezone')}</span>
                       <span className="font-semibold text-gray-900 ml-2">{tz.timezone}</span>
                     </div>
                     <div>
-                      <span className="text-gray-600">Peak Hours:</span>
+                      <span className="text-gray-600">{t('content.common.labels.peakHours')}</span>
                       <span className="font-semibold text-gray-900 ml-2">{tz.peakHours}</span>
                     </div>
                     <div className="pt-2 border-t border-gray-200">
-                      <span className="text-gray-600">Coverage:</span>
+                      <span className="text-gray-600">{t('content.common.labels.coverage')}</span>
                       <p className="font-semibold text-green-600 mt-1">{tz.coverage}</p>
                     </div>
                   </div>
@@ -882,7 +895,7 @@ const Support24_7Shopify = () => {
                   </h3>
                   <p className="text-gray-600 text-sm mb-3">{article.desc}</p>
                   <div className="flex items-center gap-2 text-indigo-600 font-semibold text-sm">
-                    Mehr erfahren
+                    {t('content.common.labels.learnMore')}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>

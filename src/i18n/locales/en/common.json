@@ -33,7 +33,10 @@
       "features": "Features",
       "pricing": "Pricing",
       "demo": "Demo",
-      "contact": "Contact"
+      "contact": "Contact",
+      "automation": "Automate Support",
+      "support247": "24/7 Support",
+      "costs": "Reduce Costs"
     },
     "legal": {
       "title": "Legal",
@@ -96,7 +99,13 @@
       },
       "submit": "Send Message",
       "submitting": "Sending...",
-      "emailSubject": "Contact Form Message from"
+      "emailSubject": "Contact Form Message from",
+      "privacyNote": "Your message will be sent directly to support@replainow.com."
+    },
+    "cta": {
+      "title": "Ready for AI-Powered Customer Support?",
+      "subtitle": "Install ReplAInow in 60 seconds. No credit card required.",
+      "button": "Try 14 Days Free"
     },
     "toast": {
       "success": {

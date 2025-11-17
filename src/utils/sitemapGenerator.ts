@@ -1,4 +1,6 @@
 // Sitemap Generator for ReplAInow
+import { contentPageUrls } from '@/i18n/contentUrls';
+
 interface SitemapUrl {
   loc: string;
   lastmod: string;
@@ -123,6 +125,169 @@ export const generateSitemapUrls = (): SitemapUrl[] => {
       lastmod: currentDate,
       changefreq: 'yearly',
       priority: 0.3
+    },
+    
+    // Content Pages - SEO-optimized articles (12 URLs: 3 pages × 4 languages)
+    // Page 1: Shopify Kundensupport automatisieren
+    {
+      loc: `${baseUrl}${contentPageUrls.automatisierung.de}`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9,
+      alternate: [
+        { hrefLang: 'de', href: `${baseUrl}${contentPageUrls.automatisierung.de}` },
+        { hrefLang: 'en', href: `${baseUrl}${contentPageUrls.automatisierung.en}` },
+        { hrefLang: 'es', href: `${baseUrl}${contentPageUrls.automatisierung.es}` },
+        { hrefLang: 'fr', href: `${baseUrl}${contentPageUrls.automatisierung.fr}` },
+        { hrefLang: 'x-default', href: `${baseUrl}${contentPageUrls.automatisierung.en}` }
+      ]
+    },
+    {
+      loc: `${baseUrl}${contentPageUrls.automatisierung.en}`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9,
+      alternate: [
+        { hrefLang: 'de', href: `${baseUrl}${contentPageUrls.automatisierung.de}` },
+        { hrefLang: 'en', href: `${baseUrl}${contentPageUrls.automatisierung.en}` },
+        { hrefLang: 'es', href: `${baseUrl}${contentPageUrls.automatisierung.es}` },
+        { hrefLang: 'fr', href: `${baseUrl}${contentPageUrls.automatisierung.fr}` },
+        { hrefLang: 'x-default', href: `${baseUrl}${contentPageUrls.automatisierung.en}` }
+      ]
+    },
+    {
+      loc: `${baseUrl}${contentPageUrls.automatisierung.es}`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9,
+      alternate: [
+        { hrefLang: 'de', href: `${baseUrl}${contentPageUrls.automatisierung.de}` },
+        { hrefLang: 'en', href: `${baseUrl}${contentPageUrls.automatisierung.en}` },
+        { hrefLang: 'es', href: `${baseUrl}${contentPageUrls.automatisierung.es}` },
+        { hrefLang: 'fr', href: `${baseUrl}${contentPageUrls.automatisierung.fr}` },
+        { hrefLang: 'x-default', href: `${baseUrl}${contentPageUrls.automatisierung.en}` }
+      ]
+    },
+    {
+      loc: `${baseUrl}${contentPageUrls.automatisierung.fr}`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9,
+      alternate: [
+        { hrefLang: 'de', href: `${baseUrl}${contentPageUrls.automatisierung.de}` },
+        { hrefLang: 'en', href: `${baseUrl}${contentPageUrls.automatisierung.en}` },
+        { hrefLang: 'es', href: `${baseUrl}${contentPageUrls.automatisierung.es}` },
+        { hrefLang: 'fr', href: `${baseUrl}${contentPageUrls.automatisierung.fr}` },
+        { hrefLang: 'x-default', href: `${baseUrl}${contentPageUrls.automatisierung.en}` }
+      ]
+    },
+    
+    // Page 2: 24/7 Kundensupport
+    {
+      loc: `${baseUrl}${contentPageUrls.support247.de}`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9,
+      alternate: [
+        { hrefLang: 'de', href: `${baseUrl}${contentPageUrls.support247.de}` },
+        { hrefLang: 'en', href: `${baseUrl}${contentPageUrls.support247.en}` },
+        { hrefLang: 'es', href: `${baseUrl}${contentPageUrls.support247.es}` },
+        { hrefLang: 'fr', href: `${baseUrl}${contentPageUrls.support247.fr}` },
+        { hrefLang: 'x-default', href: `${baseUrl}${contentPageUrls.support247.en}` }
+      ]
+    },
+    {
+      loc: `${baseUrl}${contentPageUrls.support247.en}`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9,
+      alternate: [
+        { hrefLang: 'de', href: `${baseUrl}${contentPageUrls.support247.de}` },
+        { hrefLang: 'en', href: `${baseUrl}${contentPageUrls.support247.en}` },
+        { hrefLang: 'es', href: `${baseUrl}${contentPageUrls.support247.es}` },
+        { hrefLang: 'fr', href: `${baseUrl}${contentPageUrls.support247.fr}` },
+        { hrefLang: 'x-default', href: `${baseUrl}${contentPageUrls.support247.en}` }
+      ]
+    },
+    {
+      loc: `${baseUrl}${contentPageUrls.support247.es}`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9,
+      alternate: [
+        { hrefLang: 'de', href: `${baseUrl}${contentPageUrls.support247.de}` },
+        { hrefLang: 'en', href: `${baseUrl}${contentPageUrls.support247.en}` },
+        { hrefLang: 'es', href: `${baseUrl}${contentPageUrls.support247.es}` },
+        { hrefLang: 'fr', href: `${baseUrl}${contentPageUrls.support247.fr}` },
+        { hrefLang: 'x-default', href: `${baseUrl}${contentPageUrls.support247.en}` }
+      ]
+    },
+    {
+      loc: `${baseUrl}${contentPageUrls.support247.fr}`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9,
+      alternate: [
+        { hrefLang: 'de', href: `${baseUrl}${contentPageUrls.support247.de}` },
+        { hrefLang: 'en', href: `${baseUrl}${contentPageUrls.support247.en}` },
+        { hrefLang: 'es', href: `${baseUrl}${contentPageUrls.support247.es}` },
+        { hrefLang: 'fr', href: `${baseUrl}${contentPageUrls.support247.fr}` },
+        { hrefLang: 'x-default', href: `${baseUrl}${contentPageUrls.support247.en}` }
+      ]
+    },
+    
+    // Page 3: Support Kosten senken
+    {
+      loc: `${baseUrl}${contentPageUrls.kostenSenken.de}`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9,
+      alternate: [
+        { hrefLang: 'de', href: `${baseUrl}${contentPageUrls.kostenSenken.de}` },
+        { hrefLang: 'en', href: `${baseUrl}${contentPageUrls.kostenSenken.en}` },
+        { hrefLang: 'es', href: `${baseUrl}${contentPageUrls.kostenSenken.es}` },
+        { hrefLang: 'fr', href: `${baseUrl}${contentPageUrls.kostenSenken.fr}` },
+        { hrefLang: 'x-default', href: `${baseUrl}${contentPageUrls.kostenSenken.en}` }
+      ]
+    },
+    {
+      loc: `${baseUrl}${contentPageUrls.kostenSenken.en}`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9,
+      alternate: [
+        { hrefLang: 'de', href: `${baseUrl}${contentPageUrls.kostenSenken.de}` },
+        { hrefLang: 'en', href: `${baseUrl}${contentPageUrls.kostenSenken.en}` },
+        { hrefLang: 'es', href: `${baseUrl}${contentPageUrls.kostenSenken.es}` },
+        { hrefLang: 'fr', href: `${baseUrl}${contentPageUrls.kostenSenken.fr}` },
+        { hrefLang: 'x-default', href: `${baseUrl}${contentPageUrls.kostenSenken.en}` }
+      ]
+    },
+    {
+      loc: `${baseUrl}${contentPageUrls.kostenSenken.es}`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9,
+      alternate: [
+        { hrefLang: 'de', href: `${baseUrl}${contentPageUrls.kostenSenken.de}` },
+        { hrefLang: 'en', href: `${baseUrl}${contentPageUrls.kostenSenken.en}` },
+        { hrefLang: 'es', href: `${baseUrl}${contentPageUrls.kostenSenken.es}` },
+        { hrefLang: 'fr', href: `${baseUrl}${contentPageUrls.kostenSenken.fr}` },
+        { hrefLang: 'x-default', href: `${baseUrl}${contentPageUrls.kostenSenken.en}` }
+      ]
+    },
+    {
+      loc: `${baseUrl}${contentPageUrls.kostenSenken.fr}`,
+      lastmod: currentDate,
+      changefreq: 'weekly',
+      priority: 0.9,
+      alternate: [
+        { hrefLang: 'de', href: `${baseUrl}${contentPageUrls.kostenSenken.de}` },
+        { hrefLang: 'en', href: `${baseUrl}${contentPageUrls.kostenSenken.en}` },
+        { hrefLang: 'es', href: `${baseUrl}${contentPageUrls.kostenSenken.es}` },
+        { hrefLang: 'fr', href: `${baseUrl}${contentPageUrls.kostenSenken.fr}` },
+        { hrefLang: 'x-default', href: `${baseUrl}${contentPageUrls.kostenSenken.en}` }
+      ]
     }
   ];
 };

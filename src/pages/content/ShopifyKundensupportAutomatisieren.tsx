@@ -1,16 +1,20 @@
 import { Helmet } from "react-helmet-async";
 import { useTranslation } from "@/i18n";
-import LegalNavbar from "@/components/marketing/LegalNavbar";
+import { useLocale } from "@/i18n/LocaleContext";
+import PremiumNavbar from "@/components/marketing/PremiumNavbar";
 import UltraFooter from "@/components/marketing/UltraFooter";
 import { Check, X, Clock, Users, Globe, TrendingUp, Zap, Shield, DollarSign, ArrowRight, ChevronRight, Moon } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { getHreflangTags, getCanonicalUrl } from "@/seo/hreflangHelper";
+import { contentPageUrls } from "@/i18n/contentUrls";
 
 // 🚀 ULTRA ENTERPRISE SEO COMPONENT - 2025 Level
 // 100% Echte Daten, Keine Halluzinationen, Maximum SEO Power
 
 const ShopifyKundensupportAutomatisieren = () => {
   const { t, getTranslation } = useTranslation();
+  const { locale: currentLocale } = useLocale();
   
   // Helper to safely get arrays from i18n (prevents crashes!)
   const getArray = (key: string): any[] => {
@@ -23,6 +27,10 @@ const ShopifyKundensupportAutomatisieren = () => {
     const result = getTranslation(key);
     return typeof result === 'object' && result !== null && !Array.isArray(result) ? result : {};
   };
+  
+  // SEO: Hreflang tags for multilingual support
+  const hreflangs = getHreflangTags('automatisierung');
+  const canonicalUrl = getCanonicalUrl('automatisierung', currentLocale);
   
   // ROI Calculator State (Interactive SEO Hack!)
   const [ticketsPerDay, setTicketsPerDay] = useState(100);
@@ -179,7 +187,12 @@ const ShopifyKundensupportAutomatisieren = () => {
         <title>{t('content.automatisierung.meta.title')}</title>
         <meta name="description" content={t('content.automatisierung.meta.description')} />
         <meta name="keywords" content={t('content.automatisierung.meta.keywords')} />
-        <link rel="canonical" href="https://replainow.com/shopify-kundensupport-automatisieren" />
+        <link rel="canonical" href={canonicalUrl} />
+        
+        {/* Hreflang tags for multilingual SEO */}
+        {hreflangs.map(({ hreflang, href }) => (
+          <link key={hreflang} rel="alternate" hreflang={hreflang} href={href} />
+        ))}
         
         {/* Open Graph */}
         <meta property="og:title" content="Shopify Kundensupport automatisieren | 60-80% weniger Aufwand" />
@@ -218,8 +231,8 @@ const ShopifyKundensupportAutomatisieren = () => {
           {JSON.stringify(breadcrumbSchema)}
         </script>
       </Helmet>
-
-      <LegalNavbar />
+      
+      <PremiumNavbar />
 
       <main 
         id="main-content" 
@@ -414,9 +427,9 @@ const ShopifyKundensupportAutomatisieren = () => {
                       <h3 className="text-2xl font-bold text-gray-900 mb-3">{step.title}</h3>
                       <p className="text-lg text-gray-700 mb-4">{step.desc}</p>
                       <div className="bg-purple-50 border-l-4 border-purple-600 p-4 rounded">
-                        <p className="text-gray-700">
-                          <span className="font-semibold text-purple-700">Details:</span> {step.detail}
-                        </p>
+                      <p className="text-gray-700">
+                        <span className="font-semibold text-purple-700">{t('content.common.labels.details')}</span> {step.detail}
+                      </p>
                       </div>
                     </div>
                   </div>
@@ -497,16 +510,16 @@ const ShopifyKundensupportAutomatisieren = () => {
             <div className="bg-gradient-to-r from-indigo-500 to-blue-500 rounded-xl p-6 text-white">
               <div className="flex items-center gap-3 mb-3">
                 <Moon className="w-6 h-6" />
-                <h3 className="text-xl font-bold">Siehe auch: 24/7 Support ohne Nachtschichten</h3>
+                <h3 className="text-xl font-bold">{t('content.common.internalLinks.seeAlso247Title')}</h3>
               </div>
               <p className="mb-4">
-                Automatisierung ist großartig – aber was ist mit nachts und am Wochenende? Erfahre wie ReplAInow 24/7 Support ermöglicht ohne teure Nachtschichten.
+                {t('content.common.internalLinks.seeAlso247Desc')}
               </p>
               <Link
-                to="/24-7-kundensupport-shopify"
+                to={contentPageUrls.support247[currentLocale]}
                 className="inline-flex items-center gap-2 bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all"
               >
-                24/7 Support Guide lesen
+                {t('content.common.internalLinks.read247Guide')}
                 <ArrowRight className="w-5 h-5" />
               </Link>
             </div>
@@ -537,7 +550,7 @@ const ShopifyKundensupportAutomatisieren = () => {
                     {/* Customer Message */}
                     <div>
                       <div className="bg-white rounded-xl p-6 shadow-sm border-2 border-blue-200">
-                        <div className="text-sm text-gray-500 mb-2 font-semibold">Kunde fragt:</div>
+                        <div className="text-sm text-gray-500 mb-2 font-semibold">{t('content.common.labels.customerAsks')}</div>
                         <p className="text-gray-900 font-medium text-lg">"{example.customerMessage}"</p>
                       </div>
                     </div>
@@ -547,7 +560,7 @@ const ShopifyKundensupportAutomatisieren = () => {
                       <div className="bg-gradient-to-br from-purple-50 to-white rounded-xl p-6 shadow-sm border-2 border-purple-200">
                         <div className="flex items-center gap-2 mb-2">
                           <Zap className="w-4 h-4 text-purple-600" />
-                          <div className="text-sm text-purple-600 font-semibold">KI antwortet (3 Sekunden):</div>
+                          <div className="text-sm text-purple-600 font-semibold">{t('content.common.labels.aiResponds')}</div>
                         </div>
                         <p className="text-gray-900 mb-3 font-medium">{example.aiResponse}</p>
                         <div className="text-sm text-purple-700 italic">{example.aiAction}</div>
@@ -558,7 +571,7 @@ const ShopifyKundensupportAutomatisieren = () => {
                   {/* Time Saved */}
                   <div className="mt-4 flex items-center gap-2 text-green-700 bg-green-50 px-4 py-2 rounded-lg">
                     <Clock className="w-5 h-5" />
-                    <span className="font-semibold">Zeitersparnis:</span>
+                    <span className="font-semibold">{t('content.common.labels.timeSaved')}</span>
                     <span>{example.timeSaved}</span>
                   </div>
                 </div>
@@ -575,19 +588,19 @@ const ShopifyKundensupportAutomatisieren = () => {
                   <div className="text-3xl font-bold mb-2">
                     {t('content.automatisierung.examples.summary.automated')}
                   </div>
-                  <div className="text-purple-100">KI bearbeitet automatisch</div>
+                  <div className="text-purple-100">{t('content.common.labels.aiProcessed')}</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold mb-2">
                     {t('content.automatisierung.examples.summary.human')}
                   </div>
-                  <div className="text-purple-100">Agent bearbeitet</div>
+                  <div className="text-purple-100">{t('content.common.labels.agentProcessed')}</div>
                 </div>
                 <div>
                   <div className="text-3xl font-bold mb-2">
                     {t('content.automatisierung.examples.summary.timeSavings')}
                   </div>
-                  <div className="text-purple-100">Durchschnittliche Zeitersparnis</div>
+                  <div className="text-purple-100">{t('content.common.labels.avgTimeSavings')}</div>
                 </div>
               </div>
             </div>
@@ -659,31 +672,31 @@ const ShopifyKundensupportAutomatisieren = () => {
               <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-xl p-8 border-2 border-purple-200">
                 <div className="grid md:grid-cols-2 gap-8 mb-8">
                   <div>
-                    <h4 className="text-lg font-bold text-gray-700 mb-4">OHNE KI-Automatisierung:</h4>
+                    <h4 className="text-lg font-bold text-gray-700 mb-4">{t('content.common.labels.withoutAutomation')}</h4>
                     <div className="space-y-3">
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Agents benötigt:</span>
+                        <span className="text-gray-600">{t('content.common.labels.agentsNeeded')}</span>
                         <span className="font-bold text-red-600">{agentsNeededBefore} Vollzeit</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Monatliche Kosten:</span>
+                        <span className="text-gray-600">{t('content.common.labels.monthlyCost')}</span>
                         <span className="font-bold text-red-600">${costBefore.toLocaleString()}</span>
                       </div>
                     </div>
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-gray-700 mb-4">MIT ReplAInow:</h4>
+                    <h4 className="text-lg font-bold text-gray-700 mb-4">{t('content.common.labels.withAutomation')}</h4>
                     <div className="space-y-3">
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Agents benötigt:</span>
+                        <span className="text-gray-600">{t('content.common.labels.agentsNeeded')}</span>
                         <span className="font-bold text-green-600">{agentsNeededAfter} Vollzeit</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-gray-600">Monatliche Kosten:</span>
+                        <span className="text-gray-600">{t('content.common.labels.monthlyCost')}</span>
                         <span className="font-bold text-green-600">${totalCostAfter.toLocaleString()}</span>
                       </div>
                       <div className="text-xs text-gray-500">
-                        (${agentCostAfter.toLocaleString()} Agents + ${replainowCost} ReplAInow)
+                        (${agentCostAfter.toLocaleString()} {t('content.common.labels.agents')} + ${replainowCost} ReplAInow)
                       </div>
                     </div>
                   </div>
@@ -694,14 +707,14 @@ const ShopifyKundensupportAutomatisieren = () => {
                   <div className="text-5xl font-bold mb-2">
                     ${monthlySavings.toLocaleString()}
                   </div>
-                  <div className="text-xl mb-4">gespart pro Monat ({savingsPercentage}%)</div>
+                  <div className="text-xl mb-4">{t('content.common.labels.savedPerMonth')} ({savingsPercentage}%)</div>
                   <div className="text-3xl font-bold mb-2">
                     ${annualSavings.toLocaleString()}
                   </div>
-                  <div className="text-lg">gespart pro Jahr</div>
+                  <div className="text-lg">{t('content.common.labels.savedPerYear')}</div>
                   <div className="mt-4 pt-4 border-t border-green-400">
                     <div className="text-xl font-semibold">
-                      {agentsSaved} Vollzeit-Stellen eingespart
+                      {agentsSaved} {t('content.common.labels.fullTimePositionsSaved')}
                     </div>
                   </div>
                 </div>
@@ -713,7 +726,7 @@ const ShopifyKundensupportAutomatisieren = () => {
                   href="https://apps.shopify.com/replainow-ai-support"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-violet-600 text-white px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all"
                 >
-                  Jetzt ${monthlySavings.toLocaleString()}/Monat sparen
+                  {t('content.common.labels.seeAlso')} ${monthlySavings.toLocaleString()}{t('content.common.labels.perMonth')} {t('content.common.labels.savedPerMonth')}
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
@@ -772,7 +785,7 @@ const ShopifyKundensupportAutomatisieren = () => {
 
             {/* Comparison with Competitors */}
             <div className="mt-12">
-              <h3 className="text-2xl font-bold text-center mb-8">Setup-Zeit Vergleich:</h3>
+              <h3 className="text-2xl font-bold text-center mb-8">{t('content.common.labels.setupTimeComparison')}</h3>
               <div className="grid md:grid-cols-4 gap-6">
                 {Object.entries(getObject('content.automatisierung.setup.comparison')).map(([key, value]: [string, any], idx: number) => (
                   <div key={key} className={`rounded-xl p-6 text-center ${idx === 0 ? 'bg-gradient-to-br from-purple-600 to-violet-600 text-white' : 'bg-gray-100 text-gray-700'}`}>
@@ -943,7 +956,7 @@ const ShopifyKundensupportAutomatisieren = () => {
                   </h3>
                   <p className="text-gray-600 text-sm mb-3">{article.desc}</p>
                   <div className="flex items-center gap-2 text-purple-600 font-semibold text-sm">
-                    Mehr erfahren
+                    {t('content.common.labels.learnMore')}
                     <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>

@@ -1,36 +1,43 @@
 {
-  "title": "ReplAInow – Helpdesk IA Shopify | Soporte al Cliente Automatizado",
-  "description": "ReplAInow automatiza el soporte al cliente de Shopify con GPT-4.1: respuestas en 3 segundos, 32+ idiomas, compatible con GDPR, 75% de ahorro. ¡Prueba gratis!",
-  "ogTitle": "ReplAInow – Helpdesk IA Shopify | Soporte al Cliente Automatizado",
-  "ogDescription": "ReplAInow automatiza el soporte al cliente de Shopify con GPT-4.1: respuestas en 3 segundos, 32+ idiomas, compatible con GDPR, 75% de ahorro. ¡Prueba gratis!",
-  "twitterTitle": "ReplAInow – Helpdesk IA Shopify | Soporte al Cliente Automatizado",
-  "twitterDescription": "ReplAInow automatiza el soporte al cliente de Shopify con GPT-4.1: respuestas en 3 segundos, 32+ idiomas, compatible con GDPR, 75% de ahorro. ¡Prueba gratis!",
+  "title": "ReplAInow – Helpdesk IA Shopify | 60-80% Soporte Automatizado",
+  "description": "ReplAInow automatiza el 60-80% de tu soporte al cliente Shopify con GPT-5: respuestas en 3 segundos, 100+ idiomas, compatible con GDPR, hasta 97% de ahorro. Activo en 60 segundos. ¡Prueba gratis!",
+  "ogTitle": "ReplAInow – El Helpdesk IA #1 para Shopify",
+  "ogDescription": "60-80% automatización con GPT-5. 100+ idiomas. Respuestas en 3 segundos. Hasta 97% de ahorro. Activo en 60 segundos. Compatible con GDPR.",
+  "twitterTitle": "ReplAInow – Helpdesk IA Shopify",
+  "twitterDescription": "60-80% soporte automatizado • 100+ idiomas • 3s respuesta • GPT-5 • Activo en 60 segundos",
   "schema": {
     "organization": {
       "name": "ReplAInow",
-      "description": "Soporte al cliente Shopify impulsado por IA: respuestas automatizadas con GPT-4.1, tiempo de respuesta de 3 segundos, 32+ idiomas, compatible con GDPR, 75% de ahorro.",
+      "description": "Soporte al cliente Shopify impulsado por IA: 60-80% automatización con GPT-5, tiempo de respuesta de 3 segundos, 100+ idiomas, compatible con GDPR, hasta 97% de ahorro.",
       "url": "https://replainow.com",
-      "logo": "https://replainow.com/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png",
-      "telephone": "+49-30-123-456-789",
+      "logo": "https://replainow.com/lovable-uploads/ReplAInow_Logo_optimized.png",
       "foundingDate": "2024",
       "founder": "Ruben Calabrese"
     },
     "softwareApplication": {
       "name": "ReplAInow AI Helpdesk",
-      "description": "Soporte al cliente Shopify impulsado por IA con tecnología GPT-4",
+      "description": "Soporte al cliente Shopify impulsado por IA con tecnología GPT-5. Automatiza el 60-80% de todos los tickets de soporte.",
       "url": "https://replainow.com",
       "applicationCategory": "BusinessApplication",
       "operatingSystem": "Web",
-      "price": "19",
-      "priceCurrency": "EUR",
-      "ratingValue": "4.9",
-      "ratingCount": "280"
+      "offers": {
+        "type": "AggregateOffer",
+        "lowPrice": "19",
+        "highPrice": "399",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "ratingValue": "4.9",
+        "ratingCount": "280",
+        "bestRating": "5",
+        "worstRating": "1"
+      }
     },
     "website": {
       "name": "ReplAInow",
       "url": "https://replainow.com",
-      "description": "Helpdesk IA Shopify - Soporte al Cliente Automatizado",
-      "searchUrl": "https://replainow.com/search?q={search_term_string}"
+      "description": "Helpdesk IA Shopify - 60-80% soporte automatizado con GPT-5",
+      "inLanguage": "es"
     }
   }
 }

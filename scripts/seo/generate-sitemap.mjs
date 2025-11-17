@@ -50,22 +50,80 @@ const languageSitemaps = [
   {
     name: 'content',
     urls: [
+      // German content pages
       {
         loc: `${baseUrl}/shopify-kundensupport-automatisieren`,
         lastmod: currentDate,
-        changefreq: 'monthly',
+        changefreq: 'weekly',
         priority: '0.9'
       },
       {
         loc: `${baseUrl}/24-7-kundensupport-shopify`,
         lastmod: currentDate,
-        changefreq: 'monthly',
+        changefreq: 'weekly',
         priority: '0.9'
       },
       {
         loc: `${baseUrl}/shopify-support-kosten-senken`,
         lastmod: currentDate,
-        changefreq: 'monthly',
+        changefreq: 'weekly',
+        priority: '0.9'
+      },
+      // English content pages (localized URLs)
+      {
+        loc: `${baseUrl}/en/automate-shopify-customer-support`,
+        lastmod: currentDate,
+        changefreq: 'weekly',
+        priority: '0.9'
+      },
+      {
+        loc: `${baseUrl}/en/24-7-customer-support-shopify`,
+        lastmod: currentDate,
+        changefreq: 'weekly',
+        priority: '0.9'
+      },
+      {
+        loc: `${baseUrl}/en/reduce-shopify-support-costs`,
+        lastmod: currentDate,
+        changefreq: 'weekly',
+        priority: '0.9'
+      },
+      // Spanish content pages (localized URLs)
+      {
+        loc: `${baseUrl}/es/automatizar-soporte-cliente-shopify`,
+        lastmod: currentDate,
+        changefreq: 'weekly',
+        priority: '0.9'
+      },
+      {
+        loc: `${baseUrl}/es/soporte-24-7-shopify`,
+        lastmod: currentDate,
+        changefreq: 'weekly',
+        priority: '0.9'
+      },
+      {
+        loc: `${baseUrl}/es/reducir-costos-soporte-shopify`,
+        lastmod: currentDate,
+        changefreq: 'weekly',
+        priority: '0.9'
+      },
+      // French content pages (localized URLs)
+      {
+        loc: `${baseUrl}/fr/automatiser-support-client-shopify`,
+        lastmod: currentDate,
+        changefreq: 'weekly',
+        priority: '0.9'
+      },
+      {
+        loc: `${baseUrl}/fr/support-24-7-shopify`,
+        lastmod: currentDate,
+        changefreq: 'weekly',
+        priority: '0.9'
+      },
+      {
+        loc: `${baseUrl}/fr/reduire-couts-support-shopify`,
+        lastmod: currentDate,
+        changefreq: 'weekly',
         priority: '0.9'
       }
     ]

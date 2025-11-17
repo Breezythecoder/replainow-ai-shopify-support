@@ -47,6 +47,9 @@ const CookiePolicy = lazy(() => import("./pages/CookiePolicy"));
 const Contact = lazy(() => import("./pages/Contact"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
+// Content URLs for SEO-optimized localized routing
+import { contentPageUrls } from "./i18n/contentUrls";
+
 // Content Pages (SEO-optimized killer content!)
 const ShopifyKundensupportAutomatisieren = lazy(
   () => import("./pages/content/ShopifyKundensupportAutomatisieren")
@@ -112,59 +115,59 @@ const AppShell = () => {
           <Route path="/en" element={<Index />} />
           <Route path="/fr" element={<Index />} />
           <Route path="/es" element={<Index />} />
-          {/* Content Pages - DE (root) */}
+          {/* Content Pages - DE (root) with SEO-optimized localized URLs */}
           <Route
-            path="/shopify-kundensupport-automatisieren"
+            path={contentPageUrls.automatisierung.de}
             element={<ShopifyKundensupportAutomatisieren />}
           />
           <Route
-            path="/24-7-kundensupport-shopify"
+            path={contentPageUrls.support247.de}
             element={<Support24_7Shopify />}
           />
           <Route
-            path="/shopify-support-kosten-senken"
+            path={contentPageUrls.kostenSenken.de}
             element={<SupportKostenSenken />}
           />
 
-          {/* Content Pages - EN */}
+          {/* Content Pages - EN with English SEO-optimized URLs */}
           <Route
-            path="/en/shopify-kundensupport-automatisieren"
+            path={contentPageUrls.automatisierung.en}
             element={<ShopifyKundensupportAutomatisieren />}
           />
           <Route
-            path="/en/24-7-kundensupport-shopify"
+            path={contentPageUrls.support247.en}
             element={<Support24_7Shopify />}
           />
           <Route
-            path="/en/shopify-support-kosten-senken"
+            path={contentPageUrls.kostenSenken.en}
             element={<SupportKostenSenken />}
           />
 
-          {/* Content Pages - ES */}
+          {/* Content Pages - ES with Spanish SEO-optimized URLs */}
           <Route
-            path="/es/shopify-kundensupport-automatisieren"
+            path={contentPageUrls.automatisierung.es}
             element={<ShopifyKundensupportAutomatisieren />}
           />
           <Route
-            path="/es/24-7-kundensupport-shopify"
+            path={contentPageUrls.support247.es}
             element={<Support24_7Shopify />}
           />
           <Route
-            path="/es/shopify-support-kosten-senken"
+            path={contentPageUrls.kostenSenken.es}
             element={<SupportKostenSenken />}
           />
 
-          {/* Content Pages - FR */}
+          {/* Content Pages - FR with French SEO-optimized URLs */}
           <Route
-            path="/fr/shopify-kundensupport-automatisieren"
+            path={contentPageUrls.automatisierung.fr}
             element={<ShopifyKundensupportAutomatisieren />}
           />
           <Route
-            path="/fr/24-7-kundensupport-shopify"
+            path={contentPageUrls.support247.fr}
             element={<Support24_7Shopify />}
           />
           <Route
-            path="/fr/shopify-support-kosten-senken"
+            path={contentPageUrls.kostenSenken.fr}
             element={<SupportKostenSenken />}
           />
 
