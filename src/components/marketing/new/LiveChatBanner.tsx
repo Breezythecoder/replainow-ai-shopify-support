@@ -48,7 +48,7 @@ const LiveChatBanner = () => {
                   <img 
                     src="/dashboard-screenshots/Hometab-widget-nobackground.png"
                     alt="ReplAInow Live Chat Widget - Echte Ansicht mit AI-Antworten, Produktempfehlungen und Multi-Channel Support"
-                    className="w-full h-auto relative"
+                    className="w-full h-auto relative rounded-3xl"
                     loading="lazy"
                   />
                 </motion.div>

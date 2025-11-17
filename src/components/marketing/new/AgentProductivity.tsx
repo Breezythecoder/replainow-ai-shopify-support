@@ -88,7 +88,7 @@ const AgentProductivity = () => {
               <img
                 src="/dashboard-screenshots/Screenshot-1-livechat.png"
                 alt="ReplAInow Agent Dashboard - Product Picker, Discount Creator, Order Management"
-                className="w-full"
+                className="w-full rounded-2xl"
               />
             </div>
           </motion.div>

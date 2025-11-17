@@ -63,7 +63,7 @@ const OmnichannelUnified = () => {
                   <img 
                     src="/dashboard-screenshots/Hometab-widget-nobackground.png" 
                     alt="ReplAInow Live Chat Widget - Multi-Tab Interface mit AI-Antworten"
-                    className="w-full"
+                    className="w-full rounded-2xl"
                   />
                 </div>
               </div>
@@ -185,13 +185,13 @@ const OmnichannelUnified = () => {
             >
               <div className="absolute -inset-6 bg-gradient-to-br from-violet-200/40 to-blue-200/40 rounded-3xl blur-3xl"></div>
               
-              <div className="relative bg-white rounded-2xl shadow-2xl border-2 border-gray-200 overflow-hidden">
-                <img 
-                  src="/dashboard-screenshots/Screenshot-1-maildashboard-new.png" 
-                  alt="ReplAInow E-Mail Dashboard - Thread-basiert mit AI Quality Scoring"
-                  className="w-full"
-                />
-              </div>
+            <div className="relative bg-white rounded-2xl shadow-2xl border-2 border-gray-200 overflow-hidden">
+              <img 
+                src="/dashboard-screenshots/Screenshot-1-maildashboard-new.png" 
+                alt="ReplAInow E-Mail Dashboard - Thread-basiert mit AI Quality Scoring"
+                className="w-full rounded-2xl"
+              />
+            </div>
             </motion.div>
           </div>
         </div>
