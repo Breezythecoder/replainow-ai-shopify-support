@@ -66,9 +66,6 @@
   ],
   "trailingSlash": false,
   "cleanUrls": true,
-  "regions": ["fra1", "iad1", "sfo1"],
-  "functions": {
-    "maxDuration": 10
-  }
+  "regions": ["fra1", "iad1", "sfo1"]
 }
 
