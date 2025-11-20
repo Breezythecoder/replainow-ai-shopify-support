@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import PremiumNavbar from "@/components/marketing/PremiumNavbar";
 import UltraFooter from "@/components/marketing/UltraFooter";
 import { useTranslation } from "@/i18n";
+import { getHomepageHreflangTags } from "@/seo/hreflangHelper";
 
 // New Premium Sections
 import HeroSection from "@/components/marketing/new/HeroSection";
@@ -40,6 +41,11 @@ const NewIndex = () => {
         />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://www.replainow.com" />
+        
+        {/* Hreflang tags for multilingual SEO */}
+        {getHomepageHreflangTags().map(({ hreflang, href }) => (
+          <link key={hreflang} rel="alternate" hreflang={hreflang} href={href} />
+        ))}
       </Helmet>
 
       <PremiumNavbar />

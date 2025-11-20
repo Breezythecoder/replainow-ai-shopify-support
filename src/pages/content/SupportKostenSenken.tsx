@@ -105,8 +105,8 @@ const SupportKostenSenken = () => {
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "Support-Kosten senken bei Shopify",
-    "description": "Schritt-für-Schritt Guide zur Kostensenkung",
+    "name": t('content.kostenSenken.meta.title'),
+    "description": t('content.kostenSenken.meta.description'),
     "totalTime": "PT1M",
     "step": [
       { "@type": "HowToStep", "position": 1, "name": "Echte Kosten analysieren", "text": "Alle versteckten Kosten aufdecken mit TCO-Analyse" },
@@ -120,8 +120,8 @@ const SupportKostenSenken = () => {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Shopify Support Kosten senken: TCO Guide 2025",
-    "description": "Komplette TCO-Analyse für Shopify Support. Alle 12 Kostenkategorien, versteckte Kosten, Real Merchants, Advanced Calculator.",
+    "headline": t('content.kostenSenken.meta.title'),
+    "description": t('content.kostenSenken.meta.description'),
     "author": { "@type": "Organization", "name": "ReplAInow" },
     "publisher": {
       "@type": "Organization",
@@ -130,9 +130,10 @@ const SupportKostenSenken = () => {
     },
     "datePublished": "2025-11-15",
     "dateModified": "2025-11-15",
-    "mainEntityOfPage": "https://replainow.com/shopify-support-kosten-senken",
+    "mainEntityOfPage": canonicalUrl,
     "wordCount": 3500,
-    "articleSection": "Cost Optimization"
+    "articleSection": "Cost Optimization",
+    "inLanguage": currentLocale
   };
 
   const softwareAppSchema = {
@@ -156,15 +157,16 @@ const SupportKostenSenken = () => {
       "@type": "AggregateRating",
       "ratingValue": "4.9",
       "ratingCount": "280"
-    }
+    },
+    "description": t('content.kostenSenken.meta.description')
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://replainow.com/" },
-      { "@type": "ListItem", "position": 2, "name": "Support Kosten senken", "item": "https://replainow.com/shopify-support-kosten-senken" }
+      { "@type": "ListItem", "position": 1, "name": t('content.kostenSenken.breadcrumb.home'), "item": `https://replainow.com${currentLocale === 'de' ? '/' : `/${currentLocale}`}` },
+      { "@type": "ListItem", "position": 2, "name": t('content.kostenSenken.breadcrumb.current'), "item": canonicalUrl }
     ]
   };
 

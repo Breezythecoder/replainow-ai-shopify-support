@@ -62,81 +62,44 @@ const ShopifyKundensupportAutomatisieren = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": [
-      {
+    "mainEntity": getArray('content.automatisierung.faq.items')
+      .slice(0, 3)
+      .map((faq: any) => ({
         "@type": "Question",
-        "name": "Wie genau ist die KI beim Kundensupport?",
+        "name": faq.question,
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Die KI hat Zugriff auf echte Shopify-Daten und WEISS die Antworten statt zu raten. Bei Produktfragen prüft sie echten Lagerbestand, bei Tracking-Anfragen liest sie echten Bestellstatus. Fehlerquote unter 5%, und diese Fälle gehen automatisch an Ihr Team."
+          "text": faq.answer
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie viel Zeit spart Shopify Support-Automatisierung?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Bei 100 Tickets/Tag und 70% Automatisierung sparen Sie ~17 Stunden/Tag. Das entspricht 2.1 Vollzeit-Agents. Bei $3,000/Monat pro Agent sind das $6,300/Monat Ersparnis."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Wie lange dauert die Einrichtung von ReplAInow?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "60 Sekunden aktive Arbeit. App installieren (10s), automatischer Daten-Import läuft im Hintergrund (2-5min), Widget aktivieren (15s). Keine technischen Kenntnisse erforderlich."
-        }
-      }
-    ]
+      }))
   };
 
   // HowTo Schema (2025 SEO Hack - Rich Results!)
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "Shopify Kundensupport automatisieren mit KI",
-    "description": "Schritt-für-Schritt-Anleitung zur Automatisierung von Shopify Kundensupport mit KI",
+    "name": t('content.automatisierung.meta.title'),
+    "description": t('content.automatisierung.meta.description'),
     "totalTime": "PT1M",
-    "step": [
-      {
+    "step": getArray('content.automatisierung.setup.steps')
+      .map((step: any, index: number) => ({
         "@type": "HowToStep",
-        "position": 1,
-        "name": "ReplAInow installieren",
-        "text": "Öffne Shopify App Store, suche 'ReplAInow', klicke 'Installieren', bestätige Berechtigungen",
+        "position": index + 1,
+        "name": step.title,
+        "text": step.desc,
         "itemListElement": [{
           "@type": "HowToDirection",
-          "text": "Installation dauert 10 Sekunden"
+          "text": step.note
         }]
-      },
-      {
-        "@type": "HowToStep",
-        "position": 2,
-        "name": "Automatischer Daten-Import",
-        "text": "ReplAInow importiert automatisch alle Produkte, Bestellungen, Kunden und Richtlinien aus Shopify",
-        "itemListElement": [{
-          "@type": "HowToDirection",
-          "text": "Import läuft im Hintergrund (2-5 Minuten)"
-        }]
-      },
-      {
-        "@type": "HowToStep",
-        "position": 3,
-        "name": "Widget aktivieren",
-        "text": "Gehe zu Einstellungen → Allgemein → 'Im Shopify Theme Editor öffnen' → Aktiviere Widget",
-        "itemListElement": [{
-          "@type": "HowToDirection",
-          "text": "Widget ist sofort live in deinem Shop"
-        }]
-      }
-    ]
+      }))
   };
 
   // Article Schema (2025 SEO Hack - Authority Signal!)
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "Shopify Kundensupport automatisieren: Der ultimative Guide 2025",
-    "description": "Kompletter Guide zur Automatisierung von Shopify Support mit KI. 60-80% Zeitersparnis, ROI-Rechnung, Setup-Anleitung und echte Händler-Ergebnisse.",
+    "headline": t('content.automatisierung.meta.title'),
+    "description": t('content.automatisierung.meta.description'),
     "author": {
       "@type": "Organization",
       "name": "ReplAInow",
@@ -151,14 +114,15 @@ const ShopifyKundensupportAutomatisieren = () => {
       }
     },
     "datePublished": "2025-11-14",
-    "dateModified": "2025-11-14",
+    "dateModified": "2025-11-20",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://replainow.com/shopify-kundensupport-automatisieren"
+      "@id": canonicalUrl
     },
-    "keywords": "Shopify Kundensupport automatisieren, KI Kundensupport, Support Automatisierung, Shopify AI Support",
-    "articleSection": "Customer Support",
-    "wordCount": 2500
+    "keywords": t('content.automatisierung.meta.keywords'),
+    "articleSection": "Customer Support Automation",
+    "wordCount": 2500,
+    "inLanguage": currentLocale
   };
 
   // Breadcrumb Schema (2025 SEO Hack - Navigation Context!)
@@ -169,14 +133,14 @@ const ShopifyKundensupportAutomatisieren = () => {
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Home",
-        "item": "https://replainow.com/"
+        "name": t('content.automatisierung.breadcrumb.home'),
+        "item": `https://replainow.com${currentLocale === 'de' ? '/' : `/${currentLocale}`}`
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "Shopify Kundensupport automatisieren",
-        "item": "https://replainow.com/shopify-kundensupport-automatisieren"
+        "name": t('content.automatisierung.breadcrumb.current'),
+        "item": canonicalUrl
       }
     ]
   };

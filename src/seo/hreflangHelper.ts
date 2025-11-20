@@ -83,3 +83,39 @@ export const getCanonicalUrl = (
   return `${BASE_URL}${urls[locale]}`;
 };
 
+/**
+ * Get hreflang tags for homepage (all language versions)
+ */
+export const getHomepageHreflangTags = (): HreflangTag[] => {
+  return [
+    // German (default)
+    {
+      hreflang: 'de',
+      href: `${BASE_URL}/`,
+    },
+    // English
+    {
+      hreflang: 'en',
+      href: `${BASE_URL}/en`,
+    },
+    // Spanish
+    {
+      hreflang: 'es',
+      href: `${BASE_URL}/es`,
+    },
+    // French
+    {
+      hreflang: 'fr',
+      href: `${BASE_URL}/fr`,
+    },
+    // Default for international
+    {
+      hreflang: 'x-default',
+      href: `${BASE_URL}/en`,
+    },
+  ];
+};
+
+
+
+

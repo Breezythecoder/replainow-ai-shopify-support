@@ -76,8 +76,8 @@ const Support24_7Shopify = () => {
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    "name": "24/7 Kundensupport für Shopify einrichten",
-    "description": "So aktivierst du 24/7 Support ohne Nachtschichten",
+    "name": t('content.support24-7.meta.title'),
+    "description": t('content.support24-7.meta.description'),
     "totalTime": "PT1M",
     "step": [
       {
@@ -109,8 +109,8 @@ const Support24_7Shopify = () => {
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "24/7 Kundensupport für Shopify ohne Nachtschichten",
-    "description": "Kompletter Guide für 24/7 Support mit KI. Nachtschicht-Kosten vermeiden, internationale Zeitzonen abdecken, Umsatz retten.",
+    "headline": t('content.support24-7.meta.title'),
+    "description": t('content.support24-7.meta.description'),
     "author": {
       "@type": "Organization",
       "name": "ReplAInow"
@@ -125,10 +125,11 @@ const Support24_7Shopify = () => {
     },
     "datePublished": "2025-11-15",
     "dateModified": "2025-11-15",
-    "mainEntityOfPage": "https://replainow.com/24-7-kundensupport-shopify",
+    "mainEntityOfPage": canonicalUrl,
     "wordCount": 2700,
     "articleSection": "Customer Support",
-    "keywords": ["24/7 Support", "Kundensupport", "Nachtschichten", "Shopify"]
+    "keywords": t('content.support24-7.meta.keywords'),
+    "inLanguage": currentLocale
   };
 
   // Breadcrumb Schema
@@ -139,14 +140,14 @@ const Support24_7Shopify = () => {
       {
         "@type": "ListItem",
         "position": 1,
-        "name": "Home",
-        "item": "https://replainow.com/"
+        "name": t('content.support24-7.breadcrumb.home'),
+        "item": `https://replainow.com${currentLocale === 'de' ? '/' : `/${currentLocale}`}`
       },
       {
         "@type": "ListItem",
         "position": 2,
-        "name": "24/7 Kundensupport",
-        "item": "https://replainow.com/24-7-kundensupport-shopify"
+        "name": t('content.support24-7.breadcrumb.current'),
+        "item": canonicalUrl
       }
     ]
   };
