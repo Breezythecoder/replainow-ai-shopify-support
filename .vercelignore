@@ -8,10 +8,8 @@ node_modules/
 .vscode/
 .idea/
 
-# Source files (not needed in production)
-src/
+# Test files only (src/ is needed for Vite build!)
 tests/
-scripts/
 
 # Documentation
 *.md
