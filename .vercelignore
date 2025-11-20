@@ -1,0 +1,58 @@
+# Vercel ignore file
+# Files and directories to exclude from deployment
+
+# Development files
+node_modules/
+.git/
+.github/
+.vscode/
+.idea/
+
+# Source files (not needed in production)
+src/
+tests/
+scripts/
+
+# Documentation
+*.md
+!README.md
+
+# Config files
+.env*
+.eslintrc*
+.prettierrc*
+tsconfig*.json
+vite.config.ts
+tailwind.config.ts
+postcss.config.js
+playwright.config.ts
+
+# Test files
+**/*.test.*
+**/*.spec.*
+playwright-report/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Build artifacts (Vercel builds fresh)
+.vite/
+
+# Marketing materials
+app-marketing/
+dashboard-screenshots/
+exported-banners/
+exported-dashboard-banners/
+marketing-summary-replainow/
+
+# Lighthouse reports
+lighthouse*.json
+pa11y-report.json
+
