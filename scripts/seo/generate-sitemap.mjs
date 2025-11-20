@@ -131,6 +131,7 @@ const languageSitemaps = [
   {
     name: 'legal',
     urls: [
+      // German (DE) Legal Pages
       {
         loc: `${baseUrl}/privacy`,
         lastmod: currentDate,
@@ -175,6 +176,153 @@ const languageSitemaps = [
       },
       {
         loc: `${baseUrl}/contact`,
+        lastmod: currentDate,
+        changefreq: 'monthly',
+        priority: '0.6'
+      },
+      // English (EN) Legal Pages
+      {
+        loc: `${baseUrl}/en/privacy`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/en/terms`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/en/cookies`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/en/impressum`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/en/security`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/en/refund`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/en/uninstall`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/en/contact`,
+        lastmod: currentDate,
+        changefreq: 'monthly',
+        priority: '0.6'
+      },
+      // Spanish (ES) Legal Pages
+      {
+        loc: `${baseUrl}/es/privacy`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/es/terms`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/es/cookies`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/es/impressum`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/es/security`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/es/refund`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/es/uninstall`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/es/contact`,
+        lastmod: currentDate,
+        changefreq: 'monthly',
+        priority: '0.6'
+      },
+      // French (FR) Legal Pages
+      {
+        loc: `${baseUrl}/fr/privacy`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/fr/terms`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/fr/cookies`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/fr/impressum`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/fr/security`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/fr/refund`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/fr/uninstall`,
+        lastmod: currentDate,
+        changefreq: 'yearly',
+        priority: '0.3'
+      },
+      {
+        loc: `${baseUrl}/fr/contact`,
         lastmod: currentDate,
         changefreq: 'monthly',
         priority: '0.6'
