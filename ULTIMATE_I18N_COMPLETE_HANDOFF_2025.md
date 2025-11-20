@@ -1002,3 +1002,6 @@ open http://localhost:5173/fr
 ```
 
 **Everything works. Everything is documented. Everything is ready.** ✅
+
+
+

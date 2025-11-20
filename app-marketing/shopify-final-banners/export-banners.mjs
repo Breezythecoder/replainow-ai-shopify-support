@@ -14,8 +14,8 @@ async function exportBanners() {
 
   const banners = [
     {
-      name: "cards-in-action-no-widget-de",
-      title: "Cards in Action - Ohne Widget (für Canva)",
+      name: "main-banner-v2-de",
+      title: "Main Banner V2 DE",
     },
   ];
 

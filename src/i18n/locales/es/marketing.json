@@ -74,10 +74,10 @@
     "items": [
       {
         "title": "Respuesta en 3 Segundos",
-        "description": "Respuestas instantáneas a consultas de clientes con tecnología GPT-4.1"
+        "description": "Respuestas instantáneas a consultas de clientes con tecnología GPT-5"
       },
       {
-        "title": "32+ Idiomas",
+        "title": "100+ Idiomas",
         "description": "Atiende a tus clientes en su idioma nativo automáticamente"
       },
       {
@@ -85,7 +85,7 @@
         "description": "Cumplimiento completo de protección de datos para clientes europeos"
       },
       {
-        "title": "75% de Ahorro",
+        "title": "60-80% de Ahorro",
         "description": "Reduce costos de soporte mientras mejoras la satisfacción del cliente"
       }
     ]
@@ -238,7 +238,7 @@
     "items": [
       {
         "q": "¿La IA realmente reemplaza a mi personal de soporte?",
-        "a": "La IA automatiza el 87% de todas las solicitudes de soporte, equivalente a 2-3 empleados de tiempo completo con volumen promedio de tickets. Preguntas simples (disponibilidad de productos, seguimiento de pedidos, políticas) las resuelve la IA al instante. Casos complejos se transfieren inteligentemente a tu equipo con contexto completo."
+        "a": "La IA automatiza el 60-80% de todas las solicitudes de soporte, equivalente a 2-3 empleados de tiempo completo con volumen promedio de tickets. Preguntas simples (disponibilidad de productos, seguimiento de pedidos, políticas) las resuelve la IA al instante. Casos complejos se transfieren inteligentemente a tu equipo con contexto completo."
       },
       {
         "q": "¿Qué pasa con solicitudes complejas que la IA no puede responder?",
@@ -348,7 +348,7 @@
   },
   "agentProductivity": {
     "title": "Cuando Tus Agentes Toman el Control – Perfectamente Equipados",
-    "subtitle": "La IA maneja el 87% automáticamente. ¿El otro 13%? Tus agentes tienen todas las herramientas para soporte profesional en un solo lugar.",
+    "subtitle": "La IA maneja el 60-80% automáticamente. ¿El otro 13%? Tus agentes tienen todas las herramientas para soporte profesional en un solo lugar.",
     "tools": [
       {
         "title": "Selector de Productos",
@@ -392,7 +392,7 @@
       }
     ],
     "workflowResult": "Resultado: Carrito prellenado con 20% descuento → Checkout de un clic para el cliente",
-    "bottomStatement": "La IA maneja el 87% automáticamente – tus agentes el 13% con las mejores herramientas"
+    "bottomStatement": "La IA maneja el 60-80% automáticamente – tus agentes el 13% con las mejores herramientas"
   },
   "omnichannelUnified": {
     "title": "Un Sistema para Chat y Email – Conectados a la Perfección",
@@ -579,9 +579,9 @@
   },
   "seo": {
     "title": "ReplAInow – Helpdesk IA Shopify | Soporte al Cliente Automatizado",
-    "description": "La solución Helpdesk IA #1 para Shopify. 87% de automatización, Live Chat + Email, 100+ idiomas. En vivo en 60 segundos.",
+    "description": "La solución Helpdesk IA #1 para Shopify. 60-80% de automatización, Live Chat + Email, 100+ idiomas. En vivo en 60 segundos.",
     "ogTitle": "ReplAInow – Helpdesk IA Enterprise para Shopify",
-    "ogDescription": "Soporte automatizado sin compromisos. 87% de tus solicitudes de soporte respondidas completamente automáticamente."
+    "ogDescription": "Soporte automatizado sin compromisos. 60-80% de tus solicitudes de soporte respondidas completamente automáticamente."
   },
   "finalCta": {
     "title": "¿Listo para automatizar tu soporte?",
@@ -636,7 +636,7 @@
         "metric1Label": "Tickets de Soporte/Mes",
         "metric1Before": "847",
         "metric1After": "110",
-        "metric1Change": "↓ 87% menos",
+        "metric1Change": "↓ 60-80% menos",
         "metric2Label": "Tiempo de Respuesta Promedio",
         "metric2Before": "45 Min",
         "metric2After": "<2 Min",
@@ -723,7 +723,7 @@
         "feature4Title": "Seguimiento de Pedidos",
         "feature4Desc": "Logotipos de transportistas y enlaces de seguimiento",
         "conversionTitle": "Resultado",
-        "conversionStat": "+187%",
+        "conversionStat": "+160-80%",
         "conversionLabel": "Mayor tasa de conversión",
         "footer": "Elementos visuales que convierten conversaciones de soporte en ventas."
       }

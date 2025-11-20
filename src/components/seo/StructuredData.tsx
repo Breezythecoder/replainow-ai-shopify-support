@@ -7,7 +7,7 @@ export const organizationSchema = {
   "name": "ReplAInow",
   "url": "https://replainow.com",
   "logo": "https://replainow.com/lovable-uploads/ReplAInow_Logo_optimized.png",
-  "description": "Der intelligenteste AI-Support für Shopify-Händler. 24/7 verfügbar, 32+ languages, GDPR-konform mit GPT-4.1 Technologie.",
+  "description": "Der intelligenteste AI-Support für Shopify-Händler. 24/7 verfügbar, 100+ Sprachen, GDPR-konform mit GPT-5 Technologie.",
   "foundingDate": "2024",
   "founder": {
     "@type": "Person",
@@ -37,56 +37,33 @@ export const softwareApplicationSchema = {
   "name": "ReplAInow AI Support",
   "applicationCategory": "CustomerSupport",
   "operatingSystem": "Web",
-  "description": "AI-gestützter Customer Support für Shopify Stores mit GPT-4.1 Technologie. Automatisiert 24/7 customer queries in 32+ languages.",
+  "description": "AI-gestützter Customer Support für Shopify Stores mit GPT-5 Technologie. Automatisiert 60-80% aller Support-Tickets in 100+ Sprachen.",
   "url": "https://replainow.com",
   "author": {
     "@type": "Organization",
     "name": "ReplAInow",
     "url": "https://replainow.com"
   },
-  "offers": [
-    {
-      "@type": "Offer",
-      "name": "Starter Plan",
-      "description": "Perfekt für kleine bis mittlere Shopify Stores",
-      "price": "19",
-      "priceCurrency": "EUR",
-      "priceValidUntil": "2025-12-31",
-      "availability": "https://schema.org/InStock",
-      "validFrom": "2024-01-01"
-    },
-    {
-      "@type": "Offer",
-      "name": "Professional Plan", 
-      "description": "Für wachsende Stores mit erweiterten Features",
-      "price": "39",
-      "priceCurrency": "EUR",
-      "priceValidUntil": "2025-12-31",
-      "availability": "https://schema.org/InStock",
-      "validFrom": "2024-01-01"
-    },
-    {
-      "@type": "Offer",
-      "name": "Enterprise Plan",
-      "description": "Für große Stores mit unlimitierter Skalierung",
-      "price": "79",
-      "priceCurrency": "EUR",
-      "priceValidUntil": "2025-12-31",
-      "availability": "https://schema.org/InStock",
-      "validFrom": "2024-01-01"
-    }
-  ],
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "19",
+    "highPrice": "399",
+    "priceCurrency": "USD",
+    "priceValidUntil": "2025-12-31",
+    "availability": "https://schema.org/InStock",
+    "offerCount": "4"
+  },
   "featureList": [
-    "GPT-4.1 AI Engine",
-    "32+ languages nativ",
-    "3 seconds Antwortzeit", 
+    "GPT-5 AI Engine",
+    "100+ Sprachen nativ",
+    "3 Sekunden Antwortzeit", 
     "Unlimitierte AI-Antworten",
     "GDPR-konform",
     "24/7 Verfügbarkeit",
-    "Shopify Integration",
-    "Live Chat Demo"
+    "60-80% Automatisierung",
+    "Shopify Integration"
   ],
-  "screenshot": "https://replainow.com/assets/hero-ai-bg.jpg",
+  "screenshot": "https://replainow.com/dashboard-screenshots/Screenshot-1-livechat.png",
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "4.9",
@@ -101,7 +78,7 @@ export const productSchema = {
   "@context": "https://schema.org",
   "@type": "Product",
   "name": "ReplAInow AI Support für Shopify",
-  "description": "Der intelligenteste AI-Support für Shopify-Händler mit GPT-4.1 Technologie",
+  "description": "Der intelligenteste AI-Support für Shopify-Händler mit GPT-5 Technologie. Automatisiert 60-80% aller Support-Tickets.",
   "brand": {
     "@type": "Brand",
     "name": "ReplAInow"
@@ -110,9 +87,9 @@ export const productSchema = {
   "offers": {
     "@type": "AggregateOffer",
     "lowPrice": "19",
-    "highPrice": "79",
-    "priceCurrency": "EUR",
-    "offerCount": "3",
+    "highPrice": "399",
+    "priceCurrency": "USD",
+    "offerCount": "4",
     "availability": "https://schema.org/InStock"
   },
   "aggregateRating": {

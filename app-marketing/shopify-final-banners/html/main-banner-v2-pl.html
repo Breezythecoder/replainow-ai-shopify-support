@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplAInow - Main Banner V2 EN</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body { 
+            margin: 0; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            overflow: hidden;
+        }
+        
+        .banner { 
+            width: 1600px; 
+            height: 900px; 
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+            display: flex;
+            align-items: center;
+            padding: 60px 100px;
+            box-sizing: border-box;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* Subtle grid pattern */
+        .grid-pattern {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.015) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.5;
+        }
+        
+        /* Content Layout */
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 120px;
+            width: 100%;
+            z-index: 2;
+            position: relative;
+        }
+        
+        .left-content {
+            flex: 0 0 650px;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(59, 130, 246, 0.15);
+            border: 1.5px solid rgba(59, 130, 246, 0.3);
+            color: #60a5fa;
+            padding: 14px 28px;
+            border-radius: 28px;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);
+        }
+        
+        h1 {
+            color: white;
+            font-size: 80px;
+            font-weight: 900;
+            margin: 0 0 32px;
+            line-height: 0.95;
+            letter-spacing: -3px;
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+        }
+        
+        .subtitle {
+            color: #cbd5e1;
+            font-size: 28px;
+            margin: 0 0 56px;
+            line-height: 1.4;
+            font-weight: 500;
+            max-width: 580px;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 56px;
+        }
+        
+        .feature-card {
+            background: rgba(30, 41, 59, 0.3);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            background: rgba(30, 41, 59, 0.5);
+            border-color: rgba(96, 165, 250, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        .feature-number {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+        
+        .feature-1 {
+            color: #10b981;
+        }
+        
+        .feature-2 {
+            color: #f59e0b;
+        }
+        
+        .feature-3 {
+            color: #8b5cf6;
+        }
+        
+        .feature-label {
+            font-size: 14px;
+            color: #94a3b8;
+            line-height: 1.3;
+            font-weight: 500;
+        }
+        
+        .bottom-info {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            color: #cbd5e1;
+            font-size: 19px;
+            font-weight: 600;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        
+        .check {
+            width: 26px;
+            height: 26px;
+            background: rgba(16, 185, 129, 0.15);
+            border: 2px solid rgba(16, 185, 129, 0.4);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            box-shadow: 0 2px 10px rgba(16, 185, 129, 0.2);
+        }
+        
+        .check::after {
+            content: '';
+            width: 13px;
+            height: 8px;
+            border-left: 2.5px solid #10b981;
+            border-bottom: 2.5px solid #10b981;
+            transform: rotate(-45deg) translateY(-1px);
+        }
+        
+        /* Right Visual - Clean AI Visualization */
+        .right-visual {
+            flex: 1;
+            position: relative;
+            height: 700px;
+        }
+        
+        .ai-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        
+        /* Floating Data Points */
+        .data-point {
+            position: absolute;
+            background: rgba(15, 23, 42, 0.9);
+            border: 2px solid rgba(96, 165, 250, 0.3);
+            border-radius: 20px;
+            padding: 24px 36px;
+            color: #cbd5e1;
+            font-size: 19px;
+            font-weight: 700;
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), 0 0 20px rgba(96, 165, 250, 0.1);
+            letter-spacing: 0.3px;
+        }
+        
+        .data-point:hover {
+            transform: scale(1.08);
+            border-color: rgba(96, 165, 250, 0.5);
+            color: #e2e8f0;
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), 0 0 30px rgba(96, 165, 250, 0.2);
+        }
+        
+        .dp-1 { top: 15%; left: 0%; }
+        .dp-2 { top: 15%; right: 0%; }
+        .dp-3 { top: 50%; left: -10%; transform: translateY(-50%); }
+        .dp-4 { top: 50%; right: -10%; transform: translateY(-50%); }
+        .dp-5 { bottom: 15%; left: 0%; }
+        .dp-6 { bottom: 15%; right: 0%; }
+        
+        /* Central AI Core */
+        .ai-core {
+            width: 320px;
+            height: 320px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Orbiting Rings */
+        .orbit-ring {
+            position: absolute;
+            border: 1.5px solid rgba(96, 165, 250, 0.15);
+            border-radius: 50%;
+            animation: orbit 20s linear infinite;
+            box-shadow: 0 0 15px rgba(96, 165, 250, 0.1);
+        }
+        
+        .ring-1 {
+            width: 100%;
+            height: 100%;
+            animation-duration: 25s;
+        }
+        
+        .ring-2 {
+            width: 85%;
+            height: 85%;
+            animation-duration: 20s;
+            animation-direction: reverse;
+        }
+        
+        .ring-3 {
+            width: 70%;
+            height: 70%;
+            animation-duration: 15s;
+        }
+        
+        @keyframes orbit {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        
+        /* AI Brain Center */
+        .ai-brain {
+            width: 160px;
+            height: 160px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, rgba(59, 130, 246, 0.15) 40%, transparent 70%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0 0 40px rgba(139, 92, 246, 0.2);
+        }
+        
+        .ai-brain::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, transparent 30%, rgba(139, 92, 246, 0.1) 60%, transparent 100%);
+            border-radius: 50%;
+            animation: pulse 3s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.6; }
+        }
+        
+        .ai-text {
+            font-size: 48px;
+            font-weight: 900;
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+            filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.3));
+        }
+        
+        .ai-subtitle {
+            font-size: 11px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 600;
+        }
+        
+        /* Connection Lines */
+        .connection-line {
+            position: absolute;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, rgba(96, 165, 250, 0.4) 20%, rgba(96, 165, 250, 0.4) 80%, transparent 100%);
+            transform-origin: center;
+            z-index: 1;
+            box-shadow: 0 0 10px rgba(96, 165, 250, 0.2);
+        }
+        
+        .line-1 { width: 150px; top: 50%; left: -150px; }
+        .line-2 { width: 150px; top: 50%; right: -150px; }
+        .line-3 { width: 150px; top: 25%; left: -120px; transform: rotate(-30deg); }
+        .line-4 { width: 150px; top: 25%; right: -120px; transform: rotate(30deg); }
+        .line-5 { width: 150px; bottom: 25%; left: -120px; transform: rotate(30deg); }
+        .line-6 { width: 150px; bottom: 25%; right: -120px; transform: rotate(-30deg); }
+        
+        /* Data Flow Animation */
+        .data-flow {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: #60a5fa;
+            border-radius: 50%;
+            opacity: 0;
+            animation: flow 3s linear infinite;
+            box-shadow: 0 0 12px rgba(96, 165, 250, 0.8);
+        }
+        
+        @keyframes flow {
+            0% { 
+                opacity: 0;
+                transform: translateX(0);
+            }
+            20% {
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% { 
+                opacity: 0;
+                transform: translateX(150px);
+            }
+        }
+        
+        .flow-1 { top: 50%; left: -150px; animation-delay: 0s; display: none; }
+        .flow-2 { top: 50%; right: 0; animation-delay: 0.5s; animation-direction: reverse; }
+        .flow-3 { top: 25%; left: -120px; animation-delay: 1s; display: none; }
+        .flow-4 { top: 25%; right: 30px; animation-delay: 1.5s; animation-direction: reverse; }
+        .flow-5 { bottom: 25%; left: -120px; animation-delay: 2s; display: none; }
+        .flow-6 { bottom: 25%; right: 30px; animation-delay: 2.5s; animation-direction: reverse; }
+        
+        /* Floating Particles */
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: rgba(139, 92, 246, 0.6);
+            border-radius: 50%;
+            opacity: 0;
+            animation: float 8s ease-in-out infinite;
+            box-shadow: 0 0 8px rgba(139, 92, 246, 0.4);
+        }
+        
+        @keyframes float {
+            0%, 100% { 
+                opacity: 0;
+                transform: translate(0, 0);
+            }
+            25% {
+                opacity: 0.5;
+            }
+            50% { 
+                opacity: 0.8;
+                transform: translate(var(--x), var(--y));
+            }
+            75% {
+                opacity: 0.5;
+            }
+        }
+        
+        .particle-1 { --x: -30px; --y: -50px; animation-delay: 0s; display: none; }
+        .particle-2 { --x: 40px; --y: -40px; animation-delay: 1s; }
+        .particle-3 { --x: 30px; --y: 50px; animation-delay: 2s; }
+        .particle-4 { --x: -40px; --y: 40px; animation-delay: 3s; display: none; }
+        .particle-5 { --x: 50px; --y: 0px; animation-delay: 4s; }
+        .particle-6 { --x: -50px; --y: 0px; animation-delay: 5s; display: none; }
+        .particle-7 { --x: 0px; --y: -60px; animation-delay: 6s; }
+        .particle-8 { --x: 0px; --y: 60px; animation-delay: 7s; }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="grid-pattern"></div>
+        
+        <div class="content-wrapper">
+            <div class="left-content">
+                <div class="badge">Wsparcie AI dla Shopify</div>
+                
+                <h1>
+                    AI odpowiada<br>
+                    <span class="gradient-text">80% automatycznie</span>
+                </h1>
+                
+                <p class="subtitle">
+                    Idealne odpowiedzi natychmiast. Dzień i noc.
+                    W każdym języku. Całkowicie automatycznie.
+                </p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-number feature-1">1-KLIK</div>
+                        <div class="feature-label">Całkowicie Automatyczna<br>Instalacja</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-number feature-2">24/7</div>
+                        <div class="feature-label">Zawsze<br>Dostępny</div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-number feature-3">100+</div>
+                        <div class="feature-label">Języki<br>Automatyczne</div>
+                    </div>
+                </div>
+                
+                <div class="bottom-info">
+                    <div class="info-item">
+                        <div class="check"></div>
+                        <span>Czat na Żywo Live Chat & Email Email</span>
+                    </div>
+                    <div class="info-item">
+                        <div class="check"></div>
+                        <span>Zna Twój sklep w pełni</span>
+                    </div>
+                    <div class="info-item">
+                        <div class="check"></div>
+                        <span>Aktywny w 60 sekund</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="right-visual">
+                <div class="ai-container">
+                    <!-- Data Points -->
+                    <div class="data-point dp-1">Dane Klientów</div>
+                    <div class="data-point dp-2">Dane Sklepu</div>
+                    <div class="data-point dp-3">Produkty</div>
+                    <div class="data-point dp-4">Języki</div>
+                    <div class="data-point dp-5">Zamówienia</div>
+                    <div class="data-point dp-6">Zasady</div>
+                    
+                    <!-- AI Core -->
+                    <div class="ai-core">
+                        <!-- Connection Lines -->
+                        <div class="connection-line line-1"></div>
+                        <div class="connection-line line-2"></div>
+                        <div class="connection-line line-3"></div>
+                        <div class="connection-line line-4"></div>
+                        <div class="connection-line line-5"></div>
+                        <div class="connection-line line-6"></div>
+                        
+                        <!-- Data Flow Particles -->
+                        <div class="data-flow flow-1"></div>
+                        <div class="data-flow flow-2"></div>
+                        <div class="data-flow flow-3"></div>
+                        <div class="data-flow flow-4"></div>
+                        <div class="data-flow flow-5"></div>
+                        <div class="data-flow flow-6"></div>
+                        
+                        <!-- Orbiting Rings -->
+                        <div class="orbit-ring ring-1"></div>
+                        <div class="orbit-ring ring-2"></div>
+                        <div class="orbit-ring ring-3"></div>
+                        
+                        <!-- AI Brain -->
+                        <div class="ai-brain">
+                            <div class="ai-text">AI</div>
+                        </div>
+                        
+                        <!-- Floating Particles -->
+                        <div class="particle particle-1"></div>
+                        <div class="particle particle-2"></div>
+                        <div class="particle particle-3"></div>
+                        <div class="particle particle-4"></div>
+                        <div class="particle particle-5"></div>
+                        <div class="particle particle-6"></div>
+                        <div class="particle particle-7"></div>
+                        <div class="particle particle-8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

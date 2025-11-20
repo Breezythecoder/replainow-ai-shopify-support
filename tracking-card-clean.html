@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Card Clean - For Worker Agent</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .demo-container {
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .cards-grid {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        /* === TRACKING CARD STYLES - FINAL VERSION === */
+
+        .tracking-card {
+            max-width: 400px;
+            width: 100%;
+            background: white;
+            border-radius: 16px;
+            padding: 16px;
+            box-shadow: 
+                0 1px 2px rgba(0, 0, 0, 0.04), 
+                0 2px 4px rgba(0, 0, 0, 0.04), 
+                0 4px 8px rgba(0, 0, 0, 0.04), 
+                0 8px 16px rgba(0, 0, 0, 0.04);
+            transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .tracking-card:hover {
+            transform: translateY(-4px) scale(1.01);
+            box-shadow: 
+                0 2px 4px rgba(0, 0, 0, 0.06), 
+                0 4px 8px rgba(0, 0, 0, 0.06), 
+                0 8px 16px rgba(0, 0, 0, 0.06), 
+                0 16px 32px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Header */
+        .tracking-card .header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .tracking-card .icon-container {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #FAFAFA;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+
+        .tracking-card .truck-icon {
+            width: 20px;
+            height: 20px;
+            color: #525252;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .tracking-card .header-text {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .tracking-card .header-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #000000;
+            line-height: 1.4;
+            margin: 0 0 2px 0;
+        }
+
+        .tracking-card .header-subtitle {
+            font-size: 11px;
+            color: #525252;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        /* Tracking Info Box */
+        .tracking-card .tracking-info {
+            background: #FAFAFA;
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+
+        .tracking-card .info-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .tracking-card .info-row:not(:last-child) {
+            margin-bottom: 8px;
+        }
+
+        .tracking-card .info-label {
+            font-size: 12px;
+            color: #525252;
+            font-weight: 500;
+            line-height: 1.4;
+        }
+
+        .tracking-card .info-value {
+            font-size: 13px;
+            color: #000000;
+            font-weight: 600;
+            line-height: 1.4;
+            text-align: right;
+        }
+
+        /* CTA Button */
+        .tracking-card .cta-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            width: 100%;
+            padding: 14px 16px;
+            background: #f3f4f6;
+            color: #111827;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.4;
+            border-radius: 12px;
+            border: none;
+            text-decoration: none;
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+        }
+
+        .tracking-card .cta-button:hover {
+            background: #e5e7eb;
+            color: #000000;
+            transform: translateY(-1px);
+        }
+
+        .tracking-card .cta-button:active {
+            transform: translateY(0);
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            background: #10B981;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-container">
+        <h1>🚚 Tracking Card - Clean Version (OHNE Status)</h1>
+        
+        <div class="cards-grid">
+            <!-- Card 1: DHL -->
+            <div>
+                <div class="badge">✅ FINALE VERSION</div>
+                <div class="tracking-card">
+                    <div class="header">
+                        <div class="icon-container">
+                            <svg class="truck-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+                                <path d="M15 18H9"></path>
+                                <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+                                <circle cx="17" cy="18" r="2"></circle>
+                                <circle cx="7" cy="18" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div class="header-text">
+                            <div class="header-title">Sendungsverfolgung</div>
+                            <div class="header-subtitle">Bestellung #12847</div>
+                        </div>
+                    </div>
+
+                    <div class="tracking-info">
+                        <div class="info-row">
+                            <span class="info-label">Versanddienstleister</span>
+                            <span class="info-value">DHL Express</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Sendungsnummer</span>
+                            <span class="info-value">JJD012345678901</span>
+                        </div>
+                    </div>
+
+                    <a href="https://www.dhl.de/de/privatkunden/pakete-empfangen/verfolgen.html" target="_blank" class="cta-button">
+                        Sendung verfolgen
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2: UPS -->
+            <div>
+                <div class="badge">✅ FINALE VERSION</div>
+                <div class="tracking-card">
+                    <div class="header">
+                        <div class="icon-container">
+                            <svg class="truck-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+                                <path d="M15 18H9"></path>
+                                <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+                                <circle cx="17" cy="18" r="2"></circle>
+                                <circle cx="7" cy="18" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div class="header-text">
+                            <div class="header-title">Sendungsverfolgung</div>
+                            <div class="header-subtitle">Bestellung #12745</div>
+                        </div>
+                    </div>
+
+                    <div class="tracking-info">
+                        <div class="info-row">
+                            <span class="info-label">Versanddienstleister</span>
+                            <span class="info-value">UPS Standard</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Sendungsnummer</span>
+                            <span class="info-value">1Z999AA10123456784</span>
+                        </div>
+                    </div>
+
+                    <a href="https://www.ups.com/track" target="_blank" class="cta-button">
+                        Sendung verfolgen
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3: Hermes -->
+            <div>
+                <div class="badge">✅ FINALE VERSION</div>
+                <div class="tracking-card">
+                    <div class="header">
+                        <div class="icon-container">
+                            <svg class="truck-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path>
+                                <path d="M15 18H9"></path>
+                                <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path>
+                                <circle cx="17" cy="18" r="2"></circle>
+                                <circle cx="7" cy="18" r="2"></circle>
+                            </svg>
+                        </div>
+                        <div class="header-text">
+                            <div class="header-title">Sendungsverfolgung</div>
+                            <div class="header-subtitle">Bestellung #12921</div>
+                        </div>
+                    </div>
+
+                    <div class="tracking-info">
+                        <div class="info-row">
+                            <span class="info-label">Versanddienstleister</span>
+                            <span class="info-value">Hermes</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Sendungsnummer</span>
+                            <span class="info-value">H0123456789DE</span>
+                        </div>
+                    </div>
+
+                    <a href="https://www.hermesworld.com/de/sendungsverfolgung" target="_blank" class="cta-button">
+                        Sendung verfolgen
+                        <span>→</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

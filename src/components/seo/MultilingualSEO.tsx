@@ -188,14 +188,16 @@ const MultilingualSEO = ({
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "4.9",
-              "ratingCount": "147"
+              "ratingCount": "280",
+              "bestRating": "5",
+              "worstRating": "1"
             },
             "featureList": [
-              "GPT-4 AI Integration",
+              "GPT-5 AI Integration",
               "3 Second Response Time", 
-              "32+ Languages Support",
+              "100+ Languages Support",
               "GDPR Compliant",
-              "Real-time Shopify Data Sync"
+              "60-80% Automation"
             ]
           }
         ]

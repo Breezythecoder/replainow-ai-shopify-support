@@ -62,7 +62,7 @@
       "secondary": "outperforms every competitor"
     },
     "subtitle": {
-      "highlight": "Revolutionary GPT-4.1 technology",
+      "highlight": "Revolutionary GPT-5 technology",
       "continuation": "meets perfect Shopify integration"
     },
     "valueProposition": {
@@ -79,10 +79,10 @@
     },
     "items": [
       {
-        "title": "GPT-4.1 intelligence",
+        "title": "GPT-5 intelligence",
         "desc": "Latest AI technology understands context like a human expert",
         "story": "Your AI thinks like a 10-year Shopify expert – just 1000× faster",
-        "impact": "+187% conversion"
+        "impact": "++37% conversion"
       },
       {
         "title": "3-second responses",
@@ -91,7 +91,7 @@
         "impact": "90% fewer tickets"
       },
       {
-        "title": "32+ languages native",
+        "title": "100+ languages native",
         "desc": "Perfect answers in the customer's language – no translation mistakes",
         "story": "French shopper receives a flawless response in French",
         "impact": "+45% international revenue"
@@ -103,7 +103,7 @@
         "impact": "100% accuracy"
       },
       {
-        "title": "75% cost savings",
+        "title": "60-80% automation savings",
         "desc": "Superior AND cheaper than costly competitors",
         "story": "While Gorgias costs €200/month, you only pay €19",
         "impact": "€1,368 saved per year"
@@ -482,7 +482,7 @@
         "feature": "Feature",
         "aiComparison": "⚔ AI Comparison",
         "hero": "ReplAInow",
-        "poweredBy": "Powered by GPT-4.1",
+        "poweredBy": "Powered by GPT-5",
         "gorgias": "Gorgias",
         "intercom": "Intercom",
         "zendesk": "Zendesk"
@@ -490,7 +490,7 @@
       "rows": [
         {
           "label": "AI intelligence",
-          "replAInow": "YES · GPT-4.1 latest",
+          "replAInow": "YES · GPT-5 latest",
           "gorgias": "NO · Basic macros",
           "intercom": "NO · Limited AI",
           "zendesk": "NO · Legacy AI"
@@ -504,7 +504,7 @@
         },
         {
           "label": "Languages",
-          "replAInow": "YES · 32+ native",
+          "replAInow": "YES · 100+ native",
           "gorgias": "NO · 10 basic",
           "intercom": "NO · 15 basic",
           "zendesk": "NO · 20 basic"
@@ -583,8 +583,8 @@
         "price": "€19/month",
         "tagline": "All premium features included",
         "features": [
-          "GPT-4.1 AI engine",
-          "32+ languages native",
+          "GPT-5 AI engine",
+          "100+ languages native",
           "3-second response time",
           "Unlimited AI answers",
           "GDPR-compliant",
@@ -667,7 +667,7 @@
       "points": [
         "AI responds automatically in 3 seconds",
         "Perfect product recommendations",
-        "32+ languages automatically",
+        "100+ languages automatically",
         "+187% higher conversion rate",
         "90% less support effort"
       ]
@@ -1001,7 +1001,7 @@
   },
   "seo": {
     "title": "ReplAInow – AI Shopify Helpdesk | Automated Customer Support",
-    "description": "The #1 AI Helpdesk solution for Shopify. 87% automation, Live Chat + Email, 100+ languages. Live in 60 seconds.",
+    "description": "The #1 AI Helpdesk solution for Shopify. 60-80% automation, Live Chat + Email, 100+ languages. Live in 60 seconds.",
     "ogTitle": "ReplAInow – Enterprise AI Shopify Helpdesk",
     "ogDescription": "Automated support without compromise. 87% of your support requests answered fully automatically."
   },

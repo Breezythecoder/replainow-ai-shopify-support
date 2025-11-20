@@ -112,3 +112,6 @@ Hire native Spanish/French translators:
 **Blocking:** No (site works, just not optimal)  
 **Timeline:** Should complete within 1 week post-launch
 
+
+
+

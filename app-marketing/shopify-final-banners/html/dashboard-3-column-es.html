@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReplAInow - Dashboard 3 Columnas</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; overflow: hidden; }
+        .banner { width: 1600px; height: 900px; background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%); display: flex; flex-direction: column; padding: 60px 80px 0px 80px; box-sizing: border-box; position: relative; overflow: hidden; }
+        .grid-pattern { position: absolute; width: 100%; height: 100%; background-image: linear-gradient(rgba(59, 130, 246, 0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.015) 1px, transparent 1px); background-size: 50px 50px; opacity: 0.5; pointer-events: none; }
+        .glow-1, .glow-2 { position: absolute; width: 600px; height: 600px; border-radius: 50%; filter: blur(100px); opacity: 0.15; }
+        .glow-1 { background: #8b5cf6; top: -300px; left: -200px; }
+        .glow-2 { background: #3b82f6; bottom: -300px; right: -200px; }
+        .content { width: 100%; height: 100%; display: flex; flex-direction: column; gap: 40px; z-index: 2; position: relative; }
+        .header { text-align: center; }
+        .badge { display: inline-flex; align-items: center; gap: 10px; background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 10px 24px; border-radius: 24px; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 24px; }
+        .badge-icon { width: 18px; height: 18px; position: relative; }
+        .badge-icon::before { content: ''; position: absolute; width: 8px; height: 8px; background: #60a5fa; border-radius: 50%; top: 50%; left: 0; transform: translateY(-50%); animation: livePulse 2s ease-in-out infinite; }
+        @keyframes livePulse { 0%, 100% { opacity: 0.3; transform: translateY(-50%) scale(0.8); } 50% { opacity: 1; transform: translateY(-50%) scale(1.2); } }
+        h1 { color: white; font-size: 72px; font-weight: 900; margin: 0 0 20px; line-height: 0.95; letter-spacing: -3px; }
+        .gradient-text { background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 50%, #c084fc 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: inline-block; }
+        .subtitle { color: #94a3b8; font-size: 26px; margin: 0; font-weight: 500; }
+        .dashboard-container { flex: 1; display: grid; grid-template-columns: 380px 1fr 420px; gap: 20px; min-height: 0; }
+        .column { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 16px 16px 0 0; backdrop-filter: blur(10px); overflow: hidden; display: flex; flex-direction: column; }
+        .column-header { padding: 20px; border-bottom: 1px solid rgba(71, 85, 105, 0.3); display: flex; align-items: center; justify-content: space-between; }
+        .column-title { color: white; font-size: 18px; font-weight: 700; display: flex; align-items: center; gap: 10px; }
+        .live-badge { background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.3); color: #10b981; padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+        .column-content { flex: 1; padding: 16px; overflow: hidden; }
+        .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+        .filter-chip { background: rgba(51, 65, 85, 0.4); border: 1px solid rgba(71, 85, 105, 0.3); color: #cbd5e1; padding: 8px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.2s ease; }
+        .filter-chip.active { background: rgba(139, 92, 246, 0.2); border-color: rgba(139, 92, 246, 0.4); color: #c4b5fd; }
+        .conversations { display: flex; flex-direction: column; gap: 10px; }
+        .conversation-item { background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(71, 85, 105, 0.3); border-radius: 12px; padding: 14px; cursor: pointer; transition: all 0.2s ease; }
+        .conversation-item:hover { background: rgba(51, 65, 85, 0.6); border-color: rgba(96, 165, 250, 0.3); }
+        .conversation-item.active { background: rgba(139, 92, 246, 0.15); border-color: rgba(139, 92, 246, 0.4); }
+        .conv-header { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+        .avatar { width: 40px; height: 40px; border-radius: 50%; background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 14px; font-weight: 700; flex-shrink: 0; }
+        .conv-info { flex: 1; }
+        .conv-name { color: white; font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+        .conv-email { color: #64748b; font-size: 11px; }
+        .conv-preview { color: #64748b; font-size: 12px; margin-bottom: 6px; }
+        .conv-category { display: inline-block; background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); color: #60a5fa; padding: 4px 10px; border-radius: 12px; font-size: 10px; font-weight: 600; text-transform: uppercase; }
+        .chat-header { padding: 20px; border-bottom: 1px solid rgba(71, 85, 105, 0.3); display: flex; align-items: center; justify-content: space-between; }
+        .chat-customer { display: flex; align-items: center; gap: 12px; }
+        .customer-name { color: white; font-size: 16px; font-weight: 700; }
+        .online-indicator { width: 8px; height: 8px; background: #10b981; border-radius: 50%; animation: livePulse 2s ease-in-out infinite; }
+        .chat-actions { display: flex; gap: 8px; }
+        .action-btn { padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; border: none; cursor: pointer; transition: all 0.2s ease; }
+        .btn-blue { background: #3b82f6; color: white; }
+        .btn-green { background: #10b981; color: white; }
+        .messages-area { flex: 1; padding: 20px; display: flex; flex-direction: column; gap: 14px; overflow: hidden; }
+        .message { max-width: 70%; }
+        .message-customer { align-self: flex-end; background: rgba(100, 116, 139, 0.4); color: white; padding: 12px 16px; border-radius: 16px 16px 4px 16px; font-size: 14px; }
+        .message-agent { align-self: flex-start; }
+        .agent-bubble { background: rgba(51, 65, 85, 0.6); border: 1px solid rgba(71, 85, 105, 0.3); padding: 12px 16px; border-radius: 16px 16px 16px 4px; color: #e2e8f0; font-size: 14px; margin-bottom: 12px; }
+        .product-card { background: white; border-radius: 12px; overflow: hidden; width: 300px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); }
+        .product-image { height: 140px; background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 18px; font-weight: 700; }
+        .product-info { padding: 16px; }
+        .product-name { color: #1e293b; font-size: 16px; font-weight: 700; margin: 0 0 8px; }
+        .product-price { color: #8b5cf6; font-size: 24px; font-weight: 800; margin: 0 0 6px; }
+        .product-stock { color: #10b981; font-size: 13px; font-weight: 600; margin: 0 0 12px; }
+        .product-btn { width: 100%; padding: 12px; background: #1e293b; color: white; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; }
+        .customer-panel-header { padding: 20px; border-bottom: 1px solid rgba(71, 85, 105, 0.3); text-align: center; }
+        .customer-avatar { width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%); display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; font-weight: 700; margin: 0 auto 12px; }
+        .customer-name-large { color: white; font-size: 18px; font-weight: 700; margin-bottom: 4px; }
+        .customer-email-large { color: #64748b; font-size: 13px; margin-bottom: 10px; }
+        .vip-badge { display: inline-flex; align-items: center; gap: 6px; background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%); color: white; padding: 6px 14px; border-radius: 16px; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+        .customer-stats { padding: 20px; }
+        .stat-row { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid rgba(71, 85, 105, 0.2); }
+        .stat-label { color: #64748b; font-size: 13px; font-weight: 500; }
+        .stat-value { color: white; font-size: 14px; font-weight: 700; }
+        .order-card { margin: 0 20px 20px 20px; background: rgba(30, 41, 59, 0.5); border: 1px solid rgba(71, 85, 105, 0.3); border-radius: 12px; padding: 16px; }
+        .order-title { color: white; font-size: 14px; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+        .order-item { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+        .order-thumb { width: 44px; height: 44px; background: linear-gradient(135deg, #8b5cf6 0%, #3b82f6 100%); border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 20px; }
+        .order-details { flex: 1; }
+        .order-name { color: white; font-size: 13px; font-weight: 600; margin-bottom: 2px; }
+        .order-variant { color: #64748b; font-size: 11px; }
+        .order-price { color: #c4b5fd; font-size: 14px; font-weight: 700; }
+        .order-total { text-align: right; margin-top: 12px; padding-top: 12px; border-top: 1px solid rgba(71, 85, 105, 0.3); }
+        .total-label { color: #64748b; font-size: 12px; margin-bottom: 4px; }
+        .total-value { color: white; font-size: 20px; font-weight: 800; }
+    </style>
+</head>
+<body>
+    <div class="banner">
+        <div class="grid-pattern"></div>
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+        <div class="content">
+            <div class="header">
+                <div class="badge"><div class="badge-icon"></div><span>Dashboard Agente Profesional</span></div>
+                <h1><span class="gradient-text">3 Columnas</span> Dashboard Pro</h1>
+                <p class="subtitle">Conversations • Chat • Intel Client - Todo en una interfaz</p>
+            </div>
+            <div class="dashboard-container">
+                <div class="column">
+                    <div class="column-header">
+                        <div class="column-title">Chats en Vivo<span class="live-badge">LIVE</span></div>
+                    </div>
+                    <div class="column-content">
+                        <div class="filters">
+                            <div class="filter-chip active">Todos (24)</div>
+                            <div class="filter-chip">Producto (8)</div>
+                            <div class="filter-chip">Soporte (12)</div>
+                            <div class="filter-chip">Entrega (4)</div>
+                        </div>
+                        <div class="conversations">
+                            <div class="conversation-item active">
+                                <div class="conv-header">
+                                    <div class="avatar">SM</div>
+                                    <div class="conv-info">
+                                        <div class="conv-name">Sarah Miller</div>
+                                        <div class="conv-email">sarah@example.com</div>
+                                    </div>
+                                </div>
+                                <div class="conv-preview">Buscando vestido azul verano...</div>
+                                <span class="conv-category">Produit</span>
+                            </div>
+                            <div class="conversation-item">
+                                <div class="conv-header">
+                                    <div class="avatar" style="background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);">JD</div>
+                                    <div class="conv-info">
+                                        <div class="conv-name">John Doe</div>
+                                        <div class="conv-email">john@example.com</div>
+                                    </div>
+                                </div>
+                                <div class="conv-preview">Dónde está mi pedido #1234?</div>
+                                <span class="conv-category" style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16, 185, 129, 0.3); color: #10b981;">Livraison</span>
+                            </div>
+                            <div class="conversation-item">
+                                <div class="conv-header">
+                                    <div class="avatar" style="background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);">LK</div>
+                                    <div class="conv-info">
+                                        <div class="conv-name">Lisa Klein</div>
+                                        <div class="conv-email">lisa@example.com</div>
+                                    </div>
+                                </div>
+                                <div class="conv-preview">¿Tienen descuentos estudiantes?</div>
+                                <span class="conv-category" style="background: rgba(168, 85, 247, 0.15); border-color: rgba(168, 85, 247, 0.3); color: #c084fc;">Preventa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="chat-header">
+                        <div class="chat-customer">
+                            <div class="avatar">SM</div>
+                            <div>
+                                <div class="customer-name">Sarah Miller</div>
+                                <div style="display: flex; align-items: center; gap: 6px;">
+                                    <div class="online-indicator"></div>
+                                    <span style="color: #10b981; font-size: 12px; font-weight: 600;">En línea</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chat-actions">
+                            <button class="action-btn btn-blue">Hacerse cargo</button>
+                            <button class="action-btn btn-green">Dar a IA</button>
+                        </div>
+                    </div>
+                    <div class="messages-area">
+                        <div class="message message-customer">Busco un vestido azul de verano para una boda</div>
+                        <div class="message message-agent">
+                            <div class="agent-bubble">¡Perfecto! Déjame mostrarte nuestras mejores opciones 👗</div>
+                            <div class="product-card">
+                                <div class="product-image">👗 Premium</div>
+                                <div class="product-info">
+                                    <h4 class="product-name">Vestido de Verano Azul</h4>
+                                    <div class="product-price">89,99€</div>
+                                    <div class="product-stock">✓ 3 en stock</div>
+                                    <button class="product-btn">Ver producto</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="customer-panel-header">
+                        <div class="customer-avatar">SM</div>
+                        <div class="customer-name-large">Sarah Miller</div>
+                        <div class="customer-email-large">sarah@example.com</div>
+                        <div class="vip-badge">⭐ Cliente VIP</div>
+                    </div>
+                    <div class="customer-stats">
+                        <div class="stat-row"><span class="stat-label">Pedidos Totales</span><span class="stat-value">12</span></div>
+                        <div class="stat-row"><span class="stat-label">Total Gastado</span><span class="stat-value">1.247€</span></div>
+                        <div class="stat-row"><span class="stat-label">Sesión</span><span class="stat-value">8m 34s</span></div>
+                        <div class="stat-row" style="border-bottom: none;"><span class="stat-label">Páginas Visitadas</span><span class="stat-value">5</span></div>
+                    </div>
+                    <div class="order-card">
+                        <div class="order-title">🛒 Carrito Actual</div>
+                        <div class="order-item">
+                            <div class="order-thumb">👠</div>
+                            <div class="order-details">
+                                <div class="order-name">Sandalias de Verano</div>
+                                <div class="order-variant">Talla 38 • Beige</div>
+                            </div>
+                            <div class="order-price">49,99€</div>
+                        </div>
+                        <div class="order-total">
+                            <div class="total-label">Total</div>
+                            <div class="total-value">49,99€</div>
+                        </div>
+                    </div>
+                    <div style="padding: 0 20px; color: #64748b; font-size: 12px;">
+                        <div style="margin-bottom: 6px; font-weight: 600; color: #94a3b8;">Recorrido Cliente</div>
+                        <div style="font-size: 11px;">🏠 Inicio → 👗 Vestidos → 🛒 Carrito</div>
+                        <div style="font-size: 11px; margin-top: 4px;">📍 Tráfico: Google / Orgánico</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
