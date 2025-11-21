@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet-async";
 import PremiumNavbar from "@/components/marketing/PremiumNavbar";
 import UltraFooter from "@/components/marketing/UltraFooter";
 import { useTranslation } from "@/i18n";
+import { useLocale } from "@/i18n/LocaleContext";
 import { getHomepageHreflangTags } from "@/seo/hreflangHelper";
 
 // New Premium Sections
@@ -22,6 +23,12 @@ import FinalCTASection from "@/components/marketing/new/FinalCTASection";
 
 const NewIndex = () => {
   const { t } = useTranslation();
+  const { locale: currentLocale } = useLocale();
+  
+  // Dynamic canonical URL based on language
+  const canonicalUrl = currentLocale === 'de' 
+    ? 'https://replainow.com/' 
+    : `https://replainow.com/${currentLocale}`;
   
   return (
     <>
@@ -40,7 +47,8 @@ const NewIndex = () => {
           content={t('marketing.seo.ogDescription')}
         />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://www.replainow.com" />
+        <meta property="og:url" content={canonicalUrl} />
+        <link rel="canonical" href={canonicalUrl} />
         
         {/* Hreflang tags for multilingual SEO */}
         {getHomepageHreflangTags().map(({ hreflang, href }) => (
