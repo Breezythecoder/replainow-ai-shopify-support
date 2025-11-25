@@ -20,7 +20,7 @@ const StatsSection = () => {
           {[
             { icon: TrendingUp, value: 87, suffix: '%', label: 'Auto-Send Rate', color: 'purple' },
             { icon: CheckCircle2, value: 94, label: 'Durchschn. AI Score', color: 'violet' },
-            { icon: Users, value: 1247, suffix: '+', label: 'Aktive Shops', color: 'blue' },
+            { icon: Users, value: 28, suffix: '+', label: 'Aktive Shops', color: 'blue' },
             { icon: Zap, value: 60, label: 'Sek Setup-Zeit', color: 'pink', prefix: '<' }
           ].map((stat, i) => (
             <motion.div

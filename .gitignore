@@ -47,3 +47,4 @@ public/assets/*.css
 # Temporary files
 /tmp/
 *.tmp
+.vercel

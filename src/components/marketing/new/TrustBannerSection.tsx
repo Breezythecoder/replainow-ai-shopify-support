@@ -4,8 +4,8 @@ import { AnimatedCounter } from "@/components/ui/AnimatedCounter";
 
 const TrustBannerSection = () => {
   const stats = [
-    { value: 1247, suffix: '+', label: 'Shopify-Händler', icon: Users },
-    { value: 4.9, suffix: '★', label: 'Rating (1,247 Reviews)', icon: Star },
+    { value: 28, suffix: '+', label: 'Shopify-Händler', icon: Users },
+    { value: 4.9, suffix: '★', label: 'Rating (28+ Reviews)', icon: Star },
     { value: 87, suffix: '%', label: 'Durchschn. Automatisierung', icon: Zap },
     { value: 2, suffix: 's', label: 'Antwortzeit (AI)', icon: Clock, prefix: '<' }
   ];
@@ -29,7 +29,7 @@ const TrustBannerSection = () => {
           className="text-center mb-20"
         >
           <h2 className="text-5xl md:text-6xl font-black text-white mb-6 tracking-tight drop-shadow-2xl">
-            Vertraut von <span className="bg-gradient-to-r from-purple-400 via-violet-300 to-purple-400 bg-clip-text text-transparent">1,247+ Händlern</span>
+            Vertraut von <span className="bg-gradient-to-r from-purple-400 via-violet-300 to-purple-400 bg-clip-text text-transparent">28+ Händlern</span>
           </h2>
           <p className="text-gray-200 text-xl max-w-2xl mx-auto font-medium">
             Echte Zahlen, echte Resultate – Join the #1 AI Helpdesk

@@ -102,7 +102,7 @@ const PremiumNavbar = () => {
             />
           </div>
           
-          <div className="text-xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors duration-300">
+          <div className="text-xl font-bold text-gray-900 group-hover:text-purple-700 transition-colors duration-300 tracking-wide">
             Repl<span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">AI</span>now
           </div>
         </a>

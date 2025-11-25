@@ -51,7 +51,7 @@ const UltraFooter = () => {
                 alt="Logo"
                 className="h-8 w-8"
               />
-              <span className="ml-2 text-xl font-black text-gray-900">
+              <span className="ml-2 text-xl font-black text-gray-900 tracking-wide">
                 Repl
                 <span className="bg-gradient-to-r from-purple-600 to-violet-600 bg-clip-text text-transparent">
                   AI
