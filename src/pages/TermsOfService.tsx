@@ -83,7 +83,26 @@ const TermsOfService = () => {
             </section>
 
             <section className="mb-10">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">6. Acceptable Use</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">6. Marketing Communications</h2>
+              <p className="text-gray-700 mb-4">
+                ReplAInow may send business development emails to publicly listed business email addresses. 
+                We comply with CAN-SPAM (US), GDPR (EU), CASL (Canada), and UK Data Protection Act.
+              </p>
+              <p className="text-gray-700 mb-4"><strong>Our Emails Include:</strong></p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+                <li>Clear sender identification</li>
+                <li>Physical business address (Dubai, UAE)</li>
+                <li>One-click opt-out ("No more emails" link)</li>
+                <li>Honest subject lines</li>
+              </ul>
+              <p className="text-gray-700">
+                <strong>Opt-Out:</strong> Processed within 24 hours. You can unsubscribe anytime via the link 
+                in our emails or by contacting privacy@replainow.com.
+              </p>
+            </section>
+
+            <section className="mb-10">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">7. Acceptable Use</h2>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
                 <li>No illegal, harmful, or infringing content</li>
                 <li>No harassment, abuse, or discrimination</li>

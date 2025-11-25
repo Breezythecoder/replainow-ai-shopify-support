@@ -65,6 +65,31 @@ const PrivacyPolicy = () => {
             </section>
 
             <section className="mb-10">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Business Development Communications</h2>
+              <p className="text-gray-700 mb-4">
+                We may contact Shopify store owners who could benefit from our AI support solution using 
+                publicly available business information.
+              </p>
+              <p className="text-gray-700 mb-4"><strong>Data Sources:</strong></p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
+                <li>Public business directories (Shopify App Store, BuiltWith)</li>
+                <li>Publicly accessible company websites</li>
+                <li>Business email addresses (publicly listed)</li>
+              </ul>
+              <p className="text-gray-700 mb-4">
+                <strong>Legal Basis (GDPR):</strong> Legitimate interest (Article 6(1)(f)) for B2B business 
+                development. We only contact business emails, provide easy opt-out, and respect all 
+                unsubscribe requests within 24 hours.
+              </p>
+              <p className="text-gray-700">
+                <strong>Opt-Out:</strong> Click "No more emails" in any email, or contact{" "}
+                <a href="mailto:privacy@replainow.com" className="text-purple-600 hover:text-purple-700 underline">
+                  privacy@replainow.com
+                </a>.
+              </p>
+            </section>
+
+            <section className="mb-10">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">How We Use Your Data</h2>
               <p className="text-gray-700 mb-4">We process data for the following purposes:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
@@ -72,6 +97,7 @@ const PrivacyPolicy = () => {
                 <li>To personalize and improve support responses and product features</li>
                 <li>To ensure security, prevent abuse, and maintain service integrity</li>
                 <li>To provide analytics and operational insights to merchants</li>
+                <li>To send relevant business communications (with opt-out option)</li>
                 <li>To comply with legal obligations and enforce our Terms of Service</li>
                 <li>To provide customer support and respond to requests</li>
               </ul>
