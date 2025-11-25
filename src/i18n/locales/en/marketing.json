@@ -1005,6 +1005,17 @@
     "ogTitle": "ReplAInow – Enterprise AI Shopify Helpdesk",
     "ogDescription": "Automated support without compromise. 87% of your support requests answered fully automatically."
   },
+  "founder": {
+    "title": "Why I Built ReplAInow",
+    "paragraph1": "When I had my first Shopify shop, I spent more time on customer support emails than on marketing.",
+    "problem": "That was absurd.",
+    "paragraph2Intro": "Every existing solution was either:",
+    "problem1": "Too complicated (weeks of setup)",
+    "problem2": "Too expensive ($500+/month for what?!)",
+    "problem3": "Or simply bad (chatbots that understand nothing)",
+    "paragraph3": "So I built ReplAInow: AI that truly knows your shop, goes live in 60 seconds, and actually works.",
+    "closer": "Support shouldn't hold back your growth."
+  },
   "finalCta": {
     "title": "Ready to automate your support?",
     "subtitle": "Join 28+ successful Shopify merchants saving time and costs with ReplAInow",

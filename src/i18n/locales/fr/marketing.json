@@ -579,6 +579,17 @@
     "ogTitle": "ReplAInow – Helpdesk IA Enterprise pour Shopify",
     "ogDescription": "Support automatisé sans compromis. 60-80% de vos demandes de support répondues entièrement automatiquement."
   },
+  "founder": {
+    "title": "Pourquoi J'ai Construit ReplAInow",
+    "paragraph1": "Quand j'avais ma première boutique Shopify, je passais plus de temps sur les emails de support que sur le marketing.",
+    "problem": "C'était absurde.",
+    "paragraph2Intro": "Chaque solution existante était soit:",
+    "problem1": "Trop compliquée (des semaines de configuration)",
+    "problem2": "Trop chère ($500+/mois pour quoi?!)",
+    "problem3": "Ou simplement mauvaise (chatbots qui ne comprennent rien)",
+    "paragraph3": "Alors j'ai construit ReplAInow: IA qui connaît vraiment votre boutique, est en ligne en 60 secondes, et fonctionne réellement.",
+    "closer": "Le support ne devrait pas freiner votre croissance."
+  },
   "finalCta": {
     "title": "Prêt à automatiser votre support ?",
     "subtitle": "Rejoignez 28+ marchands Shopify prospères économisant temps et coûts avec ReplAInow",
