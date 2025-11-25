@@ -19,7 +19,6 @@ import IntegrationStepsSection from "@/components/marketing/new/IntegrationSteps
 import ROISection from "@/components/marketing/new/ROISection";
 import PricingSection from "@/components/marketing/new/PricingSection";
 import FAQSection from "@/components/marketing/new/FAQSection";
-import FounderSection from "@/components/marketing/new/FounderSection";
 import FinalCTASection from "@/components/marketing/new/FinalCTASection";
 
 const NewIndex = () => {
@@ -104,10 +103,7 @@ const NewIndex = () => {
         {/* 13. FAQ - Address Objections */}
         <FAQSection />
 
-        {/* 14. FOUNDER SECTION - Personal Trust & Story */}
-        <FounderSection />
-
-        {/* 15. FINAL CTA - Conversion */}
+        {/* 14. FINAL CTA - Conversion */}
         <FinalCTASection />
       </main>
 
