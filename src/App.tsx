@@ -91,11 +91,29 @@ const AppShell = () => {
     // No need for URL parameter handling anymore - direct navigation
   }, [locale, location, navigate]);
 
+  // Detect if current route is a content page (they have their own SEO via Helmet)
+  const isContentPage = 
+    location.pathname.includes('automatisieren') || 
+    location.pathname.includes('automate') ||
+    location.pathname.includes('automatizar') ||
+    location.pathname.includes('automatiser') ||
+    location.pathname.includes('24-7') ||
+    location.pathname.includes('soporte-24-7') ||
+    location.pathname.includes('support-24-7') ||
+    location.pathname.includes('kosten-senken') ||
+    location.pathname.includes('reduce') ||
+    location.pathname.includes('reducir') ||
+    location.pathname.includes('reduire');
+
   return (
     <>
-      <SEOErrorBoundary>
-        <SEOHead locale={locale} pathname={location.pathname} />
-      </SEOErrorBoundary>
+      {/* SEOHead only for non-content pages (Homepage, Legal, etc.) */}
+      {/* Content pages have their own comprehensive SEO via Helmet */}
+      {!isContentPage && (
+        <SEOErrorBoundary>
+          <SEOHead locale={locale} pathname={location.pathname} />
+        </SEOErrorBoundary>
+      )}
       <SkipToMainContent />
       <Suspense
         fallback={
