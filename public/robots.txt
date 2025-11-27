@@ -62,11 +62,5 @@ Allow: /sitemap*.xml
 Sitemap: https://replainow.com/sitemap.xml
 Sitemap: https://replainow.com/sitemap-index.xml
 
-# Additional sitemaps
-Sitemap: https://replainow.com/sitemaps/main.xml
-Sitemap: https://replainow.com/sitemaps/languages.xml
-Sitemap: https://replainow.com/sitemaps/pillars.xml
-Sitemap: https://replainow.com/sitemaps/legal.xml
-
 # Crawl delay (optional - be respectful)
 Crawl-delay: 1
