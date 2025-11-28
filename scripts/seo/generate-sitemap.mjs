@@ -182,6 +182,30 @@ const languageSitemaps = [
       },
     ],
   },
+  {
+    name: "contact",
+    urls: [
+      // Contact pages in all languages (for completeness)
+      {
+        loc: `${baseUrl}/en/contact`,
+        lastmod: currentDate,
+        changefreq: "monthly",
+        priority: "0.6",
+      },
+      {
+        loc: `${baseUrl}/es/contact`,
+        lastmod: currentDate,
+        changefreq: "monthly",
+        priority: "0.6",
+      },
+      {
+        loc: `${baseUrl}/fr/contact`,
+        lastmod: currentDate,
+        changefreq: "monthly",
+        priority: "0.6",
+      },
+    ],
+  },
 ];
 
 // Generate individual sitemap XML with hreflang support for content pages

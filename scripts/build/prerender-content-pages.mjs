@@ -211,6 +211,70 @@ const contentPages = [
       es: '/es/reducir-costos-soporte-shopify',
       fr: '/fr/reduire-couts-support-shopify'
     }
+  },
+  
+  // ========================================
+  // CONTACT PAGES (All Languages)
+  // ========================================
+  {
+    url: '/contact',
+    dir: 'contact',
+    lang: 'de',
+    locale: 'de-DE',
+    title: 'Kontakt | ReplAInow Support',
+    description: 'Kontaktiere das ReplAInow Team. Wir helfen dir gerne bei Fragen zu unserem AI Shopify Helpdesk.',
+    keywords: 'ReplAInow Kontakt, Support kontaktieren, Hilfe',
+    hreflang: {
+      de: '/contact',
+      en: '/en/contact',
+      es: '/es/contact',
+      fr: '/fr/contact'
+    }
+  },
+  {
+    url: '/en/contact',
+    dir: 'en/contact',
+    lang: 'en',
+    locale: 'en-US',
+    title: 'Contact | ReplAInow Support',
+    description: 'Contact the ReplAInow team. We\'re happy to help with any questions about our AI Shopify Helpdesk.',
+    keywords: 'ReplAInow contact, contact support, help',
+    hreflang: {
+      de: '/contact',
+      en: '/en/contact',
+      es: '/es/contact',
+      fr: '/fr/contact'
+    }
+  },
+  {
+    url: '/es/contact',
+    dir: 'es/contact',
+    lang: 'es',
+    locale: 'es-ES',
+    title: 'Contacto | Soporte ReplAInow',
+    description: 'Contacta al equipo de ReplAInow. Estamos felices de ayudar con cualquier pregunta sobre nuestro AI Shopify Helpdesk.',
+    keywords: 'ReplAInow contacto, contactar soporte, ayuda',
+    hreflang: {
+      de: '/contact',
+      en: '/en/contact',
+      es: '/es/contact',
+      fr: '/fr/contact'
+    }
+  },
+  {
+    url: '/fr/contact',
+    dir: 'fr/contact',
+    lang: 'fr',
+    locale: 'fr-FR',
+    title: 'Contact | Support ReplAInow',
+    description: 'Contactez l\'équipe ReplAInow. Nous sommes heureux de vous aider pour toute question sur notre AI Shopify Helpdesk.',
+    keywords: 'ReplAInow contact, contacter support, aide',
+    hreflang: {
+      de: '/contact',
+      en: '/en/contact',
+      es: '/es/contact',
+      fr: '/fr/contact'
+    }
   }
 ];
 
