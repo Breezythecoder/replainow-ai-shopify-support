@@ -71,7 +71,7 @@ https://replainow.com/sitemap-index.xml
 
 ---
 
-## 📋 DIE 24 URLs (NACH PRIORITÄT)
+## 📋 DIE 27 URLs (NACH PRIORITÄT)
 
 ### **🔥 TOP PRIORITY (Tag 1 - Heute submitten!):**
 
@@ -153,18 +153,33 @@ https://replainow.com/fr/reduire-couts-support-shopify
 
 ---
 
+### **🟢 MEDIUM PRIORITY (Optional - Tag 3):**
+
+**13-16. Contact Pages (4 URLs):**
+```
+https://replainow.com/contact
+https://replainow.com/en/contact
+https://replainow.com/es/contact
+https://replainow.com/fr/contact
+```
+
+**Oder:** Google findet sie automatisch via Sitemap (auch OK!)
+
 ### **⚪ LOW PRIORITY (Google findet automatisch - NICHT submitten!):**
 
-**17-24. Legal Pages (8 URLs):**
+**17-27. Legal Pages (11 URLs):**
 ```
 https://replainow.com/privacy
 https://replainow.com/terms
 https://replainow.com/security
 https://replainow.com/impressum
-https://replainow.com/contact
 https://replainow.com/refund
 https://replainow.com/cookies
 https://replainow.com/uninstall
+https://replainow.com/en/privacy
+https://replainow.com/en/terms
+https://replainow.com/es/privacy
+https://replainow.com/fr/privacy
 ```
 
 **Warum nicht submitten:**
@@ -210,7 +225,7 @@ https://replainow.com/uninstall
 **Expected Result:**
 ```
 Status: ✅ Erfolg
-Entdeckte URLs: 24
+Entdeckte URLs: 27
 Fehler: 0
 ```
 
