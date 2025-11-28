@@ -72,9 +72,9 @@ const PrivacyPolicy = () => {
               </p>
               <p className="text-gray-700 mb-4"><strong>Data Sources:</strong></p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                <li>Public business directories (Shopify App Store, BuiltWith)</li>
-                <li>Publicly accessible company websites</li>
-                <li>Business email addresses (publicly listed)</li>
+                <li>Publicly available business directories and databases</li>
+                <li>Publicly accessible company websites and contact information</li>
+                <li>Business email addresses that are publicly listed</li>
               </ul>
               <p className="text-gray-700 mb-4">
                 <strong>Legal Basis (GDPR):</strong> Legitimate interest (Article 6(1)(f)) for B2B business 
