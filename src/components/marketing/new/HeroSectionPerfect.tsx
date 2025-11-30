@@ -113,8 +113,9 @@ const HeroSectionPerfect = () => {
               className="flex flex-col sm:flex-row gap-4"
           >
               {/* Primary CTA - Subtiler Glow */}
-            <a href={OAUTH_URL} className="relative inline-block group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-violet-600 rounded-2xl blur-md opacity-40 group-hover:opacity-60 transition duration-200 pointer-events-none"></div>
+            <div className="relative group w-fit">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-violet-600 rounded-2xl blur-md opacity-40 group-hover:opacity-60 transition duration-200"></div>
+              <a href={OAUTH_URL}>
               <motion.button
                 whileHover={{
                   scale: 1.03,
@@ -126,7 +127,8 @@ const HeroSectionPerfect = () => {
                   <span className="leading-none">{t("marketing.hero.ctaPrimary")}</span>
                   <ArrowRight className="w-5 h-5 flex-shrink-0 group-hover:translate-x-1 transition-transform" />
               </motion.button>
-            </a>
+                </a>
+            </div>
 
               {/* Secondary CTA */}
             <motion.a
@@ -136,7 +138,7 @@ const HeroSectionPerfect = () => {
                 borderColor: "rgba(139, 92, 246, 0.5)",
               }}
               whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 bg-white border-2 border-gray-300 text-gray-900 px-8 py-4 rounded-xl font-bold text-base transition-all shadow-sm hover:shadow-md whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 bg-white border-2 border-gray-300 text-gray-900 px-8 py-4 rounded-xl font-bold text-base transition-all shadow-sm hover:shadow-md whitespace-nowrap w-fit"
             >
                 <span className="leading-none">{t("marketing.hero.ctaSecondary")}</span>
             </motion.a>
