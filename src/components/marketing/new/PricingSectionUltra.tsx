@@ -26,6 +26,9 @@ interface PricingPlan {
 const PricingSectionUltra = () => {
   const { t, getTranslation } = useTranslation();
   const plans = getTranslation("marketing.pricing.plans") || [];
+  const perMonth = t("marketing.pricing.perMonth");
+  const allInclusive = t("marketing.pricing.allInclusive");
+  const moreFeatures = t("marketing.pricing.moreFeatures");
 
   return (
     <div
@@ -67,7 +70,14 @@ const PricingSectionUltra = () => {
         {/* Pricing Cards Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8 pt-6">
           {plans.map((plan: PricingPlan, index: number) => (
-            <PricingCard key={index} plan={plan} index={index} />
+            <PricingCard 
+              key={index} 
+              plan={plan} 
+              index={index}
+              perMonth={perMonth}
+              allInclusive={allInclusive}
+              moreFeatures={moreFeatures}
+            />
           ))}
         </div>
 
@@ -89,7 +99,19 @@ const PricingSectionUltra = () => {
 };
 
 // Individual Pricing Card Component
-const PricingCard = ({ plan, index }: { plan: PricingPlan; index: number }) => {
+const PricingCard = ({ 
+  plan, 
+  index,
+  perMonth,
+  allInclusive,
+  moreFeatures
+}: { 
+  plan: PricingPlan; 
+  index: number;
+  perMonth: string;
+  allInclusive: string;
+  moreFeatures: string;
+}) => {
   const isPopular = plan.highlighted;
   const isPremium = plan.premium;
 
@@ -195,7 +217,7 @@ const PricingCard = ({ plan, index }: { plan: PricingPlan; index: number }) => {
                     : "text-gray-500"
                 }`}
               >
-                /Monat
+                {perMonth}
               </span>
             </div>
           </div>
@@ -255,7 +277,7 @@ const PricingCard = ({ plan, index }: { plan: PricingPlan; index: number }) => {
               isPopular || isPremium ? "text-white" : "text-gray-900"
             }`}
           >
-            Alles inklusive
+            {allInclusive}
           </div>
 
           {/* Features List */}
@@ -290,7 +312,7 @@ const PricingCard = ({ plan, index }: { plan: PricingPlan; index: number }) => {
                     : "text-gray-500"
                 }`}
               >
-                Und viele weitere Features...
+                {moreFeatures}
               </li>
             )}
           </ul>

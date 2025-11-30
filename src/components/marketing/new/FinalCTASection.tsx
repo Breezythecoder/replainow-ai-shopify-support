@@ -43,7 +43,7 @@ const FinalCTASection = () => {
             className="inline-flex items-center gap-2 clean-badge-purple-light mb-8"
           >
             <Sparkles className="w-4 h-4" />
-            <span className="text-sm font-bold">Start Your Transformation</span>
+            <span className="text-sm font-bold">{t("marketing.finalCta.badge")}</span>
           </motion.div>
 
           {/* Headline */}

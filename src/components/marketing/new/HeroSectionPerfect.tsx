@@ -78,9 +78,9 @@ const HeroSectionPerfect = () => {
               className="flex flex-wrap gap-3"
           >
             {[
-              { value: "87%", label: "Automation", icon: TrendingUp },
-              { value: "3s", label: "Response", icon: Zap },
-              { value: "24/7", label: "Support", icon: Clock },
+              { value: "87%", label: t("marketing.hero.stats.automation"), icon: TrendingUp },
+              { value: "3s", label: t("marketing.hero.stats.response"), icon: Zap },
+              { value: "24/7", label: t("marketing.hero.stats.support"), icon: Clock },
             ].map((stat, i) => (
               <motion.div
                 key={i}
@@ -152,19 +152,19 @@ const HeroSectionPerfect = () => {
               <div className="flex items-center gap-1.5 bg-green-50 border border-green-200 rounded-lg px-3 py-1.5">
                 <Check className="w-4 h-4 text-green-600 flex-shrink-0" />
                 <span className="text-green-900 font-medium text-xs">
-                14 Tage kostenlos
+                {t("marketing.hero.trustSignals.freeTrial")}
               </span>
             </div>
               <div className="flex items-center gap-1.5 bg-green-50 border border-green-200 rounded-lg px-3 py-1.5">
                 <Check className="w-4 h-4 text-green-600 flex-shrink-0" />
                 <span className="text-green-900 font-medium text-xs">
-                  Keine Kreditkarte
+                  {t("marketing.hero.trustSignals.noCard")}
               </span>
             </div>
               <div className="flex items-center gap-1.5 bg-blue-50 border border-blue-200 rounded-lg px-3 py-1.5">
                 <Check className="w-4 h-4 text-blue-600 flex-shrink-0" />
                 <span className="text-blue-900 font-medium text-xs">
-                  ISO 27001
+                  {t("marketing.hero.trustSignals.iso")}
               </span>
             </div>
           </motion.div>

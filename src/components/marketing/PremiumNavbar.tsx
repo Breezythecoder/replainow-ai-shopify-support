@@ -73,7 +73,7 @@ const PremiumNavbar = () => {
 
   // NEUE Reihenfolge der Navigationspunkte
   const navItems = [
-    { label: 'Live Demo', anchor: 'live-demo' },
+    { label: t('common.navigation.demo'), anchor: 'live-demo' },
     { label: t('common.navigation.features'), anchor: 'features' },
     { label: t('common.navigation.integration'), anchor: 'integration' },
     { label: t('common.navigation.pricing'), anchor: 'pricing' },
@@ -147,7 +147,7 @@ const PremiumNavbar = () => {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-white border-2 border-gray-300 hover:border-purple-400 text-gray-700 hover:text-purple-600 px-5 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-md"
             >
-              <span>Login</span>
+              <span>{t('common.navigation.login')}</span>
             </a>
           </div>
 
@@ -210,7 +210,7 @@ const PremiumNavbar = () => {
                 rel="noopener noreferrer"
                 className="block w-full text-center bg-white border-2 border-gray-300 text-gray-700 px-6 py-4 rounded-xl font-semibold"
               >
-                Login
+                {t('common.navigation.login')}
               </a>
             </div>
             

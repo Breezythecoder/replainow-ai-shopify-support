@@ -6,7 +6,27 @@
     "ctaPrimary": "Essayez 14 Jours Gratuits",
     "ctaSecondary": "Voir les Plans",
     "socialProof": "28+ marchands Shopify utilisent déjà ReplAInow",
-    "trustBadge": "Certifié ISO 27001"
+    "trustBadge": "Certifié ISO 27001",
+    "stats": {
+      "automation": "Automatisation",
+      "response": "Réponse",
+      "support": "Support"
+    },
+    "trustSignals": {
+      "freeTrial": "14 Jours Gratuits",
+      "noCard": "Sans Carte",
+      "iso": "ISO 27001"
+    },
+    "oldStats": {
+      "automation": "Automatisation",
+      "response": "Réponse",
+      "support": "Support"
+    },
+    "trustSignals": {
+      "freeTrial": "14 jours gratuits",
+      "noCard": "Sans carte",
+      "iso": "ISO 27001"
+    }
   },
   "liveChatDemo": {
     "aiName": "ReplAInow IA",
@@ -130,7 +150,9 @@
     "badge": "14 Jours Gratuits · Sans Carte · Facturation Shopify",
     "title": "Choisissez Votre Plan",
     "subtitle": "Toutes les fonctionnalités incluses dans chaque plan. Vous ne payez que pour les réponses IA.",
-    "moreFeatures": "Et bien plus encore...",
+    "perMonth": "/mois",
+    "allInclusive": "Tout inclus",
+    "moreFeatures": "Et bien d'autres fonctionnalités...",
     "plans": [
       {
         "name": "Launch",
@@ -686,6 +708,7 @@
     "closer": "Le support ne devrait pas freiner votre croissance."
   },
   "finalCta": {
+    "badge": "Commencez Votre Transformation",
     "title": "Prêt à automatiser votre support ?",
     "subtitle": "Rejoignez 28+ marchands Shopify prospères économisant temps et coûts avec ReplAInow",
     "cta": "Essayez 14 Jours Gratuits",
