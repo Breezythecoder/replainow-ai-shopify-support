@@ -5,19 +5,19 @@ import { useTranslation } from "@/i18n";
 import { useLocale } from "@/i18n/LocaleContext";
 import { getHomepageHreflangTags } from "@/seo/hreflangHelper";
 
-// New Premium Sections
-import HeroSection from "@/components/marketing/new/HeroSection";
-import AIPowerShowcase from "@/components/marketing/new/AIPowerShowcase";
-import ValuePropositionSection from "@/components/marketing/new/ValuePropositionSection";
-import TestimonialsSection from "@/components/marketing/new/TestimonialsSection";
-import AIKnowledgeBanner from "@/components/marketing/new/AIKnowledgeBanner";
+// New Premium Sections - OPTIMIZED Dec 2025
+import HeroSection from "@/components/marketing/new/HeroSectionPerfect";
+import AIPowerShowcase from "@/components/marketing/new/AIPowerShowcaseUltra";
+// import ValuePropositionSection from "@/components/marketing/new/ValuePropositionSection"; // ❌ REMOVED - Too much!
+import TestimonialsSection from "@/components/marketing/new/TestimonialsSectionUltra";
+import AIKnowledgeBanner from "@/components/marketing/new/AIKnowledgeBanner"; // ✅ ORIGINAL - VERBESSERT!
 import OmnichannelUnified from "@/components/marketing/new/OmnichannelUnified";
-import AIIntelligenceDeepDive from "@/components/marketing/new/AIIntelligenceDeepDive";
+// import AIIntelligenceDeepDive from "@/components/marketing/new/AIIntelligenceDeepDive"; // ❌ REMOVED - Redundant!
 import DashboardShowcaseSection from "@/components/marketing/new/DashboardShowcaseSection";
 import AgentProductivity from "@/components/marketing/new/AgentProductivity";
 import IntegrationStepsSection from "@/components/marketing/new/IntegrationStepsSection";
 import ROISection from "@/components/marketing/new/ROISection";
-import PricingSection from "@/components/marketing/new/PricingSection";
+import PricingSection from "@/components/marketing/new/PricingSectionUltra";
 import FAQSection from "@/components/marketing/new/FAQSection";
 import FinalCTASection from "@/components/marketing/new/FinalCTASection";
 
@@ -70,40 +70,34 @@ const NewIndex = () => {
         {/* 2. AI-POWER SHOWCASE - Was Ihre AI alles kann! */}
         <AIPowerShowcase />
 
-        {/* 3. VALUE PROPOSITION - 87% Automation + AI-Intelligenz + 24/7 */}
-        <ValuePropositionSection />
-
-        {/* 4. TESTIMONIALS - Social Proof Early */}
-        <TestimonialsSection />
-
-        {/* 5. AI KNOWLEDGE - Automatischer Shop-Wissen Import */}
-        <AIKnowledgeBanner />
-
-        {/* 6. OMNICHANNEL UNIFIED - Chat + Email nahtlos verbunden */}
-        <OmnichannelUnified />
-
-        {/* 7. AI INTELLIGENCE DEEP-DIVE - Quality + Collection + Journey */}
-        <AIIntelligenceDeepDive />
-
-        {/* 8. DASHBOARD SHOWCASE - Show the product */}
+        {/* 3. DASHBOARD SHOWCASE - DIREKT BEWEIS! Show the product! */}
         <DashboardShowcaseSection />
 
-        {/* 9. AGENT PRODUCTIVITY - Tools für die 13% */}
+        {/* 4. AGENT PRODUCTIVITY - Tools für die 13% (DIREKT NACH DASHBOARD!) */}
         <AgentProductivity />
 
-        {/* 10. INTEGRATION STEPS - How It Works */}
+        {/* 5. AI KNOWLEDGE - Automatischer Shop-Wissen (VERBESSERT!) */}
+        <AIKnowledgeBanner />
+
+        {/* 6. INTEGRATION STEPS - Nahtlose Shopify-Integration in 60 Sek! */}
         <IntegrationStepsSection />
 
-        {/* 11. ROI - Mitarbeiter-Ersparnis Calculator */}
-        <ROISection />
+        {/* 7. OMNICHANNEL UNIFIED - Chat + Email nahtlos verbunden */}
+        <OmnichannelUnified />
 
-        {/* 12. PRICING - Clear Options */}
+        {/* 8. PRICING - Clear Options */}
         <PricingSection />
 
-        {/* 13. FAQ - Address Objections */}
+        {/* 9. ROI - Mitarbeiter-Ersparnis Calculator */}
+        <ROISection />
+
+        {/* 10. TESTIMONIALS - Social Proof (VOR FAQ!) */}
+        <TestimonialsSection />
+
+        {/* 11. FAQ - Address Objections */}
         <FAQSection />
 
-        {/* 14. FINAL CTA - Conversion */}
+        {/* 12. FINAL CTA - Conversion */}
         <FinalCTASection />
       </main>
 

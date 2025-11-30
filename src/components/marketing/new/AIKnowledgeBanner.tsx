@@ -1,595 +1,388 @@
+/**
+ * 🧠 AI KNOWLEDGE - ULTRA KRASS 3-COLUMN DESIGN
+ * 3 Links | SHOPIFY Mitte (Schwarz Glassmorphic) | 3 Rechts
+ */
+
 import { motion } from "framer-motion";
 import {
   Database,
-  Zap,
-  CheckCircle2,
-  TrendingUp,
   Package,
   Users,
   FileText,
   ShoppingBag,
   Truck,
   Globe,
+  Zap,
+  Sparkles,
+  ArrowDown,
 } from "lucide-react";
-import { useTranslation } from "@/i18n";
 
 const AIKnowledgeBanner = () => {
-  const { t, getTranslation } = useTranslation();
-
-  const leftData = getTranslation("marketing.aiKnowledge.dataSourcesLeft") || [
-    {
-      title: "Produkte",
-      desc: "Katalog, Varianten, Preise",
-      stats: "Real-time",
-    },
-    {
-      title: "Bestellungen",
-      desc: "Status, Tracking, Historie",
-      stats: "60 Tage",
-    },
-    { title: "Kunden", desc: "Profile, Präferenzen", stats: "Lifetime" },
+  const leftSources = [
+    { icon: Package, title: "Produkte & Varianten", desc: "Alle SKUs, Preise, Stock" },
+    { icon: ShoppingBag, title: "Bestellungen", desc: "60 Tage komplette Historie" },
+    { icon: Users, title: "Kundenprofile", desc: "Präferenzen & Kaufhistorie" },
   ];
 
-  const rightData = getTranslation(
-    "marketing.aiKnowledge.dataSourcesRight"
-  ) || [
-    {
-      title: "Richtlinien",
-      desc: "Rückgabe, Versand, AGB",
-      stats: "Auto-Sync",
-    },
-    { title: "Versand", desc: "Carrier, Tracking-Links", stats: "Live" },
-    { title: "Content", desc: "Seiten, FAQs, Blog", stats: "Voll" },
-  ];
-
-  const leftIcons = [Package, ShoppingBag, Users];
-  const rightIcons = [FileText, Truck, Globe];
-  const leftColors = ["purple", "blue", "violet"];
-  const rightColors = ["pink", "purple", "blue"];
-
-  const dataSourcesLeft = leftData.map((item, i) => ({
-    ...item,
-    icon: leftIcons[i],
-    color: leftColors[i],
-  }));
-  const dataSourcesRight = rightData.map((item, i) => ({
-    ...item,
-    icon: rightIcons[i],
-    color: rightColors[i],
-  }));
-
-  const benefits = getTranslation("marketing.aiKnowledge.benefits") || [
-    {
-      title: "Echtzeit-Updates",
-      desc: "Shopify-Änderungen synchronisieren sich innerhalb von Sekunden",
-    },
-    {
-      title: "Null Wartung",
-      desc: "Keine manuellen Updates, keine Wissensdatenbank-Pflege",
-    },
-    {
-      title: "99.8% Genauigkeit",
-      desc: "AI kennt exakte Daten, keine Schätzungen oder Raten",
-    },
-  ];
-
-  const stats = getTranslation("marketing.aiKnowledge.stats") || [
-    { label: "Datenquellen", value: "12+" },
-    { label: "Sync-Zeit", value: "<5 Sek" },
-    { label: "Wartung", value: "0 Min" },
-    { label: "Genauigkeit", value: "99.8%" },
-  ];
-
-  const examples = getTranslation("marketing.aiKnowledge.examples") || [
-    {
-      category: "Produkt-Fragen",
-      question: "Habt ihr das Kleid in Größe 42?",
-      answer: "Ja, 15 auf Lager!",
-      difficulty: "Einfach",
-    },
-    {
-      category: "Bestellungs-Fragen",
-      question: "Wo ist meine Bestellung #1234?",
-      answer: "Versendet gestern via DHL",
-      difficulty: "Einfach",
-    },
-    {
-      category: "Richtlinien-Fragen",
-      question: "Wie lange ist die Rückgabe-Frist?",
-      answer: "30 Tage lt. Ihrer Rückgabe-Richtlinie",
-      difficulty: "Einfach",
-    },
-    {
-      category: "Style-Beratung",
-      question: "Passt dieses Shirt zu meiner Jeans?",
-      answer: "Ja! Zeige Ihnen 3 passende Styles →",
-      difficulty: "Medium",
-    },
-    {
-      category: "Bestellungs-Änderung",
-      question: "Kann ich die Versandadresse noch ändern?",
-      answer: "Bestellung noch nicht versendet – Adresse aktualisierbar",
-      difficulty: "Medium",
-    },
-    {
-      category: "VIP-Service",
-      question: "Ich bin VIP-Kunde, gibt's einen Rabatt?",
-      answer: "Ja! 20% Rabattcode für Sie erstellt 🎁",
-      difficulty: "Komplex",
-    },
+  const rightSources = [
+    { icon: FileText, title: "Shop-Richtlinien", desc: "Return, Shipping, FAQ" },
+    { icon: Truck, title: "Versand-Tracking", desc: "Live Carrier-Status" },
+    { icon: Globe, title: "Multi-Channel", desc: "Shop, Social, E-Mail" },
   ];
 
   return (
-    <div className="bg-gradient-to-b from-white via-purple-50/30 to-white relative overflow-hidden">
-      {/* Mesh gradient */}
-      <div className="absolute inset-0 bg-mesh-purple opacity-15"></div>
-      {/* Subtle background pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239333ea' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }}
-      ></div>
-
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24 relative">
+    <div className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 py-32">
+      <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-4 tracking-tight">
-            {t("marketing.aiKnowledge.title")}
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            AI kennt <span className="text-purple-600">JEDEN</span> Aspekt Ihres Shops
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            {t("marketing.aiKnowledge.subtitle")}
+            Produkte, Bestellungen, Kunden, Richtlinien – alles automatisch synchronisiert. Sie ändern etwas? AI weiß es sofort. Null Wartung.
           </p>
         </motion.div>
 
-        {/* Main Data Flow Visualization */}
-        <div className="relative mb-20">
-          {/* Connection Lines - Animated */}
-          <div className="absolute top-1/2 left-0 right-0 flex justify-center -translate-y-1/2 pointer-events-none">
-            <div className="w-full max-w-5xl relative h-px">
-              {/* Horizontal lines */}
-              <div className="absolute left-0 w-1/3 h-px bg-gradient-to-r from-transparent via-purple-300 to-purple-300"></div>
-              <div className="absolute right-0 w-1/3 h-px bg-gradient-to-l from-transparent via-purple-300 to-purple-300"></div>
-
-              {/* Animated flow dots */}
+        {/* 3-COLUMN LAYOUT */}
+        <div className="grid md:grid-cols-3 gap-12 items-center mb-16">
+          
+          {/* LEFT COLUMN - 3 Data Sources */}
+          <div className="space-y-4">
+            {leftSources.map((source, i) => (
               <motion.div
-                animate={{ x: [0, 200, 200], opacity: [0, 1, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
-                className="absolute left-0 w-2 h-2 bg-purple-500 rounded-full"
-              />
-              <motion.div
-                animate={{ x: [0, -200, -200], opacity: [0, 1, 0] }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  ease: "linear",
-                  delay: 1.5,
-                }}
-                className="absolute right-0 w-2 h-2 bg-purple-500 rounded-full"
-              />
-            </div>
+                key={i}
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                whileHover={{ x: 8 }}
+              >
+                <div className="bg-white rounded-xl p-5 border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-200">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 rounded-lg bg-purple-600 flex items-center justify-center">
+                      <source.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-gray-900 text-sm leading-tight">
+                        {source.title}
+                      </h4>
+                      <p className="text-xs text-gray-600">{source.desc}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1.5 pt-2 mt-2 border-t border-gray-100">
+                    <Zap className="w-3 h-3 text-green-600" />
+                    <span className="text-xs text-gray-500">Auto-Sync</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-            {/* Left Data Sources */}
-            <div className="space-y-4">
-              {dataSourcesLeft.map((source, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: -30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3 + i * 0.1, duration: 0.6 }}
-                  className="relative group"
-                >
-                  <div
-                    className={`
-                    absolute -inset-0.5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg
-                    ${source.color === "purple" ? "bg-purple-500/20" : ""}
-                    ${source.color === "blue" ? "bg-blue-500/20" : ""}
-                    ${source.color === "violet" ? "bg-violet-500/20" : ""}
-                  `}
-                  ></div>
-
-                  <div className="bg-white rounded-xl p-5 border-2 border-gray-200 group-hover:border-purple-400 transition-all duration-300 shadow-card-strong group-hover:shadow-white-card-hover relative">
-                    <div className="flex items-center gap-4">
-                      <div
-                        className={`
-                        p-3 rounded-lg
-                        ${source.color === "purple" ? "bg-purple-50" : ""}
-                        ${source.color === "blue" ? "bg-blue-50" : ""}
-                        ${source.color === "violet" ? "bg-violet-50" : ""}
-                      `}
-                      >
-                        <source.icon
-                          className={`
-                          w-6 h-6
-                          ${source.color === "purple" ? "text-purple-700" : ""}
-                          ${source.color === "blue" ? "text-blue-700" : ""}
-                          ${source.color === "violet" ? "text-violet-600" : ""}
-                        `}
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-gray-900 text-sm mb-0.5">
-                          {source.title}
-                        </h4>
-                        <p className="text-xs text-gray-600">{source.desc}</p>
-                      </div>
-                      <div className="bg-purple-50 px-2 py-1 rounded border-2 border-purple-300 text-xs font-bold text-gray-900">
-                        {source.stats}
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Center - 3D Glass Sphere */}
-            <motion.div
-              initial={{ scale: 0, rotateY: -180 }}
-              whileInView={{ scale: 1, rotateY: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-              className="flex justify-center relative"
-              style={{ perspective: "1000px" }}
-            >
-              <div className="relative">
-                {/* Outer glow layers */}
-                <div className="absolute -inset-12 bg-purple-500/20 rounded-full blur-3xl animate-pulse"></div>
-                <div
-                  className="absolute -inset-8 bg-violet-500/15 rounded-full blur-2xl animate-pulse"
-                  style={{ animationDelay: "1s" }}
-                ></div>
-
-                {/* Glass sphere container */}
-                <motion.div
-                  className="relative w-64 h-64 mx-auto transform-gpu transition-transform duration-700 hover:scale-110"
-                  whileHover={{ rotateY: 12 }}
-                  style={{ transformStyle: "preserve-3d" }}
-                >
-                  {/* Inner dark sphere */}
-                  <div className="absolute inset-8 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 rounded-full shadow-2xl"></div>
-
-                  {/* Glass overlay */}
-                  <div className="bg-gray-800 rounded-full absolute inset-0">
-                    <div className="absolute inset-0 flex flex-col items-center justify-center">
-                      {/* Icon with glow */}
-                      <div className="p-6 bg-gradient-to-br from-purple-500 to-violet-600 rounded-3xl shadow-neon-purple mb-3">
-                        <Database className="w-14 h-14 text-white" />
-                      </div>
-
-                      <h3 className="text-xl sm:text-2xl font-bold text-white mb-1">
-                        {t("marketing.aiKnowledge.centerTitle")}
-                      </h3>
-
-                      {/* Pulsing sync indicator */}
-                      <div className="flex items-center justify-center gap-2 mb-2 flex-wrap px-2">
-                        <div className="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
-                        <div className="w-2 h-2 bg-green-400 rounded-full absolute animate-pulse"></div>
-                        <span className="text-xs sm:text-sm text-green-400 font-bold text-center">
-                          {t("marketing.aiKnowledge.syncLabel")}
-                        </span>
-                      </div>
-
-                      <div className="text-xs text-gray-600 text-center px-4">
-                        {t("marketing.aiKnowledge.autoLabel")}
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Floating data particles */}
-                  {[...Array(6)].map((_, i) => (
+          {/* CENTER - SHOPIFY HUB - SCHWARZ GLASSMORPHIC MEGA KRASS! */}
+          <motion.div
+            initial={{ scale: 0.5, opacity: 0 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
+            className="relative flex justify-center"
+          >
+            <div className="relative">
+              {/* Mega Glow Effects - KRASS! */}
+              <div className="absolute -inset-24 bg-purple-500/40 rounded-full blur-3xl animate-pulse" />
+              <div className="absolute -inset-16 bg-violet-500/30 rounded-full blur-2xl" 
+                style={{ 
+                  animation: 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                  animationDelay: '0.5s' 
+                }} 
+              />
+              
+              {/* Floating Bubbles Container */}
+              <div className="absolute inset-0 overflow-visible">
+                {[...Array(8)].map((_, i) => {
+                  const angle = (i * 45) * (Math.PI / 180);
+                  const distance = 100 + (i % 2) * 20;
+                  const x = Math.cos(angle) * distance;
+                  const y = Math.sin(angle) * distance;
+                  
+                  return (
                     <motion.div
                       key={i}
+                      className="absolute w-3 h-3 bg-purple-400/60 rounded-full blur-sm"
+                      style={{
+                        left: '50%',
+                        top: '50%',
+                      }}
                       animate={{
-                        y: [0, -20, 0],
-                        x: [0, Math.sin(i) * 10, 0],
-                        opacity: [0.3, 1, 0.3],
+                        x: [x, x + 10, x],
+                        y: [y, y - 10, y],
+                        scale: [1, 1.2, 1],
+                        opacity: [0.6, 0.8, 0.6],
                       }}
                       transition={{
-                        duration: 3,
+                        duration: 3 + i * 0.3,
                         repeat: Infinity,
-                        delay: i * 0.5,
                         ease: "easeInOut",
-                      }}
-                      className="absolute w-2 h-2 bg-purple-400 rounded-full blur-sm"
-                      style={{
-                        top: `${20 + i * 10}%`,
-                        left: `${10 + i * 15}%`,
+                        delay: i * 0.2,
                       }}
                     />
-                  ))}
-                </motion.div>
-
-                {/* Sync Arrows */}
-                <div className="absolute -left-12 top-1/2 -translate-y-1/2 hidden md:block">
-                  <motion.div
-                    animate={{ x: [0, -10, 0] }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                    }}
-                  >
-                    <svg
-                      className="w-8 h-8 text-purple-400"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </motion.div>
-                </div>
-
-                <div className="absolute -right-12 top-1/2 -translate-y-1/2 hidden md:block">
-                  <motion.div
-                    animate={{ x: [0, 10, 0] }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: "easeInOut",
-                      delay: 1,
-                    }}
-                  >
-                    <svg
-                      className="w-8 h-8 text-purple-400 rotate-180"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M13 7l5 5m0 0l-5 5m5-5H6"
-                      />
-                    </svg>
-                  </motion.div>
-                </div>
+                  );
+                })}
               </div>
-            </motion.div>
 
-            {/* Right Data Sources */}
-            <div className="space-y-4">
-              {dataSourcesRight.map((source, i) => (
+              {/* Main Hub - SCHWARZ GLASSMORPHIC! */}
+              <motion.div
+                animate={{
+                  rotate: [0, 360],
+                }}
+                transition={{
+                  duration: 40,
+                  repeat: Infinity,
+                  ease: "linear",
+                }}
+                className="relative w-72 h-72 rounded-full shadow-2xl"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.95) 100%)',
+                  backdropFilter: 'blur(20px)',
+                  border: '2px solid rgba(139, 92, 246, 0.3)',
+                }}
+              >
+                {/* Inner glow ring */}
+                <div className="absolute inset-6 rounded-full bg-gradient-to-br from-purple-500/20 to-violet-500/20 blur-xl" />
+                
+                {/* Shimmer effect */}
                 <motion.div
-                  key={i}
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.6 + i * 0.1, duration: 0.6 }}
-                  className="relative group"
-                >
-                  <div
-                    className={`
-                    absolute -inset-0.5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg
-                    ${source.color === "pink" ? "bg-pink-500/20" : ""}
-                    ${source.color === "purple" ? "bg-purple-500/20" : ""}
-                    ${source.color === "blue" ? "bg-blue-500/20" : ""}
-                  `}
-                  ></div>
+                  className="absolute inset-0 rounded-full"
+                  style={{
+                    background: 'linear-gradient(45deg, transparent 30%, rgba(139, 92, 246, 0.2) 50%, transparent 70%)',
+                  }}
+                  animate={{
+                    rotate: [0, 360],
+                  }}
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                />
 
-                  <div className="bg-white rounded-xl p-5 border-2 border-gray-200 group-hover:border-purple-400 transition-all duration-300 shadow-card-strong group-hover:shadow-white-card-hover relative">
-                    <div className="flex items-center gap-4">
-                      <div
-                        className={`
-                        p-3 rounded-lg
-                        ${source.color === "pink" ? "bg-pink-50" : ""}
-                        ${source.color === "purple" ? "bg-purple-50" : ""}
-                        ${source.color === "blue" ? "bg-blue-50" : ""}
-                      `}
-                      >
-                        <source.icon
-                          className={`
-                          w-6 h-6
-                          ${source.color === "pink" ? "text-pink-700" : ""}
-                          ${source.color === "purple" ? "text-purple-700" : ""}
-                          ${source.color === "blue" ? "text-blue-700" : ""}
-                        `}
-                        />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-gray-900 text-sm mb-0.5">
-                          {source.title}
-                        </h4>
-                        <p className="text-xs text-gray-600">{source.desc}</p>
-                      </div>
-                      <div className="bg-purple-50 px-2 py-1 rounded border-2 border-purple-300 text-xs font-bold text-gray-900">
-                        {source.stats}
-                      </div>
+                {/* Content - Counter-rotate to stay upright! */}
+                <motion.div
+                  animate={{
+                    rotate: [0, -360],
+                  }}
+                  transition={{
+                    duration: 40,
+                    repeat: Infinity,
+                    ease: "linear",
+                  }}
+                  className="absolute inset-0 flex flex-col items-center justify-center"
+                >
+                  {/* Icon - Kleiner! */}
+                  <div className="p-4 bg-gradient-to-br from-purple-600 to-violet-600 rounded-xl mb-3 shadow-2xl shadow-purple-500/50">
+                    <Database className="w-10 h-10 text-white" />
+                  </div>
+                  
+                  {/* Title - Kleiner! */}
+                  <h3 className="text-3xl font-black text-white mb-3 tracking-tight">
+                    SHOPIFY
+                  </h3>
+                  
+                  {/* Live Badge */}
+                  <div className="flex items-center gap-1.5 bg-green-500/90 backdrop-blur-sm px-3 py-1.5 rounded-full mb-2">
+                    <div className="relative">
+                      <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
+                      <div className="w-1.5 h-1.5 bg-white rounded-full absolute top-0 left-0 animate-ping" />
+                    </div>
+                    <span className="text-xs font-bold text-white">LIVE</span>
+                  </div>
+
+                  {/* Stats - Kompakt! */}
+                  <div className="flex items-center gap-3">
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-white">3s</div>
+                      <div className="text-xs text-purple-300">Sync</div>
+                    </div>
+                    <div className="w-px h-6 bg-white/20" />
+                    <div className="text-center">
+                      <div className="text-lg font-bold text-white">100%</div>
+                      <div className="text-xs text-purple-300">Genau</div>
                     </div>
                   </div>
                 </motion.div>
-              ))}
+              </motion.div>
             </div>
+          </motion.div>
+
+          {/* RIGHT COLUMN - 3 Data Sources */}
+          <div className="space-y-4">
+            {rightSources.map((source, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                whileHover={{ x: -8 }}
+              >
+                <div className="bg-white rounded-xl p-5 border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-200">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 rounded-lg bg-purple-600 flex items-center justify-center">
+                      <source.icon className="w-5 h-5 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <h4 className="font-semibold text-gray-900 text-sm leading-tight">
+                        {source.title}
+                      </h4>
+                      <p className="text-xs text-gray-600">{source.desc}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-1.5 pt-2 mt-2 border-t border-gray-100">
+                    <Zap className="w-3 h-3 text-green-600" />
+                    <span className="text-xs text-gray-500">Auto-Sync</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
 
-        {/* Key Benefits */}
+        {/* REAL-TIME SYNC DEMONSTRATION - ZEIGT DEN VALUE! */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0 }}
-          className="grid md:grid-cols-3 gap-6 mb-16"
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="bg-gray-50 rounded-2xl p-8 border border-gray-200"
         >
-          {benefits.map((benefit, i) => {
-            const icons = [Zap, CheckCircle2, TrendingUp];
-            const colors = ["purple", "violet", "blue"];
-            const Icon = icons[i];
-            return (
-              <div
-                key={i}
-                className="text-center p-8 bg-gradient-to-br from-gray-50 to-white rounded-2xl border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300"
-              >
-                <div className="inline-flex p-4 bg-white rounded-2xl shadow-sm mb-4 border border-gray-200">
-                  <Icon
-                    className={`w-8 h-8 ${
-                      colors[i] === "purple" ? "text-purple-700" : ""
-                    } ${colors[i] === "violet" ? "text-violet-600" : ""} ${
-                      colors[i] === "blue" ? "text-blue-700" : ""
-                    }`}
-                  />
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">
-                  {benefit.title}
-                </h4>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  {benefit.desc}
-                </p>
-              </div>
-            );
-          })}
-        </motion.div>
-
-        {/* Bottom Stats Row */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-          className="bg-gradient-to-r from-purple-50 via-violet-50 to-purple-50 rounded-2xl p-8 border border-purple-100"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {stats.map((stat, i) => {
-              const statIcons = [Database, Zap, CheckCircle2, TrendingUp];
-              const statColors = ["purple", "violet", "blue", "pink"];
-              const StatIcon = statIcons[i];
-              return (
-                <div key={i} className="text-center">
-                  <StatIcon
-                    className={`w-6 h-6 mx-auto mb-3 ${
-                      statColors[i] === "purple" ? "text-purple-700" : ""
-                    } ${statColors[i] === "violet" ? "text-violet-600" : ""} ${
-                      statColors[i] === "blue" ? "text-blue-700" : ""
-                    } ${statColors[i] === "pink" ? "text-pink-700" : ""}`}
-                  />
-                  <div className="text-3xl font-light text-gray-900 mb-1">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs text-gray-600 uppercase tracking-wider">
-                    {stat.label}
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </motion.div>
-
-        {/* Real Examples - What AI Can Answer */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.4 }}
-          className="mt-16"
-        >
-          <div className="text-center mb-10">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-3">
-              {t("marketing.aiKnowledge.examplesTitle")}
+          {/* Header */}
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-full mb-3">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
+              <span className="text-sm font-bold">LIVE SYNC AKTIV</span>
+            </div>
+            <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              AI sieht JEDE Änderung in Echtzeit
             </h3>
-            <p className="text-gray-600">
-              {t("marketing.aiKnowledge.examplesSubtitle")}
+            <p className="text-sm text-gray-600">
+              Sie ändern etwas in Shopify? AI weiß es in 3 Sekunden – automatisch, ohne manuelle Arbeit.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            {examples.map((example, i) => {
-              const exampleColors = [
-                "purple",
-                "blue",
-                "violet",
-                "pink",
-                "blue",
-                "green",
-              ];
-              const color = exampleColors[i];
+          {/* Live Activity Feed - 6 Examples */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { 
+                icon: ShoppingBag, 
+                event: "Neue Bestellung", 
+                detail: "#1847 • €127.50", 
+                color: "green",
+                delay: 0.2
+              },
+              { 
+                icon: Package, 
+                event: "Produkt geändert", 
+                detail: "Preis aktualisiert • Nike Air", 
+                color: "blue",
+                delay: 0.3
+              },
+              { 
+                icon: Truck, 
+                event: "Tracking hinzugefügt", 
+                detail: "DHL • Bestellung #1843", 
+                color: "orange",
+                delay: 0.4
+              },
+              { 
+                icon: Database, 
+                event: "Stock Update", 
+                detail: "3 Items → Nur noch 1", 
+                color: "red",
+                delay: 0.5
+              },
+              { 
+                icon: FileText, 
+                event: "Richtlinie geändert", 
+                detail: "Widerrufsrecht aktualisiert", 
+                color: "purple",
+                delay: 0.6
+              },
+              { 
+                icon: Users, 
+                event: "Neuer Kunde", 
+                detail: "lisa.mueller@gmail.com", 
+                color: "teal",
+                delay: 0.7
+              },
+            ].map((activity, i) => {
+              const colorClasses = {
+                green: 'bg-green-50 border-green-200 text-green-700',
+                blue: 'bg-blue-50 border-blue-200 text-blue-700',
+                orange: 'bg-orange-50 border-orange-200 text-orange-700',
+                red: 'bg-red-50 border-red-200 text-red-700',
+                purple: 'bg-purple-50 border-purple-200 text-purple-700',
+                teal: 'bg-teal-50 border-teal-200 text-teal-700',
+              };
+
               return (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.1 * i, duration: 0.5 }}
-                  className="bg-white rounded-xl p-6 border border-gray-200 hover:border-purple-200 hover:shadow-lg transition-all duration-300"
+                  transition={{ delay: activity.delay, duration: 0.4 }}
+                  className="relative"
                 >
-                  <div className="flex items-center justify-between mb-4">
-                    <div
-                      className={`
-                    px-3 py-1 rounded-full text-xs font-bold inline-block
-                    ${color === "purple" ? "bg-purple-100 text-purple-700" : ""}
-                    ${color === "blue" ? "bg-blue-100 text-blue-700" : ""}
-                    ${color === "violet" ? "bg-violet-100 text-violet-700" : ""}
-                    ${color === "pink" ? "bg-pink-100 text-pink-700" : ""}
-                    ${color === "green" ? "bg-green-100 text-green-700" : ""}
-                  `}
-                    >
-                      {example.category}
-                    </div>
-                    <div
-                      className={`
-                    px-2 py-1 rounded text-xs font-medium
-                    ${
-                      example.difficulty === "Easy" ||
-                      example.difficulty === "Einfach" ||
-                      example.difficulty === "Fácil" ||
-                      example.difficulty === "Facile"
-                        ? "bg-green-50 text-green-700"
-                        : ""
-                    }
-                    ${
-                      example.difficulty === "Medium" ||
-                      example.difficulty === "Medio" ||
-                      example.difficulty === "Moyen"
-                        ? "bg-yellow-50 text-yellow-700"
-                        : ""
-                    }
-                    ${
-                      example.difficulty === "Complex" ||
-                      example.difficulty === "Komplex" ||
-                      example.difficulty === "Complejo" ||
-                      example.difficulty === "Complexe"
-                        ? "bg-orange-50 text-orange-700"
-                        : ""
-                    }
-                  `}
-                    >
-                      {example.difficulty}
+                  {/* Activity Card */}
+                  <div className={`bg-white rounded-lg p-4 border shadow-sm ${colorClasses[activity.color as keyof typeof colorClasses]}`}>
+                    <div className="flex items-start gap-3">
+                      {/* Icon */}
+                      <div className="w-8 h-8 rounded-lg bg-gray-900 flex items-center justify-center flex-shrink-0">
+                        <activity.icon className="w-4 h-4 text-white" />
+                      </div>
+                      
+                      {/* Content */}
+                      <div className="flex-1 min-w-0">
+                        <div className="font-semibold text-gray-900 text-xs mb-0.5">
+                          {activity.event}
+                        </div>
+                        <div className="text-xs text-gray-600 truncate">
+                          {activity.detail}
+                        </div>
+                      </div>
+
+                      {/* Timestamp - Animated! */}
+                      <motion.div
+                        animate={{ opacity: [0.5, 1, 0.5] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                        className="text-xs text-gray-400 whitespace-nowrap"
+                      >
+                        now
+                      </motion.div>
                     </div>
                   </div>
-                  <div className="mb-4">
-                    <div className="text-sm font-semibold text-gray-900 mb-2">
-                      „{example.question}"
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-gray-600">
-                      <span className="text-lg">→</span>
-                      <span className="font-medium">{example.answer}</span>
-                    </div>
-                  </div>
+
+                  {/* Sync Indicator */}
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ delay: activity.delay + 0.2 }}
+                    className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white shadow-lg flex items-center justify-center"
+                  >
+                    <Sparkles className="w-3 h-3 text-white" />
+                  </motion.div>
                 </motion.div>
               );
             })}
           </div>
-        </motion.div>
 
-        {/* Bottom CTA */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.6 }}
-          className="text-center mt-12"
-        >
-          <div className="inline-flex flex-col items-center gap-4">
-            <p className="text-2xl text-gray-900 font-bold">
-              {t("marketing.aiKnowledge.bottomCta")}
+          {/* Bottom Summary */}
+          <div className="mt-6 pt-6 border-t border-gray-200 text-center">
+            <p className="text-sm font-semibold text-gray-900">
+              Und <span className="text-purple-600">100+ weitere Events</span> – alle automatisch synchronisiert, komplett wartungsfrei
             </p>
           </div>
         </motion.div>

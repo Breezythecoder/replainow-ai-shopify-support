@@ -11,63 +11,14 @@ export interface LocaleAsset {
 }
 
 // Locale-specific asset mappings
+// REMOVED: Images that are not immediately needed in viewport
+// - shopify-logo-black.svg is used in lazy-loaded components
+// - OG image PNG is only for social media crawlers, no need to preload
 const LOCALE_ASSETS: Record<string, LocaleAsset[]> = {
-  de: [
-    {
-      path: '/images/shopify-logo-black.svg',
-      locale: 'de',
-      type: 'image',
-      priority: 'high'
-    },
-    {
-      path: '/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png',
-      locale: 'de',
-      type: 'image',
-      priority: 'high'
-    }
-  ],
-  en: [
-    {
-      path: '/images/shopify-logo-black.svg',
-      locale: 'en',
-      type: 'image',
-      priority: 'high'
-    },
-    {
-      path: '/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png',
-      locale: 'en',
-      type: 'image',
-      priority: 'high'
-    }
-  ],
-  fr: [
-    {
-      path: '/images/shopify-logo-black.svg',
-      locale: 'fr',
-      type: 'image',
-      priority: 'high'
-    },
-    {
-      path: '/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png',
-      locale: 'fr',
-      type: 'image',
-      priority: 'high'
-    }
-  ],
-  es: [
-    {
-      path: '/images/shopify-logo-black.svg',
-      locale: 'es',
-      type: 'image',
-      priority: 'high'
-    },
-    {
-      path: '/assets/100738e9-73dd-442e-b79a-8b064b5b00c3.png',
-      locale: 'es',
-      type: 'image',
-      priority: 'high'
-    }
-  ]
+  de: [],
+  en: [],
+  fr: [],
+  es: []
 };
 
 /**

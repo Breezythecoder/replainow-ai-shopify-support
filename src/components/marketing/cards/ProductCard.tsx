@@ -22,7 +22,7 @@ const ProductCard = ({ title, description, price, image, stock, url = "#", delay
         scale: 1.01,
         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.06), 0 16px 32px rgba(0, 0, 0, 0.08)"
       }}
-      className="max-w-[400px] w-full mx-auto bg-white rounded-2xl overflow-hidden cursor-pointer"
+      className="max-w-[400px] w-full bg-white rounded-2xl overflow-hidden cursor-pointer"
       style={{
         boxShadow: "0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04)",
         transition: "all 200ms cubic-bezier(0.4, 0, 0.2, 1)"

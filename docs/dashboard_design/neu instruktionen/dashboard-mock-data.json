@@ -1,0 +1,230 @@
+{
+  "conversations": [
+    {
+      "id": "conv_001",
+      "customer_name": "Emilio Trenta",
+      "customer_email": "emilion_sample_48@example.com",
+      "status": "open",
+      "started_at": "2024-11-28T22:00:00Z",
+      "last_message_at": "2024-11-29T01:30:00Z",
+      "latest_message_preview": "Ja — wir haben mehrere Dr. M...",
+      "latest_message_sender": "ai",
+      "wants_human_agent": false,
+      "category": "Product",
+      "auto_mode": true,
+      "handled_by": null,
+      "handled_by_name": null,
+      "device_type": "desktop",
+      "ai_sentiment_start": "neutral",
+      "ai_sentiment_end": "positive",
+      "ai_confidence_avg": 94,
+      "message_count": 8,
+      "unread": false
+    },
+    {
+      "id": "conv_002",
+      "customer_name": "Sarah Klein",
+      "customer_email": "sarah.klein@shopify-store.com",
+      "status": "open",
+      "started_at": "2024-11-29T10:20:00Z",
+      "last_message_at": "2024-11-29T14:45:00Z",
+      "latest_message_preview": "Wo ist meine Bestellung #12847?",
+      "latest_message_sender": "customer",
+      "wants_human_agent": true,
+      "category": "Support",
+      "auto_mode": false,
+      "handled_by": "agent_123",
+      "handled_by_name": "John Doe",
+      "device_type": "mobile",
+      "ai_sentiment_start": "negative",
+      "ai_sentiment_end": "neutral",
+      "ai_confidence_avg": 88,
+      "message_count": 12,
+      "unread": true
+    },
+    {
+      "id": "conv_003",
+      "customer_name": "Michael Schmidt",
+      "customer_email": "m.schmidt@gmail.com",
+      "status": "open",
+      "started_at": "2024-11-29T09:15:00Z",
+      "last_message_at": "2024-11-29T14:20:00Z",
+      "latest_message_preview": "Vielen Dank für die schnelle Antwort!",
+      "latest_message_sender": "customer",
+      "wants_human_agent": false,
+      "category": "General",
+      "auto_mode": true,
+      "handled_by": null,
+      "handled_by_name": null,
+      "device_type": "tablet",
+      "ai_sentiment_start": "neutral",
+      "ai_sentiment_end": "positive",
+      "ai_confidence_avg": 96,
+      "message_count": 5,
+      "unread": false
+    },
+    {
+      "id": "conv_004",
+      "customer_name": "Anna Weber",
+      "customer_email": "anna.w@online-shop.de",
+      "status": "open",
+      "started_at": "2024-11-29T13:00:00Z",
+      "last_message_at": "2024-11-29T14:30:00Z",
+      "latest_message_preview": "Gibt es noch andere Farben?",
+      "latest_message_sender": "ai",
+      "wants_human_agent": false,
+      "category": "Presale",
+      "auto_mode": true,
+      "handled_by": null,
+      "handled_by_name": null,
+      "device_type": "desktop",
+      "ai_sentiment_start": "positive",
+      "ai_sentiment_end": "positive",
+      "ai_confidence_avg": 98,
+      "message_count": 6,
+      "unread": false
+    },
+    {
+      "id": "conv_005",
+      "customer_name": "Thomas Müller",
+      "customer_email": "thomas.m@shop-kunde.de",
+      "status": "open",
+      "started_at": "2024-11-29 08:00:00Z",
+      "last_message_at": "2024-11-29T14:10:00Z",
+      "latest_message_preview": "Ich bin sehr unzufrieden!",
+      "latest_message_sender": "customer",
+      "wants_human_agent": true,
+      "category": "Complaint",
+      "auto_mode": false,
+      "handled_by": "agent_456",
+      "handled_by_name": "Lisa Wagner",
+      "device_type": "desktop",
+      "ai_sentiment_start": "negative",
+      "ai_sentiment_end": "neutral",
+      "ai_confidence_avg": 85,
+      "message_count": 18,
+      "unread": true
+    }
+  ],
+  "messages": {
+    "conv_001": [
+      {
+        "id": "msg_001_001",
+        "sender": "customer",
+        "sender_name": "Emilio Trenta",
+        "content": "Hallo! Haben Sie Kopfhörer mit Noise Cancelling?",
+        "created_at": "2024-11-28T22:00:00Z"
+      },
+      {
+        "id": "msg_001_002",
+        "sender": "ai",
+        "sender_name": "ReplAInow",
+        "content": "Ja — wir haben mehrere Dr. Martin Kopfhörer mit aktivem Noise Cancelling! Ich zeige Ihnen unsere beliebtesten Modelle.",
+        "created_at": "2024-11-28T22:00:15Z"
+      },
+      {
+        "id": "msg_001_003",
+        "sender": "ai",
+        "sender_name": "ReplAInow",
+        "content": "",
+        "type": "product_card",
+        "created_at": "2024-11-28T22:00:20Z",
+        "metadata": {
+          "product_id": "prod_headphones_001",
+          "product_title": "Premium Wireless Headphones Pro",
+          "product_price": "129.99",
+          "product_image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400",
+          "product_url": "https://shop.example.com/products/headphones-pro",
+          "inventory_quantity": 45,
+          "description": "Active Noise Cancelling, 30h battery life, premium sound quality"
+        }
+      }
+    ],
+    "conv_002": [
+      {
+        "id": "msg_002_001",
+        "sender": "customer",
+        "sender_name": "Sarah Klein",
+        "content": "Hallo! Wo ist meine Bestellung #12847? Ich warte schon seit 5 Tagen!",
+        "created_at": "2024-11-29T10:20:00Z"
+      },
+      {
+        "id": "msg_002_002",
+        "sender": "ai",
+        "sender_name": "ReplAInow",
+        "content": "Ich verstehe, dass Sie auf Ihre Bestellung warten. Lassen Sie mich das für Sie überprüfen! 🔍",
+        "created_at": "2024-11-29T10:20:30Z"
+      },
+      {
+        "id": "msg_002_003",
+        "sender": "agent",
+        "sender_name": "John Doe",
+        "content": "Hallo Sarah! Ich habe Ihre Bestellung überprüft. Sie wurde gestern versandt und sollte morgen bei Ihnen ankommen. Hier ist Ihre Tracking-Nummer!",
+        "created_at": "2024-11-29T14:45:00Z"
+      }
+    ]
+  },
+  "customers": [
+    {
+      "id": "cust_001",
+      "name": "Emilio Trenta",
+      "email": "emilion_sample_48@example.com",
+      "phone": "+39 123 456 7890",
+      "orders_count": 3,
+      "total_spent": 342.75,
+      "currency": "EUR",
+      "created_at": "2024-05-15T10:00:00Z"
+    },
+    {
+      "id": "cust_002",
+      "name": "Sarah Klein",
+      "email": "sarah.klein@shopify-store.com",
+      "phone": "+49 171 234 5678",
+      "orders_count": 12,
+      "total_spent": 1847.50,
+      "currency": "EUR",
+      "created_at": "2023-08-20T14:30:00Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "order_002",
+      "order_number": "#12847",
+      "customer_name": "Sarah Klein",
+      "email": "sarah.klein@shopify-store.com",
+      "total_price": 389.97,
+      "currency": "EUR",
+      "fulfillment_status": "FULFILLED",
+      "line_items": [
+        {
+          "id": "item_001",
+          "title": "Premium Wireless Headphones",
+          "quantity": 1,
+          "price": 129.99,
+          "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400"
+        },
+        {
+          "id": "item_002",
+          "title": "Laptop Stand - Aluminum",
+          "quantity": 1,
+          "price": 89.99,
+          "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400"
+        },
+        {
+          "id": "item_003",
+          "title": "USB-C Hub 7-in-1",
+          "quantity": 2,
+          "price": 84.99,
+          "image": "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=400"
+        }
+      ],
+      "tracking_info": {
+        "number": "DE123456789",
+        "url": "https://track.dhl.de/DE123456789",
+        "company": "DHL"
+      },
+      "created_at": "2024-11-25T12:00:00Z"
+    }
+  ]
+}
+

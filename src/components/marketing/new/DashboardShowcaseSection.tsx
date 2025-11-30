@@ -1,115 +1,196 @@
-import { motion, AnimatePresence } from "framer-motion";
-import { MessageSquare, Mail, Users } from "lucide-react";
-import { useState } from "react";
+/**
+ * 🎭 DASHBOARD SHOWCASE - THEATRE PRESENTATION
+ * Dramatic stage-like presentation with spotlight
+ */
+
+import { motion } from "framer-motion";
 import { useTranslation } from "@/i18n";
+import { DashboardDemoShowcase } from "@/components/dashboard/demo";
+import { useState, useEffect, useRef } from "react";
 
 const DashboardShowcaseSection = () => {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState<'livechat' | 'email'>('livechat');
-  
+  const sectionRef = useRef<HTMLDivElement>(null);
+
+  // Calculate dashboard scale
+  const calculateScale = () => {
+    const width = window.innerWidth;
+    if (width >= 1680) return 0.95;
+    if (width >= 1440) return 0.8;
+    if (width >= 1280) return 0.7;
+    if (width >= 1024) return 0.6;
+    if (width >= 768) return 0.5;
+    if (width >= 480) return 0.32;
+    return 0.28;
+  };
+
+  const [dashboardScale, setDashboardScale] = useState(calculateScale);
+  const [isDemoVisible, setIsDemoVisible] = useState(false);
+  const [shouldPlayDemo, setShouldPlayDemo] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDashboardScale(calculateScale());
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!sectionRef.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsDemoVisible(true);
+          setShouldPlayDemo(true);
+        } else {
+          setShouldPlayDemo(false);
+        }
+      },
+      {
+        threshold: 0.2,
+        rootMargin: "0px",
+      }
+    );
+
+    observer.observe(sectionRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div id="live-demo" className="bg-gradient-to-b from-gray-50 to-white">
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24">
-        
+    <section
+      id="live-demo"
+      className="relative min-h-screen overflow-hidden bg-gradient-to-b from-gray-50 via-white to-white flex items-center justify-center py-20 pb-32"
+      ref={sectionRef}
+    >
+      {/* Subtle purple gradient mesh */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(circle at 50% 50%, rgba(139,92,246,0.08), transparent 60%)",
+        }}
+      ></div>
+
+      <div className="relative w-full mx-auto px-6 md:px-8 z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-12"
         >
-          <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-4 tracking-tight">
-            {t('marketing.dashboard.title')}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="inline-block mb-6"
+          >
+            <div className="inline-flex items-center gap-2 bg-purple-50 border-2 border-purple-200 rounded-full px-6 py-3">
+              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+              <span className="text-sm font-bold text-purple-900">
+                LIVE DEMO
+              </span>
+            </div>
+          </motion.div>
+
+          <h2 className="text-5xl md:text-6xl font-black text-gray-900 mb-4">
+            {t("marketing.dashboardShowcase.title")}
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            {t('marketing.dashboard.subtitle')}
+          <p className="text-xl text-gray-700 max-w-2xl mx-auto">
+            {t("marketing.dashboardShowcase.subtitle")}
           </p>
         </motion.div>
 
-        {/* Interactive Dashboard Tabs - KRASSER */}
-        <div className="relative overflow-hidden">
-          {/* STÄRKERER Background glow */}
-          <div className="absolute -inset-4 md:-inset-12 bg-gradient-to-br from-purple-500/40 to-violet-500/40 rounded-3xl blur-3xl"></div>
-          
-          {/* STÄRKERES Glass container - RESPONSIVE */}
-          <div className="relative rounded-2xl sm:rounded-3xl p-4 sm:p-6 md:p-10 border-2 border-white/60 shadow-2xl" style={{
-            background: 'rgba(255, 255, 255, 0.85)',
-            backdropFilter: 'blur(40px)',
-            WebkitBackdropFilter: 'blur(40px)'
-          }}>
-            {/* Tab Switcher - RESPONSIVE */}
-            <div className="flex flex-col sm:flex-row gap-3 mb-6 sm:mb-8 md:mb-10 p-2 sm:p-3 rounded-2xl w-full sm:w-fit mx-auto shadow-xl border-2 border-white/60" style={{
-              background: 'rgba(255, 255, 255, 0.90)',
-              backdropFilter: 'blur(20px)'
-            }}>
-              <motion.button
-                onClick={() => setActiveTab('livechat')}
-                whileHover={{ scale: 1.03, y: -2 }}
-                whileTap={{ scale: 0.97 }}
-                className={`px-4 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl font-bold text-sm sm:text-base md:text-lg transition-all duration-300 flex items-center justify-center ${
-                  activeTab === 'livechat'
-                    ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-2xl'
-                    : 'text-gray-700 hover:text-purple-700 hover:bg-white/90 hover:shadow-lg'
-                }`}
-              >
-                <MessageSquare className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2" />
-                <span className="whitespace-nowrap">{t('marketing.dashboard.tabLivechat')}</span>
-              </motion.button>
-              <motion.button
-                onClick={() => setActiveTab('email')}
-                whileHover={{ scale: 1.03, y: -2 }}
-                whileTap={{ scale: 0.97 }}
-                className={`px-4 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 rounded-xl sm:rounded-2xl font-bold text-sm sm:text-base md:text-lg transition-all duration-300 flex items-center justify-center ${
-                  activeTab === 'email'
-                    ? 'bg-gradient-to-r from-purple-600 to-violet-600 text-white shadow-2xl'
-                    : 'text-gray-700 hover:text-purple-700 hover:bg-white/90 hover:shadow-lg'
-                }`}
-              >
-                <Mail className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 mr-2" />
-                <span className="whitespace-nowrap">{t('marketing.dashboard.tabEmail')}</span>
-              </motion.button>
-            </div>
-            
-            {/* Screenshot with AnimatePresence */}
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={activeTab}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.5 }}
-                className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/70"
-              >
-              <img 
-                  src={activeTab === 'livechat' ? '/images/dashboard-livechat-cart.png' : '/images/dashboard-email-ai.png'}
-                  alt={activeTab === 'livechat' ? 'Live Chat Dashboard' : 'Email Dashboard'}
-                  className="w-full shadow-xl"
-                  loading="lazy"
-                />
-              </motion.div>
-            </AnimatePresence>
-            </div>
-          </div>
-
-        {/* Key Benefit */}
+        {/* DASHBOARD ON STAGE */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ scale: 0.8, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.3 }}
-          className="text-center mt-12"
+          transition={{
+            duration: 1.2,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+          className="w-full flex justify-center items-start"
         >
-          <div className="glass-card inline-flex items-center gap-3 px-8 py-4 border-2 border-purple-200/40 rounded-2xl shadow-glass">
-            <Users className="w-6 h-6 text-purple-700" />
-            <span className="font-bold text-purple-900">
-              {t('marketing.dashboard.bottomText')}
-            </span>
+          <div className="relative">
+            {/* Stage "floor" glow */}
+            <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full h-40 bg-gradient-to-t from-purple-500/20 via-purple-500/10 to-transparent blur-3xl"></div>
+
+            {/* Browser Chrome - Premium Style - FIXED CORNERS! */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.5, duration: 0.5 }}
+              className="absolute -top-10 left-0 right-0 h-10 bg-gradient-to-b from-gray-800 to-gray-700 flex items-center px-4 gap-3"
+              style={{
+                zoom: dashboardScale,
+                width: "1600px",
+                borderTopLeftRadius: "16px",
+                borderTopRightRadius: "16px",
+                borderTop: "1px solid rgb(75, 85, 99)",
+                borderLeft: "1px solid rgb(75, 85, 99)",
+                borderRight: "1px solid rgb(75, 85, 99)",
+              }}
+            >
+              <div className="flex gap-2">
+                <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
+              </div>
+              <div className="flex-1 flex items-center justify-center">
+                <div className="bg-gray-900/50 backdrop-blur-sm px-4 py-1 rounded-lg border border-gray-600">
+                  <span className="text-xs text-gray-400 font-mono">
+                    app.replainow.com
+                  </span>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Dashboard Container - PROFESSIONAL SHADOW */}
+            <div
+              className="dashboard-zoom-wrapper relative"
+              style={{
+                zoom: dashboardScale,
+                width: "fit-content",
+                margin: "0 auto",
+                filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.3))",
+              }}
+            >
+              {isDemoVisible ? (
+                <DashboardDemoShowcase
+                  autoPlay={shouldPlayDemo}
+                  loop={shouldPlayDemo}
+                />
+              ) : (
+                <div
+                  className="demo-placeholder"
+                  style={{
+                    width: "1600px",
+                    height: "900px",
+                    background:
+                      "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
+                    borderRadius: "12px",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    color: "#64748b",
+                    fontSize: "14px",
+                    fontWeight: 500,
+                  }}
+                >
+                  Loading demo...
+                </div>
+              )}
+            </div>
           </div>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
 };
 
 export default DashboardShowcaseSection;
-

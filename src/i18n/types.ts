@@ -149,6 +149,7 @@ export interface LocaleTranslations {
   seo: TranslationSEO;
   legal: TranslationLegal;
   content: any; // Content pages (SEO articles, guides, etc.)
+  dashboard: any; // Dashboard components and demo messages
 }
 
 /**
@@ -158,5 +159,6 @@ export type TranslationKey =
   | `common.${string}`
   | `marketing.${string}`
   | `seo.${string}`
-  | `legal.${string}`;
+  | `legal.${string}`
+  | `dashboard.${string}`;
 

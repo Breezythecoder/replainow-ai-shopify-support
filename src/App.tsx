@@ -65,8 +65,10 @@ const SitemapXML = lazy(() => import("./pages/SitemapXML"));
 const RobotsTXT = lazy(() => import("./pages/RobotsTXT"));
 const LLMFactsJSON = lazy(() => import("./pages/LLMFactsJSON"));
 
-import ScrollProgress from "@/components/ui/ScrollProgress";
 import SkipLinks from "@/components/ui/SkipLinks";
+import { SmoothScroll } from "@/components/animations/SmoothScroll";
+import { CursorGlow } from "@/components/ui/cursor-glow";
+import { initScrollAnimations } from "@/utils/scrollAnimations";
 
 const queryClient = new QueryClient();
 
@@ -85,10 +87,20 @@ const AppShell = () => {
     initMonitoringWebVitals();
     initializeGA();
     initializeAssetLoading(locale);
+    
+    // Initialize GSAP ScrollTrigger animations
+    // Small delay to ensure DOM is ready
+    const timeoutId = setTimeout(() => {
+      initScrollAnimations();
+    }, 100);
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     (window as any).__LANG_SCANNER__ = scanner;
 
     // No need for URL parameter handling anymore - direct navigation
+    
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [locale, location, navigate]);
 
   // Detect if current route is a content page (they have their own SEO via Helmet)
@@ -239,7 +251,8 @@ const AppShell = () => {
         </Routes>
       </Suspense>
       <SkipLinks />
-      <ScrollProgress />
+      <SmoothScroll />
+      <CursorGlow />
       <I18nOverlay />
     </>
   );

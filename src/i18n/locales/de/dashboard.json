@@ -1,0 +1,265 @@
+{
+  "sidebar": {
+    "nav": {
+      "liveChats": "Live Chats",
+      "mails": "E-Mails",
+      "whatsapp": "WhatsApp",
+      "aiKnowledge": "AI Wissensdatenbank",
+      "settings": "Einstellungen",
+      "planBilling": "Plan & Abrechnung",
+      "comingSoon": "Bald"
+    },
+    "aiUsage": {
+      "title": "AI USAGE",
+      "plan": {
+        "launch": "Launch",
+        "growth": "Growth",
+        "pro": "Pro",
+        "scale": "Scale"
+      }
+    },
+    "user": {
+      "online": "Online",
+      "offline": "Offline"
+    },
+    "collapse": "Sidebar einklappen",
+    "expand": "Sidebar ausklappen"
+  },
+  "iconNav": {
+    "items": {
+      "liveChats": "Live Chats",
+      "proactiveChat": "Proaktiver Chat",
+      "newsfeed": "Neuigkeiten",
+      "aiDiscounts": "AI Rabatte"
+    },
+    "collapse": "Navigation einklappen",
+    "expand": "Navigation ausklappen",
+    "ariaLabel": "Konversationen Navigation"
+  },
+  "conversationList": {
+    "header": {
+      "title": "Live Chats",
+      "liveBadge": "LIVE"
+    },
+    "searchPlaceholder": "Konversationen durchsuchen...",
+    "tabs": {
+      "all": "Alle",
+      "active": "Aktiv",
+      "resolved": "Gelöst"
+    },
+    "categories": {
+      "all": "Alle Kategorien",
+      "proactive": "Proactive",
+      "complaint": "Beschwerde",
+      "return": "Rücksendung",
+      "support": "Support",
+      "presale": "Vorverkauf",
+      "product": "Produkt",
+      "cooperation": "Kooperation",
+      "delivery": "Lieferung",
+      "spam": "Spam",
+      "billing": "Abrechnung",
+      "orderStatus": "Bestellstatus",
+      "productQuestions": "Produktfragen",
+      "complaints": "Beschwerden",
+      "returns": "Rücksendungen",
+      "general": "Allgemein"
+    },
+    "filters": {
+      "agentRequests": "Nur Agent Requests",
+      "waitingForAgent": "Wartet auf Agent"
+    },
+    "empty": {
+      "title": "Keine Konversationen gefunden",
+      "subtitle": "Versuche deine Filter anzupassen"
+    },
+    "senderLabels": {
+      "customer": "KUNDE:",
+      "ai": "AI:",
+      "agent": "AGENT:"
+    }
+  },
+  "conversationItem": {
+    "badges": {
+      "new": "neu",
+      "urgent": "DRINGEND",
+      "ai": "AI"
+    },
+    "justNow": "gerade eben"
+  },
+  "chatWindow": {
+    "badges": {
+      "aiActive": "AI Active",
+      "youHandling": "Du bearbeitest"
+    },
+    "status": {
+      "active": "Aktiv"
+    },
+    "composer": {
+      "placeholder": "Nachricht eingeben...",
+      "aiHandling": "AI bearbeitet diese Konversation...",
+      "hints": {
+        "enter": "Enter zum Senden",
+        "shiftEnter": "Shift+Enter für neue Zeile"
+      }
+    },
+    "toolbar": {
+      "emoji": "Emoji hinzufügen",
+      "discount": "Rabatt erstellen",
+      "product": "Produkt hinzufügen"
+    },
+    "buttons": {
+      "close": "Schließen",
+      "takeOver": "Übernehmen",
+      "giveToAI": "An AI geben",
+      "send": "Senden"
+    }
+  },
+  "productPicker": {
+    "title": "Produkte auswählen",
+    "searchPlaceholder": "Produkte suchen...",
+    "empty": "Keine Produkte gefunden",
+    "productsFound": "{count} Produkte gefunden",
+    "productsFoundSingle": "1 Produkt gefunden",
+    "selectedCount": "{count} ausgewählt",
+    "removeProduct": "Produkt entfernen",
+    "inStock": "auf Lager",
+    "selected": {
+      "title": "Ausgewählt",
+      "count": "{count} Produkt",
+      "count_plural": "{count} Produkte"
+    },
+    "labels": {
+      "size": "Größe",
+      "sizePrefix": "Größe",
+      "qty": "Anzahl",
+      "totalItems": "Gesamt Artikel",
+      "subtotal": "Zwischensumme"
+    },
+    "buttons": {
+      "clear": "Löschen ({count})",
+      "send": "{count} Artikel senden",
+      "sendSingle": "1 Artikel senden",
+      "createCheckout": "Checkout-Link erstellen"
+    }
+  },
+  "checkoutCard": {
+    "title": "Checkout-Link bereit",
+    "items": "{count} Artikel",
+    "moreItems": "+{count} weitere Artikel",
+    "discountApplied": "Rabatt angewendet",
+    "total": "Gesamt",
+    "button": "Kauf abschließen",
+    "trust": {
+      "secure": "Sichere Zahlung",
+      "noAccount": "Kein Konto nötig"
+    }
+  },
+  "trackingCard": {
+    "title": "Bestellung",
+    "tracking": "Tracking",
+    "carrierLabel": "Versanddienstleister",
+    "trackingLabel": "Sendungsnummer",
+    "button": "Sendung verfolgen",
+    "status": {
+      "shipped": "Versandt",
+      "inTransit": "Unterwegs",
+      "delivered": "Zugestellt"
+    }
+  },
+  "productCard": {
+    "inStock": "Auf Lager ({count})",
+    "outOfStock": "Nicht verfügbar",
+    "noImage": "Kein Bild",
+    "button": "Produkt ansehen"
+  },
+  "discountCard": {
+    "title": "Rabattcode",
+    "valueLabel": "Wert",
+    "expires": "Läuft ab",
+    "button": "Code kopieren",
+    "copied": "Kopiert!"
+  },
+  "customerPanel": {
+    "title": "Kundeninfo",
+    "verified": "Verifiziert",
+    "viewInShopify": "In Shopify ansehen",
+    "stats": {
+      "phone": "Telefon",
+      "totalOrders": "Bestellungen gesamt",
+      "totalSpent": "Gesamt ausgegeben"
+    },
+    "currentOrder": {
+      "title": "AKTUELLE BESTELLUNG",
+      "item": "Artikel",
+      "items": "Artikel",
+      "ordered": "Bestellt am",
+      "qty": "Anz.",
+      "total": "Gesamt",
+      "viewOrder": "Bestellung in Shopify ansehen",
+      "trackPackage": "Paket verfolgen"
+    },
+    "actions": {
+      "label": "Aktionen",
+      "refund": "Rückerstattung",
+      "cancel": "Stornieren",
+      "tracking": "Tracking"
+    },
+    "aiInsights": {
+      "title": "AI INSIGHTS",
+      "sentiment": "Stimmung",
+      "neutral": "Neutral",
+      "topic": "Thema",
+      "general": "Allgemein",
+      "confidence": "Konfidenz",
+      "action": "Aktion",
+      "agentRequested": "Agent angefordert",
+      "aiHandled": "Von AI bearbeitet",
+      "conversation": "Konversation",
+      "messages": "Nachrichten",
+      "min": "Min",
+      "resolution": "Lösung",
+      "language": "Sprache",
+      "languageGerman": "🇩🇪 Deutsch"
+    },
+    "sections": {
+      "orderHistory": "Bestellhistorie",
+      "tags": "Tags"
+    },
+    "labels": {
+      "totalSpent": "Gesamt ausgegeben",
+      "orders": "Bestellungen",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "vip": "VIP Kunde"
+    }
+  },
+  "demo": {
+    "messages": {
+      "customer": {
+        "initial": "Hallo! Wo ist meine Bestellung? Ich warte schon seit 5 Tagen!",
+        "products": "Habt ihr die auch in Joggers + T-Shirt?",
+        "urgent": "WOW! Möchte gleich bestellen, bin in Eile!"
+      },
+      "ai": {
+        "trackingResponse": "Hallo Sarah! 😊 Deine Bestellung #12847 wurde heute versandt.",
+        "productResponse": "Ja natürlich! Schau mal:"
+      },
+      "agent": {
+        "takeover": "Hey Sarah 😊 Freut mich sehr dass dir der Jogger und das T-Shirt ebenfalls gefallen! Ich werde gleich für dich einen Link mit der Bestellung vorbereiten. Außerdem packe ich dir noch 20% Rabatt auf die Bestellung mit ein. 🎁"
+      }
+    },
+    "conversationPreviews": {
+      "conv_001": "Hallo! Wo ist meine Bestellung? Ich warte schon seit 5 Tagen!",
+      "conv_002": "Gibt es noch andere Farben für dieses Produkt?",
+      "conv_003": "Vielen Dank für die schnelle Hilfe!",
+      "conv_004": "Ich bin sehr unzufrieden mit der Lieferung!",
+      "conv_005": "Kann ich noch einen Rabattcode bekommen?"
+    },
+    "products": {
+      "joggers": "Nike Tech Fleece Joggers - Black",
+      "shirt": "Nike Dri-FIT ADV Training Shirt"
+    }
+  }
+}
+

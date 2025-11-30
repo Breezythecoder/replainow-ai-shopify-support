@@ -1,5 +1,8 @@
 /* Import Ultra Design System - must be first */
 @import './styles/ultra-design.css';
+@import './styles/aceternity-animations.css';
+@import './styles/chat-widget.css';
+@import './styles/dashboard-complete.css';
 
 @tailwind base;
 @tailwind components;

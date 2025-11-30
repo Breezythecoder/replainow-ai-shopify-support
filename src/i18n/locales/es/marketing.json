@@ -8,6 +8,42 @@
     "socialProof": "28+ comerciantes de Shopify ya usan ReplAInow",
     "trustBadge": "Certificado ISO 27001"
   },
+  "liveChatDemo": {
+    "aiName": "ReplAInow IA",
+    "status": "En línea",
+    "responseTime": "Responde en 3s",
+    "inputPlaceholder": "Escribir mensaje…",
+    "poweredBy": "Impulsado por GPT-5",
+    "messages": {
+      "user1": "Buen día ☺️ tengo una pregunta sobre su tienda.",
+      "ai1": "¡Buen día! 😊 Me alegra que visite nuestra tienda. Con mucho gusto, ¿cómo puedo ayudarle?",
+      "user2": "Bueno, es así: Como hago muchas actividades al aire libre como correr, busco zapatos de running de alta calidad. Preferiblemente en color rojo. ¿Pueden recomendarme algo?",
+      "ai2": "¡Por supuesto que podemos ayudarte! Ya encontré el zapato perfecto para ti: el Nike Air Zoom Pegasus 40 en rojo:",
+      "user3": "¡Wow! Se ve increíble, lo voy a pedir ahora mismo! 🔥",
+      "ai3": "¡Me alegra mucho que te guste! De hecho, es uno de nuestros modelos Nike running más populares. Te va a encantar. 😊",
+      "user4": "¿Podría obtener un descuento para este pedido? 😋",
+      "ai4": "¡Claro que sí! Acabo de crear un código de descuento exclusivo para ti. Puedes copiarlo abajo:",
+      "user5": "¡Genial, gracias! Ah, por cierto, ¿dónde está mi último pedido #4782?",
+      "ai5": "¡Lo reviso enseguida! Aquí está el estado actual de tu pedido:"
+    },
+    "productCard": {
+      "title": "Nike Air Zoom Pegasus 40",
+      "description": "Zapato premium de running con amortiguación React. Perfecto para correr y entrenamiento al aire libre.",
+      "price": "139,99",
+      "stock": "12"
+    },
+    "discountCard": {
+      "code": "RUNNING15",
+      "discount": "15% Descuento",
+      "expiryDays": "7"
+    },
+    "trackingCard": {
+      "orderNumber": "4782",
+      "carrier": "DHL Express",
+      "trackingNumber": "JJD0048394345DE",
+      "status": "en-tránsito"
+    }
+  },
   "aiPowerShowcase": {
     "title": "Tu IA puede hacer más que cualquier empleado de soporte",
     "subtitle": "No es un chatbot simple: tu IA es un empleado de soporte completo que conoce cada aspecto de tu tienda y actúa inteligentemente",
@@ -204,31 +240,55 @@
   },
   "testimonials": {
     "title": "Confiado por Comerciantes Líderes de Shopify",
-    "subtitle": "Resultados reales de negocios reales",
+    "subtitle": "Experiencias reales de verdaderos comerciantes en línea",
     "items": [
       {
-        "name": "Michael Weber",
-        "role": "CEO, Fashion & Style GmbH",
-        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces",
-        "text": "ReplAInow redujo nuestra carga de soporte en un 78%. ¡La IA entiende nuestros productos perfectamente!",
-        "metric": "€2.840/mes ahorrados",
+        "name": "Lisa Hoffmann",
+        "role": "Fundadora, E-Commerce Belleza",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces",
+        "text": "Finalmente puedo concentrarme en mi negocio en lugar de responder correos. La IA maneja la mayoría de las consultas de clientes y lo hace realmente bien. Nuestros clientes a menudo ni siquiera notan que no es una persona.",
+        "metric": "",
         "color": "purple"
       },
       {
-        "name": "Sarah Klein",
-        "role": "Owner, BeautyWorld",
-        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces",
-        "text": "¡Mejor inversión de 2025! Nuestros clientes ahora reciben respuestas perfectas las 24 horas.",
-        "metric": "92% Automatización",
+        "name": "Michael Weber",
+        "role": "Propietario, Tienda Tech",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces",
+        "text": "Lo que más me impresiona: La IA realmente conoce cada producto de nuestra tienda. Cuando los clientes preguntan sobre compatibilidad o detalles técnicos, obtienen respuestas precisas. Esto nos ahorra una enorme cantidad de tiempo.",
+        "metric": "",
         "color": "violet"
       },
       {
-        "name": "Thomas Müller",
-        "role": "Head of Operations, TechStore",
-        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces",
-        "text": "La integración se completó en 5 minutos. ROI después de 9 días. ¡Absolutamente impresionante!",
-        "metric": "ROI en 9 días",
+        "name": "Sarah Klein",
+        "role": "Propietaria, Moda",
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=faces",
+        "text": "Honestamente, era escéptica. Pero la instalación realmente se hizo en minutos y la IA comenzó a funcionar de inmediato. Sin configuración complicada, sin necesidad de capacitación. Solo instalado y funciona.",
+        "metric": "",
         "color": "pink"
+      },
+      {
+        "name": "Thomas Richter",
+        "role": "Gerente E-Commerce",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces",
+        "text": "Antes teníamos un empleado de tiempo completo solo para soporte. Ahora la mayoría funciona automáticamente y podemos concentrarnos en los casos realmente complejos. Esa es una diferencia real en nuestro trabajo diario.",
+        "metric": "",
+        "color": "blue"
+      },
+      {
+        "name": "Anna Schneider",
+        "role": "CEO, Artículos Deportivos",
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=faces",
+        "text": "Especialmente genial: La IA responde automáticamente en el idioma del cliente. Tenemos muchos clientes internacionales y esto funciona perfectamente. Ya no se necesita traducción manual.",
+        "metric": "",
+        "color": "green"
+      },
+      {
+        "name": "Marco Becker",
+        "role": "Comerciante en Línea",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=faces",
+        "text": "Antes tenía un proveedor de helpdesk conocido y honestamente era excesivamente complicado y caro. ReplAInow hace exactamente lo que necesitamos, sin complicaciones innecesarias. Y cuesta una fracción.",
+        "metric": "",
+        "color": "orange"
       }
     ]
   },
@@ -285,6 +345,11 @@
     "demo": "Ver Demo"
   },
   "howItWorks": {},
+  "dashboardShowcase": {
+    "title": "🎬 Demo en Vivo: Vea ReplAInow en Acción",
+    "subtitle": "Demo completamente automática muestra: Soporte IA → Agente Toma Control → Selector de Productos → Pago (45 segundos)",
+    "interactiveNote": "✨ Dashboard Interactivo – Haga clic en las conversaciones para ver diferentes chats"
+  },
   "liveDemo": {},
   "comparison": {},
   "mailAndChat": {},
@@ -347,52 +412,86 @@
     "guarantee": "Garantía de Reembolso de 30 Días"
   },
   "agentProductivity": {
+    "badge": "Panel Todo-en-Uno",
     "title": "Cuando Tus Agentes Toman el Control – Perfectamente Equipados",
-    "subtitle": "La IA maneja el 60-80% automáticamente. ¿El otro 13%? Tus agentes tienen todas las herramientas para soporte profesional en un solo lugar.",
-    "tools": [
+    "subtitle": "La IA maneja el 87% automáticamente. ¿El otro 13%? Tus agentes tienen todas las herramientas para soporte profesional en un solo lugar.",
+    "keyMessage": "Sin cambiar entre Shopify y helpdesk - todo en un solo lugar",
+    "features": [
       {
-        "title": "Selector de Productos",
-        "desc": "Selecciona variantes (talla, color), envía como tarjetas o enlace de checkout",
+        "title": "Gestionar Pedidos",
+        "desc": "Cancelar artículos, añadir tracking, cambiar estado - directamente en el chat",
         "color": "purple"
       },
       {
-        "title": "Generador de Descuentos",
-        "desc": "Botones rápidos 10%, 15%, 20%. Un clic → cliente tiene código",
-        "color": "green"
-      },
-      {
-        "title": "Reembolsos",
-        "desc": "Directamente desde el dashboard. Selecciona artículos, monto, listo",
+        "title": "Cambiar Direcciones",
+        "desc": "Corregir dirección de envío con 1 clic - sin pestañas de Shopify",
         "color": "blue"
       },
       {
-        "title": "Journey del Cliente",
-        "desc": "Páginas visitadas, contenido del carrito, puntuación de intención de compra",
+        "title": "Selección de Productos",
+        "desc": "Enviar productos con variantes como tarjetas o crear enlace de checkout",
         "color": "violet"
-      }
-    ],
-    "exampleTitle": "Ejemplo: Crear Enlace de Checkout",
-    "exampleSubtitle": "¿Cliente interesado en múltiples productos? Experiencia de un clic:",
-    "workflowSteps": [
-      {
-        "num": "1",
-        "title": "Seleccionar Productos",
-        "desc": "Vestido + Zapatos + Bolso"
       },
       {
-        "num": "2",
-        "title": "Establecer Variantes",
-        "desc": "Talla M, Color Rojo"
+        "title": "Generador de Descuentos",
+        "desc": "Botones rápidos 10%, 15%, 20% - código copiable al instante",
+        "color": "green"
       },
-      { "num": "3", "title": "Añadir Descuento", "desc": "Opcional: 20% OFF" },
       {
-        "num": "4",
-        "title": "Enviar Enlace",
-        "desc": "Cliente hace clic → Checkout"
+        "title": "Control del Chat",
+        "desc": "Intervenir en cualquier momento - La IA marca \"Agente requerido\" automáticamente",
+        "color": "orange"
+      },
+      {
+        "title": "Recorrido del Cliente",
+        "desc": "Ver páginas visitadas, contenido del carrito, puntuación de intención en vivo",
+        "color": "pink"
+      },
+      {
+        "title": "Análisis IA",
+        "desc": "Sentimiento, Tema, Confianza, Idioma - La IA analiza cada chat",
+        "color": "indigo"
+      },
+      {
+        "title": "Dispositivo y Contexto",
+        "desc": "Dispositivo, navegador, ubicación - contexto completo del cliente",
+        "color": "cyan"
       }
     ],
-    "workflowResult": "Resultado: Carrito prellenado con 20% descuento → Checkout de un clic para el cliente",
-    "bottomStatement": "La IA maneja el 60-80% automáticamente – tus agentes el 13% con las mejores herramientas"
+    "aiInsights": {
+      "badge": "Impulsado por IA",
+      "title": "Contexto Completo del Cliente con Análisis IA",
+      "subtitle": "Tus agentes no solo ven mensajes - ven el contexto completo, analizado por IA",
+      "panelTitle": "Análisis IA",
+      "contextTitle": "Contexto del Cliente",
+      "sentiment": "Sentimiento",
+      "sentimentValue": "Positivo",
+      "topic": "Tema",
+      "topicValue": "Seguimiento de Pedido",
+      "confidence": "Confianza IA",
+      "confidenceValue": "96%",
+      "action": "Acción Requerida",
+      "actionValue": "Ninguna necesaria",
+      "conversation": "Conversación",
+      "conversationValue": "13 mensajes • hace 5 min",
+      "language": "Idioma",
+      "languageValue": "Español (ES)",
+      "journey": "Recorrido del Cliente",
+      "journeyValue": "4 páginas visitadas • 2:17 min en el sitio",
+      "cart": "Carrito Actual",
+      "cartValue": "127,50€ • 2 productos • Checkout listo",
+      "orders": "Historial de Pedidos",
+      "ordersValue": "5 pedidos • Último hace 12 días",
+      "device": "Dispositivo y Navegador",
+      "deviceValue": "iPhone 15 Pro • Safari • iOS 17.2",
+      "agentRequired": "Agente requerido"
+    },
+    "bottomStatement": "La IA maneja el 87% automáticamente – tus agentes el 13% con las mejores herramientas",
+    "highlights": {
+      "noTabSwitching": "Sin Cambio de Pestañas",
+      "fullContext": "Contexto Completo",
+      "aiPowered": "Análisis Impulsados por IA"
+    }
   },
   "omnichannelUnified": {
     "title": "Un Sistema para Chat y Email – Conectados a la Perfección",

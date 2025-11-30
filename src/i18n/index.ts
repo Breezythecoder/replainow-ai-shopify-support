@@ -31,6 +31,12 @@ import frSEO from './locales/fr/seo.json';
 import frLegal from './locales/fr/legal.json';
 import frContent from './locales/fr/content.json';
 
+// Dashboard translations
+import deDashboard from './locales/de/dashboard.json';
+import enDashboard from './locales/en/dashboard.json';
+import esDashboard from './locales/es/dashboard.json';
+import frDashboard from './locales/fr/dashboard.json';
+
 /**
  * Consolidated translations by locale
  */
@@ -41,6 +47,7 @@ export const translations: Record<SupportedLocale, LocaleTranslations> = {
     seo: deSEO,
     legal: deLegal,
     content: deContent,
+    dashboard: deDashboard,
   },
   en: {
     common: enCommon,
@@ -48,6 +55,7 @@ export const translations: Record<SupportedLocale, LocaleTranslations> = {
     seo: enSEO,
     legal: enLegal,
     content: enContent,
+    dashboard: enDashboard,
   },
   es: {
     common: esCommon,
@@ -55,6 +63,7 @@ export const translations: Record<SupportedLocale, LocaleTranslations> = {
     seo: esSEO,
     legal: esLegal,
     content: esContent,
+    dashboard: esDashboard,
   },
   fr: {
     common: frCommon,
@@ -62,6 +71,7 @@ export const translations: Record<SupportedLocale, LocaleTranslations> = {
     seo: frSEO,
     legal: frLegal,
     content: frContent,
+    dashboard: frDashboard,
   },
 };
 

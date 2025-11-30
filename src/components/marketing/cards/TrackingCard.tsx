@@ -12,29 +12,6 @@ interface TrackingCardProps {
 }
 
 const TrackingCard = ({ orderNumber, carrier, trackingNumber, status, expectedDelivery, url = "#", delay = 0 }: TrackingCardProps) => {
-  const statusConfig = {
-    pending: { 
-      color: "#F59E0B", 
-      bg: "rgba(245, 158, 11, 0.2)",
-      label: "In Bearbeitung",
-      subtitle: "Bestellung bestätigt"
-    },
-    "in-transit": { 
-      color: "#3B82F6", 
-      bg: "rgba(59, 130, 246, 0.2)",
-      label: "Unterwegs",
-      subtitle: expectedDelivery ? `Erwartet: ${expectedDelivery}` : "Auf dem Weg"
-    },
-    delivered: { 
-      color: "#10B981", 
-      bg: "rgba(16, 185, 129, 0.2)",
-      label: "Zugestellt",
-      subtitle: "Erfolgreich zugestellt"
-    }
-  };
-
-  const currentStatus = statusConfig[status];
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -46,7 +23,7 @@ const TrackingCard = ({ orderNumber, carrier, trackingNumber, status, expectedDe
         scale: 1.01,
         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.06), 0 16px 32px rgba(0, 0, 0, 0.08)"
       }}
-      className="max-w-[400px] w-full mx-auto bg-white rounded-2xl p-4"
+      className="max-w-[400px] w-full bg-white rounded-2xl p-4"
       style={{
         boxShadow: "0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04)",
         transition: "all 200ms cubic-bezier(0.4, 0, 0.2, 1)"
@@ -72,28 +49,6 @@ const TrackingCard = ({ orderNumber, carrier, trackingNumber, status, expectedDe
         <div className="flex justify-between items-center">
           <span className="text-xs text-[#525252] font-medium">Sendungsnummer</span>
           <span className="text-[13px] text-black font-semibold">{trackingNumber}</span>
-        </div>
-      </div>
-
-      {/* Status */}
-      <div 
-        className="flex items-center gap-3 p-3 rounded-xl mb-4"
-        style={{ background: "#F8F9FB" }}
-      >
-        <div 
-          className="w-3 h-3 rounded-full flex-shrink-0"
-          style={{ 
-            background: currentStatus.color,
-            boxShadow: `0 0 0 4px ${currentStatus.bg}`
-          }}
-        />
-        <div className="flex-1">
-          <p className="text-[13px] font-semibold text-black mb-0.5">
-            {currentStatus.label}
-          </p>
-          <p className="text-[11px] text-[#525252]">
-            {currentStatus.subtitle}
-          </p>
         </div>
       </div>
 

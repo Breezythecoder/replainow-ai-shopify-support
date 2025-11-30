@@ -1,0 +1,288 @@
+{
+  "products": [
+    {
+      "id": "prod_nike_001",
+      "title": "Nike Air Max 2024 - Running Shoes",
+      "price": "159.99",
+      "primary_image_url": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80",
+      "inventory_quantity": 45,
+      "sku": "NIKE-AM2024",
+      "description": "Premium running shoes with Air Max cushioning technology. Perfect for daily runs and training.",
+      "product_url": "https://shop.example.com/products/nike-air-max-2024",
+      "variant_data": [
+        {
+          "id": "var_001_m",
+          "sku": "NIKE-AM2024-M",
+          "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80",
+          "price": "159.99",
+          "title": "Size M",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "M" }],
+          "availableForSale": true,
+          "inventoryQuantity": 12
+        },
+        {
+          "id": "var_001_l",
+          "sku": "NIKE-AM2024-L",
+          "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80",
+          "price": "159.99",
+          "title": "Size L",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "L" }],
+          "availableForSale": true,
+          "inventoryQuantity": 18
+        },
+        {
+          "id": "var_001_xl",
+          "sku": "NIKE-AM2024-XL",
+          "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&q=80",
+          "price": "159.99",
+          "title": "Size XL",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "XL" }],
+          "availableForSale": true,
+          "inventoryQuantity": 15
+        }
+      ]
+    },
+    {
+      "id": "prod_nike_002",
+      "title": "Nike Tech Fleece Joggers - Black",
+      "price": "89.99",
+      "primary_image_url": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&q=80",
+      "inventory_quantity": 32,
+      "sku": "NIKE-TF-JOG-BLK",
+      "description": "Premium joggers with lightweight Tech Fleece fabric. Perfect comfort meets style.",
+      "product_url": "https://shop.example.com/products/nike-tech-joggers",
+      "variant_data": [
+        {
+          "id": "var_002_s",
+          "sku": "NIKE-TF-JOG-BLK-S",
+          "image": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&q=80",
+          "price": "89.99",
+          "title": "Size S",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "S" }],
+          "availableForSale": true,
+          "inventoryQuantity": 8
+        },
+        {
+          "id": "var_002_m",
+          "sku": "NIKE-TF-JOG-BLK-M",
+          "image": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&q=80",
+          "price": "89.99",
+          "title": "Size M",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "M" }],
+          "availableForSale": true,
+          "inventoryQuantity": 14
+        },
+        {
+          "id": "var_002_l",
+          "sku": "NIKE-TF-JOG-BLK-L",
+          "image": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=400&q=80",
+          "price": "89.99",
+          "title": "Size L",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "L" }],
+          "availableForSale": true,
+          "inventoryQuantity": 10
+        }
+      ]
+    },
+    {
+      "id": "prod_nike_003",
+      "title": "Nike Dri-FIT Training Shirt",
+      "price": "39.99",
+      "primary_image_url": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q=80",
+      "inventory_quantity": 67,
+      "sku": "NIKE-DF-SHIRT",
+      "description": "Moisture-wicking training shirt for peak performance.",
+      "product_url": "https://shop.example.com/products/nike-dri-fit-shirt",
+      "variant_data": [
+        {
+          "id": "var_003_default",
+          "sku": "NIKE-DF-SHIRT",
+          "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&q=80",
+          "price": "39.99",
+          "title": "Default Title",
+          "compareAtPrice": null,
+          "selectedOptions": [],
+          "availableForSale": true,
+          "inventoryQuantity": 67
+        }
+      ]
+    },
+    {
+      "id": "prod_nike_004",
+      "title": "Nike Pro Compression Leggings",
+      "price": "64.99",
+      "primary_image_url": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&q=80",
+      "inventory_quantity": 28,
+      "sku": "NIKE-PRO-LEG",
+      "description": "High-performance compression leggings for training.",
+      "product_url": "https://shop.example.com/products/nike-pro-leggings",
+      "variant_data": [
+        {
+          "id": "var_004_s",
+          "sku": "NIKE-PRO-LEG-S",
+          "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&q=80",
+          "price": "64.99",
+          "title": "Size S",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "S" }],
+          "availableForSale": true,
+          "inventoryQuantity": 10
+        },
+        {
+          "id": "var_004_m",
+          "sku": "NIKE-PRO-LEG-M",
+          "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&q=80",
+          "price": "64.99",
+          "title": "Size M",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "M" }],
+          "availableForSale": true,
+          "inventoryQuantity": 18
+        }
+      ]
+    },
+    {
+      "id": "prod_nike_005",
+      "title": "Nike Air Force 1 '07 - White",
+      "price": "119.99",
+      "primary_image_url": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&q=80",
+      "inventory_quantity": 52,
+      "sku": "NIKE-AF1-WHT",
+      "description": "Iconic sneakers with timeless design and premium leather.",
+      "product_url": "https://shop.example.com/products/nike-air-force-1",
+      "variant_data": [
+        {
+          "id": "var_005_8",
+          "sku": "NIKE-AF1-WHT-8",
+          "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&q=80",
+          "price": "119.99",
+          "title": "Size 8",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "8" }],
+          "availableForSale": true,
+          "inventoryQuantity": 12
+        },
+        {
+          "id": "var_005_9",
+          "sku": "NIKE-AF1-WHT-9",
+          "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&q=80",
+          "price": "119.99",
+          "title": "Size 9",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "9" }],
+          "availableForSale": true,
+          "inventoryQuantity": 20
+        },
+        {
+          "id": "var_005_10",
+          "sku": "NIKE-AF1-WHT-10",
+          "image": "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&q=80",
+          "price": "119.99",
+          "title": "Size 10",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "10" }],
+          "availableForSale": true,
+          "inventoryQuantity": 20
+        }
+      ]
+    },
+    {
+      "id": "prod_nike_006",
+      "title": "Nike Swoosh Sports Bra",
+      "price": "34.99",
+      "primary_image_url": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&q=80",
+      "inventory_quantity": 41,
+      "sku": "NIKE-SWOOSH-BRA",
+      "description": "Medium support sports bra for training and workouts.",
+      "product_url": "https://shop.example.com/products/nike-swoosh-bra",
+      "variant_data": [
+        {
+          "id": "var_006_s",
+          "sku": "NIKE-SWOOSH-BRA-S",
+          "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&q=80",
+          "price": "34.99",
+          "title": "Size S",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "S" }],
+          "availableForSale": true,
+          "inventoryQuantity": 15
+        },
+        {
+          "id": "var_006_m",
+          "sku": "NIKE-SWOOSH-BRA-M",
+          "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=400&q=80",
+          "price": "34.99",
+          "title": "Size M",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "M" }],
+          "availableForSale": true,
+          "inventoryQuantity": 26
+        }
+      ]
+    },
+    {
+      "id": "prod_nike_007",
+      "title": "Nike Windrunner Jacket - Navy",
+      "price": "99.99",
+      "primary_image_url": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&q=80",
+      "inventory_quantity": 19,
+      "sku": "NIKE-WR-JAC-NAV",
+      "description": "Classic windrunner jacket with weather protection.",
+      "product_url": "https://shop.example.com/products/nike-windrunner",
+      "variant_data": [
+        {
+          "id": "var_007_m",
+          "sku": "NIKE-WR-JAC-NAV-M",
+          "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&q=80",
+          "price": "99.99",
+          "title": "Size M",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "M" }],
+          "availableForSale": true,
+          "inventoryQuantity": 7
+        },
+        {
+          "id": "var_007_l",
+          "sku": "NIKE-WR-JAC-NAV-L",
+          "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&q=80",
+          "price": "99.99",
+          "title": "Size L",
+          "compareAtPrice": null,
+          "selectedOptions": [{ "name": "Size", "value": "L" }],
+          "availableForSale": true,
+          "inventoryQuantity": 12
+        }
+      ]
+    },
+    {
+      "id": "prod_nike_008",
+      "title": "Nike Everyday Cushion Crew Socks (3 Pack)",
+      "price": "19.99",
+      "primary_image_url": "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=400&q=80",
+      "inventory_quantity": 156,
+      "sku": "NIKE-SOCK-3PK",
+      "description": "Comfortable everyday socks with cushioned footbed. 3-pack value.",
+      "product_url": "https://shop.example.com/products/nike-socks-3pack",
+      "variant_data": [
+        {
+          "id": "var_008_default",
+          "sku": "NIKE-SOCK-3PK",
+          "image": "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?w=400&q=80",
+          "price": "19.99",
+          "title": "Default Title",
+          "compareAtPrice": null,
+          "selectedOptions": [],
+          "availableForSale": true,
+          "inventoryQuantity": 156
+        }
+      ]
+    }
+  ]
+}
+

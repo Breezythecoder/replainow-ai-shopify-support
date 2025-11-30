@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Ticket, Copy, Check } from "lucide-react";
+import { Ticket, Copy, Check, Clock, Users } from "lucide-react";
 import { useState } from "react";
 
 interface DiscountCardProps {
@@ -30,7 +30,7 @@ const DiscountCard = ({ code, discount, expiryDays, usageLimit, delay = 0 }: Dis
         scale: 1.01,
         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.06), 0 4px 8px rgba(0, 0, 0, 0.06), 0 8px 16px rgba(0, 0, 0, 0.06), 0 16px 32px rgba(0, 0, 0, 0.08)"
       }}
-      className="max-w-[400px] w-full mx-auto bg-white rounded-2xl p-4"
+      className="max-w-[400px] w-full bg-white rounded-2xl p-4"
       style={{
         boxShadow: "0 1px 2px rgba(0, 0, 0, 0.04), 0 2px 4px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.04)",
         transition: "all 200ms cubic-bezier(0.4, 0, 0.2, 1)"
@@ -68,13 +68,15 @@ const DiscountCard = ({ code, discount, expiryDays, usageLimit, delay = 0 }: Dis
       {(expiryDays || usageLimit) && (
         <div className="space-y-2">
           {expiryDays && (
-            <p className="text-[11px] text-[#525252] flex items-center gap-1">
-              ⏰ Läuft ab in {expiryDays} Tagen
+            <p className="text-[11px] text-[#525252] flex items-center gap-1.5">
+              <Clock className="w-3.5 h-3.5" />
+              <span>Läuft ab in {expiryDays} Tagen</span>
             </p>
           )}
           {usageLimit && (
-            <p className="text-[11px] text-[#525252] flex items-center gap-1">
-              👥 Limitiert auf {usageLimit} Nutzungen
+            <p className="text-[11px] text-[#525252] flex items-center gap-1.5">
+              <Users className="w-3.5 h-3.5" />
+              <span>Limitiert auf {usageLimit} Nutzungen</span>
             </p>
           )}
         </div>

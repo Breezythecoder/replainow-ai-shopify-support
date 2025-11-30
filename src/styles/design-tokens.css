@@ -1,0 +1,194 @@
+/**
+ * 🎨 DESIGN TOKENS - ULTIMATE DESIGN SYSTEM
+ * Created: November 30, 2025
+ * Purpose: Consistent design language across the entire website
+ */
+
+:root {
+  /* ============================================
+     COLOR SYSTEM - Purple Dominance
+     ============================================ */
+  
+  /* Primary Purple Scale */
+  --purple-50: #faf5ff;
+  --purple-100: #f3e8ff;
+  --purple-200: #e9d5ff;
+  --purple-300: #d8b4fe;
+  --purple-400: #c084fc;
+  --purple-500: #8B5CF6;  /* PRIMARY brand color */
+  --purple-600: #7C3AED;  /* Hover/active states */
+  --purple-700: #6D28D9;  /* Dark mode accent */
+  --purple-800: #5B21B6;
+  --purple-900: #4C1D95;  /* Text on light backgrounds */
+  
+  /* Violet (Gradient Partner) */
+  --violet-500: #8B5CF6;
+  --violet-600: #7C3AED;
+  --violet-700: #6D28D9;
+  
+  /* ============================================
+     GRADIENTS
+     ============================================ */
+  
+  --gradient-primary: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+  --gradient-hero: linear-gradient(135deg, #8B5CF6 0%, #6D28D9 100%);
+  --gradient-glow: radial-gradient(circle, rgba(139,92,246,0.15) 0%, transparent 70%);
+  --gradient-mesh: radial-gradient(at 40% 20%, hsla(271, 76%, 53%, 0.15) 0px, transparent 50%), 
+                   radial-gradient(at 80% 0%, hsla(271, 76%, 53%, 0.1) 0px, transparent 50%), 
+                   radial-gradient(at 0% 50%, hsla(271, 76%, 53%, 0.08) 0px, transparent 50%);
+  
+  /* ============================================
+     SPACING SCALE (8px base)
+     ============================================ */
+  
+  --space-xs: 0.5rem;    /* 8px */
+  --space-sm: 0.75rem;   /* 12px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2rem;      /* 32px */
+  --space-2xl: 3rem;     /* 48px */
+  --space-3xl: 4rem;     /* 64px */
+  --space-4xl: 6rem;     /* 96px */
+  --space-5xl: 8rem;     /* 128px */
+  
+  /* ============================================
+     ANIMATION TOKENS
+     ============================================ */
+  
+  /* Easing Curves */
+  --ease-smooth: cubic-bezier(0.16, 1, 0.3, 1);     /* ReplAInow signature easing */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);     /* Balanced */
+  --ease-spring: cubic-bezier(0.68, -0.55, 0.265, 1.55);  /* Bounce */
+  
+  /* Durations */
+  --duration-instant: 100ms;
+  --duration-fast: 200ms;
+  --duration-normal: 400ms;
+  --duration-slow: 600ms;
+  --duration-slower: 800ms;
+  
+  /* ============================================
+     SHADOWS
+     ============================================ */
+  
+  /* Elevation System */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);
+  --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.20);
+  --shadow-2xl: 0 16px 48px rgba(0, 0, 0, 0.24);
+  
+  /* Glow Effects */
+  --shadow-purple: 0 0 40px rgba(139, 92, 246, 0.3);
+  --shadow-purple-lg: 0 0 80px rgba(139, 92, 246, 0.5);
+  --shadow-neon: 0 0 20px rgba(139, 92, 246, 0.8);
+  
+  /* ============================================
+     BORDER RADIUS
+     ============================================ */
+  
+  --radius-sm: 0.375rem;   /* 6px */
+  --radius-md: 0.5rem;     /* 8px */
+  --radius-lg: 0.75rem;    /* 12px */
+  --radius-xl: 1rem;       /* 16px */
+  --radius-2xl: 1.5rem;    /* 24px */
+  --radius-3xl: 2rem;      /* 32px */
+  --radius-full: 9999px;   /* Fully rounded */
+  
+  /* ============================================
+     Z-INDEX SCALE
+     ============================================ */
+  
+  --z-base: 0;
+  --z-dropdown: 1000;
+  --z-sticky: 1100;
+  --z-fixed: 1200;
+  --z-modal-backdrop: 1300;
+  --z-modal: 1400;
+  --z-popover: 1500;
+  --z-tooltip: 1600;
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+.purple-glow {
+  box-shadow: var(--shadow-purple);
+}
+
+.purple-glow-lg {
+  box-shadow: var(--shadow-purple-lg);
+}
+
+.gradient-text {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.smooth-transition {
+  transition-timing-function: var(--ease-smooth);
+  transition-duration: var(--duration-normal);
+}
+
+/* ============================================
+   ANIMATION KEYFRAMES
+   ============================================ */
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(139, 92, 246, 0.8);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Apply gradient animation */
+.animate-gradient {
+  background-size: 200% auto;
+  animation: gradient-shift 8s linear infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+
+
+
+
+
+

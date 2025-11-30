@@ -1,250 +1,324 @@
+/**
+ * AGENT PRODUCTIVITY - GLASSMORPHIC REDESIGN
+ * Modern glass cards, unified purple, 6 features
+ */
+
 import { motion } from "framer-motion";
 import {
-  ShoppingBag,
-  Gift,
-  Link2,
-  RefreshCcw,
-  CheckCircle2,
-  Sparkles,
-  Eye,
   Package,
+  MapPin,
+  MessageSquare,
+  Eye,
+  TrendingUp,
+  Sparkles,
+  CheckCircle2,
+  AlertCircle,
+  Zap,
 } from "lucide-react";
 import { useTranslation } from "@/i18n";
 
 const AgentProductivity = () => {
   const { t, getTranslation } = useTranslation();
 
-  const toolIcons = [ShoppingBag, Gift, RefreshCcw, Eye];
-  const toolsData = getTranslation("marketing.agentProductivity.tools") || [
-    {
-      title: "Product Picker",
-      desc: "Varianten wählen (Größe, Farbe), als Karten oder Checkout-Link senden",
-      color: "purple",
-    },
-    {
-      title: "Rabatt-Generator",
-      desc: "10%, 15%, 20% Quick-Buttons. Ein Klick → Kunde hat Code",
-      color: "green",
-    },
-    {
-      title: "Rückerstattungen",
-      desc: "Direkt aus Dashboard. Artikel wählen, Betrag, fertig",
-      color: "blue",
-    },
-    {
-      title: "Kunden-Journey",
-      desc: "Welche Seiten besucht, was im Warenkorb, Kaufabsicht-Score",
-      color: "violet",
-    },
+  // Reduced to 6 most important features
+  const featureIcons = [
+    Package,
+    MapPin,
+    MessageSquare,
+    Eye,
+    TrendingUp,
+    Sparkles,
   ];
-  const tools = toolsData.map((tool, i) => ({ ...tool, icon: toolIcons[i] }));
 
-  const workflowSteps = getTranslation(
-    "marketing.agentProductivity.workflowSteps"
-  ) || [
-    { num: "1", title: "Produkte wählen", desc: "Dress + Shoes + Bag" },
-    { num: "2", title: "Varianten setzen", desc: "Größe M, Farbe Rot" },
-    { num: "3", title: "Rabatt hinzu", desc: "Optional: 20% OFF" },
-    { num: "4", title: "Link senden", desc: "Kunde klickt → Checkout" },
-  ];
+  const featuresData =
+    getTranslation("marketing.agentProductivity.features") || [];
+  const features = featuresData.slice(0, 6).map((feature: any, i: number) => ({
+    ...feature,
+    icon: featureIcons[i] || Package,
+  }));
+
   return (
     <div
-      className="relative overflow-hidden bg-gradient-to-b from-white via-blue-50/20 to-white"
+      className="relative overflow-hidden bg-white pt-16 pb-32"
       data-section="agent-productivity"
     >
-      {/* Mesh gradient */}
-      <div className="absolute inset-0 bg-mesh-blue opacity-10"></div>
-
-      <div className="max-w-7xl mx-auto px-6 md:px-8 py-16 md:py-24 relative">
-        {/* Section Header */}
+      <div className="max-w-7xl mx-auto px-6 md:px-8 relative z-10">
+        {/* Section Header - CLEAN */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-6 tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             {t("marketing.agentProductivity.title")}
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             {t("marketing.agentProductivity.subtitle")}
           </p>
         </motion.div>
 
-        {/* Main Layout: Dashboard Preview + Tools */}
-        <div className="grid md:grid-cols-5 gap-8 mb-20">
-          {/* Left: Dashboard Visual (3 columns) */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2, duration: 0.7 }}
-            className="md:col-span-3 relative"
-          >
-            <div className="absolute -inset-4 bg-gradient-to-br from-purple-200/40 to-blue-200/40 rounded-3xl blur-2xl"></div>
-
-            <div className="relative bg-white rounded-2xl shadow-2xl border-2 border-gray-200 overflow-hidden">
-              <img
-                src="/dashboard-screenshots/Screenshot-1-livechat.png"
-                alt="ReplAInow Agent Dashboard - Product Picker, Discount Creator, Order Management"
-                className="w-full rounded-2xl"
-              />
-            </div>
-          </motion.div>
-
-          {/* Right: Key Tools (2 columns) */}
-          <div className="md:col-span-2 space-y-6">
-            {tools.map((tool, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.3 + i * 0.1 }}
-                className="relative group"
-              >
-                <div
-                  className={`
-                  absolute -inset-1 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg
-                  ${tool.color === "purple" ? "bg-purple-500/20" : ""}
-                  ${tool.color === "green" ? "bg-green-500/20" : ""}
-                  ${tool.color === "blue" ? "bg-blue-500/20" : ""}
-                  ${tool.color === "violet" ? "bg-violet-500/20" : ""}
-                `}
-                ></div>
-
-                <div className="relative bg-white rounded-2xl p-6 border-2 border-gray-200 group-hover:border-purple-300 transition-all duration-300 shadow-card-strong group-hover:shadow-float">
-                  <div className="flex items-start gap-4">
-                    <div
-                      className={`
-                      p-3 rounded-xl flex-shrink-0
-                      ${tool.color === "purple" ? "bg-purple-50" : ""}
-                      ${tool.color === "green" ? "bg-green-50" : ""}
-                      ${tool.color === "blue" ? "bg-blue-50" : ""}
-                      ${tool.color === "violet" ? "bg-violet-50" : ""}
-                    `}
-                    >
-                      <tool.icon
-                        className={`
-                        w-6 h-6
-                        ${tool.color === "purple" ? "text-purple-700" : ""}
-                        ${tool.color === "green" ? "text-green-700" : ""}
-                        ${tool.color === "blue" ? "text-blue-700" : ""}
-                        ${tool.color === "violet" ? "text-violet-700" : ""}
-                      `}
-                      />
-                    </div>
-                    <div>
-                      <h4 className="font-bold text-gray-900 mb-1.5">
-                        {tool.title}
-                      </h4>
-                      <p className="text-sm text-gray-600 leading-relaxed">
-                        {tool.desc}
-                      </p>
-                    </div>
-                  </div>
+        {/* MODERN FEATURE GRID - Clean Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
+          {features.map((feature: any, i: number) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.08, duration: 0.4 }}
+              className="group"
+            >
+              <div className="h-full bg-gray-50 rounded-xl p-6 hover:bg-white border border-gray-200 hover:shadow-lg transition-all duration-200">
+                {/* Icon */}
+                <div className="w-12 h-12 rounded-lg bg-purple-600 flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-white" />
                 </div>
-              </motion.div>
-            ))}
-          </div>
+
+                {/* Title */}
+                <h4 className="font-semibold text-gray-900 text-base mb-2">
+                  {feature.title}
+                </h4>
+                
+                {/* Description */}
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {feature.desc}
+                </p>
+              </div>
+            </motion.div>
+          ))}
         </div>
 
-        {/* Product Picker Workflow Example */}
+        {/* AI INSIGHTS - COMPLETE 2-PANEL */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 0.7 }}
-          className="relative"
+          transition={{ delay: 0.4, duration: 0.7 }}
+          className="relative mb-20"
         >
-          <div className="absolute -inset-4 bg-gradient-to-r from-purple-500/10 via-violet-500/10 to-blue-500/10 rounded-3xl blur-2xl"></div>
-
-          <div className="relative bg-gradient-to-r from-purple-50 via-violet-50 to-blue-50 rounded-3xl p-10 md:p-14 border-2 border-purple-200">
+          {/* Container */}
+          <div className="relative bg-gray-50 rounded-3xl p-10 border border-gray-200">
+            {/* Header */}
             <div className="text-center mb-10">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                {t("marketing.agentProductivity.exampleTitle")}
+              <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-purple-600 text-white font-semibold mb-4">
+                <Sparkles className="w-4 h-4" />
+                <span className="text-sm">{t("marketing.agentProductivity.aiInsights.badge")}</span>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
+                {t("marketing.agentProductivity.aiInsights.title")}
               </h3>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-                {t("marketing.agentProductivity.exampleSubtitle")}
+              <p className="text-base text-gray-600 max-w-2xl mx-auto">
+                {t("marketing.agentProductivity.aiInsights.subtitle")}
               </p>
             </div>
 
-            {/* Flow Steps */}
-            <div className="grid md:grid-cols-4 gap-6">
-              {workflowSteps.map((step, i) => {
-                const stepIcons = [ShoppingBag, CheckCircle2, Gift, Link2];
-                const stepColors = ["purple", "violet", "blue", "green"];
-                const StepIcon = stepIcons[i];
-                const color = stepColors[i];
-                return (
-                  <div key={i} className="relative">
-                    {/* Connection Arrow */}
-                    {i < 3 && (
-                      <div className="hidden md:block absolute top-8 -right-3 z-10">
-                        <div className="text-purple-400">→</div>
-                      </div>
-                    )}
+            {/* 2-Column Panels */}
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* LEFT: AI Insights Panel - COMPLETE */}
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+                <div className="flex items-center gap-2 mb-6 pb-4 border-b border-gray-200">
+                  <Sparkles className="w-5 h-5 text-purple-600" />
+                  <h4 className="text-lg font-bold text-gray-900">
+                    {t("marketing.agentProductivity.aiInsights.panelTitle")}
+                  </h4>
+                </div>
 
-                    <div className="bg-white rounded-2xl p-6 border-2 border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-300 text-center relative">
-                      <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-gray-900 text-white rounded-full flex items-center justify-center font-bold text-sm">
-                        {step.num}
-                      </div>
+                <div className="space-y-3.5">
+                  {/* Sentiment - with emoji */}
+                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg border border-green-200">
+                    <div className="flex items-center gap-2">
+                      <span className="text-base">😊</span>
+                      <span className="text-xs font-medium text-gray-600">
+                        {t("marketing.agentProductivity.aiInsights.sentiment")}
+                      </span>
+                    </div>
+                      <span className="text-sm font-bold text-green-600">
+                      {t("marketing.agentProductivity.aiInsights.sentimentValue")}
+                    </span>
+                  </div>
 
-                      <div
-                        className={`
-                      inline-flex p-4 rounded-xl mb-4 mt-2
-                      ${color === "purple" ? "bg-purple-50" : ""}
-                      ${color === "violet" ? "bg-violet-50" : ""}
-                      ${color === "blue" ? "bg-blue-50" : ""}
-                      ${color === "green" ? "bg-green-50" : ""}
-                    `}
-                      >
-                        <StepIcon
-                          className={`
-                        w-6 h-6
-                        ${color === "purple" ? "text-purple-700" : ""}
-                        ${color === "violet" ? "text-violet-700" : ""}
-                        ${color === "blue" ? "text-blue-700" : ""}
-                        ${color === "green" ? "text-green-700" : ""}
-                      `}
-                        />
-                      </div>
+                  {/* Topic - with emoji */}
+                  <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <div className="flex items-center gap-2">
+                      <span className="text-base">🎯</span>
+                      <span className="text-xs font-medium text-gray-600">
+                        {t("marketing.agentProductivity.aiInsights.topic")}
+                      </span>
+                    </div>
+                    <span className="text-sm font-semibold text-gray-900">
+                      {t("marketing.agentProductivity.aiInsights.topicValue")}
+                    </span>
+                  </div>
 
-                      <h4 className="font-bold text-gray-900 mb-2 text-sm">
-                        {step.title}
-                      </h4>
-                      <p className="text-xs text-gray-600">{step.desc}</p>
+                  {/* Confidence - with emoji */}
+                  <div className="flex items-center justify-between p-3 bg-purple-50 rounded-lg border border-purple-200">
+                    <div className="flex items-center gap-2">
+                      <span className="text-base">⚡</span>
+                      <span className="text-xs font-medium text-gray-600">
+                        {t("marketing.agentProductivity.aiInsights.confidence")}
+                      </span>
+                    </div>
+                    <span className="text-sm font-bold text-purple-600">
+                      {t("marketing.agentProductivity.aiInsights.confidenceValue")}
+                    </span>
+                  </div>
+
+                  {/* Action - with emoji */}
+                  <div className="flex items-center justify-between p-3 bg-green-50 rounded-lg border border-green-200">
+                    <div className="flex items-center gap-2">
+                      <span className="text-base">🚨</span>
+                      <span className="text-xs font-medium text-gray-600">
+                        {t("marketing.agentProductivity.aiInsights.action")}
+                      </span>
+                    </div>
+                    <span className="text-sm font-semibold text-green-700">
+                      {t("marketing.agentProductivity.aiInsights.actionValue")}
+                    </span>
+                  </div>
+
+                  {/* Conversation - with emoji */}
+                  <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                    <div className="flex items-center gap-2">
+                      <span className="text-base">💬</span>
+                      <span className="text-xs font-medium text-gray-600">
+                        {t("marketing.agentProductivity.aiInsights.conversation")}
+                      </span>
+                    </div>
+                    <span className="text-sm font-medium text-gray-700">
+                      {t("marketing.agentProductivity.aiInsights.conversationValue")}
+                    </span>
+                  </div>
+
+                  {/* Language - with emoji */}
+                  <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg border border-blue-200">
+                    <div className="flex items-center gap-2">
+                      <span className="text-base">🌍</span>
+                      <span className="text-xs font-medium text-gray-600">
+                        {t("marketing.agentProductivity.aiInsights.language")}
+                      </span>
+                    </div>
+                    <span className="text-sm font-semibold text-gray-900">
+                      {t("marketing.agentProductivity.aiInsights.languageValue")}
+                    </span>
+                  </div>
+                </div>
+              </div>
+
+              {/* RIGHT: Customer Context Panel */}
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+                <div className="flex items-center gap-2 mb-6 pb-4 border-b border-gray-200">
+                  <Eye className="w-5 h-5 text-purple-600" />
+                  <h4 className="text-lg font-bold text-gray-900">
+                    {t("marketing.agentProductivity.aiInsights.contextTitle")}
+                  </h4>
+                </div>
+
+                <div className="space-y-3">
+                  {/* Journey */}
+                  <div className="bg-gray-50 rounded-lg p-3">
+                    <div className="flex items-center gap-2 mb-1">
+                      <TrendingUp className="w-4 h-4 text-purple-600" />
+                      <span className="text-xs font-medium text-gray-500">
+                        {t("marketing.agentProductivity.aiInsights.journey")}
+                      </span>
+                    </div>
+                    <p className="text-sm font-medium text-gray-900">
+                      {t("marketing.agentProductivity.aiInsights.journeyValue")}
+                    </p>
+                  </div>
+
+                  {/* Cart - WICHTIG! */}
+                  <div className="bg-purple-50 rounded-lg p-3 border border-purple-200">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Package className="w-4 h-4 text-purple-600" />
+                      <span className="text-xs font-medium text-gray-500">
+                        {t("marketing.agentProductivity.aiInsights.cart")}
+                      </span>
+                    </div>
+                    <p className="text-sm font-semibold text-gray-900">
+                      {t("marketing.agentProductivity.aiInsights.cartValue")}
+                    </p>
+                  </div>
+
+                  {/* Orders */}
+                  <div className="bg-gray-50 rounded-lg p-3">
+                    <div className="flex items-center gap-2 mb-1">
+                      <Package className="w-4 h-4 text-gray-600" />
+                      <span className="text-xs font-medium text-gray-500">
+                        {t("marketing.agentProductivity.aiInsights.orders")}
+                      </span>
+                    </div>
+                    <p className="text-sm font-medium text-gray-900">
+                      {t("marketing.agentProductivity.aiInsights.ordersValue")}
+                    </p>
+                  </div>
+
+                  {/* Device */}
+                  <div className="bg-gray-50 rounded-lg p-3">
+                    <div className="flex items-center gap-2 mb-1">
+                      <MessageSquare className="w-4 h-4 text-gray-600" />
+                      <span className="text-xs font-medium text-gray-500">
+                        {t("marketing.agentProductivity.aiInsights.device")}
+                      </span>
+                    </div>
+                    <p className="text-sm font-medium text-gray-900">
+                      {t("marketing.agentProductivity.aiInsights.deviceValue")}
+                    </p>
+                  </div>
+
+                  {/* Agent Required */}
+                  <div className="bg-orange-50 rounded-lg p-3 border border-orange-200">
+                    <div className="flex items-center gap-2">
+                      <AlertCircle className="w-4 h-4 text-orange-600" />
+                      <span className="font-semibold text-sm text-orange-700">
+                        {t("marketing.agentProductivity.aiInsights.agentRequired")}
+                      </span>
                     </div>
                   </div>
-                );
-              })}
-            </div>
-
-            {/* Bottom Result */}
-            <div className="mt-10 text-center">
-              <div className="inline-flex items-center gap-3 bg-white rounded-2xl px-8 py-4 border-2 border-green-300 shadow-lg">
-                <Package className="w-6 h-6 text-green-700" />
-                <span className="font-bold text-gray-900">
-                  {t("marketing.agentProductivity.workflowResult")}
-                </span>
-                <CheckCircle2 className="w-6 h-6 text-green-600" />
+                </div>
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Bottom Statement */}
+        {/* Bottom CTA Statement */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.7 }}
-          className="text-center mt-16"
+          transition={{ delay: 0.8 }}
+          className="text-center"
         >
-          <p className="text-2xl font-bold text-gray-900">
-            {t("marketing.agentProductivity.bottomStatement")}
+          {/* Statement Box */}
+          <div className="inline-block bg-gradient-to-br from-purple-50 to-violet-50 border-2 border-purple-200 rounded-2xl p-8 shadow-lg max-w-3xl">
+            <p className="text-lg md:text-xl font-semibold text-gray-900 mb-6 leading-relaxed">
+              Kein Hin und Her zwischen Shopify und Helpdesk. Alles was Sie in Shopify machen können, können Sie direkt über unser Dashboard machen.
           </p>
+
+            {/* Simple Pills with Checkmarks */}
+            <div className="flex flex-wrap justify-center gap-3">
+              <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-gray-200">
+                <CheckCircle2 className="w-4 h-4 text-green-600" />
+                <span className="text-sm font-medium text-gray-700">
+                  {t("marketing.agentProductivity.highlights.noTabSwitching")}
+                </span>
+              </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-gray-200">
+                <CheckCircle2 className="w-4 h-4 text-green-600" />
+                <span className="text-sm font-medium text-gray-700">
+                  {t("marketing.agentProductivity.highlights.fullContext")}
+                </span>
+            </div>
+              <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-lg border border-gray-200">
+                <CheckCircle2 className="w-4 h-4 text-green-600" />
+                <span className="text-sm font-medium text-gray-700">
+                  {t("marketing.agentProductivity.highlights.aiPowered")}
+                </span>
+            </div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </div>

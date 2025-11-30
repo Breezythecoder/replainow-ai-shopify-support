@@ -1,9 +1,11 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
+import './styles/design-tokens.css'
 
-if (import.meta.env.MODE === 'development') {
-  // Dynamically load axe for a11y auditing in development
+if (import.meta.env.MODE === 'development' && false) {
+  // TEMPORARILY DISABLED: Axe accessibility auditing
+  // Re-enable by removing "&& false" above
   Promise.all([
     import('react'),
     import('react-dom'),

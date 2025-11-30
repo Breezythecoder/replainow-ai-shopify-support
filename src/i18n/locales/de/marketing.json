@@ -8,6 +8,42 @@
     "socialProof": "28+ Shopify-Händler nutzen bereits ReplAInow",
     "trustBadge": "ISO 27001 zertifiziert"
   },
+  "liveChatDemo": {
+    "aiName": "ReplAInow AI",
+    "status": "Online",
+    "responseTime": "Antwortet in 3s",
+    "inputPlaceholder": "Nachricht schreiben…",
+    "poweredBy": "Powered by GPT-5",
+    "messages": {
+      "user1": "Guten Tag ☺️ ich hätte eine Frage zu eurem Shop.",
+      "ai1": "Guten Tag! 😊 Schön, dass Sie unseren Shop besuchen. Sehr gerne – wie kann ich Ihnen weiterhelfen?",
+      "user2": "Also, es ist so: Da ich viele Outdoor-Aktivitäten wie Jogging betreibe, suche ich hochqualitative Running-Schuhe. Am besten in der Farbe Rot. Könnt ihr mir was empfehlen?",
+      "ai2": "Wir können dir garantiert weiterhelfen! Ich habe auch schon den passenden Schuh für dich gefunden – der Nike Air Zoom Pegasus 40 in Rot:",
+      "user3": "Wow! Der sieht hammer aus, werde ihn gleich bestellen! 🔥",
+      "ai3": "Freut mich sehr, dass er dir gefällt! Das ist tatsächlich eins unserer beliebtesten Nike Running-Modelle – du wirst begeistert sein. 😊",
+      "user4": "Könnte ich vielleicht für diese Bestellung noch einen Rabatt haben? 😋",
+      "ai4": "Ja sicher! Ich habe dir soeben einen exklusiven Rabatt-Code erstellt. Du kannst ihn unten rauskopieren:",
+      "user5": "Super, danke! Ach ja, wo ist eigentlich meine letzte Bestellung #4782?",
+      "ai5": "Schaue ich gleich für dich nach! Hier ist der aktuelle Status deiner Bestellung:"
+    },
+    "productCard": {
+      "title": "Nike Air Zoom Pegasus 40",
+      "description": "Premium Running-Schuh mit React-Dämpfung. Perfekt für Jogging und Outdoor-Training.",
+      "price": "139,99",
+      "stock": "12"
+    },
+    "discountCard": {
+      "code": "RUNNING15",
+      "discount": "15% Rabatt",
+      "expiryDays": "7"
+    },
+    "trackingCard": {
+      "orderNumber": "4782",
+      "carrier": "DHL Express",
+      "trackingNumber": "JJD0048394345DE",
+      "status": "in-transit"
+    }
+  },
   "aiPowerShowcase": {
     "title": "Ihre AI kann mehr als jeder Support-Mitarbeiter",
     "subtitle": "Kein einfacher Chatbot – Ihre AI ist ein vollwertiger Support-Mitarbeiter, der jeden Aspekt Ihres Shops kennt und intelligent handelt",
@@ -230,31 +266,55 @@
   },
   "testimonials": {
     "title": "Vertraut von führenden Shopify-Händlern",
-    "subtitle": "Echte Resultate von echten Geschäften",
+    "subtitle": "Echte Erfahrungen von echten Online-Händlern",
     "items": [
       {
-        "name": "Michael Weber",
-        "role": "CEO, Fashion & Style GmbH",
-        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces",
-        "text": "ReplAInow hat unseren Support-Aufwand um 78% reduziert. Die KI versteht unsere Produkte perfekt!",
-        "metric": "€2.840/Monat gespart",
+        "name": "Lisa Hoffmann",
+        "role": "Gründerin, Beauty E-Commerce",
+        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces",
+        "text": "Endlich kann ich mich auf mein Geschäft konzentrieren statt E-Mails zu beantworten. Die KI übernimmt den Großteil der Kundenanfragen und macht das richtig gut. Unsere Kunden merken oft gar nicht, dass es keine Person ist.",
+        "metric": "",
         "color": "purple"
       },
       {
-        "name": "Sarah Klein",
-        "role": "Owner, BeautyWorld",
-        "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces",
-        "text": "Beste Investition 2025! Unsere Kunden bekommen jetzt rund um die Uhr perfekte Antworten.",
-        "metric": "92% Automatisierung",
+        "name": "Michael Weber",
+        "role": "Inhaber, Tech-Shop",
+        "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces",
+        "text": "Was mich am meisten beeindruckt: Die KI kennt wirklich jedes Produkt in unserem Shop. Wenn Kunden nach Kompatibilität oder technischen Details fragen, bekommt sie präzise Antworten. Das spart uns enorm viel Zeit.",
+        "metric": "",
         "color": "violet"
       },
       {
-        "name": "Thomas Müller",
-        "role": "Head of Operations, TechStore",
-        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces",
-        "text": "Die Integration war in 5 Minuten fertig. ROI nach 9 Tagen. Absolut beeindruckend!",
-        "metric": "ROI in 9 Tagen",
+        "name": "Sarah Klein",
+        "role": "Shop-Betreiberin, Mode",
+        "avatar": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=faces",
+        "text": "Ehrlich gesagt war ich skeptisch. Aber die Installation war wirklich in Minuten erledigt und die KI hat sofort angefangen zu arbeiten. Keine komplizierte Einrichtung, kein Training nötig. Einfach installiert und läuft.",
+        "metric": "",
         "color": "pink"
+      },
+      {
+        "name": "Thomas Richter",
+        "role": "E-Commerce Manager",
+        "avatar": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces",
+        "text": "Wir hatten vorher einen Vollzeit-Mitarbeiter nur für Support. Jetzt läuft das meiste automatisch und wir können uns auf die wirklich komplexen Fälle konzentrieren. Das ist ein echter Unterschied im Arbeitsalltag.",
+        "metric": "",
+        "color": "blue"
+      },
+      {
+        "name": "Anna Schneider",
+        "role": "Geschäftsführerin, Sportartikel",
+        "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=faces",
+        "text": "Besonders cool: Die KI antwortet automatisch in der Sprache des Kunden. Wir haben viele internationale Kunden und das funktioniert einwandfrei. Kein manuelles Übersetzen mehr nötig.",
+        "metric": "",
+        "color": "green"
+      },
+      {
+        "name": "Marco Becker",
+        "role": "Gründer, Werkzeugshop",
+        "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=faces",
+        "text": "Ich hatte vorher einen bekannten Helpdesk-Anbieter und das war ehrlich gesagt übertrieben kompliziert und teuer. ReplAInow macht genau das was wir brauchen, ohne unnötigen Schnickschnack. Und kostet einen Bruchteil.",
+        "metric": "",
+        "color": "orange"
       }
     ]
   },
@@ -329,6 +389,11 @@
     ],
     "ctaInstall": "Kostenlos testen",
     "ctaDemo": "Live-Demo ansehen"
+  },
+  "dashboardShowcase": {
+    "title": "🎬 Live Demo: Sehen Sie ReplAInow in Aktion",
+    "subtitle": "Vollautomatische Demo zeigt: AI Support → Agent Takeover → Product Picker → Checkout (45 Sekunden)",
+    "interactiveNote": "✨ Interaktives Dashboard – Klicken Sie auf Conversations um verschiedene Chats zu sehen"
   },
   "liveDemo": {
     "badge": "⚡ INTERAKTIVE DEMO",
@@ -760,40 +825,86 @@
     "guarantee": "30-Tage Geld-zurück-Garantie"
   },
   "agentProductivity": {
+    "badge": "All-in-One Dashboard",
     "title": "Wenn Ihre Agenten übernehmen – perfekt ausgestattet",
-    "subtitle": "AI macht 87% automatisch. Die anderen 13%? Ihre Agenten haben alle Tools für professionellen Support an einem Ort.",
-    "tools": [
+    "subtitle": "KI macht 87% automatisch. Die anderen 13%? Ihre Agenten haben alle Tools für professionellen Support an einem Ort.",
+    "keyMessage": "Kein Wechsel zwischen Shopify und Helpdesk - alles an einem Ort",
+    "features": [
       {
-        "title": "Product Picker",
-        "desc": "Varianten wählen (Größe, Farbe), als Karten oder Checkout-Link senden",
+        "title": "Bestellungen verwalten",
+        "desc": "Artikel stornieren, Tracking hinzufügen, Status ändern - direkt im Chat",
         "color": "purple"
       },
       {
-        "title": "Rabatt-Generator",
-        "desc": "10%, 15%, 20% Quick-Buttons. Ein Klick → Kunde hat Code",
-        "color": "green"
-      },
-      {
-        "title": "Rückerstattungen",
-        "desc": "Direkt aus Dashboard. Artikel wählen, Betrag, fertig",
+        "title": "Adressen ändern",
+        "desc": "Shipping-Adresse mit 1 Klick korrigieren - keine Shopify-Tabs",
         "color": "blue"
       },
       {
-        "title": "Kunden-Journey",
-        "desc": "Welche Seiten besucht, was im Warenkorb, Kaufabsicht-Score",
+        "title": "Produkt-Auswahl",
+        "desc": "Produkte mit Varianten als Cards senden oder Checkout-Link erstellen",
         "color": "violet"
+      },
+      {
+        "title": "Rabatt-Generator",
+        "desc": "10%, 15%, 20% Quick-Buttons - Code sofort kopierbar",
+        "color": "green"
+      },
+      {
+        "title": "Chat-Übernahme",
+        "desc": "Jederzeit eingreifen - AI markiert \"Agent erforderlich\" automatisch",
+        "color": "orange"
+      },
+      {
+        "title": "Kunden-Journey",
+        "desc": "Besuchte Seiten, Warenkorb-Inhalt, Kaufabsicht-Score live sehen",
+        "color": "pink"
+      },
+      {
+        "title": "KI-Einblicke",
+        "desc": "Stimmung, Thema, Genauigkeit, Sprache - KI analysiert jeden Chat",
+        "color": "indigo"
+      },
+      {
+        "title": "Gerät & Kontext",
+        "desc": "Gerät, Browser, Standort - vollständiger Kunden-Kontext",
+        "color": "cyan"
       }
     ],
-    "exampleTitle": "Beispiel: Checkout-Link erstellen",
-    "exampleSubtitle": "Kunde interessiert an mehreren Produkten? Ein Klick-Erlebnis:",
-    "workflowSteps": [
-      { "num": "1", "title": "Produkte wählen", "desc": "Dress + Shoes + Bag" },
-      { "num": "2", "title": "Varianten setzen", "desc": "Größe M, Farbe Rot" },
-      { "num": "3", "title": "Rabatt hinzu", "desc": "Optional: 20% OFF" },
-      { "num": "4", "title": "Link senden", "desc": "Kunde klickt → Checkout" }
-    ],
-    "workflowResult": "Resultat: Pre-filled Cart mit 20% Rabatt → Ein-Klick-Checkout für Kunde",
-    "bottomStatement": "AI macht 87% automatisch – Ihre Agenten die 13% mit den besten Tools"
+    "aiInsights": {
+      "badge": "KI-gestützt",
+      "title": "Vollständiger Kunden-Kontext mit KI-Einblicken",
+      "subtitle": "Ihre Agents sehen nicht nur Nachrichten - sie sehen den kompletten Kontext, analysiert von KI",
+      "panelTitle": "KI-Einblicke",
+      "contextTitle": "Kunden-Kontext",
+      "sentiment": "Stimmung",
+      "sentimentValue": "Positiv",
+      "topic": "Thema",
+      "topicValue": "Bestellverfolgung",
+      "confidence": "KI-Genauigkeit",
+      "confidenceValue": "96%",
+      "action": "Aktion erforderlich",
+      "actionValue": "Keine nötig",
+      "conversation": "Konversation",
+      "conversationValue": "13 Nachrichten • vor 5 Min",
+      "language": "Sprache",
+      "languageValue": "Deutsch (DE)",
+      "journey": "Kunden-Journey",
+      "journeyValue": "4 Seiten besucht • 2:17 Min auf Site",
+      "cart": "Aktueller Warenkorb",
+      "cartValue": "€127,50 • 2 Produkte • Checkout bereit",
+      "orders": "Bestellhistorie",
+      "ordersValue": "5 Bestellungen • Letzte vor 12 Tagen",
+      "device": "Gerät & Browser",
+      "deviceValue": "iPhone 15 Pro • Safari • iOS 17.2",
+      "agentRequired": "Agent erforderlich"
+    },
+    "bottomStatement": "KI macht 87% automatisch – Ihre Agenten die 13% mit den besten Tools",
+    "highlights": {
+      "noTabSwitching": "Kein Tab-Wechsel",
+      "fullContext": "Vollständiger Kontext",
+      "aiPowered": "KI-gestützte Einblicke"
+    }
   },
   "omnichannelUnified": {
     "title": "Ein System für Chat & E-Mail – nahtlos verbunden",
@@ -804,7 +915,7 @@
     "liveChatFeatures": [
       "AI antwortet in 100+ Sprachen, Widget-Interface in 41 Sprachen",
       "Produktkarten mit Bildern & Preisen",
-      "Rabatt-Codes mit 1-Klick kopieren",
+      "Rabatt-Codes mit 1-Klick kopierbar",
       "Proaktive Nachrichten auf allen Seiten"
     ],
     "emailBadge": "E-MAIL HELPDESK",
