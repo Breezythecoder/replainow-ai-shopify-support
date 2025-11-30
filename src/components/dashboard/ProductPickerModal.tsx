@@ -218,7 +218,7 @@ export const ProductPickerModal = ({
         <div className="product-picker-dialog" role="dialog" aria-modal="true">
           {/* Backdrop */}
           <motion.div
-            className="fixed inset-0 bg-black/50 z-40"
+            className="absolute inset-0 bg-black/50 z-40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}

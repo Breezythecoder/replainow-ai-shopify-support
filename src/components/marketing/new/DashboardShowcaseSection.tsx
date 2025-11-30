@@ -116,7 +116,7 @@ const DashboardShowcaseSection = () => {
           className="w-full flex justify-center items-start"
         >
           {/* Outer container with actual scaled size */}
-          <div 
+          <div
             className="relative"
             style={{
               width: `${1600 * dashboardScale}px`,
@@ -136,76 +136,74 @@ const DashboardShowcaseSection = () => {
                 position: "relative",
               }}
             >
-            {/* Browser Chrome - Premium Style - FIXED CORNERS! */}
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5, duration: 0.5 }}
-              className="absolute h-10 bg-gradient-to-b from-gray-800 to-gray-700 flex items-center px-4 gap-3"
-              style={{
-                width: "1600px",
-                top: 0,
-                left: 0,
-                borderTopLeftRadius: "16px",
-                borderTopRightRadius: "16px",
-                borderTop: "1px solid rgb(75, 85, 99)",
-                borderLeft: "1px solid rgb(75, 85, 99)",
-                borderRight: "1px solid rgb(75, 85, 99)",
-              }}
-            >
-              <div className="flex gap-2">
-                <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div className="w-3 h-3 rounded-full bg-green-500"></div>
-              </div>
-              <div className="flex-1 flex items-center justify-center">
-                <div className="bg-gray-900/50 backdrop-blur-sm px-4 py-1 rounded-lg border border-gray-600">
-                  <span className="text-xs text-gray-400 font-mono">
-                    app.replainow.com
-                  </span>
+              {/* Browser Chrome - Premium Style - FIXED CORNERS! */}
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5, duration: 0.5 }}
+                className="absolute top-0 left-0 right-0 h-10 bg-gradient-to-b from-gray-800 to-gray-700 flex items-center px-4 gap-3"
+                style={{
+                  width: "1600px",
+                  borderTopLeftRadius: "16px",
+                  borderTopRightRadius: "16px",
+                  borderTop: "1px solid rgb(75, 85, 99)",
+                  borderLeft: "1px solid rgb(75, 85, 99)",
+                  borderRight: "1px solid rgb(75, 85, 99)",
+                }}
+              >
+                <div className="flex gap-2">
+                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 </div>
-              </div>
-            </motion.div>
+                <div className="flex-1 flex items-center justify-center">
+                  <div className="bg-gray-900/50 backdrop-blur-sm px-4 py-1 rounded-lg border border-gray-600">
+                    <span className="text-xs text-gray-400 font-mono">
+                      app.replainow.com
+                    </span>
+                  </div>
+                </div>
+              </motion.div>
 
-            {/* Dashboard Container - PROFESSIONAL SHADOW */}
-            <div
-              className="dashboard-zoom-wrapper"
-              style={{
-                position: "absolute",
-                top: "10px",
-                left: 0,
-                width: "1600px",
-                height: "900px",
-                filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.3))",
-              }}
-            >
-              {isDemoVisible ? (
-                <DashboardDemoShowcase
-                  autoPlay={shouldPlayDemo}
-                  loop={shouldPlayDemo}
-                />
-              ) : (
-                <div
-                  className="demo-placeholder"
-                  style={{
-                    width: "1600px",
-                    height: "900px",
-                    background:
-                      "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
-                    borderRadius: "12px",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "#64748b",
-                    fontSize: "14px",
-                    fontWeight: 500,
-                  }}
-                >
-                  Loading demo...
-                </div>
-              )}
-            </div>
+              {/* Dashboard Container - PROFESSIONAL SHADOW */}
+              <div
+                className="dashboard-zoom-wrapper"
+                style={{
+                  position: "absolute",
+                  top: "10px",
+                  left: 0,
+                  width: "1600px",
+                  height: "900px",
+                  filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.3))",
+                }}
+              >
+                {isDemoVisible ? (
+                  <DashboardDemoShowcase
+                    autoPlay={shouldPlayDemo}
+                    loop={shouldPlayDemo}
+                  />
+                ) : (
+                  <div
+                    className="demo-placeholder"
+                    style={{
+                      width: "1600px",
+                      height: "900px",
+                      background:
+                        "linear-gradient(135deg, #1e293b 0%, #0f172a 100%)",
+                      borderRadius: "12px",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      color: "#64748b",
+                      fontSize: "14px",
+                      fontWeight: 500,
+                    }}
+                  >
+                    Loading demo...
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </motion.div>
