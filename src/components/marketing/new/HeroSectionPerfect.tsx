@@ -113,8 +113,8 @@ const HeroSectionPerfect = () => {
               className="flex flex-col sm:flex-row gap-4"
           >
               {/* Primary CTA - Subtiler Glow */}
-            <a href={OAUTH_URL} className="relative group">
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-violet-600 rounded-2xl blur-md opacity-50 group-hover:opacity-75 transition duration-200"></div>
+            <a href={OAUTH_URL} className="relative inline-block group">
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-violet-600 rounded-2xl blur-md opacity-40 group-hover:opacity-60 transition duration-200 pointer-events-none"></div>
               <motion.button
                 whileHover={{
                   scale: 1.03,
