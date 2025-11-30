@@ -115,20 +115,38 @@ const DashboardShowcaseSection = () => {
           }}
           className="w-full flex justify-center items-start"
         >
-          <div className="relative">
+          {/* Outer container with actual scaled size */}
+          <div 
+            className="relative"
+            style={{
+              width: `${1600 * dashboardScale}px`,
+              height: `${910 * dashboardScale}px`,
+            }}
+          >
             {/* Stage "floor" glow */}
             <div className="absolute -bottom-20 left-1/2 -translate-x-1/2 w-full h-40 bg-gradient-to-t from-purple-500/20 via-purple-500/10 to-transparent blur-3xl"></div>
 
+            {/* Scale wrapper - scales everything inside */}
+            <div
+              style={{
+                transform: `scale(${dashboardScale})`,
+                transformOrigin: "top left",
+                width: "1600px",
+                height: "910px",
+                position: "relative",
+              }}
+            >
             {/* Browser Chrome - Premium Style - FIXED CORNERS! */}
             <motion.div
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="absolute -top-10 left-0 right-0 h-10 bg-gradient-to-b from-gray-800 to-gray-700 flex items-center px-4 gap-3"
+              className="absolute h-10 bg-gradient-to-b from-gray-800 to-gray-700 flex items-center px-4 gap-3"
               style={{
-                zoom: dashboardScale,
                 width: "1600px",
+                top: 0,
+                left: 0,
                 borderTopLeftRadius: "16px",
                 borderTopRightRadius: "16px",
                 borderTop: "1px solid rgb(75, 85, 99)",
@@ -152,11 +170,13 @@ const DashboardShowcaseSection = () => {
 
             {/* Dashboard Container - PROFESSIONAL SHADOW */}
             <div
-              className="dashboard-zoom-wrapper relative"
+              className="dashboard-zoom-wrapper"
               style={{
-                zoom: dashboardScale,
-                width: "fit-content",
-                margin: "0 auto",
+                position: "absolute",
+                top: "10px",
+                left: 0,
+                width: "1600px",
+                height: "900px",
                 filter: "drop-shadow(0 25px 50px rgba(0, 0, 0, 0.3))",
               }}
             >
@@ -185,6 +205,7 @@ const DashboardShowcaseSection = () => {
                   Loading demo...
                 </div>
               )}
+            </div>
             </div>
           </div>
         </motion.div>
