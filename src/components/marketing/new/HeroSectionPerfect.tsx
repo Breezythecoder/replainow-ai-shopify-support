@@ -21,13 +21,13 @@ const HeroSectionPerfect = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-white via-gray-50/50 to-white pt-20 flex items-center justify-center">
-      {/* Sehr subtiler Background gradient - NUR ganz leicht */}
+    <div className="relative min-h-screen overflow-hidden bg-gradient-to-b from-gray-50 via-purple-50/40 to-white pt-20 flex items-center justify-center">
+      {/* Schlichter aber sichtbarer Lila Background */}
       <div
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(circle at 50% 30%, rgba(139,92,246,0.04), transparent 70%)",
+            "radial-gradient(circle at 50% 30%, rgba(139,92,246,0.1), transparent 70%)",
         }}
       />
 
@@ -170,15 +170,15 @@ const HeroSectionPerfect = () => {
           </motion.div>
           </div>
 
-          {/* RIGHT SIDE - Chat Widget - VIEL weniger Glow! */}
+          {/* RIGHT SIDE - Chat Widget - Schlichter Glow */}
           <motion.div
             initial={{ opacity: 0, scale: 0.9, x: 20 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.6, ease: [0.16, 1, 0.3, 1] }}
             className="relative flex items-center justify-center"
           >
-            {/* Sehr subtiler Glow - kaum sichtbar */}
-            <div className="absolute -inset-10 bg-gradient-to-br from-purple-500/5 to-violet-500/5 rounded-full blur-3xl"></div>
+            {/* Schlichter aber sichtbarer Glow */}
+            <div className="absolute -inset-10 bg-gradient-to-br from-purple-500/15 to-violet-500/15 rounded-full blur-3xl"></div>
 
             {/* Floating chat - weniger Animation */}
             <motion.div

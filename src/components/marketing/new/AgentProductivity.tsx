@@ -39,6 +39,7 @@ const AgentProductivity = () => {
 
   return (
     <div
+      id="features"
       className="relative overflow-hidden bg-white pt-16 pb-32"
       data-section="agent-productivity"
     >
