@@ -1,6 +1,7 @@
 /**
  * 🧠 AI KNOWLEDGE - ULTRA KRASS 3-COLUMN DESIGN
  * 3 Links | SHOPIFY Mitte (Schwarz Glassmorphic) | 3 Rechts
+ * ✅ FULLY i18n INTEGRATED - ALL 4 LANGUAGES!
  */
 
 import { motion } from "framer-motion";
@@ -14,21 +15,35 @@ import {
   Globe,
   Zap,
   Sparkles,
-  ArrowDown,
 } from "lucide-react";
+import { useTranslation } from "@/i18n";
 
 const AIKnowledgeBanner = () => {
-  const leftSources = [
-    { icon: Package, title: "Produkte & Varianten", desc: "Alle SKUs, Preise, Stock" },
-    { icon: ShoppingBag, title: "Bestellungen", desc: "60 Tage komplette Historie" },
-    { icon: Users, title: "Kundenprofile", desc: "Präferenzen & Kaufhistorie" },
-  ];
+  const { t } = useTranslation();
 
-  const rightSources = [
-    { icon: FileText, title: "Shop-Richtlinien", desc: "Return, Shipping, FAQ" },
-    { icon: Truck, title: "Versand-Tracking", desc: "Live Carrier-Status" },
-    { icon: Globe, title: "Multi-Channel", desc: "Shop, Social, E-Mail" },
-  ];
+  // Data sources from i18n
+  const leftSources = t('marketing.aiKnowledge.dataSourcesLeft', { returnObjects: true }) as Array<{
+    title: string;
+    desc: string;
+    stats: string;
+  }>;
+  
+  const rightSources = t('marketing.aiKnowledge.dataSourcesRight', { returnObjects: true }) as Array<{
+    title: string;
+    desc: string;
+    stats: string;
+  }>;
+
+  const liveEvents = t('marketing.aiKnowledge.liveEvents', { returnObjects: true }) as Array<{
+    event: string;
+    detail: string;
+  }>;
+
+  // Icon mapping
+  const leftIcons = [Package, ShoppingBag, Users];
+  const rightIcons = [FileText, Truck, Globe];
+  const eventIcons = [ShoppingBag, Package, Truck, Database, FileText, Users];
+  const eventColors = ['green', 'blue', 'orange', 'red', 'purple', 'teal'] as const;
 
   return (
     <div className="relative overflow-hidden bg-gradient-to-b from-white to-gray-50 py-32">
@@ -40,11 +55,14 @@ const AIKnowledgeBanner = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            AI kennt <span className="text-purple-600">JEDEN</span> Aspekt Ihres Shops
-          </h2>
+          <h2 
+            className="text-4xl md:text-5xl font-bold text-gray-900 mb-4"
+            dangerouslySetInnerHTML={{ 
+              __html: t('marketing.aiKnowledge.title').replace(/JEDEN|EVERY|CADA|CHAQUE/gi, '<span class="text-purple-600">$&</span>')
+            }}
+          />
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Produkte, Bestellungen, Kunden, Richtlinien – alles automatisch synchronisiert. Sie ändern etwas? AI weiß es sofort. Null Wartung.
+            {t('marketing.aiKnowledge.subtitle')}
           </p>
         </motion.div>
 
@@ -53,34 +71,37 @@ const AIKnowledgeBanner = () => {
           
           {/* LEFT COLUMN - 3 Data Sources */}
           <div className="space-y-4">
-            {leftSources.map((source, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                whileHover={{ x: 8 }}
-              >
-                <div className="bg-white rounded-xl p-5 border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-200">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 rounded-lg bg-purple-600 flex items-center justify-center">
-                      <source.icon className="w-5 h-5 text-white" />
+            {leftSources.map((source, i) => {
+              const Icon = leftIcons[i];
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, duration: 0.5 }}
+                  whileHover={{ x: 8 }}
+                >
+                  <div className="bg-white rounded-xl p-5 border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-200">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-10 h-10 rounded-lg bg-purple-600 flex items-center justify-center">
+                        <Icon className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-gray-900 text-sm leading-tight">
+                          {source.title}
+                        </h4>
+                        <p className="text-xs text-gray-600">{source.desc}</p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-gray-900 text-sm leading-tight">
-                        {source.title}
-                      </h4>
-                      <p className="text-xs text-gray-600">{source.desc}</p>
+                    <div className="flex items-center gap-1.5 pt-2 mt-2 border-t border-gray-100">
+                      <Zap className="w-3 h-3 text-green-600" />
+                      <span className="text-xs text-gray-500">Auto-Sync</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1.5 pt-2 mt-2 border-t border-gray-100">
-                    <Zap className="w-3 h-3 text-green-600" />
-                    <span className="text-xs text-gray-500">Auto-Sync</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
 
           {/* CENTER - SHOPIFY HUB - SCHWARZ GLASSMORPHIC MEGA KRASS! */}
@@ -189,7 +210,7 @@ const AIKnowledgeBanner = () => {
                   
                   {/* Title - Kleiner! */}
                   <h3 className="text-3xl font-black text-white mb-3 tracking-tight">
-                    SHOPIFY
+                    {t('marketing.aiKnowledge.centerHub.title')}
                   </h3>
                   
                   {/* Live Badge */}
@@ -198,19 +219,19 @@ const AIKnowledgeBanner = () => {
                       <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" />
                       <div className="w-1.5 h-1.5 bg-white rounded-full absolute top-0 left-0 animate-ping" />
                     </div>
-                    <span className="text-xs font-bold text-white">LIVE</span>
+                    <span className="text-xs font-bold text-white">{t('marketing.aiKnowledge.centerHub.liveBadge')}</span>
                   </div>
 
                   {/* Stats - Kompakt! */}
                   <div className="flex items-center gap-3">
                     <div className="text-center">
                       <div className="text-lg font-bold text-white">3s</div>
-                      <div className="text-xs text-purple-300">Sync</div>
+                      <div className="text-xs text-purple-300">{t('marketing.aiKnowledge.centerHub.syncLabel')}</div>
                     </div>
                     <div className="w-px h-6 bg-white/20" />
                     <div className="text-center">
                       <div className="text-lg font-bold text-white">100%</div>
-                      <div className="text-xs text-purple-300">Genau</div>
+                      <div className="text-xs text-purple-300">{t('marketing.aiKnowledge.centerHub.accuracyLabel')}</div>
                     </div>
                   </div>
                 </motion.div>
@@ -220,34 +241,37 @@ const AIKnowledgeBanner = () => {
 
           {/* RIGHT COLUMN - 3 Data Sources */}
           <div className="space-y-4">
-            {rightSources.map((source, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
-                whileHover={{ x: -8 }}
-              >
-                <div className="bg-white rounded-xl p-5 border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-200">
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 rounded-lg bg-purple-600 flex items-center justify-center">
-                      <source.icon className="w-5 h-5 text-white" />
+            {rightSources.map((source, i) => {
+              const Icon = rightIcons[i];
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1, duration: 0.5 }}
+                  whileHover={{ x: -8 }}
+                >
+                  <div className="bg-white rounded-xl p-5 border border-gray-200 hover:border-purple-300 hover:shadow-lg transition-all duration-200">
+                    <div className="flex items-center gap-3 mb-2">
+                      <div className="w-10 h-10 rounded-lg bg-purple-600 flex items-center justify-center">
+                        <Icon className="w-5 h-5 text-white" />
+                      </div>
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-gray-900 text-sm leading-tight">
+                          {source.title}
+                        </h4>
+                        <p className="text-xs text-gray-600">{source.desc}</p>
+                      </div>
                     </div>
-                    <div className="flex-1">
-                      <h4 className="font-semibold text-gray-900 text-sm leading-tight">
-                        {source.title}
-                      </h4>
-                      <p className="text-xs text-gray-600">{source.desc}</p>
+                    <div className="flex items-center gap-1.5 pt-2 mt-2 border-t border-gray-100">
+                      <Zap className="w-3 h-3 text-green-600" />
+                      <span className="text-xs text-gray-500">Auto-Sync</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-1.5 pt-2 mt-2 border-t border-gray-100">
-                    <Zap className="w-3 h-3 text-green-600" />
-                    <span className="text-xs text-gray-500">Auto-Sync</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         </div>
 
@@ -262,62 +286,22 @@ const AIKnowledgeBanner = () => {
           <div className="text-center mb-8">
             <div className="inline-flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-full mb-3">
               <div className="w-2 h-2 bg-white rounded-full animate-pulse" />
-              <span className="text-sm font-bold">LIVE SYNC AKTIV</span>
+              <span className="text-sm font-bold">{t('marketing.aiKnowledge.liveSyncBadge')}</span>
             </div>
             <h3 className="text-2xl font-bold text-gray-900 mb-2">
-              AI sieht JEDE Änderung in Echtzeit
+              {t('marketing.aiKnowledge.liveSyncTitle')}
             </h3>
             <p className="text-sm text-gray-600">
-              Sie ändern etwas in Shopify? AI weiß es in 3 Sekunden – automatisch, ohne manuelle Arbeit.
+              {t('marketing.aiKnowledge.liveSyncSubtitle')}
             </p>
           </div>
 
           {/* Live Activity Feed - 6 Examples */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {[
-              { 
-                icon: ShoppingBag, 
-                event: "Neue Bestellung", 
-                detail: "#1847 • €127.50", 
-                color: "green",
-                delay: 0.2
-              },
-              { 
-                icon: Package, 
-                event: "Produkt geändert", 
-                detail: "Preis aktualisiert • Nike Air", 
-                color: "blue",
-                delay: 0.3
-              },
-              { 
-                icon: Truck, 
-                event: "Tracking hinzugefügt", 
-                detail: "DHL • Bestellung #1843", 
-                color: "orange",
-                delay: 0.4
-              },
-              { 
-                icon: Database, 
-                event: "Stock Update", 
-                detail: "3 Items → Nur noch 1", 
-                color: "red",
-                delay: 0.5
-              },
-              { 
-                icon: FileText, 
-                event: "Richtlinie geändert", 
-                detail: "Widerrufsrecht aktualisiert", 
-                color: "purple",
-                delay: 0.6
-              },
-              { 
-                icon: Users, 
-                event: "Neuer Kunde", 
-                detail: "lisa.mueller@gmail.com", 
-                color: "teal",
-                delay: 0.7
-              },
-            ].map((activity, i) => {
+            {liveEvents.map((activity, i) => {
+              const Icon = eventIcons[i];
+              const color = eventColors[i];
+              
               const colorClasses = {
                 green: 'bg-green-50 border-green-200 text-green-700',
                 blue: 'bg-blue-50 border-blue-200 text-blue-700',
@@ -333,15 +317,15 @@ const AIKnowledgeBanner = () => {
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: activity.delay, duration: 0.4 }}
+                  transition={{ delay: 0.2 + i * 0.1, duration: 0.4 }}
                   className="relative"
                 >
                   {/* Activity Card */}
-                  <div className={`bg-white rounded-lg p-4 border shadow-sm ${colorClasses[activity.color as keyof typeof colorClasses]}`}>
+                  <div className={`bg-white rounded-lg p-4 border shadow-sm ${colorClasses[color]}`}>
                     <div className="flex items-start gap-3">
                       {/* Icon */}
                       <div className="w-8 h-8 rounded-lg bg-gray-900 flex items-center justify-center flex-shrink-0">
-                        <activity.icon className="w-4 h-4 text-white" />
+                        <Icon className="w-4 h-4 text-white" />
                       </div>
                       
                       {/* Content */}
@@ -369,7 +353,7 @@ const AIKnowledgeBanner = () => {
                   <motion.div
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    transition={{ delay: activity.delay + 0.2 }}
+                    transition={{ delay: 0.2 + i * 0.1 + 0.2 }}
                     className="absolute -top-1 -right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-white shadow-lg flex items-center justify-center"
                   >
                     <Sparkles className="w-3 h-3 text-white" />
@@ -381,9 +365,11 @@ const AIKnowledgeBanner = () => {
 
           {/* Bottom Summary */}
           <div className="mt-6 pt-6 border-t border-gray-200 text-center">
-            <p className="text-sm font-semibold text-gray-900">
-              Und <span className="text-purple-600">100+ weitere Events</span> – alle automatisch synchronisiert, komplett wartungsfrei
-            </p>
+            <p className="text-sm font-semibold text-gray-900"
+              dangerouslySetInnerHTML={{
+                __html: t('marketing.aiKnowledge.bottomSummary').replace(/100\+/g, '<span class="text-purple-600">$&</span>')
+              }}
+            />
           </div>
         </motion.div>
       </div>

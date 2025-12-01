@@ -1001,6 +1001,42 @@
       { "label": "Wartung", "value": "0 Min" },
       { "label": "Genauigkeit", "value": "99.8%" }
     ],
+    "liveSyncTitle": "AI sieht JEDE Änderung in Echtzeit",
+    "liveSyncSubtitle": "Sie ändern etwas in Shopify? AI weiß es in 3 Sekunden – automatisch, ohne manuelle Arbeit.",
+    "liveSyncBadge": "LIVE SYNC AKTIV",
+    "centerHub": {
+      "title": "SHOPIFY",
+      "liveBadge": "LIVE",
+      "syncLabel": "Sync",
+      "accuracyLabel": "Genau"
+    },
+    "liveEvents": [
+      {
+        "event": "Neue Bestellung",
+        "detail": "#1847 • €127.50"
+      },
+      {
+        "event": "Produkt geändert",
+        "detail": "Preis aktualisiert • Nike Air"
+      },
+      {
+        "event": "Tracking hinzugefügt",
+        "detail": "DHL • Bestellung #1843"
+      },
+      {
+        "event": "Stock Update",
+        "detail": "3 Items → Nur noch 1"
+      },
+      {
+        "event": "Richtlinie geändert",
+        "detail": "Widerrufsrecht aktualisiert"
+      },
+      {
+        "event": "Neuer Kunde",
+        "detail": "lisa.mueller@gmail.com"
+      }
+    ],
+    "bottomSummary": "Und 100+ weitere Events – alle automatisch synchronisiert, komplett wartungsfrei",
     "examplesTitle": "Was AI sofort beantworten kann",
     "examplesSubtitle": "Ihre Kunden fragen – AI findet die Antwort in Ihrem Shop",
     "examples": [

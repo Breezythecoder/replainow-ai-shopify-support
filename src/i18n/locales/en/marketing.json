@@ -1080,6 +1080,42 @@
       { "label": "Maintenance", "value": "0 Min" },
       { "label": "Accuracy", "value": "99.8%" }
     ],
+    "liveSyncTitle": "AI Sees EVERY Change in Real-Time",
+    "liveSyncSubtitle": "You change something in Shopify? AI knows it in 3 seconds – automatically, without manual work.",
+    "liveSyncBadge": "LIVE SYNC ACTIVE",
+    "centerHub": {
+      "title": "SHOPIFY",
+      "liveBadge": "LIVE",
+      "syncLabel": "Sync",
+      "accuracyLabel": "Accurate"
+    },
+    "liveEvents": [
+      {
+        "event": "New Order",
+        "detail": "#1847 • $127.50"
+      },
+      {
+        "event": "Product Changed",
+        "detail": "Price updated • Nike Air"
+      },
+      {
+        "event": "Tracking Added",
+        "detail": "DHL • Order #1843"
+      },
+      {
+        "event": "Stock Update",
+        "detail": "3 Items → Only 1 left"
+      },
+      {
+        "event": "Policy Changed",
+        "detail": "Return policy updated"
+      },
+      {
+        "event": "New Customer",
+        "detail": "lisa.mueller@gmail.com"
+      }
+    ],
+    "bottomSummary": "And 100+ more events – all automatically synchronized, completely maintenance-free",
     "examplesTitle": "What AI Can Answer Instantly",
     "examplesSubtitle": "Your customers ask – AI finds the answer in your store",
     "examples": [

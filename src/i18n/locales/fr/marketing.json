@@ -648,6 +648,42 @@
       { "label": "Maintenance", "value": "0 Min" },
       { "label": "Précision", "value": "99.8%" }
     ],
+    "liveSyncTitle": "L'IA Voit CHAQUE Changement en Temps Réel",
+    "liveSyncSubtitle": "Vous changez quelque chose dans Shopify ? L'IA le sait en 3 secondes – automatiquement, sans travail manuel.",
+    "liveSyncBadge": "SYNC EN DIRECT ACTIF",
+    "centerHub": {
+      "title": "SHOPIFY",
+      "liveBadge": "EN DIRECT",
+      "syncLabel": "Sync",
+      "accuracyLabel": "Précis"
+    },
+    "liveEvents": [
+      {
+        "event": "Nouvelle Commande",
+        "detail": "#1847 • €127.50"
+      },
+      {
+        "event": "Produit Modifié",
+        "detail": "Prix mis à jour • Nike Air"
+      },
+      {
+        "event": "Suivi Ajouté",
+        "detail": "DHL • Commande #1843"
+      },
+      {
+        "event": "Mise à Jour Stock",
+        "detail": "3 Articles → Plus qu'1"
+      },
+      {
+        "event": "Politique Modifiée",
+        "detail": "Politique de retour mise à jour"
+      },
+      {
+        "event": "Nouveau Client",
+        "detail": "lisa.mueller@gmail.com"
+      }
+    ],
+    "bottomSummary": "Et 100+ événements supplémentaires – tous synchronisés automatiquement, sans maintenance",
     "examplesTitle": "Ce Que l'IA Peut Répondre Instantanément",
     "examplesSubtitle": "Vos clients posent des questions – l'IA trouve la réponse dans votre boutique",
     "examples": [
