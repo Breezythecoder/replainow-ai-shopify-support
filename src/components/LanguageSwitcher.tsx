@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { getLocaleFromPath, locales, Locale } from '@/i18n';
-import { Globe, ChevronDown } from 'lucide-react';
+import { ChevronDown } from 'lucide-react';
 
 interface LanguageSwitcherProps {
   className?: string;
@@ -58,7 +58,6 @@ export const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className, v
         onClick={() => setIsOpen(!isOpen)}
         className="flex items-center gap-2 px-3 py-2 text-sm font-semibold text-gray-900 bg-white border-2 border-gray-200 rounded-lg hover:border-purple-400 hover:bg-purple-50 transition-all duration-200 min-w-[120px] shadow-elevation-2"
       >
-        <Globe className="h-4 w-4 flex-shrink-0" />
         <span className="flex items-center gap-1 flex-1 justify-center">
           {getLanguageFlag(currentLocale)}
           <span className="hidden sm:inline">{getLanguageLabel(currentLocale)}</span>
