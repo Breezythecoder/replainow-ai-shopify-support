@@ -901,7 +901,26 @@
       }
     ],
     "bottomText": "No training required. No complex setup. Simply install and go.",
-    "bottomBadge": "Live in 60 Seconds"
+    "bottomBadge": "Live in 60 Seconds",
+    "customization": {
+      "title": "Your Support, Your Brand",
+      "desc": "Full control over appearance and behavior – from logo to email address.",
+      "features": {
+        "team": {
+          "text": "Team Members",
+          "detail": "Invite unlimited"
+        },
+        "email": {
+          "text": "Custom Email",
+          "detail": "support@your-shop.replainow.com"
+        },
+        "branding": {
+          "text": "Branding",
+          "detail": "Customize logo, name, photos"
+        }
+      },
+      "bottomBadge": "Full customization in settings"
+    }
   },
   "dashboard": {
     "title": "This Is Your Dashboard",

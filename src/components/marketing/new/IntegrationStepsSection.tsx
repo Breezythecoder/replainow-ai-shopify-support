@@ -18,16 +18,30 @@ const IntegrationStepsSection = () => {
   }));
 
   // 4. Step - Customization
+  const customizationData = getTranslation("marketing.integration.customization") || {};
   const customizationStep = {
     num: 4,
     icon: Settings,
-    title: "Ihr Support, Ihre Marke",
-    desc: "Vollständige Kontrolle über Aussehen und Verhalten – vom Logo bis zur E-Mail Adresse.",
+    title: customizationData.title || "Ihr Support, Ihre Marke",
+    desc: customizationData.desc || "Vollständige Kontrolle über Aussehen und Verhalten – vom Logo bis zur E-Mail Adresse.",
     features: [
-      { icon: Users, text: "Team-Mitglieder", detail: "Unbegrenzt einladen" },
-      { icon: Mail, text: "Eigene E-Mail", detail: "support@ihr-shop.replainow.com" },
-      { icon: Image, text: "Branding", detail: "Logo, Namen, Fotos anpassen" },
-    ]
+      { 
+        icon: Users, 
+        text: customizationData.features?.team?.text || "Team-Mitglieder", 
+        detail: customizationData.features?.team?.detail || "Unbegrenzt einladen" 
+      },
+      { 
+        icon: Mail, 
+        text: customizationData.features?.email?.text || "Eigene E-Mail", 
+        detail: customizationData.features?.email?.detail || "support@ihr-shop.replainow.com" 
+      },
+      { 
+        icon: Image, 
+        text: customizationData.features?.branding?.text || "Branding", 
+        detail: customizationData.features?.branding?.detail || "Logo, Namen, Fotos anpassen" 
+      },
+    ],
+    bottomBadge: customizationData.bottomBadge || "Vollständige Anpassung in den Einstellungen"
   };
 
   return (
@@ -218,7 +232,7 @@ const IntegrationStepsSection = () => {
               <div className="flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-violet-600 text-white px-6 py-3 rounded-xl shadow-lg">
                 <Sparkles className="w-5 h-5" />
                 <span className="font-bold">
-                  Vollständige Anpassung in den Einstellungen
+                  {customizationStep.bottomBadge}
                 </span>
               </div>
             </motion.div>

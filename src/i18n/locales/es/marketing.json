@@ -413,7 +413,26 @@
       }
     ],
     "bottomText": "Sin capacitación requerida. Sin configuración compleja. Simplemente instala y comienza.",
-    "bottomBadge": "En Vivo en 60 Segundos"
+    "bottomBadge": "En Vivo en 60 Segundos",
+    "customization": {
+      "title": "Tu Soporte, Tu Marca",
+      "desc": "Control total sobre apariencia y comportamiento – desde el logo hasta la dirección de correo.",
+      "features": {
+        "team": {
+          "text": "Miembros del Equipo",
+          "detail": "Invita ilimitados"
+        },
+        "email": {
+          "text": "Email Personalizado",
+          "detail": "support@tu-tienda.replainow.com"
+        },
+        "branding": {
+          "text": "Branding",
+          "detail": "Personaliza logo, nombre, fotos"
+        }
+      },
+      "bottomBadge": "Personalización completa en configuración"
+    }
   },
   "dashboard": {
     "title": "Así Se Ve Tu Dashboard",

@@ -423,7 +423,26 @@
       }
     ],
     "bottomText": "Aucune formation requise. Aucune configuration complexe. Installez simplement et commencez.",
-    "bottomBadge": "En Direct en 60 Secondes"
+    "bottomBadge": "En Direct en 60 Secondes",
+    "customization": {
+      "title": "Votre Support, Votre Marque",
+      "desc": "Contrôle total sur l'apparence et le comportement – du logo à l'adresse e-mail.",
+      "features": {
+        "team": {
+          "text": "Membres de l'Équipe",
+          "detail": "Inviter illimités"
+        },
+        "email": {
+          "text": "Email Personnalisé",
+          "detail": "support@votre-boutique.replainow.com"
+        },
+        "branding": {
+          "text": "Branding",
+          "detail": "Personnaliser logo, nom, photos"
+        }
+      },
+      "bottomBadge": "Personnalisation complète dans les paramètres"
+    }
   },
   "dashboard": {
     "title": "Voici Votre Tableau de Bord",

@@ -826,7 +826,26 @@
       }
     ],
     "bottomText": "Keine Schulung erforderlich. Keine komplexe Einrichtung. Einfach installieren und loslegen.",
-    "bottomBadge": "Live in 60 Sekunden"
+    "bottomBadge": "Live in 60 Sekunden",
+    "customization": {
+      "title": "Ihr Support, Ihre Marke",
+      "desc": "Vollständige Kontrolle über Aussehen und Verhalten – vom Logo bis zur E-Mail Adresse.",
+      "features": {
+        "team": {
+          "text": "Team-Mitglieder",
+          "detail": "Unbegrenzt einladen"
+        },
+        "email": {
+          "text": "Eigene E-Mail",
+          "detail": "support@ihr-shop.replainow.com"
+        },
+        "branding": {
+          "text": "Branding",
+          "detail": "Logo, Namen, Fotos anpassen"
+        }
+      },
+      "bottomBadge": "Vollständige Anpassung in den Einstellungen"
+    }
   },
   "dashboard": {
     "title": "So sieht Ihr Dashboard aus",
