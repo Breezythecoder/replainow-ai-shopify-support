@@ -100,8 +100,8 @@
   overflow: hidden;
   
   /* 💎 ROUNDED CORNERS - Right side only (Desktop) */
-  border-top-right-radius: 8px;    /* md:rounded-tr-lg */
-  border-bottom-right-radius: 8px; /* md:rounded-br-lg */
+  border-top-right-radius: 14px;    /* Smooth and professional! */
+  border-bottom-right-radius: 14px; /* Smooth and professional! */
 }
 
 /* Collapsed State */
