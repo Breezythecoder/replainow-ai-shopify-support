@@ -174,18 +174,18 @@ const languageSitemaps = [
         changefreq: "yearly",
         priority: "0.3",
       },
+    ],
+  },
+  {
+    name: "contact",
+    urls: [
+      // Contact pages in all languages
       {
         loc: `${baseUrl}/contact`,
         lastmod: currentDate,
         changefreq: "monthly",
         priority: "0.6",
       },
-    ],
-  },
-  {
-    name: "contact",
-    urls: [
-      // Contact pages in all languages (for completeness)
       {
         loc: `${baseUrl}/en/contact`,
         lastmod: currentDate,
