@@ -98,6 +98,10 @@
   flex-shrink: 0;
   transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
   overflow: hidden;
+  
+  /* 💎 ROUNDED CORNERS - Right side only (Desktop) */
+  border-top-right-radius: 8px;    /* md:rounded-tr-lg */
+  border-bottom-right-radius: 8px; /* md:rounded-br-lg */
 }
 
 /* Collapsed State */
