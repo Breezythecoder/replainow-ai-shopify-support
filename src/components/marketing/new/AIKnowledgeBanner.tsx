@@ -21,20 +21,35 @@ import { useTranslation } from "@/i18n";
 const AIKnowledgeBanner = () => {
   const { t } = useTranslation();
 
-  // Data sources from i18n
-  const leftSources = t('marketing.aiKnowledge.dataSourcesLeft', { returnObjects: true }) as Array<{
+  // Data sources from i18n with fallback
+  const leftSources = (t('marketing.aiKnowledge.dataSourcesLeft', { returnObjects: true }) || [
+    { title: "Products", desc: "Catalog, variants, prices", stats: "Real-time" },
+    { title: "Orders", desc: "Status, tracking, history", stats: "60 Days" },
+    { title: "Customers", desc: "Profiles, preferences", stats: "Lifetime" }
+  ]) as Array<{
     title: string;
     desc: string;
     stats: string;
   }>;
   
-  const rightSources = t('marketing.aiKnowledge.dataSourcesRight', { returnObjects: true }) as Array<{
+  const rightSources = (t('marketing.aiKnowledge.dataSourcesRight', { returnObjects: true }) || [
+    { title: "Policies", desc: "Returns, shipping, terms", stats: "Auto-Sync" },
+    { title: "Shipping", desc: "Carriers, tracking links", stats: "Live" },
+    { title: "Content", desc: "Pages, FAQs, blog", stats: "Full" }
+  ]) as Array<{
     title: string;
     desc: string;
     stats: string;
   }>;
 
-  const liveEvents = t('marketing.aiKnowledge.liveEvents', { returnObjects: true }) as Array<{
+  const liveEvents = (t('marketing.aiKnowledge.liveEvents', { returnObjects: true }) || [
+    { event: "New Order", detail: "#1847 • $127.50" },
+    { event: "Product Changed", detail: "Price updated • Nike Air" },
+    { event: "Tracking Added", detail: "DHL • Order #1843" },
+    { event: "Stock Update", detail: "3 Items → Only 1 left" },
+    { event: "Policy Changed", detail: "Return policy updated" },
+    { event: "New Customer", detail: "lisa.mueller@gmail.com" }
+  ]) as Array<{
     event: string;
     detail: string;
   }>;
