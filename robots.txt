@@ -1,6 +1,6 @@
 # Robots.txt for ReplAInow
 # Generated automatically - do not edit manually
-# Last updated: 2025-11-30
+# Last updated: 2025-12-01
 
 # ============================================
 # GOOGLE & TRADITIONAL SEARCH ENGINES
@@ -132,7 +132,9 @@ Sitemap: https://replainow.com/sitemap-index.xml
 # Detailed sitemaps by category
 Sitemap: https://replainow.com/sitemaps/main.xml
 Sitemap: https://replainow.com/sitemaps/languages.xml
+Sitemap: https://replainow.com/sitemaps/content.xml
 Sitemap: https://replainow.com/sitemaps/legal.xml
+Sitemap: https://replainow.com/sitemaps/contact.xml
 
 # ============================================
 # ADDITIONAL INFO

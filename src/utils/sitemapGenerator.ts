@@ -37,50 +37,12 @@ export const generateSitemapUrls = (): SitemapUrl[] => {
       ]
     },
     
-    // Pillar pages (main content hubs)
+    // Contact page
     {
-      loc: `${baseUrl}/ai-shopify-helpdesk`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      loc: `${baseUrl}/multilingual-support`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      loc: `${baseUrl}/order-lookup`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.9
-    },
-    {
-      loc: `${baseUrl}/vergleich/gorgias-intercom-vs-replainow`,
+      loc: `${baseUrl}/contact`,
       lastmod: currentDate,
       changefreq: 'monthly',
-      priority: 0.8
-    },
-    {
-      loc: `${baseUrl}/dsgvo-shopify-ai`,
-      lastmod: currentDate,
-      changefreq: 'monthly',
-      priority: 0.8
-    },
-    
-    // Core pages
-    {
-      loc: `${baseUrl}/pricing`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.8
-    },
-    {
-      loc: `${baseUrl}/faq`,
-      lastmod: currentDate,
-      changefreq: 'weekly',
-      priority: 0.7
+      priority: 0.6
     },
     
     // Legal pages
@@ -125,6 +87,26 @@ export const generateSitemapUrls = (): SitemapUrl[] => {
       lastmod: currentDate,
       changefreq: 'yearly',
       priority: 0.3
+    },
+    
+    // Contact pages - multilingual
+    {
+      loc: `${baseUrl}/en/contact`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.6
+    },
+    {
+      loc: `${baseUrl}/es/contact`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.6
+    },
+    {
+      loc: `${baseUrl}/fr/contact`,
+      lastmod: currentDate,
+      changefreq: 'monthly',
+      priority: 0.6
     },
     
     // Content Pages - SEO-optimized articles (12 URLs: 3 pages × 4 languages)

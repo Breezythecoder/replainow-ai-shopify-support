@@ -146,7 +146,9 @@ Sitemap: ${baseUrl}/sitemap-index.xml
 # Detailed sitemaps by category
 Sitemap: ${baseUrl}/sitemaps/main.xml
 Sitemap: ${baseUrl}/sitemaps/languages.xml
+Sitemap: ${baseUrl}/sitemaps/content.xml
 Sitemap: ${baseUrl}/sitemaps/legal.xml
+Sitemap: ${baseUrl}/sitemaps/contact.xml
 
 # ============================================
 # ADDITIONAL INFO

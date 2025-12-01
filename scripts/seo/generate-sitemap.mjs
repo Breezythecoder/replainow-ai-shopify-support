@@ -221,8 +221,11 @@ ${urls
     <changefreq>${url.changefreq}</changefreq>
     <priority>${url.priority}</priority>`;
       
-      // Add hreflang tags for content pages (name === "content")
-      if (name === "content" && url.loc.includes('automatisieren') || url.loc.includes('automate') || url.loc.includes('automatizar') || url.loc.includes('automatiser')) {
+      // Add hreflang tags for content pages
+      // Check if this is a content page (works for both "content" and "all" sitemaps)
+      const isContentPage = (name === "content" || name === "all");
+      
+      if (isContentPage && (url.loc.includes('automatisieren') || url.loc.includes('automate') || url.loc.includes('automatizar') || url.loc.includes('automatiser'))) {
         // This is "automatisierung" page in some language
         urlXml += `
     <xhtml:link rel="alternate" hreflang="de" href="${baseUrl}/shopify-kundensupport-automatisieren" />
@@ -230,7 +233,7 @@ ${urls
     <xhtml:link rel="alternate" hreflang="es" href="${baseUrl}/es/automatizar-soporte-cliente-shopify" />
     <xhtml:link rel="alternate" hreflang="fr" href="${baseUrl}/fr/automatiser-support-client-shopify" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/en/automate-shopify-customer-support" />`;
-      } else if (name === "content" && url.loc.includes('24-7')) {
+      } else if (isContentPage && url.loc.includes('24-7')) {
         // This is "support247" page in some language
         urlXml += `
     <xhtml:link rel="alternate" hreflang="de" href="${baseUrl}/24-7-kundensupport-shopify" />
@@ -238,7 +241,7 @@ ${urls
     <xhtml:link rel="alternate" hreflang="es" href="${baseUrl}/es/soporte-24-7-shopify" />
     <xhtml:link rel="alternate" hreflang="fr" href="${baseUrl}/fr/support-24-7-shopify" />
     <xhtml:link rel="alternate" hreflang="x-default" href="${baseUrl}/en/24-7-customer-support-shopify" />`;
-      } else if (name === "content" && (url.loc.includes('kosten-senken') || url.loc.includes('reduce') || url.loc.includes('reducir') || url.loc.includes('reduire'))) {
+      } else if (isContentPage && (url.loc.includes('kosten-senken') || url.loc.includes('reduce') || url.loc.includes('reducir') || url.loc.includes('reduire'))) {
         // This is "kostenSenken" page in some language
         urlXml += `
     <xhtml:link rel="alternate" hreflang="de" href="${baseUrl}/shopify-support-kosten-senken" />
