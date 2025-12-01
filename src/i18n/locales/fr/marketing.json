@@ -70,8 +70,8 @@
       },
       "discount": {
         "title": "Code de Réduction",
-        "expiresIn": "Expire dans {days} jours",
-        "limitedTo": "Limité à {limit} utilisations"
+        "expiresIn": "Expire dans {{days}} jours",
+        "limitedTo": "Limité à {{limit}} utilisations"
       },
       "tracking": {
         "title": "Suivi",
