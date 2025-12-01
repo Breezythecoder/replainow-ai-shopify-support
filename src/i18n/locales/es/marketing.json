@@ -60,8 +60,10 @@
       },
       "discount": {
         "title": "Código de Descuento",
-        "expiresIn": "Caduca en {{days}} días",
-        "limitedTo": "Limitado a {{limit}} usos"
+        "expiresInPrefix": "Caduca en",
+        "expiresInSuffix": "días",
+        "limitedToPrefix": "Limitado a",
+        "limitedToSuffix": "usos"
       },
       "tracking": {
         "title": "Seguimiento",

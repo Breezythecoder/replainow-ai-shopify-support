@@ -60,8 +60,10 @@
       },
       "discount": {
         "title": "Rabattcode",
-        "expiresIn": "Läuft ab in {{days}} Tagen",
-        "limitedTo": "Limitiert auf {{limit}} Nutzungen"
+        "expiresInPrefix": "Läuft ab in",
+        "expiresInSuffix": "Tagen",
+        "limitedToPrefix": "Limitiert auf",
+        "limitedToSuffix": "Nutzungen"
       },
       "tracking": {
         "title": "Sendungsverfolgung",

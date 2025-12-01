@@ -72,13 +72,13 @@ const DiscountCard = ({ code, discount, expiryDays, usageLimit, delay = 0 }: Dis
           {expiryDays && (
             <p className="text-[11px] text-[#525252] flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5" />
-              <span>{t('marketing.liveChatDemo.cards.discount.expiresIn', { days: expiryDays })}</span>
+              <span>{t('marketing.liveChatDemo.cards.discount.expiresInPrefix')} {expiryDays} {t('marketing.liveChatDemo.cards.discount.expiresInSuffix')}</span>
             </p>
           )}
           {usageLimit && (
             <p className="text-[11px] text-[#525252] flex items-center gap-1.5">
               <Users className="w-3.5 h-3.5" />
-              <span>{t('marketing.liveChatDemo.cards.discount.limitedTo', { limit: usageLimit })}</span>
+              <span>{t('marketing.liveChatDemo.cards.discount.limitedToPrefix')} {usageLimit} {t('marketing.liveChatDemo.cards.discount.limitedToSuffix')}</span>
             </p>
           )}
         </div>
