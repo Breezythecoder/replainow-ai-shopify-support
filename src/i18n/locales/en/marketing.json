@@ -1026,6 +1026,7 @@
       "agentRequired": "Agent required"
     },
     "bottomStatement": "AI handles 87% automatically – your agents the 13% with the best tools",
+    "shopifyIntegration": "No back and forth between Shopify and helpdesk. Everything you can do in Shopify, you can do directly through our dashboard.",
     "highlights": {
       "noTabSwitching": "No Tab-Switching",
       "fullContext": "Complete Context",

@@ -548,6 +548,7 @@
       "agentRequired": "Agent requis"
     },
     "bottomStatement": "L'IA gère 87% automatiquement – vos agents les 13% avec les meilleurs outils",
+    "shopifyIntegration": "Pas d'allers-retours entre Shopify et le helpdesk. Tout ce que vous pouvez faire dans Shopify, vous pouvez le faire directement depuis notre tableau de bord.",
     "highlights": {
       "noTabSwitching": "Pas de Changement d'Onglet",
       "fullContext": "Contexte Complet",

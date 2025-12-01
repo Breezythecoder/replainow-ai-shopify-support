@@ -295,7 +295,7 @@ const AgentProductivity = () => {
           {/* Statement Box */}
           <div className="inline-block bg-gradient-to-br from-purple-50 to-violet-50 border-2 border-purple-200 rounded-2xl p-8 shadow-lg max-w-3xl">
             <p className="text-lg md:text-xl font-semibold text-gray-900 mb-6 leading-relaxed">
-              Kein Hin und Her zwischen Shopify und Helpdesk. Alles was Sie in Shopify machen können, können Sie direkt über unser Dashboard machen.
+              {t("marketing.agentProductivity.shopifyIntegration")}
           </p>
 
             {/* Simple Pills with Checkmarks */}
