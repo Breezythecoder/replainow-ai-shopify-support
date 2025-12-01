@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Truck } from "lucide-react";
+import { useTranslation } from "@/i18n";
 
 interface TrackingCardProps {
   orderNumber: string;
@@ -12,6 +13,7 @@ interface TrackingCardProps {
 }
 
 const TrackingCard = ({ orderNumber, carrier, trackingNumber, status, expectedDelivery, url = "#", delay = 0 }: TrackingCardProps) => {
+  const { t } = useTranslation();
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -35,19 +37,19 @@ const TrackingCard = ({ orderNumber, carrier, trackingNumber, status, expectedDe
           <Truck className="w-5 h-5 text-[#525252]" />
         </div>
         <div className="flex-1">
-          <p className="text-sm font-semibold text-black">Sendungsverfolgung</p>
-          <p className="text-[11px] text-[#525252]">Bestellung #{orderNumber}</p>
+          <p className="text-sm font-semibold text-black">{t('marketing.liveChatDemo.cards.tracking.title')}</p>
+          <p className="text-[11px] text-[#525252]">{t('marketing.liveChatDemo.cards.tracking.order')} #{orderNumber}</p>
         </div>
       </div>
 
       {/* Tracking Info */}
       <div className="bg-[#FAFAFA] rounded-xl p-4 mb-4">
         <div className="flex justify-between items-center mb-2">
-          <span className="text-xs text-[#525252] font-medium">Versanddienstleister</span>
+          <span className="text-xs text-[#525252] font-medium">{t('marketing.liveChatDemo.cards.tracking.carrierLabel')}</span>
           <span className="text-[13px] text-black font-semibold">{carrier}</span>
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-xs text-[#525252] font-medium">Sendungsnummer</span>
+          <span className="text-xs text-[#525252] font-medium">{t('marketing.liveChatDemo.cards.tracking.trackingNumberLabel')}</span>
           <span className="text-[13px] text-black font-semibold">{trackingNumber}</span>
         </div>
       </div>
@@ -57,7 +59,7 @@ const TrackingCard = ({ orderNumber, carrier, trackingNumber, status, expectedDe
         href={url}
         className="flex items-center justify-center gap-2 w-full px-4 py-4 bg-[#f3f4f6] text-[#111827] text-sm font-semibold rounded-xl hover:bg-[#e5e7eb] hover:text-black transition-all duration-200"
       >
-        Sendung verfolgen
+        {t('marketing.liveChatDemo.cards.tracking.trackOrder')}
         <span>→</span>
       </a>
     </motion.div>

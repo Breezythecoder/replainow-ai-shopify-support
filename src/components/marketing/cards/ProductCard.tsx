@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useTranslation } from "@/i18n";
 
 interface ProductCardProps {
   title: string;
@@ -11,6 +12,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ title, description, price, image, stock, url = "#", delay = 0 }: ProductCardProps) => {
+  const { t } = useTranslation();
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -57,7 +59,7 @@ const ProductCard = ({ title, description, price, image, stock, url = "#", delay
             {price}
           </p>
           <p className="text-xs text-[#525252] font-medium">
-            📦 {stock} auf Lager
+            📦 {stock} {t('marketing.liveChatDemo.cards.product.inStock')}
           </p>
         </div>
       </div>
@@ -68,7 +70,7 @@ const ProductCard = ({ title, description, price, image, stock, url = "#", delay
         className="flex items-center justify-center gap-2 w-full px-4 py-4 bg-[#f3f4f6] text-[#111827] text-sm font-semibold border-t border-gray-200 hover:bg-[#e5e7eb] hover:text-black transition-all duration-200"
         style={{ transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)" }}
       >
-        Produkt ansehen
+        {t('marketing.liveChatDemo.cards.product.viewProduct')}
         <span>→</span>
       </a>
     </motion.div>

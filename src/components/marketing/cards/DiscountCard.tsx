@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Ticket, Copy, Check, Clock, Users } from "lucide-react";
 import { useState } from "react";
+import { useTranslation } from "@/i18n";
 
 interface DiscountCardProps {
   code: string;
@@ -11,6 +12,7 @@ interface DiscountCardProps {
 }
 
 const DiscountCard = ({ code, discount, expiryDays, usageLimit, delay = 0 }: DiscountCardProps) => {
+  const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
@@ -42,7 +44,7 @@ const DiscountCard = ({ code, discount, expiryDays, usageLimit, delay = 0 }: Dis
           <Ticket className="w-5 h-5 text-[#10B981]" />
         </div>
         <div className="flex-1">
-          <p className="text-sm font-semibold text-black">Rabattcode</p>
+          <p className="text-sm font-semibold text-black">{t('marketing.liveChatDemo.cards.discount.title')}</p>
           <p className="text-[11px] font-semibold text-[#10B981]">{discount}</p>
         </div>
       </div>
@@ -70,13 +72,13 @@ const DiscountCard = ({ code, discount, expiryDays, usageLimit, delay = 0 }: Dis
           {expiryDays && (
             <p className="text-[11px] text-[#525252] flex items-center gap-1.5">
               <Clock className="w-3.5 h-3.5" />
-              <span>Läuft ab in {expiryDays} Tagen</span>
+              <span>{t('marketing.liveChatDemo.cards.discount.expiresIn', { days: expiryDays })}</span>
             </p>
           )}
           {usageLimit && (
             <p className="text-[11px] text-[#525252] flex items-center gap-1.5">
               <Users className="w-3.5 h-3.5" />
-              <span>Limitiert auf {usageLimit} Nutzungen</span>
+              <span>{t('marketing.liveChatDemo.cards.discount.limitedTo', { limit: usageLimit })}</span>
             </p>
           )}
         </div>

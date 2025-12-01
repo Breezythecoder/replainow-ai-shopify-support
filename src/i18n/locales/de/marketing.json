@@ -52,6 +52,24 @@
       "carrier": "DHL Express",
       "trackingNumber": "JJD0048394345DE",
       "status": "in-transit"
+    },
+    "cards": {
+      "product": {
+        "inStock": "auf Lager",
+        "viewProduct": "Produkt ansehen"
+      },
+      "discount": {
+        "title": "Rabattcode",
+        "expiresIn": "Läuft ab in {days} Tagen",
+        "limitedTo": "Limitiert auf {limit} Nutzungen"
+      },
+      "tracking": {
+        "title": "Sendungsverfolgung",
+        "order": "Bestellung",
+        "carrierLabel": "Versanddienstleister",
+        "trackingNumberLabel": "Sendungsnummer",
+        "trackOrder": "Sendung verfolgen"
+      }
     }
   },
   "aiPowerShowcase": {
