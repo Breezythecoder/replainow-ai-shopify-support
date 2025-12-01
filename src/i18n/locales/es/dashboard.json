@@ -238,7 +238,7 @@
     "messages": {
       "customer": {
         "initial": "¡Hola! ¿Dónde está mi pedido? ¡Llevo esperando 5 días!",
-        "products": "¿También las tienen en joggers + camiseta?",
+        "products": "¡Gracias por la información! ¿Tienen joggers y camiseta a juego para estos?",
         "urgent": "¡WOW! Quiero ordenar ahora mismo, ¡tengo prisa!"
       },
       "ai": {

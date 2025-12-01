@@ -129,8 +129,20 @@ export const LiveChatWidget = () => {
 
   return (
     <div className="relative w-full max-w-md mx-auto">
+      {/* 🔒 CLICK BLOCKER - Prevents ALL user interaction with chat demo */}
+      <div
+        className="absolute inset-0 z-[9999]"
+        style={{
+          cursor: "default",
+          userSelect: "none",
+          pointerEvents: "all",
+          backgroundColor: "transparent",
+        }}
+        aria-hidden="true"
+      />
+      
       {/* Chat Container */}
-      <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden">
+      <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden relative">
         {/* Chat Header */}
         <div className="bg-gradient-to-r from-purple-600 to-violet-600 px-6 py-4">
           <div className="flex items-center gap-3">

@@ -238,7 +238,7 @@
     "messages": {
       "customer": {
         "initial": "Hello! Where is my order? I've been waiting for 5 days!",
-        "products": "Do you have these in joggers + t-shirt?",
+        "products": "Thanks for the info! Do you have matching joggers and t-shirt for these?",
         "urgent": "WOW! Want to order right now, I'm in a hurry!"
       },
       "ai": {

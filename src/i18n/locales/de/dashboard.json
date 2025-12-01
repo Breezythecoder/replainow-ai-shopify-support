@@ -238,7 +238,7 @@
     "messages": {
       "customer": {
         "initial": "Hallo! Wo ist meine Bestellung? Ich warte schon seit 5 Tagen!",
-        "products": "Habt ihr die auch in Joggers + T-Shirt?",
+        "products": "Vielen Dank für die Info! Habt ihr noch passende Jogger und T-Shirt dafür?",
         "urgent": "WOW! Möchte gleich bestellen, bin in Eile!"
       },
       "ai": {
@@ -246,7 +246,7 @@
         "productResponse": "Ja natürlich! Schau mal:"
       },
       "agent": {
-        "takeover": "Hey Sarah 😊 Freut mich sehr dass dir der Jogger und das T-Shirt ebenfalls gefallen! Ich werde gleich für dich einen Link mit der Bestellung vorbereiten. Außerdem packe ich dir noch 20% Rabatt auf die Bestellung mit ein. 🎁"
+        "takeover": "Hey Sarah 😊 Freut mich sehr, dass dir die Jogger und das T-Shirt gefallen! Ich werde gleich für dich einen Link mit der Bestellung vorbereiten. Außerdem packe ich dir noch 20% Rabatt auf die Bestellung mit ein. 🎁"
       }
     },
     "conversationPreviews": {

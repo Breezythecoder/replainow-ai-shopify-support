@@ -120,7 +120,7 @@ const DashboardShowcaseSection = () => {
             className="relative"
             style={{
               width: `${1600 * dashboardScale}px`,
-              height: `${910 * dashboardScale}px`,
+              height: `${940 * dashboardScale}px`,
             }}
           >
             {/* Stage "floor" glow */}
@@ -171,7 +171,7 @@ const DashboardShowcaseSection = () => {
                 className="dashboard-zoom-wrapper"
                 style={{
                   position: "absolute",
-                  top: "10px",
+                  top: "40px",
                   left: 0,
                   width: "1600px",
                   height: "900px",
@@ -204,6 +204,23 @@ const DashboardShowcaseSection = () => {
                   </div>
                 )}
               </div>
+
+              {/* 🔒 CLICK BLOCKER - Prevents user interaction with demo */}
+              <div
+                className="demo-click-blocker"
+                style={{
+                  position: "absolute",
+                  top: "40px",
+                  left: 0,
+                  width: "1600px",
+                  height: "900px",
+                  zIndex: 999998,
+                  cursor: "default",
+                  userSelect: "none",
+                  pointerEvents: "all",
+                }}
+                aria-hidden="true"
+              />
             </div>
           </div>
         </motion.div>

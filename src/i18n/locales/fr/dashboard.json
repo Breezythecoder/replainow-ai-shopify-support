@@ -238,7 +238,7 @@
     "messages": {
       "customer": {
         "initial": "Bonjour ! Où est ma commande ? J'attends depuis 5 jours !",
-        "products": "Avez-vous aussi des joggings + t-shirts ?",
+        "products": "Merci pour l'info ! Avez-vous des joggings et t-shirts assortis pour cela ?",
         "urgent": "WOW ! Je veux commander maintenant, je suis pressé(e) !"
       },
       "ai": {

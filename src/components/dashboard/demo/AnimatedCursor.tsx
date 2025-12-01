@@ -52,7 +52,7 @@ export const AnimatedCursor: React.FC<AnimatedCursorProps> = ({
   const smoothX = useSpring(cursorX, springConfig);
   const smoothY = useSpring(cursorY, springConfig);
 
-  // Move cursor to target element (with retry mechanism!)
+  // Move cursor to target element (with retry mechanism AND continuous position tracking!)
   useEffect(() => {
     if (!visible || !targetSelector) return;
 
@@ -60,6 +60,17 @@ export const AnimatedCursor: React.FC<AnimatedCursorProps> = ({
     let retryTimer: NodeJS.Timeout | null = null;
     let retryCount = 0;
     const MAX_RETRIES = 10;
+    let trackingActive = false;
+
+    const updateCursorPosition = () => {
+      if (!trackingActive) return;
+      
+      const position = getElementPosition(`[data-demo-target="${targetSelector}"]`);
+      if (position) {
+        cursorX.set(position.centerX);
+        cursorY.set(position.centerY);
+      }
+    };
 
     const moveToTarget = () => {
       const position = getElementPosition(`[data-demo-target="${targetSelector}"]`);
@@ -73,6 +84,11 @@ export const AnimatedCursor: React.FC<AnimatedCursorProps> = ({
         // Move to center of element
         cursorX.set(position.centerX);
         cursorY.set(position.centerY);
+        
+        // 🔥 START CONTINUOUS TRACKING: Update position on scroll!
+        trackingActive = true;
+        window.addEventListener('scroll', updateCursorPosition, true);
+        console.log('[AnimatedCursor] 📍 Continuous position tracking ENABLED');
         
         // Call onMoveComplete after duration
         if (onMoveComplete) {
@@ -98,6 +114,11 @@ export const AnimatedCursor: React.FC<AnimatedCursorProps> = ({
       clearTimeout(timer);
       if (completionTimer) clearTimeout(completionTimer);
       if (retryTimer) clearTimeout(retryTimer);
+      
+      // 🔥 STOP CONTINUOUS TRACKING
+      trackingActive = false;
+      window.removeEventListener('scroll', updateCursorPosition, true);
+      console.log('[AnimatedCursor] 📍 Continuous position tracking DISABLED');
     };
   }, [targetSelector, visible, cursorX, cursorY, moveDuration, onMoveComplete]);
 
